@@ -34,6 +34,28 @@ object TheoryQuizQuestionSelector {
             }
         }
         if (pool.isEmpty()) return emptyList()
-        return pool.shuffled(random).take(min(safeCount, pool.size))
+
+        // Topic quizzes should feel like a progression (q1 -> q2 -> q3...), not random jumps.
+        val orderedPool = pool.sortedWith(
+            compareBy<TheoryQuestion>(
+                { questionOrderIndex(it.id) },
+                { it.id }
+            )
+        )
+
+        return when (quizMode) {
+            TheoryNavigation.QUIZ_MODE_TOPIC -> orderedPool.take(min(safeCount, orderedPool.size))
+            else -> orderedPool.shuffled(random).take(min(safeCount, orderedPool.size))
+        }
     }
+
+    private fun questionOrderIndex(questionId: String): Int {
+        val numberedSuffix = numberPattern.find(questionId)?.groupValues?.getOrNull(1)?.toIntOrNull()
+        if (numberedSuffix != null) return numberedSuffix
+        val trailingDigits = trailingDigitsPattern.find(questionId)?.groupValues?.getOrNull(1)?.toIntOrNull()
+        return trailingDigits ?: Int.MAX_VALUE
+    }
+
+    private val numberPattern = Regex("_q_(\\d+)$")
+    private val trailingDigitsPattern = Regex("(\\d+)$")
 }

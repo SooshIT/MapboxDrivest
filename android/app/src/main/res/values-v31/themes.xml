@@ -1,5 +1,25 @@
 <resources>
-    <style name="Theme.DrivestNavigation" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
+    <style name="Theme.DrivestNavigation" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/settings_accent</item>
+        <item name="colorPrimaryVariant">@color/settings_hero_end</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">@color/settings_accent</item>
+        <item name="colorSecondaryVariant">@color/settings_hero_end</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+        <item name="colorSurface">@android:color/white</item>
+        <item name="colorOnSurface">#231F20</item>
+        <item name="android:colorBackground">@android:color/white</item>
+        <item name="colorError">@color/speedometer_alert</item>
+        <item name="colorOnError">@android:color/white</item>
+        <item name="colorControlActivated">@color/settings_accent</item>
+        <item name="colorControlHighlight">@color/settings_accent_soft</item>
+        <item name="colorAccent">@color/settings_accent</item>
+        <item name="android:colorAccent">@color/settings_accent</item>
+        <item name="materialButtonStyle">@style/Widget.Drivest.Button</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.Drivest.Button.Outlined</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Drivest.Medium</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Drivest.Small</item>
+    </style>
 
     <style name="Theme.DrivestSplash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/splash_bg</item>

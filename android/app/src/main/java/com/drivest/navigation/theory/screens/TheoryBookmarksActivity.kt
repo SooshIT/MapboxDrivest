@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import com.drivest.navigation.R
 import com.drivest.navigation.theory.TheoryFeatureFlags
@@ -49,7 +50,8 @@ class TheoryBookmarksActivity : AppCompatActivity() {
                 val text = TextView(this@TheoryBookmarksActivity).apply {
                     text = "- ${question.prompt}"
                     textSize = 14f
-                    setTextColor(0xFF374151.toInt())
+                    setTextColor(ContextCompat.getColor(this@TheoryBookmarksActivity, R.color.theory_text_secondary))
+                    setPadding(10, 8, 10, 8)
                 }
                 container.addView(text)
             }

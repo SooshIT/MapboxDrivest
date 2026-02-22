@@ -3,6 +3,7 @@ package com.drivest.navigation.theory.screens
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -48,6 +49,7 @@ class TheoryHomeActivity : AppCompatActivity() {
     private lateinit var progressValueView: TextView
     private lateinit var readinessValueView: TextView
     private lateinit var weakestTopicsValueView: TextView
+    private lateinit var recommendationsCardView: View
     private lateinit var recommendationsHeadingView: TextView
     private lateinit var recommendationsContainer: LinearLayout
     private lateinit var continueButton: MaterialButton
@@ -70,6 +72,7 @@ class TheoryHomeActivity : AppCompatActivity() {
         progressValueView = findViewById(R.id.theoryProgressValue)
         readinessValueView = findViewById(R.id.theoryReadinessValue)
         weakestTopicsValueView = findViewById(R.id.theoryWeakestTopicsValue)
+        recommendationsCardView = findViewById(R.id.theoryRouteRecommendationsCard)
         recommendationsHeadingView = findViewById(R.id.theoryRouteRecommendationsHeading)
         recommendationsContainer = findViewById(R.id.theoryRouteRecommendationsContainer)
         continueButton = findViewById(R.id.theoryContinueButton)
@@ -164,24 +167,38 @@ class TheoryHomeActivity : AppCompatActivity() {
         recommendationsContainer.removeAllViews()
         val snapshot = progress.lastRouteTagSnapshot
         if (snapshot == null) {
+            recommendationsCardView.visibility = View.GONE
             recommendationsHeadingView.visibility = View.GONE
             recommendationsContainer.visibility = View.GONE
             return
         }
         val recommendedTopicIds = MapRouteTagsToTheoryTopics.mapTags(snapshot.tags)
         if (recommendedTopicIds.isEmpty()) {
+            recommendationsCardView.visibility = View.GONE
             recommendationsHeadingView.visibility = View.GONE
             recommendationsContainer.visibility = View.GONE
             return
         }
+        recommendationsCardView.visibility = View.VISIBLE
         recommendationsHeadingView.visibility = View.VISIBLE
         recommendationsContainer.visibility = View.VISIBLE
+        var addedCount = 0
         recommendedTopicIds.forEach { topicId ->
             val topic = pack.topics.firstOrNull { it.id == topicId } ?: return@forEach
-            val button = MaterialButton(this).apply {
+            val button = MaterialButton(
+                this,
+                null,
+                com.google.android.material.R.attr.materialButtonOutlinedStyle
+            ).apply {
                 text = getString(R.string.theory_route_recommendation_card, topic.title)
                 isAllCaps = false
                 setPadding(18)
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    bottomMargin = resources.getDimensionPixelSize(R.dimen.theory_list_item_spacing)
+                }
                 setOnClickListener {
                     logRouteCardClick(snapshot.tags.firstOrNull().orEmpty(), topic.id)
                     startActivity(
@@ -193,6 +210,12 @@ class TheoryHomeActivity : AppCompatActivity() {
                 }
             }
             recommendationsContainer.addView(button)
+            addedCount += 1
+        }
+        if (addedCount == 0) {
+            recommendationsCardView.visibility = View.GONE
+            recommendationsHeadingView.visibility = View.GONE
+            recommendationsContainer.visibility = View.GONE
         }
     }
 

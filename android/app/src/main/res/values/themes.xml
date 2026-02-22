@@ -1,5 +1,30 @@
 <resources>
-    <style name="Theme.DrivestNavigation" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
+    <style name="Theme.DrivestNavigation" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Core brand palette -->
+        <item name="colorPrimary">@color/settings_accent</item>
+        <item name="colorPrimaryVariant">@color/settings_hero_end</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+        <item name="colorSecondary">@color/settings_accent</item>
+        <item name="colorSecondaryVariant">@color/settings_hero_end</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+        <item name="colorSurface">@android:color/white</item>
+        <item name="colorOnSurface">#231F20</item>
+        <item name="android:colorBackground">@android:color/white</item>
+        <item name="colorError">@color/speedometer_alert</item>
+        <item name="colorOnError">@android:color/white</item>
+
+        <!-- Ensure controls (TextInput, radio, switch, progress) avoid default purple accents -->
+        <item name="colorControlActivated">@color/settings_accent</item>
+        <item name="colorControlHighlight">@color/settings_accent_soft</item>
+        <item name="colorAccent">@color/settings_accent</item>
+        <item name="android:colorAccent">@color/settings_accent</item>
+
+        <!-- Default button theming used across entry/theory/settings surfaces -->
+        <item name="materialButtonStyle">@style/Widget.Drivest.Button</item>
+        <item name="materialButtonOutlinedStyle">@style/Widget.Drivest.Button.Outlined</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Drivest.Medium</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Drivest.Small</item>
+    </style>
 
     <style name="Theme.DrivestSplash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowBackground">@color/splash_bg</item>
@@ -7,5 +32,45 @@
 
     <style name="Theme.DrivestSplashPost" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <item name="android:windowBackground">@color/splash_bg</item>
+    </style>
+
+    <style name="Widget.Drivest.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/settings_accent</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="iconTint">@android:color/white</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:minHeight">52dp</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+
+    <style name="Widget.Drivest.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="strokeColor">@color/settings_accent</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:textColor">@color/settings_accent</item>
+        <item name="iconTint">@color/settings_accent</item>
+        <item name="cornerRadius">16dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <style name="ShapeAppearance.Drivest.Medium" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">18dp</item>
+    </style>
+
+    <style name="ShapeAppearance.Drivest.Small" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">14dp</item>
     </style>
 </resources>

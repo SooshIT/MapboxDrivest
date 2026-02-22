@@ -1,4 +1,5 @@
 import UIKit
+import MapboxMaps
 
 @main
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -6,6 +7,17 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
-        true
+        if let rawToken = Bundle.main.object(forInfoDictionaryKey: "MBXAccessToken") as? String {
+            let trimmedToken = rawToken.trimmingCharacters(in: .whitespacesAndNewlines)
+            if trimmedToken.hasPrefix("pk.") {
+                MapboxOptions.accessToken = trimmedToken
+                print("[Drivest iOS] mapbox_token_loaded prefix=pk length=\(trimmedToken.count)")
+            } else {
+                print("[Drivest iOS] mapbox_token_invalid_or_missing_pk_prefix length=\(trimmedToken.count)")
+            }
+        } else {
+            print("[Drivest iOS] mapbox_token_missing_in_info_plist")
+        }
+        return true
     }
 }

@@ -18,6 +18,7 @@ final class DestinationSearchViewController: UIViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search destination"
         navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
 
         tableView.translatesAutoresizingMaskIntoConstraints = false

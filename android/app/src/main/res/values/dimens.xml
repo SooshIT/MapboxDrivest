@@ -1,6 +1,10 @@
 <resources>
-    <dimen name="logo_size_home">196dp</dimen>
-    <dimen name="logo_size_screen">148dp</dimen>
-    <dimen name="logo_size_map_watermark">88dp</dimen>
+    <dimen name="logo_width_home">320dp</dimen>
+    <dimen name="logo_height_home">96dp</dimen>
+    <dimen name="logo_width_screen">280dp</dimen>
+    <dimen name="logo_height_screen">84dp</dimen>
+    <dimen name="logo_width_map_watermark">176dp</dimen>
+    <dimen name="logo_height_map_watermark">52dp</dimen>
     <dimen name="home_settings_button_size">52dp</dimen>
+    <dimen name="theory_list_item_spacing">8dp</dimen>
 </resources>

@@ -67,6 +67,31 @@ class TheoryQuizQuestionSelectorTest {
         assertTrue(selected.isEmpty())
     }
 
+    @Test
+    fun topicModeIsDeterministicAndSequentialByQuestionNumber() {
+        val questions = listOf(
+            question(id = "topic_a_q_10", topicId = "topic_a"),
+            question(id = "topic_a_q_2", topicId = "topic_a"),
+            question(id = "topic_a_q_1", topicId = "topic_a"),
+            question(id = "topic_a_q_3", topicId = "topic_a")
+        )
+
+        val selected = TheoryQuizQuestionSelector.selectQuestions(
+            allQuestions = questions,
+            bookmarks = emptySet(),
+            wrongQueue = emptySet(),
+            quizMode = TheoryNavigation.QUIZ_MODE_TOPIC,
+            quizTopicId = "topic_a",
+            requestedCount = 4,
+            random = Random(999)
+        )
+
+        assertEquals(
+            listOf("topic_a_q_1", "topic_a_q_2", "topic_a_q_3", "topic_a_q_10"),
+            selected.map { it.id }
+        )
+    }
+
     private fun buildQuestions(): List<TheoryQuestion> {
         return listOf(
             question(id = "q1", topicId = "topic_a"),

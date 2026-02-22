@@ -50,7 +50,7 @@ extension PracticeRouteListViewController: UITableViewDataSource, UITableViewDel
         var content = cell.defaultContentConfiguration()
         let route = routes[indexPath.row]
         content.text = route.name
-        content.secondaryText = String(format: "%.1f mi · %.0f min", route.distanceM / 1609.344, route.durationS / 60.0)
+        content.secondaryText = String(format: "%.1f mi - %.0f min", route.distanceM / 1609.344, route.durationS / 60.0)
         cell.contentConfiguration = content
         cell.accessoryType = .disclosureIndicator
         return cell

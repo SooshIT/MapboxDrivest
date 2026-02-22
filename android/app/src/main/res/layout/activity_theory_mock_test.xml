@@ -2,107 +2,143 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/theory_bg">
+    android:background="@drawable/bg_app_surface">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="20dp">
+        android:padding="16dp">
 
-        <TextView
-            android:id="@+id/theoryMockTitle"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/theory_mock_title"
-            android:textColor="@color/theory_text_primary"
-            android:textSize="22sp"
-            android:textStyle="bold" />
+            android:background="@drawable/bg_theory_panel"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-        <TextView
-            android:id="@+id/theoryMockTimer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:background="#172440"
-            android:paddingStart="10dp"
-            android:paddingTop="6dp"
-            android:paddingEnd="10dp"
-            android:paddingBottom="6dp"
-            android:text="@string/theory_mock_timer_default"
-            android:textColor="@color/theory_accent"
-            android:textSize="13sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/theoryMockProgress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/theory_quiz_progress_default"
-            android:textColor="@color/theory_accent"
-            android:textSize="14sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/theoryMockQuestionPrompt"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:textColor="@color/theory_text_primary"
-            android:textSize="18sp" />
-
-        <RadioGroup
-            android:id="@+id/theoryMockOptionsGroup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:orientation="vertical">
-
-            <RadioButton
-                android:id="@+id/theoryMockOptionA"
+            <TextView
+                android:id="@+id/theoryMockTitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/theory_accent"
-                android:textColor="@color/theory_text_primary" />
+                android:text="@string/theory_mock_title"
+                android:textColor="@color/theory_text_primary"
+                android:textSize="23sp"
+                android:textStyle="bold" />
 
-            <RadioButton
-                android:id="@+id/theoryMockOptionB"
+            <TextView
+                android:id="@+id/theoryMockTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_app_chip"
+                android:paddingStart="10dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="6dp"
+                android:text="@string/theory_mock_timer_default"
+                android:textColor="@color/app_chip_text"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/theoryMockProgress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/theory_accent"
-                android:textColor="@color/theory_text_primary" />
+                android:layout_marginTop="8dp"
+                android:text="@string/theory_quiz_progress_default"
+                android:textColor="@color/theory_accent"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
-            <RadioButton
-                android:id="@+id/theoryMockOptionC"
+            <TextView
+                android:id="@+id/theoryMockQuestionPrompt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/theory_accent"
-                android:textColor="@color/theory_text_primary" />
+                android:layout_marginTop="14dp"
+                android:textColor="@color/theory_text_primary"
+                android:textSize="19sp"
+                android:textStyle="bold" />
 
-            <RadioButton
-                android:id="@+id/theoryMockOptionD"
+            <RadioGroup
+                android:id="@+id/theoryMockOptionsGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:buttonTint="@color/theory_accent"
-                android:textColor="@color/theory_text_primary" />
-        </RadioGroup>
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/theoryMockNextButton"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="12dp"
-            android:text="@string/theory_next_question"
-            android:textAllCaps="false" />
+                <RadioButton
+                    android:id="@+id/theoryMockOptionA"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_theory_option"
+                    android:buttonTint="@color/theory_accent"
+                    android:minHeight="54dp"
+                    android:paddingStart="14dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="12dp"
+                    android:textColor="@color/theory_text_primary" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/theoryMockFinishButton"
-            style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/theory_finish_mock"
-            android:textAllCaps="false" />
+                <RadioButton
+                    android:id="@+id/theoryMockOptionB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_theory_option"
+                    android:buttonTint="@color/theory_accent"
+                    android:minHeight="54dp"
+                    android:paddingStart="14dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="12dp"
+                    android:textColor="@color/theory_text_primary" />
+
+                <RadioButton
+                    android:id="@+id/theoryMockOptionC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/bg_theory_option"
+                    android:buttonTint="@color/theory_accent"
+                    android:minHeight="54dp"
+                    android:paddingStart="14dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="12dp"
+                    android:textColor="@color/theory_text_primary" />
+
+                <RadioButton
+                    android:id="@+id/theoryMockOptionD"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_theory_option"
+                    android:buttonTint="@color/theory_accent"
+                    android:minHeight="54dp"
+                    android:paddingStart="14dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="14dp"
+                    android:paddingBottom="12dp"
+                    android:textColor="@color/theory_text_primary" />
+            </RadioGroup>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/theoryMockNextButton"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="12dp"
+                android:text="@string/theory_next_question"
+                android:textAllCaps="false" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/theoryMockFinishButton"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/theory_finish_mock"
+                android:textAllCaps="false" />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

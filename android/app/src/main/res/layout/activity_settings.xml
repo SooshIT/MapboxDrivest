@@ -37,8 +37,15 @@
 
                 <ImageView
                     android:id="@+id/settingsLogo"
-                    android:layout_width="84dp"
-                    android:layout_height="84dp"
+                    android:layout_width="144dp"
+                    android:layout_height="44dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/bg_settings_logo_chip"
+                    android:scaleType="fitCenter"
+                    android:paddingStart="10dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="6dp"
                     android:contentDescription="@string/drivest_logo_content_description"
                     android:src="@drawable/drivest_logo_tight" />
 
@@ -55,7 +62,7 @@
                         android:layout_height="wrap_content"
                         android:text="@string/settings_title"
                         android:textColor="@android:color/white"
-                        android:textSize="31sp"
+                        android:textSize="25sp"
                         android:textStyle="bold" />
 
                     <TextView
@@ -63,7 +70,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="4dp"
                         android:text="@string/settings_subtitle"
-                        android:textColor="#E0EEFF"
+                        android:textColor="#FFE5D3"
                         android:textSize="13sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -74,6 +81,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
+            android:drawableStart="@drawable/ic_section_profile"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/settings_accent"
             android:text="@string/settings_section_profile"
             android:textAllCaps="true"
             android:textColor="@color/settings_text_secondary"
@@ -161,7 +171,7 @@
                     android:paddingEnd="12dp"
                     android:paddingBottom="10dp"
                     android:text="@string/settings_driver_mode_desc_learner"
-                    android:textColor="#D7EBFF"
+                    android:textColor="@color/settings_text_secondary"
                     android:textSize="13sp" />
 
                 <TextView
@@ -184,13 +194,12 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/paymentsSubscriptionsButton"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="@string/settings_payments_subscriptions"
                     android:textAllCaps="false"
-                    android:textColor="@color/settings_text_primary"
                     app:strokeColor="@color/settings_card_stroke" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -200,6 +209,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
+            android:drawableStart="@drawable/ic_section_navigation"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/settings_accent"
             android:text="@string/settings_section_navigation"
             android:textAllCaps="true"
             android:textColor="@color/settings_text_secondary"
@@ -381,6 +393,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
+            android:drawableStart="@drawable/ic_section_privacy"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/settings_accent"
             android:text="@string/settings_section_privacy"
             android:textAllCaps="true"
             android:textColor="@color/settings_text_secondary"
@@ -432,13 +447,12 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/dataRightsButton"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:text="@string/settings_data_rights"
                     android:textAllCaps="false"
-                    android:textColor="@color/settings_text_primary"
                     app:strokeColor="@color/settings_card_stroke" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -448,6 +462,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
+            android:drawableStart="@drawable/ic_section_legal"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/settings_accent"
             android:text="@string/settings_section_legal"
             android:textAllCaps="true"
             android:textColor="@color/settings_text_secondary"
@@ -475,78 +492,71 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/termsButton"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/settings_legal_terms"
                     android:textAllCaps="false"
-                    android:textColor="@color/settings_text_primary"
                     app:strokeColor="@color/settings_card_stroke" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/privacyButton"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/settings_legal_privacy"
                     android:textAllCaps="false"
-                    android:textColor="@color/settings_text_primary"
                     app:strokeColor="@color/settings_card_stroke" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/faqButton"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/settings_legal_faq"
                     android:textAllCaps="false"
-                    android:textColor="@color/settings_text_primary"
                     app:strokeColor="@color/settings_card_stroke" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/contentAccuracyButton"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/settings_legal_content_accuracy"
                     android:textAllCaps="false"
-                    android:textColor="@color/settings_text_primary"
                     app:strokeColor="@color/settings_card_stroke" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/serviceAvailabilityButton"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/settings_legal_service_availability"
                     android:textAllCaps="false"
-                    android:textColor="@color/settings_text_primary"
                     app:strokeColor="@color/settings_card_stroke" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/safetyNoticeButton"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/settings_legal_safety_notice"
                     android:textAllCaps="false"
-                    android:textColor="@color/settings_text_primary"
                     app:strokeColor="@color/settings_card_stroke" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/theorySettingsButton"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/theory_settings"
                     android:textAllCaps="false"
-                    android:textColor="@color/settings_text_primary"
                     android:visibility="gone"
                     app:strokeColor="@color/settings_card_stroke" />
             </LinearLayout>
@@ -557,6 +567,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
+            android:drawableStart="@drawable/ic_section_support"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/settings_accent"
             android:text="@string/settings_section_support"
             android:textAllCaps="true"
             android:textColor="@color/settings_text_secondary"
@@ -584,34 +597,31 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/contactSupportButton"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/settings_support_contact"
                     android:textAllCaps="false"
-                    android:textColor="@color/settings_text_primary"
                     app:strokeColor="@color/settings_card_stroke" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/aboutDrivestButton"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/settings_support_about"
                     android:textAllCaps="false"
-                    android:textColor="@color/settings_text_primary"
                     app:strokeColor="@color/settings_card_stroke" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/exportDriveLogButton"
-                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:text="@string/settings_support_export_drive_log"
                     android:textAllCaps="false"
-                    android:textColor="@color/settings_text_primary"
                     app:strokeColor="@color/settings_card_stroke" />
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>

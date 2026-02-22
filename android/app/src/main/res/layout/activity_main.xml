@@ -33,7 +33,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="12dp"
         android:visibility="gone"
-        app:cardBackgroundColor="#0F172A"
+        app:cardBackgroundColor="#231F20"
         app:cardCornerRadius="12dp"
         app:cardElevation="5dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,8 +71,8 @@
 
     <ImageView
         android:id="@+id/drivestMapWatermark"
-        android:layout_width="@dimen/logo_size_map_watermark"
-        android:layout_height="@dimen/logo_size_map_watermark"
+        android:layout_width="@dimen/logo_width_map_watermark"
+        android:layout_height="@dimen/logo_height_map_watermark"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="10dp"
         android:alpha="0.93"
@@ -134,7 +134,7 @@
             android:background="@drawable/bg_speed_limit_sign"
             android:gravity="center"
             android:text="--"
-            android:textColor="#111827"
+            android:textColor="#231F20"
             android:textSize="14.3sp"
             android:textStyle="bold" />
     </FrameLayout>
@@ -210,7 +210,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:visibility="gone"
-        app:cardBackgroundColor="#111827"
+        app:cardBackgroundColor="#231F20"
         app:cardCornerRadius="14dp"
         app:cardElevation="6dp"
         app:layout_constraintBottom_toTopOf="@id/routeProgressBanner"
@@ -247,7 +247,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="-"
-                    android:textColor="#D1D5DB"
+                    android:textColor="#D8D1CE"
                     android:textSize="12sp" />
 
                 <com.google.android.material.switchmaterial.SwitchMaterial
@@ -258,10 +258,10 @@
                     android:minHeight="0dp"
                     android:showText="true"
                     android:text="@string/nav_low_stress_mode"
-                    android:textColor="#D1D5DB"
+                    android:textColor="#D8D1CE"
                     android:textSize="11sp"
-                    android:thumbTint="#22D3EE"
-                    android:trackTint="#334155" />
+                    android:thumbTint="#F37121"
+                    android:trackTint="#5A5456" />
             </LinearLayout>
 
             <LinearLayout
@@ -287,7 +287,7 @@
                     android:layout_marginTop="4dp"
                     android:gravity="center_vertical|end"
                     android:text="-"
-                    android:textColor="#D1D5DB"
+                    android:textColor="#D8D1CE"
                     android:textSize="11sp"
                     android:textStyle="bold" />
             </LinearLayout>
@@ -302,7 +302,7 @@
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
         android:visibility="gone"
-        app:cardBackgroundColor="#1F2937"
+        app:cardBackgroundColor="#322B2D"
         app:cardCornerRadius="14dp"
         app:cardElevation="6dp"
         app:layout_constraintBottom_toTopOf="@id/startNavigation"
@@ -339,7 +339,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Completed"
-                        android:textColor="#9CA3AF"
+                        android:textColor="#AFA8A4"
                         android:textSize="11sp" />
 
                     <TextView
@@ -362,7 +362,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Left"
-                        android:textColor="#9CA3AF"
+                        android:textColor="#AFA8A4"
                         android:textSize="11sp" />
 
                     <TextView
@@ -385,7 +385,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Time Left"
-                        android:textColor="#9CA3AF"
+                        android:textColor="#AFA8A4"
                         android:textSize="11sp" />
 
                     <TextView
@@ -408,7 +408,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ETA"
-                        android:textColor="#9CA3AF"
+                        android:textColor="#AFA8A4"
                         android:textSize="11sp" />
 
                     <TextView
@@ -428,7 +428,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/route_progress_stress_placeholder"
-                android:textColor="#A5B4FC"
+                android:textColor="#FFD0B0"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 android:visibility="gone" />
@@ -441,13 +441,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="18dp"
         android:layout_marginBottom="8dp"
-        android:background="#DBEAFE"
+        android:background="#FDE6D8"
         android:paddingStart="10dp"
         android:paddingTop="4dp"
         android:paddingEnd="10dp"
         android:paddingBottom="4dp"
         android:text="@string/practice_offline_badge"
-        android:textColor="#1E3A8A"
+        android:textColor="#A94A17"
         android:textSize="11sp"
         android:textStyle="bold"
         android:visibility="gone"

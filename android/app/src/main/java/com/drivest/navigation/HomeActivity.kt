@@ -144,11 +144,8 @@ class HomeActivity : AppCompatActivity() {
                         R.string.home_driver_mode,
                         formatDriverModeLabel(profile.driverMode)
                     )
-                    practiceModeButton.text = if (profile.driverMode == DriverMode.LEARNER) {
-                        getString(R.string.home_practice_button_recommended)
-                    } else {
-                        getString(R.string.home_practice_button)
-                    }
+                    // Keep tile labels short on small screens; recommendation is shown elsewhere.
+                    practiceModeButton.text = getString(R.string.home_practice_button)
                     confidenceScoreView.text = getString(
                         R.string.home_confidence_score,
                         profile.confidenceScore

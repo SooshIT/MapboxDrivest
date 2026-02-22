@@ -16,7 +16,7 @@ final class NavigationSessionViewController: UIViewController {
     private let hazardVoiceController = HazardVoiceController()
     private let voiceModePolicy = HazardVoiceModePolicy()
 
-    private let mapboxNavigationProvider = MapboxNavigationProvider(coreConfig: .init(locationSource: .live))
+    private lazy var mapboxNavigationProvider: MapboxNavigationProvider = makeNavigationProvider()
     private var mapboxNavigation: MapboxNavigation {
         mapboxNavigationProvider.mapboxNavigation
     }
@@ -43,6 +43,7 @@ final class NavigationSessionViewController: UIViewController {
     private let minimumPromptEvaluationSpeedMps = 0.556
     private let offRouteSmoothingAlpha = 0.35
     private let hazardVoiceMinConfidenceHint = 0.80
+    private let maxPracticePreviewWaypoints = 20
 
     init(
         mode: AppMode,
@@ -122,6 +123,9 @@ final class NavigationSessionViewController: UIViewController {
             summaryLabel.text = "Missing origin/destination for route preview."
             return
         }
+        print(
+            "[Drivest iOS] preview_route_request mode=\(mode.rawValue) waypoint_count=\(coordinates.count)"
+        )
 
         let options = NavigationRouteOptions(coordinates: coordinates)
         let request = mapboxNavigation.routingProvider().calculateRoutes(options: options)
@@ -134,13 +138,18 @@ final class NavigationSessionViewController: UIViewController {
                     self.summaryLabel.text = "Preview failed: \(error.localizedDescription)"
                     self.startButton.isEnabled = false
                 }
+                print(
+                    "[Drivest iOS] preview_route_failed mode=\(self.mode.rawValue) " +
+                        "waypoint_count=\(coordinates.count) error=\(error.localizedDescription)"
+                )
 
             case .success(let navigationRoutes):
                 await MainActor.run {
                     self.previewRoutes = navigationRoutes
+                    let fullPracticeFallback = self.practiceRoute?.geometry.map(\.coordinate) ?? coordinates
                     self.activeRouteCoordinates = self.resolveRouteCoordinates(
                         route: navigationRoutes.first,
-                        fallback: coordinates
+                        fallback: self.mode == .practice ? fullPracticeFallback : coordinates
                     )
                     if self.mode == .navigation {
                         self.parityStateStore.routesPackVersionId = "routes-mapbox-live-preview"
@@ -155,7 +164,12 @@ final class NavigationSessionViewController: UIViewController {
 
     private func buildCoordinateList() -> [CLLocationCoordinate2D] {
         if mode == .practice, let practiceRoute {
-            return practiceRoute.geometry.map(\.coordinate)
+            let fullGeometry = practiceRoute.geometry.map(\.coordinate)
+            let simplified = simplifiedPracticePreviewCoordinates(
+                from: fullGeometry,
+                maxWaypoints: maxPracticePreviewWaypoints
+            )
+            return simplified
         }
 
         let fallbackOrigin = CLLocationCoordinate2D(latitude: 51.872116, longitude: 0.928174)
@@ -173,7 +187,7 @@ final class NavigationSessionViewController: UIViewController {
         let durationMinutes = route.route.expectedTravelTime / 60.0
         let summaryName = destination?.placeName ?? practiceRoute?.name ?? "Route"
         summaryLabel.text = String(
-            format: "%@\n%.1f mi · %.0f min",
+            format: "%@\n%.1f mi - %.0f min",
             summaryName,
             distanceMiles,
             durationMinutes
@@ -229,14 +243,10 @@ final class NavigationSessionViewController: UIViewController {
     }
 
     private func applyVoiceModeStatusText() {
-        switch settingsStore.voiceMode {
-        case .all:
-            navigationItem.prompt = nil
-        case .alerts:
-            navigationItem.prompt = "Voice mode: Alerts only"
-        case .mute:
-            navigationItem.prompt = "Voice mode: Muted"
-        }
+        // Avoid UINavigationBar prompt constraint conflicts on iOS 18+; the voice chip already shows state.
+        navigationItem.prompt = nil
+        activeNavigationViewController?.navigationItem.prompt = nil
+        navigationController?.navigationBar.topItem?.prompt = nil
     }
 
     private func loadHazardFeatures() {
@@ -503,5 +513,67 @@ extension NavigationSessionViewController: NavigationViewControllerDelegate {
         let closestX = sx + (clamped * segDx)
         let closestY = sy + (clamped * segDy)
         return hypot(px - closestX, py - closestY)
+    }
+
+    private func makeNavigationProvider() -> MapboxNavigationProvider {
+        if let rawToken = Bundle.main.object(forInfoDictionaryKey: "MBXAccessToken") as? String {
+            let token = rawToken.trimmingCharacters(in: .whitespacesAndNewlines)
+            if token.hasPrefix("pk.") {
+                print("[Drivest iOS] mapbox_navigation_provider_token_loaded length=\(token.count)")
+                let coreConfig = CoreConfig(
+                    credentials: NavigationCoreApiConfiguration(accessToken: token),
+                    locationSource: .live
+                )
+                return MapboxNavigationProvider(coreConfig: coreConfig)
+            }
+        }
+
+        print("[Drivest iOS] mapbox_navigation_provider_token_missing_or_invalid fallback=default_provider")
+        return MapboxNavigationProvider(coreConfig: .init(locationSource: .live))
+    }
+
+    // Reduce local practice route geometry to a safe waypoint count for Directions preview requests.
+    private func simplifiedPracticePreviewCoordinates(
+        from coordinates: [CLLocationCoordinate2D],
+        maxWaypoints: Int
+    ) -> [CLLocationCoordinate2D] {
+        let deduped = dedupeSequentialCoordinates(coordinates)
+        guard deduped.count > maxWaypoints, maxWaypoints >= 2 else { return deduped }
+
+        if maxWaypoints == 2, let first = deduped.first, let last = deduped.last {
+            return [first, last]
+        }
+
+        let lastIndex = deduped.count - 1
+        let targetCount = min(maxWaypoints, deduped.count)
+        var sampled: [CLLocationCoordinate2D] = []
+        sampled.reserveCapacity(targetCount)
+
+        for sampleIndex in 0..<targetCount {
+            let ratio = Double(sampleIndex) / Double(max(targetCount - 1, 1))
+            let index = Int(round(ratio * Double(lastIndex)))
+            sampled.append(deduped[index])
+        }
+        return dedupeSequentialCoordinates(sampled)
+    }
+
+    private func dedupeSequentialCoordinates(
+        _ coordinates: [CLLocationCoordinate2D]
+    ) -> [CLLocationCoordinate2D] {
+        guard !coordinates.isEmpty else { return [] }
+        var result: [CLLocationCoordinate2D] = []
+        result.reserveCapacity(coordinates.count)
+        var previous: CLLocationCoordinate2D?
+        for coordinate in coordinates {
+            if let previous,
+                abs(previous.latitude - coordinate.latitude) < 0.000_001 &&
+                    abs(previous.longitude - coordinate.longitude) < 0.000_001
+            {
+                continue
+            }
+            result.append(coordinate)
+            previous = coordinate
+        }
+        return result
     }
 }

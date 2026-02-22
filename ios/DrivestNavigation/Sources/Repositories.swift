@@ -102,7 +102,9 @@ final class DestinationSearchRepository {
         guard let url = URL(string: endpoint) else { return [] }
 
         do {
-            let (data, response) = try await URLSession.shared.data(from: url)
+            var request = URLRequest(url: url)
+            request.httpMethod = "GET"
+            let (data, response) = try await URLSession.shared.data(for: request, delegate: nil)
             guard let http = response as? HTTPURLResponse, (200...299).contains(http.statusCode) else {
                 return []
             }

@@ -2,6 +2,7 @@ package com.drivest.navigation.theory.screens
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -39,9 +40,19 @@ class TheoryTopicDetailActivity : AppCompatActivity() {
         val lessonsContainer = findViewById<LinearLayout>(R.id.theoryTopicLessonsContainer)
         val lessons = pack.lessons.filter { it.topicId == topic.id }
         lessons.forEach { lesson ->
-            val button = MaterialButton(this).apply {
+            val button = MaterialButton(
+                this,
+                null,
+                com.google.android.material.R.attr.materialButtonOutlinedStyle
+            ).apply {
                 text = lesson.title
                 isAllCaps = false
+                layoutParams = LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                ).apply {
+                    bottomMargin = resources.getDimensionPixelSize(R.dimen.theory_list_item_spacing)
+                }
                 setOnClickListener {
                     startActivity(
                         Intent(this@TheoryTopicDetailActivity, TheoryLessonActivity::class.java).apply {

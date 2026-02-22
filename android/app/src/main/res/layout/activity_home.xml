@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp">
+    android:background="@drawable/bg_app_surface"
+    android:padding="20dp">
 
     <ImageButton
         android:id="@+id/homeSettingsButton"
@@ -11,7 +12,7 @@
         android:layout_height="@dimen/home_settings_button_size"
         android:background="@drawable/bg_map_control_chip"
         android:contentDescription="@string/settings_title"
-        android:elevation="7dp"
+        android:elevation="6dp"
         android:padding="12dp"
         android:scaleType="fitCenter"
         android:tint="@color/map_control_settings_icon"
@@ -21,171 +22,190 @@
 
     <ImageView
         android:id="@+id/homeLogo"
-        android:layout_width="@dimen/logo_size_home"
-        android:layout_height="@dimen/logo_size_home"
-        android:layout_marginTop="6dp"
+        android:layout_width="@dimen/logo_width_home"
+        android:layout_height="@dimen/logo_height_home"
+        android:layout_marginTop="30dp"
         android:contentDescription="@string/drivest_logo_content_description"
         android:src="@drawable/drivest_logo_tight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/homeSubtitle"
+    <LinearLayout
+        android:id="@+id/homeStatusCard"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:gravity="center"
-        android:text="@string/home_subtitle"
-        android:textColor="#4B5563"
-        android:textSize="17sp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_home_status_card"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="14dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="14dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/homeLogo" />
+        app:layout_constraintTop_toBottomOf="@id/homeLogo">
 
-    <TextView
-        android:id="@+id/homeDriverModeValue"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="@string/home_driver_mode_default"
-        android:textColor="#111827"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/homeSubtitle" />
+        <TextView
+            android:id="@+id/homeSubtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/home_subtitle"
+            android:textColor="@color/settings_text_secondary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/homeConfidenceValue"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:gravity="center"
-        android:text="@string/home_confidence_score_default"
-        android:textColor="#0F766E"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/homeDriverModeValue" />
+        <TextView
+            android:id="@+id/homeDriverModeValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/home_driver_mode_default"
+            android:textColor="@color/settings_text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/homeRecommendedLabel"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:gravity="center"
-        android:text="@string/home_recommended_today_label"
-        android:textColor="#1D4ED8"
-        android:textSize="13sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/homeConfidenceValue" />
+        <TextView
+            android:id="@+id/homeConfidenceValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="@string/home_confidence_score_default"
+            android:textColor="@color/app_chip_text"
+            android:textSize="15sp"
+            android:textStyle="bold" />
 
-    <TextView
-        android:id="@+id/homeRecommendedValue"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:gravity="center"
-        android:textColor="#111827"
-        android:textSize="14sp"
-        android:textStyle="bold"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/homeRecommendedLabel" />
+        <TextView
+            android:id="@+id/homeRecommendedLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/home_recommended_today_label"
+            android:textColor="@color/settings_accent"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/homeRecommendedValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:textColor="@color/settings_text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/homeModeRow"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="16dp"
         android:orientation="horizontal"
         android:weightSum="3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/homeRecommendedValue">
+        app:layout_constraintTop_toBottomOf="@id/homeStatusCard">
 
         <FrameLayout
             android:layout_width="0dp"
-            android:layout_height="96dp"
-            android:layout_weight="1"
-            android:layout_marginEnd="6dp">
+            android:layout_height="112dp"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/practiceModeButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
+                android:lineSpacingExtra="1dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
                 android:text="@string/home_practice_button"
                 android:textAllCaps="false"
-                android:textSize="15sp"
-                app:cornerRadius="14dp"
-                app:icon="@android:drawable/ic_menu_myplaces"
+                android:textSize="13sp"
+                app:icon="@drawable/ic_home_practice"
                 app:iconGravity="textTop"
-                app:iconPadding="8dp" />
+                app:iconPadding="6dp"
+                app:iconSize="20dp" />
         </FrameLayout>
 
         <FrameLayout
             android:layout_width="0dp"
-            android:layout_height="96dp"
-            android:layout_weight="1"
+            android:layout_height="112dp"
             android:layout_marginStart="3dp"
-            android:layout_marginEnd="3dp">
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/navigationModeButton"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
+                android:lineSpacingExtra="1dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
                 android:text="@string/home_navigation_button"
                 android:textAllCaps="false"
-                android:textSize="15sp"
-                app:cornerRadius="14dp"
-                app:icon="@android:drawable/ic_menu_directions"
+                android:textSize="13sp"
+                app:icon="@drawable/ic_home_navigation"
                 app:iconGravity="textTop"
-                app:iconPadding="8dp" />
+                app:iconPadding="6dp"
+                app:iconSize="20dp" />
         </FrameLayout>
 
         <FrameLayout
             android:id="@+id/homeTheoryTileContainer"
             android:layout_width="0dp"
-            android:layout_height="96dp"
-            android:layout_weight="1"
-            android:layout_marginStart="6dp">
+            android:layout_height="112dp"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/theoryModeButton"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
+                android:lineSpacingExtra="1dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
                 android:text="@string/home_theory_button"
                 android:textAllCaps="false"
-                android:textSize="15sp"
-                app:cornerRadius="14dp"
-                app:icon="@android:drawable/ic_menu_info_details"
+                android:textSize="13sp"
+                app:icon="@drawable/ic_home_theory"
                 app:iconGravity="textTop"
-                app:iconPadding="8dp" />
+                app:iconPadding="6dp"
+                app:iconSize="20dp" />
 
             <TextView
                 android:id="@+id/homeTheoryProgressBadge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top|end"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:background="#DCFCE7"
-                android:paddingStart="8dp"
-                android:paddingTop="4dp"
-                android:paddingEnd="8dp"
-                android:paddingBottom="4dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/bg_app_chip"
+                android:paddingStart="6dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="6dp"
+                android:paddingBottom="3dp"
                 android:text="@string/home_theory_progress_default"
-                android:textColor="#166534"
-                android:textSize="11sp"
+                android:textColor="@color/app_chip_text"
+                android:textSize="10sp"
                 android:textStyle="bold" />
         </FrameLayout>
     </LinearLayout>
@@ -197,7 +217,7 @@
         android:layout_marginTop="10dp"
         android:gravity="center"
         android:text="@string/home_theory_readiness_default"
-        android:textColor="#1D4ED8"
+        android:textColor="@color/settings_accent"
         android:textSize="13sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"

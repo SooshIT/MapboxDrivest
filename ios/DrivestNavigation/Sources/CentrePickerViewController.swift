@@ -22,6 +22,7 @@ final class CentrePickerViewController: UIViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search by centre or town"
         navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
 
         tableView.translatesAutoresizingMaskIntoConstraints = false

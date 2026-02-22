@@ -7,7 +7,7 @@
     app:cardBackgroundColor="#FFFFFF"
     app:cardCornerRadius="12dp"
     app:cardElevation="2dp"
-    app:strokeColor="#E5E7EB"
+    app:strokeColor="#D8D1CE"
     app:strokeWidth="1dp">
 
     <LinearLayout
@@ -30,7 +30,7 @@
                 android:id="@+id/destinationNameText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#111827"
+                android:textColor="#231F20"
                 android:textSize="17sp"
                 android:textStyle="bold" />
 
@@ -39,7 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
-                android:textColor="#4B5563"
+                android:textColor="#5A5456"
                 android:textSize="13sp" />
         </LinearLayout>
 
