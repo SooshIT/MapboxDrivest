@@ -1,0 +1,5404 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.10 2d4cfc48",
+  "osm3s": {
+    "timestamp_osm_base": "2026-02-20T06:55:44Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 3955175470,
+      "lat": 51.9180472,
+      "lon": 0.8929085,
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:housename": "The St Aubyn Centre",
+        "addr:housenumber": "2",
+        "addr:postcode": "CO4 5HG",
+        "addr:street": "Boxted Road",
+        "amenity": "school",
+        "capacity": "28",
+        "check_date": "2025-08-30",
+        "isced:level": "2;3",
+        "max_age": "18",
+        "min_age": "13",
+        "name": "The St Aubyn Centre Education Department",
+        "operator": "Essex County Council",
+        "operator:type": "government",
+        "operator:wikidata": "Q5399679",
+        "phone": "+44 1206 334685",
+        "ref:GB:uprn": "10004945352",
+        "ref:edubase": "134260",
+        "school:type": "alternative_provision",
+        "website": "https://www.staubyn-centre.essex.sch.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 35879526,
+      "bounds": {
+        "minlat": 51.8673899,
+        "minlon": 0.9027708,
+        "maxlat": 51.868236,
+        "maxlon": 0.9042376
+      },
+      "nodes": [
+        419336997,
+        419336998,
+        419337002,
+        419337001,
+        419336999,
+        419337000,
+        419336997
+      ],
+      "geometry": [
+        {
+          "lat": 51.868236,
+          "lon": 0.9039553
+        },
+        {
+          "lat": 51.868236,
+          "lon": 0.9027708
+        },
+        {
+          "lat": 51.86769,
+          "lon": 0.9027768
+        },
+        {
+          "lat": 51.8676887,
+          "lon": 0.9028979
+        },
+        {
+          "lat": 51.8673899,
+          "lon": 0.9029063
+        },
+        {
+          "lat": 51.8677262,
+          "lon": 0.9042376
+        },
+        {
+          "lat": 51.868236,
+          "lon": 0.9039553
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO2 8NN",
+        "addr:street": "School Road",
+        "amenity": "school",
+        "capacity": "204",
+        "check_date": "2025-08-30",
+        "isced:level": "0;1",
+        "max_age": "7",
+        "min_age": "2",
+        "name": "Monkwick Infant and Nursery School",
+        "operator": "The Sigma Trust",
+        "operator:type": "private",
+        "operator:wikidata": "Q122616427",
+        "phone": "+44 1206 573849",
+        "ref:GB:uprn": "303005652",
+        "ref:edubase": "140735",
+        "ref:edubase:group": "16257",
+        "school": "primary",
+        "school:group:type": "multi_academy_trust",
+        "school:type": "academy",
+        "website": "https://www.monkwick-inf.essex.sch.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 36724639,
+      "bounds": {
+        "minlat": 51.8676937,
+        "minlon": 0.9034864,
+        "maxlat": 51.8695774,
+        "maxlon": 0.9057636
+      },
+      "nodes": [
+        426870315,
+        426870316,
+        426870317,
+        426870318,
+        426870319,
+        370252399,
+        370252403,
+        426870325,
+        6823556527,
+        370252407,
+        370252411,
+        370252414,
+        370252415,
+        426870337,
+        426870302,
+        426870303,
+        426870304,
+        426938357,
+        426870305,
+        426870306,
+        426870307,
+        426870308,
+        426870309,
+        426870310,
+        426870311,
+        426870312,
+        426870313,
+        426870314,
+        426870315
+      ],
+      "geometry": [
+        {
+          "lat": 51.8680218,
+          "lon": 0.90442
+        },
+        {
+          "lat": 51.867984,
+          "lon": 0.9044464
+        },
+        {
+          "lat": 51.8679651,
+          "lon": 0.9045031
+        },
+        {
+          "lat": 51.867916,
+          "lon": 0.9046468
+        },
+        {
+          "lat": 51.8677487,
+          "lon": 0.9044275
+        },
+        {
+          "lat": 51.8676937,
+          "lon": 0.9044847
+        },
+        {
+          "lat": 51.8678558,
+          "lon": 0.9051445
+        },
+        {
+          "lat": 51.8678949,
+          "lon": 0.9052669
+        },
+        {
+          "lat": 51.8679632,
+          "lon": 0.9054051
+        },
+        {
+          "lat": 51.8680644,
+          "lon": 0.9055238
+        },
+        {
+          "lat": 51.8685001,
+          "lon": 0.9057636
+        },
+        {
+          "lat": 51.8686686,
+          "lon": 0.9057549
+        },
+        {
+          "lat": 51.8688209,
+          "lon": 0.9056138
+        },
+        {
+          "lat": 51.8695774,
+          "lon": 0.9053452
+        },
+        {
+          "lat": 51.8694959,
+          "lon": 0.9034864
+        },
+        {
+          "lat": 51.8693787,
+          "lon": 0.9035619
+        },
+        {
+          "lat": 51.869065,
+          "lon": 0.9037245
+        },
+        {
+          "lat": 51.8690026,
+          "lon": 0.9037561
+        },
+        {
+          "lat": 51.8688042,
+          "lon": 0.9038606
+        },
+        {
+          "lat": 51.8686833,
+          "lon": 0.9038643
+        },
+        {
+          "lat": 51.8685736,
+          "lon": 0.9039248
+        },
+        {
+          "lat": 51.8684905,
+          "lon": 0.9039664
+        },
+        {
+          "lat": 51.8684149,
+          "lon": 0.9039928
+        },
+        {
+          "lat": 51.8683393,
+          "lon": 0.9040155
+        },
+        {
+          "lat": 51.8682297,
+          "lon": 0.9040798
+        },
+        {
+          "lat": 51.8680974,
+          "lon": 0.9041856
+        },
+        {
+          "lat": 51.8680445,
+          "lon": 0.9042461
+        },
+        {
+          "lat": 51.8680483,
+          "lon": 0.9043217
+        },
+        {
+          "lat": 51.8680218,
+          "lon": 0.90442
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO2 8NN",
+        "addr:street": "School Road",
+        "addr:subdistrict": "Monkwick",
+        "amenity": "school",
+        "barrier": "fence",
+        "capacity": "360",
+        "check_date": "2025-08-30",
+        "contact:email": "office@monkwickjunior.school",
+        "contact:phone": "+44 1206 575399",
+        "contact:website": "https://www.monkwickjunior.co.uk/",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "7",
+        "name": "Monkwick Junior School",
+        "operator": "The Sigma Trust",
+        "operator:type": "private",
+        "operator:wikidata": "Q122616427",
+        "ref:GB:uprn": "100091468107",
+        "ref:edubase": "145020",
+        "ref:edubase:group": "16257",
+        "school": "primary",
+        "school:group:type": "multi_academy_trust",
+        "school:type": "academy"
+      }
+    },
+    {
+      "type": "way",
+      "id": 44152986,
+      "bounds": {
+        "minlat": 51.8675995,
+        "minlon": 0.9540994,
+        "maxlat": 51.8691675,
+        "maxlon": 0.9582436
+      },
+      "nodes": [
+        1638215998,
+        1638215992,
+        1638215989,
+        1638215987,
+        644944688,
+        644944686,
+        1707397023,
+        281447086,
+        281447085,
+        644944684,
+        281447083,
+        281447082,
+        282336432,
+        282336433,
+        282336435,
+        282336436,
+        2910016275,
+        2910016276,
+        2910016278,
+        13244061741,
+        281447084,
+        282336440,
+        13244061749,
+        13244061750,
+        13244061751,
+        282336444,
+        1638216007,
+        1638216003,
+        1638216004,
+        1638216006,
+        1638216001,
+        1638216000,
+        1638215998
+      ],
+      "geometry": [
+        {
+          "lat": 51.8679382,
+          "lon": 0.9569913
+        },
+        {
+          "lat": 51.8678913,
+          "lon": 0.9569178
+        },
+        {
+          "lat": 51.8678286,
+          "lon": 0.9568835
+        },
+        {
+          "lat": 51.8676977,
+          "lon": 0.9568523
+        },
+        {
+          "lat": 51.8675995,
+          "lon": 0.9568445
+        },
+        {
+          "lat": 51.8676754,
+          "lon": 0.9563554
+        },
+        {
+          "lat": 51.867724,
+          "lon": 0.9560203
+        },
+        {
+          "lat": 51.8677844,
+          "lon": 0.9556071
+        },
+        {
+          "lat": 51.8678801,
+          "lon": 0.9549475
+        },
+        {
+          "lat": 51.8679287,
+          "lon": 0.954621
+        },
+        {
+          "lat": 51.8680064,
+          "lon": 0.9540994
+        },
+        {
+          "lat": 51.86819,
+          "lon": 0.9541492
+        },
+        {
+          "lat": 51.8687406,
+          "lon": 0.9543345
+        },
+        {
+          "lat": 51.8687015,
+          "lon": 0.954578
+        },
+        {
+          "lat": 51.8686085,
+          "lon": 0.9551687
+        },
+        {
+          "lat": 51.8688505,
+          "lon": 0.9553904
+        },
+        {
+          "lat": 51.8689965,
+          "lon": 0.9554875
+        },
+        {
+          "lat": 51.8690807,
+          "lon": 0.9555309
+        },
+        {
+          "lat": 51.8691675,
+          "lon": 0.9556508
+        },
+        {
+          "lat": 51.8691415,
+          "lon": 0.9557419
+        },
+        {
+          "lat": 51.8689534,
+          "lon": 0.9561366
+        },
+        {
+          "lat": 51.8686387,
+          "lon": 0.9566799
+        },
+        {
+          "lat": 51.8685276,
+          "lon": 0.9572999
+        },
+        {
+          "lat": 51.8685903,
+          "lon": 0.9574999
+        },
+        {
+          "lat": 51.868652,
+          "lon": 0.9580004
+        },
+        {
+          "lat": 51.8682323,
+          "lon": 0.9582436
+        },
+        {
+          "lat": 51.8682544,
+          "lon": 0.9575366
+        },
+        {
+          "lat": 51.8679984,
+          "lon": 0.9574915
+        },
+        {
+          "lat": 51.8680025,
+          "lon": 0.9574427
+        },
+        {
+          "lat": 51.8680136,
+          "lon": 0.9573116
+        },
+        {
+          "lat": 51.8679925,
+          "lon": 0.9571578
+        },
+        {
+          "lat": 51.8679719,
+          "lon": 0.9570708
+        },
+        {
+          "lat": 51.8679382,
+          "lon": 0.9569913
+        }
+      ],
+      "tags": {
+        "addr:postcode": "CO7 9QB",
+        "addr:street": "Broome Grove",
+        "amenity": "school",
+        "name": "Broomgrove Junior & Infant Schools",
+        "not:name": "Broome Grove School",
+        "school": "shared_site"
+      }
+    },
+    {
+      "type": "way",
+      "id": 63602958,
+      "bounds": {
+        "minlat": 51.9093687,
+        "minlon": 0.9268687,
+        "maxlat": 51.9105826,
+        "maxlon": 0.9289237
+      },
+      "nodes": [
+        787124858,
+        5890431010,
+        787124846,
+        787124859,
+        787124860,
+        3178897884,
+        5890431006,
+        3178897885,
+        787124861,
+        3180989937,
+        3180989924,
+        3180989939,
+        3180989945,
+        787124858
+      ],
+      "geometry": [
+        {
+          "lat": 51.9105826,
+          "lon": 0.9274992
+        },
+        {
+          "lat": 51.9101515,
+          "lon": 0.9282977
+        },
+        {
+          "lat": 51.9101133,
+          "lon": 0.9283685
+        },
+        {
+          "lat": 51.9098231,
+          "lon": 0.9289237
+        },
+        {
+          "lat": 51.9093687,
+          "lon": 0.9282589
+        },
+        {
+          "lat": 51.9093763,
+          "lon": 0.9279243
+        },
+        {
+          "lat": 51.9094291,
+          "lon": 0.9276869
+        },
+        {
+          "lat": 51.9094562,
+          "lon": 0.9275649
+        },
+        {
+          "lat": 51.909622,
+          "lon": 0.9268687
+        },
+        {
+          "lat": 51.9100684,
+          "lon": 0.9270806
+        },
+        {
+          "lat": 51.9099684,
+          "lon": 0.9275371
+        },
+        {
+          "lat": 51.9100964,
+          "lon": 0.9275964
+        },
+        {
+          "lat": 51.9101939,
+          "lon": 0.9271498
+        },
+        {
+          "lat": 51.9105826,
+          "lon": 0.9274992
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO4 0HH",
+        "addr:street": "Clay Lane Grove",
+        "amenity": "school",
+        "capacity": "210",
+        "check_date": "2025-08-30",
+        "denomination": "anglican",
+        "diocese": "Diocese of Chelmsford",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "4",
+        "name": "St John's Church of England Voluntary Controlled Primary School",
+        "phone": "+44 1206 841288",
+        "ref:GB:uprn": "303004069",
+        "ref:edubase": "115065",
+        "religion": "christian",
+        "school": "primary",
+        "school:type": "voluntary_controlled",
+        "website": "https://www.stjohnscofe.com/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 63603237,
+      "bounds": {
+        "minlat": 51.9147247,
+        "minlon": 0.9111252,
+        "maxlat": 51.9185537,
+        "maxlon": 0.9188811
+      },
+      "nodes": [
+        787125143,
+        781737385,
+        781737382,
+        1041831366,
+        1041831364,
+        4175648183,
+        4175669102,
+        4175648182,
+        4175669111,
+        4175648173,
+        4175648167,
+        4175648179,
+        378855194,
+        378855197,
+        3178899999,
+        3178899998,
+        3178900001,
+        3178900002,
+        3178900004,
+        3178900006,
+        4929638178,
+        787125146,
+        4929638176,
+        4929638175,
+        4929638174,
+        4929638173,
+        4929638172,
+        787125143
+      ],
+      "geometry": [
+        {
+          "lat": 51.9167195,
+          "lon": 0.9111252
+        },
+        {
+          "lat": 51.9176174,
+          "lon": 0.9119829
+        },
+        {
+          "lat": 51.9185173,
+          "lon": 0.9127447
+        },
+        {
+          "lat": 51.9183817,
+          "lon": 0.9132061
+        },
+        {
+          "lat": 51.9185537,
+          "lon": 0.9133455
+        },
+        {
+          "lat": 51.9170257,
+          "lon": 0.9169084
+        },
+        {
+          "lat": 51.9167875,
+          "lon": 0.9175331
+        },
+        {
+          "lat": 51.9165044,
+          "lon": 0.9182753
+        },
+        {
+          "lat": 51.9162733,
+          "lon": 0.9188811
+        },
+        {
+          "lat": 51.9161381,
+          "lon": 0.9185215
+        },
+        {
+          "lat": 51.9158993,
+          "lon": 0.9178867
+        },
+        {
+          "lat": 51.9156317,
+          "lon": 0.9181453
+        },
+        {
+          "lat": 51.9150222,
+          "lon": 0.9187343
+        },
+        {
+          "lat": 51.9149332,
+          "lon": 0.9185333
+        },
+        {
+          "lat": 51.914734,
+          "lon": 0.9180712
+        },
+        {
+          "lat": 51.9147247,
+          "lon": 0.9179105
+        },
+        {
+          "lat": 51.9147402,
+          "lon": 0.9178102
+        },
+        {
+          "lat": 51.9147532,
+          "lon": 0.9176358
+        },
+        {
+          "lat": 51.9147713,
+          "lon": 0.9174704
+        },
+        {
+          "lat": 51.9148442,
+          "lon": 0.917221
+        },
+        {
+          "lat": 51.9154989,
+          "lon": 0.9153325
+        },
+        {
+          "lat": 51.9156946,
+          "lon": 0.9147854
+        },
+        {
+          "lat": 51.9159425,
+          "lon": 0.9141853
+        },
+        {
+          "lat": 51.9161665,
+          "lon": 0.9135528
+        },
+        {
+          "lat": 51.916414,
+          "lon": 0.9127074
+        },
+        {
+          "lat": 51.9166543,
+          "lon": 0.911895
+        },
+        {
+          "lat": 51.9166963,
+          "lon": 0.911365
+        },
+        {
+          "lat": 51.9167195,
+          "lon": 0.9111252
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO4 9PU",
+        "addr:street": "Brinkley Lane",
+        "amenity": "school",
+        "capacity": "1500",
+        "check_date": "2025-08-30",
+        "isced:level": "2",
+        "max_age": "16",
+        "min_age": "11",
+        "name": "The Gilberd School",
+        "operator": "Alpha Trust",
+        "operator:type": "private",
+        "operator:wikidata": "Q122685738",
+        "phone": "+44 1206 842211",
+        "ref:GB:uprn": "100091470204",
+        "ref:edubase": "137926",
+        "ref:edubase:group": "16995",
+        "school": "secondary",
+        "school:group:type": "multi_academy_trust",
+        "school:type": "academy",
+        "website": "https://www.gilberd.com/",
+        "wikidata": "Q5560734",
+        "wikipedia": "en:The Gilberd School"
+      }
+    },
+    {
+      "type": "way",
+      "id": 63603251,
+      "bounds": {
+        "minlat": 51.9150222,
+        "minlon": 0.9178867,
+        "maxlat": 51.9165538,
+        "maxlon": 0.9204771
+      },
+      "nodes": [
+        4175648167,
+        4175648173,
+        4175669111,
+        4175648172,
+        787124783,
+        787124784,
+        787125151,
+        787125153,
+        3178900020,
+        3178900014,
+        378855194,
+        4175648179,
+        4175648167
+      ],
+      "geometry": [
+        {
+          "lat": 51.9158993,
+          "lon": 0.9178867
+        },
+        {
+          "lat": 51.9161381,
+          "lon": 0.9185215
+        },
+        {
+          "lat": 51.9162733,
+          "lon": 0.9188811
+        },
+        {
+          "lat": 51.9165296,
+          "lon": 0.9195467
+        },
+        {
+          "lat": 51.9165538,
+          "lon": 0.9196104
+        },
+        {
+          "lat": 51.9163622,
+          "lon": 0.9198531
+        },
+        {
+          "lat": 51.916349,
+          "lon": 0.9199389
+        },
+        {
+          "lat": 51.9157168,
+          "lon": 0.9204771
+        },
+        {
+          "lat": 51.9153723,
+          "lon": 0.9195715
+        },
+        {
+          "lat": 51.9152026,
+          "lon": 0.919163
+        },
+        {
+          "lat": 51.9150222,
+          "lon": 0.9187343
+        },
+        {
+          "lat": 51.9156317,
+          "lon": 0.9181453
+        },
+        {
+          "lat": 51.9158993,
+          "lon": 0.9178867
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO4 9GF",
+        "addr:street": "Rawlings Crescent",
+        "amenity": "school",
+        "capacity": "420",
+        "check_date": "2025-08-30",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "5",
+        "name": "Brinkley Grove Primary School",
+        "phone": "+44 1206 852266",
+        "ref:GB:uprn": "303005345",
+        "ref:edubase": "131219",
+        "school": "primary",
+        "school:type": "foundation",
+        "website": "https://brinkleygrove.essex.sch.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 63603303,
+      "bounds": {
+        "minlat": 51.9100804,
+        "minlon": 0.9155281,
+        "maxlat": 51.9114645,
+        "maxlon": 0.917154
+      },
+      "nodes": [
+        787125188,
+        3184338449,
+        787125190,
+        3184338460,
+        3184340565,
+        3184340579,
+        3184340583,
+        4934231844,
+        4934231855,
+        4934231856,
+        787125191,
+        787125188
+      ],
+      "geometry": [
+        {
+          "lat": 51.9113961,
+          "lon": 0.9158642
+        },
+        {
+          "lat": 51.9102586,
+          "lon": 0.9155281
+        },
+        {
+          "lat": 51.9100804,
+          "lon": 0.9168718
+        },
+        {
+          "lat": 51.9103774,
+          "lon": 0.9169556
+        },
+        {
+          "lat": 51.9104308,
+          "lon": 0.9169262
+        },
+        {
+          "lat": 51.9109232,
+          "lon": 0.9170858
+        },
+        {
+          "lat": 51.910978,
+          "lon": 0.9170089
+        },
+        {
+          "lat": 51.9110021,
+          "lon": 0.9170161
+        },
+        {
+          "lat": 51.9111957,
+          "lon": 0.9170738
+        },
+        {
+          "lat": 51.9113221,
+          "lon": 0.9171115
+        },
+        {
+          "lat": 51.9114645,
+          "lon": 0.917154
+        },
+        {
+          "lat": 51.9113961,
+          "lon": 0.9158642
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO4 9SN",
+        "addr:street": "Tynedale Square",
+        "amenity": "school",
+        "capacity": "428",
+        "check_date": "2025-08-30",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "4",
+        "name": "Highwoods Community Primary School",
+        "operator": "Highwoods Community Primary School",
+        "operator:type": "private",
+        "operator:wikidata": "Q122683791",
+        "phone": "+44 1206 845887",
+        "ref:GB:uprn": "303003064",
+        "ref:edubase": "139462",
+        "ref:edubase:group": "3417",
+        "school": "primary",
+        "school:group:type": "single_academy_trust",
+        "school:type": "academy",
+        "website": "https://www.highwoodsprimary.com/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 64096327,
+      "bounds": {
+        "minlat": 51.8873109,
+        "minlon": 0.9314492,
+        "maxlat": 51.8889416,
+        "maxlon": 0.9344333
+      },
+      "nodes": [
+        3835551203,
+        3835547127,
+        3835547149,
+        3835551197,
+        3835551213,
+        5237833223,
+        790325940,
+        790325944,
+        790325946,
+        790325949,
+        790325928,
+        790325931,
+        3835551192,
+        3835551173,
+        3835551203
+      ],
+      "geometry": [
+        {
+          "lat": 51.8888667,
+          "lon": 0.9343029
+        },
+        {
+          "lat": 51.8888637,
+          "lon": 0.9338861
+        },
+        {
+          "lat": 51.8888799,
+          "lon": 0.9334027
+        },
+        {
+          "lat": 51.8889416,
+          "lon": 0.9330546
+        },
+        {
+          "lat": 51.8889337,
+          "lon": 0.9329758
+        },
+        {
+          "lat": 51.8888596,
+          "lon": 0.9329528
+        },
+        {
+          "lat": 51.8887304,
+          "lon": 0.9327689
+        },
+        {
+          "lat": 51.8888803,
+          "lon": 0.9324685
+        },
+        {
+          "lat": 51.8883108,
+          "lon": 0.9314492
+        },
+        {
+          "lat": 51.8873109,
+          "lon": 0.9336379
+        },
+        {
+          "lat": 51.8876023,
+          "lon": 0.9343889
+        },
+        {
+          "lat": 51.8878142,
+          "lon": 0.9343964
+        },
+        {
+          "lat": 51.8879109,
+          "lon": 0.9343945
+        },
+        {
+          "lat": 51.8888688,
+          "lon": 0.9344333
+        },
+        {
+          "lat": 51.8888667,
+          "lon": 0.9343029
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO4 3QJ",
+        "addr:street": "Hickory Avenue",
+        "amenity": "school",
+        "capacity": "420",
+        "check_date": "2025-08-30",
+        "isced:level": "0;1",
+        "max_age": "11",
+        "min_age": "3",
+        "name": "Unity Primary Academy",
+        "old_name": "St Andrew's",
+        "operator": "Reach2 Academy Trust",
+        "operator:type": "private",
+        "operator:wikidata": "Q121704496",
+        "phone": "+44 1206 864226",
+        "ref:GB:uprn": "303013926",
+        "ref:edubase": "141113",
+        "ref:edubase:group": "4320",
+        "school": "primary",
+        "school:group:type": "multi_academy_trust",
+        "school:type": "academy",
+        "website": "https://www.unityprimaryacademy.com/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 64096386,
+      "bounds": {
+        "minlat": 51.8970574,
+        "minlon": 0.9379295,
+        "maxlat": 51.8985382,
+        "maxlon": 0.9400103
+      },
+      "nodes": [
+        790326093,
+        369675426,
+        369675425,
+        3835600791,
+        778652520,
+        778652517,
+        778652516,
+        790326095,
+        778652514,
+        778652512,
+        790326093
+      ],
+      "geometry": [
+        {
+          "lat": 51.8970574,
+          "lon": 0.9387529
+        },
+        {
+          "lat": 51.8982556,
+          "lon": 0.9379295
+        },
+        {
+          "lat": 51.8985382,
+          "lon": 0.9389211
+        },
+        {
+          "lat": 51.89849,
+          "lon": 0.9390211
+        },
+        {
+          "lat": 51.8979234,
+          "lon": 0.9400103
+        },
+        {
+          "lat": 51.897662,
+          "lon": 0.9396349
+        },
+        {
+          "lat": 51.8976105,
+          "lon": 0.9395574
+        },
+        {
+          "lat": 51.897437,
+          "lon": 0.9393092
+        },
+        {
+          "lat": 51.8973774,
+          "lon": 0.9392216
+        },
+        {
+          "lat": 51.8972885,
+          "lon": 0.9390938
+        },
+        {
+          "lat": 51.8970574,
+          "lon": 0.9387529
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO4 3YN",
+        "addr:street": "Roach Vale",
+        "amenity": "school",
+        "capacity": "210",
+        "check_date": "2025-08-30",
+        "fhrs:id": "1585608",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "4",
+        "name": "Roach Vale Primary School",
+        "operator": "Essex County Council",
+        "operator:type": "government",
+        "operator:wikidata": "Q5399679",
+        "phone": "+44 1206 861324",
+        "ref:GB:uprn": "100091469816",
+        "ref:edubase": "114823",
+        "school": "primary",
+        "school:type": "community",
+        "website": "https://www.roachvaleprimary.co.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 64096388,
+      "bounds": {
+        "minlat": 51.8923565,
+        "minlon": 0.9373788,
+        "maxlat": 51.8955486,
+        "maxlon": 0.9456113
+      },
+      "nodes": [
+        369675995,
+        13513883506,
+        13513883505,
+        13513883504,
+        13513883503,
+        13513883502,
+        355298790,
+        355298792,
+        7208767374,
+        355298793,
+        553485190,
+        6872733419,
+        6872733420,
+        6872733421,
+        6872733422,
+        6872733423,
+        6872733424,
+        6872733438,
+        6872733439,
+        790326112,
+        790326113,
+        3835594698,
+        790326114,
+        3835594726,
+        3835594717,
+        369676000,
+        8032416070,
+        8032416071,
+        369675998,
+        369675997,
+        369675996,
+        369675995
+      ],
+      "geometry": [
+        {
+          "lat": 51.8936278,
+          "lon": 0.9419635
+        },
+        {
+          "lat": 51.8936187,
+          "lon": 0.940868
+        },
+        {
+          "lat": 51.8936799,
+          "lon": 0.940412
+        },
+        {
+          "lat": 51.8937503,
+          "lon": 0.9402484
+        },
+        {
+          "lat": 51.8937776,
+          "lon": 0.9400512
+        },
+        {
+          "lat": 51.8936956,
+          "lon": 0.9398192
+        },
+        {
+          "lat": 51.8936035,
+          "lon": 0.9391189
+        },
+        {
+          "lat": 51.8936795,
+          "lon": 0.9388288
+        },
+        {
+          "lat": 51.89369,
+          "lon": 0.9386547
+        },
+        {
+          "lat": 51.8936996,
+          "lon": 0.9384965
+        },
+        {
+          "lat": 51.8937221,
+          "lon": 0.9379688
+        },
+        {
+          "lat": 51.8939966,
+          "lon": 0.9373788
+        },
+        {
+          "lat": 51.89415,
+          "lon": 0.9374379
+        },
+        {
+          "lat": 51.894203,
+          "lon": 0.9375313
+        },
+        {
+          "lat": 51.894249,
+          "lon": 0.9376004
+        },
+        {
+          "lat": 51.8944576,
+          "lon": 0.9377546
+        },
+        {
+          "lat": 51.8947143,
+          "lon": 0.9379213
+        },
+        {
+          "lat": 51.8949322,
+          "lon": 0.9380614
+        },
+        {
+          "lat": 51.8950562,
+          "lon": 0.9381549
+        },
+        {
+          "lat": 51.8950066,
+          "lon": 0.938234
+        },
+        {
+          "lat": 51.8949321,
+          "lon": 0.939056
+        },
+        {
+          "lat": 51.8947394,
+          "lon": 0.9406729
+        },
+        {
+          "lat": 51.8947166,
+          "lon": 0.9408645
+        },
+        {
+          "lat": 51.8951872,
+          "lon": 0.9408428
+        },
+        {
+          "lat": 51.8951838,
+          "lon": 0.9410329
+        },
+        {
+          "lat": 51.8953897,
+          "lon": 0.9420186
+        },
+        {
+          "lat": 51.8954643,
+          "lon": 0.9424475
+        },
+        {
+          "lat": 51.8954015,
+          "lon": 0.9428372
+        },
+        {
+          "lat": 51.8955486,
+          "lon": 0.9441638
+        },
+        {
+          "lat": 51.893065,
+          "lon": 0.9456113
+        },
+        {
+          "lat": 51.8923565,
+          "lon": 0.9425858
+        },
+        {
+          "lat": 51.8936278,
+          "lon": 0.9419635
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO4 3JL",
+        "addr:street": "Hawthorn Avenue",
+        "amenity": "school",
+        "capacity": "910",
+        "check_date": "2025-08-30",
+        "isced:level": "2",
+        "max_age": "16",
+        "min_age": "11",
+        "name": "Colchester Academy",
+        "operator": "Penrose Learning Trust",
+        "operator:type": "private",
+        "operator:wikidata": "Q122685536",
+        "phone": "+44 1206 861217",
+        "ref:GB:uprn": "100091470204",
+        "ref:edubase": "136195",
+        "ref:edubase:group": "16707",
+        "school": "secondary",
+        "school:group:type": "multi_academy_trust",
+        "school:type": "academy",
+        "website": "https://www.colchesteracademy.org.uk/",
+        "wikidata": "Q5142078",
+        "wikipedia": "en:Colchester Academy"
+      }
+    },
+    {
+      "type": "way",
+      "id": 64096389,
+      "bounds": {
+        "minlat": 51.8947166,
+        "minlon": 0.9381549,
+        "maxlat": 51.896184,
+        "maxlon": 0.9408645
+      },
+      "nodes": [
+        790326113,
+        790326112,
+        6872733439,
+        6872733427,
+        6872733437,
+        6872733436,
+        6872733435,
+        6872733434,
+        6872733430,
+        6872733433,
+        6872733432,
+        6872733431,
+        6813698767,
+        369676001,
+        8032416072,
+        790326116,
+        3835594726,
+        790326114,
+        790326113
+      ],
+      "geometry": [
+        {
+          "lat": 51.8949321,
+          "lon": 0.939056
+        },
+        {
+          "lat": 51.8950066,
+          "lon": 0.938234
+        },
+        {
+          "lat": 51.8950562,
+          "lon": 0.9381549
+        },
+        {
+          "lat": 51.8953175,
+          "lon": 0.938253
+        },
+        {
+          "lat": 51.8954892,
+          "lon": 0.9383325
+        },
+        {
+          "lat": 51.8957506,
+          "lon": 0.9384297
+        },
+        {
+          "lat": 51.8959544,
+          "lon": 0.9385443
+        },
+        {
+          "lat": 51.8961115,
+          "lon": 0.9386814
+        },
+        {
+          "lat": 51.896184,
+          "lon": 0.9387612
+        },
+        {
+          "lat": 51.896166,
+          "lon": 0.9391407
+        },
+        {
+          "lat": 51.8959059,
+          "lon": 0.9396371
+        },
+        {
+          "lat": 51.8958386,
+          "lon": 0.9399707
+        },
+        {
+          "lat": 51.8957952,
+          "lon": 0.9401974
+        },
+        {
+          "lat": 51.8954039,
+          "lon": 0.9401409
+        },
+        {
+          "lat": 51.8953229,
+          "lon": 0.9407863
+        },
+        {
+          "lat": 51.8951939,
+          "lon": 0.9407941
+        },
+        {
+          "lat": 51.8951872,
+          "lon": 0.9408428
+        },
+        {
+          "lat": 51.8947166,
+          "lon": 0.9408645
+        },
+        {
+          "lat": 51.8949321,
+          "lon": 0.939056
+        }
+      ],
+      "tags": {
+        "amenity": "school",
+        "name": "Hazelmere Primary Schools",
+        "school": "shared_site"
+      }
+    },
+    {
+      "type": "way",
+      "id": 64834673,
+      "bounds": {
+        "minlat": 51.8588238,
+        "minlon": 0.9694808,
+        "maxlat": 51.8607301,
+        "maxlon": 0.9716538
+      },
+      "nodes": [
+        794923008,
+        794923011,
+        1709901145,
+        1638081282,
+        1638081283,
+        1638081284,
+        1638081285,
+        1638081286,
+        1638081287,
+        1637925206,
+        1638081288,
+        1638081289,
+        1638081290,
+        1638081291,
+        26557458,
+        1709901147,
+        1638081292,
+        1419424567,
+        794923008
+      ],
+      "geometry": [
+        {
+          "lat": 51.8588238,
+          "lon": 0.9708704
+        },
+        {
+          "lat": 51.8590784,
+          "lon": 0.9694808
+        },
+        {
+          "lat": 51.8599674,
+          "lon": 0.9699881
+        },
+        {
+          "lat": 51.859971,
+          "lon": 0.9701571
+        },
+        {
+          "lat": 51.8599719,
+          "lon": 0.9702279
+        },
+        {
+          "lat": 51.8599972,
+          "lon": 0.9703667
+        },
+        {
+          "lat": 51.8600825,
+          "lon": 0.9706199
+        },
+        {
+          "lat": 51.8601295,
+          "lon": 0.9707238
+        },
+        {
+          "lat": 51.8602036,
+          "lon": 0.9708518
+        },
+        {
+          "lat": 51.8602658,
+          "lon": 0.9709228
+        },
+        {
+          "lat": 51.8603778,
+          "lon": 0.9710365
+        },
+        {
+          "lat": 51.8604451,
+          "lon": 0.9710935
+        },
+        {
+          "lat": 51.8605039,
+          "lon": 0.9711239
+        },
+        {
+          "lat": 51.8606057,
+          "lon": 0.9711561
+        },
+        {
+          "lat": 51.8606927,
+          "lon": 0.9711895
+        },
+        {
+          "lat": 51.860727,
+          "lon": 0.9712852
+        },
+        {
+          "lat": 51.8607301,
+          "lon": 0.9716538
+        },
+        {
+          "lat": 51.8606201,
+          "lon": 0.9716477
+        },
+        {
+          "lat": 51.8588238,
+          "lon": 0.9708704
+        }
+      ],
+      "tags": {
+        "addr:city": "Wivenhoe",
+        "addr:postcode": "CO7 9RD",
+        "addr:street": "Bowes Road",
+        "alt_name": "Millfields (Gm) Primary School",
+        "amenity": "school",
+        "capacity": "250",
+        "check_date": "2025-08-30",
+        "contact:website": "https://www.millfieldsprimary.com/",
+        "fhrs:id": "86792",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "4",
+        "name": "Millfields Primary School",
+        "phone": "+44 1206 823044",
+        "ref:GB:uprn": "100091475233",
+        "ref:edubase": "115261",
+        "religion": "none",
+        "school": "primary",
+        "school:boarding": "no",
+        "school:gender": "mixed",
+        "school:selective": "no",
+        "school:type": "foundation",
+        "source": "Bing;knowledge",
+        "source:addr": "fhrs",
+        "source:alt_name": "fhrs"
+      }
+    },
+    {
+      "type": "way",
+      "id": 64947949,
+      "bounds": {
+        "minlat": 51.8971385,
+        "minlon": 0.9225761,
+        "maxlat": 51.8983369,
+        "maxlon": 0.9254814
+      },
+      "nodes": [
+        795726481,
+        795726482,
+        3835605134,
+        795726483,
+        795726485,
+        6864029155,
+        795726486,
+        795726481
+      ],
+      "geometry": [
+        {
+          "lat": 51.8983369,
+          "lon": 0.9250207
+        },
+        {
+          "lat": 51.8977264,
+          "lon": 0.9254814
+        },
+        {
+          "lat": 51.8974954,
+          "lon": 0.9249979
+        },
+        {
+          "lat": 51.8971385,
+          "lon": 0.9242656
+        },
+        {
+          "lat": 51.8976023,
+          "lon": 0.9225761
+        },
+        {
+          "lat": 51.8981563,
+          "lon": 0.9228797
+        },
+        {
+          "lat": 51.8981721,
+          "lon": 0.9228886
+        },
+        {
+          "lat": 51.8983369,
+          "lon": 0.9250207
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO4 0DT",
+        "addr:street": "Barnardiston Road",
+        "amenity": "school",
+        "capacity": "210",
+        "check_date": "2025-08-30",
+        "isced:level": "0;1",
+        "max_age": "11",
+        "min_age": "3",
+        "name": "Willow Brook Primary School and Nursery",
+        "operator": "The Kemnal Academies Trust",
+        "operator:type": "private",
+        "operator:wikidata": "Q5664895",
+        "phone": "+44 1206 864375",
+        "ref:GB:uprn": "303005723",
+        "ref:edubase": "141195",
+        "ref:edubase:group": "3586",
+        "school": "primary",
+        "school:group:type": "multi_academy_trust",
+        "school:type": "academy",
+        "website": "https://willowbrook-tkat.org/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 157401999,
+      "bounds": {
+        "minlat": 51.8871489,
+        "minlon": 0.8874359,
+        "maxlat": 51.8875618,
+        "maxlon": 0.8879767
+      },
+      "nodes": [
+        1696221324,
+        1696221318,
+        1696221322,
+        1696221319,
+        1696221324
+      ],
+      "geometry": [
+        {
+          "lat": 51.8875618,
+          "lon": 0.8879552
+        },
+        {
+          "lat": 51.8875485,
+          "lon": 0.8874359
+        },
+        {
+          "lat": 51.8871489,
+          "lon": 0.8874547
+        },
+        {
+          "lat": 51.8871539,
+          "lon": 0.8879767
+        },
+        {
+          "lat": 51.8875618,
+          "lon": 0.8879552
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:housenumber": "2",
+        "addr:postcode": "CO3 3NE",
+        "addr:street": "Lexden Road",
+        "amenity": "school",
+        "capacity": "158",
+        "check_date": "2025-07-24",
+        "isced:level": "0;1",
+        "max_age": "11",
+        "min_age": "3",
+        "name": "Oxford House School",
+        "phone": "+44 1206 576686",
+        "ref:GB:uprn": "303001353",
+        "ref:edubase": "115424",
+        "school:type": "independent",
+        "website": "https://www.oxfordhouseschool.net/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 158372457,
+      "bounds": {
+        "minlat": 51.8449418,
+        "minlon": 0.9443472,
+        "maxlat": 51.8454849,
+        "maxlon": 0.9449608
+      },
+      "nodes": [
+        1613758215,
+        1705831325,
+        1705831337,
+        1705831342,
+        1705831368,
+        1705831348,
+        1705831376,
+        1705831388,
+        1613758339,
+        1613758431,
+        1613758291,
+        1613758383,
+        1613758215
+      ],
+      "geometry": [
+        {
+          "lat": 51.8449527,
+          "lon": 0.9449608
+        },
+        {
+          "lat": 51.8449418,
+          "lon": 0.9449085
+        },
+        {
+          "lat": 51.8450668,
+          "lon": 0.9447104
+        },
+        {
+          "lat": 51.845106,
+          "lon": 0.9447025
+        },
+        {
+          "lat": 51.8451027,
+          "lon": 0.9446327
+        },
+        {
+          "lat": 51.8451687,
+          "lon": 0.9446199
+        },
+        {
+          "lat": 51.8453502,
+          "lon": 0.9443472
+        },
+        {
+          "lat": 51.8454849,
+          "lon": 0.944816
+        },
+        {
+          "lat": 51.845464,
+          "lon": 0.9448201
+        },
+        {
+          "lat": 51.845343,
+          "lon": 0.9448436
+        },
+        {
+          "lat": 51.8451994,
+          "lon": 0.9448513
+        },
+        {
+          "lat": 51.8451065,
+          "lon": 0.9448897
+        },
+        {
+          "lat": 51.8449527,
+          "lon": 0.9449608
+        }
+      ],
+      "tags": {
+        "addr:city": "Fingringhoe",
+        "addr:postcode": "CO5 7BN",
+        "addr:street": "Church Road",
+        "amenity": "school",
+        "capacity": "105",
+        "denomination": "anglican",
+        "diocese": "Diocese of Chelmsford",
+        "fhrs:id": "106543",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "5",
+        "name": "Fingringhoe Church of England Voluntary Aided Primary School",
+        "phone": "+44 1206 729266",
+        "ref:GB:uprn": "10070227176",
+        "ref:edubase": "115139",
+        "religion": "christian",
+        "school:trust": "no",
+        "school:type": "voluntary_aided",
+        "source:addr": "fhrs",
+        "website": "www.fingringhoe.ik.org/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 161613469,
+      "bounds": {
+        "minlat": 51.8857696,
+        "minlon": 0.8849634,
+        "maxlat": 51.8875455,
+        "maxlon": 0.8875003
+      },
+      "nodes": [
+        1735868690,
+        1735868660,
+        1735868669,
+        1735868733,
+        1735868673,
+        1735868700,
+        1735868696,
+        1735868665,
+        1735868713,
+        1735868732,
+        1735868683,
+        1735868661,
+        1735868640,
+        1735868671,
+        1735868616,
+        1735868642,
+        1735868624,
+        1735868612,
+        1735868610,
+        1735868650,
+        1735868675,
+        1735868678,
+        1735868680,
+        1735868626,
+        1735868715,
+        1735868690
+      ],
+      "geometry": [
+        {
+          "lat": 51.8875455,
+          "lon": 0.8866191
+        },
+        {
+          "lat": 51.8871827,
+          "lon": 0.8865579
+        },
+        {
+          "lat": 51.8872401,
+          "lon": 0.8856641
+        },
+        {
+          "lat": 51.8871428,
+          "lon": 0.8856477
+        },
+        {
+          "lat": 51.8871619,
+          "lon": 0.8854641
+        },
+        {
+          "lat": 51.887354,
+          "lon": 0.8855222
+        },
+        {
+          "lat": 51.887498,
+          "lon": 0.8855555
+        },
+        {
+          "lat": 51.8875079,
+          "lon": 0.8851967
+        },
+        {
+          "lat": 51.8871569,
+          "lon": 0.8851228
+        },
+        {
+          "lat": 51.8871169,
+          "lon": 0.8856653
+        },
+        {
+          "lat": 51.8869265,
+          "lon": 0.8856331
+        },
+        {
+          "lat": 51.8869312,
+          "lon": 0.8855595
+        },
+        {
+          "lat": 51.8864576,
+          "lon": 0.8854796
+        },
+        {
+          "lat": 51.8864908,
+          "lon": 0.8849634
+        },
+        {
+          "lat": 51.8863089,
+          "lon": 0.8849712
+        },
+        {
+          "lat": 51.8862557,
+          "lon": 0.8857226
+        },
+        {
+          "lat": 51.885865,
+          "lon": 0.8856567
+        },
+        {
+          "lat": 51.8858522,
+          "lon": 0.8858554
+        },
+        {
+          "lat": 51.885839,
+          "lon": 0.8860605
+        },
+        {
+          "lat": 51.8857696,
+          "lon": 0.887141
+        },
+        {
+          "lat": 51.8858409,
+          "lon": 0.8871531
+        },
+        {
+          "lat": 51.8865301,
+          "lon": 0.8873886
+        },
+        {
+          "lat": 51.8865506,
+          "lon": 0.8874205
+        },
+        {
+          "lat": 51.8869025,
+          "lon": 0.8875003
+        },
+        {
+          "lat": 51.8874933,
+          "lon": 0.8874318
+        },
+        {
+          "lat": 51.8875455,
+          "lon": 0.8866191
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:housenumber": "6",
+        "addr:postcode": "CO3 3ND",
+        "addr:street": "Lexden Road",
+        "alt_name": "CRGS",
+        "amenity": "school",
+        "capacity": "777",
+        "check_date": "2025-07-11",
+        "fhrs:id": "1711332",
+        "isced:level": "2;3",
+        "max_age": "18",
+        "min_age": "11",
+        "name": "Colchester Royal Grammar School",
+        "operator": "The Thinking Schools Academy Trust",
+        "operator:type": "private",
+        "operator:wikidata": "Q85809052",
+        "phone": "+44 1206 509100",
+        "ref:GB:uprn": "10033930813",
+        "ref:edubase": "149899",
+        "ref:edubase:group": "5049",
+        "religion": "christian",
+        "school": "secondary",
+        "school:boarding": "yes",
+        "school:gender": "male",
+        "school:group:type": "multi_academy_trust",
+        "school:selective": "yes",
+        "school:type": "academy",
+        "website": "https://www.crgs.co.uk/",
+        "wikidata": "Q5142105",
+        "wikipedia": "en:Colchester Royal Grammar School"
+      }
+    },
+    {
+      "type": "way",
+      "id": 183160516,
+      "bounds": {
+        "minlat": 51.8807278,
+        "minlon": 0.9009928,
+        "maxlat": 51.881657,
+        "maxlon": 0.9034273
+      },
+      "nodes": [
+        370777380,
+        1935222172,
+        1935220755,
+        1935220761,
+        370777380
+      ],
+      "geometry": [
+        {
+          "lat": 51.8813928,
+          "lon": 0.9009928
+        },
+        {
+          "lat": 51.8807278,
+          "lon": 0.9014164
+        },
+        {
+          "lat": 51.8809239,
+          "lon": 0.9034273
+        },
+        {
+          "lat": 51.881657,
+          "lon": 0.9032382
+        },
+        {
+          "lat": 51.8813928,
+          "lon": 0.9009928
+        }
+      ],
+      "tags": {
+        "addr:postcode": "CO2 7HE",
+        "amenity": "school",
+        "capacity": "630",
+        "check_date": "2025-09-12",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "5",
+        "name": "St. John's Green Primary School",
+        "operator": "Essex County Council",
+        "operator:type": "government",
+        "operator:wikidata": "Q5399679",
+        "phone": "+44 1206 762884",
+        "ref:GB:uprn": "10004944836",
+        "ref:edubase": "114711",
+        "school": "primary",
+        "school:type": "community",
+        "source": "Bing/Knowledge",
+        "website": "https://www.st-johns-green.eschools.co.uk"
+      }
+    },
+    {
+      "type": "way",
+      "id": 190067728,
+      "bounds": {
+        "minlat": 51.8874569,
+        "minlon": 0.9079907,
+        "maxlat": 51.8885819,
+        "maxlon": 0.9096483
+      },
+      "nodes": [
+        2006671471,
+        2006671548,
+        2006671507,
+        13245841296,
+        2006671484,
+        2006671546,
+        2006671535,
+        2006671542,
+        2006671527,
+        2006671510,
+        13528883703,
+        2006671439,
+        13528883702,
+        13528811496,
+        2006671453,
+        2006671470,
+        13528883701,
+        2006671516,
+        2006671503,
+        2006671482,
+        2006671533,
+        2006671445,
+        2006671478,
+        2006671466,
+        2006671474,
+        13528883704,
+        2006671468,
+        2006671451,
+        2006671471
+      ],
+      "geometry": [
+        {
+          "lat": 51.8884749,
+          "lon": 0.9079907
+        },
+        {
+          "lat": 51.8884207,
+          "lon": 0.9080159
+        },
+        {
+          "lat": 51.8881924,
+          "lon": 0.9081439
+        },
+        {
+          "lat": 51.8880697,
+          "lon": 0.9082177
+        },
+        {
+          "lat": 51.887919,
+          "lon": 0.9083037
+        },
+        {
+          "lat": 51.887933,
+          "lon": 0.9083633
+        },
+        {
+          "lat": 51.8874569,
+          "lon": 0.9086562
+        },
+        {
+          "lat": 51.8874835,
+          "lon": 0.9088414
+        },
+        {
+          "lat": 51.8875241,
+          "lon": 0.9090799
+        },
+        {
+          "lat": 51.8875412,
+          "lon": 0.9092133
+        },
+        {
+          "lat": 51.8875745,
+          "lon": 0.9094985
+        },
+        {
+          "lat": 51.887591,
+          "lon": 0.9096483
+        },
+        {
+          "lat": 51.8876078,
+          "lon": 0.909641
+        },
+        {
+          "lat": 51.8878591,
+          "lon": 0.909592
+        },
+        {
+          "lat": 51.8880062,
+          "lon": 0.9095192
+        },
+        {
+          "lat": 51.8880794,
+          "lon": 0.9094734
+        },
+        {
+          "lat": 51.8881052,
+          "lon": 0.9092585
+        },
+        {
+          "lat": 51.8881438,
+          "lon": 0.9091813
+        },
+        {
+          "lat": 51.8885819,
+          "lon": 0.9090507
+        },
+        {
+          "lat": 51.8885716,
+          "lon": 0.9088042
+        },
+        {
+          "lat": 51.8885683,
+          "lon": 0.9087047
+        },
+        {
+          "lat": 51.8885623,
+          "lon": 0.9087045
+        },
+        {
+          "lat": 51.8885427,
+          "lon": 0.9083687
+        },
+        {
+          "lat": 51.8885368,
+          "lon": 0.908348
+        },
+        {
+          "lat": 51.8885317,
+          "lon": 0.9082695
+        },
+        {
+          "lat": 51.8885247,
+          "lon": 0.9081615
+        },
+        {
+          "lat": 51.8885395,
+          "lon": 0.9080781
+        },
+        {
+          "lat": 51.8885391,
+          "lon": 0.9080571
+        },
+        {
+          "lat": 51.8884749,
+          "lon": 0.9079907
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO1 2QB",
+        "addr:street": "Priory Street",
+        "amenity": "school",
+        "capacity": "210",
+        "check_date": "2025-09-10",
+        "denomination": "roman_catholic",
+        "diocese": "Diocese of Brentwood",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "4",
+        "name": "St Thomas More's Catholic Primary School",
+        "operator": "The Rosary Trust - A Catholic Multi Academy",
+        "operator:type": "private",
+        "operator:wikidata": "Q122684232",
+        "phone": "+44 1206 865722",
+        "ref:GB:uprn": "100090471384",
+        "ref:edubase": "138164",
+        "ref:edubase:group": "4244",
+        "religion": "christian",
+        "school": "primary",
+        "school:group:type": "multi_academy_trust",
+        "school:type": "academy",
+        "website": "https://www.stthomasmores.co.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 190201903,
+      "bounds": {
+        "minlat": 51.8793612,
+        "minlon": 0.9080193,
+        "maxlat": 51.879899,
+        "maxlon": 0.9091641
+      },
+      "nodes": [
+        2008024347,
+        2008024324,
+        2008024300,
+        2008024194,
+        2008024256,
+        370618706,
+        2008024347
+      ],
+      "geometry": [
+        {
+          "lat": 51.8798218,
+          "lon": 0.9080193
+        },
+        {
+          "lat": 51.8797466,
+          "lon": 0.9080337
+        },
+        {
+          "lat": 51.8796074,
+          "lon": 0.9080604
+        },
+        {
+          "lat": 51.8793612,
+          "lon": 0.9081077
+        },
+        {
+          "lat": 51.8794383,
+          "lon": 0.9091641
+        },
+        {
+          "lat": 51.879899,
+          "lon": 0.9090758
+        },
+        {
+          "lat": 51.8798218,
+          "lon": 0.9080193
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO2 7RU",
+        "addr:street": "Canterbury Road",
+        "amenity": "school",
+        "capacity": "630",
+        "check_date": "2025-07-08",
+        "isced:level": "0;1",
+        "max_age": "11",
+        "min_age": "3",
+        "name": "St. George's School",
+        "operator": "Essex County Council",
+        "operator:type": "government",
+        "operator:wikidata": "Q5399679",
+        "phone": "+44 1206 506800",
+        "ref:GB:uprn": "303005022",
+        "ref:edubase": "114704",
+        "religion": "none",
+        "school": "primary",
+        "school:boarding": "no",
+        "school:gender": "mixed",
+        "school:selective": "no",
+        "school:type": "community",
+        "website": "https://stgeorgesschool.org/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 224797456,
+      "bounds": {
+        "minlat": 51.8903519,
+        "minlon": 0.9114289,
+        "maxlat": 51.8926484,
+        "maxlon": 0.9143249
+      },
+      "nodes": [
+        2336381566,
+        2336381562,
+        2336381546,
+        2336381573,
+        2336381589,
+        2336381585,
+        2336381560,
+        2336381582,
+        314641388,
+        314641387,
+        6898446739,
+        314641386,
+        558915504,
+        314641384,
+        314641383,
+        314641382,
+        314641381,
+        314641380,
+        314641379,
+        8851476658,
+        2336381554,
+        314640560,
+        8851476666,
+        558915464,
+        2336381548,
+        2336381566
+      ],
+      "geometry": [
+        {
+          "lat": 51.8908351,
+          "lon": 0.911951
+        },
+        {
+          "lat": 51.8907493,
+          "lon": 0.9119785
+        },
+        {
+          "lat": 51.8903519,
+          "lon": 0.9120214
+        },
+        {
+          "lat": 51.8903746,
+          "lon": 0.9124594
+        },
+        {
+          "lat": 51.8908399,
+          "lon": 0.9123632
+        },
+        {
+          "lat": 51.8908849,
+          "lon": 0.9128424
+        },
+        {
+          "lat": 51.8913479,
+          "lon": 0.9127365
+        },
+        {
+          "lat": 51.8913707,
+          "lon": 0.9130254
+        },
+        {
+          "lat": 51.8910429,
+          "lon": 0.9131061
+        },
+        {
+          "lat": 51.8911894,
+          "lon": 0.9143249
+        },
+        {
+          "lat": 51.8916663,
+          "lon": 0.9142069
+        },
+        {
+          "lat": 51.8926484,
+          "lon": 0.913964
+        },
+        {
+          "lat": 51.8926336,
+          "lon": 0.9136163
+        },
+        {
+          "lat": 51.8925137,
+          "lon": 0.9129479
+        },
+        {
+          "lat": 51.8922725,
+          "lon": 0.9126414
+        },
+        {
+          "lat": 51.8923143,
+          "lon": 0.9124781
+        },
+        {
+          "lat": 51.8921368,
+          "lon": 0.9123477
+        },
+        {
+          "lat": 51.8920807,
+          "lon": 0.9118197
+        },
+        {
+          "lat": 51.8919627,
+          "lon": 0.9118013
+        },
+        {
+          "lat": 51.891914,
+          "lon": 0.9115783
+        },
+        {
+          "lat": 51.89191,
+          "lon": 0.9114289
+        },
+        {
+          "lat": 51.891794,
+          "lon": 0.9114294
+        },
+        {
+          "lat": 51.8917811,
+          "lon": 0.9114359
+        },
+        {
+          "lat": 51.8917483,
+          "lon": 0.9114492
+        },
+        {
+          "lat": 51.8914609,
+          "lon": 0.9116138
+        },
+        {
+          "lat": 51.8908351,
+          "lon": 0.911951
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO1 2RA",
+        "addr:street": "Guildford Road",
+        "amenity": "school",
+        "capacity": "420",
+        "check_date": "2025-10-20",
+        "denomination": "anglican",
+        "diocese": "Diocese of Chelmsford",
+        "isced:level": "0;1",
+        "max_age": "11",
+        "min_age": "2",
+        "name": "St James the Great Church of England Primary School",
+        "operator": "The Diocese of Chelmsford Vine Schools Trust",
+        "operator:type": "private",
+        "operator:wikidata": "Q121704513",
+        "phone": "+44 1206 865747",
+        "ref:GB:uprn": "303013864",
+        "ref:edubase": "143516",
+        "ref:edubase:group": "4955",
+        "religion": "christian",
+        "school": "primary",
+        "school:boarding": "no",
+        "school:gender": "mixed",
+        "school:group:type": "multi_academy_trust",
+        "school:selective": "no",
+        "school:type": "academy",
+        "website": "https://www.st-james-colchester-essex.co.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 224798076,
+      "bounds": {
+        "minlat": 51.8945689,
+        "minlon": 0.8856764,
+        "maxlat": 51.8966716,
+        "maxlon": 0.8911344
+      },
+      "nodes": [
+        2336392059,
+        2336392159,
+        2336411154,
+        2336392076,
+        2336392106,
+        2336392185,
+        2336392055,
+        2336392075,
+        2336392189,
+        2336392064,
+        2336392134,
+        2336392051,
+        2336392178,
+        2336392164,
+        369675031,
+        369675032,
+        2336392073,
+        2336392128,
+        2336392198,
+        2336392162,
+        2336392138,
+        2336411139,
+        2336392194,
+        2336392059
+      ],
+      "geometry": [
+        {
+          "lat": 51.8955362,
+          "lon": 0.8856764
+        },
+        {
+          "lat": 51.8959347,
+          "lon": 0.8859953
+        },
+        {
+          "lat": 51.8961268,
+          "lon": 0.8868965
+        },
+        {
+          "lat": 51.8962462,
+          "lon": 0.8875175
+        },
+        {
+          "lat": 51.8964644,
+          "lon": 0.888699
+        },
+        {
+          "lat": 51.8965822,
+          "lon": 0.8893886
+        },
+        {
+          "lat": 51.896655,
+          "lon": 0.8900162
+        },
+        {
+          "lat": 51.8966716,
+          "lon": 0.8903649
+        },
+        {
+          "lat": 51.8965988,
+          "lon": 0.8905687
+        },
+        {
+          "lat": 51.8964928,
+          "lon": 0.8907619
+        },
+        {
+          "lat": 51.8963518,
+          "lon": 0.890893
+        },
+        {
+          "lat": 51.8958871,
+          "lon": 0.8910569
+        },
+        {
+          "lat": 51.8954799,
+          "lon": 0.8911213
+        },
+        {
+          "lat": 51.8953554,
+          "lon": 0.8911344
+        },
+        {
+          "lat": 51.8952209,
+          "lon": 0.8910632
+        },
+        {
+          "lat": 51.8945689,
+          "lon": 0.8903927
+        },
+        {
+          "lat": 51.894735,
+          "lon": 0.8894905
+        },
+        {
+          "lat": 51.8948588,
+          "lon": 0.8886239
+        },
+        {
+          "lat": 51.8949601,
+          "lon": 0.887672
+        },
+        {
+          "lat": 51.8950098,
+          "lon": 0.8872803
+        },
+        {
+          "lat": 51.8950661,
+          "lon": 0.8869048
+        },
+        {
+          "lat": 51.895115,
+          "lon": 0.8867609
+        },
+        {
+          "lat": 51.8954799,
+          "lon": 0.8856871
+        },
+        {
+          "lat": 51.8955362,
+          "lon": 0.8856764
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO3 3LE",
+        "addr:street": "Sheepen Road",
+        "amenity": "school",
+        "capacity": "1000",
+        "check_date": "2025-09-05",
+        "isced:level": "2",
+        "max_age": "16",
+        "min_age": "11",
+        "name": "St Helena School",
+        "operator": "The Sigma Trust",
+        "operator:type": "private",
+        "operator:wikidata": "Q122616427",
+        "phone": "+44 1206 572253",
+        "ref:GB:uprn": "10091125190",
+        "ref:edubase": "137944",
+        "ref:edubase:group": "16257",
+        "school": "secondary",
+        "school:group:type": "multi_academy_trust",
+        "school:type": "academy",
+        "website": "https://www.st-helena.essex.sch.uk/",
+        "wikidata": "Q7593331",
+        "wikipedia": "en:St Helena School, Colchester"
+      }
+    },
+    {
+      "type": "way",
+      "id": 305233410,
+      "bounds": {
+        "minlat": 51.8857385,
+        "minlon": 0.8984475,
+        "maxlat": 51.8863344,
+        "maxlon": 0.8994382
+      },
+      "nodes": [
+        3098347574,
+        3098347577,
+        3098347576,
+        5083462953,
+        3098347575,
+        3948686051,
+        3948686060,
+        3948686062,
+        3948686056,
+        3948686053,
+        3948686057,
+        3098347574
+      ],
+      "geometry": [
+        {
+          "lat": 51.8862362,
+          "lon": 0.8992408
+        },
+        {
+          "lat": 51.8860369,
+          "lon": 0.8994382
+        },
+        {
+          "lat": 51.8857385,
+          "lon": 0.8993395
+        },
+        {
+          "lat": 51.8857831,
+          "lon": 0.8989033
+        },
+        {
+          "lat": 51.8858228,
+          "lon": 0.8985152
+        },
+        {
+          "lat": 51.886151,
+          "lon": 0.8984475
+        },
+        {
+          "lat": 51.886191,
+          "lon": 0.8985524
+        },
+        {
+          "lat": 51.8861697,
+          "lon": 0.8987731
+        },
+        {
+          "lat": 51.8862691,
+          "lon": 0.898861
+        },
+        {
+          "lat": 51.8863344,
+          "lon": 0.8988653
+        },
+        {
+          "lat": 51.8863276,
+          "lon": 0.8991396
+        },
+        {
+          "lat": 51.8862362,
+          "lon": 0.8992408
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO2 7HE",
+        "addr:street": "St. John's Green",
+        "amenity": "school",
+        "capacity": "630",
+        "check_date": "2025-09-12",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "5",
+        "name": "St John's Green Primary School",
+        "operator": "Essex County Council",
+        "operator:type": "government",
+        "operator:wikidata": "Q5399679",
+        "phone": "+44 1206 762884",
+        "ref:GB:uprn": "10004944836",
+        "ref:edubase": "114711",
+        "religion": "none",
+        "school": "primary",
+        "school:boarding": "no",
+        "school:gender": "mixed",
+        "school:selective": "no",
+        "school:type": "community",
+        "source": "Bing /Knowledge",
+        "website": "https://st-johns-green.eschools.co.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 325099754,
+      "bounds": {
+        "minlat": 51.867865,
+        "minlon": 0.9561486,
+        "maxlat": 51.8682527,
+        "maxlon": 0.9566981
+      },
+      "nodes": [
+        3317699677,
+        3317699681,
+        3317699682,
+        3317699690,
+        1704901971,
+        3317699684,
+        3317699683,
+        3317699673,
+        3317699669,
+        3317699670,
+        3317699675,
+        3317699674,
+        3317699678,
+        3317699680,
+        3317699676,
+        3317699671,
+        3317699672,
+        3317699679,
+        3317699677
+      ],
+      "geometry": [
+        {
+          "lat": 51.8679937,
+          "lon": 0.9562118
+        },
+        {
+          "lat": 51.8680212,
+          "lon": 0.9562195
+        },
+        {
+          "lat": 51.8680248,
+          "lon": 0.9561857
+        },
+        {
+          "lat": 51.8682527,
+          "lon": 0.9562501
+        },
+        {
+          "lat": 51.8682045,
+          "lon": 0.9566981
+        },
+        {
+          "lat": 51.8680424,
+          "lon": 0.9566523
+        },
+        {
+          "lat": 51.8680383,
+          "lon": 0.9566902
+        },
+        {
+          "lat": 51.8679545,
+          "lon": 0.9566665
+        },
+        {
+          "lat": 51.867865,
+          "lon": 0.9566412
+        },
+        {
+          "lat": 51.8678881,
+          "lon": 0.9564266
+        },
+        {
+          "lat": 51.8679776,
+          "lon": 0.9564519
+        },
+        {
+          "lat": 51.8679758,
+          "lon": 0.9564692
+        },
+        {
+          "lat": 51.8679938,
+          "lon": 0.9564743
+        },
+        {
+          "lat": 51.8680142,
+          "lon": 0.9562842
+        },
+        {
+          "lat": 51.8679867,
+          "lon": 0.9562765
+        },
+        {
+          "lat": 51.867901,
+          "lon": 0.9562523
+        },
+        {
+          "lat": 51.8679121,
+          "lon": 0.9561486
+        },
+        {
+          "lat": 51.8679979,
+          "lon": 0.9561728
+        },
+        {
+          "lat": 51.8679937,
+          "lon": 0.9562118
+        }
+      ],
+      "tags": {
+        "addr:postcode": "CO7 9QB",
+        "addr:street": "Broome Grove",
+        "amenity": "school",
+        "building": "yes",
+        "capacity": "180",
+        "check_date": "2025-10-06",
+        "contact:website": "https://www.broomgroveinfantschool.co.uk/",
+        "fhrs:id": "73293",
+        "isced:level": "0;1",
+        "max_age": "7",
+        "min_age": "4",
+        "name": "Broomgrove Infant School",
+        "operator": "Essex County Council",
+        "operator:type": "government",
+        "operator:wikidata": "Q5399679",
+        "phone": "+44 1206 822141",
+        "ref:GB:uprn": "303004759",
+        "ref:edubase": "114756",
+        "school": "primary",
+        "school:type": "community",
+        "source:addr": "fhrs",
+        "source:shape": "bing"
+      }
+    },
+    {
+      "type": "way",
+      "id": 325099755,
+      "bounds": {
+        "minlat": 51.8681962,
+        "minlon": 0.956715,
+        "maxlat": 51.8685352,
+        "maxlon": 0.9573325
+      },
+      "nodes": [
+        3317699689,
+        1704901979,
+        3317699692,
+        3317699691,
+        3317699685,
+        3317699688,
+        3317699686,
+        3317699687,
+        3317699689
+      ],
+      "geometry": [
+        {
+          "lat": 51.8682427,
+          "lon": 0.9568213
+        },
+        {
+          "lat": 51.8682541,
+          "lon": 0.956715
+        },
+        {
+          "lat": 51.8685352,
+          "lon": 0.9567943
+        },
+        {
+          "lat": 51.8684772,
+          "lon": 0.9573325
+        },
+        {
+          "lat": 51.8681962,
+          "lon": 0.9572532
+        },
+        {
+          "lat": 51.8682286,
+          "lon": 0.9569519
+        },
+        {
+          "lat": 51.8682002,
+          "lon": 0.9569439
+        },
+        {
+          "lat": 51.8682143,
+          "lon": 0.9568133
+        },
+        {
+          "lat": 51.8682427,
+          "lon": 0.9568213
+        }
+      ],
+      "tags": {
+        "addr:postcode": "CO7 9QB",
+        "addr:street": "Broome Grove",
+        "amenity": "school",
+        "building": "yes",
+        "capacity": "240",
+        "check_date": "2025-10-22",
+        "contact:website": "https://www.broomgrovejuniorschool.co.uk/",
+        "fhrs:id": "73293",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "7",
+        "name": "Broomgrove Junior School",
+        "operator": "Essex County Council",
+        "operator:type": "government",
+        "operator:wikidata": "Q5399679",
+        "phone": "+44 1206 822893",
+        "ref:GB:uprn": "303004759",
+        "ref:edubase": "114759",
+        "school": "primary",
+        "school:type": "community",
+        "source:addr": "fhrs",
+        "source:shape": "bing",
+        "wikidata": "Q4975313"
+      }
+    },
+    {
+      "type": "way",
+      "id": 352588121,
+      "bounds": {
+        "minlat": 51.8558681,
+        "minlon": 0.9089654,
+        "maxlat": 51.8573547,
+        "maxlon": 0.911115
+      },
+      "nodes": [
+        3583459649,
+        3583459650,
+        3583459651,
+        3583459652,
+        3583459653,
+        3583459654,
+        3583459655,
+        3834915405,
+        3583459657,
+        3583459658,
+        3583459659,
+        3583459660,
+        3583459661,
+        3583459662,
+        3583459663,
+        3583459649
+      ],
+      "geometry": [
+        {
+          "lat": 51.8572379,
+          "lon": 0.9098422
+        },
+        {
+          "lat": 51.8573547,
+          "lon": 0.9104611
+        },
+        {
+          "lat": 51.8571201,
+          "lon": 0.91077
+        },
+        {
+          "lat": 51.8567412,
+          "lon": 0.911115
+        },
+        {
+          "lat": 51.8566668,
+          "lon": 0.9108907
+        },
+        {
+          "lat": 51.8566395,
+          "lon": 0.9107651
+        },
+        {
+          "lat": 51.856593,
+          "lon": 0.9106081
+        },
+        {
+          "lat": 51.8562448,
+          "lon": 0.9101421
+        },
+        {
+          "lat": 51.8560176,
+          "lon": 0.9098788
+        },
+        {
+          "lat": 51.8558681,
+          "lon": 0.9094045
+        },
+        {
+          "lat": 51.8563695,
+          "lon": 0.9090099
+        },
+        {
+          "lat": 51.8563944,
+          "lon": 0.9089654
+        },
+        {
+          "lat": 51.8565361,
+          "lon": 0.9091274
+        },
+        {
+          "lat": 51.8569177,
+          "lon": 0.9094635
+        },
+        {
+          "lat": 51.8571555,
+          "lon": 0.9096997
+        },
+        {
+          "lat": 51.8572379,
+          "lon": 0.9098422
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO2 0BG",
+        "addr:street": "Holt Drive",
+        "amenity": "school",
+        "capacity": "210",
+        "check_date": "2025-10-03",
+        "isced:level": "0;1",
+        "max_age": "11",
+        "min_age": "4",
+        "name": "Cherry Tree Academy",
+        "operator": "Inspires MAT",
+        "operator:type": "private",
+        "operator:wikidata": "Q122683409",
+        "phone": "+44 1206 575224",
+        "ref:GB:uprn": "303002418",
+        "ref:edubase": "142002",
+        "ref:edubase:group": "2771",
+        "school": "primary",
+        "school:group:type": "multi_academy_trust",
+        "school:type": "academy",
+        "source": "OS OpenMap Local",
+        "website": "https://www.cherrytreeacademy.net/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 352588157,
+      "bounds": {
+        "minlat": 51.8701756,
+        "minlon": 0.9253905,
+        "maxlat": 51.8707853,
+        "maxlon": 0.9267091
+      },
+      "nodes": [
+        3583460720,
+        3583460721,
+        3834902494,
+        3834902493,
+        3583460722,
+        3583460723,
+        3583460724,
+        3583460725,
+        3583460720
+      ],
+      "geometry": [
+        {
+          "lat": 51.8706508,
+          "lon": 0.9258004
+        },
+        {
+          "lat": 51.8707853,
+          "lon": 0.9263276
+        },
+        {
+          "lat": 51.8707324,
+          "lon": 0.9263672
+        },
+        {
+          "lat": 51.8704557,
+          "lon": 0.9266324
+        },
+        {
+          "lat": 51.8703708,
+          "lon": 0.9267091
+        },
+        {
+          "lat": 51.8701756,
+          "lon": 0.9256751
+        },
+        {
+          "lat": 51.8705543,
+          "lon": 0.9253905
+        },
+        {
+          "lat": 51.8706018,
+          "lon": 0.9255629
+        },
+        {
+          "lat": 51.8706508,
+          "lon": 0.9258004
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO2 8DD",
+        "addr:street": "Old Heath Road",
+        "amenity": "school",
+        "capacity": "210",
+        "check_date": "2025-09-08",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "4",
+        "name": "Old Heath Community Primary School",
+        "operator": "Essex County Council",
+        "operator:type": "government",
+        "operator:wikidata": "Q5399679",
+        "phone": "+44 1206 794334",
+        "ref:GB:uprn": "100091626483",
+        "ref:edubase": "114710",
+        "religion": "none",
+        "school": "primary",
+        "school:boarding": "no",
+        "school:gender": "mixed",
+        "school:selective": "no",
+        "school:type": "community",
+        "website": "https://oldheath.com/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 352588298,
+      "bounds": {
+        "minlat": 51.8774138,
+        "minlon": 0.9208353,
+        "maxlat": 51.8785389,
+        "maxlon": 0.9222272
+      },
+      "nodes": [
+        3583460929,
+        3583460930,
+        6898475804,
+        3583460931,
+        3583460932,
+        3583460933,
+        3583460934,
+        3834926214,
+        3583460935,
+        3583460936,
+        3583460937,
+        3583460938,
+        3583460939,
+        3583460940,
+        3583460941,
+        3583460942,
+        3583460943,
+        3583460944,
+        6898475806,
+        3583460945,
+        3583460946,
+        3583460947,
+        3583460948,
+        3583460949,
+        3583460950,
+        3583460951,
+        3583460952,
+        3583460953,
+        3583460929
+      ],
+      "geometry": [
+        {
+          "lat": 51.8774138,
+          "lon": 0.9213011
+        },
+        {
+          "lat": 51.8774601,
+          "lon": 0.9211249
+        },
+        {
+          "lat": 51.877535,
+          "lon": 0.9210961
+        },
+        {
+          "lat": 51.8782128,
+          "lon": 0.9208353
+        },
+        {
+          "lat": 51.8784394,
+          "lon": 0.9218788
+        },
+        {
+          "lat": 51.8784951,
+          "lon": 0.9219612
+        },
+        {
+          "lat": 51.8785389,
+          "lon": 0.9220726
+        },
+        {
+          "lat": 51.8784085,
+          "lon": 0.9221815
+        },
+        {
+          "lat": 51.8783553,
+          "lon": 0.9222272
+        },
+        {
+          "lat": 51.8783014,
+          "lon": 0.922053
+        },
+        {
+          "lat": 51.8782766,
+          "lon": 0.9217561
+        },
+        {
+          "lat": 51.8781103,
+          "lon": 0.921739
+        },
+        {
+          "lat": 51.8780859,
+          "lon": 0.9217386
+        },
+        {
+          "lat": 51.8780636,
+          "lon": 0.9217427
+        },
+        {
+          "lat": 51.8779837,
+          "lon": 0.9218943
+        },
+        {
+          "lat": 51.8779662,
+          "lon": 0.9219137
+        },
+        {
+          "lat": 51.8779429,
+          "lon": 0.9219174
+        },
+        {
+          "lat": 51.8778955,
+          "lon": 0.921897
+        },
+        {
+          "lat": 51.877867,
+          "lon": 0.921928
+        },
+        {
+          "lat": 51.8778249,
+          "lon": 0.921974
+        },
+        {
+          "lat": 51.8777936,
+          "lon": 0.9220052
+        },
+        {
+          "lat": 51.8777261,
+          "lon": 0.9218641
+        },
+        {
+          "lat": 51.8777047,
+          "lon": 0.9216455
+        },
+        {
+          "lat": 51.8776762,
+          "lon": 0.921616
+        },
+        {
+          "lat": 51.8776445,
+          "lon": 0.92159
+        },
+        {
+          "lat": 51.8775853,
+          "lon": 0.9215454
+        },
+        {
+          "lat": 51.8775149,
+          "lon": 0.9215045
+        },
+        {
+          "lat": 51.8774802,
+          "lon": 0.9214681
+        },
+        {
+          "lat": 51.8774138,
+          "lon": 0.9213011
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO1 2HH",
+        "addr:street": "Recreation Road",
+        "amenity": "school",
+        "capacity": "210",
+        "check_date": "2025-09-11",
+        "denomination": "anglican",
+        "diocese": "Diocese of Chelmsford",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "4",
+        "name": "Kendall Church of England Primary School",
+        "phone": "+44 1206 794634",
+        "ref:GB:uprn": "303003467",
+        "ref:edubase": "115064",
+        "religion": "christian",
+        "school": "primary",
+        "school:boarding": "no",
+        "school:gender": "mixed",
+        "school:selective": "no",
+        "school:type": "voluntary_controlled",
+        "website": "https://kendallprimary.co.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 352589096,
+      "bounds": {
+        "minlat": 51.9000811,
+        "minlon": 0.9350301,
+        "maxlat": 51.901559,
+        "maxlon": 0.9366644
+      },
+      "nodes": [
+        3583474661,
+        5900118773,
+        6874425204,
+        6874425202,
+        6874425203,
+        3583474662,
+        3835600785,
+        3835600786,
+        3583474663,
+        3583474667,
+        6874425196,
+        6874425201,
+        3583474668,
+        3583474661
+      ],
+      "geometry": [
+        {
+          "lat": 51.901559,
+          "lon": 0.9361387
+        },
+        {
+          "lat": 51.901547,
+          "lon": 0.9361424
+        },
+        {
+          "lat": 51.9008995,
+          "lon": 0.9363793
+        },
+        {
+          "lat": 51.9005007,
+          "lon": 0.9364946
+        },
+        {
+          "lat": 51.9005048,
+          "lon": 0.9365724
+        },
+        {
+          "lat": 51.9002193,
+          "lon": 0.9366644
+        },
+        {
+          "lat": 51.9001247,
+          "lon": 0.9357539
+        },
+        {
+          "lat": 51.9001061,
+          "lon": 0.9355873
+        },
+        {
+          "lat": 51.9000977,
+          "lon": 0.9355304
+        },
+        {
+          "lat": 51.9000811,
+          "lon": 0.935392
+        },
+        {
+          "lat": 51.9001632,
+          "lon": 0.935366
+        },
+        {
+          "lat": 51.9002498,
+          "lon": 0.9353431
+        },
+        {
+          "lat": 51.9012934,
+          "lon": 0.9350301
+        },
+        {
+          "lat": 51.901559,
+          "lon": 0.9361387
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO4 3EZ",
+        "addr:street": "Templewood Road",
+        "amenity": "school",
+        "capacity": "210",
+        "check_date": "2025-09-09",
+        "denomination": "anglican",
+        "diocese": "Diocese of Chelmsford",
+        "fhrs:id": "1579840",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "4",
+        "name": "Parsons Heath Church of England Voluntary Controlled Primary School",
+        "phone": "+44 1206 860612",
+        "ref:GB:uprn": "303004463",
+        "ref:edubase": "115088",
+        "religion": "christian",
+        "school": "primary",
+        "school:type": "voluntary_controlled",
+        "source": "OS OpenMap Local",
+        "website": "https://www.parsonsheathprimary.org.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 352589142,
+      "bounds": {
+        "minlat": 51.9022853,
+        "minlon": 0.9247167,
+        "maxlat": 51.9039321,
+        "maxlon": 0.927388
+      },
+      "nodes": [
+        3583474827,
+        3583474828,
+        4933223147,
+        3583474829,
+        3583474830,
+        3583474831,
+        3583474832,
+        3835608985,
+        3835608980,
+        3583474833,
+        3835608987,
+        3835608979,
+        3583474834,
+        5902035506,
+        5902035511,
+        5902035524,
+        3583474835,
+        3583474836,
+        4933223146,
+        3583474827
+      ],
+      "geometry": [
+        {
+          "lat": 51.903212,
+          "lon": 0.9249631
+        },
+        {
+          "lat": 51.9039321,
+          "lon": 0.925063
+        },
+        {
+          "lat": 51.9039239,
+          "lon": 0.9257725
+        },
+        {
+          "lat": 51.9038815,
+          "lon": 0.9267651
+        },
+        {
+          "lat": 51.9028533,
+          "lon": 0.9266277
+        },
+        {
+          "lat": 51.9028178,
+          "lon": 0.927388
+        },
+        {
+          "lat": 51.9026439,
+          "lon": 0.9272772
+        },
+        {
+          "lat": 51.9026407,
+          "lon": 0.9270901
+        },
+        {
+          "lat": 51.9026366,
+          "lon": 0.9270668
+        },
+        {
+          "lat": 51.9025935,
+          "lon": 0.9270449
+        },
+        {
+          "lat": 51.9025289,
+          "lon": 0.9270292
+        },
+        {
+          "lat": 51.9022982,
+          "lon": 0.9270303
+        },
+        {
+          "lat": 51.9022853,
+          "lon": 0.9270249
+        },
+        {
+          "lat": 51.902289,
+          "lon": 0.9269396
+        },
+        {
+          "lat": 51.9022917,
+          "lon": 0.9268484
+        },
+        {
+          "lat": 51.9023303,
+          "lon": 0.9258664
+        },
+        {
+          "lat": 51.9023299,
+          "lon": 0.9247167
+        },
+        {
+          "lat": 51.9026312,
+          "lon": 0.9248352
+        },
+        {
+          "lat": 51.9029128,
+          "lon": 0.9249115
+        },
+        {
+          "lat": 51.903212,
+          "lon": 0.9249631
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO4 0PZ",
+        "addr:street": "Upland Drive",
+        "amenity": "school",
+        "capacity": "420",
+        "check_date": "2025-09-10",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "5",
+        "name": "Friars Grove Primary School",
+        "operator": "Essex County Council",
+        "operator:type": "government",
+        "operator:wikidata": "Q5399679",
+        "phone": "+44 1206 843683",
+        "ref:GB:uprn": "10004952420",
+        "ref:edubase": "114761",
+        "religion": "none",
+        "school": "primary",
+        "school:boarding": "no",
+        "school:gender": "mixed",
+        "school:selective": "no",
+        "school:type": "community",
+        "website": "https://www.friarsgroveprimaryschool.com/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 358629483,
+      "bounds": {
+        "minlat": 51.8973717,
+        "minlon": 0.8937191,
+        "maxlat": 51.897551,
+        "maxlon": 0.8939105
+      },
+      "nodes": [
+        3635314544,
+        3635314535,
+        3635314532,
+        3635314542,
+        3635314544
+      ],
+      "geometry": [
+        {
+          "lat": 51.897551,
+          "lon": 0.8938616
+        },
+        {
+          "lat": 51.8973879,
+          "lon": 0.8939105
+        },
+        {
+          "lat": 51.8973717,
+          "lon": 0.8937679
+        },
+        {
+          "lat": 51.8975347,
+          "lon": 0.8937191
+        },
+        {
+          "lat": 51.897551,
+          "lon": 0.8938616
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO1 1XA",
+        "addr:street": "Belle Vue Road",
+        "amenity": "school",
+        "building": "residential",
+        "email": "sally@theatricool.co.uk",
+        "name": "Theatricool Performing Arts School",
+        "phone": "+44 7736 713909",
+        "school": "art",
+        "website": "https://www.theatricool.co.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 376565524,
+      "bounds": {
+        "minlat": 51.8951024,
+        "minlon": 0.8934157,
+        "maxlat": 51.8959755,
+        "maxlon": 0.8952317
+      },
+      "nodes": [
+        3799753959,
+        3799753756,
+        7719155945,
+        13521590408,
+        3799753957,
+        3799753958,
+        790335925,
+        3799735892,
+        2933407225,
+        3799735890,
+        1636802608,
+        1636802738,
+        369675030,
+        3799753959
+      ],
+      "geometry": [
+        {
+          "lat": 51.8956139,
+          "lon": 0.8952317
+        },
+        {
+          "lat": 51.8955903,
+          "lon": 0.8949443
+        },
+        {
+          "lat": 51.8957569,
+          "lon": 0.894912
+        },
+        {
+          "lat": 51.8958153,
+          "lon": 0.8948672
+        },
+        {
+          "lat": 51.8958364,
+          "lon": 0.8948526
+        },
+        {
+          "lat": 51.8959755,
+          "lon": 0.8948292
+        },
+        {
+          "lat": 51.8958872,
+          "lon": 0.8934157
+        },
+        {
+          "lat": 51.8954305,
+          "lon": 0.8936629
+        },
+        {
+          "lat": 51.8954081,
+          "lon": 0.8936742
+        },
+        {
+          "lat": 51.8953871,
+          "lon": 0.8936847
+        },
+        {
+          "lat": 51.8951024,
+          "lon": 0.893843
+        },
+        {
+          "lat": 51.8952838,
+          "lon": 0.8952219
+        },
+        {
+          "lat": 51.8954886,
+          "lon": 0.8952217
+        },
+        {
+          "lat": 51.8956139,
+          "lon": 0.8952317
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO1 1RP",
+        "addr:street": "John Harper Street",
+        "amenity": "school",
+        "capacity": "420",
+        "check_date": "2025-08-28",
+        "fhrs:id": "1585990",
+        "isced:level": "0;1",
+        "max_age": "11",
+        "min_age": "3",
+        "name": "North Primary School and Nursery",
+        "operator": "Essex County Council",
+        "operator:type": "government",
+        "operator:wikidata": "Q5399679",
+        "phone": "+44 1206 574225",
+        "ref:GB:uprn": "303014057",
+        "ref:edubase": "114709",
+        "school": "primary",
+        "school:type": "community",
+        "website": "http://northschool.org.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 378560766,
+      "bounds": {
+        "minlat": 51.9067479,
+        "minlon": 0.8983847,
+        "maxlat": 51.9077184,
+        "maxlon": 0.9016087
+      },
+      "nodes": [
+        3819689781,
+        3819689778,
+        3819689776,
+        3819632912,
+        795726944,
+        3819689772,
+        3819689777,
+        3819689780,
+        3819689773,
+        3819689771,
+        11872427329,
+        369672240,
+        7515182081,
+        369672242,
+        3819689781
+      ],
+      "geometry": [
+        {
+          "lat": 51.9067826,
+          "lon": 0.8986428
+        },
+        {
+          "lat": 51.9068298,
+          "lon": 0.8985027
+        },
+        {
+          "lat": 51.9074222,
+          "lon": 0.8983847
+        },
+        {
+          "lat": 51.9074462,
+          "lon": 0.8984477
+        },
+        {
+          "lat": 51.9077184,
+          "lon": 0.901425
+        },
+        {
+          "lat": 51.9073825,
+          "lon": 0.9015336
+        },
+        {
+          "lat": 51.9070648,
+          "lon": 0.9016087
+        },
+        {
+          "lat": 51.9070101,
+          "lon": 0.9011714
+        },
+        {
+          "lat": 51.906941,
+          "lon": 0.9004937
+        },
+        {
+          "lat": 51.906861,
+          "lon": 0.9003951
+        },
+        {
+          "lat": 51.9068601,
+          "lon": 0.9003807
+        },
+        {
+          "lat": 51.9068316,
+          "lon": 0.899913
+        },
+        {
+          "lat": 51.9068248,
+          "lon": 0.8998136
+        },
+        {
+          "lat": 51.9067479,
+          "lon": 0.8986952
+        },
+        {
+          "lat": 51.9067826,
+          "lon": 0.8986428
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO4 5XT",
+        "addr:street": "Cowper Crescent",
+        "amenity": "school",
+        "capacity": "420",
+        "check_date": "2025-07-23",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "4",
+        "name": "Queen Boudica Primary School",
+        "operator": "Essex County Council",
+        "operator:type": "government",
+        "operator:wikidata": "Q5399679",
+        "phone": "+44 1206 844654",
+        "ref:GB:uprn": "10034898681",
+        "ref:edubase": "135585",
+        "school": "primary",
+        "school:type": "community",
+        "website": "https://qbps.essex.sch.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 380002173,
+      "bounds": {
+        "minlat": 51.8713669,
+        "minlon": 0.8756926,
+        "maxlat": 51.8727783,
+        "maxlon": 0.8783892
+      },
+      "nodes": [
+        3833512374,
+        3833512382,
+        6900321721,
+        3833512379,
+        3833512361,
+        3833512381,
+        3833512380,
+        3833512373,
+        3833512368,
+        3833512358,
+        3833512375,
+        3833512359,
+        3833512362,
+        3833512374
+      ],
+      "geometry": [
+        {
+          "lat": 51.8713669,
+          "lon": 0.8772193
+        },
+        {
+          "lat": 51.8716945,
+          "lon": 0.8777392
+        },
+        {
+          "lat": 51.8718699,
+          "lon": 0.8781385
+        },
+        {
+          "lat": 51.8719653,
+          "lon": 0.8783557
+        },
+        {
+          "lat": 51.8721325,
+          "lon": 0.8783892
+        },
+        {
+          "lat": 51.8727603,
+          "lon": 0.8776444
+        },
+        {
+          "lat": 51.8727783,
+          "lon": 0.8774553
+        },
+        {
+          "lat": 51.8724931,
+          "lon": 0.8766033
+        },
+        {
+          "lat": 51.8724945,
+          "lon": 0.8762981
+        },
+        {
+          "lat": 51.8724503,
+          "lon": 0.8761776
+        },
+        {
+          "lat": 51.8718273,
+          "lon": 0.8756926
+        },
+        {
+          "lat": 51.8717442,
+          "lon": 0.8760011
+        },
+        {
+          "lat": 51.871615,
+          "lon": 0.8764249
+        },
+        {
+          "lat": 51.8713669,
+          "lon": 0.8772193
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO2 9AZ",
+        "addr:street": "Gloucester Avenue",
+        "amenity": "school",
+        "capacity": "240",
+        "check_date": "2025-10-07",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "7",
+        "name": "Kings Ford Academy",
+        "old_name": "Iceni Academy",
+        "operator": "Inspires MAT",
+        "operator:type": "private",
+        "operator:wikidata": "Q122683409",
+        "phone": "+44 1206 573807",
+        "ref:GB:uprn": "10024403951",
+        "ref:edubase": "142001",
+        "ref:edubase:group": "2771",
+        "religion": "none",
+        "school": "primary",
+        "school:boarding": "no",
+        "school:gender": "mixed",
+        "school:group:type": "multi_academy_trust",
+        "school:selective": "no",
+        "school:type": "academy",
+        "website": "https://www.kingsfordacademy.co.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 390285863,
+      "bounds": {
+        "minlat": 51.8305117,
+        "minlon": 0.9086841,
+        "maxlat": 51.8315625,
+        "maxlon": 0.9106665
+      },
+      "nodes": [
+        3934421675,
+        3934421690,
+        3934421677,
+        3934421676,
+        3934421694,
+        3934421681,
+        3934421685,
+        2809920775,
+        3934421675
+      ],
+      "geometry": [
+        {
+          "lat": 51.8315625,
+          "lon": 0.9100812
+        },
+        {
+          "lat": 51.8315411,
+          "lon": 0.9098214
+        },
+        {
+          "lat": 51.8314831,
+          "lon": 0.909639
+        },
+        {
+          "lat": 51.831407,
+          "lon": 0.909459
+        },
+        {
+          "lat": 51.8312958,
+          "lon": 0.9086841
+        },
+        {
+          "lat": 51.8305117,
+          "lon": 0.9090167
+        },
+        {
+          "lat": 51.8307753,
+          "lon": 0.9105348
+        },
+        {
+          "lat": 51.8315013,
+          "lon": 0.9106665
+        },
+        {
+          "lat": 51.8315625,
+          "lon": 0.9100812
+        }
+      ],
+      "tags": {
+        "addr:city": "Abberton",
+        "addr:postcode": "CO5 7PG",
+        "addr:street": "Bracken Way",
+        "amenity": "school",
+        "capacity": "154",
+        "check_date": "2025-08-29",
+        "isced:level": "0;1",
+        "max_age": "11",
+        "min_age": "3",
+        "name": "Langenhoe Community Primary School",
+        "operator": "LIFE Education Trust",
+        "operator:type": "private",
+        "operator:wikidata": "Q122685253",
+        "phone": "+44 1206 735267",
+        "ref:GB:uprn": "303002241",
+        "ref:edubase": "151064",
+        "ref:edubase:group": "16371",
+        "school": "primary",
+        "school:group:type": "multi_academy_trust",
+        "school:type": "academy",
+        "website": "https://www.langenhoeprimaryschool.com/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 391640427,
+      "bounds": {
+        "minlat": 51.8814245,
+        "minlon": 0.8859419,
+        "maxlat": 51.8822457,
+        "maxlon": 0.8873179
+      },
+      "nodes": [
+        3948662647,
+        3948662646,
+        13513244930,
+        13513244931,
+        3948662648,
+        3948662653,
+        3948662656,
+        3948662654,
+        13513244929,
+        3948662644,
+        13513244928,
+        13513244932,
+        3948662647
+      ],
+      "geometry": [
+        {
+          "lat": 51.8816811,
+          "lon": 0.8859419
+        },
+        {
+          "lat": 51.8822457,
+          "lon": 0.8869102
+        },
+        {
+          "lat": 51.8822,
+          "lon": 0.8869857
+        },
+        {
+          "lat": 51.8820303,
+          "lon": 0.8872661
+        },
+        {
+          "lat": 51.881999,
+          "lon": 0.8873179
+        },
+        {
+          "lat": 51.8817756,
+          "lon": 0.8869779
+        },
+        {
+          "lat": 51.8816778,
+          "lon": 0.8868351
+        },
+        {
+          "lat": 51.8814245,
+          "lon": 0.8864193
+        },
+        {
+          "lat": 51.881487,
+          "lon": 0.8862878
+        },
+        {
+          "lat": 51.8815354,
+          "lon": 0.886186
+        },
+        {
+          "lat": 51.8816673,
+          "lon": 0.885965
+        },
+        {
+          "lat": 51.8816742,
+          "lon": 0.8859534
+        },
+        {
+          "lat": 51.8816811,
+          "lon": 0.8859419
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO3 3GB",
+        "addr:street": "Constantine Road",
+        "amenity": "school",
+        "capacity": "420",
+        "check_date": "2025-09-09",
+        "isced:level": "0;1",
+        "max_age": "11",
+        "min_age": "4",
+        "name": "Hamilton Primary School",
+        "operator": "Essex County Council",
+        "operator:type": "government",
+        "operator:wikidata": "Q5399679",
+        "phone": "+44 1206 572362",
+        "ref:GB:uprn": "100091468474",
+        "ref:edubase": "114706",
+        "school": "primary",
+        "school:type": "community",
+        "website": "https://www.hamiltonprimary.com/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 391642343,
+      "bounds": {
+        "minlat": 51.9128304,
+        "minlon": 0.8916922,
+        "maxlat": 51.9139621,
+        "maxlon": 0.8941276
+      },
+      "nodes": [
+        3948678785,
+        3948678782,
+        3948678784,
+        3948678792,
+        6918952506,
+        3948678787,
+        6918952507,
+        3948678788,
+        3948678786,
+        3948678789,
+        3948678791,
+        3948678790,
+        3948678783,
+        3948678785
+      ],
+      "geometry": [
+        {
+          "lat": 51.9128404,
+          "lon": 0.8931567
+        },
+        {
+          "lat": 51.9132639,
+          "lon": 0.893339
+        },
+        {
+          "lat": 51.9133301,
+          "lon": 0.8928133
+        },
+        {
+          "lat": 51.9134592,
+          "lon": 0.8916922
+        },
+        {
+          "lat": 51.9135244,
+          "lon": 0.8917193
+        },
+        {
+          "lat": 51.9139621,
+          "lon": 0.8919014
+        },
+        {
+          "lat": 51.9139079,
+          "lon": 0.8923601
+        },
+        {
+          "lat": 51.9137834,
+          "lon": 0.8934141
+        },
+        {
+          "lat": 51.9135485,
+          "lon": 0.8938218
+        },
+        {
+          "lat": 51.913393,
+          "lon": 0.8939989
+        },
+        {
+          "lat": 51.9131316,
+          "lon": 0.8941276
+        },
+        {
+          "lat": 51.9128735,
+          "lon": 0.8941115
+        },
+        {
+          "lat": 51.9128304,
+          "lon": 0.8939559
+        },
+        {
+          "lat": 51.9128404,
+          "lon": 0.8931567
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO4 5LD",
+        "addr:street": "Mill Road",
+        "amenity": "school",
+        "capacity": "315",
+        "check_date": "2025-10-22",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "5",
+        "name": "Myland Community Primary School",
+        "operator": "Essex County Council",
+        "operator:type": "government",
+        "operator:wikidata": "Q5399679",
+        "phone": "+44 1206 852109",
+        "ref:GB:uprn": "303002028",
+        "ref:edubase": "114708",
+        "school": "primary",
+        "school:type": "community",
+        "website": "https://www.mylandprimary.co.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 391805524,
+      "bounds": {
+        "minlat": 51.8558356,
+        "minlon": 0.942402,
+        "maxlat": 51.8568855,
+        "maxlon": 0.94334
+      },
+      "nodes": [
+        3950621173,
+        2519804853,
+        3950621183,
+        3950621178,
+        3950621191,
+        3950621186,
+        388368269,
+        3950621192,
+        6560215302,
+        3950621174,
+        3950621180,
+        3950621187,
+        3950621173
+      ],
+      "geometry": [
+        {
+          "lat": 51.8568738,
+          "lon": 0.9429484
+        },
+        {
+          "lat": 51.8568855,
+          "lon": 0.9431227
+        },
+        {
+          "lat": 51.8564215,
+          "lon": 0.9430074
+        },
+        {
+          "lat": 51.8563403,
+          "lon": 0.9431254
+        },
+        {
+          "lat": 51.8563155,
+          "lon": 0.94334
+        },
+        {
+          "lat": 51.8558356,
+          "lon": 0.9432489
+        },
+        {
+          "lat": 51.8558757,
+          "lon": 0.942947
+        },
+        {
+          "lat": 51.8559678,
+          "lon": 0.942402
+        },
+        {
+          "lat": 51.8562403,
+          "lon": 0.9424603
+        },
+        {
+          "lat": 51.8563652,
+          "lon": 0.942487
+        },
+        {
+          "lat": 51.8566866,
+          "lon": 0.9426077
+        },
+        {
+          "lat": 51.856665,
+          "lon": 0.9429242
+        },
+        {
+          "lat": 51.8568738,
+          "lon": 0.9429484
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO5 7HR",
+        "addr:street": "Rectory Road",
+        "addr:suburb": "Rowhedge",
+        "amenity": "school",
+        "capacity": "210",
+        "check_date": "2025-07-08",
+        "denomination": "anglican",
+        "diocese": "Diocese of Chelmsford",
+        "fhrs:id": "115179",
+        "isced:level": "0;1",
+        "max_age": "11",
+        "min_age": "4",
+        "name": "St Lawrence Church of England Primary School",
+        "official_name": "St Lawrence Church of England Primary School, Rowhedge",
+        "phone": "+44 1206 728517",
+        "ref:GB:uprn": "100091471416",
+        "ref:edubase": "115077",
+        "religion": "christian",
+        "school": "primary",
+        "school:boarding": "no",
+        "school:gender": "mixed",
+        "school:selective": "no",
+        "school:type": "voluntary_controlled",
+        "source": "bing; fhrs; OS_OpenData_StreetView",
+        "source:addr": "fhrs",
+        "website": "https://www.st-lawrence-pri.essex.sch.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 391920305,
+      "bounds": {
+        "minlat": 51.8878134,
+        "minlon": 0.8777728,
+        "maxlat": 51.8891129,
+        "maxlon": 0.8798542
+      },
+      "nodes": [
+        3951875560,
+        3951875584,
+        3951875562,
+        3951875573,
+        3951875567,
+        3951875565,
+        3951875582,
+        3951875599,
+        3951875571,
+        3951875564,
+        3951875560
+      ],
+      "geometry": [
+        {
+          "lat": 51.8880865,
+          "lon": 0.8779713
+        },
+        {
+          "lat": 51.8883828,
+          "lon": 0.8780196
+        },
+        {
+          "lat": 51.8883845,
+          "lon": 0.8777728
+        },
+        {
+          "lat": 51.8891129,
+          "lon": 0.8779364
+        },
+        {
+          "lat": 51.889045,
+          "lon": 0.8794572
+        },
+        {
+          "lat": 51.8882239,
+          "lon": 0.8792534
+        },
+        {
+          "lat": 51.8882521,
+          "lon": 0.8798542
+        },
+        {
+          "lat": 51.8880501,
+          "lon": 0.8798488
+        },
+        {
+          "lat": 51.8878349,
+          "lon": 0.8797469
+        },
+        {
+          "lat": 51.8878134,
+          "lon": 0.8796289
+        },
+        {
+          "lat": 51.8880865,
+          "lon": 0.8779713
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:housenumber": "91",
+        "addr:postcode": "CO3 3RB",
+        "addr:street": "Lexden Road",
+        "amenity": "school",
+        "capacity": "600",
+        "check_date": "2025-10-24",
+        "isced:level": "0;1;2;3",
+        "max_age": "17",
+        "min_age": "2",
+        "name": "St Mary's School for Girls",
+        "phone": "+44 1206 572544",
+        "ref:GB:uprn": "100091468712",
+        "ref:edubase": "115394",
+        "school:gender": "female",
+        "school:type": "independent",
+        "website": "https://www.stmaryscolchester.org.uk/",
+        "wikidata": "Q7590424",
+        "wikipedia": "en:St Mary's School, Colchester"
+      }
+    },
+    {
+      "type": "way",
+      "id": 391922257,
+      "bounds": {
+        "minlat": 51.8863867,
+        "minlon": 0.8901833,
+        "maxlat": 51.8869132,
+        "maxlon": 0.8909048
+      },
+      "nodes": [
+        3951890957,
+        3951888155,
+        3951888145,
+        3951890966,
+        3951888143,
+        3951890961,
+        3951888144,
+        3951890965,
+        3951890960,
+        3951888153,
+        3951890959,
+        3951888146,
+        3951890957
+      ],
+      "geometry": [
+        {
+          "lat": 51.8863867,
+          "lon": 0.8908324
+        },
+        {
+          "lat": 51.8864695,
+          "lon": 0.8901833
+        },
+        {
+          "lat": 51.8866963,
+          "lon": 0.8902557
+        },
+        {
+          "lat": 51.886698,
+          "lon": 0.8902852
+        },
+        {
+          "lat": 51.8869132,
+          "lon": 0.8903657
+        },
+        {
+          "lat": 51.8868834,
+          "lon": 0.8905427
+        },
+        {
+          "lat": 51.8868453,
+          "lon": 0.8905239
+        },
+        {
+          "lat": 51.8868321,
+          "lon": 0.8905883
+        },
+        {
+          "lat": 51.8867311,
+          "lon": 0.8905507
+        },
+        {
+          "lat": 51.8867013,
+          "lon": 0.8907653
+        },
+        {
+          "lat": 51.8866417,
+          "lon": 0.8907331
+        },
+        {
+          "lat": 51.8866202,
+          "lon": 0.8909048
+        },
+        {
+          "lat": 51.8863867,
+          "lon": 0.8908324
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO3 3HD",
+        "addr:street": "Wellesley Road",
+        "amenity": "school",
+        "capacity": "558",
+        "isced:level": "0;1;2;3",
+        "max_age": "18",
+        "min_age": "2",
+        "name": "Colchester High School",
+        "phone": "+44 1206 573389",
+        "ref:GB:uprn": "100091468721",
+        "ref:edubase": "115409",
+        "religion": "none",
+        "school:boarding": "no",
+        "school:gender": "mixed",
+        "school:selective": "no",
+        "school:trust": "no",
+        "school:type": "independent",
+        "website": "https://www.colchesterhighschool.co.uk/",
+        "wikidata": "Q5142090",
+        "wikipedia": "en:Colchester High School"
+      }
+    },
+    {
+      "type": "way",
+      "id": 391941826,
+      "bounds": {
+        "minlat": 51.8898296,
+        "minlon": 0.879336,
+        "maxlat": 51.8908887,
+        "maxlon": 0.8817312
+      },
+      "nodes": [
+        3952122078,
+        3952122083,
+        3952122092,
+        3952122087,
+        369671008,
+        3952122089,
+        3952122091,
+        3952122094,
+        3952122078
+      ],
+      "geometry": [
+        {
+          "lat": 51.8898296,
+          "lon": 0.8812779
+        },
+        {
+          "lat": 51.8899521,
+          "lon": 0.880315
+        },
+        {
+          "lat": 51.8900614,
+          "lon": 0.879336
+        },
+        {
+          "lat": 51.8908887,
+          "lon": 0.8795366
+        },
+        {
+          "lat": 51.890858,
+          "lon": 0.8800751
+        },
+        {
+          "lat": 51.8908014,
+          "lon": 0.8817312
+        },
+        {
+          "lat": 51.8905696,
+          "lon": 0.8816534
+        },
+        {
+          "lat": 51.8901938,
+          "lon": 0.8814281
+        },
+        {
+          "lat": 51.8898296,
+          "lon": 0.8812779
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO3 3QJ",
+        "addr:street": "Sussex Road",
+        "amenity": "school",
+        "capacity": "147",
+        "check_date": "2025-07-10",
+        "isced:level": "1;2",
+        "max_age": "16",
+        "min_age": "5",
+        "name": "Kingswode Hoe School",
+        "operator": "SEAX Trust",
+        "operator:type": "private",
+        "operator:wikidata": "Q122684908",
+        "phone": "+44 1206 576408",
+        "ref:GB:uprn": "10004964973",
+        "ref:edubase": "144897",
+        "ref:edubase:group": "5636",
+        "religion": "none",
+        "school:boarding": "no",
+        "school:gender": "mixed",
+        "school:group:type": "multi_academy_trust",
+        "school:selective": "no",
+        "school:type": "academy;special",
+        "website": "https://www.kingswodehoe.com/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 392093706,
+      "bounds": {
+        "minlat": 51.9128941,
+        "minlon": 0.8987065,
+        "maxlat": 51.9136204,
+        "maxlon": 0.8999082
+      },
+      "nodes": [
+        3953636354,
+        3953636355,
+        3953643057,
+        3953643058,
+        3953636356,
+        3953643059,
+        3953636354
+      ],
+      "geometry": [
+        {
+          "lat": 51.9136204,
+          "lon": 0.8997255
+        },
+        {
+          "lat": 51.9135641,
+          "lon": 0.899232
+        },
+        {
+          "lat": 51.9133178,
+          "lon": 0.8987065
+        },
+        {
+          "lat": 51.9128941,
+          "lon": 0.898835
+        },
+        {
+          "lat": 51.9130299,
+          "lon": 0.8999082
+        },
+        {
+          "lat": 51.9132002,
+          "lon": 0.8998355
+        },
+        {
+          "lat": 51.9136204,
+          "lon": 0.8997255
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:housename": "The Mile End Centre",
+        "addr:postcode": "CO4 5LB",
+        "addr:street": "Turner Road",
+        "amenity": "school",
+        "capacity": "152",
+        "isced:level": "1;2",
+        "max_age": "16",
+        "min_age": "4",
+        "name": "North East Essex Co-Operative Academy",
+        "phone": "+44 1206 852156",
+        "ref:GB:uprn": "10095444629",
+        "ref:edubase": "143590",
+        "ref:edubase:group": "16799",
+        "school:trust": "yes",
+        "school:trust:name": "Keys Co-operative Academy Trust",
+        "school:trust:type": "multi_academy",
+        "school:type": "academy",
+        "website": "https://www.neeca.co.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 393004684,
+      "bounds": {
+        "minlat": 51.8627538,
+        "minlon": 0.8756397,
+        "maxlat": 51.8647559,
+        "maxlon": 0.8782306
+      },
+      "nodes": [
+        3961928573,
+        1199924737,
+        1199924447,
+        1199924376,
+        3961928578,
+        3961928576,
+        3961928573
+      ],
+      "geometry": [
+        {
+          "lat": 51.8647559,
+          "lon": 0.8766691
+        },
+        {
+          "lat": 51.8643454,
+          "lon": 0.8782306
+        },
+        {
+          "lat": 51.8635669,
+          "lon": 0.8780165
+        },
+        {
+          "lat": 51.8627538,
+          "lon": 0.877626
+        },
+        {
+          "lat": 51.8632612,
+          "lon": 0.8756397
+        },
+        {
+          "lat": 51.8638714,
+          "lon": 0.8760844
+        },
+        {
+          "lat": 51.8647559,
+          "lon": 0.8766691
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO2 9RA",
+        "addr:street": "Camulodunum Way",
+        "amenity": "school",
+        "capacity": "281",
+        "check_date": "2025-09-09",
+        "isced:level": "0;1",
+        "max_age": "11",
+        "min_age": "3",
+        "name": "St Michael's Primary School and Nursery",
+        "operator": "Essex County Council",
+        "operator:type": "government",
+        "operator:wikidata": "Q5399679",
+        "phone": "+44 1206 546412",
+        "ref:GB:uprn": "100091644558",
+        "ref:edubase": "114817",
+        "school": "primary",
+        "school:type": "community",
+        "website": "https://www.stmichaelsprimary.co.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 393006341,
+      "bounds": {
+        "minlat": 51.8651944,
+        "minlon": 0.8812019,
+        "maxlat": 51.8665744,
+        "maxlon": 0.884282
+      },
+      "nodes": [
+        3961944230,
+        3961944236,
+        1199924770,
+        3961944239,
+        3961944243,
+        3961944230
+      ],
+      "geometry": [
+        {
+          "lat": 51.8665744,
+          "lon": 0.8815829
+        },
+        {
+          "lat": 51.8653335,
+          "lon": 0.8812019
+        },
+        {
+          "lat": 51.8651944,
+          "lon": 0.8831701
+        },
+        {
+          "lat": 51.8652495,
+          "lon": 0.8840567
+        },
+        {
+          "lat": 51.8662665,
+          "lon": 0.884282
+        },
+        {
+          "lat": 51.8665744,
+          "lon": 0.8815829
+        }
+      ],
+      "tags": {
+        "amenity": "school",
+        "name": "Montgomery Primary Schools",
+        "school": "shared_site"
+      }
+    },
+    {
+      "type": "way",
+      "id": 393006342,
+      "bounds": {
+        "minlat": 51.8659061,
+        "minlon": 0.8814406,
+        "maxlat": 51.8663175,
+        "maxlon": 0.8820876
+      },
+      "nodes": [
+        3961944234,
+        3961944237,
+        3961944235,
+        3961944233,
+        3961944241,
+        3961944229,
+        3961944231,
+        3961944238,
+        3961944232,
+        3961944227,
+        3961944234
+      ],
+      "geometry": [
+        {
+          "lat": 51.8663175,
+          "lon": 0.8815406
+        },
+        {
+          "lat": 51.8659663,
+          "lon": 0.8814406
+        },
+        {
+          "lat": 51.8659061,
+          "lon": 0.8819955
+        },
+        {
+          "lat": 51.8662298,
+          "lon": 0.8820876
+        },
+        {
+          "lat": 51.8662358,
+          "lon": 0.8820327
+        },
+        {
+          "lat": 51.8662723,
+          "lon": 0.8820431
+        },
+        {
+          "lat": 51.8662842,
+          "lon": 0.8819329
+        },
+        {
+          "lat": 51.8661977,
+          "lon": 0.8819083
+        },
+        {
+          "lat": 51.8662219,
+          "lon": 0.8816851
+        },
+        {
+          "lat": 51.8662994,
+          "lon": 0.8817072
+        },
+        {
+          "lat": 51.8663175,
+          "lon": 0.8815406
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO2 9QG",
+        "addr:street": "Baronswood Way",
+        "amenity": "school",
+        "building": "school",
+        "capacity": "360",
+        "check_date": "2025-07-08",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "7",
+        "name": "Montgomery Junior School",
+        "operator": "Essex County Council",
+        "operator:type": "government",
+        "operator:wikidata": "Q5399679",
+        "phone": "+44 1206 572288",
+        "ref:edubase": "114750",
+        "school": "primary",
+        "school:type": "community",
+        "website": "https://www.montgomery-jun.org.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 393006343,
+      "bounds": {
+        "minlat": 51.8659585,
+        "minlon": 0.8821771,
+        "maxlat": 51.8662455,
+        "maxlon": 0.8828521
+      },
+      "nodes": [
+        3961944244,
+        3961944242,
+        3961944228,
+        3961944240,
+        3961944244
+      ],
+      "geometry": [
+        {
+          "lat": 51.8662455,
+          "lon": 0.8822411
+        },
+        {
+          "lat": 51.8660266,
+          "lon": 0.8821771
+        },
+        {
+          "lat": 51.8659585,
+          "lon": 0.8827881
+        },
+        {
+          "lat": 51.8661774,
+          "lon": 0.8828521
+        },
+        {
+          "lat": 51.8662455,
+          "lon": 0.8822411
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO2 9QG",
+        "addr:street": "Baronswood Way",
+        "amenity": "school",
+        "building": "school",
+        "name": "Montgomery Infant School and Nursery",
+        "phone": "+44 1206 570231",
+        "ref:edubase": "114751",
+        "website": "https://www.montgomery-inf.essex.sch.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 393007551,
+      "bounds": {
+        "minlat": 51.8954556,
+        "minlon": 0.9390212,
+        "maxlat": 51.895888,
+        "maxlon": 0.9396646
+      },
+      "nodes": [
+        3961958361,
+        3961958367,
+        3961958364,
+        3961958366,
+        3961958365,
+        3961958359,
+        3961958372,
+        3961958363,
+        3961958360,
+        3961958371,
+        3961958361
+      ],
+      "geometry": [
+        {
+          "lat": 51.8954556,
+          "lon": 0.939436
+        },
+        {
+          "lat": 51.8957653,
+          "lon": 0.9396646
+        },
+        {
+          "lat": 51.895888,
+          "lon": 0.9392345
+        },
+        {
+          "lat": 51.8958082,
+          "lon": 0.9391747
+        },
+        {
+          "lat": 51.8957942,
+          "lon": 0.939224
+        },
+        {
+          "lat": 51.8957262,
+          "lon": 0.9391731
+        },
+        {
+          "lat": 51.8957419,
+          "lon": 0.9391181
+        },
+        {
+          "lat": 51.8956125,
+          "lon": 0.9390212
+        },
+        {
+          "lat": 51.8955696,
+          "lon": 0.9391718
+        },
+        {
+          "lat": 51.8955359,
+          "lon": 0.9391466
+        },
+        {
+          "lat": 51.8954556,
+          "lon": 0.939436
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO4 3JP",
+        "addr:street": "Hawthorn Avenue",
+        "amenity": "school",
+        "building": "school",
+        "capacity": "240",
+        "check_date": "2025-07-08",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "7",
+        "name": "Hazelmere Junior School",
+        "operator": "Essex County Council",
+        "operator:type": "government",
+        "operator:wikidata": "Q5399679",
+        "phone": "+44 1206 862691",
+        "ref:GB:uprn": "100091470013",
+        "ref:edubase": "114745",
+        "school": "primary",
+        "school:type": "community",
+        "website": "https://www.hazelmere-jun.essex.sch.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 393007555,
+      "bounds": {
+        "minlat": 51.8951332,
+        "minlon": 0.9386016,
+        "maxlat": 51.8955599,
+        "maxlon": 0.939436
+      },
+      "nodes": [
+        3961958368,
+        3961958373,
+        3961958362,
+        3961958371,
+        3961958361,
+        3961958357,
+        3961958358,
+        3961958370,
+        3961958369,
+        3961958368
+      ],
+      "geometry": [
+        {
+          "lat": 51.8955484,
+          "lon": 0.9389353
+        },
+        {
+          "lat": 51.8955215,
+          "lon": 0.9390324
+        },
+        {
+          "lat": 51.8955599,
+          "lon": 0.9390603
+        },
+        {
+          "lat": 51.8955359,
+          "lon": 0.9391466
+        },
+        {
+          "lat": 51.8954556,
+          "lon": 0.939436
+        },
+        {
+          "lat": 51.8951332,
+          "lon": 0.9392012
+        },
+        {
+          "lat": 51.8952995,
+          "lon": 0.9386016
+        },
+        {
+          "lat": 51.8953965,
+          "lon": 0.9386723
+        },
+        {
+          "lat": 51.8953614,
+          "lon": 0.9387991
+        },
+        {
+          "lat": 51.8955484,
+          "lon": 0.9389353
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO4 3JP",
+        "addr:street": "Hawthorn Avenue",
+        "amenity": "school",
+        "building": "school",
+        "capacity": "180",
+        "check_date": "2025-09-10",
+        "isced:level": "0;1",
+        "max_age": "7",
+        "min_age": "4",
+        "name": "Hazelmere Infant School and Nursery",
+        "operator": "Essex County Council",
+        "operator:type": "government",
+        "operator:wikidata": "Q5399679",
+        "phone": "+44 1206 861836",
+        "ref:GB:uprn": "200002753782",
+        "ref:edubase": "114746",
+        "religion": "none",
+        "school": "primary",
+        "school:boarding": "no",
+        "school:gender": "mixed",
+        "school:selective": "no",
+        "school:type": "community",
+        "website": "https://hazelmere-inf.essex.sch.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 395165428,
+      "bounds": {
+        "minlat": 51.9181471,
+        "minlon": 0.8827177,
+        "maxlat": 51.9212509,
+        "maxlon": 0.8878897
+      },
+      "nodes": [
+        13348779138,
+        6197941636,
+        8321634048,
+        8321634046,
+        8321634047,
+        5389794819,
+        5991312876,
+        3980650985,
+        13348779131,
+        3980650986,
+        3980650987,
+        3980650988,
+        3980650979,
+        13348779132,
+        13348779133,
+        12376001052,
+        13348779134,
+        13348779138
+      ],
+      "geometry": [
+        {
+          "lat": 51.9188277,
+          "lon": 0.8830261
+        },
+        {
+          "lat": 51.9189275,
+          "lon": 0.8831126
+        },
+        {
+          "lat": 51.9190023,
+          "lon": 0.8835465
+        },
+        {
+          "lat": 51.9196111,
+          "lon": 0.8840399
+        },
+        {
+          "lat": 51.9201619,
+          "lon": 0.8827177
+        },
+        {
+          "lat": 51.9212509,
+          "lon": 0.8853991
+        },
+        {
+          "lat": 51.9199582,
+          "lon": 0.8875228
+        },
+        {
+          "lat": 51.9197345,
+          "lon": 0.8878897
+        },
+        {
+          "lat": 51.9196899,
+          "lon": 0.8878519
+        },
+        {
+          "lat": 51.9190265,
+          "lon": 0.887289
+        },
+        {
+          "lat": 51.9182847,
+          "lon": 0.8866654
+        },
+        {
+          "lat": 51.9184027,
+          "lon": 0.8863232
+        },
+        {
+          "lat": 51.9181471,
+          "lon": 0.8861095
+        },
+        {
+          "lat": 51.9183563,
+          "lon": 0.8854656
+        },
+        {
+          "lat": 51.9181635,
+          "lon": 0.88531
+        },
+        {
+          "lat": 51.9183964,
+          "lon": 0.8845455
+        },
+        {
+          "lat": 51.9183362,
+          "lon": 0.8844926
+        },
+        {
+          "lat": 51.9188277,
+          "lon": 0.8830261
+        }
+      ],
+      "tags": {
+        "addr:postcode": "CO4 6ED",
+        "amenity": "school",
+        "capacity": "900",
+        "check_date": "2025-08-30",
+        "isced:level": "2",
+        "max_age": "16",
+        "min_age": "11",
+        "name": "The Trinity School",
+        "operator": "Alpha Trust",
+        "operator:type": "private",
+        "operator:wikidata": "Q122685738",
+        "phone": "+44 1206 700910",
+        "ref:GB:uprn": "10093742826",
+        "ref:edubase": "143701",
+        "ref:edubase:group": "16995",
+        "school": "secondary",
+        "school:group:type": "multi_academy_trust",
+        "school:type": "free",
+        "website": "https://www.thetrinityschool.co.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 503373491,
+      "bounds": {
+        "minlat": 51.9188153,
+        "minlon": 0.9006817,
+        "maxlat": 51.9206857,
+        "maxlon": 0.9034111
+      },
+      "nodes": [
+        4936962119,
+        4936962120,
+        4936962521,
+        11862478513,
+        4936962522,
+        4936962523,
+        4936962524,
+        4936962525,
+        4936962526,
+        4936962527,
+        4936962119
+      ],
+      "geometry": [
+        {
+          "lat": 51.9203231,
+          "lon": 0.9034111
+        },
+        {
+          "lat": 51.9190258,
+          "lon": 0.9022688
+        },
+        {
+          "lat": 51.9188153,
+          "lon": 0.9021073
+        },
+        {
+          "lat": 51.9191221,
+          "lon": 0.9009862
+        },
+        {
+          "lat": 51.9192054,
+          "lon": 0.9006817
+        },
+        {
+          "lat": 51.9192877,
+          "lon": 0.9007226
+        },
+        {
+          "lat": 51.9204553,
+          "lon": 0.9015608
+        },
+        {
+          "lat": 51.9205537,
+          "lon": 0.9017591
+        },
+        {
+          "lat": 51.9205607,
+          "lon": 0.9017664
+        },
+        {
+          "lat": 51.9206857,
+          "lon": 0.9018402
+        },
+        {
+          "lat": 51.9203231,
+          "lon": 0.9034111
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO4 6AL",
+        "addr:street": "Whitmore Drive",
+        "amenity": "school",
+        "capacity": "420",
+        "check_date": "2025-07-10",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "4",
+        "name": "Camulos Academy",
+        "operator": "REAch2 Academy Trust",
+        "operator:type": "private",
+        "operator:wikidata": "Q121704496",
+        "phone": "+44 1206 588588",
+        "ref:GB:uprn": "10091122700",
+        "ref:edubase": "141950",
+        "ref:edubase:group": "4320",
+        "religion": "none",
+        "school": "primary",
+        "school:gender": "mixed",
+        "school:group:type": "multi_academy_trust",
+        "school:selective": "no",
+        "school:type": "academy",
+        "source": "OS OpenMap Local",
+        "website": "https://www.camulosacademy.com/"
+      }
+    }
+  ]
+}

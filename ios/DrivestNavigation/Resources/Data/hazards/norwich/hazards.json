@@ -1,0 +1,18 @@
+{
+    "hazards":  [
+                    {
+                        "lon":  1.3391000000000002,
+                        "confidenceHint":  0.8,
+                        "lat":  52.6389,
+                        "id":  "norwich-signal-1",
+                        "type":  "TRAFFIC_SIGNAL"
+                    },
+                    {
+                        "lon":  1.3371000000000002,
+                        "confidenceHint":  0.65,
+                        "lat":  52.636300000000006,
+                        "id":  "norwich-school-1",
+                        "type":  "SCHOOL_ZONE"
+                    }
+                ]
+}

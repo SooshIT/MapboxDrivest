@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#0B1220" />
+            <stroke
+                android:width="3dp"
+                android:color="#FACC15" />
+        </shape>
+    </item>
+
+    <item
+        android:drawable="@drawable/drivest_logo_tight"
+        android:gravity="center"
+        android:insetLeft="4dp"
+        android:insetTop="4dp"
+        android:insetRight="4dp"
+        android:insetBottom="4dp" />
+</layer-list>

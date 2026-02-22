@@ -1,0 +1,15 @@
+<resources>
+    <style name="Theme.DrivestNavigation" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
+
+    <style name="Theme.DrivestSplash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_bg</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_icon_empty</item>
+        <item name="windowSplashScreenIconBackgroundColor">@android:color/transparent</item>
+        <item name="windowSplashScreenAnimationDuration">0</item>
+        <item name="postSplashScreenTheme">@style/Theme.DrivestSplashPost</item>
+    </style>
+
+    <style name="Theme.DrivestSplashPost" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/splash_bg</item>
+    </style>
+</resources>

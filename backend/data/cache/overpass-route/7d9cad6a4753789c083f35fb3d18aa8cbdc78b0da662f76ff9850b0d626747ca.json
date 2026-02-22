@@ -1,0 +1,529 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.10 2d4cfc48",
+  "osm3s": {
+    "timestamp_osm_base": "2026-02-21T08:20:50Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 474893288,
+      "lat": 51.878175,
+      "lon": 0.928729,
+      "tags": {
+        "bus": "yes",
+        "highway": "bus_stop",
+        "name": "Albany Gardens",
+        "naptan:AtcoCode": "1500DGK187",
+        "naptan:Bearing": "NW",
+        "naptan:CommonName": "Albany Gardens",
+        "naptan:Crossing": "Distillery Lane",
+        "naptan:Indicator": "NW-bound",
+        "naptan:Landmark": "Albany Gardens",
+        "naptan:NaptanCode": "esxgwdpt",
+        "naptan:PlusbusZoneRef": "CLCHSTR",
+        "naptan:Street": "Haven Road",
+        "naptan:verified": "no",
+        "public_transport": "platform",
+        "source": "naptan_import"
+      }
+    },
+    {
+      "type": "way",
+      "id": 4413195,
+      "bounds": {
+        "minlat": 51.8803372,
+        "minlon": 0.9266082,
+        "maxlat": 51.8804143,
+        "maxlon": 0.9268883
+      },
+      "nodes": [
+        27007562,
+        1505077902,
+        1505077904,
+        1556101963,
+        280351713
+      ],
+      "geometry": [
+        {
+          "lat": 51.8803372,
+          "lon": 0.9266082
+        },
+        {
+          "lat": 51.8803833,
+          "lon": 0.9266776
+        },
+        {
+          "lat": 51.8804085,
+          "lon": 0.9267573
+        },
+        {
+          "lat": 51.8804143,
+          "lon": 0.9268406
+        },
+        {
+          "lat": 51.8804094,
+          "lon": 0.9268883
+        }
+      ],
+      "tags": {
+        "highway": "primary",
+        "junction": "roundabout",
+        "maxspeed": "30 mph",
+        "oneway": "yes",
+        "ref": "A134"
+      }
+    },
+    {
+      "type": "way",
+      "id": 352588298,
+      "bounds": {
+        "minlat": 51.8774138,
+        "minlon": 0.9208353,
+        "maxlat": 51.8785389,
+        "maxlon": 0.9222272
+      },
+      "nodes": [
+        3583460929,
+        3583460930,
+        6898475804,
+        3583460931,
+        3583460932,
+        3583460933,
+        3583460934,
+        3834926214,
+        3583460935,
+        3583460936,
+        3583460937,
+        3583460938,
+        3583460939,
+        3583460940,
+        3583460941,
+        3583460942,
+        3583460943,
+        3583460944,
+        6898475806,
+        3583460945,
+        3583460946,
+        3583460947,
+        3583460948,
+        3583460949,
+        3583460950,
+        3583460951,
+        3583460952,
+        3583460953,
+        3583460929
+      ],
+      "geometry": [
+        {
+          "lat": 51.8774138,
+          "lon": 0.9213011
+        },
+        {
+          "lat": 51.8774601,
+          "lon": 0.9211249
+        },
+        {
+          "lat": 51.877535,
+          "lon": 0.9210961
+        },
+        {
+          "lat": 51.8782128,
+          "lon": 0.9208353
+        },
+        {
+          "lat": 51.8784394,
+          "lon": 0.9218788
+        },
+        {
+          "lat": 51.8784951,
+          "lon": 0.9219612
+        },
+        {
+          "lat": 51.8785389,
+          "lon": 0.9220726
+        },
+        {
+          "lat": 51.8784085,
+          "lon": 0.9221815
+        },
+        {
+          "lat": 51.8783553,
+          "lon": 0.9222272
+        },
+        {
+          "lat": 51.8783014,
+          "lon": 0.922053
+        },
+        {
+          "lat": 51.8782766,
+          "lon": 0.9217561
+        },
+        {
+          "lat": 51.8781103,
+          "lon": 0.921739
+        },
+        {
+          "lat": 51.8780859,
+          "lon": 0.9217386
+        },
+        {
+          "lat": 51.8780636,
+          "lon": 0.9217427
+        },
+        {
+          "lat": 51.8779837,
+          "lon": 0.9218943
+        },
+        {
+          "lat": 51.8779662,
+          "lon": 0.9219137
+        },
+        {
+          "lat": 51.8779429,
+          "lon": 0.9219174
+        },
+        {
+          "lat": 51.8778955,
+          "lon": 0.921897
+        },
+        {
+          "lat": 51.877867,
+          "lon": 0.921928
+        },
+        {
+          "lat": 51.8778249,
+          "lon": 0.921974
+        },
+        {
+          "lat": 51.8777936,
+          "lon": 0.9220052
+        },
+        {
+          "lat": 51.8777261,
+          "lon": 0.9218641
+        },
+        {
+          "lat": 51.8777047,
+          "lon": 0.9216455
+        },
+        {
+          "lat": 51.8776762,
+          "lon": 0.921616
+        },
+        {
+          "lat": 51.8776445,
+          "lon": 0.92159
+        },
+        {
+          "lat": 51.8775853,
+          "lon": 0.9215454
+        },
+        {
+          "lat": 51.8775149,
+          "lon": 0.9215045
+        },
+        {
+          "lat": 51.8774802,
+          "lon": 0.9214681
+        },
+        {
+          "lat": 51.8774138,
+          "lon": 0.9213011
+        }
+      ],
+      "tags": {
+        "addr:city": "Colchester",
+        "addr:postcode": "CO1 2HH",
+        "addr:street": "Recreation Road",
+        "amenity": "school",
+        "capacity": "210",
+        "check_date": "2025-09-11",
+        "denomination": "anglican",
+        "diocese": "Diocese of Chelmsford",
+        "isced:level": "1",
+        "max_age": "11",
+        "min_age": "4",
+        "name": "Kendall Church of England Primary School",
+        "phone": "+44 1206 794634",
+        "ref:GB:uprn": "303003467",
+        "ref:edubase": "115064",
+        "religion": "christian",
+        "school": "primary",
+        "school:boarding": "no",
+        "school:gender": "mixed",
+        "school:selective": "no",
+        "school:type": "voluntary_controlled",
+        "website": "https://kendallprimary.co.uk/"
+      }
+    },
+    {
+      "type": "way",
+      "id": 660772340,
+      "bounds": {
+        "minlat": 51.8802707,
+        "minlon": 0.9265842,
+        "maxlat": 51.8803372,
+        "maxlon": 0.9266082
+      },
+      "nodes": [
+        280351716,
+        27007562
+      ],
+      "geometry": [
+        {
+          "lat": 51.8802707,
+          "lon": 0.9265842
+        },
+        {
+          "lat": 51.8803372,
+          "lon": 0.9266082
+        }
+      ],
+      "tags": {
+        "highway": "primary",
+        "junction": "roundabout",
+        "maxspeed": "30 mph",
+        "oneway": "yes",
+        "ref": "A134"
+      }
+    },
+    {
+      "type": "way",
+      "id": 660772342,
+      "bounds": {
+        "minlat": 51.8801857,
+        "minlon": 0.9265842,
+        "maxlat": 51.8802707,
+        "maxlon": 0.9266217
+      },
+      "nodes": [
+        27007564,
+        1556101966,
+        280351716
+      ],
+      "geometry": [
+        {
+          "lat": 51.8801857,
+          "lon": 0.9266217
+        },
+        {
+          "lat": 51.8802336,
+          "lon": 0.9265897
+        },
+        {
+          "lat": 51.8802707,
+          "lon": 0.9265842
+        }
+      ],
+      "tags": {
+        "highway": "primary",
+        "junction": "roundabout",
+        "maxspeed": "30 mph",
+        "oneway": "yes",
+        "ref": "A134"
+      }
+    },
+    {
+      "type": "way",
+      "id": 660772344,
+      "bounds": {
+        "minlat": 51.8801328,
+        "minlon": 0.9266217,
+        "maxlat": 51.8801857,
+        "maxlon": 0.9267159
+      },
+      "nodes": [
+        280351718,
+        11374595657,
+        1556101954,
+        27007564
+      ],
+      "geometry": [
+        {
+          "lat": 51.8801328,
+          "lon": 0.9267159
+        },
+        {
+          "lat": 51.8801625,
+          "lon": 0.9266522
+        },
+        {
+          "lat": 51.880164,
+          "lon": 0.9266489
+        },
+        {
+          "lat": 51.8801857,
+          "lon": 0.9266217
+        }
+      ],
+      "tags": {
+        "highway": "primary",
+        "junction": "roundabout",
+        "maxspeed": "30 mph",
+        "oneway": "yes",
+        "ref": "A134"
+      }
+    },
+    {
+      "type": "way",
+      "id": 660772347,
+      "bounds": {
+        "minlat": 51.8801166,
+        "minlon": 0.9267159,
+        "maxlat": 51.8801393,
+        "maxlon": 0.9269534
+      },
+      "nodes": [
+        27007563,
+        1556101974,
+        1505077891,
+        280351718
+      ],
+      "geometry": [
+        {
+          "lat": 51.8801393,
+          "lon": 0.9269534
+        },
+        {
+          "lat": 51.8801199,
+          "lon": 0.9268757
+        },
+        {
+          "lat": 51.8801166,
+          "lon": 0.9268204
+        },
+        {
+          "lat": 51.8801328,
+          "lon": 0.9267159
+        }
+      ],
+      "tags": {
+        "highway": "primary",
+        "junction": "roundabout",
+        "maxspeed": "30 mph",
+        "oneway": "yes",
+        "ref": "A134"
+      }
+    },
+    {
+      "type": "way",
+      "id": 660772349,
+      "bounds": {
+        "minlat": 51.8801393,
+        "minlon": 0.9269534,
+        "maxlat": 51.88021,
+        "maxlon": 0.9270493
+      },
+      "nodes": [
+        1505077893,
+        280351720,
+        11374595656,
+        27007563
+      ],
+      "geometry": [
+        {
+          "lat": 51.88021,
+          "lon": 0.9270493
+        },
+        {
+          "lat": 51.8801763,
+          "lon": 0.9270186
+        },
+        {
+          "lat": 51.8801693,
+          "lon": 0.9270062
+        },
+        {
+          "lat": 51.8801393,
+          "lon": 0.9269534
+        }
+      ],
+      "tags": {
+        "highway": "primary",
+        "junction": "roundabout",
+        "maxspeed": "30 mph",
+        "oneway": "yes",
+        "ref": "A134"
+      }
+    },
+    {
+      "type": "way",
+      "id": 660772352,
+      "bounds": {
+        "minlat": 51.88021,
+        "minlon": 0.9269834,
+        "maxlat": 51.8803782,
+        "maxlon": 0.9270667
+      },
+      "nodes": [
+        27007561,
+        1556101972,
+        1505077900,
+        1505077896,
+        1505077893
+      ],
+      "geometry": [
+        {
+          "lat": 51.8803782,
+          "lon": 0.9269834
+        },
+        {
+          "lat": 51.880338,
+          "lon": 0.9270363
+        },
+        {
+          "lat": 51.8803116,
+          "lon": 0.927055
+        },
+        {
+          "lat": 51.880263,
+          "lon": 0.9270667
+        },
+        {
+          "lat": 51.88021,
+          "lon": 0.9270493
+        }
+      ],
+      "tags": {
+        "highway": "primary",
+        "junction": "roundabout",
+        "maxspeed": "30 mph",
+        "oneway": "yes",
+        "ref": "A134"
+      }
+    },
+    {
+      "type": "way",
+      "id": 660772354,
+      "bounds": {
+        "minlat": 51.8803782,
+        "minlon": 0.9268883,
+        "maxlat": 51.8804094,
+        "maxlon": 0.9269834
+      },
+      "nodes": [
+        280351713,
+        27007561
+      ],
+      "geometry": [
+        {
+          "lat": 51.8804094,
+          "lon": 0.9268883
+        },
+        {
+          "lat": 51.8803782,
+          "lon": 0.9269834
+        }
+      ],
+      "tags": {
+        "highway": "primary",
+        "junction": "roundabout",
+        "maxspeed": "30 mph",
+        "oneway": "yes",
+        "ref": "A134"
+      }
+    }
+  ]
+}

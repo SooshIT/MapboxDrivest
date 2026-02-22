@@ -1,0 +1,18 @@
+{
+    "hazards":  [
+                    {
+                        "lon":  0.5071,
+                        "confidenceHint":  0.8,
+                        "lat":  51.5762,
+                        "id":  "basildon-signal-1",
+                        "type":  "TRAFFIC_SIGNAL"
+                    },
+                    {
+                        "lon":  0.5051,
+                        "confidenceHint":  0.65,
+                        "lat":  51.573600000000006,
+                        "id":  "basildon-school-1",
+                        "type":  "SCHOOL_ZONE"
+                    }
+                ]
+}

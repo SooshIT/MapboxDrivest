@@ -1,0 +1,713 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.10 2d4cfc48",
+  "osm3s": {
+    "timestamp_osm_base": "2026-02-20T06:55:44Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "way",
+      "id": 60820866,
+      "bounds": {
+        "minlat": 51.8823097,
+        "minlon": 0.9343281,
+        "maxlat": 51.8833424,
+        "maxlon": 0.9365692
+      },
+      "nodes": [
+        26557289,
+        26557274,
+        1496489181,
+        26557290,
+        1204031312
+      ],
+      "geometry": [
+        {
+          "lat": 51.8823097,
+          "lon": 0.9365692
+        },
+        {
+          "lat": 51.8824732,
+          "lon": 0.9361425
+        },
+        {
+          "lat": 51.8827435,
+          "lon": 0.9355055
+        },
+        {
+          "lat": 51.8829068,
+          "lon": 0.9351475
+        },
+        {
+          "lat": 51.8833424,
+          "lon": 0.9343281
+        }
+      ],
+      "tags": {
+        "alt_name": "Clingoe Hill",
+        "highway": "primary",
+        "lanes": "3",
+        "lanes:bus": "1",
+        "maxspeed": "50 mph",
+        "name": "Clingoe Hill",
+        "oneway": "yes",
+        "ref": "A133",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 104361314,
+      "bounds": {
+        "minlat": 51.8833424,
+        "minlon": 0.933316,
+        "maxlat": 51.8839076,
+        "maxlon": 0.9343281
+      },
+      "nodes": [
+        1204031312,
+        26557292,
+        26557293,
+        26560889
+      ],
+      "geometry": [
+        {
+          "lat": 51.8833424,
+          "lon": 0.9343281
+        },
+        {
+          "lat": 51.8836501,
+          "lon": 0.933779
+        },
+        {
+          "lat": 51.8838508,
+          "lon": 0.9334257
+        },
+        {
+          "lat": 51.8839076,
+          "lon": 0.933316
+        }
+      ],
+      "tags": {
+        "highway": "primary",
+        "lanes": "3",
+        "lanes:bus": "1",
+        "maxspeed": "30 mph",
+        "name": "Clingoe Hill",
+        "oneway": "yes",
+        "ref": "A133",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 327609649,
+      "bounds": {
+        "minlat": 51.8816527,
+        "minlon": 0.9365692,
+        "maxlat": 51.8823097,
+        "maxlon": 0.9386377
+      },
+      "nodes": [
+        26557287,
+        1530313197,
+        282106946,
+        26557289
+      ],
+      "geometry": [
+        {
+          "lat": 51.8816527,
+          "lon": 0.9386377
+        },
+        {
+          "lat": 51.881741,
+          "lon": 0.9382896
+        },
+        {
+          "lat": 51.8818116,
+          "lon": 0.9380112
+        },
+        {
+          "lat": 51.8823097,
+          "lon": 0.9365692
+        }
+      ],
+      "tags": {
+        "alt_name": "Clingoe Hill",
+        "highway": "primary",
+        "lanes": "3",
+        "lanes:bus": "1",
+        "maxspeed": "50 mph",
+        "name": "Clingoe Hill",
+        "oneway": "yes",
+        "ref": "A133",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 336081033,
+      "bounds": {
+        "minlat": 51.9171542,
+        "minlon": 0.9012094,
+        "maxlat": 51.9182197,
+        "maxlon": 0.9022497
+      },
+      "nodes": [
+        3431605520,
+        3457466841,
+        3431605529,
+        8214190462,
+        8214190463,
+        8826398191,
+        784145486
+      ],
+      "geometry": [
+        {
+          "lat": 51.9182197,
+          "lon": 0.9022497
+        },
+        {
+          "lat": 51.9181334,
+          "lon": 0.9021819
+        },
+        {
+          "lat": 51.9179943,
+          "lon": 0.902077
+        },
+        {
+          "lat": 51.9177681,
+          "lon": 0.9018807
+        },
+        {
+          "lat": 51.917529,
+          "lon": 0.9016674
+        },
+        {
+          "lat": 51.9172851,
+          "lon": 0.9014073
+        },
+        {
+          "lat": 51.9171542,
+          "lon": 0.9012094
+        }
+      ],
+      "tags": {
+        "bus:lanes": "designated|yes",
+        "cycleway:left": "separate",
+        "cycleway:left:oneway": "no",
+        "dual_carriageway": "yes",
+        "highway": "primary",
+        "lanes": "2",
+        "maxspeed": "40 mph",
+        "motor_vehicle:lanes": "no|yes",
+        "name": "Via Urbis Romanae",
+        "oneway": "yes",
+        "ref": "A1341",
+        "shoulder": "no",
+        "sidewalk:left": "separate",
+        "sidewalk:right": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 336081668,
+      "bounds": {
+        "minlat": 51.9145772,
+        "minlon": 0.896921,
+        "maxlat": 51.9158372,
+        "maxlon": 0.8984458
+      },
+      "nodes": [
+        3431607284,
+        12726960285,
+        12726960284,
+        3431617458,
+        12726960287,
+        12726960288,
+        3431607285,
+        12726960289,
+        3431607286
+      ],
+      "geometry": [
+        {
+          "lat": 51.9158372,
+          "lon": 0.8984458
+        },
+        {
+          "lat": 51.9156803,
+          "lon": 0.8981109
+        },
+        {
+          "lat": 51.9155661,
+          "lon": 0.8978547
+        },
+        {
+          "lat": 51.9154048,
+          "lon": 0.8975969
+        },
+        {
+          "lat": 51.9152915,
+          "lon": 0.897447
+        },
+        {
+          "lat": 51.9151682,
+          "lon": 0.8973169
+        },
+        {
+          "lat": 51.9149506,
+          "lon": 0.8971318
+        },
+        {
+          "lat": 51.9147761,
+          "lon": 0.8970179
+        },
+        {
+          "lat": 51.9145772,
+          "lon": 0.896921
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "bus": "yes",
+        "bus:lanes": "designated",
+        "highway": "busway",
+        "lanes": "1",
+        "motor_vehicle": "no",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 336081669,
+      "bounds": {
+        "minlat": 51.9141747,
+        "minlon": 0.8966081,
+        "maxlat": 51.9145772,
+        "maxlon": 0.896921
+      },
+      "nodes": [
+        3431607286,
+        12726960290,
+        3431607288,
+        8122332042,
+        3439397088,
+        3164334524
+      ],
+      "geometry": [
+        {
+          "lat": 51.9145772,
+          "lon": 0.896921
+        },
+        {
+          "lat": 51.9144725,
+          "lon": 0.8968864
+        },
+        {
+          "lat": 51.9143816,
+          "lon": 0.8968339
+        },
+        {
+          "lat": 51.9142864,
+          "lon": 0.8967389
+        },
+        {
+          "lat": 51.9142164,
+          "lon": 0.8966709
+        },
+        {
+          "lat": 51.9141747,
+          "lon": 0.8966081
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "bus": "yes",
+        "bus:lanes": "designated",
+        "highway": "busway",
+        "lanes": "1",
+        "motor_vehicle": "no",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 336082256,
+      "bounds": {
+        "minlat": 51.9146658,
+        "minlon": 0.8964214,
+        "maxlat": 51.9155312,
+        "maxlon": 0.8972983
+      },
+      "nodes": [
+        3439397078,
+        3431614269,
+        3431606335,
+        3431614270,
+        3431617460
+      ],
+      "geometry": [
+        {
+          "lat": 51.9146658,
+          "lon": 0.8964214
+        },
+        {
+          "lat": 51.9149339,
+          "lon": 0.8965374
+        },
+        {
+          "lat": 51.9152241,
+          "lon": 0.8967653
+        },
+        {
+          "lat": 51.9154485,
+          "lon": 0.8971195
+        },
+        {
+          "lat": 51.9155312,
+          "lon": 0.8972983
+        }
+      ],
+      "tags": {
+        "bus:lanes": "designated||",
+        "highway": "primary",
+        "lanes": "3",
+        "maxspeed": "40 mph",
+        "motor_vehicle:lanes": "no|yes|yes",
+        "name": "Via Urbis Romanae",
+        "oneway": "yes",
+        "placement": "right_of:2",
+        "ref": "A1341",
+        "shoulder": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 336082258,
+      "bounds": {
+        "minlat": 51.9158372,
+        "minlon": 0.8984458,
+        "maxlat": 51.9160433,
+        "maxlon": 0.8989651
+      },
+      "nodes": [
+        3431614272,
+        3431607284
+      ],
+      "geometry": [
+        {
+          "lat": 51.9160433,
+          "lon": 0.8989651
+        },
+        {
+          "lat": 51.9158372,
+          "lon": 0.8984458
+        }
+      ],
+      "tags": {
+        "bus:lanes": "designated|",
+        "highway": "primary",
+        "lanes": "2",
+        "maxspeed": "40 mph",
+        "motor_vehicle:lanes": "no|yes",
+        "name": "Via Urbis Romanae",
+        "oneway": "yes",
+        "ref": "A1341",
+        "shoulder": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 338119434,
+      "bounds": {
+        "minlat": 51.9156091,
+        "minlon": 0.8974859,
+        "maxlat": 51.9160433,
+        "maxlon": 0.8989651
+      },
+      "nodes": [
+        8122332049,
+        3431614271,
+        3451828765,
+        3431614272
+      ],
+      "geometry": [
+        {
+          "lat": 51.9156091,
+          "lon": 0.8974859
+        },
+        {
+          "lat": 51.9157067,
+          "lon": 0.8977242
+        },
+        {
+          "lat": 51.9158897,
+          "lon": 0.8983354
+        },
+        {
+          "lat": 51.9160433,
+          "lon": 0.8989651
+        }
+      ],
+      "tags": {
+        "bus:lanes": "designated|",
+        "highway": "primary",
+        "lanes": "2",
+        "maxspeed": "40 mph",
+        "motor_vehicle:lanes": "no|yes",
+        "name": "Via Urbis Romanae",
+        "oneway": "yes",
+        "ref": "A1341",
+        "shoulder": "no",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 468316431,
+      "bounds": {
+        "minlat": 51.9145373,
+        "minlon": 0.896547,
+        "maxlat": 51.9145772,
+        "maxlon": 0.896921
+      },
+      "nodes": [
+        3431607286,
+        3431607287,
+        784145418
+      ],
+      "geometry": [
+        {
+          "lat": 51.9145772,
+          "lon": 0.896921
+        },
+        {
+          "lat": 51.9145373,
+          "lon": 0.8967174
+        },
+        {
+          "lat": 51.9145408,
+          "lon": 0.896547
+        }
+      ],
+      "tags": {
+        "bicycle": "yes",
+        "bus": "yes",
+        "bus:lanes": "designated",
+        "highway": "busway",
+        "lanes": "1",
+        "motor_vehicle": "no",
+        "oneway": "yes",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 687905700,
+      "bounds": {
+        "minlat": 51.8990666,
+        "minlon": 0.8949316,
+        "maxlat": 51.8993852,
+        "maxlon": 0.8950032
+      },
+      "nodes": [
+        27235029,
+        565479541,
+        3214347034,
+        27235030
+      ],
+      "geometry": [
+        {
+          "lat": 51.8993852,
+          "lon": 0.8950032
+        },
+        {
+          "lat": 51.8992918,
+          "lon": 0.8949668
+        },
+        {
+          "lat": 51.8991706,
+          "lon": 0.8949316
+        },
+        {
+          "lat": 51.8990666,
+          "lon": 0.894985
+        }
+      ],
+      "tags": {
+        "bus:lanes": "yes|no|no",
+        "cycleway": "share_busway",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "20 mph",
+        "maxspeed:type": "sign",
+        "motor_vehicle:lanes": "no|yes|yes",
+        "name": "Station Way",
+        "oneway": "yes",
+        "ref": "A134",
+        "source:maxspeed": "Stats19",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 846119092,
+      "bounds": {
+        "minlat": 51.8993852,
+        "minlon": 0.8950032,
+        "maxlat": 51.8996073,
+        "maxlon": 0.8950745
+      },
+      "nodes": [
+        27235053,
+        27235029
+      ],
+      "geometry": [
+        {
+          "lat": 51.8996073,
+          "lon": 0.8950745
+        },
+        {
+          "lat": 51.8993852,
+          "lon": 0.8950032
+        }
+      ],
+      "tags": {
+        "bus:lanes": "yes|no|no",
+        "cycleway": "share_busway",
+        "highway": "primary",
+        "lanes": "3",
+        "lit": "yes",
+        "maxspeed": "20 mph",
+        "maxspeed:type": "sign",
+        "motor_vehicle:lanes": "no|yes|yes",
+        "name": "Station Way",
+        "oneway": "yes",
+        "ref": "A134",
+        "source:maxspeed": "Stats19",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 872044615,
+      "bounds": {
+        "minlat": 51.9155312,
+        "minlon": 0.8972983,
+        "maxlat": 51.9156091,
+        "maxlon": 0.8974859
+      },
+      "nodes": [
+        3431617460,
+        8122332049
+      ],
+      "geometry": [
+        {
+          "lat": 51.9155312,
+          "lon": 0.8972983
+        },
+        {
+          "lat": 51.9156091,
+          "lon": 0.8974859
+        }
+      ],
+      "tags": {
+        "bus:lanes": "designated||",
+        "highway": "primary",
+        "lanes": "3",
+        "maxspeed": "40 mph",
+        "motor_vehicle:lanes": "no|yes|yes",
+        "name": "Via Urbis Romanae",
+        "oneway": "yes",
+        "placement": "transition",
+        "ref": "A1341",
+        "shoulder": "no",
+        "surface": "asphalt",
+        "turn:lanes": "||merge_to_left"
+      }
+    },
+    {
+      "type": "way",
+      "id": 872044618,
+      "bounds": {
+        "minlat": 51.914552,
+        "minlon": 0.8963911,
+        "maxlat": 51.9146658,
+        "maxlon": 0.8964214
+      },
+      "nodes": [
+        3451828755,
+        3439397078
+      ],
+      "geometry": [
+        {
+          "lat": 51.914552,
+          "lon": 0.8963911
+        },
+        {
+          "lat": 51.9146658,
+          "lon": 0.8964214
+        }
+      ],
+      "tags": {
+        "bus:lanes": "designated||",
+        "highway": "primary",
+        "lanes": "3",
+        "maxspeed": "40 mph",
+        "name": "Via Urbis Romanae",
+        "oneway": "yes",
+        "placement": "right_of:2",
+        "ref": "A1341",
+        "surface": "asphalt"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1015683887,
+      "bounds": {
+        "minlat": 51.8874669,
+        "minlon": 0.8906075,
+        "maxlat": 51.8875015,
+        "maxlon": 0.8910212
+      },
+      "nodes": [
+        9344119117,
+        9754394935,
+        9368641257
+      ],
+      "geometry": [
+        {
+          "lat": 51.8874952,
+          "lon": 0.8906075
+        },
+        {
+          "lat": 51.8875015,
+          "lon": 0.8907977
+        },
+        {
+          "lat": 51.8874669,
+          "lon": 0.8910212
+        }
+      ],
+      "tags": {
+        "bus": "yes",
+        "busway:left": "lane",
+        "cycleway:left": "share_busway",
+        "highway": "primary",
+        "maxspeed": "30 mph",
+        "maxspeed:type": "sign",
+        "name": "Southway",
+        "oneway": "yes",
+        "ref": "A1124",
+        "source:maxspeed": "Stats19"
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+# Workspace artifacts
+.tmp/
+.snapshots/
+New folder/
+*.tmp
+*.log
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.iml
+
+# Android / Gradle
+android/.gradle/
+android/.idea/
+android/local.properties
+android/captures/
+android/build/
+android/**/build/
+android/.cxx/
+android/**/.cxx/
+android/**/*.apk
+android/**/*.aab
+android/app/src/main/res/values/mapbox_access_token.xml
+android/keystore.properties
+android/*.keystore
+android/*.jks
+
+# iOS / Xcode
+ios/DrivestNavigation/DrivestNavigation.xcodeproj/
+ios/DrivestNavigation/DerivedData/
+ios/DrivestNavigation/.build/
+ios/DrivestNavigation/.swiftpm/
+ios/DrivestNavigation/Packages/
+ios/DrivestNavigation/Pods/
+ios/DrivestNavigation/**/*.xcworkspace/
+ios/DrivestNavigation/**/*.xcuserstate
+ios/DrivestNavigation/**/*.xcuserdata/
+
+# Backend / Node
+backend/node_modules/
+backend/.env
+backend/.env.*
+backend/coverage/
+backend/dist/
+backend/.nyc_output/
+backend/npm-debug.log*
+backend/yarn-debug.log*
+backend/yarn-error.log*
+backend/pnpm-debug.log*
+
+# Misc
+*.hprof

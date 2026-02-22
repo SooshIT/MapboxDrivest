@@ -1,0 +1,18 @@
+{
+    "hazards":  [
+                    {
+                        "lon":  0.4619,
+                        "confidenceHint":  0.8,
+                        "lat":  51.754599999999996,
+                        "id":  "chelmsford-signal-1",
+                        "type":  "TRAFFIC_SIGNAL"
+                    },
+                    {
+                        "lon":  0.4599,
+                        "confidenceHint":  0.65,
+                        "lat":  51.752,
+                        "id":  "chelmsford-school-1",
+                        "type":  "SCHOOL_ZONE"
+                    }
+                ]
+}

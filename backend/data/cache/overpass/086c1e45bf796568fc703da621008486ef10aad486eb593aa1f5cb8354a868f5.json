@@ -1,0 +1,493 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.10 2d4cfc48",
+  "osm3s": {
+    "timestamp_osm_base": "2026-02-20T23:02:42Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 280834556,
+      "lat": 51.8558387,
+      "lon": 0.9458244,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1584765807,
+      "lat": 51.8580916,
+      "lon": 0.9479196,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 9656280950,
+      "lat": 51.9214721,
+      "lon": 0.8925161,
+      "tags": {
+        "direction": "backward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10733985785,
+      "lat": 51.8447388,
+      "lon": 0.9442704,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10733985786,
+      "lat": 51.8446848,
+      "lon": 0.9443319,
+      "tags": {
+        "direction": "backward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11314968894,
+      "lat": 51.8708689,
+      "lon": 0.8906109,
+      "tags": {
+        "direction": "backward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11314968913,
+      "lat": 51.8712523,
+      "lon": 0.8946528,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11314968914,
+      "lat": 51.8709709,
+      "lon": 0.8940087,
+      "tags": {
+        "direction": "backward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11975474874,
+      "lat": 51.887437,
+      "lon": 0.8914546,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11976535422,
+      "lat": 51.8852445,
+      "lon": 0.8905135,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 11976535424,
+      "lat": 51.8852759,
+      "lon": 0.8904126,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12960948829,
+      "lat": 51.86351,
+      "lon": 0.9583436,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12960948866,
+      "lat": 51.8758804,
+      "lon": 0.9584668,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13520377907,
+      "lat": 51.8847664,
+      "lon": 0.9187758,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13520377908,
+      "lat": 51.8835728,
+      "lon": 0.9188199,
+      "tags": {
+        "direction": "backward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13520378100,
+      "lat": 51.8770085,
+      "lon": 0.9044292,
+      "tags": {
+        "direction": "backward",
+        "give_way": "minor",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13520378101,
+      "lat": 51.8767054,
+      "lon": 0.9038126,
+      "tags": {
+        "direction": "backward",
+        "give_way": "minor",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13520378102,
+      "lat": 51.8767737,
+      "lon": 0.9040124,
+      "tags": {
+        "direction": "backward",
+        "give_way": "minor",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13520378493,
+      "lat": 51.8848434,
+      "lon": 0.9184464,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13520378686,
+      "lat": 51.8853681,
+      "lon": 0.9131023,
+      "tags": {
+        "direction": "backward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13520378692,
+      "lat": 51.8844942,
+      "lon": 0.9135068,
+      "tags": {
+        "direction": "backward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13520378693,
+      "lat": 51.8840096,
+      "lon": 0.9135491,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13520378694,
+      "lat": 51.8835268,
+      "lon": 0.9135973,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13520378695,
+      "lat": 51.8828541,
+      "lon": 0.913661,
+      "tags": {
+        "direction": "backward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13520378696,
+      "lat": 51.8830821,
+      "lon": 0.913764,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13520378698,
+      "lat": 51.8825199,
+      "lon": 0.9138383,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13520378699,
+      "lat": 51.8819562,
+      "lon": 0.9139122,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13520378792,
+      "lat": 51.8832388,
+      "lon": 0.918782,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13520378793,
+      "lat": 51.8826135,
+      "lon": 0.9188686,
+      "tags": {
+        "direction": "backward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13520378802,
+      "lat": 51.8820182,
+      "lon": 0.9189482,
+      "tags": {
+        "direction": "backward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13520378825,
+      "lat": 51.8825078,
+      "lon": 0.9163269,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13520378826,
+      "lat": 51.88244,
+      "lon": 0.9163388,
+      "tags": {
+        "direction": "backward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13520378827,
+      "lat": 51.8819162,
+      "lon": 0.9164034,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13567128291,
+      "lat": 51.886655,
+      "lon": 0.9137246,
+      "tags": {
+        "direction": "backward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13578157738,
+      "lat": 51.8750579,
+      "lon": 0.8934112,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13579934558,
+      "lat": 51.8730423,
+      "lon": 0.8954702,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13579934559,
+      "lat": 51.8728735,
+      "lon": 0.8955529,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13579934560,
+      "lat": 51.8735388,
+      "lon": 0.8967528,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13579934581,
+      "lat": 51.8762429,
+      "lon": 0.8923745,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13579934582,
+      "lat": 51.8763393,
+      "lon": 0.8924395,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13579934583,
+      "lat": 51.8774054,
+      "lon": 0.8917844,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13582330683,
+      "lat": 51.8792434,
+      "lon": 0.9067573,
+      "tags": {
+        "direction": "backward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13582330685,
+      "lat": 51.8799221,
+      "lon": 0.9091667,
+      "tags": {
+        "direction": "backward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13582330688,
+      "lat": 51.8793901,
+      "lon": 0.9092124,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13582330689,
+      "lat": 51.8797798,
+      "lon": 0.9067045,
+      "tags": {
+        "direction": "backward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13582330690,
+      "lat": 51.8804826,
+      "lon": 0.9090677,
+      "tags": {
+        "direction": "backward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13582330691,
+      "lat": 51.879985,
+      "lon": 0.9091555,
+      "tags": {
+        "direction": "forward",
+        "highway": "give_way"
+      }
+    },
+    {
+      "type": "node",
+      "id": 13582330694,
+      "lat": 51.8799841,
+      "lon": 0.91031,
+      "tags": {
+        "direction": "backward",
+        "highway": "give_way"
+      }
+    }
+  ]
+}

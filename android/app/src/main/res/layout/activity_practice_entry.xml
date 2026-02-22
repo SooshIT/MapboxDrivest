@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/practiceLogo"
+        android:layout_width="@dimen/logo_size_screen"
+        android:layout_height="@dimen/logo_size_screen"
+        android:contentDescription="@string/drivest_logo_content_description"
+        android:src="@drawable/drivest_logo_tight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/practiceTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/practice_entry_title"
+        android:textColor="#111827"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/practiceLogo" />
+
+    <TextView
+        android:id="@+id/practiceDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="@string/practice_entry_description"
+        android:textColor="#4B5563"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/practiceTitle" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/openPracticeMapButton"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/practice_entry_open_map"
+        android:textAllCaps="false"
+        android:textSize="17sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/practiceDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

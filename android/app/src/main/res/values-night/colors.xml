@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="theory_bg">#0B1220</color>
+    <color name="theory_text_primary">#E5ECF7</color>
+    <color name="theory_text_secondary">#B8C6DF</color>
+    <color name="theory_accent">#22D3EE</color>
+    <color name="theory_feedback_correct">#6EE7B7</color>
+    <color name="theory_feedback_incorrect">#FCA5A5</color>
+</resources>

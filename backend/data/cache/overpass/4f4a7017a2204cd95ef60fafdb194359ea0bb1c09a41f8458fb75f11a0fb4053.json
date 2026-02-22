@@ -1,0 +1,94 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.10 2d4cfc48",
+  "osm3s": {
+    "timestamp_osm_base": "2026-02-20T23:02:42Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 367675271,
+      "lat": 51.8865575,
+      "lon": 0.8990745,
+      "tags": {
+        "highway": "speed_camera",
+        "man_made": "surveillance"
+      }
+    },
+    {
+      "type": "node",
+      "id": 394814951,
+      "lat": 51.8976061,
+      "lon": 0.9110361,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2280095378,
+      "lat": 51.8766764,
+      "lon": 0.9082389,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6875006326,
+      "lat": 51.8955926,
+      "lon": 0.9297883,
+      "tags": {
+        "highway": "speed_camera"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8120000034,
+      "lat": 51.897087,
+      "lon": 0.9194099,
+      "tags": {
+        "direction": "200",
+        "highway": "speed_camera",
+        "maxspeed": "30 mph"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8121334385,
+      "lat": 51.908346,
+      "lon": 0.8927263,
+      "tags": {
+        "direction": "160",
+        "highway": "speed_camera",
+        "maxspeed": "30 mph"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8227193004,
+      "lat": 51.9043641,
+      "lon": 0.9241553,
+      "tags": {
+        "direction": "200",
+        "highway": "speed_camera",
+        "maxspeed": "30 mph"
+      }
+    },
+    {
+      "type": "node",
+      "id": 8227262260,
+      "lat": 51.9171947,
+      "lon": 0.9312446,
+      "tags": {
+        "colour": "yellow",
+        "direction": "50",
+        "highway": "speed_camera",
+        "man_made": "mast",
+        "mapillary": "315479123532656",
+        "maxspeed": "30 mph"
+      }
+    }
+  ]
+}

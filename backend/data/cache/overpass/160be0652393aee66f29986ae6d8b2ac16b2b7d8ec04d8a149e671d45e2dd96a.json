@@ -1,0 +1,496 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.10 2d4cfc48",
+  "osm3s": {
+    "timestamp_osm_base": "2026-02-20T23:02:42Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 26557486,
+      "lat": 51.8668694,
+      "lon": 0.9625374,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 26560890,
+      "lat": 51.8841354,
+      "lon": 0.9330158,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 26560891,
+      "lat": 51.8847292,
+      "lon": 0.9331115,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 26578917,
+      "lat": 51.8856862,
+      "lon": 0.9391766,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 26588352,
+      "lat": 51.8843941,
+      "lon": 0.9240832,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 26885706,
+      "lat": 51.8843472,
+      "lon": 0.9322528,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 26885707,
+      "lat": 51.8840959,
+      "lon": 0.9324587,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 26885712,
+      "lat": 51.8847246,
+      "lon": 0.9322795,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 26973603,
+      "lat": 51.890288,
+      "lon": 0.9171572,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 27007520,
+      "lat": 51.8842753,
+      "lon": 0.9262478,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 27007523,
+      "lat": 51.8835891,
+      "lon": 0.9262367,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 27007595,
+      "lat": 51.8838214,
+      "lon": 0.924178,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 27231124,
+      "lat": 51.8769194,
+      "lon": 0.9325861,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 27231770,
+      "lat": 51.8734214,
+      "lon": 0.9245264,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 27232837,
+      "lat": 51.8932124,
+      "lon": 0.896164,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 27234639,
+      "lat": 51.8863173,
+      "lon": 0.9137604,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout",
+        "source": "P161-0797"
+      }
+    },
+    {
+      "type": "node",
+      "id": 27298152,
+      "lat": 51.899622,
+      "lon": 0.9376966,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 27298156,
+      "lat": 51.8970973,
+      "lon": 0.9366667,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 42174085,
+      "lat": 51.8910732,
+      "lon": 0.9315717,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 42174112,
+      "lat": 51.892688,
+      "lon": 0.9327405,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 43493511,
+      "lat": 51.8906007,
+      "lon": 0.9424424,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 125999964,
+      "lat": 51.9166751,
+      "lon": 0.9238918,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 251227459,
+      "lat": 51.8710548,
+      "lon": 0.9262328,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 278529761,
+      "lat": 51.872063,
+      "lon": 0.9094352,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 278533801,
+      "lat": 51.8803239,
+      "lon": 0.8909501,
+      "tags": {
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 280842908,
+      "lat": 51.8612803,
+      "lon": 0.9077434,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 282508695,
+      "lat": 51.8775131,
+      "lon": 0.8917541,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 314666338,
+      "lat": 51.9203503,
+      "lon": 0.9143647,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 314674390,
+      "lat": 51.9003103,
+      "lon": 0.8997035,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 314674526,
+      "lat": 51.9143551,
+      "lon": 0.899569,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 314674532,
+      "lat": 51.9128756,
+      "lon": 0.9018708,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 314675133,
+      "lat": 51.9047691,
+      "lon": 0.9030155,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 314675362,
+      "lat": 51.9024656,
+      "lon": 0.9004963,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 365311916,
+      "lat": 51.8639352,
+      "lon": 0.9083164,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 367671838,
+      "lat": 51.9194022,
+      "lon": 0.9164636,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 369076756,
+      "lat": 51.8630829,
+      "lon": 0.9080152,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 376267038,
+      "lat": 51.8838622,
+      "lon": 0.9318321,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 392756043,
+      "lat": 51.9038882,
+      "lon": 0.9036281,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 392757873,
+      "lat": 51.902604,
+      "lon": 0.9023915,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 392761422,
+      "lat": 51.9025512,
+      "lon": 0.9014085,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 527801267,
+      "lat": 51.9039596,
+      "lon": 0.8834624,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 528598700,
+      "lat": 51.9050301,
+      "lon": 0.8969713,
+      "tags": {
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 788778320,
+      "lat": 51.8678023,
+      "lon": 0.8958319,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 788778512,
+      "lat": 51.872942,
+      "lon": 0.8875579,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1481602481,
+      "lat": 51.9002545,
+      "lon": 0.8923071,
+      "tags": {
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1634144569,
+      "lat": 51.9198921,
+      "lon": 0.8930754,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2195890968,
+      "lat": 51.8800576,
+      "lon": 0.8872381,
+      "tags": {
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2195928281,
+      "lat": 51.8797689,
+      "lon": 0.8880417,
+      "tags": {
+        "highway": "mini_roundabout"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3431605513,
+      "lat": 51.9186932,
+      "lon": 0.900779,
+      "tags": {
+        "direction": "clockwise",
+        "highway": "mini_roundabout"
+      }
+    }
+  ]
+}

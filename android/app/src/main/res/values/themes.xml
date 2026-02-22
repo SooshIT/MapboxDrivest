@@ -1,0 +1,11 @@
+<resources>
+    <style name="Theme.DrivestNavigation" parent="Theme.MaterialComponents.DayNight.NoActionBar" />
+
+    <style name="Theme.DrivestSplash" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/splash_bg</item>
+    </style>
+
+    <style name="Theme.DrivestSplashPost" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/splash_bg</item>
+    </style>
+</resources>

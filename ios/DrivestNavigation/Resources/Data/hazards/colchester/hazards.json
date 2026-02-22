@@ -1,0 +1,18 @@
+{
+    "hazards":  [
+                    {
+                        "lon":  0.929274,
+                        "confidenceHint":  0.8,
+                        "lat":  51.873315999999996,
+                        "id":  "colchester-signal-1",
+                        "type":  "TRAFFIC_SIGNAL"
+                    },
+                    {
+                        "lon":  0.927274,
+                        "confidenceHint":  0.65,
+                        "lat":  51.870716,
+                        "id":  "colchester-school-1",
+                        "type":  "SCHOOL_ZONE"
+                    }
+                ]
+}

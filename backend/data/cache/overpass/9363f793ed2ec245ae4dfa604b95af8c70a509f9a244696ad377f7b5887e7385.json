@@ -1,0 +1,658 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.10 2d4cfc48",
+  "osm3s": {
+    "timestamp_osm_base": "2026-02-20T06:55:44Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+    {
+      "type": "node",
+      "id": 26561139,
+      "lat": 51.9110356,
+      "lon": 0.9276566,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 26973232,
+      "lat": 51.8759166,
+      "lon": 0.9421666,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 26973622,
+      "lat": 51.8899338,
+      "lon": 0.9109925,
+      "tags": {
+        "crossing": "zebra",
+        "crossing:island": "no",
+        "crossing:markings": "yes",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 27234457,
+      "lat": 51.8897422,
+      "lon": 0.9054304,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 27235534,
+      "lat": 51.8876503,
+      "lon": 0.8993106,
+      "tags": {
+        "crossing": "zebra",
+        "crossing:island": "no",
+        "crossing:markings": "zebra",
+        "crossing_ref": "zebra",
+        "highway": "crossing",
+        "tactile_paving": "yes"
+      }
+    },
+    {
+      "type": "node",
+      "id": 27298160,
+      "lat": 51.8971047,
+      "lon": 0.9353877,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 27298439,
+      "lat": 51.9090601,
+      "lon": 0.9274536,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 278517347,
+      "lat": 51.8867677,
+      "lon": 0.8926966,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 314665132,
+      "lat": 51.9113289,
+      "lon": 0.9228371,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 314674543,
+      "lat": 51.9058336,
+      "lon": 0.9027566,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 367750585,
+      "lat": 51.8915148,
+      "lon": 0.9371858,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 472027801,
+      "lat": 51.8966229,
+      "lon": 0.9255185,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 670322318,
+      "lat": 51.9105618,
+      "lon": 0.8992861,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing",
+        "source": "Bing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 790326122,
+      "lat": 51.896267,
+      "lon": 0.9390669,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1041830974,
+      "lat": 51.9123861,
+      "lon": 0.8980317,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing",
+        "source": "Bing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1041830993,
+      "lat": 51.9112572,
+      "lon": 0.8976524,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing",
+        "source": "Bing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1041831499,
+      "lat": 51.9107069,
+      "lon": 0.8995551,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing",
+        "source": "Bing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1041831503,
+      "lat": 51.910964,
+      "lon": 0.899131,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing",
+        "source": "Bing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1041831512,
+      "lat": 51.9111499,
+      "lon": 0.8987697,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing",
+        "source": "Bing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 1586744318,
+      "lat": 51.9010644,
+      "lon": 0.9015403,
+      "tags": {
+        "crossing": "zebra",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2819059339,
+      "lat": 51.9007229,
+      "lon": 0.9020235,
+      "tags": {
+        "crossing": "zebra",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2819059340,
+      "lat": 51.9008406,
+      "lon": 0.9018569,
+      "tags": {
+        "crossing": "zebra",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2819059341,
+      "lat": 51.9009429,
+      "lon": 0.9017121,
+      "tags": {
+        "crossing": "zebra",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2819059343,
+      "lat": 51.9011691,
+      "lon": 0.901392,
+      "tags": {
+        "crossing": "zebra",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2819059344,
+      "lat": 51.9012805,
+      "lon": 0.9012343,
+      "tags": {
+        "crossing": "zebra",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 2868249985,
+      "lat": 51.9096147,
+      "lon": 0.9265637,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3181108605,
+      "lat": 51.9095902,
+      "lon": 0.9266723,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3424614962,
+      "lat": 51.8629142,
+      "lon": 0.9079824,
+      "tags": {
+        "crossing": "zebra"
+      }
+    },
+    {
+      "type": "node",
+      "id": 3424614964,
+      "lat": 51.8636374,
+      "lon": 0.9081817,
+      "tags": {
+        "crossing": "zebra"
+      }
+    },
+    {
+      "type": "node",
+      "id": 5014303834,
+      "lat": 51.8692827,
+      "lon": 0.8860395,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6864149019,
+      "lat": 51.8971823,
+      "lon": 0.9368366,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6864149023,
+      "lat": 51.8987513,
+      "lon": 0.9375273,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 6868230774,
+      "lat": 51.8934382,
+      "lon": 0.9240814,
+      "tags": {
+        "crossing": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 10898958517,
+      "lat": 51.9149635,
+      "lon": 0.9164979,
+      "tags": {
+        "crossing": "zebra",
+        "crossing:markings": "yes",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "node",
+      "id": 12880666311,
+      "lat": 51.8876052,
+      "lon": 0.899694,
+      "tags": {
+        "crossing": "zebra",
+        "crossing:island": "no",
+        "crossing:markings": "zebra",
+        "highway": "crossing"
+      }
+    },
+    {
+      "type": "way",
+      "id": 237130342,
+      "bounds": {
+        "minlat": 51.9009051,
+        "minlon": 0.89757,
+        "maxlat": 51.900963,
+        "maxlon": 0.8976692
+      },
+      "nodes": [
+        2450755649,
+        2492131179,
+        2450755650
+      ],
+      "geometry": [
+        {
+          "lat": 51.9009051,
+          "lon": 0.89757
+        },
+        {
+          "lat": 51.9009418,
+          "lon": 0.8976307
+        },
+        {
+          "lat": 51.900963,
+          "lon": 0.8976692
+        }
+      ],
+      "tags": {
+        "crossing": "zebra",
+        "crossing:markings": "zebra",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 277398721,
+      "bounds": {
+        "minlat": 51.900703,
+        "minlon": 0.901987,
+        "maxlat": 51.9007487,
+        "maxlon": 0.9020517
+      },
+      "nodes": [
+        11522792167,
+        2819059339,
+        11522792166
+      ],
+      "geometry": [
+        {
+          "lat": 51.900703,
+          "lon": 0.9020517
+        },
+        {
+          "lat": 51.9007229,
+          "lon": 0.9020235
+        },
+        {
+          "lat": 51.9007487,
+          "lon": 0.901987
+        }
+      ],
+      "tags": {
+        "crossing": "zebra",
+        "crossing:markings": "zebra",
+        "footway": "crossing",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240239914,
+      "bounds": {
+        "minlat": 51.9012539,
+        "minlon": 0.9012089,
+        "maxlat": 51.9012985,
+        "maxlon": 0.9012721
+      },
+      "nodes": [
+        11522792157,
+        2819059344,
+        11522792156
+      ],
+      "geometry": [
+        {
+          "lat": 51.9012539,
+          "lon": 0.9012721
+        },
+        {
+          "lat": 51.9012805,
+          "lon": 0.9012343
+        },
+        {
+          "lat": 51.9012985,
+          "lon": 0.9012089
+        }
+      ],
+      "tags": {
+        "crossing": "zebra",
+        "crossing:markings": "zebra",
+        "footway": "crossing",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240239916,
+      "bounds": {
+        "minlat": 51.9011484,
+        "minlon": 0.9013652,
+        "maxlat": 51.901188,
+        "maxlon": 0.9014213
+      },
+      "nodes": [
+        11522792159,
+        2819059343,
+        11522792158
+      ],
+      "geometry": [
+        {
+          "lat": 51.9011484,
+          "lon": 0.9014213
+        },
+        {
+          "lat": 51.9011691,
+          "lon": 0.901392
+        },
+        {
+          "lat": 51.901188,
+          "lon": 0.9013652
+        }
+      ],
+      "tags": {
+        "crossing": "zebra",
+        "crossing:markings": "zebra",
+        "footway": "crossing",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240239918,
+      "bounds": {
+        "minlat": 51.901042,
+        "minlon": 0.9015157,
+        "maxlat": 51.9010818,
+        "maxlon": 0.901572
+      },
+      "nodes": [
+        11522792161,
+        1586744318,
+        11522792160
+      ],
+      "geometry": [
+        {
+          "lat": 51.901042,
+          "lon": 0.901572
+        },
+        {
+          "lat": 51.9010644,
+          "lon": 0.9015403
+        },
+        {
+          "lat": 51.9010818,
+          "lon": 0.9015157
+        }
+      ],
+      "tags": {
+        "crossing": "zebra",
+        "crossing:markings": "zebra",
+        "footway": "crossing",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240239920,
+      "bounds": {
+        "minlat": 51.9009141,
+        "minlon": 0.9016866,
+        "maxlat": 51.9009609,
+        "maxlon": 0.9017529
+      },
+      "nodes": [
+        11522792163,
+        2819059341,
+        11522792162
+      ],
+      "geometry": [
+        {
+          "lat": 51.9009141,
+          "lon": 0.9017529
+        },
+        {
+          "lat": 51.9009429,
+          "lon": 0.9017121
+        },
+        {
+          "lat": 51.9009609,
+          "lon": 0.9016866
+        }
+      ],
+      "tags": {
+        "crossing": "zebra",
+        "crossing:markings": "zebra",
+        "footway": "crossing",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1240239922,
+      "bounds": {
+        "minlat": 51.9008117,
+        "minlon": 0.9018405,
+        "maxlat": 51.9008522,
+        "maxlon": 0.9018978
+      },
+      "nodes": [
+        11522792165,
+        2819059340,
+        11522792164
+      ],
+      "geometry": [
+        {
+          "lat": 51.9008117,
+          "lon": 0.9018978
+        },
+        {
+          "lat": 51.9008406,
+          "lon": 0.9018569
+        },
+        {
+          "lat": 51.9008522,
+          "lon": 0.9018405
+        }
+      ],
+      "tags": {
+        "crossing": "zebra",
+        "crossing:markings": "zebra",
+        "footway": "crossing",
+        "highway": "footway"
+      }
+    },
+    {
+      "type": "way",
+      "id": 1291909238,
+      "bounds": {
+        "minlat": 51.8876263,
+        "minlon": 0.8993099,
+        "maxlat": 51.8876776,
+        "maxlon": 0.8993111
+      },
+      "nodes": [
+        11976573450,
+        27235534,
+        11976573449
+      ],
+      "geometry": [
+        {
+          "lat": 51.8876263,
+          "lon": 0.8993111
+        },
+        {
+          "lat": 51.8876503,
+          "lon": 0.8993106
+        },
+        {
+          "lat": 51.8876776,
+          "lon": 0.8993099
+        }
+      ],
+      "tags": {
+        "crossing": "zebra",
+        "footway": "crossing",
+        "highway": "footway",
+        "surface": "asphalt"
+      }
+    }
+  ]
+}
