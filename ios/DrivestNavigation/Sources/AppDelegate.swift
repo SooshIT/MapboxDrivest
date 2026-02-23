@@ -11,9 +11,9 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
             let trimmedToken = rawToken.trimmingCharacters(in: .whitespacesAndNewlines)
             if trimmedToken.hasPrefix("pk.") {
                 MapboxOptions.accessToken = trimmedToken
-                print("[Drivest iOS] mapbox_token_loaded prefix=pk length=\(trimmedToken.count)")
+                print("[Drivest iOS] mapbox_token_loaded prefix=\(trimmedToken.prefix(12))")
             } else {
-                print("[Drivest iOS] mapbox_token_invalid_or_missing_pk_prefix length=\(trimmedToken.count)")
+                print("[Drivest iOS] mapbox_token_invalid_or_missing_pk_prefix")
             }
         } else {
             print("[Drivest iOS] mapbox_token_missing_in_info_plist")

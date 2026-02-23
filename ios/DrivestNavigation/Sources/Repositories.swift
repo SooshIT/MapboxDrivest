@@ -100,10 +100,10 @@ final class DestinationSearchRepository {
         let encodedQuery = trimmed.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? trimmed
         let endpoint = "https://api.mapbox.com/geocoding/v5/mapbox.places/\(encodedQuery).json?autocomplete=true&limit=8&country=gb&language=en&access_token=\(token)"
         guard let url = URL(string: endpoint) else { return [] }
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
 
         do {
-            var request = URLRequest(url: url)
-            request.httpMethod = "GET"
             let (data, response) = try await URLSession.shared.data(for: request, delegate: nil)
             guard let http = response as? HTTPURLResponse, (200...299).contains(http.statusCode) else {
                 return []

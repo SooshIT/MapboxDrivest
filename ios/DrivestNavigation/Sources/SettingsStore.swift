@@ -27,7 +27,13 @@ enum UnitsMode: String, CaseIterable {
     case metricKmh
 }
 
-final class SettingsStore {
+enum DriverMode: String, CaseIterable {
+    case learner
+    case newDriver
+    case standard
+}
+
+final class SettingsStore: @unchecked Sendable {
     static let shared = SettingsStore()
 
     private let defaults = UserDefaults.standard
@@ -42,6 +48,7 @@ final class SettingsStore {
         static let hazardsEnabled = "hazards_enabled"
         static let analyticsConsent = "analytics_consent"
         static let safetyAcknowledged = "safety_acknowledged"
+        static let driverMode = "driver_mode"
     }
 
     var voiceMode: VoiceMode {
@@ -125,6 +132,18 @@ final class SettingsStore {
         get { defaults.bool(forKey: Keys.safetyAcknowledged) }
         set {
             defaults.set(newValue, forKey: Keys.safetyAcknowledged)
+            notifyChanged()
+        }
+    }
+
+    var driverMode: DriverMode {
+        get {
+            DriverMode(
+                rawValue: defaults.string(forKey: Keys.driverMode) ?? ""
+            ) ?? .learner
+        }
+        set {
+            defaults.set(newValue.rawValue, forKey: Keys.driverMode)
             notifyChanged()
         }
     }

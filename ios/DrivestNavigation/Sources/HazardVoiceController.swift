@@ -1,6 +1,7 @@
 import AVFoundation
 import Foundation
 
+@MainActor
 final class HazardVoiceController: NSObject, AVSpeechSynthesizerDelegate {
     private let synthesizer = AVSpeechSynthesizer()
     private let speechBudgetEnforcer: SpeechBudgetEnforcer
@@ -57,12 +58,15 @@ final class HazardVoiceController: NSObject, AVSpeechSynthesizerDelegate {
         }
     }
 
-    func speechSynthesizer(
+    nonisolated func speechSynthesizer(
         _ synthesizer: AVSpeechSynthesizer,
         didFinish utterance: AVSpeechUtterance
     ) {
-        isHazardSpeaking = false
-        speakNextIfPossible()
+        Task { @MainActor [weak self] in
+            guard let self else { return }
+            self.isHazardSpeaking = false
+            self.speakNextIfPossible()
+        }
     }
 
     private func speakNextIfPossible() {

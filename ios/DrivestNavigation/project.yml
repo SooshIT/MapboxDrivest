@@ -7,7 +7,25 @@ options:
 packages:
   MapboxNavigation:
     url: https://github.com/mapbox/mapbox-navigation-ios.git
-    exact: 3.11.4
+    exactVersion: 3.11.4
+
+schemes:
+  DrivestNavigation:
+    build:
+      targets:
+        DrivestNavigation: all
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - DrivestNavigationTests
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release
 
 targets:
   DrivestNavigation:
@@ -17,6 +35,7 @@ targets:
     sources:
       - path: Sources
       - path: Resources
+        type: folder
         excludes:
           - Info.plist
     settings:
@@ -36,8 +55,6 @@ targets:
         product: MapboxNavigationCore
       - package: MapboxNavigation
         product: MapboxNavigationUIKit
-      - package: MapboxNavigation
-        product: MapboxDirections
 
   DrivestNavigationTests:
     type: bundle.unit-test
@@ -45,5 +62,10 @@ targets:
     deploymentTarget: "15.0"
     sources:
       - path: Tests
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
+        PRODUCT_BUNDLE_IDENTIFIER: com.drivest.navigation.tests
+        CODE_SIGN_STYLE: Automatic
     dependencies:
       - target: DrivestNavigation

@@ -1,6 +1,6 @@
 import Foundation
 
-final class DebugParityStateStore {
+final class DebugParityStateStore: @unchecked Sendable {
     static let shared = DebugParityStateStore()
 
     var routesPackVersionId: String = "routes-assets-v1"
