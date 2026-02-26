@@ -6,9 +6,12 @@
     <color name="settings_bg_bottom">#FFF5ED</color>
     <color name="settings_card_bg">#FFFFFF</color>
     <color name="settings_card_stroke">#E8E7F0</color>
+    <color name="settings_segment_track">#F0F1F6</color>
+    <color name="settings_segment_checked">#FFFFFF</color>
     <color name="settings_text_primary">#1F1B26</color>
     <color name="settings_text_secondary">#686271</color>
     <color name="settings_text_muted">#8B8496</color>
+    <color name="settings_segment_text_unchecked">#4B4655</color>
     <color name="settings_accent">#F37121</color>
     <color name="settings_accent_soft">#FFE9D6</color>
     <color name="settings_warning_bg">#FFF2E3</color>
@@ -26,10 +29,16 @@
     <color name="voice_chip_icon_default">#231F20</color>
     <color name="voice_chip_icon_alert">#A94A17</color>
     <color name="voice_chip_icon_mute">#B91C1C</color>
+    <color name="map_control_chip_fill">#FFF9F5</color>
+    <color name="map_control_chip_stroke">#33231F20</color>
+    <color name="map_control_chip_ripple">#33F37121</color>
     <color name="map_control_compass_icon">#231F20</color>
     <color name="map_control_overview_icon">#F37121</color>
     <color name="map_control_settings_icon">#231F20</color>
     <color name="map_control_voice_icon_all">#F37121</color>
+    <color name="map_control_appearance_icon_auto">#231F20</color>
+    <color name="map_control_appearance_icon_day">#B45309</color>
+    <color name="map_control_appearance_icon_night">#1D4ED8</color>
     <color name="theory_bg">#F7FAFF</color>
     <color name="theory_text_primary">#231F20</color>
     <color name="theory_text_secondary">#64606A</color>
@@ -42,4 +51,10 @@
     <color name="app_card_stroke">#E7E9F2</color>
     <color name="app_chip_bg">#FFEBD9</color>
     <color name="app_chip_text">#A9581F</color>
+    <color name="entry_screen_bg_day">#FFFFFF</color>
+    <color name="entry_screen_bg_night">#0F172A</color>
+    <color name="entry_screen_text_primary_day">#231F20</color>
+    <color name="entry_screen_text_primary_night">#F8FAFC</color>
+    <color name="entry_screen_text_secondary_day">#5A5456</color>
+    <color name="entry_screen_text_secondary_night">#CBD5E1</color>
 </resources>

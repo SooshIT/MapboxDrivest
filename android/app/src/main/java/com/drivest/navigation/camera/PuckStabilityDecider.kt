@@ -39,12 +39,12 @@ object PuckStabilityDecider {
         val speedFactor = when {
             speedMetersPerSecond < 1.0 -> 1.10
             speedMetersPerSecond < 5.0 -> 0.98
-            else -> 0.82
+            else -> 0.92
         }
         val movementFactor = when {
             input.movementMeters < jitterThresholdMeters -> 1.08
             input.movementMeters < jitterThresholdMeters * 2.0 -> 0.95
-            else -> 0.85
+            else -> 0.90
         }
         val transitionDurationMs = (normalizedIntervalMs * speedFactor * movementFactor)
             .toLong()

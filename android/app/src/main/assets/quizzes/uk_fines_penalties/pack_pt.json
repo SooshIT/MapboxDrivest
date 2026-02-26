@@ -1,0 +1,6008 @@
+[
+  {
+    "id": 1,
+    "category": "Excesso de velocidade",
+    "difficulty": "fácil",
+    "question": "Se você get caught condução faster than the limit, O que penalização do você usually receive?",
+    "options": [
+      "£50 multa and 2 pontos",
+      "£100 multa and 3 pontos",
+      "£200 multa and 6 pontos",
+      "Warning only"
+    ],
+    "answerIndex": 1,
+    "explanation": "Most speeding offences start at £100 and 3 pontos.",
+    "legalSource": "speeding",
+    "tags": [
+      "fine",
+      "points"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 2,
+    "category": "Excesso de velocidade",
+    "difficulty": "fácil",
+    "question": "Como many penalização pontos can lead to a condução proibição Se você build them up?",
+    "options": [
+      "9",
+      "10",
+      "12",
+      "15"
+    ],
+    "answerIndex": 2,
+    "explanation": "Reaching 12 pontos in 3 years can trigger a proibição.",
+    "legalSource": "points",
+    "tags": [
+      "ban",
+      "totting"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 3,
+    "category": "Excesso de velocidade",
+    "difficulty": "médio",
+    "question": "Se o seu speeding case goes to court, O que extra risk é there?",
+    "options": [
+      "Vehicle seizure",
+      "condução proibição",
+      "seguro cancellation",
+      "MOT failure"
+    ],
+    "answerIndex": 1,
+    "explanation": "Courts can disqualify drivers for serious speeding.",
+    "legalSource": "speeding",
+    "tags": [
+      "court"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 4,
+    "category": "Excesso de velocidade",
+    "difficulty": "fácil",
+    "question": "Sometimes instead of pontos, você might be offered a speed awareness curso. Quem decides this?",
+    "options": [
+      "seu insurer",
+      "DVLA",
+      "Police",
+      "Court clerk"
+    ],
+    "answerIndex": 2,
+    "explanation": "Police decide whether a curso é offered.",
+    "legalSource": "speeding",
+    "tags": [
+      "course"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 5,
+    "category": "Excesso de velocidade",
+    "difficulty": "fácil",
+    "question": "Speeding penalties são mainly based on O que factor?",
+    "options": [
+      "Time of day",
+      "seu age",
+      "Como much over the limit você were",
+      "Car size"
+    ],
+    "answerIndex": 2,
+    "explanation": "The more over the limit, the higher the penalização.",
+    "legalSource": "speeding",
+    "tags": [
+      "rules"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 6,
+    "category": "Telemóvel",
+    "difficulty": "fácil",
+    "question": "Se você hold and use seu phone while condução, Como many pontos do você usually get?",
+    "options": [
+      "3",
+      "4",
+      "6",
+      "9"
+    ],
+    "answerIndex": 2,
+    "explanation": "Handheld phone use usually adds 6 pontos.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "points"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 7,
+    "category": "Telemóvel",
+    "difficulty": "fácil",
+    "question": "O que é the typical fixed multa for using a handheld phone while condução?",
+    "options": [
+      "£50",
+      "£100",
+      "£200",
+      "£500"
+    ],
+    "answerIndex": 2,
+    "explanation": "The standard fixed penalização é £200.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "fine"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 8,
+    "category": "Telemóvel",
+    "difficulty": "fácil",
+    "question": "Se você passed seu test less than two years ago and get 6 pontos, O que happens?",
+    "options": [
+      "Nothing",
+      "você get a warning",
+      "seu carta é revoked",
+      "você retake theory only"
+    ],
+    "answerIndex": 2,
+    "explanation": "New drivers lose their carta at 6 pontos.",
+    "legalSource": "points",
+    "tags": [
+      "new_driver"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 9,
+    "category": "Telemóvel",
+    "difficulty": "médio",
+    "question": "é it still illegal to use a handheld phone Quando você são stopped at traffic lights?",
+    "options": [
+      "No",
+      "Only on motorways",
+      "Yes",
+      "Only at night"
+    ],
+    "answerIndex": 2,
+    "explanation": "você são still considered to be condução.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "rules"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 10,
+    "category": "Seguro",
+    "difficulty": "fácil",
+    "question": "Se você conduzir without seguro, O que fixed penalização might você get?",
+    "options": [
+      "£100 and 3 pontos",
+      "£300 and 6 pontos",
+      "£200 and 3 pontos",
+      "£500 and 6 pontos"
+    ],
+    "answerIndex": 1,
+    "explanation": "Typical penalização é £300 and 6 pontos.",
+    "legalSource": "insurance",
+    "tags": [
+      "fine",
+      "points"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 11,
+    "category": "Seguro",
+    "difficulty": "médio",
+    "question": "Se a no-seguro case goes to court, Como high can the multa be?",
+    "options": [
+      "Up to £500",
+      "Up to £1,000",
+      "Unlimited",
+      "£2,500"
+    ],
+    "answerIndex": 2,
+    "explanation": "Courts can issue unlimited fines.",
+    "legalSource": "insurance",
+    "tags": [
+      "court"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 12,
+    "category": "Seguro",
+    "difficulty": "fácil",
+    "question": "Police have the power to do O que Se a vehicle é uninsured?",
+    "options": [
+      "Tow it immediately",
+      "Seize it",
+      "Issue a parking ticket",
+      "Remove pontos"
+    ],
+    "answerIndex": 1,
+    "explanation": "Police can seize uninsured vehicles.",
+    "legalSource": "insurance",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 13,
+    "category": "Conformidade do veículo",
+    "difficulty": "fácil",
+    "question": "Se você conduzir without a valid MOT, O que can happen?",
+    "options": [
+      "£100 multa",
+      "£1,000 multa",
+      "6 pontos",
+      "proibição"
+    ],
+    "answerIndex": 1,
+    "explanation": "The maximum multa can reach £1,000.",
+    "legalSource": "mot",
+    "tags": [
+      "fine"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 14,
+    "category": "Conformidade do veículo",
+    "difficulty": "fácil",
+    "question": "Quem manages vehicle tax enforcement in the UK?",
+    "options": [
+      "Police",
+      "DVLA",
+      "Council",
+      "Court"
+    ],
+    "answerIndex": 1,
+    "explanation": "DVLA handles vehicle tax compliance.",
+    "legalSource": "vehicle_tax",
+    "tags": [
+      "authority"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 15,
+    "category": "Conformidade do veículo",
+    "difficulty": "fácil",
+    "question": "Quando should você declare a vehicle as SORN?",
+    "options": [
+      "Quando selling it",
+      "Quando not using it on the road",
+      "Quando renewing seguro",
+      "Quando moving house"
+    ],
+    "answerIndex": 1,
+    "explanation": "SORN means the vehicle é off the road.",
+    "legalSource": "vehicle_tax",
+    "tags": [
+      "rules"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 16,
+    "category": "Cintos de segurança",
+    "difficulty": "fácil",
+    "question": "Se você do not wear a seat belt, O que é the maximum multa?",
+    "options": [
+      "£100",
+      "£200",
+      "£500",
+      "£1,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Maximum penalização é £500.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "fine"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 17,
+    "category": "Cintos de segurança",
+    "difficulty": "fácil",
+    "question": "As the driver, você são responsible for passengers under O que age wearing seat belts?",
+    "options": [
+      "12",
+      "14",
+      "16",
+      "18"
+    ],
+    "answerIndex": 1,
+    "explanation": "Drivers são responsible for under-14s.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "responsibility"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 18,
+    "category": "Pontos na carta",
+    "difficulty": "fácil",
+    "question": "Quando people talk about ‘totting up’, O que does it refer to?",
+    "options": [
+      "Fuel costs",
+      "seguro price",
+      "penalização pontos adding up",
+      "Parking fines"
+    ],
+    "answerIndex": 2,
+    "explanation": "Totting up means accumulating pontos.",
+    "legalSource": "points",
+    "tags": [
+      "definition"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 19,
+    "category": "Pontos na carta",
+    "difficulty": "médio",
+    "question": "Se você reach the totting threshold, O que é the usual outcome?",
+    "options": [
+      "Warning letter",
+      "Short curso",
+      "condução proibição",
+      "seguro refund"
+    ],
+    "answerIndex": 2,
+    "explanation": "Totting normally leads to disqualification.",
+    "legalSource": "points",
+    "tags": [
+      "ban"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 20,
+    "category": "Álcool e drogas",
+    "difficulty": "fácil",
+    "question": "Se você são convicted of drink condução, O que é the minimum proibição?",
+    "options": [
+      "6 months",
+      "12 months",
+      "18 months",
+      "24 months"
+    ],
+    "answerIndex": 1,
+    "explanation": "Minimum disqualification é 12 months.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "ban"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 21,
+    "category": "Álcool e drogas",
+    "difficulty": "médio",
+    "question": "Refusing to provide a breath or blood sample é treated Como?",
+    "options": [
+      "As a minor offence",
+      "The same as drink condução",
+      "As a parking offence",
+      "As no offence"
+    ],
+    "answerIndex": 1,
+    "explanation": "Refusal carries similar penalties.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "rules"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 22,
+    "category": "Álcool e drogas",
+    "difficulty": "fácil",
+    "question": "Se você são convicted of drug condução, O que é the usual minimum proibição?",
+    "options": [
+      "6 months",
+      "12 months",
+      "2 years",
+      "No proibição"
+    ],
+    "answerIndex": 1,
+    "explanation": "Drug condução leads to at least a 1-year proibição.",
+    "legalSource": "drug_driving",
+    "tags": [
+      "ban"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 23,
+    "category": "Estacionamento",
+    "difficulty": "fácil",
+    "question": "After receiving a parking PCN, Como long do você usually have to pay?",
+    "options": [
+      "7 days",
+      "14 days",
+      "21 days",
+      "28 days"
+    ],
+    "answerIndex": 3,
+    "explanation": "Most PCNs allow 28 days to pay.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "deadline"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 24,
+    "category": "Estacionamento",
+    "difficulty": "fácil",
+    "question": "Se você pay a parking ticket early, O que usually happens?",
+    "options": [
+      "Nothing",
+      "você get pontos",
+      "você get a discount",
+      "você must go to court"
+    ],
+    "answerIndex": 2,
+    "explanation": "Early payment often reduces the multa.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "discount"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 25,
+    "category": "Estacionamento",
+    "difficulty": "médio",
+    "question": "Se você want to challenge a council parking ticket, Quem do você contact first?",
+    "options": [
+      "Police",
+      "DVLA",
+      "The council",
+      "Court"
+    ],
+    "answerIndex": 2,
+    "explanation": "The first appeal goes to the council.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "appeal"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 26,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "fácil",
+    "question": "Quem usually issues bus lane fines?",
+    "options": [
+      "DVLA",
+      "Police",
+      "Local council",
+      "Court"
+    ],
+    "answerIndex": 2,
+    "explanation": "Bus lane penalties são civil enforcement.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "authority"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 27,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "fácil",
+    "question": "For most moving traffic fines, Quem é legally responsible?",
+    "options": [
+      "Driver",
+      "Registered keeper",
+      "Passenger",
+      "Insurer"
+    ],
+    "answerIndex": 1,
+    "explanation": "Liability normally sits with the keeper.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "liability"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 28,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "médio",
+    "question": "Se você disagree with a bus lane ticket outside London, where can você appeal?",
+    "options": [
+      "Traffic penalização Tribunal",
+      "DVLA",
+      "Magistrates Court",
+      "Police"
+    ],
+    "answerIndex": 0,
+    "explanation": "Appeals go to an independent tribunal.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "appeal"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 29,
+    "category": "Excesso de velocidade",
+    "difficulty": "difícil",
+    "question": "Se você repeatedly commit speeding offences, O que long-term impact é most likely?",
+    "options": [
+      "Lower tax",
+      "Higher seguro",
+      "Free curso",
+      "carta upgrade"
+    ],
+    "answerIndex": 1,
+    "explanation": "pontos usually increase seguro costs.",
+    "legalSource": "points",
+    "tags": [
+      "insurance"
+    ],
+    "xp": 30,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 30,
+    "category": "Seguro",
+    "difficulty": "difícil",
+    "question": "Por que é condução uninsured considered serious?",
+    "options": [
+      "It delays traffic",
+      "It removes financial protection",
+      "It affects fuel economy",
+      "It increases MOT costs"
+    ],
+    "answerIndex": 1,
+    "explanation": "seguro protects against financial risk.",
+    "legalSource": "insurance",
+    "tags": [
+      "risk"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 31,
+    "category": "Excesso de velocidade",
+    "difficulty": "fácil",
+    "question": "Se você slightly exceed the speed limit, O que type of penalização é most common?",
+    "options": [
+      "Verbal warning",
+      "Fixed penalização notice",
+      "Immediate proibição",
+      "Vehicle seizure"
+    ],
+    "answerIndex": 1,
+    "explanation": "Most minor cases result in a fixed penalização.",
+    "legalSource": "speeding",
+    "tags": [
+      "fine"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 32,
+    "category": "Excesso de velocidade",
+    "difficulty": "médio",
+    "question": "Por que can repeated speeding lead to losing seu carta?",
+    "options": [
+      "Higher fuel use",
+      "pontos accumulate",
+      "Road tax increases",
+      "seguro cancels automatically"
+    ],
+    "answerIndex": 1,
+    "explanation": "pontos build up and can trigger a proibição.",
+    "legalSource": "points",
+    "tags": [
+      "totting"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 33,
+    "category": "Excesso de velocidade",
+    "difficulty": "fácil",
+    "question": "Speed cameras mainly exist to do O que?",
+    "options": [
+      "Raise revenue",
+      "Improve safety",
+      "Track seguro",
+      "Monitor parking"
+    ],
+    "answerIndex": 1,
+    "explanation": "They são used to reduce accidents.",
+    "legalSource": "speeding",
+    "tags": [
+      "safety"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 34,
+    "category": "Excesso de velocidade",
+    "difficulty": "médio",
+    "question": "Se a court considers seu speeding serious, O que extra action might they take?",
+    "options": [
+      "Suspend seguro",
+      "Issue a proibição",
+      "Cancel MOT",
+      "Impound car permanently"
+    ],
+    "answerIndex": 1,
+    "explanation": "Serious cases can lead to disqualification.",
+    "legalSource": "speeding",
+    "tags": [
+      "court"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 35,
+    "category": "Excesso de velocidade",
+    "difficulty": "difícil",
+    "question": "Qual factor most affects the severity of a speeding penalização?",
+    "options": [
+      "Road colour",
+      "Traffic level",
+      "Amount over limit",
+      "Driver occupation"
+    ],
+    "answerIndex": 2,
+    "explanation": "Higher excess speeds mean harsher penalties.",
+    "legalSource": "speeding",
+    "tags": [
+      "rules"
+    ],
+    "xp": 30,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 36,
+    "category": "Telemóvel",
+    "difficulty": "fácil",
+    "question": "Using a phone in seu hand while condução mainly affects Qual area of safety?",
+    "options": [
+      "Vehicle condition",
+      "Driver attention",
+      "Road layout",
+      "Weather"
+    ],
+    "answerIndex": 1,
+    "explanation": "Distraction reduces awareness.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "safety"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 37,
+    "category": "Telemóvel",
+    "difficulty": "médio",
+    "question": "Por que é hands-free use allowed but handheld use banned?",
+    "options": [
+      "Cost reasons",
+      "Distraction risk",
+      "Signal strength",
+      "Battery usage"
+    ],
+    "answerIndex": 1,
+    "explanation": "Handheld use creates greater distraction.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "rules"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 38,
+    "category": "Telemóvel",
+    "difficulty": "fácil",
+    "question": "Se police see você holding a phone while condução, O que will usually happen?",
+    "options": [
+      "Advice only",
+      "Fixed penalização",
+      "Immediate arrest",
+      "seguro claim"
+    ],
+    "answerIndex": 1,
+    "explanation": "Typically a fixed penalização é issued.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 39,
+    "category": "Telemóvel",
+    "difficulty": "médio",
+    "question": "For new drivers, Por que é a phone offence especially serious?",
+    "options": [
+      "Higher multa",
+      "carta can be revoked",
+      "seguro voids instantly",
+      "pontos double"
+    ],
+    "answerIndex": 1,
+    "explanation": "Six pontos revokes a new carta.",
+    "legalSource": "points",
+    "tags": [
+      "new_driver"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 40,
+    "category": "Telemóvel",
+    "difficulty": "difícil",
+    "question": "Using seu phone briefly to check a message while condução é treated as",
+    "options": [
+      "Minor issue",
+      "No offence",
+      "Full offence",
+      "Parking offence"
+    ],
+    "answerIndex": 2,
+    "explanation": "Any handheld use counts as an offence.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "rules"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 41,
+    "category": "Seguro",
+    "difficulty": "fácil",
+    "question": "O que é the main purpose of car seguro?",
+    "options": [
+      "Reduce fuel costs",
+      "Cover financial risk",
+      "Improve performance",
+      "Lower tax"
+    ],
+    "answerIndex": 1,
+    "explanation": "seguro covers damage and liability.",
+    "legalSource": "insurance",
+    "tags": [
+      "risk"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 42,
+    "category": "Seguro",
+    "difficulty": "médio",
+    "question": "Se você são caught without seguro, Por que can the penalização be severe?",
+    "options": [
+      "It delays journeys",
+      "It risks others financially",
+      "It blocks traffic",
+      "It affects MOT"
+    ],
+    "answerIndex": 1,
+    "explanation": "Uninsured drivers create financial risk.",
+    "legalSource": "insurance",
+    "tags": [
+      "risk"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 43,
+    "category": "Seguro",
+    "difficulty": "fácil",
+    "question": "condução uninsured é treated as O que type of offence?",
+    "options": [
+      "Civil only",
+      "Administrative only",
+      "Criminal motoring offence",
+      "seguro dispute"
+    ],
+    "answerIndex": 2,
+    "explanation": "It é a criminal motoring offence.",
+    "legalSource": "insurance",
+    "tags": [
+      "law"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 44,
+    "category": "Seguro",
+    "difficulty": "médio",
+    "question": "Por que can police remove an uninsured vehicle from the road?",
+    "options": [
+      "To check MOT",
+      "To prevent risk",
+      "To test brakes",
+      "To reduce congestion"
+    ],
+    "answerIndex": 1,
+    "explanation": "Removal protects public safety.",
+    "legalSource": "insurance",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 45,
+    "category": "Seguro",
+    "difficulty": "difícil",
+    "question": "Keeping a vehicle uninsured without declaring it off-road may trigger Qual system?",
+    "options": [
+      "penalização pontos scheme",
+      "Continuous seguro Enforcement",
+      "ULEZ",
+      "Congestion charge"
+    ],
+    "answerIndex": 1,
+    "explanation": "CIE identifies uninsured keepers.",
+    "legalSource": "insurance",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 30,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 46,
+    "category": "Conformidade do veículo",
+    "difficulty": "fácil",
+    "question": "Por que é the MOT required each year?",
+    "options": [
+      "Check ownership",
+      "Confirm roadworthiness",
+      "Update seguro",
+      "Renew carta"
+    ],
+    "answerIndex": 1,
+    "explanation": "MOT ensures the vehicle é safe.",
+    "legalSource": "mot",
+    "tags": [
+      "safety"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 47,
+    "category": "Conformidade do veículo",
+    "difficulty": "médio",
+    "question": "condução without MOT mainly creates O que risk?",
+    "options": [
+      "Higher fuel use",
+      "Unsafe vehicle",
+      "Parking multa",
+      "carta loss"
+    ],
+    "answerIndex": 1,
+    "explanation": "Vehicle may be unsafe to conduzir.",
+    "legalSource": "mot",
+    "tags": [
+      "risk"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 48,
+    "category": "Conformidade do veículo",
+    "difficulty": "fácil",
+    "question": "Vehicle tax must be paid to legally do O que?",
+    "options": [
+      "conduzir on public roads",
+      "Park anywhere",
+      "Lower seguro",
+      "Use motorways only"
+    ],
+    "answerIndex": 0,
+    "explanation": "Tax é required for road use.",
+    "legalSource": "vehicle_tax",
+    "tags": [
+      "rules"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 49,
+    "category": "Conformidade do veículo",
+    "difficulty": "médio",
+    "question": "Declaring SORN tells the authorities that the vehicle é",
+    "options": [
+      "Sold",
+      "Off the road",
+      "Insured",
+      "Exported"
+    ],
+    "answerIndex": 1,
+    "explanation": "SORN means not used on public roads.",
+    "legalSource": "vehicle_tax",
+    "tags": [
+      "rules"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 50,
+    "category": "Conformidade do veículo",
+    "difficulty": "difícil",
+    "question": "condução a dangerous vehicle can lead to penalties because it affects",
+    "options": [
+      "Fuel economy",
+      "Public safety",
+      "Road design",
+      "seguro price"
+    ],
+    "answerIndex": 1,
+    "explanation": "Unsafe vehicles pose safety risks.",
+    "legalSource": "mot",
+    "tags": [
+      "safety"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 51,
+    "category": "Cintos de segurança",
+    "difficulty": "fácil",
+    "question": "Seat belts mainly reduce O que in a crash?",
+    "options": [
+      "Fuel use",
+      "Injury severity",
+      "seguro premium",
+      "Road noise"
+    ],
+    "answerIndex": 1,
+    "explanation": "Belts reduce serious injuries.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "safety"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 52,
+    "category": "Cintos de segurança",
+    "difficulty": "médio",
+    "question": "Por que é the driver responsible for children wearing belts?",
+    "options": [
+      "seguro rule",
+      "Safety law",
+      "Parking law",
+      "Fuel rule"
+    ],
+    "answerIndex": 1,
+    "explanation": "Law places responsibility on driver.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "law"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 53,
+    "category": "Cintos de segurança",
+    "difficulty": "fácil",
+    "question": "Not wearing a seat belt mainly results in",
+    "options": [
+      "pontos",
+      "multa",
+      "proibição",
+      "carta removal"
+    ],
+    "answerIndex": 1,
+    "explanation": "Usually a financial penalização.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "fine"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 54,
+    "category": "Cintos de segurança",
+    "difficulty": "médio",
+    "question": "Seat belt rules apply Quando belts são fitted in the vehicle",
+    "options": [
+      "Yes",
+      "No",
+      "Only on motorways",
+      "Only for drivers"
+    ],
+    "answerIndex": 0,
+    "explanation": "Passengers must use available belts.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "rules"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 55,
+    "category": "Cintos de segurança",
+    "difficulty": "difícil",
+    "question": "Medical exemptions from wearing a seat belt require",
+    "options": [
+      "Verbal confirmation",
+      "Official certificate",
+      "seguro note",
+      "Police approval"
+    ],
+    "answerIndex": 1,
+    "explanation": "Formal certification é required.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "rules"
+    ],
+    "xp": 30,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 56,
+    "category": "Pontos na carta",
+    "difficulty": "fácil",
+    "question": "penalização pontos são mainly used to measure O que?",
+    "options": [
+      "condução experience",
+      "condução risk",
+      "Fuel efficiency",
+      "Vehicle age"
+    ],
+    "answerIndex": 1,
+    "explanation": "pontos track condução risk.",
+    "legalSource": "points",
+    "tags": [
+      "definition"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 57,
+    "category": "Pontos na carta",
+    "difficulty": "médio",
+    "question": "Por que do pontos affect seguro prices?",
+    "options": [
+      "Legal requirement",
+      "Higher perceived risk",
+      "Tax rules",
+      "Road type"
+    ],
+    "answerIndex": 1,
+    "explanation": "Insurers price based on risk.",
+    "legalSource": "points",
+    "tags": [
+      "insurance"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 58,
+    "category": "Pontos na carta",
+    "difficulty": "fácil",
+    "question": "Se pontos reach the limit, O que happens next?",
+    "options": [
+      "Warning letter",
+      "condução proibição",
+      "seguro refund",
+      "carta upgrade"
+    ],
+    "answerIndex": 1,
+    "explanation": "Totting can lead to disqualification.",
+    "legalSource": "points",
+    "tags": [
+      "ban"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 59,
+    "category": "Pontos na carta",
+    "difficulty": "médio",
+    "question": "Por que do some endorsements stay on a carta longer than others?",
+    "options": [
+      "seguro policy",
+      "Offence seriousness",
+      "Vehicle type",
+      "Driver age"
+    ],
+    "answerIndex": 1,
+    "explanation": "More serious offences stay longer.",
+    "legalSource": "points",
+    "tags": [
+      "rules"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 60,
+    "category": "Pontos na carta",
+    "difficulty": "difícil",
+    "question": "Exceptional hardship arguments são used to try to",
+    "options": [
+      "Reduce multa",
+      "Avoid proibição",
+      "Remove pontos",
+      "Lower tax"
+    ],
+    "answerIndex": 1,
+    "explanation": "Courts may avoid a proibição in rare cases.",
+    "legalSource": "points",
+    "tags": [
+      "court"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 61,
+    "category": "Álcool e drogas",
+    "difficulty": "fácil",
+    "question": "Drink condução laws mainly exist to prevent",
+    "options": [
+      "Fuel waste",
+      "Road danger",
+      "Parking issues",
+      "Traffic jams"
+    ],
+    "answerIndex": 1,
+    "explanation": "Impairment increases crash risk.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "safety"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 62,
+    "category": "Álcool e drogas",
+    "difficulty": "médio",
+    "question": "Por que does refusing a breath test lead to serious penalties?",
+    "options": [
+      "It delays police",
+      "It prevents evidence",
+      "It blocks traffic",
+      "It raises tax"
+    ],
+    "answerIndex": 1,
+    "explanation": "Refusal obstructs enforcement.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "rules"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 63,
+    "category": "Álcool e drogas",
+    "difficulty": "fácil",
+    "question": "Drug condução penalties include",
+    "options": [
+      "Parking multa",
+      "condução proibição",
+      "Lower tax",
+      "MOT retest"
+    ],
+    "answerIndex": 1,
+    "explanation": "Drug condução leads to disqualification.",
+    "legalSource": "drug_driving",
+    "tags": [
+      "ban"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 64,
+    "category": "Álcool e drogas",
+    "difficulty": "médio",
+    "question": "A drink condução conviction usually results in",
+    "options": [
+      "Civil penalização",
+      "Criminal record",
+      "seguro refund",
+      "No record"
+    ],
+    "answerIndex": 1,
+    "explanation": "It é a criminal offence.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "law"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 65,
+    "category": "Álcool e drogas",
+    "difficulty": "difícil",
+    "question": "Alcohol or drugs affect condução mainly by reducing",
+    "options": [
+      "Fuel efficiency",
+      "Reaction time",
+      "Road grip",
+      "Engine power"
+    ],
+    "answerIndex": 1,
+    "explanation": "Impairment slows reactions.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "safety"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 66,
+    "category": "Estacionamento",
+    "difficulty": "fácil",
+    "question": "Parking tickets issued by councils são usually O que type of penalização?",
+    "options": [
+      "Criminal",
+      "Civil",
+      "seguro",
+      "Tax"
+    ],
+    "answerIndex": 1,
+    "explanation": "They são civil enforcement penalties.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "law"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 67,
+    "category": "Estacionamento",
+    "difficulty": "médio",
+    "question": "Se você ignore a parking ticket, O que can happen later?",
+    "options": [
+      "pontos added",
+      "Debt increases",
+      "carta removed",
+      "Car banned"
+    ],
+    "answerIndex": 1,
+    "explanation": "The charge can escalate.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 68,
+    "category": "Estacionamento",
+    "difficulty": "fácil",
+    "question": "Por que é early payment encouraged for PCNs?",
+    "options": [
+      "Fewer pontos",
+      "Reduced multa",
+      "Faster court",
+      "seguro benefit"
+    ],
+    "answerIndex": 1,
+    "explanation": "Early payment gives a discount.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "discount"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 69,
+    "category": "Estacionamento",
+    "difficulty": "médio",
+    "question": "Appealing a parking ticket gives você the chance to",
+    "options": [
+      "Remove pontos",
+      "Explain seu case",
+      "Reduce tax",
+      "Avoid seguro"
+    ],
+    "answerIndex": 1,
+    "explanation": "você can challenge the decision.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "appeal"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 70,
+    "category": "Estacionamento",
+    "difficulty": "difícil",
+    "question": "Parking penalties são separate from criminal offences because they são",
+    "options": [
+      "Police issued",
+      "Civil enforcement",
+      "seguro related",
+      "Tax penalties"
+    ],
+    "answerIndex": 1,
+    "explanation": "PCNs são civil penalties.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "law"
+    ],
+    "xp": 30,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 71,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "fácil",
+    "question": "Bus lane enforcement é mainly designed to keep traffic flowing for",
+    "options": [
+      "Cars",
+      "Buses",
+      "Cyclists only",
+      "Taxis"
+    ],
+    "answerIndex": 1,
+    "explanation": "Bus lanes prioritise public transport.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 72,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "médio",
+    "question": "Por que são bus lane penalties usually civil rather than criminal?",
+    "options": [
+      "Lower risk",
+      "Local enforcement",
+      "seguro rules",
+      "Speed laws"
+    ],
+    "answerIndex": 1,
+    "explanation": "Councils handle civil enforcement.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "law"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 73,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "fácil",
+    "question": "Moving traffic rules cover things like",
+    "options": [
+      "Speeding",
+      "No entry violations",
+      "seguro",
+      "Seat belts"
+    ],
+    "answerIndex": 1,
+    "explanation": "They include restricted manoeuvres.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "rules"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 74,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "médio",
+    "question": "Owner liability means penalties são sent to the",
+    "options": [
+      "Driver",
+      "Vehicle owner",
+      "Passenger",
+      "seguro company"
+    ],
+    "answerIndex": 1,
+    "explanation": "The keeper é legally responsible.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "liability"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 75,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "difícil",
+    "question": "Appeal systems exist to ensure penalties são",
+    "options": [
+      "Profitable",
+      "Fair",
+      "Automatic",
+      "Immediate"
+    ],
+    "answerIndex": 1,
+    "explanation": "Appeals allow independent review.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "appeal"
+    ],
+    "xp": 30,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 76,
+    "category": "Excesso de velocidade",
+    "difficulty": "fácil",
+    "question": "O que usually happens to seu seguro Se você get pontos for speeding?",
+    "options": [
+      "It decreases",
+      "It stays same",
+      "It may increase",
+      "It é cancelled"
+    ],
+    "answerIndex": 2,
+    "explanation": "pontos often raise premiums.",
+    "legalSource": "points",
+    "tags": [
+      "insurance"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 77,
+    "category": "Seguro",
+    "difficulty": "fácil",
+    "question": "Por que é seguro required before condução on public roads?",
+    "options": [
+      "Legal compliance",
+      "Fuel saving",
+      "Lower tax",
+      "carta renewal"
+    ],
+    "answerIndex": 0,
+    "explanation": "It é a legal requirement.",
+    "legalSource": "insurance",
+    "tags": [
+      "law"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 78,
+    "category": "Pontos na carta",
+    "difficulty": "médio",
+    "question": "Qual outcome é most likely after repeatedly collecting pontos?",
+    "options": [
+      "Lower multa",
+      "condução proibição",
+      "carta upgrade",
+      "Tax increase"
+    ],
+    "answerIndex": 1,
+    "explanation": "Accumulation leads to disqualification.",
+    "legalSource": "points",
+    "tags": [
+      "ban"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 79,
+    "category": "Álcool e drogas",
+    "difficulty": "fácil",
+    "question": "Por que é condução under the influence dangerous?",
+    "options": [
+      "Slower reactions",
+      "Higher speed",
+      "Better control",
+      "Less traffic"
+    ],
+    "answerIndex": 0,
+    "explanation": "Impairment reduces reaction time.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "safety"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 80,
+    "category": "Conformidade do veículo",
+    "difficulty": "fácil",
+    "question": "condução a car without tax mainly breaks Qual rule?",
+    "options": [
+      "seguro law",
+      "Road use law",
+      "Seat belt law",
+      "Parking law"
+    ],
+    "answerIndex": 1,
+    "explanation": "Vehicle tax é required for road use.",
+    "legalSource": "vehicle_tax",
+    "tags": [
+      "law"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 81,
+    "category": "Telemóvel",
+    "difficulty": "médio",
+    "question": "Phone distraction increases crash risk because it affects",
+    "options": [
+      "Engine power",
+      "Driver focus",
+      "Tyre grip",
+      "Fuel level"
+    ],
+    "answerIndex": 1,
+    "explanation": "Attention é reduced.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "safety"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 82,
+    "category": "Cintos de segurança",
+    "difficulty": "fácil",
+    "question": "Wearing a seat belt mainly protects você by",
+    "options": [
+      "Reducing movement",
+      "Improving steering",
+      "Saving fuel",
+      "Lowering tax"
+    ],
+    "answerIndex": 0,
+    "explanation": "It prevents serious injury.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "safety"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 83,
+    "category": "Estacionamento",
+    "difficulty": "médio",
+    "question": "Por que can unpaid parking penalties escalate?",
+    "options": [
+      "Interest rules",
+      "seguro claims",
+      "carta pontos",
+      "Speed limits"
+    ],
+    "answerIndex": 0,
+    "explanation": "Charges can increase over time.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 84,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "fácil",
+    "question": "Bus lane cameras são mainly used to",
+    "options": [
+      "Measure speed",
+      "Detect violations",
+      "Check tax",
+      "Monitor weather"
+    ],
+    "answerIndex": 1,
+    "explanation": "They capture bus lane misuse.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 85,
+    "category": "Álcool e drogas",
+    "difficulty": "médio",
+    "question": "A conviction for impaired condução affects Qual long-term factor most?",
+    "options": [
+      "Fuel economy",
+      "seguro cost",
+      "Parking permit",
+      "Tax band"
+    ],
+    "answerIndex": 1,
+    "explanation": "seguro premiums usually rise.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "insurance"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 86,
+    "category": "Pontos na carta",
+    "difficulty": "fácil",
+    "question": "penalização pontos são added to O que record?",
+    "options": [
+      "seguro file",
+      "condução carta",
+      "Vehicle logbook",
+      "MOT history"
+    ],
+    "answerIndex": 1,
+    "explanation": "They são recorded on seu carta.",
+    "legalSource": "points",
+    "tags": [
+      "record"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 87,
+    "category": "Seguro",
+    "difficulty": "médio",
+    "question": "Por que é condução uninsured risky for others?",
+    "options": [
+      "Higher traffic",
+      "Financial loss",
+      "Noise pollution",
+      "Fuel shortage"
+    ],
+    "answerIndex": 1,
+    "explanation": "It leaves victims without cover.",
+    "legalSource": "insurance",
+    "tags": [
+      "risk"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 88,
+    "category": "Conformidade do veículo",
+    "difficulty": "fácil",
+    "question": "Vehicle safety checks reduce O que risk?",
+    "options": [
+      "Tax bills",
+      "Breakdowns",
+      "Accidents",
+      "seguro costs"
+    ],
+    "answerIndex": 2,
+    "explanation": "Maintenance reduces crash risk.",
+    "legalSource": "mot",
+    "tags": [
+      "safety"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 89,
+    "category": "Excesso de velocidade",
+    "difficulty": "médio",
+    "question": "Por que são higher speeds more dangerous in collisions?",
+    "options": [
+      "Higher noise",
+      "Greater force",
+      "More fuel use",
+      "Better grip"
+    ],
+    "answerIndex": 1,
+    "explanation": "Impact force increases with speed.",
+    "legalSource": "speeding",
+    "tags": [
+      "safety"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 90,
+    "category": "Cintos de segurança",
+    "difficulty": "médio",
+    "question": "Passengers without belts mainly risk",
+    "options": [
+      "multa only",
+      "Serious injury",
+      "carta pontos",
+      "seguro loss"
+    ],
+    "answerIndex": 1,
+    "explanation": "Belts reduce injury severity.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "safety"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 91,
+    "category": "Estacionamento",
+    "difficulty": "fácil",
+    "question": "Parking rules são enforced mainly to manage",
+    "options": [
+      "seguro",
+      "Traffic space",
+      "Fuel prices",
+      "Speed limits"
+    ],
+    "answerIndex": 1,
+    "explanation": "They keep roads usable.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 92,
+    "category": "Álcool e drogas",
+    "difficulty": "médio",
+    "question": "Impaired condução laws exist primarily to protect",
+    "options": [
+      "Vehicles",
+      "Public safety",
+      "Fuel supply",
+      "seguro firms"
+    ],
+    "answerIndex": 1,
+    "explanation": "They reduce crash risk.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 93,
+    "category": "Pontos na carta",
+    "difficulty": "médio",
+    "question": "pontos remain on seu carta to indicate",
+    "options": [
+      "condução history",
+      "Tax status",
+      "seguro level",
+      "Vehicle value"
+    ],
+    "answerIndex": 0,
+    "explanation": "They show past offences.",
+    "legalSource": "points",
+    "tags": [
+      "record"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 94,
+    "category": "Telemóvel",
+    "difficulty": "fácil",
+    "question": "Looking away from the road to check a phone increases",
+    "options": [
+      "Speed",
+      "Reaction delay",
+      "Fuel use",
+      "Grip"
+    ],
+    "answerIndex": 1,
+    "explanation": "Distraction slows reactions.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "safety"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 95,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "médio",
+    "question": "Bus lane restrictions help improve",
+    "options": [
+      "Road safety",
+      "Traffic flow",
+      "Parking revenue",
+      "Fuel use"
+    ],
+    "answerIndex": 1,
+    "explanation": "They keep buses moving efficiently.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 96,
+    "category": "Seguro",
+    "difficulty": "fácil",
+    "question": "seguro protects você mainly against",
+    "options": [
+      "Mechanical faults",
+      "Financial liability",
+      "Fuel costs",
+      "Traffic fines"
+    ],
+    "answerIndex": 1,
+    "explanation": "It covers costs after incidents.",
+    "legalSource": "insurance",
+    "tags": [
+      "risk"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 97,
+    "category": "Conformidade do veículo",
+    "difficulty": "médio",
+    "question": "condução a poorly maintained vehicle can lead to penalties because it é",
+    "options": [
+      "Noisy",
+      "Unsafe",
+      "Slow",
+      "Expensive"
+    ],
+    "answerIndex": 1,
+    "explanation": "Safety risks lead to enforcement.",
+    "legalSource": "mot",
+    "tags": [
+      "safety"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 98,
+    "category": "Excesso de velocidade",
+    "difficulty": "fácil",
+    "question": "Speed limits são set mainly to",
+    "options": [
+      "Save fuel",
+      "Reduce crashes",
+      "Raise money",
+      "Control traffic lights"
+    ],
+    "answerIndex": 1,
+    "explanation": "Limits improve safety.",
+    "legalSource": "speeding",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 99,
+    "category": "Cintos de segurança",
+    "difficulty": "fácil",
+    "question": "Seat belt laws exist mainly to",
+    "options": [
+      "Reduce injuries",
+      "Lower tax",
+      "Improve handling",
+      "Save fuel"
+    ],
+    "answerIndex": 0,
+    "explanation": "They protect occupants.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 100,
+    "category": "Álcool e drogas",
+    "difficulty": "médio",
+    "question": "Alcohol affects condução ability mainly by impairing",
+    "options": [
+      "Vision and reactions",
+      "Fuel use",
+      "Tyre pressure",
+      "Navigation"
+    ],
+    "answerIndex": 0,
+    "explanation": "Impairment increases risk.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "safety"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 101,
+    "category": "Pontos na carta",
+    "difficulty": "fácil",
+    "question": "pontos on seu carta são intended to",
+    "options": [
+      "Track offences",
+      "Raise revenue",
+      "Increase tax",
+      "Reduce speed limits"
+    ],
+    "answerIndex": 0,
+    "explanation": "They record condução offences.",
+    "legalSource": "points",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 102,
+    "category": "Estacionamento",
+    "difficulty": "médio",
+    "question": "Ignoring multiple parking penalties may eventually lead to",
+    "options": [
+      "carta pontos",
+      "Enforcement action",
+      "seguro loss",
+      "Fuel surcharge"
+    ],
+    "answerIndex": 1,
+    "explanation": "Debt enforcement may follow.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 103,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "fácil",
+    "question": "Bus lane rules mainly support",
+    "options": [
+      "Private cars",
+      "Public transport",
+      "Parking enforcement",
+      "seguro firms"
+    ],
+    "answerIndex": 1,
+    "explanation": "They prioritise buses.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 104,
+    "category": "Telemóvel",
+    "difficulty": "médio",
+    "question": "Por que é even brief phone use risky while condução?",
+    "options": [
+      "Signal issues",
+      "Loss of focus",
+      "Fuel increase",
+      "Road wear"
+    ],
+    "answerIndex": 1,
+    "explanation": "Short distractions raise crash risk.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "safety"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 105,
+    "category": "Seguro",
+    "difficulty": "difícil",
+    "question": "seguro law ensures victims of crashes são financially",
+    "options": [
+      "Charged",
+      "Protected",
+      "Penalised",
+      "Ignored"
+    ],
+    "answerIndex": 1,
+    "explanation": "It ensures compensation.",
+    "legalSource": "insurance",
+    "tags": [
+      "law"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 106,
+    "category": "Conformidade do veículo",
+    "difficulty": "fácil",
+    "question": "Regular vehicle checks help prevent",
+    "options": [
+      "seguro claims",
+      "Breakdowns",
+      "Fuel use",
+      "Parking fines"
+    ],
+    "answerIndex": 1,
+    "explanation": "Maintenance reduces breakdown risk.",
+    "legalSource": "mot",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 107,
+    "category": "Excesso de velocidade",
+    "difficulty": "médio",
+    "question": "condução too fast reduces the time você have to",
+    "options": [
+      "Brake",
+      "Refuel",
+      "Signal",
+      "Park"
+    ],
+    "answerIndex": 0,
+    "explanation": "Higher speeds reduce reaction time.",
+    "legalSource": "speeding",
+    "tags": [
+      "safety"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 108,
+    "category": "Álcool e drogas",
+    "difficulty": "fácil",
+    "question": "condução under the influence mainly affects seu",
+    "options": [
+      "Judgement",
+      "seguro",
+      "Tax band",
+      "Fuel use"
+    ],
+    "answerIndex": 0,
+    "explanation": "Impairment reduces judgement.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "safety"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 109,
+    "category": "Cintos de segurança",
+    "difficulty": "médio",
+    "question": "Seat belts reduce the chance of",
+    "options": [
+      "Mechanical faults",
+      "Severe injury",
+      "Traffic jams",
+      "seguro claims"
+    ],
+    "answerIndex": 1,
+    "explanation": "They reduce injury severity.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "safety"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 110,
+    "category": "Pontos na carta",
+    "difficulty": "médio",
+    "question": "The pontos system exists to discourage",
+    "options": [
+      "Parking",
+      "Dangerous condução",
+      "Fuel use",
+      "seguro claims"
+    ],
+    "answerIndex": 1,
+    "explanation": "It deters risky behaviour.",
+    "legalSource": "points",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 111,
+    "category": "Estacionamento",
+    "difficulty": "fácil",
+    "question": "Parking restrictions mainly aim to keep roads",
+    "options": [
+      "Clean",
+      "Available",
+      "Taxed",
+      "Quiet"
+    ],
+    "answerIndex": 1,
+    "explanation": "They manage road space.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 112,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "médio",
+    "question": "Moving traffic rules help reduce",
+    "options": [
+      "Fuel cost",
+      "Congestion",
+      "seguro",
+      "Noise"
+    ],
+    "answerIndex": 1,
+    "explanation": "They improve flow.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 113,
+    "category": "Seguro",
+    "difficulty": "fácil",
+    "question": "condução legally requires seguro mainly to",
+    "options": [
+      "Reduce tax",
+      "Meet legal duty",
+      "Improve speed",
+      "Lower pontos"
+    ],
+    "answerIndex": 1,
+    "explanation": "It é a legal requirement.",
+    "legalSource": "insurance",
+    "tags": [
+      "law"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 114,
+    "category": "Excesso de velocidade",
+    "difficulty": "difícil",
+    "question": "Higher speeds increase stopping distance because of",
+    "options": [
+      "Engine power",
+      "Kinetic energy",
+      "Tyre wear",
+      "Fuel weight"
+    ],
+    "answerIndex": 1,
+    "explanation": "Energy rises with speed.",
+    "legalSource": "speeding",
+    "tags": [
+      "safety"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 115,
+    "category": "Álcool e drogas",
+    "difficulty": "médio",
+    "question": "Impaired condução laws protect",
+    "options": [
+      "Road revenue",
+      "Public safety",
+      "Fuel prices",
+      "seguro profits"
+    ],
+    "answerIndex": 1,
+    "explanation": "They reduce crash risk.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 116,
+    "category": "Conformidade do veículo",
+    "difficulty": "fácil",
+    "question": "Keeping seu car roadworthy helps avoid",
+    "options": [
+      "Tax",
+      "Penalties",
+      "Fuel costs",
+      "seguro"
+    ],
+    "answerIndex": 1,
+    "explanation": "Unsafe vehicles may lead to fines.",
+    "legalSource": "mot",
+    "tags": [
+      "risk"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 117,
+    "category": "Pontos na carta",
+    "difficulty": "médio",
+    "question": "pontos staying on seu record allow authorities to",
+    "options": [
+      "Track risk",
+      "Raise tax",
+      "Lower seguro",
+      "Change speed limits"
+    ],
+    "answerIndex": 0,
+    "explanation": "They monitor repeat offences.",
+    "legalSource": "points",
+    "tags": [
+      "record"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 118,
+    "category": "Telemóvel",
+    "difficulty": "fácil",
+    "question": "Keeping seu eyes on the road helps prevent",
+    "options": [
+      "Fuel waste",
+      "Collisions",
+      "seguro claims",
+      "Parking fines"
+    ],
+    "answerIndex": 1,
+    "explanation": "Attention reduces crash risk.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "safety"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 119,
+    "category": "Cintos de segurança",
+    "difficulty": "fácil",
+    "question": "Seat belts são most effective in",
+    "options": [
+      "High speed turns",
+      "Sudden stops",
+      "Parking",
+      "Fuel saving"
+    ],
+    "answerIndex": 1,
+    "explanation": "They restrain occupants in impacts.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "safety"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 120,
+    "category": "Seguro",
+    "difficulty": "médio",
+    "question": "seguro ensures accident costs são",
+    "options": [
+      "Ignored",
+      "Shared",
+      "Covered",
+      "Reduced"
+    ],
+    "answerIndex": 2,
+    "explanation": "It provides financial cover.",
+    "legalSource": "insurance",
+    "tags": [
+      "risk"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 121,
+    "category": "Estacionamento",
+    "difficulty": "médio",
+    "question": "Parking enforcement helps keep access clear for",
+    "options": [
+      "Shops",
+      "Emergency vehicles",
+      "Fuel stations",
+      "seguro offices"
+    ],
+    "answerIndex": 1,
+    "explanation": "Clear access improves safety.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 122,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "fácil",
+    "question": "Bus lane rules mainly help public transport stay",
+    "options": [
+      "Fast",
+      "Cheap",
+      "Quiet",
+      "Tax free"
+    ],
+    "answerIndex": 0,
+    "explanation": "They prioritise buses.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 123,
+    "category": "Excesso de velocidade",
+    "difficulty": "médio",
+    "question": "Speed limits vary mainly depending on",
+    "options": [
+      "Driver age",
+      "Road type",
+      "seguro",
+      "Fuel price"
+    ],
+    "answerIndex": 1,
+    "explanation": "Different roads have different limits.",
+    "legalSource": "speeding",
+    "tags": [
+      "rules"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 124,
+    "category": "Álcool e drogas",
+    "difficulty": "fácil",
+    "question": "Alcohol reduces condução ability mainly by affecting",
+    "options": [
+      "Fuel use",
+      "Coordination",
+      "Tyre grip",
+      "Engine power"
+    ],
+    "answerIndex": 1,
+    "explanation": "Coordination and judgement são impaired.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "safety"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 125,
+    "category": "Pontos na carta",
+    "difficulty": "médio",
+    "question": "The pontos system helps identify",
+    "options": [
+      "New drivers",
+      "Repeat offenders",
+      "seguro claims",
+      "Parking violations"
+    ],
+    "answerIndex": 1,
+    "explanation": "It tracks repeat offences.",
+    "legalSource": "points",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 126,
+    "category": "Conformidade do veículo",
+    "difficulty": "fácil",
+    "question": "Regular servicing helps avoid",
+    "options": [
+      "Penalties",
+      "Speed limits",
+      "seguro claims",
+      "Parking fines"
+    ],
+    "answerIndex": 0,
+    "explanation": "Maintenance prevents compliance issues.",
+    "legalSource": "mot",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 127,
+    "category": "Seguro",
+    "difficulty": "médio",
+    "question": "condução without cover exposes others to",
+    "options": [
+      "Delay",
+      "Financial risk",
+      "Noise",
+      "Fuel shortage"
+    ],
+    "answerIndex": 1,
+    "explanation": "Victims may not be compensated.",
+    "legalSource": "insurance",
+    "tags": [
+      "risk"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 128,
+    "category": "Telemóvel",
+    "difficulty": "médio",
+    "question": "Phone distraction increases stopping distance because você react",
+    "options": [
+      "Faster",
+      "Slower",
+      "Earlier",
+      "Automatically"
+    ],
+    "answerIndex": 1,
+    "explanation": "Delayed reactions increase distance.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "safety"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 129,
+    "category": "Cintos de segurança",
+    "difficulty": "fácil",
+    "question": "Seat belt use mainly reduces",
+    "options": [
+      "Crash likelihood",
+      "Injury severity",
+      "Fuel use",
+      "Road noise"
+    ],
+    "answerIndex": 1,
+    "explanation": "Belts protect occupants.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "safety"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 130,
+    "category": "Estacionamento",
+    "difficulty": "médio",
+    "question": "Clear parking rules help improve",
+    "options": [
+      "Road safety",
+      "Fuel economy",
+      "seguro",
+      "Vehicle speed"
+    ],
+    "answerIndex": 0,
+    "explanation": "Proper parking reduces hazards.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 131,
+    "category": "Excesso de velocidade",
+    "difficulty": "fácil",
+    "question": "Se você get a speeding fixed penalização, O que usually gets added to seu carta?",
+    "options": [
+      "A warning note",
+      "3 penalização pontos",
+      "6 penalização pontos",
+      "No record"
+    ],
+    "answerIndex": 1,
+    "explanation": "Speeding fixed penalties usually add 3 pontos.",
+    "legalSource": "speeding",
+    "tags": [
+      "points"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 132,
+    "category": "Excesso de velocidade",
+    "difficulty": "médio",
+    "question": "Se você reach 12 pontos within 3 years, O que é the usual totting proibição length?",
+    "options": [
+      "1 month",
+      "3 months",
+      "6 months",
+      "12 months"
+    ],
+    "answerIndex": 2,
+    "explanation": "Totting bans often start at 6 months.",
+    "legalSource": "points",
+    "tags": [
+      "ban",
+      "totting"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 133,
+    "category": "Excesso de velocidade",
+    "difficulty": "médio",
+    "question": "Quando speeding é treated as more serious, O que changes first?",
+    "options": [
+      "você always get a curso",
+      "It can go to court",
+      "seu tax increases",
+      "seu MOT expires"
+    ],
+    "answerIndex": 1,
+    "explanation": "More serious cases can be prosecuted in court.",
+    "legalSource": "speeding",
+    "tags": [
+      "court"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 134,
+    "category": "Excesso de velocidade",
+    "difficulty": "difícil",
+    "question": "Por que do courts treat very high speeds more harshly?",
+    "options": [
+      "It increases road wear",
+      "It raises crash severity",
+      "It increases fuel use",
+      "It reduces visibility signs"
+    ],
+    "answerIndex": 1,
+    "explanation": "Higher speed increases collision impact and risk.",
+    "legalSource": "speeding",
+    "tags": [
+      "safety"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 135,
+    "category": "Excesso de velocidade",
+    "difficulty": "fácil",
+    "question": "Se você get caught speeding, O que é the usual minimum fixed penalização multa?",
+    "options": [
+      "£50",
+      "£100",
+      "£200",
+      "£500"
+    ],
+    "answerIndex": 1,
+    "explanation": "The usual minimum fixed multa é £100.",
+    "legalSource": "speeding",
+    "tags": [
+      "fine"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 136,
+    "category": "Telemóvel",
+    "difficulty": "fácil",
+    "question": "Se você hold and use a phone while condução, O que multa é usually issued?",
+    "options": [
+      "£50",
+      "£100",
+      "£200",
+      "£500"
+    ],
+    "answerIndex": 2,
+    "explanation": "Handheld phone use usually leads to a £200 multa.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "fine"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 137,
+    "category": "Telemóvel",
+    "difficulty": "fácil",
+    "question": "Se você hold and use a phone while condução, Como many pontos do você usually get?",
+    "options": [
+      "3",
+      "4",
+      "6",
+      "9"
+    ],
+    "answerIndex": 2,
+    "explanation": "Handheld phone use usually adds 6 pontos.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "points"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 138,
+    "category": "Telemóvel",
+    "difficulty": "médio",
+    "question": "Se police think você were distracted but not holding a phone, O que offence might apply?",
+    "options": [
+      "No seguro",
+      "Not in proper control",
+      "No MOT",
+      "Bus lane use"
+    ],
+    "answerIndex": 1,
+    "explanation": "Lack of proper control can still be enforced.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "control"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 139,
+    "category": "Telemóvel",
+    "difficulty": "médio",
+    "question": "Se você passed seu test within 2 years, O que makes a phone offence extra damaging?",
+    "options": [
+      "você pay double",
+      "você get 9 pontos",
+      "seu carta can be revoked",
+      "você são banned for 2 years"
+    ],
+    "answerIndex": 2,
+    "explanation": "Six pontos can revoke a new carta.",
+    "legalSource": "points",
+    "tags": [
+      "new_driver"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 140,
+    "category": "Telemóvel",
+    "difficulty": "difícil",
+    "question": "Using a handheld phone can also lead to court action. O que é a possible court multa for car drivers?",
+    "options": [
+      "Up to £200",
+      "Up to £500",
+      "Up to £1,000",
+      "Unlimited"
+    ],
+    "answerIndex": 2,
+    "explanation": "Courts can multa up to £1,000 for this offence.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "court",
+      "fine"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 141,
+    "category": "Seguro",
+    "difficulty": "fácil",
+    "question": "Se você são caught condução uninsured, O que fixed penalização multa é typical?",
+    "options": [
+      "£100",
+      "£200",
+      "£300",
+      "£500"
+    ],
+    "answerIndex": 2,
+    "explanation": "Uninsured condução fixed penalização é usually £300.",
+    "legalSource": "insurance",
+    "tags": [
+      "fine"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 142,
+    "category": "Seguro",
+    "difficulty": "fácil",
+    "question": "Se você são caught condução uninsured, Como many pontos são typical?",
+    "options": [
+      "3",
+      "4",
+      "6",
+      "9"
+    ],
+    "answerIndex": 2,
+    "explanation": "Uninsured condução usually adds 6 pontos.",
+    "legalSource": "insurance",
+    "tags": [
+      "points"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 143,
+    "category": "Seguro",
+    "difficulty": "médio",
+    "question": "Se uninsured condução goes to court, O que multa level é possible?",
+    "options": [
+      "Up to £500",
+      "Up to £1,000",
+      "Unlimited",
+      "Up to £2,500"
+    ],
+    "answerIndex": 2,
+    "explanation": "Courts can issue an unlimited multa.",
+    "legalSource": "insurance",
+    "tags": [
+      "court"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 144,
+    "category": "Seguro",
+    "difficulty": "médio",
+    "question": "O que extra power do police have for uninsured vehicles?",
+    "options": [
+      "They can seize the vehicle",
+      "They can remove seu tax",
+      "They can cancel seu MOT",
+      "They can reduce pontos"
+    ],
+    "answerIndex": 0,
+    "explanation": "Police can seize uninsured vehicles.",
+    "legalSource": "insurance",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 145,
+    "category": "Seguro",
+    "difficulty": "difícil",
+    "question": "Se você lend seu car to a friend, O que é the safest assumption about seguro?",
+    "options": [
+      "Any driver é covered",
+      "Only named or permitted drivers são covered",
+      "seguro é optional",
+      "Cover depends on fuel type"
+    ],
+    "answerIndex": 1,
+    "explanation": "Only permitted drivers são covered by policy terms.",
+    "legalSource": "insurance",
+    "tags": [
+      "risk"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 146,
+    "category": "Conformidade do veículo",
+    "difficulty": "fácil",
+    "question": "condução without a valid MOT can result in O que maximum multa?",
+    "options": [
+      "£500",
+      "£1,000",
+      "£2,500",
+      "Unlimited"
+    ],
+    "answerIndex": 1,
+    "explanation": "The maximum multa can reach £1,000.",
+    "legalSource": "mot",
+    "tags": [
+      "fine"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 147,
+    "category": "Conformidade do veículo",
+    "difficulty": "fácil",
+    "question": "Vehicle tax é also known as",
+    "options": [
+      "Road Duty",
+      "Vehicle Excise Duty",
+      "Motor Charge",
+      "Traffic Levy"
+    ],
+    "answerIndex": 1,
+    "explanation": "Vehicle tax é Vehicle Excise Duty (VED).",
+    "legalSource": "vehicle_tax",
+    "tags": [
+      "definition"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 148,
+    "category": "Conformidade do veículo",
+    "difficulty": "médio",
+    "question": "Se o seu vehicle é not being used on the road, O que should você normally do?",
+    "options": [
+      "Ignore tax letters",
+      "Declare SORN",
+      "Cancel seu carta",
+      "Remove number plates"
+    ],
+    "answerIndex": 1,
+    "explanation": "SORN declares the vehicle off the road.",
+    "legalSource": "vehicle_tax",
+    "tags": [
+      "rules"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 149,
+    "category": "Conformidade do veículo",
+    "difficulty": "médio",
+    "question": "Por que é condução a defective vehicle enforced?",
+    "options": [
+      "It slows traffic",
+      "It risks safety",
+      "It raises tax",
+      "It affects parking"
+    ],
+    "answerIndex": 1,
+    "explanation": "Defects can create serious safety risk.",
+    "legalSource": "mot",
+    "tags": [
+      "safety"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 150,
+    "category": "Conformidade do veículo",
+    "difficulty": "difícil",
+    "question": "Se o seu tyres são dangerously worn, O que é the most likely reason você can be penalised?",
+    "options": [
+      "Noise rules",
+      "Safety risk",
+      "seguro price",
+      "Fuel economy"
+    ],
+    "answerIndex": 1,
+    "explanation": "Unsafe tyres create collision risk.",
+    "legalSource": "mot",
+    "tags": [
+      "safety"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 151,
+    "category": "Cintos de segurança",
+    "difficulty": "fácil",
+    "question": "Se você do not wear a seat belt, O que é the maximum multa?",
+    "options": [
+      "£100",
+      "£200",
+      "£500",
+      "£1,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "Maximum multa é £500.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "fine"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 152,
+    "category": "Cintos de segurança",
+    "difficulty": "médio",
+    "question": "Quem é usually responsible for making sure a child uses the right restraint?",
+    "options": [
+      "The child",
+      "The driver",
+      "The insurer",
+      "The MOT tester"
+    ],
+    "answerIndex": 1,
+    "explanation": "The driver é responsible for child restraints.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "responsibility"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 153,
+    "category": "Cintos de segurança",
+    "difficulty": "fácil",
+    "question": "Seat belts mainly protect você by reducing",
+    "options": [
+      "Crash risk",
+      "Injury severity",
+      "Fuel use",
+      "Tax band"
+    ],
+    "answerIndex": 1,
+    "explanation": "Belts reduce serious injuries.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "safety"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 154,
+    "category": "Cintos de segurança",
+    "difficulty": "médio",
+    "question": "Se seat belts são fitted, passengers should wear them",
+    "options": [
+      "Only on motorways",
+      "Only at night",
+      "Whenever seated",
+      "Only in bad weather"
+    ],
+    "answerIndex": 2,
+    "explanation": "Passengers should use fitted belts.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "rules"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 155,
+    "category": "Cintos de segurança",
+    "difficulty": "difícil",
+    "question": "A seat belt medical exemption é valid only Quando supported by",
+    "options": [
+      "A verbal statement",
+      "A formal medical certificate",
+      "A parking permit",
+      "An seguro email"
+    ],
+    "answerIndex": 1,
+    "explanation": "Exemptions require formal certification.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "rules"
+    ],
+    "xp": 30,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 156,
+    "category": "Pontos na carta",
+    "difficulty": "fácil",
+    "question": "Totting up é based on pontos collected within O que period?",
+    "options": [
+      "1 year",
+      "2 years",
+      "3 years",
+      "5 years"
+    ],
+    "answerIndex": 2,
+    "explanation": "Totting usually looks at 3 years.",
+    "legalSource": "points",
+    "tags": [
+      "totting"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 157,
+    "category": "Pontos na carta",
+    "difficulty": "médio",
+    "question": "Se você são banned for totting, Quem decides the proibição length?",
+    "options": [
+      "DVLA",
+      "seu insurer",
+      "The court",
+      "The council"
+    ],
+    "answerIndex": 2,
+    "explanation": "Courts decide disqualification length.",
+    "legalSource": "points",
+    "tags": [
+      "court"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 158,
+    "category": "Pontos na carta",
+    "difficulty": "médio",
+    "question": "O que é the usual first proibição length for reaching the totting threshold?",
+    "options": [
+      "1 month",
+      "3 months",
+      "6 months",
+      "2 years"
+    ],
+    "answerIndex": 2,
+    "explanation": "A first totting proibição often starts at 6 months.",
+    "legalSource": "points",
+    "tags": [
+      "ban"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 159,
+    "category": "Pontos na carta",
+    "difficulty": "difícil",
+    "question": "Se você get a second totting disqualification within 3 years, O que é a common proibição length?",
+    "options": [
+      "3 months",
+      "6 months",
+      "12 months",
+      "2 years"
+    ],
+    "answerIndex": 2,
+    "explanation": "A second totting proibição é often 12 months.",
+    "legalSource": "points",
+    "tags": [
+      "ban"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 160,
+    "category": "Pontos na carta",
+    "difficulty": "difícil",
+    "question": "Se você get a third totting disqualification within 3 years, O que é a common proibição length?",
+    "options": [
+      "6 months",
+      "12 months",
+      "2 years",
+      "5 years"
+    ],
+    "answerIndex": 2,
+    "explanation": "A third totting proibição é often 2 years.",
+    "legalSource": "points",
+    "tags": [
+      "ban"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 161,
+    "category": "Álcool e drogas",
+    "difficulty": "fácil",
+    "question": "Se você são convicted of drink condução, O que é the minimum proibição?",
+    "options": [
+      "6 months",
+      "12 months",
+      "18 months",
+      "24 months"
+    ],
+    "answerIndex": 1,
+    "explanation": "Minimum proibição é 12 months.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "ban"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 162,
+    "category": "Álcool e drogas",
+    "difficulty": "médio",
+    "question": "Drink condução penalties can include Qual set?",
+    "options": [
+      "multa only",
+      "proibição, multa, prison",
+      "pontos only",
+      "Warning only"
+    ],
+    "answerIndex": 1,
+    "explanation": "Courts can issue bans, fines, and custody.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "court"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 163,
+    "category": "Álcool e drogas",
+    "difficulty": "médio",
+    "question": "Se você são banned for 12 months or more, O que curso might the court offer to reduce the proibição?",
+    "options": [
+      "Speed awareness",
+      "Drink-conduzir rehabilitation",
+      "Parking awareness",
+      "seguro workshop"
+    ],
+    "answerIndex": 1,
+    "explanation": "A rehabilitation curso may reduce the proibição.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "course"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 164,
+    "category": "Álcool e drogas",
+    "difficulty": "médio",
+    "question": "Refusing to provide a breath, blood, or urine sample é treated as",
+    "options": [
+      "A minor issue",
+      "A serious offence",
+      "A civil ticket",
+      "No offence"
+    ],
+    "answerIndex": 1,
+    "explanation": "Refusal é treated seriously by courts.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "rules"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 165,
+    "category": "Álcool e drogas",
+    "difficulty": "fácil",
+    "question": "Drug condução usually leads to",
+    "options": [
+      "No proibição",
+      "A condução proibição",
+      "A parking ticket",
+      "Only a warning"
+    ],
+    "answerIndex": 1,
+    "explanation": "Drug condução leads to disqualification.",
+    "legalSource": "drug_driving",
+    "tags": [
+      "ban"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 166,
+    "category": "Estacionamento",
+    "difficulty": "fácil",
+    "question": "A council parking ticket é normally called a",
+    "options": [
+      "FPN",
+      "PCN",
+      "NIP",
+      "SORN"
+    ],
+    "answerIndex": 1,
+    "explanation": "Parking tickets são usually PCNs.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "definition"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 167,
+    "category": "Estacionamento",
+    "difficulty": "fácil",
+    "question": "Como long do você usually have to pay a PCN before it escalates?",
+    "options": [
+      "7 days",
+      "14 days",
+      "21 days",
+      "28 days"
+    ],
+    "answerIndex": 3,
+    "explanation": "Most PCNs give 28 days to pay.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "deadline"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 168,
+    "category": "Estacionamento",
+    "difficulty": "médio",
+    "question": "Se você pay a PCN within the discount period, O que usually happens?",
+    "options": [
+      "multa increases",
+      "multa reduces",
+      "pontos são added",
+      "Court date é set"
+    ],
+    "answerIndex": 1,
+    "explanation": "Early payment often gives a discount.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "discount"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 169,
+    "category": "Estacionamento",
+    "difficulty": "médio",
+    "question": "Se você want to challenge a PCN, O que é the first step?",
+    "options": [
+      "Go straight to court",
+      "Contact the council",
+      "Call DVLA",
+      "Call seu insurer"
+    ],
+    "answerIndex": 1,
+    "explanation": "você normally challenge the council first.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "appeal"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 170,
+    "category": "Estacionamento",
+    "difficulty": "difícil",
+    "question": "Se a PCN remains unpaid, the process can eventually involve",
+    "options": [
+      "penalização pontos",
+      "Vehicle recall",
+      "Enforcement agents",
+      "MOT cancellation"
+    ],
+    "answerIndex": 2,
+    "explanation": "Unpaid penalties can lead to enforcement action.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 30,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 171,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "fácil",
+    "question": "Bus lane tickets são usually enforced by",
+    "options": [
+      "DVLA",
+      "Police",
+      "Local council",
+      "DVSA"
+    ],
+    "answerIndex": 2,
+    "explanation": "Bus lane enforcement é usually by councils.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "authority"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 172,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "fácil",
+    "question": "For most bus lane tickets, Quem é usually liable?",
+    "options": [
+      "The passenger",
+      "The driver",
+      "The registered keeper",
+      "The mechanic"
+    ],
+    "answerIndex": 2,
+    "explanation": "Liability normally sits with the keeper.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "liability"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 173,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "médio",
+    "question": "Por que são many bus lane penalties classed as civil enforcement?",
+    "options": [
+      "No risk exists",
+      "Local authorities manage them",
+      "They são tax charges",
+      "They são seguro penalties"
+    ],
+    "answerIndex": 1,
+    "explanation": "Councils enforce these under civil rules.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "law"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 174,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "médio",
+    "question": "Outside London, many bus lane appeals go to",
+    "options": [
+      "Traffic penalização Tribunal",
+      "Magistrates Court",
+      "DVLA",
+      "Police"
+    ],
+    "answerIndex": 0,
+    "explanation": "Appeals são handled by an independent tribunal.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "appeal"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 175,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "difícil",
+    "question": "Owner liability exists mainly to make enforcement",
+    "options": [
+      "Fast and simple",
+      "More expensive",
+      "Secret",
+      "Optional"
+    ],
+    "answerIndex": 0,
+    "explanation": "It allows notices to be issued efficiently.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "liability"
+    ],
+    "xp": 30,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 176,
+    "category": "Excesso de velocidade",
+    "difficulty": "médio",
+    "question": "Se você build up 12 pontos, O que é one way a court might avoid banning você?",
+    "options": [
+      "Pay early",
+      "Exceptional hardship accepted",
+      "Take any curso",
+      "Change address"
+    ],
+    "answerIndex": 1,
+    "explanation": "Courts may avoid a proibição for exceptional hardship.",
+    "legalSource": "points",
+    "tags": [
+      "court"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 177,
+    "category": "Telemóvel",
+    "difficulty": "médio",
+    "question": "O que é the biggest safety issue with using a handheld phone while condução?",
+    "options": [
+      "Noise",
+      "Distraction",
+      "Low battery",
+      "Poor signal"
+    ],
+    "answerIndex": 1,
+    "explanation": "Distraction increases collision risk.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "safety"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 178,
+    "category": "Seguro",
+    "difficulty": "médio",
+    "question": "Se o seu uninsured case goes to court, O que extra outcome é possible besides a multa?",
+    "options": [
+      "carta upgrade",
+      "Disqualification",
+      "Tax refund",
+      "MOT exemption"
+    ],
+    "answerIndex": 1,
+    "explanation": "Courts can disqualify uninsured drivers.",
+    "legalSource": "insurance",
+    "tags": [
+      "court"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 179,
+    "category": "Conformidade do veículo",
+    "difficulty": "médio",
+    "question": "Por que é SORN important Se você são not using a vehicle?",
+    "options": [
+      "It lowers fuel use",
+      "It stops tax and seguro enforcement issues",
+      "It changes tyres",
+      "It reduces parking"
+    ],
+    "answerIndex": 1,
+    "explanation": "It tells DVLA the vehicle é off-road.",
+    "legalSource": "vehicle_tax",
+    "tags": [
+      "rules"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 180,
+    "category": "Cintos de segurança",
+    "difficulty": "médio",
+    "question": "Por que é a seat belt offence still important even Se it usually has no pontos?",
+    "options": [
+      "It raises tax",
+      "It increases injury risk",
+      "It voids carta",
+      "It changes MOT"
+    ],
+    "answerIndex": 1,
+    "explanation": "Seat belts reduce serious injuries.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "safety"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 181,
+    "category": "Pontos na carta",
+    "difficulty": "fácil",
+    "question": "Se você want to check Como many pontos você have, você should check seu",
+    "options": [
+      "MOT history",
+      "condução carta record",
+      "seguro email",
+      "Parking app"
+    ],
+    "answerIndex": 1,
+    "explanation": "pontos são recorded on seu carta.",
+    "legalSource": "points",
+    "tags": [
+      "record"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 182,
+    "category": "Álcool e drogas",
+    "difficulty": "difícil",
+    "question": "Por que does drink condução often lead to a long proibição even for a first offence?",
+    "options": [
+      "It é always civil",
+      "It involves impairment risk",
+      "It é a parking issue",
+      "It é tax related"
+    ],
+    "answerIndex": 1,
+    "explanation": "Impairment creates high crash risk.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "safety"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 183,
+    "category": "Estacionamento",
+    "difficulty": "médio",
+    "question": "O que é the main difference between a parking PCN and a speeding penalização?",
+    "options": [
+      "PCN é civil, speeding é criminal",
+      "Both são the same",
+      "PCN gives pontos",
+      "Speeding é council-run"
+    ],
+    "answerIndex": 0,
+    "explanation": "Parking PCNs são usually civil enforcement.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "law"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 184,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "médio",
+    "question": "Qual é most likely a moving traffic contravention?",
+    "options": [
+      "Not wearing a belt",
+      "Entering a no-entry street",
+      "No seguro",
+      "No MOT"
+    ],
+    "answerIndex": 1,
+    "explanation": "No-entry breaches são moving traffic contraventions.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "rules"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 185,
+    "category": "Excesso de velocidade",
+    "difficulty": "difícil",
+    "question": "Se você conduzir far above the limit, O que é the biggest legal risk compared to minor speeding?",
+    "options": [
+      "você always get a discount",
+      "você may be banned",
+      "você get no record",
+      "você pay only £50"
+    ],
+    "answerIndex": 1,
+    "explanation": "High speeds can lead to disqualification.",
+    "legalSource": "speeding",
+    "tags": [
+      "court"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 186,
+    "category": "Telemóvel",
+    "difficulty": "difícil",
+    "question": "Por que é filming or scrolling on a handheld phone treated like phone use?",
+    "options": [
+      "It é entertainment",
+      "It uses the device while condução",
+      "It changes seguro",
+      "It lowers fuel"
+    ],
+    "answerIndex": 1,
+    "explanation": "Any handheld interaction counts as use.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "rules"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 187,
+    "category": "Seguro",
+    "difficulty": "difícil",
+    "question": "Por que é a police seizure power used for uninsured cars?",
+    "options": [
+      "To punish noise",
+      "To stop unsafe risk on roads",
+      "To reduce tax evasion",
+      "To help parking"
+    ],
+    "answerIndex": 1,
+    "explanation": "It removes uninsured risk from roads.",
+    "legalSource": "insurance",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 188,
+    "category": "Conformidade do veículo",
+    "difficulty": "difícil",
+    "question": "Por que é MOT enforcement linked to public safety?",
+    "options": [
+      "It improves speed",
+      "It checks roadworthiness",
+      "It lowers tax",
+      "It reduces parking fines"
+    ],
+    "answerIndex": 1,
+    "explanation": "MOT aims to keep vehicles safe to use.",
+    "legalSource": "mot",
+    "tags": [
+      "safety"
+    ],
+    "xp": 30,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 189,
+    "category": "Cintos de segurança",
+    "difficulty": "difícil",
+    "question": "Por que do rules treat children differently for restraints?",
+    "options": [
+      "They são lighter",
+      "They need proper protection",
+      "They pay no tax",
+      "They have no carta"
+    ],
+    "answerIndex": 1,
+    "explanation": "Children need correct restraints for safety.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "safety"
+    ],
+    "xp": 30,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 190,
+    "category": "Estacionamento",
+    "difficulty": "difícil",
+    "question": "Por que does ignoring a PCN become expensive over time?",
+    "options": [
+      "Fuel costs rise",
+      "Charges can increase",
+      "pontos double",
+      "seguro cancels"
+    ],
+    "answerIndex": 1,
+    "explanation": "PCNs can escalate Se unpaid.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 30,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 191,
+    "category": "Excesso de velocidade",
+    "difficulty": "fácil",
+    "question": "Se você são offered a speed awareness curso, O que é a common benefit?",
+    "options": [
+      "pontos always removed",
+      "você may avoid pontos",
+      "seu tax reduces",
+      "seu MOT extends"
+    ],
+    "answerIndex": 1,
+    "explanation": "Courses can avoid pontos in eligible cases.",
+    "legalSource": "speeding",
+    "tags": [
+      "course"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 192,
+    "category": "Telemóvel",
+    "difficulty": "médio",
+    "question": "Se você use hands-free but lose control, O que can police still enforce?",
+    "options": [
+      "Parking PCN",
+      "Not in proper control",
+      "No tax",
+      "No MOT"
+    ],
+    "answerIndex": 1,
+    "explanation": "você must stay in proper control at all times.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "control"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 193,
+    "category": "Seguro",
+    "difficulty": "fácil",
+    "question": "O que é the minimum pontos level that can revoke a new driver carta within 2 years?",
+    "options": [
+      "3",
+      "4",
+      "6",
+      "12"
+    ],
+    "answerIndex": 2,
+    "explanation": "Six pontos can revoke a new carta.",
+    "legalSource": "points",
+    "tags": [
+      "new_driver"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 194,
+    "category": "Álcool e drogas",
+    "difficulty": "médio",
+    "question": "Se você são banned for drink condução, O que must você do Quando the proibição ends?",
+    "options": [
+      "Nothing",
+      "Apply for a new carta",
+      "Change seu number plate",
+      "Retake theory always"
+    ],
+    "answerIndex": 1,
+    "explanation": "você typically apply for a new carta after a proibição.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "ban"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 195,
+    "category": "Pontos na carta",
+    "difficulty": "médio",
+    "question": "Por que do totting bans get longer for repeat disqualifications?",
+    "options": [
+      "Fuel rules",
+      "Escalation for repeat offending",
+      "Parking issues",
+      "Tax bands"
+    ],
+    "answerIndex": 1,
+    "explanation": "Repeat bans increase to deter ongoing risk.",
+    "legalSource": "points",
+    "tags": [
+      "ban"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 196,
+    "category": "Conformidade do veículo",
+    "difficulty": "fácil",
+    "question": "Se você são not using seu car on public roads, O que helps você stay compliant?",
+    "options": [
+      "Ignore letters",
+      "SORN declaration",
+      "conduzir only at night",
+      "Remove tyres"
+    ],
+    "answerIndex": 1,
+    "explanation": "SORN keeps DVLA records correct.",
+    "legalSource": "vehicle_tax",
+    "tags": [
+      "rules"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 197,
+    "category": "Estacionamento",
+    "difficulty": "fácil",
+    "question": "Quem normally sends a parking PCN for on-street parking?",
+    "options": [
+      "DVLA",
+      "Local council",
+      "DVSA",
+      "seguro company"
+    ],
+    "answerIndex": 1,
+    "explanation": "Councils manage most on-street PCNs.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "authority"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 198,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "fácil",
+    "question": "Bus lane tickets são usually based on evidence from",
+    "options": [
+      "Witness statements",
+      "Camera images",
+      "Fuel logs",
+      "MOT records"
+    ],
+    "answerIndex": 1,
+    "explanation": "Camera evidence é commonly used.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 199,
+    "category": "Excesso de velocidade",
+    "difficulty": "médio",
+    "question": "Por que é speeding near busy pedestrian areas treated seriously?",
+    "options": [
+      "Roads são wider",
+      "Risk to vulnerable road users",
+      "Fuel prices rise",
+      "Parking é limited"
+    ],
+    "answerIndex": 1,
+    "explanation": "Risk to pedestrians é higher.",
+    "legalSource": "speeding",
+    "tags": [
+      "safety"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 200,
+    "category": "Telemóvel",
+    "difficulty": "médio",
+    "question": "Se você mount seu phone and use voice commands, O que must você still maintain?",
+    "options": [
+      "Higher speed",
+      "Proper control",
+      "Lower tax",
+      "Extra seguro"
+    ],
+    "answerIndex": 1,
+    "explanation": "você must stay in full control.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "control"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 201,
+    "category": "Seguro",
+    "difficulty": "médio",
+    "question": "Se police stop você and você cannot show você são insured, O que é a realistic outcome?",
+    "options": [
+      "Nothing happens",
+      "você may be reported and penalised",
+      "você get a parking PCN",
+      "seu MOT é extended"
+    ],
+    "answerIndex": 1,
+    "explanation": "Uninsured condução can be penalised quickly.",
+    "legalSource": "insurance",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 202,
+    "category": "Álcool e drogas",
+    "difficulty": "médio",
+    "question": "Drink conduzir rehabilitation courses são offered by",
+    "options": [
+      "DVLA",
+      "The court",
+      "The council",
+      "seu insurer"
+    ],
+    "answerIndex": 1,
+    "explanation": "It é up to the court to offer the curso.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "course"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 203,
+    "category": "Pontos na carta",
+    "difficulty": "fácil",
+    "question": "Se você get 12 pontos and the court bans você, O que é that proibição called?",
+    "options": [
+      "SORN proibição",
+      "Totting proibição",
+      "MOT proibição",
+      "PCN proibição"
+    ],
+    "answerIndex": 1,
+    "explanation": "A pontos-based proibição é often called totting.",
+    "legalSource": "points",
+    "tags": [
+      "totting"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 204,
+    "category": "Estacionamento",
+    "difficulty": "médio",
+    "question": "Se você think seu PCN was issued unfairly, O que é the best first action?",
+    "options": [
+      "Ignore it",
+      "Challenge it promptly",
+      "Pay and forget",
+      "Call DVLA"
+    ],
+    "answerIndex": 1,
+    "explanation": "Challenge early using the PCN process.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "appeal"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 205,
+    "category": "Conformidade do veículo",
+    "difficulty": "médio",
+    "question": "Por que é condução without MOT risky even Se the car feels multa?",
+    "options": [
+      "seguro cancels always",
+      "Hidden defects exist",
+      "Fuel use increases",
+      "Parking costs rise"
+    ],
+    "answerIndex": 1,
+    "explanation": "Some defects são not obvious to drivers.",
+    "legalSource": "mot",
+    "tags": [
+      "risk"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 206,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "médio",
+    "question": "Qual statement fits most bus lane enforcement?",
+    "options": [
+      "It always gives pontos",
+      "It é usually a civil penalização",
+      "It é handled by DVLA",
+      "It é always court-only"
+    ],
+    "answerIndex": 1,
+    "explanation": "Bus lane penalties são usually civil enforcement.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "law"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 207,
+    "category": "Cintos de segurança",
+    "difficulty": "médio",
+    "question": "Por que é a driver fined Quando a child é unrestrained?",
+    "options": [
+      "Tax rule",
+      "Driver duty of care",
+      "seguro discount",
+      "MOT failure"
+    ],
+    "answerIndex": 1,
+    "explanation": "Drivers must ensure children são restrained.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "responsibility"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 208,
+    "category": "Excesso de velocidade",
+    "difficulty": "médio",
+    "question": "Se você already have pontos, Por que does another speeding offence matter more?",
+    "options": [
+      "pontos reset",
+      "Totting risk increases",
+      "Tax increases",
+      "Parking stops"
+    ],
+    "answerIndex": 1,
+    "explanation": "More pontos increase proibição risk.",
+    "legalSource": "points",
+    "tags": [
+      "totting"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 209,
+    "category": "Telemóvel",
+    "difficulty": "fácil",
+    "question": "Qual behaviour é safest while condução?",
+    "options": [
+      "Texting quickly",
+      "Holding phone low",
+      "No handheld phone use",
+      "Scrolling at red lights"
+    ],
+    "answerIndex": 2,
+    "explanation": "No handheld use é safest and lawful.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "rules"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 210,
+    "category": "Seguro",
+    "difficulty": "fácil",
+    "question": "Qual é required before você conduzir a car on UK roads?",
+    "options": [
+      "seguro",
+      "SORN",
+      "A bus lane permit",
+      "A parking badge"
+    ],
+    "answerIndex": 0,
+    "explanation": "seguro é required to conduzir legally.",
+    "legalSource": "insurance",
+    "tags": [
+      "law"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 211,
+    "category": "Álcool e drogas",
+    "difficulty": "difícil",
+    "question": "Por que é refusal to provide a specimen often punished strongly?",
+    "options": [
+      "It é noisy",
+      "It blocks evidence gathering",
+      "It affects tax",
+      "It improves traffic"
+    ],
+    "answerIndex": 1,
+    "explanation": "Refusal prevents proper enforcement.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "rules"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 212,
+    "category": "Pontos na carta",
+    "difficulty": "difícil",
+    "question": "Por que does the law track pontos over years instead of days?",
+    "options": [
+      "Fuel use changes slowly",
+      "Patterns of risk matter",
+      "Parking resets daily",
+      "seguro renews weekly"
+    ],
+    "answerIndex": 1,
+    "explanation": "Longer tracking identifies repeat risk.",
+    "legalSource": "points",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 30,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 213,
+    "category": "Estacionamento",
+    "difficulty": "médio",
+    "question": "O que é the main goal of a PCN discount window?",
+    "options": [
+      "Encourage early payment",
+      "Increase pontos",
+      "Force court hearings",
+      "Raise MOT fees"
+    ],
+    "answerIndex": 0,
+    "explanation": "Discounts encourage quick payment.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "discount"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 214,
+    "category": "Conformidade do veículo",
+    "difficulty": "difícil",
+    "question": "Por que does DVLA care Se a vehicle é taxed or SORN?",
+    "options": [
+      "To set speed limits",
+      "To track lawful road use",
+      "To manage bus lanes",
+      "To issue pontos"
+    ],
+    "answerIndex": 1,
+    "explanation": "Tax or SORN confirms legal road status.",
+    "legalSource": "vehicle_tax",
+    "tags": [
+      "law"
+    ],
+    "xp": 30,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 215,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "difícil",
+    "question": "Se o seu car é lent to someone and a bus lane PCN arrives, Quem usually must deal with it first?",
+    "options": [
+      "The passenger",
+      "The registered keeper",
+      "The council worker",
+      "DVLA"
+    ],
+    "answerIndex": 1,
+    "explanation": "PCNs normally go to the keeper first.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "liability"
+    ],
+    "xp": 30,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 216,
+    "category": "Excesso de velocidade",
+    "difficulty": "fácil",
+    "question": "O que é the usual minimum number of pontos for a speeding fixed penalização?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "6"
+    ],
+    "answerIndex": 2,
+    "explanation": "Speeding fixed penalties usually add 3 pontos.",
+    "legalSource": "speeding",
+    "tags": [
+      "points"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 217,
+    "category": "Excesso de velocidade",
+    "difficulty": "médio",
+    "question": "Se você hit 12 pontos, O que usually happens even Se você pay all fines?",
+    "options": [
+      "Nothing",
+      "Totting proibição risk",
+      "MOT extension",
+      "seguro refund"
+    ],
+    "answerIndex": 1,
+    "explanation": "Paying fines does not remove totting risk.",
+    "legalSource": "points",
+    "tags": [
+      "totting"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 218,
+    "category": "Excesso de velocidade",
+    "difficulty": "difícil",
+    "question": "Por que é a proibição possible for speeding even without reaching 12 pontos?",
+    "options": [
+      "Courts can disqualify for seriousness",
+      "DVLA bans everyone",
+      "Councils proibição for PCNs",
+      "Insurers proibição drivers"
+    ],
+    "answerIndex": 0,
+    "explanation": "Courts can disqualify for serious speeding.",
+    "legalSource": "speeding",
+    "tags": [
+      "court"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 219,
+    "category": "Excesso de velocidade",
+    "difficulty": "fácil",
+    "question": "Se você são offered a speed awareness curso, Quem must offer it?",
+    "options": [
+      "DVLA",
+      "Police",
+      "The council",
+      "seu insurer"
+    ],
+    "answerIndex": 1,
+    "explanation": "Police decide whether to offer a curso.",
+    "legalSource": "speeding",
+    "tags": [
+      "course"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 220,
+    "category": "Excesso de velocidade",
+    "difficulty": "médio",
+    "question": "Qual é most likely to increase stopping distance?",
+    "options": [
+      "Lower speed",
+      "Higher speed",
+      "Fresh tyres",
+      "Daylight"
+    ],
+    "answerIndex": 1,
+    "explanation": "Higher speed increases stopping distance.",
+    "legalSource": "speeding",
+    "tags": [
+      "safety"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 221,
+    "category": "Telemóvel",
+    "difficulty": "fácil",
+    "question": "O que é the minimum pontos penalização for using a handheld phone while condução?",
+    "options": [
+      "3",
+      "4",
+      "6",
+      "9"
+    ],
+    "answerIndex": 2,
+    "explanation": "Handheld phone use usually adds 6 pontos.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "points"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 222,
+    "category": "Telemóvel",
+    "difficulty": "fácil",
+    "question": "O que é the minimum fixed multa for using a handheld phone while condução?",
+    "options": [
+      "£50",
+      "£100",
+      "£200",
+      "£500"
+    ],
+    "answerIndex": 2,
+    "explanation": "The fixed multa é usually £200.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "fine"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 223,
+    "category": "Telemóvel",
+    "difficulty": "médio",
+    "question": "Se você use a phone hands-free but start swerving, O que could police say você failed to do?",
+    "options": [
+      "Pay vehicle tax",
+      "Have proper control",
+      "Wear a seat belt",
+      "Show MOT"
+    ],
+    "answerIndex": 1,
+    "explanation": "você must keep proper control of the vehicle.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "control"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 224,
+    "category": "Telemóvel",
+    "difficulty": "difícil",
+    "question": "Por que do phone offences often lead to big seguro increases?",
+    "options": [
+      "Fuel use rises",
+      "Risk rating increases",
+      "Tax changes",
+      "MOT changes"
+    ],
+    "answerIndex": 1,
+    "explanation": "Insurers treat distraction offences as high risk.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "insurance"
+    ],
+    "xp": 30,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 225,
+    "category": "Telemóvel",
+    "difficulty": "médio",
+    "question": "Se você passed recently, O que pontos total can revoke seu carta within 2 years?",
+    "options": [
+      "3",
+      "4",
+      "6",
+      "12"
+    ],
+    "answerIndex": 2,
+    "explanation": "New drivers lose carta at 6 pontos.",
+    "legalSource": "points",
+    "tags": [
+      "new_driver"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 226,
+    "category": "Seguro",
+    "difficulty": "fácil",
+    "question": "condução uninsured usually comes with Como many pontos?",
+    "options": [
+      "3",
+      "4",
+      "6",
+      "9"
+    ],
+    "answerIndex": 2,
+    "explanation": "Uninsured condução usually adds 6 pontos.",
+    "legalSource": "insurance",
+    "tags": [
+      "points"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 227,
+    "category": "Seguro",
+    "difficulty": "fácil",
+    "question": "condução uninsured usually comes with O que fixed multa?",
+    "options": [
+      "£100",
+      "£200",
+      "£300",
+      "£500"
+    ],
+    "answerIndex": 2,
+    "explanation": "Uninsured condução fixed multa é usually £300.",
+    "legalSource": "insurance",
+    "tags": [
+      "fine"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 228,
+    "category": "Seguro",
+    "difficulty": "médio",
+    "question": "Se uninsured condução goes to court, O que other outcome é possible besides a multa?",
+    "options": [
+      "Bus lane PCN",
+      "Disqualification",
+      "MOT pass",
+      "Tax refund"
+    ],
+    "answerIndex": 1,
+    "explanation": "Courts can disqualify uninsured drivers.",
+    "legalSource": "insurance",
+    "tags": [
+      "court"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 229,
+    "category": "Seguro",
+    "difficulty": "difícil",
+    "question": "Por que does the law allow seizure of uninsured vehicles?",
+    "options": [
+      "To raise revenue",
+      "To remove risk from roads",
+      "To punish parking",
+      "To improve speed limits"
+    ],
+    "answerIndex": 1,
+    "explanation": "Seizure removes uninsured risk from the road.",
+    "legalSource": "insurance",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 230,
+    "category": "Seguro",
+    "difficulty": "médio",
+    "question": "Se você keep an uninsured vehicle without SORN, O que é the likely issue?",
+    "options": [
+      "Parking doubles",
+      "Enforcement notices may follow",
+      "MOT becomes free",
+      "pontos reset"
+    ],
+    "answerIndex": 1,
+    "explanation": "Uninsured keeper enforcement can follow.",
+    "legalSource": "insurance",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 231,
+    "category": "Conformidade do veículo",
+    "difficulty": "fácil",
+    "question": "O que é the maximum multa for condução without a valid MOT?",
+    "options": [
+      "£500",
+      "£1,000",
+      "£2,500",
+      "Unlimited"
+    ],
+    "answerIndex": 1,
+    "explanation": "The maximum multa can reach £1,000.",
+    "legalSource": "mot",
+    "tags": [
+      "fine"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 232,
+    "category": "Conformidade do veículo",
+    "difficulty": "fácil",
+    "question": "Se o seu vehicle é off the road, O que status should você normally declare?",
+    "options": [
+      "PCN",
+      "SORN",
+      "NIP",
+      "FPN"
+    ],
+    "answerIndex": 1,
+    "explanation": "SORN means the vehicle é off-road.",
+    "legalSource": "vehicle_tax",
+    "tags": [
+      "rules"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 233,
+    "category": "Conformidade do veículo",
+    "difficulty": "médio",
+    "question": "Vehicle tax é mainly linked to",
+    "options": [
+      "seguro risk",
+      "Legal road use",
+      "Seat belt use",
+      "Phone use"
+    ],
+    "answerIndex": 1,
+    "explanation": "Tax é required for use on public roads.",
+    "legalSource": "vehicle_tax",
+    "tags": [
+      "law"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 234,
+    "category": "Conformidade do veículo",
+    "difficulty": "difícil",
+    "question": "Por que can a car be penalised for dangerous defects even Se it has an MOT booked?",
+    "options": [
+      "Booking é not compliance",
+      "It lowers fuel",
+      "It improves tyres",
+      "It changes tax"
+    ],
+    "answerIndex": 0,
+    "explanation": "A booking does not make an unsafe car lawful.",
+    "legalSource": "mot",
+    "tags": [
+      "safety"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 235,
+    "category": "Conformidade do veículo",
+    "difficulty": "médio",
+    "question": "Por que does the MOT exist?",
+    "options": [
+      "To track ownership",
+      "To check roadworthiness",
+      "To set speed limits",
+      "To issue pontos"
+    ],
+    "answerIndex": 1,
+    "explanation": "MOT checks safety and roadworthiness.",
+    "legalSource": "mot",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 236,
+    "category": "Cintos de segurança",
+    "difficulty": "fácil",
+    "question": "O que é the maximum multa for not wearing a seat belt?",
+    "options": [
+      "£100",
+      "£200",
+      "£500",
+      "£1,000"
+    ],
+    "answerIndex": 2,
+    "explanation": "The maximum multa é £500.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "fine"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 237,
+    "category": "Cintos de segurança",
+    "difficulty": "fácil",
+    "question": "Quem é usually responsible for passengers under 14 using seat belts?",
+    "options": [
+      "Passenger",
+      "Driver",
+      "Insurer",
+      "Police"
+    ],
+    "answerIndex": 1,
+    "explanation": "Drivers são responsible for under-14s.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "responsibility"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 238,
+    "category": "Cintos de segurança",
+    "difficulty": "médio",
+    "question": "Por que do seat belt rules matter most in a sudden crash?",
+    "options": [
+      "They reduce injuries",
+      "They improve fuel",
+      "They lower tax",
+      "They reduce PCNs"
+    ],
+    "answerIndex": 0,
+    "explanation": "Belts reduce serious injury risk.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "safety"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 239,
+    "category": "Cintos de segurança",
+    "difficulty": "difícil",
+    "question": "Qual é a valid reason for not wearing a seat belt while condução?",
+    "options": [
+      "Short trip",
+      "Low speed",
+      "Formal medical exemption",
+      "Late for work"
+    ],
+    "answerIndex": 2,
+    "explanation": "Only formal exemptions apply.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "rules"
+    ],
+    "xp": 30,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 240,
+    "category": "Cintos de segurança",
+    "difficulty": "médio",
+    "question": "Child restraint rules exist mainly to",
+    "options": [
+      "Save fuel",
+      "Protect children",
+      "Lower tax",
+      "Improve parking"
+    ],
+    "answerIndex": 1,
+    "explanation": "Children need proper restraints for safety.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 241,
+    "category": "Pontos na carta",
+    "difficulty": "fácil",
+    "question": "Como many pontos within 3 years can trigger a totting proibição?",
+    "options": [
+      "9",
+      "10",
+      "12",
+      "15"
+    ],
+    "answerIndex": 2,
+    "explanation": "12 pontos in 3 years can trigger a proibição.",
+    "legalSource": "points",
+    "tags": [
+      "totting"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 242,
+    "category": "Pontos na carta",
+    "difficulty": "médio",
+    "question": "O que é the usual first totting proibição length?",
+    "options": [
+      "1 month",
+      "3 months",
+      "6 months",
+      "2 years"
+    ],
+    "answerIndex": 2,
+    "explanation": "A first totting proibição often starts at 6 months.",
+    "legalSource": "points",
+    "tags": [
+      "ban"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 243,
+    "category": "Pontos na carta",
+    "difficulty": "médio",
+    "question": "Por que do pontos affect seguro?",
+    "options": [
+      "Tax rules",
+      "Risk scoring",
+      "Parking rules",
+      "MOT rules"
+    ],
+    "answerIndex": 1,
+    "explanation": "pontos signal higher condução risk.",
+    "legalSource": "points",
+    "tags": [
+      "insurance"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 244,
+    "category": "Pontos na carta",
+    "difficulty": "difícil",
+    "question": "Exceptional hardship é something the court considers mainly to",
+    "options": [
+      "Remove all pontos",
+      "Avoid a proibição",
+      "Cut fuel costs",
+      "Cancel PCNs"
+    ],
+    "answerIndex": 1,
+    "explanation": "Courts may avoid a proibição in rare cases.",
+    "legalSource": "points",
+    "tags": [
+      "court"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 245,
+    "category": "Pontos na carta",
+    "difficulty": "fácil",
+    "question": "penalização pontos são recorded on seu",
+    "options": [
+      "Passport",
+      "condução carta record",
+      "MOT certificate",
+      "Parking permit"
+    ],
+    "answerIndex": 1,
+    "explanation": "pontos são recorded on seu carta.",
+    "legalSource": "points",
+    "tags": [
+      "record"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 246,
+    "category": "Álcool e drogas",
+    "difficulty": "fácil",
+    "question": "O que é the minimum proibição for drink condução?",
+    "options": [
+      "6 months",
+      "12 months",
+      "18 months",
+      "24 months"
+    ],
+    "answerIndex": 1,
+    "explanation": "Minimum proibição é 12 months.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "ban"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 247,
+    "category": "Álcool e drogas",
+    "difficulty": "médio",
+    "question": "Drink condução penalties são decided mainly by",
+    "options": [
+      "DVLA",
+      "The court",
+      "The council",
+      "seu insurer"
+    ],
+    "answerIndex": 1,
+    "explanation": "Magistrates decide penalties based on the offence.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "court"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 248,
+    "category": "Álcool e drogas",
+    "difficulty": "médio",
+    "question": "Se você são banned for 12 months or more, O que might reduce the proibição?",
+    "options": [
+      "Parking curso",
+      "Drink-conduzir rehab curso",
+      "MOT curso",
+      "seguro curso"
+    ],
+    "answerIndex": 1,
+    "explanation": "A rehab curso may reduce the proibição Se offered.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "course"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 249,
+    "category": "Álcool e drogas",
+    "difficulty": "difícil",
+    "question": "Por que é drug condução treated seriously?",
+    "options": [
+      "It affects tax",
+      "It impairs judgement and reactions",
+      "It affects parking",
+      "It affects MOT booking"
+    ],
+    "answerIndex": 1,
+    "explanation": "Impairment increases collision risk.",
+    "legalSource": "drug_driving",
+    "tags": [
+      "safety"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 250,
+    "category": "Álcool e drogas",
+    "difficulty": "médio",
+    "question": "Refusing to provide a specimen é risky because it can lead to",
+    "options": [
+      "No action",
+      "Prosecution",
+      "A parking PCN",
+      "Tax refund"
+    ],
+    "answerIndex": 1,
+    "explanation": "Refusal can lead to prosecution.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "rules"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 251,
+    "category": "Estacionamento",
+    "difficulty": "fácil",
+    "question": "Most parking tickets from councils são called",
+    "options": [
+      "NIP",
+      "PCN",
+      "SORN",
+      "FPN"
+    ],
+    "answerIndex": 1,
+    "explanation": "Council parking tickets são PCNs.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "definition"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 252,
+    "category": "Estacionamento",
+    "difficulty": "fácil",
+    "question": "Como long do você usually have to pay a PCN?",
+    "options": [
+      "7 days",
+      "14 days",
+      "21 days",
+      "28 days"
+    ],
+    "answerIndex": 3,
+    "explanation": "Most PCNs allow 28 days to pay.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "deadline"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 253,
+    "category": "Estacionamento",
+    "difficulty": "médio",
+    "question": "Por que do councils offer a discount period for PCNs?",
+    "options": [
+      "To encourage early payment",
+      "To add pontos",
+      "To force court",
+      "To extend MOT"
+    ],
+    "answerIndex": 0,
+    "explanation": "Discounts encourage early payment.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "discount"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 254,
+    "category": "Estacionamento",
+    "difficulty": "médio",
+    "question": "Se você want to challenge a PCN, O que do você normally do first?",
+    "options": [
+      "Contact the council",
+      "Contact DVLA",
+      "Contact police",
+      "Contact insurer"
+    ],
+    "answerIndex": 0,
+    "explanation": "First challenge é usually with the council.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "appeal"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 255,
+    "category": "Estacionamento",
+    "difficulty": "difícil",
+    "question": "Se a PCN stays unpaid, O que can be the end result?",
+    "options": [
+      "penalização pontos",
+      "Enforcement agents",
+      "Free parking",
+      "MOT cancellation"
+    ],
+    "answerIndex": 1,
+    "explanation": "Unpaid PCNs can progress to enforcement.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 30,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 256,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "fácil",
+    "question": "Bus lane penalties são usually issued by",
+    "options": [
+      "Local council",
+      "DVLA",
+      "DVSA",
+      "NHS"
+    ],
+    "answerIndex": 0,
+    "explanation": "Councils usually enforce bus lanes.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "authority"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 257,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "fácil",
+    "question": "For a bus lane PCN, Quem é normally liable?",
+    "options": [
+      "Registered keeper",
+      "Passenger",
+      "Instructor",
+      "Mechanic"
+    ],
+    "answerIndex": 0,
+    "explanation": "Liability normally sits with the keeper.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "liability"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 258,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "médio",
+    "question": "Outside London, many moving traffic appeals go to",
+    "options": [
+      "Traffic penalização Tribunal",
+      "DVLA",
+      "Police",
+      "seguro"
+    ],
+    "answerIndex": 0,
+    "explanation": "Appeals go to an independent tribunal.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "appeal"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 259,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "médio",
+    "question": "O que é the main goal of bus lanes?",
+    "options": [
+      "Help buses move reliably",
+      "Increase parking",
+      "Reduce MOTs",
+      "Raise tax"
+    ],
+    "answerIndex": 0,
+    "explanation": "Bus lanes support public transport flow.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 260,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "difícil",
+    "question": "Por que são many moving traffic penalties issued to the keeper instead of the driver?",
+    "options": [
+      "Evidence é easier",
+      "Owner liability rules",
+      "pontos system",
+      "MOT system"
+    ],
+    "answerIndex": 1,
+    "explanation": "Owner liability makes enforcement simpler.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "liability"
+    ],
+    "xp": 30,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 261,
+    "category": "Excesso de velocidade",
+    "difficulty": "médio",
+    "question": "Se você already have pontos, Por que does speeding again matter more?",
+    "options": [
+      "It resets pontos",
+      "It raises totting risk",
+      "It reduces fines",
+      "It lowers tax"
+    ],
+    "answerIndex": 1,
+    "explanation": "More pontos raise proibição risk.",
+    "legalSource": "points",
+    "tags": [
+      "totting"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 262,
+    "category": "Telemóvel",
+    "difficulty": "médio",
+    "question": "Por que é using a phone at traffic lights still treated as an offence?",
+    "options": [
+      "você são still condução",
+      "It blocks buses",
+      "It affects MOT",
+      "It changes tax"
+    ],
+    "answerIndex": 0,
+    "explanation": "você são still in control of the vehicle.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "rules"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 263,
+    "category": "Seguro",
+    "difficulty": "médio",
+    "question": "Se você conduzir uninsured, O que é a realistic extra consequence besides pontos and multa?",
+    "options": [
+      "Vehicle can be seized",
+      "MOT becomes free",
+      "Tax é refunded",
+      "Parking é free"
+    ],
+    "answerIndex": 0,
+    "explanation": "Police can seize uninsured vehicles.",
+    "legalSource": "insurance",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 264,
+    "category": "Conformidade do veículo",
+    "difficulty": "médio",
+    "question": "Qual é the best reason to keep seu vehicle roadworthy?",
+    "options": [
+      "Lower fuel tax",
+      "Safety for everyone",
+      "Free parking",
+      "Fewer traffic lights"
+    ],
+    "answerIndex": 1,
+    "explanation": "Roadworthy vehicles reduce crash risk.",
+    "legalSource": "mot",
+    "tags": [
+      "safety"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 265,
+    "category": "Álcool e drogas",
+    "difficulty": "médio",
+    "question": "O que é a key reason drink condução penalties são strict?",
+    "options": [
+      "To raise money",
+      "High safety risk",
+      "To reduce parking",
+      "To lower seguro"
+    ],
+    "answerIndex": 1,
+    "explanation": "Impairment creates high crash risk.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "safety"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 266,
+    "category": "Estacionamento",
+    "difficulty": "fácil",
+    "question": "A PCN é usually enforced under",
+    "options": [
+      "Civil rules",
+      "Criminal pontos rules",
+      "MOT rules",
+      "seguro rules"
+    ],
+    "answerIndex": 0,
+    "explanation": "PCNs são normally civil enforcement.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "law"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 267,
+    "category": "Pontos na carta",
+    "difficulty": "fácil",
+    "question": "Totting bans exist mainly to",
+    "options": [
+      "Reward drivers",
+      "Remove repeat risk",
+      "Reduce parking",
+      "Change tax"
+    ],
+    "answerIndex": 1,
+    "explanation": "They deter repeat offending and reduce risk.",
+    "legalSource": "points",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 268,
+    "category": "Cintos de segurança",
+    "difficulty": "fácil",
+    "question": "Se a passenger refuses a seat belt, O que should the driver do?",
+    "options": [
+      "Ignore it",
+      "Insist they buckle up",
+      "conduzir faster",
+      "Call DVLA"
+    ],
+    "answerIndex": 1,
+    "explanation": "Drivers should ensure passengers são belted where required.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "safety"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 269,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "fácil",
+    "question": "Qual é more likely a council-issued penalização than a pontos offence?",
+    "options": [
+      "Bus lane PCN",
+      "Drink condução",
+      "No seguro",
+      "Phone use"
+    ],
+    "answerIndex": 0,
+    "explanation": "Bus lane penalties são usually civil PCNs.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "law"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 270,
+    "category": "Excesso de velocidade",
+    "difficulty": "difícil",
+    "question": "O que é the biggest reason speed limits exist on different road types?",
+    "options": [
+      "Fuel saving",
+      "Different risk levels",
+      "Tax bands",
+      "Parking needs"
+    ],
+    "answerIndex": 1,
+    "explanation": "Road type affects risk and safety needs.",
+    "legalSource": "speeding",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 30,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 271,
+    "category": "Telemóvel",
+    "difficulty": "fácil",
+    "question": "O que é the safest habit before starting to conduzir?",
+    "options": [
+      "Open messages",
+      "Set phone away or mount it",
+      "Hold the phone low",
+      "Scroll quickly"
+    ],
+    "answerIndex": 1,
+    "explanation": "Avoid handheld use and set up before moving.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "safety"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 272,
+    "category": "Seguro",
+    "difficulty": "médio",
+    "question": "Por que does uninsured condução often lead to court in serious cases?",
+    "options": [
+      "It é always civil",
+      "Risk level é high",
+      "It é a parking issue",
+      "It é tax only"
+    ],
+    "answerIndex": 1,
+    "explanation": "Courts handle more serious uninsured cases.",
+    "legalSource": "insurance",
+    "tags": [
+      "court"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 273,
+    "category": "Conformidade do veículo",
+    "difficulty": "fácil",
+    "question": "Qual document most relates to roadworthiness checks?",
+    "options": [
+      "MOT",
+      "PCN",
+      "SORN",
+      "NIP"
+    ],
+    "answerIndex": 0,
+    "explanation": "MOT confirms roadworthiness standards.",
+    "legalSource": "mot",
+    "tags": [
+      "definition"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 274,
+    "category": "Pontos na carta",
+    "difficulty": "médio",
+    "question": "Por que does the law use pontos instead of only fines for some offences?",
+    "options": [
+      "Fines são banned",
+      "pontos track repeat risk",
+      "Tax needs it",
+      "Parking needs it"
+    ],
+    "answerIndex": 1,
+    "explanation": "pontos highlight repeat offending risk.",
+    "legalSource": "points",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 275,
+    "category": "Álcool e drogas",
+    "difficulty": "difícil",
+    "question": "Por que might a court offer a rehabilitation curso after a drink condução proibição?",
+    "options": [
+      "To lower tax",
+      "To reduce reoffending risk",
+      "To increase fuel",
+      "To change parking"
+    ],
+    "answerIndex": 1,
+    "explanation": "Rehab aims to reduce repeat offending.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "course"
+    ],
+    "xp": 30,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 276,
+    "category": "Estacionamento",
+    "difficulty": "médio",
+    "question": "Se você move home and a PCN goes to an old address, O que é the best prevention?",
+    "options": [
+      "Ignore post",
+      "Keep address updated",
+      "conduzir slower",
+      "Change tyres"
+    ],
+    "answerIndex": 1,
+    "explanation": "Keep vehicle records updated to receive notices.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "risk"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 277,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "médio",
+    "question": "Se você enter a bus lane by mistake, O que usually matters most?",
+    "options": [
+      "seu intention",
+      "The restriction and evidence",
+      "Fuel used",
+      "Tyre type"
+    ],
+    "answerIndex": 1,
+    "explanation": "Enforcement é based on the contravention evidence.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "rules"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 278,
+    "category": "Cintos de segurança",
+    "difficulty": "médio",
+    "question": "Por que do seat belt rules apply even on short trips?",
+    "options": [
+      "Crash risk still exists",
+      "Tax changes",
+      "MOT changes",
+      "Parking changes"
+    ],
+    "answerIndex": 0,
+    "explanation": "Most crashes happen close to home too.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "safety"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 279,
+    "category": "Excesso de velocidade",
+    "difficulty": "médio",
+    "question": "Speeding penalties can impact você most through",
+    "options": [
+      "Lower tax",
+      "Higher seguro",
+      "Free parking",
+      "MOT discounts"
+    ],
+    "answerIndex": 1,
+    "explanation": "pontos often increase seguro cost.",
+    "legalSource": "points",
+    "tags": [
+      "insurance"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 280,
+    "category": "Telemóvel",
+    "difficulty": "difícil",
+    "question": "Qual é most likely to be treated as handheld phone use?",
+    "options": [
+      "Voice call via car system",
+      "Phone in hand for filming",
+      "Sat nav built into car",
+      "Radio controls"
+    ],
+    "answerIndex": 1,
+    "explanation": "Holding the phone to film counts as use.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "rules"
+    ],
+    "xp": 30,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 281,
+    "category": "Seguro",
+    "difficulty": "fácil",
+    "question": "O que é the main risk Se você crash while uninsured?",
+    "options": [
+      "Fuel bill",
+      "Large personal costs",
+      "Free repair",
+      "Tax refund"
+    ],
+    "answerIndex": 1,
+    "explanation": "você may face major personal financial liability.",
+    "legalSource": "insurance",
+    "tags": [
+      "risk"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 282,
+    "category": "Conformidade do veículo",
+    "difficulty": "médio",
+    "question": "Qual é most likely to be enforced as a vehicle condition issue?",
+    "options": [
+      "Worn tyres",
+      "Bus lane use",
+      "Phone use",
+      "Seat belt use"
+    ],
+    "answerIndex": 0,
+    "explanation": "Tyres relate to vehicle roadworthiness.",
+    "legalSource": "mot",
+    "tags": [
+      "safety"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 283,
+    "category": "Pontos na carta",
+    "difficulty": "médio",
+    "question": "Se você são close to 12 pontos, O que é the safest strategy?",
+    "options": [
+      "Collect more pontos",
+      "Avoid further offences",
+      "Ignore letters",
+      "conduzir only at night"
+    ],
+    "answerIndex": 1,
+    "explanation": "More offences can trigger a proibição.",
+    "legalSource": "points",
+    "tags": [
+      "totting"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 284,
+    "category": "Álcool e drogas",
+    "difficulty": "médio",
+    "question": "Por que do drink condução bans often last at least 12 months?",
+    "options": [
+      "Tax rules",
+      "Safety risk level",
+      "Parking policy",
+      "MOT timing"
+    ],
+    "answerIndex": 1,
+    "explanation": "Impairment é treated as high risk.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "ban"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 285,
+    "category": "Estacionamento",
+    "difficulty": "fácil",
+    "question": "Se você want the discount on a PCN, você should normally pay",
+    "options": [
+      "After 28 days",
+      "As early as possible",
+      "After court",
+      "After MOT"
+    ],
+    "answerIndex": 1,
+    "explanation": "Discounts usually apply to early payment.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "discount"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 286,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "fácil",
+    "question": "Bus lane penalties normally add penalização pontos",
+    "options": [
+      "Yes, always",
+      "No, usually not",
+      "Only in London",
+      "Only on motorways"
+    ],
+    "answerIndex": 1,
+    "explanation": "Bus lane PCNs são usually civil with no pontos.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "law"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 287,
+    "category": "Cintos de segurança",
+    "difficulty": "fácil",
+    "question": "Qual é the best safety action before moving off?",
+    "options": [
+      "Check messages",
+      "Buckle up",
+      "Speed up early",
+      "Ignore passengers"
+    ],
+    "answerIndex": 1,
+    "explanation": "Seat belts should be fastened before moving.",
+    "legalSource": "seatbelt",
+    "tags": [
+      "safety"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 288,
+    "category": "Conformidade do veículo",
+    "difficulty": "fácil",
+    "question": "Se o seu vehicle é not taxed and not SORN, O que é likely to happen?",
+    "options": [
+      "Nothing",
+      "Enforcement action may follow",
+      "Free tax",
+      "MOT é waived"
+    ],
+    "answerIndex": 1,
+    "explanation": "DVLA can enforce tax and compliance rules.",
+    "legalSource": "vehicle_tax",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 10,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 289,
+    "category": "Telemóvel",
+    "difficulty": "médio",
+    "question": "Por que do pontos for phone use matter even after paying the multa?",
+    "options": [
+      "pontos stay on record",
+      "multa replaces pontos",
+      "pontos vanish immediately",
+      "seguro ignores pontos"
+    ],
+    "answerIndex": 0,
+    "explanation": "pontos remain on seu record for years.",
+    "legalSource": "points",
+    "tags": [
+      "record"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 290,
+    "category": "Excesso de velocidade",
+    "difficulty": "fácil",
+    "question": "Se você get 3 pontos for speeding, O que else usually happens?",
+    "options": [
+      "seguro drops",
+      "você pay a multa",
+      "seu tax reduces",
+      "seu carta upgrades"
+    ],
+    "answerIndex": 1,
+    "explanation": "Speeding usually includes a multa.",
+    "legalSource": "speeding",
+    "tags": [
+      "fine"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 291,
+    "category": "Seguro",
+    "difficulty": "médio",
+    "question": "Se police seize an uninsured vehicle, O que might você have to do to get it back?",
+    "options": [
+      "Nothing",
+      "Pay fees and show seguro",
+      "Retake theory",
+      "Get a new MOT"
+    ],
+    "answerIndex": 1,
+    "explanation": "Recovery usually needs proof of seguro and fees.",
+    "legalSource": "insurance",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 20,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 292,
+    "category": "Pontos na carta",
+    "difficulty": "médio",
+    "question": "pontos build up across different offences because the system tracks",
+    "options": [
+      "Car value",
+      "Driver behaviour",
+      "Fuel use",
+      "Parking space"
+    ],
+    "answerIndex": 1,
+    "explanation": "pontos track a driver’s risk behaviour.",
+    "legalSource": "points",
+    "tags": [
+      "purpose"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 293,
+    "category": "Álcool e drogas",
+    "difficulty": "médio",
+    "question": "Se você são banned for drink condução, O que might be required before você conduzir again?",
+    "options": [
+      "A parking permit",
+      "A new carta application",
+      "A bus lane permit",
+      "A tax rebate"
+    ],
+    "answerIndex": 1,
+    "explanation": "você may need to apply for a new carta after a proibição.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "ban"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 294,
+    "category": "Estacionamento",
+    "difficulty": "médio",
+    "question": "Por que é it risky to ignore a PCN even Se você think it é unfair?",
+    "options": [
+      "It can escalate",
+      "It gives pontos",
+      "It cancels MOT",
+      "It cancels tax"
+    ],
+    "answerIndex": 0,
+    "explanation": "Ignoring can increase the charge and enforcement risk.",
+    "legalSource": "parking_pcn",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 20,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 295,
+    "category": "Faixa BUS e trânsito em movimento",
+    "difficulty": "médio",
+    "question": "Por que é camera evidence used so often for bus lane enforcement?",
+    "options": [
+      "It é automatic",
+      "It é consistent",
+      "It lowers tax",
+      "It reduces seguro"
+    ],
+    "answerIndex": 1,
+    "explanation": "Camera evidence supports consistent enforcement.",
+    "legalSource": "bus_lane",
+    "tags": [
+      "enforcement"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 296,
+    "category": "Excesso de velocidade",
+    "difficulty": "médio",
+    "question": "Se você são offered a curso, O que é the most important requirement?",
+    "options": [
+      "você demand it",
+      "Police offer it",
+      "DVLA approves it",
+      "Insurer requests it"
+    ],
+    "answerIndex": 1,
+    "explanation": "Courses são only available Se offered.",
+    "legalSource": "speeding",
+    "tags": [
+      "course"
+    ],
+    "xp": 20,
+    "riskLevel": "baixo"
+  },
+  {
+    "id": 297,
+    "category": "Telemóvel",
+    "difficulty": "fácil",
+    "question": "Se você need directions while condução, O que é the safest legal option?",
+    "options": [
+      "Hold the phone",
+      "Use a mounted sat nav",
+      "Text a friend",
+      "Watch a video"
+    ],
+    "answerIndex": 1,
+    "explanation": "Use a mounted device and keep control.",
+    "legalSource": "mobile_phone",
+    "tags": [
+      "rules"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  },
+  {
+    "id": 298,
+    "category": "Seguro",
+    "difficulty": "fácil",
+    "question": "O que é the typical fixed penalização package for uninsured condução?",
+    "options": [
+      "£100 and 3 pontos",
+      "£300 and 6 pontos",
+      "£200 and 6 pontos",
+      "£500 and 3 pontos"
+    ],
+    "answerIndex": 1,
+    "explanation": "Typical penalização é £300 and 6 pontos.",
+    "legalSource": "insurance",
+    "tags": [
+      "fine",
+      "points"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 299,
+    "category": "Pontos na carta",
+    "difficulty": "fácil",
+    "question": "Se você reach 12 pontos, O que é the key risk?",
+    "options": [
+      "Tax increase",
+      "condução proibição",
+      "Free curso",
+      "MOT discount"
+    ],
+    "answerIndex": 1,
+    "explanation": "Totting can lead to disqualification.",
+    "legalSource": "points",
+    "tags": [
+      "ban"
+    ],
+    "xp": 10,
+    "riskLevel": "alto"
+  },
+  {
+    "id": 300,
+    "category": "Álcool e drogas",
+    "difficulty": "fácil",
+    "question": "Se você são banned for drink condução for 12 months or more, O que might reduce the proibição?",
+    "options": [
+      "Speed curso",
+      "Drink-conduzir rehab curso",
+      "Parking curso",
+      "seguro curso"
+    ],
+    "answerIndex": 1,
+    "explanation": "A rehab curso may reduce the proibição Se offered.",
+    "legalSource": "drink_driving",
+    "tags": [
+      "course"
+    ],
+    "xp": 10,
+    "riskLevel": "médio"
+  }
+]

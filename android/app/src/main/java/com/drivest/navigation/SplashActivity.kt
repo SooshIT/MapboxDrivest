@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.lifecycleScope
 import com.drivest.navigation.legal.ConsentRepository
+import com.drivest.navigation.settings.AppLanguageManager
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
@@ -19,6 +20,7 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         installSplashScreen()
         super.onCreate(savedInstanceState)
+        AppLanguageManager.applyPersistedLanguageBlocking(this)
         setContentView(R.layout.activity_splash)
         waitForFirstFrameThenNavigate()
     }

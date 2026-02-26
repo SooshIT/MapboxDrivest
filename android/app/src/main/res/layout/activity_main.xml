@@ -186,6 +186,21 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
+        android:id="@+id/appearanceModeButton"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_map_control_chip"
+        android:contentDescription="@string/appearance_mode_auto"
+        android:padding="12dp"
+        android:scaleType="fitCenter"
+        android:elevation="7dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/settingsButton"
+        app:srcCompat="@drawable/ic_appearance_auto" />
+
+    <ImageButton
         android:id="@+id/settingsButton"
         android:layout_width="52dp"
         android:layout_height="52dp"

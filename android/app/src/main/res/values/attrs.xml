@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GaugeView">
+        <attr name="gaugeDark"     format="boolean" />
+        <attr name="gaugeLabel"    format="string" />
+        <attr name="gaugeInverted" format="boolean" />
+    </declare-styleable>
+</resources>

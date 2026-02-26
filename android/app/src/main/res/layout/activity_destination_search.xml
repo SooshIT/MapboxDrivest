@@ -60,6 +60,8 @@
             android:imeOptions="actionSearch"
             android:inputType="text"
             android:maxLines="1"
+            android:textColor="#231F20"
+            android:textColorHint="#7A7376"
             android:textSize="16sp" />
     </com.google.android.material.textfield.TextInputLayout>
 

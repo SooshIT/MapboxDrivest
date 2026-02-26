@@ -1,0 +1,154 @@
+{
+  "packId": "uk_fines_penalties",
+  "version": "1",
+  "locale": "en",
+  "scoring": {
+    "basePoints": 10,
+    "streakBonusThreshold": 3,
+    "streakBonusPoints": 5,
+    "timeBonusPerSecond": 1
+  },
+  "difficultyWeights": {
+    "easy": 1.0,
+    "medium": 2.0,
+    "hard": 3.0
+  },
+  "partyHints": {
+    "eliminationThreshold": -20,
+    "eliminationEnabled": false
+  },
+  "legalSources": {
+    "rta_1988": {
+      "key": "rta_1988",
+      "title": "Road Traffic Act 1988",
+      "section": "Various sections"
+    },
+    "motor_vehicles_regulations": {
+      "key": "motor_vehicles_regulations",
+      "title": "Motor Vehicles (Construction & Use) Regulations 1986",
+      "section": "Various sections"
+    }
+  },
+  "questions": [
+    {
+      "id": "q001",
+      "difficulty": "easy",
+      "riskLevel": "high",
+      "prompt": "What is the maximum fine for using a mobile phone while driving?",
+      "options": ["£60", "£100", "£150", "£200"],
+      "answerIndex": 1,
+      "explanation": "The fixed penalty for using a mobile phone while driving is £100, with 3 penalty points added to your licence. Repeat offenders face £1,000 fines.",
+      "legalSourceKey": "rta_1988"
+    },
+    {
+      "id": "q002",
+      "difficulty": "easy",
+      "riskLevel": "medium",
+      "prompt": "What is the speed limit in a residential area with street lights?",
+      "options": ["20 mph", "30 mph", "40 mph", "50 mph"],
+      "answerIndex": 1,
+      "explanation": "The default speed limit in built-up areas with street lights is 30 mph unless otherwise indicated by traffic signs.",
+      "legalSourceKey": "rta_1988"
+    },
+    {
+      "id": "q003",
+      "difficulty": "easy",
+      "riskLevel": "high",
+      "prompt": "How many penalty points do you get for speeding at 41-50 mph in a 30 mph zone?",
+      "options": ["3 points", "4 points", "6 points", "8 points"],
+      "answerIndex": 2,
+      "explanation": "Exceeding the speed limit by 11-20 mph incurs 4 penalty points and typically a £100 fine. Going 21-30 mph over results in 6 points.",
+      "legalSourceKey": "rta_1988"
+    },
+    {
+      "id": "q004",
+      "difficulty": "medium",
+      "riskLevel": "high",
+      "prompt": "What is the minimum fine for drink driving (first offence)?",
+      "options": ["£250", "£500", "£1,000", "£2,000"],
+      "answerIndex": 2,
+      "explanation": "First-time drink driving offences carry a minimum £1,000 fine, 1-year driving ban, and 3-11 penalty points. Penalties increase for repeat offences.",
+      "legalSourceKey": "rta_1988"
+    },
+    {
+      "id": "q005",
+      "difficulty": "medium",
+      "riskLevel": "medium",
+      "prompt": "What is the fine for not displaying a valid driving licence?",
+      "options": ["£100", "£200", "£500", "£1,000"],
+      "answerIndex": 2,
+      "explanation": "Failing to produce a valid driving licence can result in a £500 fine. You have 7 days to produce it at a police station if requested during a traffic stop.",
+      "legalSourceKey": "rta_1988"
+    },
+    {
+      "id": "q006",
+      "difficulty": "medium",
+      "riskLevel": "high",
+      "prompt": "How many penalty points for failing to wear a seatbelt?",
+      "options": ["1 point", "3 points", "5 points", "6 points"],
+      "answerIndex": 1,
+      "explanation": "Not wearing a seatbelt incurs 3 penalty points and a £100 fine. This applies to drivers and front-seat passengers.",
+      "legalSourceKey": "motor_vehicles_regulations"
+    },
+    {
+      "id": "q007",
+      "difficulty": "hard",
+      "riskLevel": "high",
+      "prompt": "What is the maximum fine for careless driving (first offence)?",
+      "options": ["£500", "£1,000", "£2,500", "£5,000"],
+      "answerIndex": 2,
+      "explanation": "Careless driving can result in a maximum £2,500 fine, 3-9 penalty points, and a discretionary driving ban. The offence carries higher penalties than speeding.",
+      "legalSourceKey": "rta_1988"
+    },
+    {
+      "id": "q008",
+      "difficulty": "hard",
+      "riskLevel": "high",
+      "prompt": "At what distance must you park from a junction?",
+      "options": ["5 metres", "10 metres", "15 metres", "20 metres"],
+      "answerIndex": 1,
+      "explanation": "You must not park within 10 metres of a junction (measured from the nearest corner of the road). Parking too close can result in a Penalty Charge Notice.",
+      "legalSourceKey": "motor_vehicles_regulations"
+    },
+    {
+      "id": "q009",
+      "difficulty": "medium",
+      "riskLevel": "low",
+      "prompt": "What is the fine for not having a valid MOT certificate?",
+      "options": ["£50", "£100", "£250", "£1,000"],
+      "answerIndex": 3,
+      "explanation": "Driving without a valid MOT is a serious offence with a maximum fine of £1,000. Your vehicle will fail any insurance claim if uninsured.",
+      "legalSourceKey": "rta_1988"
+    },
+    {
+      "id": "q010",
+      "difficulty": "easy",
+      "riskLevel": "medium",
+      "prompt": "How much can you be fined for having broken headlights?",
+      "options": ["£50", "£100", "£200", "£500"],
+      "answerIndex": 1,
+      "explanation": "Driving with defective lights can result in a £100 fixed penalty fine. Ensure all lights are working before driving, especially at night.",
+      "legalSourceKey": "motor_vehicles_regulations"
+    },
+    {
+      "id": "q011",
+      "difficulty": "hard",
+      "riskLevel": "high",
+      "prompt": "What is the maximum fine for dangerous driving (first offence)?",
+      "options": ["£2,500", "£5,000", "£10,000", "Unlimited"],
+      "answerIndex": 3,
+      "explanation": "Dangerous driving can result in an unlimited fine, up to 2 years imprisonment, and a mandatory driving ban. This is a serious criminal offence.",
+      "legalSourceKey": "rta_1988"
+    },
+    {
+      "id": "q012",
+      "difficulty": "medium",
+      "riskLevel": "medium",
+      "prompt": "What is the fine for not displaying a tax disc (if required)?",
+      "options": ["£100", "£200", "£500", "£1,000"],
+      "answerIndex": 2,
+      "explanation": "While tax discs were abolished in 2014, vehicles before that date may still be checked. Fines for vehicle tax evasion can reach £1,000+.",
+      "legalSourceKey": "rta_1988"
+    }
+  ]
+}

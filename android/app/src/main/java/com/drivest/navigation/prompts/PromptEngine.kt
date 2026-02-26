@@ -1,6 +1,7 @@
 package com.drivest.navigation.prompts
 
 import com.drivest.navigation.geo.RouteProjection
+import com.drivest.navigation.osm.BusLaneAccessChecker
 import com.drivest.navigation.osm.OsmFeature
 import com.drivest.navigation.osm.OsmFeatureType
 import com.drivest.navigation.settings.PromptSensitivity
@@ -31,8 +32,6 @@ class PromptEngine {
     ): PromptEvent? {
         if (!visualEnabled) return null
         if (gpsAccuracyM > MAX_GPS_ACCURACY_M) return null
-        if (upcomingManeuverTimeS != null && upcomingManeuverTimeS < MANEUVER_TIME_SUPPRESSION_S) return null
-        if (upcomingManeuverDistanceM != null && upcomingManeuverDistanceM < MANEUVER_DISTANCE_SUPPRESSION_M) return null
         if (features.isEmpty()) return null
 
         val locationPoint = Point.fromLngLat(locationLon, locationLat)
@@ -41,6 +40,13 @@ class PromptEngine {
         for (feature in features) {
             val promptType = feature.type.toPromptType() ?: continue
             if (feature.confidenceHint < VISUAL_MIN_CONFIDENCE_HINT) continue
+            // Junction-type features (give way, traffic lights, roundabouts) naturally sit AT
+            // route maneuvers, so the global maneuver suppression must not apply to them.
+            // For all other feature types, suppress when the driver must focus on the upcoming turn.
+            if (!promptType.isJunctionType()) {
+                if (upcomingManeuverTimeS != null && upcomingManeuverTimeS < MANEUVER_TIME_SUPPRESSION_S) continue
+                if (upcomingManeuverDistanceM != null && upcomingManeuverDistanceM < MANEUVER_DISTANCE_SUPPRESSION_M) continue
+            }
             val featurePoint = Point.fromLngLat(feature.lon, feature.lat)
             val state = featurePromptState.getOrPut(feature.id) { FeaturePromptState() }
             val directDistance = distanceMeters(
@@ -84,12 +90,23 @@ class PromptEngine {
                 if (lastFiredAt != null && nowMs - lastFiredAt < TYPE_COOLDOWN_MS) continue
             }
 
+            val busLaneRestricted: Boolean? = if (promptType == PromptType.BUS_LANE) {
+                // null from checker means no conditional data → treat as restricted (safe default)
+                BusLaneAccessChecker.isRestrictedNow(feature.tags, nowMs) ?: true
+            } else null
+            // Restricted bus lanes are elevated to priority 4 (hazard level); open ones stay at 1 (advisory).
+            val effectivePriority = if (promptType == PromptType.BUS_LANE) {
+                if (busLaneRestricted == true) 4 else 1
+            } else {
+                priority(promptType)
+            } + if (stage == TriggerStage.SECONDARY) 1 else 0
             candidates += Candidate(
                 feature = feature,
                 type = promptType,
                 stage = stage,
                 distanceM = distanceAheadMeters.roundToInt(),
-                priority = priority(promptType) + if (stage == TriggerStage.SECONDARY) 1 else 0
+                priority = effectivePriority,
+                busLaneRestricted = busLaneRestricted
             )
         }
 
@@ -121,12 +138,13 @@ class PromptEngine {
         return PromptEvent(
             id = "${selected.feature.id}:$nowMs",
             type = selected.type,
-            message = messageFor(selected.type),
+            message = messageFor(selected.type, selected.busLaneRestricted),
             featureId = selected.feature.id,
             priority = selected.priority,
             distanceM = selected.distanceM,
             expiresAtEpochMs = nowMs + VISUAL_EXPIRY_MS,
-            confidenceHint = selected.feature.confidenceHint
+            confidenceHint = selected.feature.confidenceHint,
+            busLaneRestricted = selected.busLaneRestricted
         )
     }
 
@@ -226,7 +244,7 @@ class PromptEngine {
         }
     }
 
-    private fun messageFor(type: PromptType): String {
+    private fun messageFor(type: PromptType, busLaneRestricted: Boolean? = null): String {
         return when (type) {
             PromptType.NO_ENTRY -> "No entry ahead. Rerouting."
             PromptType.ROUNDABOUT -> "Advisory: roundabout ahead"
@@ -236,9 +254,21 @@ class PromptEngine {
             PromptType.GIVE_WAY -> "Advisory: give way ahead"
             PromptType.TRAFFIC_SIGNAL -> "Advisory: traffic lights ahead"
             PromptType.SPEED_CAMERA -> "Advisory: speed camera ahead"
-            PromptType.BUS_LANE -> "Advisory: bus lane ahead"
+            PromptType.BUS_LANE -> when (busLaneRestricted) {
+                true -> "Bus lane ahead — no entry now"
+                false -> "Bus lane ahead — open to traffic"
+                null -> "Advisory: bus lane ahead"
+            }
             PromptType.BUS_STOP -> "Advisory: bus stop ahead"
         }
+    }
+
+    private fun PromptType.isJunctionType(): Boolean = when (this) {
+        PromptType.GIVE_WAY,
+        PromptType.TRAFFIC_SIGNAL,
+        PromptType.MINI_ROUNDABOUT,
+        PromptType.ROUNDABOUT -> true
+        else -> false
     }
 
     private fun OsmFeatureType.toPromptType(): PromptType? {
@@ -276,7 +306,8 @@ class PromptEngine {
         val type: PromptType,
         val stage: TriggerStage,
         val distanceM: Int,
-        val priority: Int
+        val priority: Int,
+        val busLaneRestricted: Boolean? = null
     )
 
     private data class FeaturePromptState(

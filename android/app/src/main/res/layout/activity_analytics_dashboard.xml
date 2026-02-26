@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_app_surface"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Top bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/analyticsBackButton"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/bg_map_control_chip"
+                android:contentDescription="@string/analytics_back"
+                android:padding="10dp"
+                android:src="@android:drawable/ic_media_previous"
+                android:tint="@color/settings_text_primary" />
+
+            <TextView
+                android:id="@+id/analyticsTopTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_weight="1"
+                android:text="@string/analytics_title"
+                android:textColor="@color/settings_text_primary"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/analyticsRefreshButton"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:background="@drawable/bg_map_control_chip"
+                android:contentDescription="@string/analytics_refresh"
+                android:padding="10dp"
+                android:src="@android:drawable/ic_popup_sync"
+                android:tint="@color/settings_accent" />
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/analyticsLoadingSpinner"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:indeterminate="true" />
+
+        <LinearLayout
+            android:id="@+id/analyticsErrorCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/bg_app_card"
+            android:orientation="vertical"
+            android:padding="14dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/analyticsErrorMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/analytics_load_failed"
+                android:textColor="@color/settings_text_primary"
+                android:textSize="13sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/analyticsRetryButton"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/analytics_retry"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/analyticsContentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!-- ══════════════════════════════════════════
+                 Hero — centred gauge + stat chips
+                 ══════════════════════════════════════════ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_analytics_hero"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/analytics_hero_title"
+                    android:textColor="#FFFFFF"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/analytics_hero_subtitle"
+                    android:textColor="#DCE7FF"
+                    android:textSize="12sp" />
+
+                <!-- Readiness gauge — 220 dp wide, centred -->
+                <com.drivest.navigation.analytics.GaugeView
+                    android:id="@+id/analyticsHeroGauge"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="6dp"
+                    app:gaugeDark="true"
+                    app:gaugeLabel="@string/analytics_gauge_combined" />
+
+                <!-- Momentum chip -->
+                <TextView
+                    android:id="@+id/analyticsHeroMomentumValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/bg_analytics_hero_chip"
+                    android:paddingStart="12dp"
+                    android:paddingTop="5dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="5dp"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <!-- Stat chips row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/analyticsHeroSessionsChip"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_analytics_hero_chip"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/analyticsHeroCompletionChip"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_analytics_hero_chip"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/analyticsHeroStreakChip"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_analytics_hero_chip"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/analyticsHeroDistanceChip"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_analytics_hero_chip"
+                        android:gravity="center"
+                        android:padding="6dp"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/analyticsHeroSupportLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#DCE7FF"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <!-- ══════════════════════════════════════════
+                 Performance Snapshot — 2×2 gauge grid
+                 ══════════════════════════════════════════ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_app_card"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/analytics_snapshot_title"
+                    android:textColor="@color/settings_text_primary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <!-- Row 1 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <com.drivest.navigation.analytics.GaugeView
+                        android:id="@+id/analyticsGaugeConfidence"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:gaugeLabel="@string/analytics_gauge_confidence" />
+
+                    <com.drivest.navigation.analytics.GaugeView
+                        android:id="@+id/analyticsGaugeCompletion"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        app:gaugeLabel="@string/analytics_gauge_completion" />
+                </LinearLayout>
+
+                <!-- Row 2 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <com.drivest.navigation.analytics.GaugeView
+                        android:id="@+id/analyticsGaugeTheoryReadiness"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        app:gaugeLabel="@string/analytics_gauge_theory_readiness" />
+
+                    <com.drivest.navigation.analytics.GaugeView
+                        android:id="@+id/analyticsGaugeTheoryAccuracy"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        app:gaugeLabel="@string/analytics_gauge_theory_accuracy" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- ══════════════════════════════════════════
+                 Driving focus areas — gauge grid (inverted)
+                 ══════════════════════════════════════════ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_app_card"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <!-- Section header with "See all" link -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/analytics_focus_areas_title"
+                        android:textColor="@color/settings_text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/analyticsHazardSeeAllButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_app_chip"
+                        android:paddingStart="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="4dp"
+                        android:text="@string/analytics_see_all"
+                        android:textColor="@color/app_chip_text"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/analyticsHazardEmpty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/analytics_hazard_empty"
+                    android:textColor="@color/settings_text_secondary"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <!-- Gauge rows inflated here dynamically -->
+                <LinearLayout
+                    android:id="@+id/analyticsHazardRowsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <!-- ══════════════════════════════════════════
+                 Theory signals — weakest topics gauge grid
+                 ══════════════════════════════════════════ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_app_card"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <!-- Section header with "See all" link -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/analytics_theory_title"
+                        android:textColor="@color/settings_text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/analyticsTheorySeeAllButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_app_chip"
+                        android:paddingStart="10dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="10dp"
+                        android:paddingBottom="4dp"
+                        android:text="@string/analytics_see_all"
+                        android:textColor="@color/app_chip_text"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/analyticsTheorySummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@color/settings_text_secondary"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/analyticsTheoryEmpty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/analytics_theory_empty"
+                    android:textColor="@color/settings_text_secondary"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/analytics_weak_topics"
+                    android:textColor="@color/settings_text_primary"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <!-- Gauge rows inflated here dynamically -->
+                <LinearLayout
+                    android:id="@+id/analyticsWeakTopicsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <!-- ══════════════════════════════════════════
+                 Action plan
+                 ══════════════════════════════════════════ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_app_card"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/analytics_action_plan_title"
+                    android:textColor="@color/settings_text_primary"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/analyticsActionPlanContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="vertical" />
+            </LinearLayout>
+
+            <!-- ══════════════════════════════════════════
+                 Recent drives
+                 ══════════════════════════════════════════ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_app_card"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/analytics_recent_sessions_title"
+                        android:textColor="@color/settings_text_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/analyticsWindowFiveButton"
+                            style="?attr/materialButtonOutlinedStyle"
+                            android:layout_width="46dp"
+                            android:layout_height="30dp"
+                            android:insetBottom="0dp"
+                            android:insetTop="0dp"
+                            android:minHeight="0dp"
+                            android:minWidth="0dp"
+                            android:text="@string/analytics_window_5"
+                            android:textAllCaps="false"
+                            android:textSize="11sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/analyticsWindowTenButton"
+                            style="?attr/materialButtonOutlinedStyle"
+                            android:layout_width="46dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="4dp"
+                            android:insetBottom="0dp"
+                            android:insetTop="0dp"
+                            android:minHeight="0dp"
+                            android:minWidth="0dp"
+                            android:text="@string/analytics_window_10"
+                            android:textAllCaps="false"
+                            android:textSize="11sp" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/analyticsWindowAllButton"
+                            style="?attr/materialButtonOutlinedStyle"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="4dp"
+                            android:insetBottom="0dp"
+                            android:insetTop="0dp"
+                            android:minHeight="0dp"
+                            android:minWidth="0dp"
+                            android:text="@string/analytics_window_all"
+                            android:textAllCaps="false"
+                            android:textSize="11sp" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/analyticsRecentSessionsEmpty"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/analytics_recent_sessions_empty"
+                    android:textColor="@color/settings_text_secondary"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/analyticsRecentSessionsContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

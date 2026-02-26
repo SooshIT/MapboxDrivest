@@ -3,7 +3,7 @@ package com.drivest.navigation.subscription
 import com.drivest.navigation.BuildConfig
 
 object BillingConfig {
-    val ENABLE_BILLING: Boolean = BuildConfig.DEBUG
+    val ENABLE_BILLING: Boolean = true
 
     const val SKU_PRACTICE_MONTHLY: String = "drivest_practice_monthly"
     const val SKU_GLOBAL_ANNUAL: String = "drivest_global_annual"

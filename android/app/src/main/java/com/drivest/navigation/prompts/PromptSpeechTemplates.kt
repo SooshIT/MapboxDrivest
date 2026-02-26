@@ -61,7 +61,11 @@ object PromptSpeechTemplates {
             PromptType.SPEED_CAMERA -> {
                 context.getString(R.string.prompt_speech_speed_camera)
             }
-            PromptType.BUS_LANE -> context.getString(R.string.prompt_speech_bus_lane)
+            PromptType.BUS_LANE -> when (prompt.busLaneRestricted) {
+                true -> context.getString(R.string.prompt_speech_bus_lane_restricted)
+                false -> context.getString(R.string.prompt_speech_bus_lane_open)
+                null -> context.getString(R.string.prompt_speech_bus_lane)
+            }
             PromptType.BUS_STOP -> context.getString(R.string.prompt_speech_bus_stop)
             PromptType.NO_ENTRY -> context.getString(R.string.prompt_speech_no_entry)
         }

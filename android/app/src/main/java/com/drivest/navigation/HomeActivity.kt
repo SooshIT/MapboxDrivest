@@ -19,6 +19,7 @@ import com.drivest.navigation.practice.DataSourcePracticeRouteStore
 import com.drivest.navigation.settings.SettingsRepository
 import com.drivest.navigation.subscription.FeatureAccessManager
 import com.drivest.navigation.subscription.SubscriptionRepository
+import com.drivest.navigation.highwaycode.HighwayCodeActivity
 import com.drivest.navigation.theory.TheoryFeatureFlags
 import com.drivest.navigation.theory.content.TheoryReadinessCalculator
 import com.drivest.navigation.theory.content.TheoryReadinessLabel
@@ -66,6 +67,9 @@ class HomeActivity : AppCompatActivity() {
         val practiceModeButton = findViewById<MaterialButton>(R.id.practiceModeButton)
         val navigationModeButton = findViewById<MaterialButton>(R.id.navigationModeButton)
         val theoryModeButton = findViewById<MaterialButton>(R.id.theoryModeButton)
+        val trafficSignsModeButton = findViewById<MaterialButton>(R.id.trafficSignsModeButton)
+        val analyticsModeButton = findViewById<MaterialButton>(R.id.analyticsModeButton)
+        val highwayCodeModeButton = findViewById<MaterialButton>(R.id.highwayCodeModeButton)
         val theoryTileContainer = findViewById<View>(R.id.homeTheoryTileContainer)
         val theoryProgressBadgeView = findViewById<TextView>(R.id.homeTheoryProgressBadge)
         val theoryReadinessView = findViewById<TextView>(R.id.homeTheoryReadinessValue)
@@ -119,6 +123,21 @@ class HomeActivity : AppCompatActivity() {
             theoryTileContainer.visibility = View.GONE
             theoryReadinessView.visibility = View.GONE
             modeRow.weightSum = 2f
+        }
+
+        trafficSignsModeButton.setOnClickListener {
+            startActivity(Intent(this, TrafficSignsActivity::class.java))
+        }
+        analyticsModeButton.setOnClickListener {
+            startActivity(Intent(this, AnalyticsDashboardActivity::class.java))
+        }
+        highwayCodeModeButton.setOnClickListener {
+            startActivity(Intent(this, HighwayCodeActivity::class.java))
+        }
+
+        val quizModeButton = findViewById<MaterialButton>(R.id.quizModeButton)
+        quizModeButton.setOnClickListener {
+            startActivity(Intent(this, com.drivest.navigation.quiz.ui.QuizHubActivity::class.java))
         }
 
         findViewById<ImageButton>(R.id.homeSettingsButton).setOnClickListener {
@@ -218,6 +237,6 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private companion object {
-        const val THEORY_TOPIC_COUNT_FALLBACK = 12
+        const val THEORY_TOPIC_COUNT_FALLBACK = 10
     }
 }

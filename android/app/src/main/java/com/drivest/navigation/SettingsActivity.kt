@@ -10,7 +10,9 @@ import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
 import androidx.core.view.isVisible
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import com.drivest.navigation.databinding.ActivitySettingsBinding
 import com.drivest.navigation.legal.ConsentRepository
 import com.drivest.navigation.legal.LegalConstants
@@ -22,8 +24,14 @@ import com.drivest.navigation.profile.DriverProfileRepository
 import com.drivest.navigation.profile.ModeSuggestionApplier
 import com.drivest.navigation.report.SessionSummaryExporter
 import com.drivest.navigation.settings.AnalyticsConsentGate
+import com.drivest.navigation.settings.AppLanguageManager
+import com.drivest.navigation.settings.AppLanguageSetting
+import com.drivest.navigation.settings.AppearanceModeSetting
+import com.drivest.navigation.settings.DataSourceMode
 import com.drivest.navigation.settings.PreferredUnitsSetting
 import com.drivest.navigation.settings.PromptSensitivity
+import com.drivest.navigation.settings.SpeedingThresholdSetting
+import com.drivest.navigation.settings.SpeedLimitDisplaySetting
 import com.drivest.navigation.settings.SettingsRepository
 import com.drivest.navigation.settings.VoiceModeSetting
 import com.drivest.navigation.subscription.SubscriptionRepository
@@ -52,6 +60,7 @@ class SettingsActivity : AppCompatActivity() {
     private lateinit var packStore: PackStore
     private val summaryExporter by lazy { SessionSummaryExporter(applicationContext) }
     private var isSuppressingCallbacks: Boolean = false
+    private var selectedAppLanguage: AppLanguageSetting = AppLanguageSetting.ENGLISH_UK
     private val analyticsConsentReviewLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) {
@@ -75,6 +84,7 @@ class SettingsActivity : AppCompatActivity() {
         subscriptionRepository = SubscriptionRepository(applicationContext)
         packStore = PackStore(applicationContext)
         binding.theorySettingsButton.isVisible = TheoryFeatureFlags.isTheoryModuleEnabled()
+        binding.dataSourceModeContainer.isVisible = BuildConfig.DEBUG
         settingsRepository.refreshNotificationsPermission()
         lifecycleScope.launch {
             syncAnalyticsSettingToConsent()
@@ -94,20 +104,68 @@ class SettingsActivity : AppCompatActivity() {
 
     private fun observeSettings() {
         lifecycleScope.launch {
-            val navigationSettingsFlow = combine(
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                settingsRepository.appearanceMode.collectLatest { mode ->
+                    renderAppearanceMode(mode)
+                }
+            }
+        }
+
+        lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED) {
+                settingsRepository.appLanguage.collectLatest { language ->
+                    renderAppLanguage(language)
+                }
+            }
+        }
+
+        lifecycleScope.launch {
+            val navigationCoreSettingsFlow = combine(
                 settingsRepository.voiceMode,
                 settingsRepository.units,
                 settingsRepository.hazardsEnabled,
                 settingsRepository.promptSensitivity,
                 settingsRepository.lowStressRoutingEnabled
-            ) { voiceMode, units, hazardsEnabled, promptSensitivity, lowStressRoutingEnabled ->
-                NavigationSettingsSnapshot(
+            ) {
+                voiceMode,
+                units,
+                hazardsEnabled,
+                promptSensitivity,
+                lowStressRoutingEnabled ->
+                NavigationCoreSettingsSnapshot(
                     voiceMode = voiceMode,
                     units = units,
                     hazardsEnabled = hazardsEnabled,
                     promptSensitivity = promptSensitivity,
-                    lowStressRoutingEnabled = lowStressRoutingEnabled
+                    lowStressRoutingEnabled = lowStressRoutingEnabled,
                 )
+            }
+
+            val navigationSettingsFlow = combine(
+                navigationCoreSettingsFlow,
+                settingsRepository.speedometerEnabled,
+                settingsRepository.speedLimitDisplay,
+                settingsRepository.speedingThreshold,
+                settingsRepository.speedAlertAtThresholdEnabled
+            ) { core,
+                speedometerEnabled,
+                speedLimitDisplay,
+                speedingThreshold,
+                speedAlertAtThresholdEnabled ->
+                NavigationSettingsSnapshot(
+                    voiceMode = core.voiceMode,
+                    units = core.units,
+                    hazardsEnabled = core.hazardsEnabled,
+                    promptSensitivity = core.promptSensitivity,
+                    lowStressRoutingEnabled = core.lowStressRoutingEnabled,
+                    speedometerEnabled = speedometerEnabled,
+                    speedLimitDisplay = speedLimitDisplay,
+                    speedingThreshold = speedingThreshold,
+                    speedAlertAtThresholdEnabled = speedAlertAtThresholdEnabled,
+                    dataSourceMode = DataSourceMode.BACKEND_THEN_CACHE_THEN_ASSETS
+                )
+            }.combine(settingsRepository.dataSourceMode) { snapshot, dataSourceMode ->
+                snapshot.copy(dataSourceMode = dataSourceMode)
             }
 
             val privacyCoreFlow = combine(
@@ -158,6 +216,11 @@ class SettingsActivity : AppCompatActivity() {
                         hazardsEnabled = navigation.hazardsEnabled,
                         promptSensitivity = navigation.promptSensitivity,
                         lowStressRoutingEnabled = navigation.lowStressRoutingEnabled,
+                        speedometerEnabled = navigation.speedometerEnabled,
+                        speedLimitDisplay = navigation.speedLimitDisplay,
+                        speedingThreshold = navigation.speedingThreshold,
+                        speedAlertAtThresholdEnabled = navigation.speedAlertAtThresholdEnabled,
+                        dataSourceMode = navigation.dataSourceMode,
                         analyticsEnabled = privacy.analyticsEnabled,
                         analyticsConsentEnabled = privacy.analyticsConsentEnabled,
                         analyticsSettingEnabled = privacy.analyticsSettingEnabled,
@@ -174,6 +237,11 @@ class SettingsActivity : AppCompatActivity() {
                         hazardsEnabled = base.hazardsEnabled,
                         promptSensitivity = base.promptSensitivity,
                         lowStressRoutingEnabled = base.lowStressRoutingEnabled,
+                        speedometerEnabled = base.speedometerEnabled,
+                        speedLimitDisplay = base.speedLimitDisplay,
+                        speedingThreshold = base.speedingThreshold,
+                        speedAlertAtThresholdEnabled = base.speedAlertAtThresholdEnabled,
+                        dataSourceMode = base.dataSourceMode,
                         analyticsEnabled = base.analyticsEnabled,
                         analyticsConsentEnabled = base.analyticsConsentEnabled,
                         analyticsSettingEnabled = base.analyticsSettingEnabled,
@@ -192,6 +260,11 @@ class SettingsActivity : AppCompatActivity() {
                         hazardsEnabled = settings.hazardsEnabled,
                         promptSensitivity = settings.promptSensitivity,
                         lowStressRoutingEnabled = settings.lowStressRoutingEnabled,
+                        speedometerEnabled = settings.speedometerEnabled,
+                        speedLimitDisplay = settings.speedLimitDisplay,
+                        speedingThreshold = settings.speedingThreshold,
+                        speedAlertAtThresholdEnabled = settings.speedAlertAtThresholdEnabled,
+                        dataSourceMode = settings.dataSourceMode,
                         analyticsEnabled = settings.analyticsEnabled,
                         analyticsConsentEnabled = settings.analyticsConsentEnabled,
                         analyticsSettingEnabled = settings.analyticsSettingEnabled,
@@ -212,9 +285,14 @@ class SettingsActivity : AppCompatActivity() {
                     }
                     renderVoiceMode(settings.voiceMode)
                     renderUnits(settings.units)
+                    renderSpeedometerEnabled(settings.speedometerEnabled)
+                    renderSpeedLimitDisplay(settings.speedLimitDisplay)
+                    renderSpeedingThreshold(settings.speedingThreshold)
+                    renderSpeedAlertAtThreshold(settings.speedAlertAtThresholdEnabled)
                     renderHazardsEnabled(settings.hazardsEnabled)
                     renderPromptSensitivity(settings.promptSensitivity)
                     renderLowStressRouting(settings.lowStressRoutingEnabled)
+                    renderDataSourceMode(settings.dataSourceMode)
                     renderAnalytics(settings.analyticsEnabled)
                     renderNotifications(settings.notificationsEnabled)
                     renderNotificationsStatus(
@@ -235,8 +313,12 @@ class SettingsActivity : AppCompatActivity() {
     }
 
     private fun bindListeners() {
-        binding.voiceModeRadioGroup.setOnCheckedChangeListener { _, checkedId ->
-            if (isSuppressingCallbacks) return@setOnCheckedChangeListener
+        binding.languageSelectionButton.setOnClickListener {
+            showLanguageSelectionDialog()
+        }
+
+        binding.voiceModeRadioGroup.addOnButtonCheckedListener { _, checkedId, isChecked ->
+            if (isSuppressingCallbacks || !isChecked) return@addOnButtonCheckedListener
             lifecycleScope.launch {
                 when (checkedId) {
                     R.id.voiceModeAllRadio -> settingsRepository.setVoiceMode(VoiceModeSetting.ALL)
@@ -246,8 +328,8 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
 
-        binding.unitsRadioGroup.setOnCheckedChangeListener { _, checkedId ->
-            if (isSuppressingCallbacks) return@setOnCheckedChangeListener
+        binding.unitsRadioGroup.addOnButtonCheckedListener { _, checkedId, isChecked ->
+            if (isSuppressingCallbacks || !isChecked) return@addOnButtonCheckedListener
             lifecycleScope.launch {
                 when (checkedId) {
                     R.id.unitsMphRadio -> settingsRepository.setUnits(PreferredUnitsSetting.UK_MPH)
@@ -256,13 +338,72 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
 
-        binding.driverModeRadioGroup.setOnCheckedChangeListener { _, checkedId ->
+        binding.appearanceModeRadioGroup.addOnButtonCheckedListener { _, checkedId, isChecked ->
+            if (isSuppressingCallbacks || !isChecked) return@addOnButtonCheckedListener
+            lifecycleScope.launch {
+                when (checkedId) {
+                    R.id.appearanceModeAutoRadio -> {
+                        settingsRepository.setAppearanceMode(AppearanceModeSetting.AUTO)
+                    }
+                    R.id.appearanceModeDayRadio -> {
+                        settingsRepository.setAppearanceMode(AppearanceModeSetting.DAY)
+                    }
+                    R.id.appearanceModeNightRadio -> {
+                        settingsRepository.setAppearanceMode(AppearanceModeSetting.NIGHT)
+                    }
+                }
+            }
+        }
+
+        binding.speedometerEnabledSwitch.setOnCheckedChangeListener { _, isChecked ->
             if (isSuppressingCallbacks) return@setOnCheckedChangeListener
+            lifecycleScope.launch {
+                settingsRepository.setSpeedometerEnabled(isChecked)
+            }
+        }
+
+        binding.speedLimitDisplayRadioGroup.addOnButtonCheckedListener { _, checkedId, isChecked ->
+            if (isSuppressingCallbacks || !isChecked) return@addOnButtonCheckedListener
+            lifecycleScope.launch {
+                when (checkedId) {
+                    R.id.speedLimitDisplayAlwaysRadio ->
+                        settingsRepository.setSpeedLimitDisplay(SpeedLimitDisplaySetting.ALWAYS)
+                    R.id.speedLimitDisplayOnlyWhenSpeedingRadio ->
+                        settingsRepository.setSpeedLimitDisplay(SpeedLimitDisplaySetting.ONLY_WHEN_SPEEDING)
+                    R.id.speedLimitDisplayNeverRadio ->
+                        settingsRepository.setSpeedLimitDisplay(SpeedLimitDisplaySetting.NEVER)
+                }
+            }
+        }
+
+        binding.speedingThresholdRadioGroup.addOnButtonCheckedListener { _, checkedId, isChecked ->
+            if (isSuppressingCallbacks || !isChecked) return@addOnButtonCheckedListener
+            lifecycleScope.launch {
+                when (checkedId) {
+                    R.id.speedingThresholdAtLimitRadio ->
+                        settingsRepository.setSpeedingThreshold(SpeedingThresholdSetting.AT_LIMIT)
+                    R.id.speedingThresholdPlusSmallRadio ->
+                        settingsRepository.setSpeedingThreshold(SpeedingThresholdSetting.PLUS_SMALL)
+                    R.id.speedingThresholdPlusLargeRadio ->
+                        settingsRepository.setSpeedingThreshold(SpeedingThresholdSetting.PLUS_LARGE)
+                }
+            }
+        }
+
+        binding.speedAlertAtThresholdSwitch.setOnCheckedChangeListener { _, isChecked ->
+            if (isSuppressingCallbacks) return@setOnCheckedChangeListener
+            lifecycleScope.launch {
+                settingsRepository.setSpeedAlertAtThresholdEnabled(isChecked)
+            }
+        }
+
+        binding.driverModeRadioGroup.addOnButtonCheckedListener { _, checkedId, isChecked ->
+            if (isSuppressingCallbacks || !isChecked) return@addOnButtonCheckedListener
             val selectedMode = when (checkedId) {
                 R.id.driverModeLearnerRadio -> DriverMode.LEARNER
                 R.id.driverModeNewDriverRadio -> DriverMode.NEW_DRIVER
                 R.id.driverModeStandardRadio -> DriverMode.STANDARD
-                else -> return@setOnCheckedChangeListener
+                else -> return@addOnButtonCheckedListener
             }
             lifecycleScope.launch {
                 driverProfileRepository.setDriverMode(selectedMode)
@@ -277,8 +418,8 @@ class SettingsActivity : AppCompatActivity() {
             }
         }
 
-        binding.promptSensitivityRadioGroup.setOnCheckedChangeListener { _, checkedId ->
-            if (isSuppressingCallbacks) return@setOnCheckedChangeListener
+        binding.promptSensitivityRadioGroup.addOnButtonCheckedListener { _, checkedId, isChecked ->
+            if (isSuppressingCallbacks || !isChecked) return@addOnButtonCheckedListener
             lifecycleScope.launch {
                 when (checkedId) {
                     R.id.promptSensitivityMinimalRadio ->
@@ -296,6 +437,21 @@ class SettingsActivity : AppCompatActivity() {
                             PromptSensitivity.EXTRA_HELP,
                             markUserSet = true
                         )
+                }
+            }
+        }
+
+        binding.dataSourceModeRadioGroup.addOnButtonCheckedListener { _, checkedId, isChecked ->
+            if (isSuppressingCallbacks || !isChecked) return@addOnButtonCheckedListener
+            if (!BuildConfig.DEBUG) return@addOnButtonCheckedListener
+            lifecycleScope.launch {
+                when (checkedId) {
+                    R.id.dataSourceBackendCacheAssetsRadio ->
+                        settingsRepository.setDataSourceMode(DataSourceMode.BACKEND_THEN_CACHE_THEN_ASSETS)
+                    R.id.dataSourceBackendOnlyRadio ->
+                        settingsRepository.setDataSourceMode(DataSourceMode.BACKEND_ONLY)
+                    R.id.dataSourceAssetsOnlyRadio ->
+                        settingsRepository.setDataSourceMode(DataSourceMode.ASSETS_ONLY)
                 }
             }
         }
@@ -384,23 +540,122 @@ class SettingsActivity : AppCompatActivity() {
             VoiceModeSetting.ALERTS -> R.id.voiceModeAlertsRadio
             VoiceModeSetting.MUTE -> R.id.voiceModeMuteRadio
         }
-        if (binding.voiceModeRadioGroup.checkedRadioButtonId != targetId) {
+        if (binding.voiceModeRadioGroup.checkedButtonId != targetId) {
             withSuppressedCallbacks {
                 binding.voiceModeRadioGroup.check(targetId)
             }
         }
     }
 
+    private fun renderAppLanguage(language: AppLanguageSetting) {
+        selectedAppLanguage = language
+        val label = AppLanguageManager.label(this, language)
+        if (binding.languageSelectionButton.text?.toString() != label) {
+            binding.languageSelectionButton.text = label
+        }
+    }
+
     private fun renderUnits(units: PreferredUnitsSetting) {
+        updateSpeedingThresholdOptionLabels(units)
         val targetId = when (units) {
             PreferredUnitsSetting.UK_MPH -> R.id.unitsMphRadio
             PreferredUnitsSetting.METRIC_KMH -> R.id.unitsKmhRadio
         }
-        if (binding.unitsRadioGroup.checkedRadioButtonId != targetId) {
+        if (binding.unitsRadioGroup.checkedButtonId != targetId) {
             withSuppressedCallbacks {
                 binding.unitsRadioGroup.check(targetId)
             }
         }
+    }
+
+    private fun renderSpeedometerEnabled(enabled: Boolean) {
+        if (binding.speedometerEnabledSwitch.isChecked != enabled) {
+            withSuppressedCallbacks {
+                binding.speedometerEnabledSwitch.isChecked = enabled
+            }
+        }
+    }
+
+    private fun renderSpeedLimitDisplay(setting: SpeedLimitDisplaySetting) {
+        val targetId = when (setting) {
+            SpeedLimitDisplaySetting.ALWAYS -> R.id.speedLimitDisplayAlwaysRadio
+            SpeedLimitDisplaySetting.ONLY_WHEN_SPEEDING -> R.id.speedLimitDisplayOnlyWhenSpeedingRadio
+            SpeedLimitDisplaySetting.NEVER -> R.id.speedLimitDisplayNeverRadio
+        }
+        if (binding.speedLimitDisplayRadioGroup.checkedButtonId != targetId) {
+            withSuppressedCallbacks {
+                binding.speedLimitDisplayRadioGroup.check(targetId)
+            }
+        }
+    }
+
+    private fun renderSpeedingThreshold(setting: SpeedingThresholdSetting) {
+        val targetId = when (setting) {
+            SpeedingThresholdSetting.AT_LIMIT -> R.id.speedingThresholdAtLimitRadio
+            SpeedingThresholdSetting.PLUS_SMALL -> R.id.speedingThresholdPlusSmallRadio
+            SpeedingThresholdSetting.PLUS_LARGE -> R.id.speedingThresholdPlusLargeRadio
+        }
+        if (binding.speedingThresholdRadioGroup.checkedButtonId != targetId) {
+            withSuppressedCallbacks {
+                binding.speedingThresholdRadioGroup.check(targetId)
+            }
+        }
+    }
+
+    private fun renderSpeedAlertAtThreshold(enabled: Boolean) {
+        if (binding.speedAlertAtThresholdSwitch.isChecked != enabled) {
+            withSuppressedCallbacks {
+                binding.speedAlertAtThresholdSwitch.isChecked = enabled
+            }
+        }
+    }
+
+    private fun updateSpeedingThresholdOptionLabels(units: PreferredUnitsSetting) {
+        val plusSmallLabel = when (units) {
+            PreferredUnitsSetting.UK_MPH -> getString(R.string.settings_speeding_threshold_plus_mph, 5)
+            PreferredUnitsSetting.METRIC_KMH -> getString(R.string.settings_speeding_threshold_plus_kmh, 10)
+        }
+        val plusLargeLabel = when (units) {
+            PreferredUnitsSetting.UK_MPH -> getString(R.string.settings_speeding_threshold_plus_mph, 10)
+            PreferredUnitsSetting.METRIC_KMH -> getString(R.string.settings_speeding_threshold_plus_kmh, 20)
+        }
+        binding.speedingThresholdPlusSmallRadio.text = plusSmallLabel
+        binding.speedingThresholdPlusLargeRadio.text = plusLargeLabel
+    }
+
+    private fun renderAppearanceMode(mode: AppearanceModeSetting) {
+        val targetId = when (mode) {
+            AppearanceModeSetting.AUTO -> R.id.appearanceModeAutoRadio
+            AppearanceModeSetting.DAY -> R.id.appearanceModeDayRadio
+            AppearanceModeSetting.NIGHT -> R.id.appearanceModeNightRadio
+        }
+        if (binding.appearanceModeRadioGroup.checkedButtonId != targetId) {
+            withSuppressedCallbacks {
+                binding.appearanceModeRadioGroup.check(targetId)
+            }
+        }
+    }
+
+    private fun showLanguageSelectionDialog() {
+        val options = AppLanguageManager.supportedLanguages
+        val labels = options.map { AppLanguageManager.label(this, it) }.toTypedArray()
+        val checkedIndex = options.indexOf(selectedAppLanguage).coerceAtLeast(0)
+        MaterialAlertDialogBuilder(this)
+            .setTitle(R.string.settings_language_dialog_title)
+            .setSingleChoiceItems(labels, checkedIndex) { dialog, which ->
+                val selected = options.getOrNull(which) ?: return@setSingleChoiceItems
+                if (selected == selectedAppLanguage) {
+                    dialog.dismiss()
+                    return@setSingleChoiceItems
+                }
+                lifecycleScope.launch {
+                    settingsRepository.setAppLanguage(selected)
+                    AppLanguageManager.apply(selected)
+                }
+                dialog.dismiss()
+            }
+            .setNegativeButton(R.string.settings_cancel, null)
+            .show()
     }
 
     private fun renderHazardsEnabled(enabled: Boolean) {
@@ -417,9 +672,23 @@ class SettingsActivity : AppCompatActivity() {
             PromptSensitivity.STANDARD -> R.id.promptSensitivityStandardRadio
             PromptSensitivity.EXTRA_HELP -> R.id.promptSensitivityExtraHelpRadio
         }
-        if (binding.promptSensitivityRadioGroup.checkedRadioButtonId != targetId) {
+        if (binding.promptSensitivityRadioGroup.checkedButtonId != targetId) {
             withSuppressedCallbacks {
                 binding.promptSensitivityRadioGroup.check(targetId)
+            }
+        }
+    }
+
+    private fun renderDataSourceMode(mode: DataSourceMode) {
+        if (!BuildConfig.DEBUG || !binding.dataSourceModeContainer.isVisible) return
+        val targetId = when (mode) {
+            DataSourceMode.BACKEND_THEN_CACHE_THEN_ASSETS -> R.id.dataSourceBackendCacheAssetsRadio
+            DataSourceMode.BACKEND_ONLY -> R.id.dataSourceBackendOnlyRadio
+            DataSourceMode.ASSETS_ONLY -> R.id.dataSourceAssetsOnlyRadio
+        }
+        if (binding.dataSourceModeRadioGroup.checkedButtonId != targetId) {
+            withSuppressedCallbacks {
+                binding.dataSourceModeRadioGroup.check(targetId)
             }
         }
     }
@@ -447,7 +716,7 @@ class SettingsActivity : AppCompatActivity() {
             DriverMode.NEW_DRIVER -> R.id.driverModeNewDriverRadio
             DriverMode.STANDARD -> R.id.driverModeStandardRadio
         }
-        if (binding.driverModeRadioGroup.checkedRadioButtonId != targetId) {
+        if (binding.driverModeRadioGroup.checkedButtonId != targetId) {
             withSuppressedCallbacks {
                 binding.driverModeRadioGroup.check(targetId)
             }
@@ -636,8 +905,13 @@ class SettingsActivity : AppCompatActivity() {
                 "settings",
                 JSONObject().apply {
                     put("voiceMode", settingsRepository.voiceMode.first().name)
+                    put("appLanguage", settingsRepository.appLanguage.first().name)
                     put("promptSensitivity", settingsRepository.promptSensitivity.first().name)
                     put("units", settingsRepository.units.first().name)
+                    put("speedometerEnabled", settingsRepository.speedometerEnabled.first())
+                    put("speedLimitDisplay", settingsRepository.speedLimitDisplay.first().name)
+                    put("speedingThreshold", settingsRepository.speedingThreshold.first().name)
+                    put("speedAlertAtThresholdEnabled", settingsRepository.speedAlertAtThresholdEnabled.first())
                     put("hazardsEnabled", settingsRepository.hazardsEnabled.first())
                     put("lowStressRoutingEnabled", settingsRepository.lowStressRoutingEnabled.first())
                     put("analyticsEnabled", settingsRepository.analyticsEnabled.first())
@@ -763,9 +1037,14 @@ class SettingsActivity : AppCompatActivity() {
     private data class SettingsSnapshot(
         val voiceMode: VoiceModeSetting,
         val units: PreferredUnitsSetting,
+        val speedometerEnabled: Boolean,
+        val speedLimitDisplay: SpeedLimitDisplaySetting,
+        val speedingThreshold: SpeedingThresholdSetting,
+        val speedAlertAtThresholdEnabled: Boolean,
         val hazardsEnabled: Boolean,
         val promptSensitivity: PromptSensitivity,
         val lowStressRoutingEnabled: Boolean,
+        val dataSourceMode: DataSourceMode,
         val analyticsEnabled: Boolean,
         val analyticsConsentEnabled: Boolean,
         val analyticsSettingEnabled: Boolean,
@@ -781,9 +1060,14 @@ class SettingsActivity : AppCompatActivity() {
     private data class ProfileSettingsSnapshot(
         val voiceMode: VoiceModeSetting,
         val units: PreferredUnitsSetting,
+        val speedometerEnabled: Boolean,
+        val speedLimitDisplay: SpeedLimitDisplaySetting,
+        val speedingThreshold: SpeedingThresholdSetting,
+        val speedAlertAtThresholdEnabled: Boolean,
         val hazardsEnabled: Boolean,
         val promptSensitivity: PromptSensitivity,
         val lowStressRoutingEnabled: Boolean,
+        val dataSourceMode: DataSourceMode,
         val analyticsEnabled: Boolean,
         val analyticsConsentEnabled: Boolean,
         val analyticsSettingEnabled: Boolean,
@@ -798,9 +1082,14 @@ class SettingsActivity : AppCompatActivity() {
     private data class BaseSettingsSnapshot(
         val voiceMode: VoiceModeSetting,
         val units: PreferredUnitsSetting,
+        val speedometerEnabled: Boolean,
+        val speedLimitDisplay: SpeedLimitDisplaySetting,
+        val speedingThreshold: SpeedingThresholdSetting,
+        val speedAlertAtThresholdEnabled: Boolean,
         val hazardsEnabled: Boolean,
         val promptSensitivity: PromptSensitivity,
         val lowStressRoutingEnabled: Boolean,
+        val dataSourceMode: DataSourceMode,
         val analyticsEnabled: Boolean,
         val analyticsConsentEnabled: Boolean,
         val analyticsSettingEnabled: Boolean,
@@ -810,12 +1099,25 @@ class SettingsActivity : AppCompatActivity() {
         val lastSelectedCentreId: String
     )
 
-    private data class NavigationSettingsSnapshot(
+    private data class NavigationCoreSettingsSnapshot(
         val voiceMode: VoiceModeSetting,
         val units: PreferredUnitsSetting,
         val hazardsEnabled: Boolean,
         val promptSensitivity: PromptSensitivity,
         val lowStressRoutingEnabled: Boolean
+    )
+
+    private data class NavigationSettingsSnapshot(
+        val voiceMode: VoiceModeSetting,
+        val units: PreferredUnitsSetting,
+        val speedometerEnabled: Boolean,
+        val speedLimitDisplay: SpeedLimitDisplaySetting,
+        val speedingThreshold: SpeedingThresholdSetting,
+        val speedAlertAtThresholdEnabled: Boolean,
+        val hazardsEnabled: Boolean,
+        val promptSensitivity: PromptSensitivity,
+        val lowStressRoutingEnabled: Boolean,
+        val dataSourceMode: DataSourceMode
     )
 
     private data class PrivacyCoreSettingsSnapshot(

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/practiceEntryRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="24dp">
@@ -15,6 +16,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <ImageButton
+        android:id="@+id/practiceAppearanceModeButton"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_map_control_chip"
+        android:contentDescription="@string/appearance_mode_auto"
+        android:padding="10dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/practiceLogo"
+        app:srcCompat="@drawable/ic_appearance_auto" />
+
     <TextView
         android:id="@+id/practiceTitle"
         android:layout_width="0dp"
@@ -27,7 +41,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/practiceLogo" />
+        app:layout_constraintTop_toBottomOf="@id/practiceAppearanceModeButton" />
 
     <TextView
         android:id="@+id/practiceDescription"

@@ -17,6 +17,7 @@
         <item name="android:colorAccent">@color/settings_accent</item>
         <item name="materialButtonStyle">@style/Widget.Drivest.Button</item>
         <item name="materialButtonOutlinedStyle">@style/Widget.Drivest.Button.Outlined</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Drivest.MaterialAlertDialog</item>
         <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Drivest.Medium</item>
         <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Drivest.Small</item>
     </style>

@@ -21,5 +21,7 @@ data class PromptEvent(
     val priority: Int,
     val distanceM: Int,
     val expiresAtEpochMs: Long,
-    val confidenceHint: Float = 1f
+    val confidenceHint: Float = 1f,
+    /** Non-null only for BUS_LANE prompts. true = restricted now, false = open to all traffic. */
+    val busLaneRestricted: Boolean? = null
 )

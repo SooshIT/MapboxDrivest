@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@android:color/transparent"
             app:cardCornerRadius="28dp"
-            app:cardElevation="0dp"
+            app:cardElevation="4dp"
             app:strokeWidth="0dp">
 
             <LinearLayout
@@ -96,7 +96,7 @@
             android:layout_marginTop="8dp"
             app:cardBackgroundColor="@color/settings_card_bg"
             app:cardCornerRadius="20dp"
-            app:cardElevation="0dp"
+            app:cardElevation="2dp"
             app:strokeColor="@color/settings_card_stroke"
             app:strokeWidth="1dp">
 
@@ -128,37 +128,43 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <RadioGroup
+                <com.google.android.material.button.MaterialButtonToggleGroup
                     android:id="@+id/driverModeRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:orientation="vertical">
+                    android:background="@drawable/bg_settings_segment_track"
+                    android:padding="4dp"
+                    app:selectionRequired="true"
+                    app:singleSelection="true">
 
-                    <RadioButton
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/driverModeLearnerRadio"
-                        android:layout_width="wrap_content"
+                        style="@style/Widget.Drivest.Button.Segmented"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/settings_accent"
+                        android:layout_weight="1"
                         android:text="@string/driver_mode_learner"
-                        android:textColor="@color/settings_text_primary" />
+                        android:textAllCaps="false" />
 
-                    <RadioButton
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/driverModeNewDriverRadio"
-                        android:layout_width="wrap_content"
+                        style="@style/Widget.Drivest.Button.Segmented"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/settings_accent"
+                        android:layout_weight="1"
                         android:text="@string/driver_mode_new_driver"
-                        android:textColor="@color/settings_text_primary" />
+                        android:textAllCaps="false" />
 
-                    <RadioButton
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/driverModeStandardRadio"
-                        android:layout_width="wrap_content"
+                        style="@style/Widget.Drivest.Button.Segmented"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/settings_accent"
+                        android:layout_weight="1"
                         android:text="@string/driver_mode_standard"
-                        android:textColor="@color/settings_text_primary" />
-                </RadioGroup>
+                        android:textAllCaps="false" />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
 
                 <TextView
                     android:id="@+id/settingsDriverModeDescription"
@@ -224,7 +230,7 @@
             android:layout_marginTop="8dp"
             app:cardBackgroundColor="@color/settings_card_bg"
             app:cardCornerRadius="20dp"
-            app:cardElevation="0dp"
+            app:cardElevation="2dp"
             app:strokeColor="@color/settings_card_stroke"
             app:strokeWidth="1dp">
 
@@ -238,45 +244,73 @@
                 android:paddingBottom="16dp">
 
                 <TextView
+                    android:id="@+id/settingsLanguageHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/settings_language"
+                    android:textColor="@color/settings_text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/languageSelectionButton"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="@string/settings_language_english_uk"
+                    android:textAllCaps="false"
+                    app:strokeColor="@color/settings_card_stroke" />
+
+                <TextView
                     android:id="@+id/settingsVoiceHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
                     android:text="@string/settings_voice_mode"
                     android:textColor="@color/settings_text_primary"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <RadioGroup
+                <com.google.android.material.button.MaterialButtonToggleGroup
                     android:id="@+id/voiceModeRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:orientation="vertical">
+                    android:background="@drawable/bg_settings_segment_track"
+                    android:padding="4dp"
+                    app:selectionRequired="true"
+                    app:singleSelection="true">
 
-                    <RadioButton
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/voiceModeAllRadio"
-                        android:layout_width="wrap_content"
+                        style="@style/Widget.Drivest.Button.Segmented"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/settings_accent"
-                        android:text="@string/settings_voice_all"
-                        android:textColor="@color/settings_text_primary" />
+                        android:layout_weight="1"
+                        android:text="@string/settings_voice_all_short"
+                        android:textAllCaps="false" />
 
-                    <RadioButton
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/voiceModeAlertsRadio"
-                        android:layout_width="wrap_content"
+                        style="@style/Widget.Drivest.Button.Segmented"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/settings_accent"
-                        android:text="@string/settings_voice_alerts"
-                        android:textColor="@color/settings_text_primary" />
+                        android:layout_weight="1"
+                        android:text="@string/settings_voice_alerts_short"
+                        android:textAllCaps="false" />
 
-                    <RadioButton
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/voiceModeMuteRadio"
-                        android:layout_width="wrap_content"
+                        style="@style/Widget.Drivest.Button.Segmented"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/settings_accent"
+                        android:layout_weight="1"
                         android:text="@string/settings_voice_mute"
-                        android:textColor="@color/settings_text_primary" />
-                </RadioGroup>
+                        android:textAllCaps="false" />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
 
                 <TextView
                     android:id="@+id/settingsPromptSensitivityHeading"
@@ -288,37 +322,43 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <RadioGroup
+                <com.google.android.material.button.MaterialButtonToggleGroup
                     android:id="@+id/promptSensitivityRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:orientation="vertical">
+                    android:background="@drawable/bg_settings_segment_track"
+                    android:padding="4dp"
+                    app:selectionRequired="true"
+                    app:singleSelection="true">
 
-                    <RadioButton
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/promptSensitivityMinimalRadio"
-                        android:layout_width="wrap_content"
+                        style="@style/Widget.Drivest.Button.Segmented"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/settings_accent"
+                        android:layout_weight="1"
                         android:text="@string/settings_prompt_sensitivity_minimal"
-                        android:textColor="@color/settings_text_primary" />
+                        android:textAllCaps="false" />
 
-                    <RadioButton
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/promptSensitivityStandardRadio"
-                        android:layout_width="wrap_content"
+                        style="@style/Widget.Drivest.Button.Segmented"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/settings_accent"
+                        android:layout_weight="1"
                         android:text="@string/settings_prompt_sensitivity_standard"
-                        android:textColor="@color/settings_text_primary" />
+                        android:textAllCaps="false" />
 
-                    <RadioButton
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/promptSensitivityExtraHelpRadio"
-                        android:layout_width="wrap_content"
+                        style="@style/Widget.Drivest.Button.Segmented"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/settings_accent"
+                        android:layout_weight="1"
                         android:text="@string/settings_prompt_sensitivity_extra_help"
-                        android:textColor="@color/settings_text_primary" />
-                </RadioGroup>
+                        android:textAllCaps="false" />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
 
                 <TextView
                     android:id="@+id/settingsUnitsHeading"
@@ -330,29 +370,269 @@
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
-                <RadioGroup
+                <com.google.android.material.button.MaterialButtonToggleGroup
                     android:id="@+id/unitsRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="6dp"
-                    android:orientation="vertical">
+                    android:background="@drawable/bg_settings_segment_track"
+                    android:padding="4dp"
+                    app:selectionRequired="true"
+                    app:singleSelection="true">
 
-                    <RadioButton
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/unitsMphRadio"
-                        android:layout_width="wrap_content"
+                        style="@style/Widget.Drivest.Button.Segmented"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/settings_accent"
-                        android:text="@string/settings_units_mph"
-                        android:textColor="@color/settings_text_primary" />
+                        android:layout_weight="1"
+                        android:text="@string/settings_units_mph_short"
+                        android:textAllCaps="false" />
 
-                    <RadioButton
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/unitsKmhRadio"
-                        android:layout_width="wrap_content"
+                        style="@style/Widget.Drivest.Button.Segmented"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:buttonTint="@color/settings_accent"
-                        android:text="@string/settings_units_kmh"
-                        android:textColor="@color/settings_text_primary" />
-                </RadioGroup>
+                        android:layout_weight="1"
+                        android:text="@string/settings_units_kmh_short"
+                        android:textAllCaps="false" />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <TextView
+                    android:id="@+id/settingsAppearanceModeHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/settings_appearance_mode"
+                    android:textColor="@color/settings_text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/appearanceModeRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/bg_settings_segment_track"
+                    android:padding="4dp"
+                    app:selectionRequired="true"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/appearanceModeAutoRadio"
+                        style="@style/Widget.Drivest.Button.Segmented"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/settings_appearance_auto"
+                        android:textAllCaps="false" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/appearanceModeDayRadio"
+                        style="@style/Widget.Drivest.Button.Segmented"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/settings_appearance_day"
+                        android:textAllCaps="false" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/appearanceModeNightRadio"
+                        style="@style/Widget.Drivest.Button.Segmented"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/settings_appearance_night"
+                        android:textAllCaps="false" />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <TextView
+                    android:id="@+id/settingsSpeedometerHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/settings_speedometer_heading"
+                    android:textColor="@color/settings_text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/speedometerEnabledSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/settings_speedometer_enabled"
+                    android:textColor="@color/settings_text_primary" />
+
+                <TextView
+                    android:id="@+id/settingsSpeedLimitDisplayHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/settings_speed_limit_display"
+                    android:textColor="@color/settings_text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/speedLimitDisplayRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/bg_settings_segment_track"
+                    android:padding="4dp"
+                    app:selectionRequired="true"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/speedLimitDisplayAlwaysRadio"
+                        style="@style/Widget.Drivest.Button.Segmented"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/settings_speed_limit_display_always"
+                        android:textAllCaps="false" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/speedLimitDisplayOnlyWhenSpeedingRadio"
+                        style="@style/Widget.Drivest.Button.Segmented"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/settings_speed_limit_display_only_when_speeding"
+                        android:textAllCaps="false" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/speedLimitDisplayNeverRadio"
+                        style="@style/Widget.Drivest.Button.Segmented"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/settings_speed_limit_display_never"
+                        android:textAllCaps="false" />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <TextView
+                    android:id="@+id/settingsSpeedingThresholdHeading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/settings_speeding_threshold"
+                    android:textColor="@color/settings_text_primary"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/speedingThresholdRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:background="@drawable/bg_settings_segment_track"
+                    android:padding="4dp"
+                    app:selectionRequired="true"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/speedingThresholdAtLimitRadio"
+                        style="@style/Widget.Drivest.Button.Segmented"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/settings_speeding_threshold_at_limit"
+                        android:textAllCaps="false" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/speedingThresholdPlusSmallRadio"
+                        style="@style/Widget.Drivest.Button.Segmented"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="+5"
+                        android:textAllCaps="false" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/speedingThresholdPlusLargeRadio"
+                        style="@style/Widget.Drivest.Button.Segmented"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="+10"
+                        android:textAllCaps="false" />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/speedAlertAtThresholdSwitch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/settings_alert_at_threshold"
+                    android:textColor="@color/settings_text_primary" />
+
+                <TextView
+                    android:id="@+id/settingsAlertAtThresholdSummary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="@string/settings_alert_at_threshold_summary"
+                    android:textColor="@color/settings_text_muted"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:id="@+id/dataSourceModeContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/settingsDataSourceModeHeading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_data_source_mode"
+                        android:textColor="@color/settings_text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <com.google.android.material.button.MaterialButtonToggleGroup
+                        android:id="@+id/dataSourceModeRadioGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:background="@drawable/bg_settings_segment_track"
+                        android:padding="4dp"
+                        app:selectionRequired="true"
+                        app:singleSelection="true">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/dataSourceBackendCacheAssetsRadio"
+                            style="@style/Widget.Drivest.Button.Segmented"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/settings_data_source_backend_cache_assets_short"
+                            android:textAllCaps="false" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/dataSourceBackendOnlyRadio"
+                            style="@style/Widget.Drivest.Button.Segmented"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/settings_data_source_backend_only_short"
+                            android:textAllCaps="false" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/dataSourceAssetsOnlyRadio"
+                            style="@style/Widget.Drivest.Button.Segmented"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="@string/settings_data_source_assets_only_short"
+                            android:textAllCaps="false" />
+                    </com.google.android.material.button.MaterialButtonToggleGroup>
+                </LinearLayout>
 
                 <com.google.android.material.switchmaterial.SwitchMaterial
                     android:id="@+id/lowStressRoutingSwitch"
@@ -408,7 +688,7 @@
             android:layout_marginTop="8dp"
             app:cardBackgroundColor="@color/settings_card_bg"
             app:cardCornerRadius="20dp"
-            app:cardElevation="0dp"
+            app:cardElevation="2dp"
             app:strokeColor="@color/settings_card_stroke"
             app:strokeWidth="1dp">
 
@@ -477,7 +757,7 @@
             android:layout_marginTop="8dp"
             app:cardBackgroundColor="@color/settings_card_bg"
             app:cardCornerRadius="20dp"
-            app:cardElevation="0dp"
+            app:cardElevation="2dp"
             app:strokeColor="@color/settings_card_stroke"
             app:strokeWidth="1dp">
 
@@ -582,7 +862,7 @@
             android:layout_marginTop="8dp"
             app:cardBackgroundColor="@color/settings_card_bg"
             app:cardCornerRadius="20dp"
-            app:cardElevation="0dp"
+            app:cardElevation="2dp"
             app:strokeColor="@color/settings_card_stroke"
             app:strokeWidth="1dp">
 
@@ -637,3 +917,6 @@
             android:textSize="13sp" />
     </LinearLayout>
 </ScrollView>
+
+
+

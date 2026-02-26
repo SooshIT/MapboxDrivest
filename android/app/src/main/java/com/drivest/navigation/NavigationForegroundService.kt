@@ -9,6 +9,7 @@ import android.content.Intent
 import android.content.pm.ServiceInfo
 import android.os.Build
 import android.os.IBinder
+import android.util.Log
 import androidx.core.app.NotificationCompat
 import androidx.core.content.ContextCompat
 
@@ -33,6 +34,15 @@ class NavigationForegroundService : Service() {
                 startAsForeground(mode)
                 return START_STICKY
             }
+            ACTION_STOP -> {
+                Log.d(TAG, "Stop guidance requested from notification action")
+                sendBroadcast(
+                    Intent(ACTION_STOP_GUIDANCE_REQUEST).setPackage(packageName)
+                )
+                stopForeground(STOP_FOREGROUND_REMOVE)
+                stopSelf()
+                return START_NOT_STICKY
+            }
             else -> return START_STICKY
         }
     }
@@ -40,6 +50,15 @@ class NavigationForegroundService : Service() {
     override fun onDestroy() {
         stopForeground(STOP_FOREGROUND_REMOVE)
         super.onDestroy()
+    }
+
+    override fun onTaskRemoved(rootIntent: Intent?) {
+        // User explicitly removed the app task from recents: stop the foreground service so the
+        // notification does not keep the app process alive unexpectedly.
+        Log.d(TAG, "Navigation foreground service stopping due to task removal")
+        stopForeground(STOP_FOREGROUND_REMOVE)
+        stopSelf()
+        super.onTaskRemoved(rootIntent)
     }
 
     private fun startAsForeground(mode: SessionMode) {
@@ -69,6 +88,15 @@ class NavigationForegroundService : Service() {
             openAppIntent,
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
+        val stopGuidanceIntent = Intent(this, NavigationForegroundService::class.java).apply {
+            action = ACTION_STOP
+        }
+        val stopGuidancePendingIntent = PendingIntent.getService(
+            this,
+            1011,
+            stopGuidanceIntent,
+            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+        )
 
         val (titleRes, textRes) = when (mode) {
             SessionMode.NAVIGATION -> {
@@ -89,6 +117,11 @@ class NavigationForegroundService : Service() {
             .setPriority(NotificationCompat.PRIORITY_LOW)
             .setForegroundServiceBehavior(NotificationCompat.FOREGROUND_SERVICE_IMMEDIATE)
             .setContentIntent(openAppPendingIntent)
+            .addAction(
+                android.R.drawable.ic_menu_close_clear_cancel,
+                getString(R.string.navigation_service_action_stop),
+                stopGuidancePendingIntent
+            )
             .build()
     }
 
@@ -121,11 +154,14 @@ class NavigationForegroundService : Service() {
     }
 
     companion object {
+        private const val TAG = "NavForegroundService"
         private const val CHANNEL_ID = "drivest_nav_foreground_channel"
         private const val NOTIFICATION_ID = 9011
         private const val ACTION_START = "com.drivest.navigation.action.NAV_FOREGROUND_START"
         private const val ACTION_UPDATE = "com.drivest.navigation.action.NAV_FOREGROUND_UPDATE"
+        private const val ACTION_STOP = "com.drivest.navigation.action.NAV_FOREGROUND_STOP"
         private const val EXTRA_SESSION_MODE = "extra_session_mode"
+        const val ACTION_STOP_GUIDANCE_REQUEST = "com.drivest.navigation.action.STOP_GUIDANCE_REQUEST"
 
         fun start(context: Context, mode: SessionMode) {
             val intent = Intent(context, NavigationForegroundService::class.java).apply {

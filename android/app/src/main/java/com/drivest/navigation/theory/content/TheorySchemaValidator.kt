@@ -9,7 +9,8 @@ data class TheorySchemaValidationResult(
 
 object TheorySchemaValidator {
 
-    private const val MIN_TOPIC_COUNT = 12
+    // Imported Drivest question bank currently groups content into 10 broad topics.
+    private const val MIN_TOPIC_COUNT = 10
     private const val MIN_LESSON_COUNT = 24
     private const val MIN_QUESTION_COUNT = 240
 

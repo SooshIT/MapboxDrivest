@@ -2,11 +2,15 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg_app_surface"
     android:fillViewport="true">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_app_card"
+        android:elevation="2dp"
         android:orientation="vertical"
         android:paddingStart="20dp"
         android:paddingTop="20dp"
@@ -15,7 +19,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/paymentsBackButton"
-            style="@style/Widget.MaterialComponents.Button.TextButton"
+            style="@style/Widget.Drivest.Button.Back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/settings_back"
@@ -24,9 +28,9 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="10dp"
             android:text="@string/payments_screen_title"
-            android:textColor="#231F20"
+            android:textColor="@color/settings_text_primary"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -35,7 +39,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="18dp"
             android:text="@string/payments_section_current_plan"
-            android:textColor="#231F20"
+            android:textColor="@color/settings_text_primary"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -44,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:textColor="#231F20"
+            android:textColor="@color/settings_text_primary"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -53,7 +57,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:textColor="#5A5456"
+            android:textColor="@color/settings_text_secondary"
             android:textSize="14sp" />
 
         <TextView
@@ -61,7 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/payments_section_plans"
-            android:textColor="#231F20"
+            android:textColor="@color/settings_text_primary"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -71,7 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             android:text="@string/payments_loading_plans"
-            android:textColor="#5A5456"
+            android:textColor="@color/settings_text_secondary"
             android:textSize="13sp"
             android:visibility="gone" />
 
@@ -80,7 +84,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/payments_plan_free"
-            android:textColor="#231F20"
+            android:textColor="@color/settings_text_primary"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -88,7 +92,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/payments_plan_free_features"
-            android:textColor="#5A5456"
+            android:textColor="@color/settings_text_secondary"
             android:textSize="14sp" />
 
         <TextView
@@ -96,7 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="@string/payments_plan_practice_monthly"
-            android:textColor="#231F20"
+            android:textColor="@color/settings_text_primary"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -105,7 +109,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/payments_price_practice_monthly"
-            android:textColor="#A94A17"
+            android:textColor="@color/settings_warning_text"
             android:textSize="14sp"
             android:textStyle="bold" />
 
@@ -113,7 +117,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/payments_plan_practice_monthly_features"
-            android:textColor="#5A5456"
+            android:textColor="@color/settings_text_secondary"
             android:textSize="14sp" />
 
         <TextView
@@ -121,7 +125,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:text="@string/payments_plan_global_annual"
-            android:textColor="#231F20"
+            android:textColor="@color/settings_text_primary"
             android:textSize="15sp"
             android:textStyle="bold" />
 
@@ -130,7 +134,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/payments_price_global_annual"
-            android:textColor="#A94A17"
+            android:textColor="@color/settings_warning_text"
             android:textSize="14sp"
             android:textStyle="bold" />
 
@@ -138,7 +142,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/payments_plan_global_annual_features"
-            android:textColor="#5A5456"
+            android:textColor="@color/settings_text_secondary"
             android:textSize="14sp" />
 
         <TextView
@@ -146,7 +150,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/payments_section_disclosure"
-            android:textColor="#231F20"
+            android:textColor="@color/settings_text_primary"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -155,7 +159,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:text="@string/payments_disclosure_auto_renew"
-            android:textColor="#5A5456"
+            android:textColor="@color/settings_text_secondary"
             android:textSize="14sp" />
 
         <TextView
@@ -163,7 +167,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             android:text="@string/payments_disclosure_cancel"
-            android:textColor="#5A5456"
+            android:textColor="@color/settings_text_secondary"
             android:textSize="14sp" />
 
         <TextView
@@ -171,7 +175,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="6dp"
             android:text="@string/payments_disclosure_refund"
-            android:textColor="#5A5456"
+            android:textColor="@color/settings_text_secondary"
             android:textSize="14sp" />
 
         <TextView
@@ -179,7 +183,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/payments_section_actions"
-            android:textColor="#231F20"
+            android:textColor="@color/settings_text_primary"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -194,6 +198,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/subscribePracticeButton"
+            style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
@@ -202,6 +207,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/subscribeGlobalButton"
+            style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"

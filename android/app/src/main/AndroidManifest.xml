@@ -12,6 +12,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:localeConfig="@xml/locales_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DrivestNavigation">
@@ -34,7 +35,8 @@
             android:name=".NavigationForegroundService"
             android:enabled="true"
             android:exported="false"
-            android:foregroundServiceType="location" />
+            android:foregroundServiceType="location"
+            android:stopWithTask="true" />
 
         <activity
             android:name=".SplashActivity"
@@ -72,6 +74,22 @@
             android:theme="@style/Theme.DrivestNavigation" />
         <activity
             android:name=".NavigationEntryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DrivestNavigation" />
+        <activity
+            android:name=".TrafficSignsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DrivestNavigation" />
+        <activity
+            android:name=".AnalyticsDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DrivestNavigation" />
+        <activity
+            android:name=".AnalyticsDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DrivestNavigation" />
+        <activity
+            android:name=".highwaycode.HighwayCodeActivity"
             android:exported="false"
             android:theme="@style/Theme.DrivestNavigation" />
         <activity
@@ -168,6 +186,22 @@
             android:theme="@style/Theme.DrivestNavigation" />
         <activity
             android:name=".theory.screens.TheorySettingsActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DrivestNavigation" />
+        <activity
+            android:name=".quiz.ui.QuizHubActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DrivestNavigation" />
+        <activity
+            android:name=".quiz.ui.QuizPlayActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DrivestNavigation" />
+        <activity
+            android:name=".quiz.ui.QuizScoreboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.DrivestNavigation" />
+        <activity
+            android:name=".quiz.ui.QuizErrorActivity"
             android:exported="false"
             android:theme="@style/Theme.DrivestNavigation" />
         <activity

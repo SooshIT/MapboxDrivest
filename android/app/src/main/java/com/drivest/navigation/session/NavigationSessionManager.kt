@@ -44,7 +44,8 @@ class NavigationSessionManager(
     private val promptEngine: PromptEngine,
     private val onPromptEvent: (PromptEvent?) -> Unit,
     private val onFeaturesUpdated: (List<OsmFeature>) -> Unit,
-    private val onFeatureUnavailable: () -> Unit
+    private val onFeatureUnavailable: () -> Unit,
+    private val onNearestMiniRoundaboutMeters: (Double) -> Unit = {}
 ) {
 
     enum class Mode {
@@ -348,6 +349,19 @@ class NavigationSessionManager(
             radiusMeters = PROMPT_NEARBY_QUERY_RADIUS_METERS
         )
         if (nearbyFeatures.isEmpty()) return
+
+        // Report nearest mini-roundabout distance so the camera can apply a dedicated zoom boost.
+        val nearestMiniRoundaboutM = nearbyFeatures
+            .filter { it.type == OsmFeatureType.MINI_ROUNDABOUT }
+            .minOfOrNull { feature ->
+                val dLat = Math.toRadians(feature.lat - lat)
+                val dLon = Math.toRadians(feature.lon - lon)
+                val a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                    Math.cos(Math.toRadians(lat)) * Math.cos(Math.toRadians(feature.lat)) *
+                    Math.sin(dLon / 2) * Math.sin(dLon / 2)
+                6_371_000.0 * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
+            } ?: Double.MAX_VALUE
+        onNearestMiniRoundaboutMeters(nearestMiniRoundaboutM)
 
         // Keep no-entry prevention active even if user disables general hazard prompts.
         val evaluationFeatures = if (visualPromptsEnabled) {

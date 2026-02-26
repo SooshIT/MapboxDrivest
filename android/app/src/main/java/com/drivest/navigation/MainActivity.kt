@@ -15,16 +15,19 @@ import android.graphics.Paint
 import android.graphics.Path
 import android.graphics.RectF
 import android.graphics.Typeface
+import android.media.AudioManager
+import android.media.ToneGenerator
 import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import android.view.WindowManager
-import android.view.animation.LinearInterpolator
+import android.view.animation.DecelerateInterpolator
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
@@ -126,8 +129,13 @@ import com.drivest.navigation.practice.PracticeRouteStore
 import com.drivest.navigation.practice.PracticeFlowDecisions
 import com.drivest.navigation.practice.RollingMedian
 import com.drivest.navigation.speed.SpeedLimitNormalizer
+import com.drivest.navigation.settings.AppearanceModeManager
+import com.drivest.navigation.settings.AppearanceModeSetting
+import com.drivest.navigation.settings.AppLanguageSetting
 import com.drivest.navigation.settings.PreferredUnitsSetting
 import com.drivest.navigation.settings.SettingsRepository
+import com.drivest.navigation.settings.SpeedLimitDisplaySetting
+import com.drivest.navigation.settings.SpeedingThresholdSetting
 import com.drivest.navigation.settings.VoiceModeSetting
 import com.drivest.navigation.subscription.FeatureAccessManager
 import com.drivest.navigation.subscription.SubscriptionRepository
@@ -239,13 +247,14 @@ class MainActivity : AppCompatActivity() {
     private val practiceOffRouteMaxGpsAccuracyMeters = 25f
     private val schoolZoneOverrideDistanceMeters = 260.0
     private val schoolZoneDefaultLimitMph = 20
+    private val speedThresholdAlertCooldownMs = 3_000L
     private val cameraUpdateMinGapMs = 180L
     private val lowStressToggleDebounceMs = 220L
     private val noEntryWarningDistanceMeters = 60.0
     private val noEntryRouteMatchDistanceMeters = 30.0
     private val noEntryRerouteCooldownMs = 8_000L
     private val noEntryRerouteRadiusMeters = 140
-    private val puckMinTransitionMs = 180L
+    private val puckMinTransitionMs = 250L
     private val puckMaxTransitionMs = 900L
     private val promptBannerAutoHideMs = 6_000L
     private val defaultPromptGpsAccuracyM = 10f
@@ -290,6 +299,7 @@ class MainActivity : AppCompatActivity() {
     private var latestGpsAccuracyMeters: Float = defaultPromptGpsAccuracyM
     private var latestSpeedMetersPerSecond: Double = 0.0
     private var latestDistanceToManeuverMeters: Double = Double.MAX_VALUE
+    private var latestNearestMiniRoundaboutMeters: Double = Double.MAX_VALUE
     private var latestManeuverTimeSeconds: Double? = null
     private var latestRouteDistanceRemainingM: Double = 0.0
     private var latestRouteCompletionPercent: Int = 0
@@ -302,6 +312,15 @@ class MainActivity : AppCompatActivity() {
     private var lastCameraUpdateAtMs: Long = 0L
     private var lastCameraCenterPoint: Point? = null
     private var styleLoaded = false
+    private var appearanceModeSetting: AppearanceModeSetting = AppearanceModeSetting.AUTO
+    private var lastAppliedNavigationStyleUri: String? = null
+    private var speedometerEnabledSetting: Boolean = true
+    private var speedLimitDisplaySetting: SpeedLimitDisplaySetting = SpeedLimitDisplaySetting.ALWAYS
+    private var speedingThresholdSetting: SpeedingThresholdSetting = SpeedingThresholdSetting.AT_LIMIT
+    private var speedAlertAtThresholdEnabledSetting: Boolean = true
+    private var latestSpeedInfoValue: SpeedInfoValue? = null
+    private var lastSpeedThresholdExceeded: Boolean = false
+    private var lastSpeedThresholdAlertAtMs: Long = 0L
     private var destinationAnnotationManager: PointAnnotationManager? = null
     private var destinationAnnotation: PointAnnotation? = null
     private var hazardAnnotationManager: PointAnnotationManager? = null
@@ -334,6 +353,7 @@ class MainActivity : AppCompatActivity() {
     private var activeSessionIntelligence: RouteIntelligenceSummary? = null
     private var currentSessionOffRouteEvents: Int = 0
     private var currentConfidenceScore: Int = 0
+    private var currentDriverMode: DriverMode = DriverMode.LEARNER
     private var currentInstructorModeEnabled: Boolean = false
     private var currentOrganisationCode: String = ""
     private var lowStressModeEnabled: Boolean = false
@@ -361,6 +381,13 @@ class MainActivity : AppCompatActivity() {
             val command = intent?.getStringExtra(AppFlow.EXTRA_DEBUG_COMMAND).orEmpty()
             if (command.isBlank()) return
             handleDebugCommand(command)
+        }
+    }
+    private var notificationStopReceiverRegistered = false
+    private val notificationStopReceiver = object : BroadcastReceiver() {
+        override fun onReceive(context: android.content.Context?, intent: Intent?) {
+            if (intent?.action != NavigationForegroundService.ACTION_STOP_GUIDANCE_REQUEST) return
+            runOnUiThread { stopActiveGuidanceFromNotification() }
         }
     }
 
@@ -494,15 +521,15 @@ class MainActivity : AppCompatActivity() {
         MapboxSpeedInfoApi()
     }
 
-    private val voiceLanguageTag: String = Locale.UK.toLanguageTag()
-
-    private val speechApi: MapboxSpeechApi by lazy {
-        MapboxSpeechApi(this, voiceLanguageTag)
+    private val speedThresholdToneGenerator: ToneGenerator? by lazy(LazyThreadSafetyMode.NONE) {
+        runCatching { ToneGenerator(AudioManager.STREAM_NOTIFICATION, 70) }.getOrNull()
     }
 
-    private val voiceInstructionsPlayer: MapboxVoiceInstructionsPlayer by lazy {
-        MapboxVoiceInstructionsPlayer(this, voiceLanguageTag)
-    }
+    private var voiceLanguageTag: String = AppLanguageSetting.ENGLISH_UK.bcp47Tag
+    private var voiceLanguageSetting: AppLanguageSetting = AppLanguageSetting.ENGLISH_UK
+    private var useOnDeviceTtsForVoice: Boolean = false
+    private var speechApiInstance: MapboxSpeechApi? = null
+    private var voiceInstructionsPlayerInstance: MapboxVoiceInstructionsPlayer? = null
 
     private val voiceInstructionsObserver = VoiceInstructionsObserver { voiceInstructions ->
         hazardVoiceController.onManeuverInstructionArrived()
@@ -512,25 +539,11 @@ class MainActivity : AppCompatActivity() {
         if (isDuplicateVoiceInstruction(voiceInstructions)) {
             return@VoiceInstructionsObserver
         }
-
-        speechApi.generate(voiceInstructions) { speechResult ->
-            speechResult.fold(
-                { speechError ->
-                    playManeuverAnnouncement(speechError.fallback)
-                },
-                { speechValue ->
-                    playManeuverAnnouncement(speechValue.announcement)
-                }
-            )
-        }
-    }
-
-    private fun playManeuverAnnouncement(announcement: SpeechAnnouncement) {
-        isManeuverSpeechPlaying = true
-        voiceInstructionsPlayer.play(announcement) { spokenAnnouncement ->
-            isManeuverSpeechPlaying = false
-            speechApi.clean(spokenAnnouncement)
-        }
+        speakVoiceInstructions(
+            voiceInstructions = voiceInstructions,
+            onStarted = { isManeuverSpeechPlaying = true },
+            onCompleted = { isManeuverSpeechPlaying = false }
+        )
     }
 
     private lateinit var sessionManager: NavigationSessionManager
@@ -615,6 +628,7 @@ class MainActivity : AppCompatActivity() {
                 locationMatcherResult,
                 formatterOptions
             )
+            latestSpeedInfoValue = speedInfo
             renderSpeedometer(speedInfo)
             evaluatePracticeOffRoute(nowMs)
             maybeRefreshHazardMarkers(nowMs)
@@ -750,8 +764,9 @@ class MainActivity : AppCompatActivity() {
                     if (uiMode == UiMode.PRACTICE) {
                         resetPracticeRunState()
                     }
-                    speechApi.cancel()
-                    voiceInstructionsPlayer.clear()
+                    cancelSpeechGeneration()
+                    clearVoicePlaybackQueue()
+                    latestSpeedInfoValue = null
                     renderSpeedometer(null)
                     mapboxNavigation.mapboxReplayer.stop()
                     unregisterCoreMapboxObserversIfNeeded(mapboxNavigation)
@@ -824,6 +839,7 @@ class MainActivity : AppCompatActivity() {
         observeUiState()
         observeSettings()
         observeDriverProfile()
+        registerNotificationStopReceiver()
         lifecycleScope.launch {
             settingsRepository.setLastSelectedCentreId(selectedCentreId)
             settingsRepository.setLastMode(
@@ -837,34 +853,9 @@ class MainActivity : AppCompatActivity() {
         applySystemBarInsets()
         renderVoiceGuidanceMode()
         applyUiModeState()
+        renderAppearanceModeControl()
 
-        binding.mapView.mapboxMap.loadStyle(NavigationStyles.NAVIGATION_DAY_STYLE) {
-            styleLoaded = true
-            lastRenderedRouteLineSignature = null
-            destinationAnnotationManager = binding.mapView.annotations.createPointAnnotationManager()
-            hazardAnnotationManager = binding.mapView.annotations.createPointAnnotationManager()
-            roadMarkingAnnotationManager = binding.mapView.annotations.createPointAnnotationManager()
-            binding.mapView.mapboxMap.setCamera(
-                CameraOptions.Builder()
-                    .center(initialCameraCenter())
-                    .zoom(12.5)
-                    .build()
-            )
-            updateTopOrnamentsPosition()
-            renderDestinationMarker()
-            renderHazardMarkers(hazardFeatures)
-            if (
-                uiMode == UiMode.NAVIGATION &&
-                selectedDestinationPoint != null &&
-                mainViewModel.uiState.value.sessionState == NavigationSessionManager.SessionState.BROWSE
-            ) {
-                if (::sessionManager.isInitialized) {
-                    sessionManager.previewDestination(selectedDestinationPoint!!)
-                } else {
-                    pendingDestinationPreview = true
-                }
-            }
-        }
+        loadNavigationMapStyle(forceReload = true, resetCamera = true)
         binding.mapView.gestures.addOnMapClickListener(mapClickListener)
         binding.mapView.setOnTouchListener { _, event ->
             when (event.actionMasked) {
@@ -892,6 +883,9 @@ class MainActivity : AppCompatActivity() {
             handleOverviewButtonPressed()
         }
         binding.overviewButton.alpha = 0.8f
+        binding.appearanceModeButton.setOnClickListener {
+            cycleAppearanceMode()
+        }
         binding.settingsButton.setOnClickListener {
             startActivity(Intent(this, SettingsActivity::class.java))
         }
@@ -943,6 +937,7 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         registerDebugReceiver()
         ensureSessionManager()
+        syncVoicePipelineToCurrentLanguage()
         updateKeepScreenOnState()
         if (pendingDestinationPreview && selectedDestinationPoint != null) {
             sessionManager.previewDestination(selectedDestinationPoint!!)
@@ -978,8 +973,8 @@ class MainActivity : AppCompatActivity() {
                 null
             },
             clearVoiceQueue = {
-                speechApi.cancel()
-                voiceInstructionsPlayer.clear()
+                cancelSpeechGeneration()
+                clearVoicePlaybackQueue()
             },
             onStateChanged = { state ->
                 mainViewModel.setSessionState(state)
@@ -1014,7 +1009,10 @@ class MainActivity : AppCompatActivity() {
                     updatePreviewSummaryFromRoutes(prioritizedRoutes)
                 }
             },
-            onFeatureUnavailable = { showExtraPromptsUnavailableBanner() }
+            onFeatureUnavailable = { showExtraPromptsUnavailableBanner() },
+            onNearestMiniRoundaboutMeters = { meters ->
+                latestNearestMiniRoundaboutMeters = meters
+            }
         )
         sessionManager.init(this, binding.mapView)
         sessionManager.setCentreId(selectedCentreId)
@@ -1277,9 +1275,14 @@ class MainActivity : AppCompatActivity() {
                 view.translationY = leftTranslation
             }
 
-            val settingsBottom = if (binding.settingsButton.isVisible) binding.settingsButton.bottom else 0
-            val settingsOverlap = (settingsBottom + desiredGap - anchorTop).coerceAtLeast(0)
-            binding.settingsButton.translationY = -settingsOverlap.toFloat()
+            val rightControls = listOf(binding.settingsButton, binding.appearanceModeButton)
+                .filter { view -> view.isVisible }
+            val rightBottom = rightControls.maxOfOrNull { view -> view.bottom } ?: 0
+            val rightOverlap = (rightBottom + desiredGap - anchorTop).coerceAtLeast(0)
+            val rightTranslation = -rightOverlap.toFloat()
+            rightControls.forEach { view ->
+                view.translationY = rightTranslation
+            }
         }
     }
 
@@ -1339,27 +1342,57 @@ class MainActivity : AppCompatActivity() {
     private fun observeSettings() {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
-                combine(
+                val coreSettingsFlow = combine(
                     settingsRepository.voiceMode,
                     settingsRepository.preferredUnits,
                     settingsRepository.hazardsEnabled,
-                    settingsRepository.lowStressRoutingEnabled
-                ) { voiceMode, units, hazardsEnabled, lowStressMode ->
+                    settingsRepository.lowStressRoutingEnabled,
+                    settingsRepository.appearanceMode
+                ) { voiceMode, units, hazardsEnabled, lowStressMode, appearanceMode ->
                     SettingsTuple(
                         voiceMode = voiceMode,
                         units = units,
                         hazardsEnabled = hazardsEnabled,
-                        lowStressMode = lowStressMode
+                        lowStressMode = lowStressMode,
+                        appearanceMode = appearanceMode
+                    )
+                }
+
+                combine(
+                    coreSettingsFlow,
+                    settingsRepository.speedometerEnabled,
+                    settingsRepository.speedLimitDisplay,
+                    settingsRepository.speedingThreshold,
+                    settingsRepository.speedAlertAtThresholdEnabled
+                ) { core,
+                    speedometerEnabled,
+                    speedLimitDisplay,
+                    speedingThreshold,
+                    speedAlertAtThresholdEnabled ->
+                    core.copy(
+                        speedometerEnabled = speedometerEnabled,
+                        speedLimitDisplay = speedLimitDisplay,
+                        speedingThreshold = speedingThreshold,
+                        speedAlertAtThresholdEnabled = speedAlertAtThresholdEnabled
                     )
                 }.collectLatest { tuple ->
                     val voiceModeSetting = tuple.voiceMode
                     val unitsSetting = tuple.units
                     val hazardsEnabled = tuple.hazardsEnabled
+                    val appearanceMode = tuple.appearanceMode
                     val previousLowStressEffective = lowStressModeEnabled
+                    val previousStyleUri = currentNavigationStyleUri()
                     val lowStressUiState = lowStressToggleCoordinator.onStoreValue(tuple.lowStressMode)
                     lowStressModeEnabled = lowStressUiState.effectiveEnabled
                     this@MainActivity.hazardsEnabled = hazardsEnabled
                     preferredUnitsSetting = unitsSetting
+                    appearanceModeSetting = appearanceMode
+                    speedometerEnabledSetting = tuple.speedometerEnabled
+                    speedLimitDisplaySetting = tuple.speedLimitDisplay
+                    speedingThresholdSetting = tuple.speedingThreshold
+                    speedAlertAtThresholdEnabledSetting = tuple.speedAlertAtThresholdEnabled
+                    val shouldReloadMapStyle =
+                        styleLoaded && previousStyleUri != currentNavigationStyleUri()
                     if (::sessionManager.isInitialized) {
                         sessionManager.setPreferredUnits(unitsSetting)
                         sessionManager.setVoiceMode(voiceModeSetting)
@@ -1372,8 +1405,8 @@ class MainActivity : AppCompatActivity() {
                     val previousMode = voiceGuidanceMode
                     voiceGuidanceMode = mappedVoiceMode
                     if (voiceGuidanceMode == VoiceGuidanceMode.MUTE && previousMode != VoiceGuidanceMode.MUTE) {
-                        speechApi.cancel()
-                        voiceInstructionsPlayer.clear()
+                        cancelSpeechGeneration()
+                        clearVoicePlaybackQueue()
                         hazardVoiceController.clear()
                         isHazardSpeechPlaying = false
                     }
@@ -1393,6 +1426,11 @@ class MainActivity : AppCompatActivity() {
                             handleActiveNavigationRouteStressUpdates(mapboxNavigation.getNavigationRoutes())
                         }
                     }
+                    renderAppearanceModeControl()
+                    renderSpeedometer(latestSpeedInfoValue)
+                    if (shouldReloadMapStyle) {
+                        loadNavigationMapStyle(forceReload = true, resetCamera = false)
+                    }
                 }
             }
         }
@@ -1403,6 +1441,7 @@ class MainActivity : AppCompatActivity() {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 driverProfileRepository.profile.collectLatest { profile ->
                     currentConfidenceScore = profile.confidenceScore
+                    currentDriverMode = profile.driverMode
                     currentInstructorModeEnabled = profile.instructorModeEnabled
                     currentOrganisationCode = profile.organisationCode
                 }
@@ -1750,6 +1789,24 @@ class MainActivity : AppCompatActivity() {
         runCatching { unregisterReceiver(debugCommandReceiver) }
     }
 
+    private fun registerNotificationStopReceiver() {
+        if (notificationStopReceiverRegistered) return
+        val filter = IntentFilter(NavigationForegroundService.ACTION_STOP_GUIDANCE_REQUEST)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            registerReceiver(notificationStopReceiver, filter, RECEIVER_NOT_EXPORTED)
+        } else {
+            @Suppress("DEPRECATION")
+            registerReceiver(notificationStopReceiver, filter)
+        }
+        notificationStopReceiverRegistered = true
+    }
+
+    private fun unregisterNotificationStopReceiver() {
+        if (!notificationStopReceiverRegistered) return
+        runCatching { unregisterReceiver(notificationStopReceiver) }
+        notificationStopReceiverRegistered = false
+    }
+
     private fun handleDebugCommand(command: String) {
         when (command) {
             AppFlow.DEBUG_START_NAV -> {
@@ -1772,17 +1829,47 @@ class MainActivity : AppCompatActivity() {
             }
             AppFlow.DEBUG_STOP_PRACTICE -> {
                 if (uiMode == UiMode.PRACTICE) {
-                    val completed = latestRouteCompletionPercent >= practiceRouteFinishPercent
-                    submitSessionSummary(completed = completed, reason = "stopped")
-                    ensureSessionManager()
-                    sessionManager.stop()
-                    resetPracticeRunState()
-                    binding.maneuverView.isVisible = false
-                    binding.routeProgressBanner.isVisible = false
-                    applyUiModeState()
+                    stopPracticeSession(reason = "stopped")
                 }
             }
         }
+    }
+
+    private fun stopActiveGuidanceFromNotification() {
+        when (uiMode) {
+            UiMode.NAVIGATION -> {
+                if (navSessionState == NavSessionState.ACTIVE) {
+                    stopNavigationSession()
+                }
+            }
+            UiMode.PRACTICE -> {
+                if (
+                    practiceRunStage == PracticeRunStage.TO_CENTRE ||
+                    practiceRunStage == PracticeRunStage.AT_CENTRE_TRANSITION ||
+                    practiceRunStage == PracticeRunStage.PRACTICE_ACTIVE
+                ) {
+                    stopPracticeSession(reason = "notification_action")
+                }
+            }
+        }
+
+        if (foregroundNavigationServiceRunning) {
+            NavigationForegroundService.stop(applicationContext)
+            foregroundNavigationServiceRunning = false
+            foregroundNavigationServiceMode = null
+            foregroundNotificationPermissionPromptedForSession = false
+        }
+    }
+
+    private fun stopPracticeSession(reason: String) {
+        val completed = latestRouteCompletionPercent >= practiceRouteFinishPercent
+        submitSessionSummary(completed = completed, reason = reason)
+        ensureSessionManager()
+        sessionManager.stop()
+        resetPracticeRunState()
+        binding.maneuverView.isVisible = false
+        binding.routeProgressBanner.isVisible = false
+        applyUiModeState()
     }
 
     private fun selectedCentreLabel(): String {
@@ -3002,6 +3089,7 @@ class MainActivity : AppCompatActivity() {
         submitSessionSummary(completed = completed, reason = "stopped")
         ensureSessionManager()
         sessionManager.stop()
+        latestNearestMiniRoundaboutMeters = Double.MAX_VALUE
         navSessionState = NavSessionState.BROWSE
         setNavigationCameraMode(NavigationCameraMode.FOLLOW)
         extraPromptsUnavailableShown = false
@@ -3314,7 +3402,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun renderSpeedometer(speedInfo: SpeedInfoValue?) {
+        if (!speedometerEnabledSetting) {
+            lastSpeedThresholdExceeded = false
+            binding.speedometerCard.visibility = View.GONE
+            binding.speedLimitValue.isVisible = false
+            return
+        }
+
         if (speedInfo == null) {
+            lastSpeedThresholdExceeded = false
             binding.speedometerCard.visibility =
                 if (uiMode == UiMode.NAVIGATION && navSessionState == NavSessionState.PREVIEW) {
                     View.INVISIBLE
@@ -3336,15 +3432,16 @@ class MainActivity : AppCompatActivity() {
             mapboxPostedSpeed == null || mapboxPostedSpeed <= 0 -> schoolZoneOverrideLimit
             else -> min(mapboxPostedSpeed, schoolZoneOverrideLimit)
         }
-
-        val isOverLimit =
-            displayedPostedSpeed != null && displayedPostedSpeed > 0 && displayedCurrentSpeed > displayedPostedSpeed
+        val thresholdDisplayDelta = speedingThresholdDeltaForDisplay()
+        val thresholdSpeed = displayedPostedSpeed?.takeIf { it > 0 }?.plus(thresholdDisplayDelta)
+        val isOverThreshold =
+            thresholdSpeed != null && displayedCurrentSpeed >= thresholdSpeed
         val limitTextColorRes =
-            if (isOverLimit) R.color.speedometer_limit_text_alert else R.color.speedometer_limit_text_default
+            if (isOverThreshold) R.color.speedometer_limit_text_alert else R.color.speedometer_limit_text_default
         val limitBackgroundRes =
-            if (isOverLimit) R.drawable.bg_speed_limit_sign_alert else R.drawable.bg_speed_limit_sign
+            if (isOverThreshold) R.drawable.bg_speed_limit_sign_alert else R.drawable.bg_speed_limit_sign
         val speedometerBackgroundRes =
-            if (isOverLimit) R.drawable.bg_speedometer_waze_alert else R.drawable.bg_speedometer_waze
+            if (isOverThreshold) R.drawable.bg_speedometer_waze_alert else R.drawable.bg_speedometer_waze
 
         binding.speedometerCard.isInvisible = false
         binding.speedometerCard.isVisible = true
@@ -3352,7 +3449,13 @@ class MainActivity : AppCompatActivity() {
         binding.currentSpeedUnit.text = speedUnitLabel(speedInfo.postedSpeedUnit)
         binding.speedometerDialBackground.setBackgroundResource(speedometerBackgroundRes)
 
-        if (displayedPostedSpeed != null && displayedPostedSpeed > 0) {
+        val shouldShowSpeedLimit = when (speedLimitDisplaySetting) {
+            SpeedLimitDisplaySetting.ALWAYS -> true
+            SpeedLimitDisplaySetting.ONLY_WHEN_SPEEDING -> isOverThreshold
+            SpeedLimitDisplaySetting.NEVER -> false
+        }
+
+        if (displayedPostedSpeed != null && displayedPostedSpeed > 0 && shouldShowSpeedLimit) {
             binding.speedLimitValue.isVisible = true
             binding.speedLimitValue.text = displayedPostedSpeed.toString()
             binding.speedLimitValue.setTextColor(ContextCompat.getColor(this, limitTextColorRes))
@@ -3366,6 +3469,39 @@ class MainActivity : AppCompatActivity() {
         } else {
             binding.speedLimitValue.isVisible = false
         }
+
+        maybePlaySpeedThresholdAlert(isOverThreshold = isOverThreshold)
+    }
+
+    private fun speedingThresholdDeltaForDisplay(): Int {
+        return when (speedingThresholdSetting) {
+            SpeedingThresholdSetting.AT_LIMIT -> 0
+            SpeedingThresholdSetting.PLUS_SMALL -> {
+                if (preferredUnitsSetting == PreferredUnitsSetting.METRIC_KMH) 10 else 5
+            }
+            SpeedingThresholdSetting.PLUS_LARGE -> {
+                if (preferredUnitsSetting == PreferredUnitsSetting.METRIC_KMH) 20 else 10
+            }
+        }
+    }
+
+    private fun maybePlaySpeedThresholdAlert(isOverThreshold: Boolean) {
+        if (!speedAlertAtThresholdEnabledSetting) {
+            lastSpeedThresholdExceeded = isOverThreshold
+            return
+        }
+        if (!isOverThreshold) {
+            lastSpeedThresholdExceeded = false
+            return
+        }
+        val nowMs = System.currentTimeMillis()
+        val crossedThreshold = !lastSpeedThresholdExceeded
+        val cooldownElapsed = nowMs - lastSpeedThresholdAlertAtMs >= speedThresholdAlertCooldownMs
+        if (crossedThreshold && cooldownElapsed) {
+            speedThresholdToneGenerator?.startTone(ToneGenerator.TONE_PROP_BEEP2, 180)
+            lastSpeedThresholdAlertAtMs = nowMs
+        }
+        lastSpeedThresholdExceeded = true
     }
 
     private fun currentSchoolZoneLimitForDisplay(): Int? {
@@ -3460,6 +3596,119 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, nextLabel, Toast.LENGTH_SHORT).show()
     }
 
+    private fun cycleAppearanceMode() {
+        val next = AppearanceModeManager.next(appearanceModeSetting)
+        lifecycleScope.launch {
+            settingsRepository.setAppearanceMode(next)
+        }
+        val messageRes = when (next) {
+            AppearanceModeSetting.AUTO -> R.string.appearance_mode_changed_auto
+            AppearanceModeSetting.DAY -> R.string.appearance_mode_changed_day
+            AppearanceModeSetting.NIGHT -> R.string.appearance_mode_changed_night
+        }
+        Toast.makeText(this, getString(messageRes), Toast.LENGTH_SHORT).show()
+    }
+
+    private fun renderAppearanceModeControl() {
+        if (!::binding.isInitialized) return
+        val iconRes = when (appearanceModeSetting) {
+            AppearanceModeSetting.AUTO -> R.drawable.ic_appearance_auto
+            AppearanceModeSetting.DAY -> R.drawable.ic_appearance_day
+            AppearanceModeSetting.NIGHT -> R.drawable.ic_appearance_night
+        }
+        val tintRes = when (appearanceModeSetting) {
+            AppearanceModeSetting.AUTO -> R.color.map_control_appearance_icon_auto
+            AppearanceModeSetting.DAY -> R.color.map_control_appearance_icon_day
+            AppearanceModeSetting.NIGHT -> R.color.map_control_appearance_icon_night
+        }
+        val contentDescriptionRes = when (appearanceModeSetting) {
+            AppearanceModeSetting.AUTO -> R.string.appearance_mode_auto
+            AppearanceModeSetting.DAY -> R.string.appearance_mode_day
+            AppearanceModeSetting.NIGHT -> R.string.appearance_mode_night
+        }
+        binding.appearanceModeButton.setImageResource(iconRes)
+        binding.appearanceModeButton.imageTintList =
+            ContextCompat.getColorStateList(this, tintRes)
+        binding.appearanceModeButton.contentDescription = getString(contentDescriptionRes)
+    }
+
+    private fun currentNavigationStyleUri(): String {
+        val useNightStyle = AppearanceModeManager.isNightActive(this, appearanceModeSetting)
+        return if (useNightStyle) {
+            NavigationStyles.NAVIGATION_NIGHT_STYLE
+        } else {
+            NavigationStyles.NAVIGATION_DAY_STYLE
+        }
+    }
+
+    private fun loadNavigationMapStyle(
+        forceReload: Boolean = false,
+        resetCamera: Boolean = false
+    ) {
+        if (!::binding.isInitialized) return
+        val targetStyleUri = currentNavigationStyleUri()
+        if (!forceReload && styleLoaded && lastAppliedNavigationStyleUri == targetStyleUri) {
+            return
+        }
+
+        styleLoaded = false
+        lastAppliedNavigationStyleUri = targetStyleUri
+        binding.mapView.mapboxMap.loadStyle(targetStyleUri) {
+            val desiredStyleUri = currentNavigationStyleUri()
+            if (desiredStyleUri != targetStyleUri) {
+                // Appearance mode changed while the style was loading; immediately apply the newer style.
+                loadNavigationMapStyle(forceReload = true, resetCamera = false)
+                return@loadStyle
+            }
+            styleLoaded = true
+            lastRenderedRouteLineSignature = null
+            destinationAnnotationManager?.deleteAll()
+            hazardAnnotationManager?.deleteAll()
+            roadMarkingAnnotationManager?.deleteAll()
+            destinationAnnotationManager = binding.mapView.annotations.createPointAnnotationManager()
+            hazardAnnotationManager = binding.mapView.annotations.createPointAnnotationManager()
+            roadMarkingAnnotationManager = binding.mapView.annotations.createPointAnnotationManager()
+            if (resetCamera) {
+                binding.mapView.mapboxMap.setCamera(
+                    CameraOptions.Builder()
+                        .center(initialCameraCenter())
+                        .zoom(12.5)
+                        .build()
+                )
+            }
+            updateTopOrnamentsPosition()
+            renderDestinationMarker()
+            renderHazardMarkers(hazardFeatures)
+            rerenderCurrentRoutesOnLoadedStyle()
+            if (
+                uiMode == UiMode.NAVIGATION &&
+                selectedDestinationPoint != null &&
+                mainViewModel.uiState.value.sessionState == NavigationSessionManager.SessionState.BROWSE
+            ) {
+                if (::sessionManager.isInitialized) {
+                    sessionManager.previewDestination(selectedDestinationPoint!!)
+                } else {
+                    pendingDestinationPreview = true
+                }
+            }
+        }
+    }
+
+    private fun rerenderCurrentRoutesOnLoadedStyle() {
+        if (!coreMapboxObserversRegistered) return
+        val style = binding.mapView.mapboxMap.style ?: return
+        val currentRoutes = mapboxNavigation.getNavigationRoutes()
+        if (currentRoutes.isEmpty()) return
+        lifecycleScope.launch {
+            routeLineApi.setNavigationRoutes(
+                newRoutes = currentRoutes,
+                alternativeRoutesMetadata = mapboxNavigation.getAlternativeMetadataFor(currentRoutes)
+            ).apply {
+                routeLineView.renderRouteDrawData(style, this)
+            }
+        }
+    }
+
     private fun renderVoiceGuidanceMode() {
         when (voiceGuidanceMode) {
             VoiceGuidanceMode.FULL -> {
@@ -3497,6 +3746,138 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    private fun speakVoiceInstructions(
+        voiceInstructions: VoiceInstructions,
+        onStarted: (() -> Unit)? = null,
+        onCompleted: (() -> Unit)? = null
+    ) {
+        syncVoicePipelineToCurrentLanguage()
+        val announcementText = voiceInstructions.announcement().orEmpty().trim()
+        if (announcementText.isEmpty()) {
+            onCompleted?.invoke()
+            return
+        }
+
+        val player = requireVoiceInstructionsPlayer()
+        if (useOnDeviceTtsForVoice) {
+            val onboardAnnouncement = SpeechAnnouncement.Builder(announcementText)
+                .build()
+            Log.d(
+                TAG,
+                "Voice guidance using on-device TTS locale=$voiceLanguageTag language=${voiceLanguageSetting.storageValue}"
+            )
+            onStarted?.invoke()
+            player.play(onboardAnnouncement) {
+                onCompleted?.invoke()
+            }
+            return
+        }
+
+        val speechApi = requireSpeechApi()
+        speechApi.generate(voiceInstructions) { speechResult ->
+            speechResult.fold(
+                { speechError ->
+                    onStarted?.invoke()
+                    player.play(speechError.fallback) { spokenAnnouncement ->
+                        speechApi.clean(spokenAnnouncement)
+                        onCompleted?.invoke()
+                    }
+                },
+                { speechValue ->
+                    onStarted?.invoke()
+                    player.play(speechValue.announcement) { spokenAnnouncement ->
+                        speechApi.clean(spokenAnnouncement)
+                        onCompleted?.invoke()
+                    }
+                }
+            )
+        }
+    }
+
+    private fun requireSpeechApi(): MapboxSpeechApi {
+        syncVoicePipelineToCurrentLanguage()
+        return speechApiInstance ?: MapboxSpeechApi(this, voiceLanguageTag).also {
+            speechApiInstance = it
+        }
+    }
+
+    private fun requireVoiceInstructionsPlayer(): MapboxVoiceInstructionsPlayer {
+        syncVoicePipelineToCurrentLanguage()
+        return voiceInstructionsPlayerInstance ?: MapboxVoiceInstructionsPlayer(this, voiceLanguageTag).also {
+            voiceInstructionsPlayerInstance = it
+        }
+    }
+
+    private fun cancelSpeechGeneration() {
+        speechApiInstance?.cancel()
+    }
+
+    private fun clearVoicePlaybackQueue() {
+        voiceInstructionsPlayerInstance?.clear()
+    }
+
+    private fun shutdownVoicePipeline() {
+        voiceInstructionsPlayerInstance?.shutdown()
+        voiceInstructionsPlayerInstance = null
+        speechApiInstance = null
+    }
+
+    private fun syncVoicePipelineToCurrentLanguage() {
+        val targetLanguage = currentAppLanguageSetting()
+        val targetTag = mapboxVoiceLanguageTag(targetLanguage)
+        val targetOnDeviceTts = shouldUseOnDeviceTtsOnly(targetLanguage)
+        if (voiceLanguageSetting == targetLanguage &&
+            voiceLanguageTag.equals(targetTag, ignoreCase = true) &&
+            useOnDeviceTtsForVoice == targetOnDeviceTts
+        ) {
+            return
+        }
+
+        cancelSpeechGeneration()
+        clearVoicePlaybackQueue()
+        shutdownVoicePipeline()
+
+        voiceLanguageSetting = targetLanguage
+        voiceLanguageTag = targetTag
+        useOnDeviceTtsForVoice = targetOnDeviceTts
+        Log.d(
+            TAG,
+            "Voice pipeline updated locale=$voiceLanguageTag language=${targetLanguage.storageValue} mode=${if (useOnDeviceTtsForVoice) "on_device_tts" else "mapbox_speech_api"}"
+        )
+    }
+
+    private fun currentAppLanguageSetting(): AppLanguageSetting {
+        val appLocaleTag = AppCompatDelegate.getApplicationLocales()[0]?.toLanguageTag()
+        val resourceLocaleTag = resources.configuration.locales[0]?.toLanguageTag()
+        val fallbackLocaleTag = Locale.getDefault().toLanguageTag()
+        val rawTag = appLocaleTag ?: resourceLocaleTag ?: fallbackLocaleTag
+        return AppLanguageSetting.entries.firstOrNull { it.bcp47Tag.equals(rawTag, ignoreCase = true) }
+            ?: AppLanguageSetting.entries.firstOrNull {
+                Locale.forLanguageTag(it.bcp47Tag).language.equals(
+                    Locale.forLanguageTag(rawTag).language,
+                    ignoreCase = true
+                )
+            }
+            ?: AppLanguageSetting.ENGLISH_UK
+    }
+
+    private fun mapboxVoiceLanguageTag(language: AppLanguageSetting): String {
+        return when (language) {
+            AppLanguageSetting.ENGLISH_UK -> "en-GB"
+            AppLanguageSetting.FRENCH -> "fr-FR"
+            AppLanguageSetting.GERMAN -> "de-DE"
+            AppLanguageSetting.SPANISH -> "es-ES"
+            AppLanguageSetting.ITALIAN -> "it-IT"
+            AppLanguageSetting.DUTCH -> "nl-NL"
+            AppLanguageSetting.PORTUGUESE_PORTUGAL -> "pt-PT"
+            AppLanguageSetting.POLISH -> "pl-PL"
+        }
+    }
+
+    private fun shouldUseOnDeviceTtsOnly(language: AppLanguageSetting): Boolean {
+        return language != AppLanguageSetting.ENGLISH_UK
+    }
+
     private fun playHazardPrompt(speechText: String) {
         if (currentVoiceModeSetting() == VoiceModeSetting.MUTE) {
             hazardVoiceController.onHazardSpeechCompleted()
@@ -3507,26 +3888,14 @@ class MainActivity : AppCompatActivity() {
             .announcement(speechText)
             .distanceAlongGeometry(0.0)
             .build()
-        speechApi.generate(voiceInstructions) { speechResult ->
-            speechResult.fold(
-                { speechError ->
-                    isHazardSpeechPlaying = true
-                    voiceInstructionsPlayer.play(speechError.fallback) { spokenAnnouncement ->
-                        isHazardSpeechPlaying = false
-                        speechApi.clean(spokenAnnouncement)
-                        hazardVoiceController.onHazardSpeechCompleted()
-                    }
-                },
-                { speechValue ->
-                    isHazardSpeechPlaying = true
-                    voiceInstructionsPlayer.play(speechValue.announcement) { spokenAnnouncement ->
-                        isHazardSpeechPlaying = false
-                        speechApi.clean(spokenAnnouncement)
-                        hazardVoiceController.onHazardSpeechCompleted()
-                    }
-                }
-            )
-        }
+        speakVoiceInstructions(
+            voiceInstructions = voiceInstructions,
+            onStarted = { isHazardSpeechPlaying = true },
+            onCompleted = {
+                isHazardSpeechPlaying = false
+                hazardVoiceController.onHazardSpeechCompleted()
+            }
+        )
     }
 
     private fun playSystemAnnouncement(speechText: String) {
@@ -3537,25 +3906,12 @@ class MainActivity : AppCompatActivity() {
             .announcement(speechText)
             .distanceAlongGeometry(0.0)
             .build()
-        speechApi.generate(voiceInstructions) { speechResult ->
-            speechResult.fold(
-                { speechError ->
-                    voiceInstructionsPlayer.play(speechError.fallback) { spokenAnnouncement ->
-                        speechApi.clean(spokenAnnouncement)
-                    }
-                },
-                { speechValue ->
-                    voiceInstructionsPlayer.play(speechValue.announcement) { spokenAnnouncement ->
-                        speechApi.clean(spokenAnnouncement)
-                    }
-                }
-            )
-        }
+        speakVoiceInstructions(voiceInstructions)
     }
 
     private fun stopHazardSpeech() {
         if (!isHazardSpeechPlaying) return
-        voiceInstructionsPlayer.clear()
+        clearVoicePlaybackQueue()
         isHazardSpeechPlaying = false
     }
 
@@ -3605,6 +3961,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onDestroy() {
+        unregisterNotificationStopReceiver()
         lowStressPersistJob?.cancel()
         promptAutoHideJob?.cancel()
         hazardVoiceController.stopSpeaking()
@@ -3627,8 +3984,9 @@ class MainActivity : AppCompatActivity() {
         promptBannerBitmapCache.clear()
         unavailablePromptBannerBitmap = null
         super.onDestroy()
-        speechApi.cancel()
-        voiceInstructionsPlayer.shutdown()
+        cancelSpeechGeneration()
+        shutdownVoicePipeline()
+        speedThresholdToneGenerator?.release()
         routeLineApi.cancel()
         routeLineView.cancel()
         maneuverApi.cancel()
@@ -4431,7 +4789,12 @@ class MainActivity : AppCompatActivity() {
         val voiceMode: VoiceModeSetting,
         val units: PreferredUnitsSetting,
         val hazardsEnabled: Boolean,
-        val lowStressMode: Boolean
+        val lowStressMode: Boolean,
+        val appearanceMode: AppearanceModeSetting,
+        val speedometerEnabled: Boolean = true,
+        val speedLimitDisplay: SpeedLimitDisplaySetting = SpeedLimitDisplaySetting.ALWAYS,
+        val speedingThreshold: SpeedingThresholdSetting = SpeedingThresholdSetting.AT_LIMIT,
+        val speedAlertAtThresholdEnabled: Boolean = true
     )
 
     private data class NoEntryScoredRoute(
@@ -4740,7 +5103,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun configurePuckAnimator(animator: ValueAnimator, durationMs: Long) {
         animator.duration = durationMs.coerceIn(puckMinTransitionMs, puckMaxTransitionMs)
-        animator.interpolator = LinearInterpolator()
+        animator.interpolator = DecelerateInterpolator()
     }
 
     private fun dynamicZoomLevel(
@@ -4765,18 +5128,53 @@ class MainActivity : AppCompatActivity() {
             distanceToManeuverMeters <= 320.0 -> 0.25
             else -> 0.0
         }
-        return (baseZoom + maneuverBoost).coerceIn(15.8, 19.0)
+        // Mini roundabouts are small and easy to miss — apply a strong dedicated boost so the
+        // roundabout fills the screen clearly. This is independent of the Mapbox step maneuver
+        // distance because mini roundabouts come from OSM features, not route step maneuvers.
+        val miniRoundaboutBoost = when {
+            latestNearestMiniRoundaboutMeters <= 25.0 -> 1.8
+            latestNearestMiniRoundaboutMeters <= 50.0 -> 1.5
+            latestNearestMiniRoundaboutMeters <= 80.0 -> 1.2
+            latestNearestMiniRoundaboutMeters <= 130.0 -> 0.8
+            latestNearestMiniRoundaboutMeters <= 200.0 -> 0.4
+            else -> 0.0
+        }
+
+        // Learners need a tighter, more detailed view; standard drivers get a wider field.
+        val modeOffset = when (currentDriverMode) {
+            DriverMode.LEARNER -> 0.6
+            DriverMode.NEW_DRIVER -> 0.3
+            DriverMode.STANDARD -> 0.0
+        }
+        val zoomFloor = when (currentDriverMode) {
+            DriverMode.LEARNER -> 16.4
+            DriverMode.NEW_DRIVER -> 16.1
+            DriverMode.STANDARD -> 15.8
+        }
+        val zoomCeiling = when (currentDriverMode) {
+            DriverMode.LEARNER -> 19.5
+            DriverMode.NEW_DRIVER -> 19.2
+            DriverMode.STANDARD -> 19.0
+        }
+        return (baseZoom + maxOf(maneuverBoost, miniRoundaboutBoost) + modeOffset).coerceIn(zoomFloor, zoomCeiling)
     }
 
     private fun dynamicPitchLevel(speedMetersPerSecond: Double): Double {
         val speedKmh = max(0.0, speedMetersPerSecond * 3.6)
-        return when {
+        val basePitch = when {
             speedKmh < 16.0 -> 34.0
             speedKmh < 32.0 -> 38.0
             speedKmh < 55.0 -> 42.0
             speedKmh < 80.0 -> 46.0
             else -> 48.0
         }
+        // Learners benefit from a flatter (lower pitch) view so more road ahead is visible.
+        val modeOffset = when (currentDriverMode) {
+            DriverMode.LEARNER -> -4.0
+            DriverMode.NEW_DRIVER -> -2.0
+            DriverMode.STANDARD -> 0.0
+        }
+        return (basePitch + modeOffset).coerceIn(28.0, 50.0)
     }
 
     private fun dynamicCameraPadding(

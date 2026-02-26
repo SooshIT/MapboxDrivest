@@ -141,7 +141,7 @@ object OsmFeatureMapper {
             OsmFeatureType.NO_ENTRY -> 0.92f
             OsmFeatureType.SPEED_CAMERA -> 0.85f
             OsmFeatureType.GIVE_WAY -> 0.68f
-            OsmFeatureType.BUS_LANE -> 0.3f
+            OsmFeatureType.BUS_LANE -> 0.65f
             OsmFeatureType.BUS_STOP -> 0.72f
             OsmFeatureType.SCHOOL_ZONE -> 0.6f
             OsmFeatureType.MINI_ROUNDABOUT -> 0.8f

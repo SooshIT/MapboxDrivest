@@ -22,6 +22,7 @@
         <!-- Default button theming used across entry/theory/settings surfaces -->
         <item name="materialButtonStyle">@style/Widget.Drivest.Button</item>
         <item name="materialButtonOutlinedStyle">@style/Widget.Drivest.Button.Outlined</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.Drivest.MaterialAlertDialog</item>
         <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Drivest.Medium</item>
         <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Drivest.Small</item>
     </style>
@@ -49,18 +50,87 @@
     </style>
 
     <style name="Widget.Drivest.Button.Outlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="backgroundTint">@color/drivest_surface_button_bg</item>
         <item name="strokeColor">@color/settings_accent</item>
         <item name="strokeWidth">1dp</item>
-        <item name="android:textColor">@color/settings_accent</item>
-        <item name="iconTint">@color/settings_accent</item>
+        <item name="android:textColor">@color/drivest_surface_button_text</item>
+        <item name="iconTint">@color/drivest_surface_button_text</item>
         <item name="cornerRadius">16dp</item>
+        <item name="rippleColor">@color/settings_accent_soft</item>
         <item name="android:insetLeft">0dp</item>
         <item name="android:insetRight">0dp</item>
         <item name="android:insetTop">0dp</item>
         <item name="android:insetBottom">0dp</item>
         <item name="android:letterSpacing">0</item>
         <item name="android:minHeight">50dp</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <style name="Widget.Drivest.Button.Text" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="android:backgroundTint">@android:color/transparent</item>
+        <item name="strokeColor">@android:color/transparent</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="android:textColor">@color/settings_accent</item>
+        <item name="iconTint">@color/settings_accent</item>
+        <item name="rippleColor">@color/settings_accent_soft</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <style name="Widget.Drivest.Button.Back" parent="Widget.Drivest.Button.Outlined">
+        <item name="android:minHeight">40dp</item>
+        <item name="android:minWidth">84dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="android:paddingLeft">14dp</item>
+        <item name="android:paddingRight">14dp</item>
+        <item name="strokeWidth">1dp</item>
+    </style>
+
+    <style name="Widget.Drivest.Button.Segmented" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="backgroundTint">@color/drivest_surface_button_bg</item>
+        <item name="strokeColor">@color/settings_segment_button_stroke</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:textColor">@color/drivest_surface_button_text</item>
+        <item name="iconTint">@color/drivest_surface_button_text</item>
+        <item name="cornerRadius">14dp</item>
+        <item name="rippleColor">@color/settings_accent_soft</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="android:minHeight">46dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:elevation">0dp</item>
+    </style>
+
+    <style name="ThemeOverlay.Drivest.MaterialAlertDialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.Drivest.Button.Text.Dialog</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.Drivest.Button.Text.Dialog</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Widget.Drivest.Button.Text.Dialog</item>
+    </style>
+
+    <style name="Widget.Drivest.Button.Text.Dialog" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="backgroundTint">@android:color/transparent</item>
+        <item name="android:backgroundTint">@android:color/transparent</item>
+        <item name="strokeColor">@android:color/transparent</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="android:textColor">@color/settings_accent</item>
+        <item name="rippleColor">@color/settings_accent_soft</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:minHeight">40dp</item>
+        <item name="android:letterSpacing">0</item>
         <item name="android:elevation">0dp</item>
     </style>
 

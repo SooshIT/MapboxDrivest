@@ -41,6 +41,30 @@ class SettingsRepository(
         PreferredUnitsSetting.fromStorage(preferences[KEY_UNITS])
     }
 
+    val appearanceMode: Flow<AppearanceModeSetting> = dataStore.data.map { preferences ->
+        AppearanceModeSetting.fromStorage(preferences[KEY_APPEARANCE_MODE])
+    }
+
+    val appLanguage: Flow<AppLanguageSetting> = dataStore.data.map { preferences ->
+        AppLanguageSetting.fromStorage(preferences[KEY_APP_LANGUAGE])
+    }
+
+    val speedometerEnabled: Flow<Boolean> = dataStore.data.map { preferences ->
+        preferences[KEY_SPEEDOMETER_ENABLED] ?: true
+    }
+
+    val speedLimitDisplay: Flow<SpeedLimitDisplaySetting> = dataStore.data.map { preferences ->
+        SpeedLimitDisplaySetting.fromStorage(preferences[KEY_SPEED_LIMIT_DISPLAY])
+    }
+
+    val speedingThreshold: Flow<SpeedingThresholdSetting> = dataStore.data.map { preferences ->
+        SpeedingThresholdSetting.fromStorage(preferences[KEY_SPEEDING_THRESHOLD])
+    }
+
+    val speedAlertAtThresholdEnabled: Flow<Boolean> = dataStore.data.map { preferences ->
+        preferences[KEY_SPEED_ALERT_AT_THRESHOLD_ENABLED] ?: true
+    }
+
     val units: Flow<PreferredUnitsSetting> = preferredUnits
 
     val lastSelectedCentreId: Flow<String> = dataStore.data.map { preferences ->
@@ -134,6 +158,42 @@ class SettingsRepository(
 
     suspend fun setUnits(units: PreferredUnitsSetting) {
         setPreferredUnits(units)
+    }
+
+    suspend fun setAppearanceMode(mode: AppearanceModeSetting) {
+        dataStore.edit { prefs ->
+            prefs[KEY_APPEARANCE_MODE] = mode.storageValue
+        }
+    }
+
+    suspend fun setAppLanguage(language: AppLanguageSetting) {
+        dataStore.edit { prefs ->
+            prefs[KEY_APP_LANGUAGE] = language.storageValue
+        }
+    }
+
+    suspend fun setSpeedometerEnabled(enabled: Boolean) {
+        dataStore.edit { prefs ->
+            prefs[KEY_SPEEDOMETER_ENABLED] = enabled
+        }
+    }
+
+    suspend fun setSpeedLimitDisplay(setting: SpeedLimitDisplaySetting) {
+        dataStore.edit { prefs ->
+            prefs[KEY_SPEED_LIMIT_DISPLAY] = setting.storageValue
+        }
+    }
+
+    suspend fun setSpeedingThreshold(setting: SpeedingThresholdSetting) {
+        dataStore.edit { prefs ->
+            prefs[KEY_SPEEDING_THRESHOLD] = setting.storageValue
+        }
+    }
+
+    suspend fun setSpeedAlertAtThresholdEnabled(enabled: Boolean) {
+        dataStore.edit { prefs ->
+            prefs[KEY_SPEED_ALERT_AT_THRESHOLD_ENABLED] = enabled
+        }
     }
 
     suspend fun setLastSelectedCentreId(centreId: String) {
@@ -289,6 +349,16 @@ class SettingsRepository(
     private companion object {
         val KEY_VOICE_MODE: Preferences.Key<String> = stringPreferencesKey("voice_mode")
         val KEY_UNITS: Preferences.Key<String> = stringPreferencesKey("preferred_units")
+        val KEY_APPEARANCE_MODE: Preferences.Key<String> = stringPreferencesKey("appearance_mode")
+        val KEY_APP_LANGUAGE: Preferences.Key<String> = stringPreferencesKey("app_language")
+        val KEY_SPEEDOMETER_ENABLED: Preferences.Key<Boolean> =
+            booleanPreferencesKey("speedometer_enabled")
+        val KEY_SPEED_LIMIT_DISPLAY: Preferences.Key<String> =
+            stringPreferencesKey("speed_limit_display")
+        val KEY_SPEEDING_THRESHOLD: Preferences.Key<String> =
+            stringPreferencesKey("speeding_threshold")
+        val KEY_SPEED_ALERT_AT_THRESHOLD_ENABLED: Preferences.Key<Boolean> =
+            booleanPreferencesKey("speed_alert_at_threshold_enabled")
         val KEY_LAST_CENTRE_ID: Preferences.Key<String> = stringPreferencesKey("last_selected_centre_id")
         val KEY_PRACTICE_CENTRE_ID: Preferences.Key<String> = stringPreferencesKey("practice_centre_id")
         val KEY_LAST_MODE: Preferences.Key<String> = stringPreferencesKey("last_mode")

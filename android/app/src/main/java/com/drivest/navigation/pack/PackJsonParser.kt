@@ -4,52 +4,14 @@ import com.drivest.navigation.osm.OsmFeature
 import com.drivest.navigation.osm.OsmFeatureType
 import com.drivest.navigation.practice.PracticeRoute
 import com.drivest.navigation.practice.PracticeRoutePoint
+import org.json.JSONArray
 import org.json.JSONObject
 
 object PackJsonParser {
 
     fun parseRoutesPack(json: String): RoutesPack? {
         val root = runCatching { JSONObject(json) }.getOrNull() ?: return null
-        val metadata = parseMetadata(root.optJSONObject("metadata")) ?: return null
-        val centreId = root.optString("centreId").ifBlank { return null }
-        val routesArray = root.optJSONArray("routes") ?: return null
-
-        val routes = buildList {
-            for (index in 0 until routesArray.length()) {
-                val routeJson = routesArray.optJSONObject(index) ?: continue
-                val geometryArray = routeJson.optJSONArray("geometry")
-                val geometry = buildList {
-                    if (geometryArray != null) {
-                        for (g in 0 until geometryArray.length()) {
-                            val point = geometryArray.optJSONObject(g) ?: continue
-                            add(
-                                PracticeRoutePoint(
-                                    lat = point.optDouble("lat", 0.0),
-                                    lon = point.optDouble("lon", 0.0)
-                                )
-                            )
-                        }
-                    }
-                }
-                add(
-                    PracticeRoute(
-                        id = routeJson.optString("id", ""),
-                        name = routeJson.optString("name", ""),
-                        geometry = geometry,
-                        distanceM = routeJson.optDouble("distanceM", 0.0),
-                        durationS = routeJson.optDouble("durationS", 0.0),
-                        startLat = routeJson.optDouble("startLat", geometry.firstOrNull()?.lat ?: 0.0),
-                        startLon = routeJson.optDouble("startLon", geometry.firstOrNull()?.lon ?: 0.0)
-                    )
-                )
-            }
-        }
-
-        return RoutesPack(
-            metadata = metadata,
-            centreId = centreId,
-            routes = routes.filter { it.id.isNotBlank() }
-        )
+        return parseLegacyRoutesPack(root) ?: parseBackendRoutesResponse(root)
     }
 
     fun parseHazardsPack(json: String): HazardsPack? {
@@ -121,6 +83,162 @@ object PackJsonParser {
             version = version,
             generatedAt = generatedAt,
             bbox = bbox
+        )
+    }
+
+    private fun parseLegacyRoutesPack(root: JSONObject): RoutesPack? {
+        val metadata = parseMetadata(root.optJSONObject("metadata")) ?: return null
+        val centreId = root.optString("centreId").ifBlank { return null }
+        val routesArray = root.optJSONArray("routes") ?: return null
+        val routes = parseRoutesArray(routesArray)
+        return RoutesPack(
+            metadata = metadata,
+            centreId = centreId,
+            routes = routes
+        )
+    }
+
+    private fun parseBackendRoutesResponse(root: JSONObject): RoutesPack? {
+        val routesArray = when {
+            root.optJSONArray("data") != null -> root.optJSONArray("data")
+            root.optJSONObject("data")?.optJSONArray("items") != null ->
+                root.optJSONObject("data")?.optJSONArray("items")
+            else -> null
+        } ?: return null
+
+        val routes = parseRoutesArray(routesArray)
+        if (routes.isEmpty()) {
+            // Treat an empty backend response as a valid empty pack so callers can fall back cleanly.
+            val centreId = root.optString("centreId").ifBlank {
+                routesArray.optJSONObject(0)?.optString("centreId").orEmpty()
+            }.ifBlank { "" }
+            return RoutesPack(
+                metadata = synthesizeRoutesMetadata(root, routes),
+                centreId = centreId,
+                routes = emptyList()
+            )
+        }
+
+        val centreId = root.optString("centreId").ifBlank {
+            (0 until routesArray.length())
+                .asSequence()
+                .mapNotNull { index -> routesArray.optJSONObject(index)?.optString("centreId") }
+                .map { it.trim() }
+                .firstOrNull { it.isNotBlank() }
+                .orEmpty()
+        }.ifBlank { return null }
+
+        return RoutesPack(
+            metadata = parseMetadata(root.optJSONObject("metadata")) ?: synthesizeRoutesMetadata(root, routes),
+            centreId = centreId,
+            routes = routes
+        )
+    }
+
+    private fun parseRoutesArray(routesArray: JSONArray): List<PracticeRoute> {
+        return buildList {
+            for (index in 0 until routesArray.length()) {
+                val routeJson = routesArray.optJSONObject(index) ?: continue
+                val geometry = parseRouteGeometry(routeJson)
+                val startPoint = geometry.firstOrNull()
+                val routeId = routeJson.optString("id", "").trim()
+                val routeName = routeJson.optString("name", "").trim().ifBlank {
+                    "Route ${index + 1}"
+                }
+                val durationS = routeJson.optDouble(
+                    "durationS",
+                    routeJson.optDouble("durationEstS", 0.0)
+                )
+                add(
+                    PracticeRoute(
+                        id = routeId,
+                        name = routeName,
+                        geometry = geometry,
+                        distanceM = routeJson.optDouble("distanceM", 0.0),
+                        durationS = durationS,
+                        startLat = routeJson.optDouble("startLat", startPoint?.lat ?: 0.0),
+                        startLon = routeJson.optDouble("startLon", startPoint?.lon ?: 0.0)
+                    )
+                )
+            }
+        }.filter { route ->
+            route.id.isNotBlank() && route.geometry.isNotEmpty()
+        }
+    }
+
+    private fun parseRouteGeometry(routeJson: JSONObject): List<PracticeRoutePoint> {
+        routeJson.optJSONArray("geometry")?.let { geometryArray ->
+            val parsed = buildList {
+                for (g in 0 until geometryArray.length()) {
+                    val point = geometryArray.optJSONObject(g) ?: continue
+                    val lat = point.optDouble("lat", Double.NaN)
+                    val lon = point.optDouble("lon", Double.NaN)
+                    if (lat.isNaN() || lon.isNaN()) continue
+                    add(PracticeRoutePoint(lat = lat, lon = lon))
+                }
+            }
+            if (parsed.isNotEmpty()) return parsed
+        }
+
+        routeJson.optJSONArray("coordinates")?.let { coordinates ->
+            val parsed = parseCoordinatePairs(coordinates)
+            if (parsed.isNotEmpty()) return parsed
+        }
+
+        val polylineRaw = routeJson.optString("polyline", "").trim()
+        if (polylineRaw.startsWith("[")) {
+            val parsed = runCatching { JSONArray(polylineRaw) }
+                .getOrNull()
+                ?.let(::parseCoordinatePairs)
+                .orEmpty()
+            if (parsed.isNotEmpty()) return parsed
+        }
+
+        return emptyList()
+    }
+
+    private fun parseCoordinatePairs(coordinates: JSONArray): List<PracticeRoutePoint> {
+        return buildList {
+            for (i in 0 until coordinates.length()) {
+                val pair = coordinates.optJSONArray(i) ?: continue
+                if (pair.length() < 2) continue
+                val lon = pair.optDouble(0, Double.NaN)
+                val lat = pair.optDouble(1, Double.NaN)
+                if (lat.isNaN() || lon.isNaN()) continue
+                add(PracticeRoutePoint(lat = lat, lon = lon))
+            }
+        }
+    }
+
+    private fun synthesizeRoutesMetadata(root: JSONObject, routes: List<PracticeRoute>): PackMetadata {
+        val generatedAt = root.optJSONObject("meta")?.optString("generatedAt").orEmpty()
+        return PackMetadata(
+            version = "routes-api-v2-compat",
+            generatedAt = generatedAt,
+            bbox = computeRoutesBbox(routes)
+        )
+    }
+
+    private fun computeRoutesBbox(routes: List<PracticeRoute>): PackBbox {
+        val points = routes.flatMap { it.geometry }
+        if (points.isEmpty()) {
+            return PackBbox(south = 0.0, west = 0.0, north = 0.0, east = 0.0)
+        }
+        var south = Double.POSITIVE_INFINITY
+        var west = Double.POSITIVE_INFINITY
+        var north = Double.NEGATIVE_INFINITY
+        var east = Double.NEGATIVE_INFINITY
+        points.forEach { point ->
+            if (point.lat < south) south = point.lat
+            if (point.lat > north) north = point.lat
+            if (point.lon < west) west = point.lon
+            if (point.lon > east) east = point.lon
+        }
+        return PackBbox(
+            south = south,
+            west = west,
+            north = north,
+            east = east
         )
     }
 }

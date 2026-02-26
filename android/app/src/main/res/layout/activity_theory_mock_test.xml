@@ -14,8 +14,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_theory_panel"
+            android:elevation="3dp"
+            android:outlineProvider="background"
             android:orientation="vertical"
-            android:padding="16dp">
+            android:padding="18dp">
 
             <TextView
                 android:id="@+id/theoryMockTitle"
@@ -125,6 +127,7 @@
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/theoryMockNextButton"
+                style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginTop="12dp"

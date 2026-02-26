@@ -43,6 +43,9 @@ class CentreRepository(
     private suspend fun loadCentresWithFallback(): List<TestCentre> {
         return try {
             val centres = backendCentreRepository.loadCentres()
+            if (centres.isEmpty()) {
+                throw IOException("Backend centres response was empty.")
+            }
             settingsRepository.clearBackendErrorSummary()
             centres
         } catch (error: Exception) {

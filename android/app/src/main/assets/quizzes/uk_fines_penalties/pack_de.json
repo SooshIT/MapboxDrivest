@@ -1,0 +1,2247 @@
+[
+	{
+		"id": 1,
+		"category": "Geschwindigkeitsüberschreitung",
+		"difficulty": "easy",
+		"question": "Wenn du über dem Tempolimit erwischt wirst, welche Standardstrafe bekommst du am häufigsten?",
+		"options": [
+			"£50 Geldstrafe und 2 Punkte",
+			"£100 Geldstrafe und 3 Punkte",
+			"£200 Geldstrafe und 6 Punkte",
+			"Nur Verwarnung"
+		],
+		"answerIndex": 1,
+		"explanation": "Die Mindeststrafe ist häufig £100 und 3 Strafpunkte.",
+		"legalSource": "speeding",
+		"tags": [
+			"fine",
+			"points"
+		],
+		"xp": 10,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 2,
+		"category": "Geschwindigkeitsüberschreitung",
+		"difficulty": "easy",
+		"question": "Ab wie vielen Strafpunkten riskierst du in der Regel ein Fahrverbot durch Punktesammlung?",
+		"options": [
+			"9",
+			"10",
+			"12",
+			"15"
+		],
+		"answerIndex": 2,
+		"explanation": "Bei 12 oder mehr Punkten innerhalb von 3 Jahren droht ein Fahrverbot.",
+		"legalSource": "points",
+		"tags": [
+			"ban",
+			"totting"
+		],
+		"xp": 10,
+		"riskLevel": "high"
+	},
+	{
+		"id": 3,
+		"category": "Geschwindigkeitsüberschreitung",
+		"difficulty": "medium",
+		"question": "Wenn ein Fall wegen zu hoher Geschwindigkeit vor Gericht kommt, welches zusätzliche Risiko besteht?",
+		"options": [
+			"Fahrzeug wird beschlagnahmt",
+			"Fahrverbot möglich",
+			"Versicherung wird sofort beendet",
+			"MOT wird ungültig"
+		],
+		"answerIndex": 1,
+		"explanation": "Gericht kann bei schweren Fällen ein Fahrverbot verhängen.",
+		"legalSource": "speeding",
+		"tags": [
+			"court"
+		],
+		"xp": 20,
+		"riskLevel": "high"
+	},
+	{
+		"id": 4,
+		"category": "Geschwindigkeitsüberschreitung",
+		"difficulty": "easy",
+		"question": "Manchmal wird statt Punkten ein Kurs angeboten. Wer entscheidet normalerweise darüber?",
+		"options": [
+			"Deine Versicherung",
+			"DVLA",
+			"Polizei",
+			"Gerichtsschreiber"
+		],
+		"answerIndex": 2,
+		"explanation": "Die Polizei entscheidet, ob ein Kurs angeboten wird.",
+		"legalSource": "speeding",
+		"tags": [
+			"course"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 5,
+		"category": "Geschwindigkeitsüberschreitung",
+		"difficulty": "easy",
+		"question": "Wovon hängt die Höhe der Strafe bei Tempoverstößen am stärksten ab?",
+		"options": [
+			"Uhrzeit",
+			"Dein Alter",
+			"Wie weit du über dem Limit warst",
+			"Farbe des Autos"
+		],
+		"answerIndex": 2,
+		"explanation": "Je höher die Überschreitung, desto strenger die Strafe.",
+		"legalSource": "speeding",
+		"tags": [
+			"rules"
+		],
+		"xp": 10,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 6,
+		"category": "Handy am Steuer",
+		"difficulty": "easy",
+		"question": "Wenn du ein Handy in der Hand hältst und benutzt, wie viele Punkte bekommst du typischerweise?",
+		"options": [
+			"3",
+			"4",
+			"6",
+			"9"
+		],
+		"answerIndex": 2,
+		"explanation": "Handheld-Handybenutzung führt häufig zu 6 Punkten.",
+		"legalSource": "mobile_phone",
+		"tags": [
+			"points"
+		],
+		"xp": 10,
+		"riskLevel": "high"
+	},
+	{
+		"id": 7,
+		"category": "Handy am Steuer",
+		"difficulty": "easy",
+		"question": "Welche feste Geldstrafe ist bei Handheld-Handybenutzung am Steuer am häufigsten?",
+		"options": [
+			"£50",
+			"£100",
+			"£200",
+			"£500"
+		],
+		"answerIndex": 2,
+		"explanation": "Die feste Geldstrafe liegt häufig bei £200.",
+		"legalSource": "mobile_phone",
+		"tags": [
+			"fine"
+		],
+		"xp": 10,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 8,
+		"category": "Handy am Steuer",
+		"difficulty": "easy",
+		"question": "Du hast deinen Führerschein weniger als 2 Jahre. Du bekommst 6 Punkte. Was passiert typischerweise?",
+		"options": [
+			"Nichts",
+			"Du bekommst eine Verwarnung",
+			"Du verlierst deinen Führerschein",
+			"Du musst nur Theorie neu machen"
+		],
+		"answerIndex": 2,
+		"explanation": "In den ersten 2 Jahren führen 6 Punkte häufig zum Entzug.",
+		"legalSource": "points",
+		"tags": [
+			"new_driver"
+		],
+		"xp": 10,
+		"riskLevel": "high"
+	},
+	{
+		"id": 9,
+		"category": "Handy am Steuer",
+		"difficulty": "medium",
+		"question": "Ist es illegal, ein Handy in der Hand zu benutzen, wenn du an einer roten Ampel stehst?",
+		"options": [
+			"Nein",
+			"Nur auf der Autobahn",
+			"Ja",
+			"Nur nachts"
+		],
+		"answerIndex": 2,
+		"explanation": "Du giltst weiterhin als Fahrender, auch im Stau oder an Ampeln.",
+		"legalSource": "mobile_phone",
+		"tags": [
+			"rules"
+		],
+		"xp": 20,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 10,
+		"category": "Versicherung",
+		"difficulty": "easy",
+		"question": "Wenn du ohne Versicherung fährst, welche feste Strafe ist typisch?",
+		"options": [
+			"£100 und 3 Punkte",
+			"£300 und 6 Punkte",
+			"£200 und 3 Punkte",
+			"£500 und 6 Punkte"
+		],
+		"answerIndex": 1,
+		"explanation": "Typisch sind £300 und 6 Strafpunkte.",
+		"legalSource": "insurance",
+		"tags": [
+			"fine",
+			"points"
+		],
+		"xp": 10,
+		"riskLevel": "high"
+	},
+	{
+		"id": 11,
+		"category": "Versicherung",
+		"difficulty": "medium",
+		"question": "Wenn Fahren ohne Versicherung vor Gericht landet, wie hoch kann die Geldstrafe werden?",
+		"options": [
+			"Bis £500",
+			"Bis £1.000",
+			"Unbegrenzt",
+			"£2.500"
+		],
+		"answerIndex": 2,
+		"explanation": "Vor Gericht ist eine unbegrenzte Geldstrafe möglich.",
+		"legalSource": "insurance",
+		"tags": [
+			"court"
+		],
+		"xp": 20,
+		"riskLevel": "high"
+	},
+	{
+		"id": 12,
+		"category": "Versicherung",
+		"difficulty": "easy",
+		"question": "Was kann die Polizei tun, wenn ein Fahrzeug ohne Versicherung gefahren wird?",
+		"options": [
+			"Sofort abschleppen",
+			"Beschlagnahmen",
+			"Parkticket ausstellen",
+			"Punkte entfernen"
+		],
+		"answerIndex": 1,
+		"explanation": "Die Polizei kann ein unversichertes Fahrzeug beschlagnahmen.",
+		"legalSource": "insurance",
+		"tags": [
+			"enforcement"
+		],
+		"xp": 10,
+		"riskLevel": "high"
+	},
+	{
+		"id": 13,
+		"category": "Fahrzeug-Compliance",
+		"difficulty": "easy",
+		"question": "Wenn du ohne gültigen MOT fährst, was riskierst du als maximale Geldstrafe?",
+		"options": [
+			"£100",
+			"£1.000",
+			"6 Punkte",
+			"Sofortiges Fahrverbot"
+		],
+		"answerIndex": 1,
+		"explanation": "Für Fahren ohne gültigen MOT sind bis zu £1.000 möglich.",
+		"legalSource": "mot",
+		"tags": [
+			"fine"
+		],
+		"xp": 10,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 14,
+		"category": "Fahrzeug-Compliance",
+		"difficulty": "easy",
+		"question": "Welche Behörde verwaltet hauptsächlich die Fahrzeugsteuer-Compliance im UK?",
+		"options": [
+			"Polizei",
+			"DVLA",
+			"Gemeinde",
+			"Gericht"
+		],
+		"answerIndex": 1,
+		"explanation": "Die DVLA verwaltet Vehicle Tax und SORN.",
+		"legalSource": "vehicle_tax",
+		"tags": [
+			"authority"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 15,
+		"category": "Fahrzeug-Compliance",
+		"difficulty": "easy",
+		"question": "Wann solltest du ein Fahrzeug als SORN melden?",
+		"options": [
+			"Wenn du es verkaufst",
+			"Wenn du es nicht auf öffentlichen Straßen nutzt",
+			"Wenn du die Versicherung erneuerst",
+			"Wenn du umziehst"
+		],
+		"answerIndex": 1,
+		"explanation": "SORN gilt, wenn das Fahrzeug nicht im Straßenverkehr genutzt wird.",
+		"legalSource": "vehicle_tax",
+		"tags": [
+			"rules"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 16,
+		"category": "Sicherheitsgurte",
+		"difficulty": "easy",
+		"question": "Wenn du keinen Sicherheitsgurt trägst, wie hoch ist die maximale Geldstrafe?",
+		"options": [
+			"£100",
+			"£200",
+			"£500",
+			"£1.000"
+		],
+		"answerIndex": 2,
+		"explanation": "Die maximale Geldstrafe kann bis zu £500 betragen.",
+		"legalSource": "seatbelt",
+		"tags": [
+			"fine"
+		],
+		"xp": 10,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 17,
+		"category": "Sicherheitsgurte",
+		"difficulty": "easy",
+		"question": "Als Fahrer bist du verantwortlich, dass Passagiere unter welchem Alter angegurtet sind?",
+		"options": [
+			"12 Jahre",
+			"14 Jahre",
+			"16 Jahre",
+			"18 Jahre"
+		],
+		"answerIndex": 1,
+		"explanation": "Der Fahrer ist für Passagiere unter 14 verantwortlich.",
+		"legalSource": "seatbelt",
+		"tags": [
+			"responsibility"
+		],
+		"xp": 10,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 18,
+		"category": "Strafpunkte",
+		"difficulty": "easy",
+		"question": "Was bedeutet Punktesammlung im Straßenverkehr?",
+		"options": [
+			"Kraftstoffkosten",
+			"Versicherungspreis",
+			"Punkte werden addiert",
+			"Parkgebühren"
+		],
+		"answerIndex": 2,
+		"explanation": "Strafpunkte werden über mehrere Verstöße hinweg addiert.",
+		"legalSource": "points",
+		"tags": [
+			"definition"
+		],
+		"xp": 10,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 19,
+		"category": "Strafpunkte",
+		"difficulty": "medium",
+		"question": "Wenn du das Punktekonto erreichst, was ist die häufigste Folge?",
+		"options": [
+			"Warnbrief",
+			"Kleiner Kurs",
+			"Fahrverbot",
+			"Versicherungsrückzahlung"
+		],
+		"answerIndex": 2,
+		"explanation": "Punktesammlung kann zu einer Disqualifikation führen.",
+		"legalSource": "points",
+		"tags": [
+			"ban"
+		],
+		"xp": 20,
+		"riskLevel": "high"
+	},
+	{
+		"id": 20,
+		"category": "Alkohol und Drogen",
+		"difficulty": "easy",
+		"question": "Bei Verurteilung wegen Trunkenheit am Steuer, wie lang ist das Mindestfahrverbot?",
+		"options": [
+			"6 Monate",
+			"12 Monate",
+			"18 Monate",
+			"24 Monate"
+		],
+		"answerIndex": 1,
+		"explanation": "Bei Trunkenheit am Steuer gilt meist mindestens 12 Monate Fahrverbot.",
+		"legalSource": "drink_driving",
+		"tags": [
+			"ban"
+		],
+		"xp": 10,
+		"riskLevel": "high"
+	},
+	{
+		"id": 21,
+		"category": "Alkohol und Drogen",
+		"difficulty": "medium",
+		"question": "Wie wird das Verweigern einer Atem-, Blut- oder Urinprobe behandelt?",
+		"options": [
+			"Als leichte Ordnungswidrigkeit",
+			"Ähnlich wie Trunkenheit am Steuer",
+			"Wie Parken",
+			"Als keine Straftat"
+		],
+		"answerIndex": 1,
+		"explanation": "Verweigerung führt oft zu ähnlich schweren Sanktionen.",
+		"legalSource": "drink_driving",
+		"tags": [
+			"rules"
+		],
+		"xp": 20,
+		"riskLevel": "high"
+	},
+	{
+		"id": 22,
+		"category": "Alkohol und Drogen",
+		"difficulty": "easy",
+		"question": "Bei Verurteilung wegen Drogeneinfluss am Steuer, was ist das typische Mindestfahrverbot?",
+		"options": [
+			"6 Monate",
+			"12 Monate",
+			"2 Jahre",
+			"Keins"
+		],
+		"answerIndex": 1,
+		"explanation": "Drogen am Steuer führen häufig zu mindestens 12 Monaten Fahrverbot.",
+		"legalSource": "drug_driving",
+		"tags": [
+			"ban"
+		],
+		"xp": 10,
+		"riskLevel": "high"
+	},
+	{
+		"id": 23,
+		"category": "Parken",
+		"difficulty": "easy",
+		"question": "Nach einem Park-PCN, wie lange hast du normalerweise zum Bezahlen?",
+		"options": [
+			"7 Tage",
+			"14 Tage",
+			"21 Tage",
+			"28 Tage"
+		],
+		"answerIndex": 3,
+		"explanation": "Üblich sind 28 Tage Zahlungsfrist.",
+		"legalSource": "parking_pcn",
+		"tags": [
+			"deadline"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 24,
+		"category": "Parken",
+		"difficulty": "easy",
+		"question": "Wenn du ein Park-PCN schnell bezahlst, was passiert häufig?",
+		"options": [
+			"Nichts",
+			"Du bekommst Punkte",
+			"Du bekommst Rabatt",
+			"Du musst vor Gericht"
+		],
+		"answerIndex": 2,
+		"explanation": "Oft gibt es eine Ermäßigung bei Zahlung innerhalb kurzer Frist.",
+		"legalSource": "parking_pcn",
+		"tags": [
+			"discount"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 25,
+		"category": "Parken",
+		"difficulty": "medium",
+		"question": "Wenn du ein Park-PCN der Gemeinde anfechten willst, wen kontaktierst du zuerst?",
+		"options": [
+			"Polizei",
+			"DVLA",
+			"Gemeinde",
+			"Gericht"
+		],
+		"answerIndex": 2,
+		"explanation": "Zuerst wendest du dich an die ausstellende Behörde.",
+		"legalSource": "parking_pcn",
+		"tags": [
+			"appeal"
+		],
+		"xp": 20,
+		"riskLevel": "low"
+	},
+	{
+		"id": 26,
+		"category": "Busspur und Verkehrsverstöße",
+		"difficulty": "easy",
+		"question": "Wer stellt Busspur-Strafen am häufigsten aus?",
+		"options": [
+			"DVLA",
+			"Polizei",
+			"Gemeinde",
+			"Gericht"
+		],
+		"answerIndex": 2,
+		"explanation": "Busspur-PCNs werden oft zivilrechtlich von Gemeinden durchgesetzt.",
+		"legalSource": "bus_lane",
+		"tags": [
+			"authority"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 27,
+		"category": "Busspur und Verkehrsverstöße",
+		"difficulty": "easy",
+		"question": "Bei vielen zivilen Verkehrs-PCNs, wer ist rechtlich zuerst verantwortlich?",
+		"options": [
+			"Der Fahrer",
+			"Der eingetragene Halter",
+			"Der Beifahrer",
+			"Die Versicherung"
+		],
+		"answerIndex": 1,
+		"explanation": "Oft haftet der eingetragene Halter.",
+		"legalSource": "bus_lane",
+		"tags": [
+			"liability"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 28,
+		"category": "Busspur und Verkehrsverstöße",
+		"difficulty": "medium",
+		"question": "Wenn du eine Busspur-Strafe außerhalb Londons anfechtest, wohin geht der unabhängige Einspruch häufig?",
+		"options": [
+			"Traffic Penalty Tribunal",
+			"DVLA",
+			"Magistrates Court",
+			"Polizei"
+		],
+		"answerIndex": 0,
+		"explanation": "Außerhalb Londons entscheidet oft das Traffic Penalty Tribunal über Einsprüche.",
+		"legalSource": "bus_lane",
+		"tags": [
+			"appeal"
+		],
+		"xp": 20,
+		"riskLevel": "low"
+	},
+	{
+		"id": 29,
+		"category": "Geschwindigkeitsüberschreitung",
+		"difficulty": "hard",
+		"question": "Wenn du wiederholt zu schnell fährst, welche langfristige Folge ist am wahrscheinlichsten?",
+		"options": [
+			"Niedrigere Steuer",
+			"Höhere Versicherungskosten",
+			"Kostenloser Kurs",
+			"Besserer Führerschein"
+		],
+		"answerIndex": 1,
+		"explanation": "Punkte führen häufig zu höheren Versicherungsprämien.",
+		"legalSource": "points",
+		"tags": [
+			"insurance"
+		],
+		"xp": 30,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 30,
+		"category": "Versicherung",
+		"difficulty": "hard",
+		"question": "Warum gilt Fahren ohne Versicherung als besonders schwerwiegend?",
+		"options": [
+			"Es macht Stau",
+			"Es entfernt finanziellen Schutz",
+			"Es erhöht den Verbrauch",
+			"Es lässt den MOT scheitern"
+		],
+		"answerIndex": 1,
+		"explanation": "Ohne Versicherung fehlt der finanzielle Schutz bei Schäden.",
+		"legalSource": "insurance",
+		"tags": [
+			"risk"
+		],
+		"xp": 30,
+		"riskLevel": "high"
+	},
+	{
+		"id": 31,
+		"category": "Geschwindigkeitsüberschreitung",
+		"difficulty": "easy",
+		"question": "Bei kleiner Überschreitung, welche Art Sanktion ist am häufigsten?",
+		"options": [
+			"Mündliche Verwarnung",
+			"Feste Strafzahlung",
+			"Sofortiges Fahrverbot",
+			"Beschlagnahme"
+		],
+		"answerIndex": 1,
+		"explanation": "Viele Fälle werden als feste Strafzahlung behandelt.",
+		"legalSource": "speeding",
+		"tags": [
+			"fine"
+		],
+		"xp": 10,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 32,
+		"category": "Geschwindigkeitsüberschreitung",
+		"difficulty": "medium",
+		"question": "Warum können wiederholte Tempoverstöße zum Führerscheinverlust führen?",
+		"options": [
+			"Mehr Kraftstoff",
+			"Punkte sammeln sich",
+			"Steuer steigt",
+			"Versicherung kündigt automatisch"
+		],
+		"answerIndex": 1,
+		"explanation": "Punkte addieren sich und können ein Fahrverbot auslösen.",
+		"legalSource": "points",
+		"tags": [
+			"totting"
+		],
+		"xp": 20,
+		"riskLevel": "high"
+	},
+	{
+		"id": 33,
+		"category": "Geschwindigkeitsüberschreitung",
+		"difficulty": "easy",
+		"question": "Wozu dienen Tempokontrollen hauptsächlich?",
+		"options": [
+			"Geld einnehmen",
+			"Sicherheit erhöhen",
+			"Versicherung prüfen",
+			"Parken kontrollieren"
+		],
+		"answerIndex": 1,
+		"explanation": "Sie sollen Unfälle reduzieren und Sicherheit erhöhen.",
+		"legalSource": "speeding",
+		"tags": [
+			"safety"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 34,
+		"category": "Geschwindigkeitsüberschreitung",
+		"difficulty": "medium",
+		"question": "Wenn ein Gericht deinen Tempoverstoß als schwer einstuft, was kann es verhängen?",
+		"options": [
+			"Versicherung sperren",
+			"Fahrverbot",
+			"MOT annullieren",
+			"Lebenslange Beschlagnahme"
+		],
+		"answerIndex": 1,
+		"explanation": "Gericht kann bei schweren Fällen ein Fahrverbot verhängen.",
+		"legalSource": "speeding",
+		"tags": [
+			"court"
+		],
+		"xp": 20,
+		"riskLevel": "high"
+	},
+	{
+		"id": 35,
+		"category": "Geschwindigkeitsüberschreitung",
+		"difficulty": "hard",
+		"question": "Welcher Faktor beeinflusst die Schwere der Strafe bei Tempoverstößen am stärksten?",
+		"options": [
+			"Straßenfarbe",
+			"Verkehrsdichte",
+			"Höhe der Überschreitung",
+			"Beruf des Fahrers"
+		],
+		"answerIndex": 2,
+		"explanation": "Je höher die Überschreitung, desto härter die Strafe.",
+		"legalSource": "speeding",
+		"tags": [
+			"rules"
+		],
+		"xp": 30,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 36,
+		"category": "Handy am Steuer",
+		"difficulty": "easy",
+		"question": "Wodurch wird die Sicherheit beim Handy in der Hand am stärksten beeinträchtigt?",
+		"options": [
+			"Fahrzeugzustand",
+			"Aufmerksamkeit des Fahrers",
+			"Routenführung",
+			"Wetter"
+		],
+		"answerIndex": 1,
+		"explanation": "Ablenkung reduziert Aufmerksamkeit und Reaktionsfähigkeit.",
+		"legalSource": "mobile_phone",
+		"tags": [
+			"safety"
+		],
+		"xp": 10,
+		"riskLevel": "high"
+	},
+	{
+		"id": 37,
+		"category": "Handy am Steuer",
+		"difficulty": "medium",
+		"question": "Warum ist Freisprechen eher erlaubt, aber Handy in der Hand nicht?",
+		"options": [
+			"Wegen Kosten",
+			"Wegen höherer Ablenkung",
+			"Wegen Netz",
+			"Wegen Akku"
+		],
+		"answerIndex": 1,
+		"explanation": "Handheld-Nutzung bindet Hand und Blick stärker.",
+		"legalSource": "mobile_phone",
+		"tags": [
+			"rules"
+		],
+		"xp": 20,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 38,
+		"category": "Handy am Steuer",
+		"difficulty": "easy",
+		"question": "Wenn die Polizei dich mit Handy in der Hand sieht, was passiert am häufigsten?",
+		"options": [
+			"Nur Rat",
+			"Feste Strafe",
+			"Sofortige Festnahme",
+			"Direkt zur Versicherung"
+		],
+		"answerIndex": 1,
+		"explanation": "Typisch ist eine feste Strafe mit Punkten.",
+		"legalSource": "mobile_phone",
+		"tags": [
+			"enforcement"
+		],
+		"xp": 10,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 39,
+		"category": "Handy am Steuer",
+		"difficulty": "medium",
+		"question": "Warum ist ein Handyverstoß für neue Fahrer besonders kritisch?",
+		"options": [
+			"Doppelte Geldstrafe",
+			"Führerscheinentzug möglich",
+			"Versicherung endet sofort",
+			"Punkte zählen doppelt"
+		],
+		"answerIndex": 1,
+		"explanation": "6 Punkte in den ersten 2 Jahren können Entzug auslösen.",
+		"legalSource": "points",
+		"tags": [
+			"new_driver"
+		],
+		"xp": 20,
+		"riskLevel": "high"
+	},
+	{
+		"id": 40,
+		"category": "Handy am Steuer",
+		"difficulty": "hard",
+		"question": "Ein kurzer Blick auf eine Nachricht am Handy in der Hand gilt als",
+		"options": [
+			"Kleiner Fehler",
+			"Keine Tat",
+			"Voller Verstoß",
+			"Parkverstoß"
+		],
+		"answerIndex": 2,
+		"explanation": "Jede Handheld-Nutzung gilt als Verstoß.",
+		"legalSource": "mobile_phone",
+		"tags": [
+			"rules"
+		],
+		"xp": 30,
+		"riskLevel": "high"
+	},
+	{
+		"id": 41,
+		"category": "Versicherung",
+		"difficulty": "easy",
+		"question": "Wozu dient eine Kfz-Versicherung hauptsächlich?",
+		"options": [
+			"Verbrauch senken",
+			"Finanzielles Risiko abdecken",
+			"Leistung steigern",
+			"Steuer senken"
+		],
+		"answerIndex": 1,
+		"explanation": "Sie deckt Schäden und Haftung finanziell ab.",
+		"legalSource": "insurance",
+		"tags": [
+			"risk"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 42,
+		"category": "Versicherung",
+		"difficulty": "medium",
+		"question": "Warum kann Fahren ohne Versicherung streng bestraft werden?",
+		"options": [
+			"Es macht Umwege",
+			"Andere sind finanziell gefährdet",
+			"Es blockiert die Straße",
+			"Es betrifft den MOT"
+		],
+		"answerIndex": 1,
+		"explanation": "Ohne Versicherung fehlt Schutz für Betroffene.",
+		"legalSource": "insurance",
+		"tags": [
+			"risk"
+		],
+		"xp": 20,
+		"riskLevel": "high"
+	},
+	{
+		"id": 43,
+		"category": "Versicherung",
+		"difficulty": "easy",
+		"question": "Fahren ohne Versicherung ist im UK typischerweise",
+		"options": [
+			"Nur zivil",
+			"Nur administrativ",
+			"Straßenverkehrsdelikt",
+			"Nur Vertragsproblem"
+		],
+		"answerIndex": 2,
+		"explanation": "Es ist ein Verkehrsdelikt mit möglichen Punkten und Verbot.",
+		"legalSource": "insurance",
+		"tags": [
+			"law"
+		],
+		"xp": 10,
+		"riskLevel": "high"
+	},
+	{
+		"id": 44,
+		"category": "Versicherung",
+		"difficulty": "medium",
+		"question": "Warum darf die Polizei ein unversichertes Fahrzeug von der Straße nehmen?",
+		"options": [
+			"MOT prüfen",
+			"Risiko reduzieren",
+			"Bremsen testen",
+			"Punkte löschen"
+		],
+		"answerIndex": 1,
+		"explanation": "Es entfernt ein hohes Risiko aus dem Verkehr.",
+		"legalSource": "insurance",
+		"tags": [
+			"enforcement"
+		],
+		"xp": 20,
+		"riskLevel": "high"
+	},
+	{
+		"id": 45,
+		"category": "Versicherung",
+		"difficulty": "hard",
+		"question": "Ein unversichertes Fahrzeug ohne SORN kann in welches System fallen?",
+		"options": [
+			"Punktesystem",
+			"Continuous Insurance Enforcement",
+			"ULEZ",
+			"Congestion Charge"
+		],
+		"answerIndex": 1,
+		"explanation": "Es gibt fortlaufende Versicherungskontrollen für Fahrzeuge.",
+		"legalSource": "insurance",
+		"tags": [
+			"enforcement"
+		],
+		"xp": 30,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 46,
+		"category": "Fahrzeug-Compliance",
+		"difficulty": "easy",
+		"question": "Warum ist der MOT regelmäßig nötig?",
+		"options": [
+			"Halter prüfen",
+			"Verkehrssicherheit bestätigen",
+			"Versicherung erneuern",
+			"Führerschein verlängern"
+		],
+		"answerIndex": 1,
+		"explanation": "MOT prüft die Verkehrssicherheit des Fahrzeugs.",
+		"legalSource": "mot",
+		"tags": [
+			"safety"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 47,
+		"category": "Fahrzeug-Compliance",
+		"difficulty": "medium",
+		"question": "Fahren ohne gültigen MOT erzeugt vor allem welches Risiko?",
+		"options": [
+			"Mehr Verbrauch",
+			"Unsicheres Fahrzeug",
+			"Parkticket",
+			"Automatisches Fahrverbot"
+		],
+		"answerIndex": 1,
+		"explanation": "Ohne Prüfung können gefährliche Mängel bestehen.",
+		"legalSource": "mot",
+		"tags": [
+			"risk"
+		],
+		"xp": 20,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 48,
+		"category": "Fahrzeug-Compliance",
+		"difficulty": "easy",
+		"question": "Die Fahrzeugsteuer muss bezahlt sein, um",
+		"options": [
+			"Auf öffentlichen Straßen zu fahren",
+			"Überall zu parken",
+			"Versicherung zu senken",
+			"Nur Autobahn zu nutzen"
+		],
+		"answerIndex": 0,
+		"explanation": "Die Steuer ist für Nutzung öffentlicher Straßen erforderlich.",
+		"legalSource": "vehicle_tax",
+		"tags": [
+			"rules"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 49,
+		"category": "Fahrzeug-Compliance",
+		"difficulty": "medium",
+		"question": "SORN bedeutet, das Fahrzeug ist",
+		"options": [
+			"Verkauft",
+			"Außer Betrieb auf öffentlichen Straßen",
+			"Versichert",
+			"Exportiert"
+		],
+		"answerIndex": 1,
+		"explanation": "SORN bedeutet, das Fahrzeug wird nicht auf öffentlichen Straßen genutzt.",
+		"legalSource": "vehicle_tax",
+		"tags": [
+			"rules"
+		],
+		"xp": 20,
+		"riskLevel": "low"
+	},
+	{
+		"id": 50,
+		"category": "Fahrzeug-Compliance",
+		"difficulty": "hard",
+		"question": "Warum kann das Fahren mit gefährlichem Fahrzeug bestraft werden?",
+		"options": [
+			"Wegen Verbrauch",
+			"Wegen öffentlicher Sicherheit",
+			"Wegen Straßendesign",
+			"Wegen Versicherungswert"
+		],
+		"answerIndex": 1,
+		"explanation": "Gefährliche Fahrzeuge gefährden andere Verkehrsteilnehmer.",
+		"legalSource": "mot",
+		"tags": [
+			"safety"
+		],
+		"xp": 30,
+		"riskLevel": "high"
+	},
+	{
+		"id": 51,
+		"category": "Sicherheitsgurte",
+		"difficulty": "easy",
+		"question": "Sicherheitsgurte reduzieren bei Unfällen vor allem",
+		"options": [
+			"Verbrauch",
+			"Schwere von Verletzungen",
+			"Versicherungsprämien",
+			"Lärm"
+		],
+		"answerIndex": 1,
+		"explanation": "Gurte senken das Risiko schwerer Verletzungen.",
+		"legalSource": "seatbelt",
+		"tags": [
+			"safety"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 52,
+		"category": "Sicherheitsgurte",
+		"difficulty": "medium",
+		"question": "Warum ist der Fahrer für Kinder-Gurtpflicht verantwortlich?",
+		"options": [
+			"Versicherungsregel",
+			"Sicherheitsgesetz",
+			"Parkregel",
+			"Kraftstoffregel"
+		],
+		"answerIndex": 1,
+		"explanation": "Der Fahrer hat eine gesetzliche Schutzpflicht.",
+		"legalSource": "seatbelt",
+		"tags": [
+			"law"
+		],
+		"xp": 20,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 53,
+		"category": "Sicherheitsgurte",
+		"difficulty": "easy",
+		"question": "Kein Gurt führt am häufigsten zu",
+		"options": [
+			"Punkten",
+			"Geldstrafe",
+			"Fahrverbot",
+			"Führerscheinentzug"
+		],
+		"answerIndex": 1,
+		"explanation": "Meist ist es eine Geldstrafe.",
+		"legalSource": "seatbelt",
+		"tags": [
+			"fine"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 54,
+		"category": "Sicherheitsgurte",
+		"difficulty": "medium",
+		"question": "Gurtpflicht gilt, wenn Gurte vorhanden sind",
+		"options": [
+			"Ja",
+			"Nein",
+			"Nur Autobahn",
+			"Nur Fahrer"
+		],
+		"answerIndex": 0,
+		"explanation": "Vorhandene Gurte müssen genutzt werden.",
+		"legalSource": "seatbelt",
+		"tags": [
+			"rules"
+		],
+		"xp": 20,
+		"riskLevel": "low"
+	},
+	{
+		"id": 55,
+		"category": "Sicherheitsgurte",
+		"difficulty": "hard",
+		"question": "Eine medizinische Ausnahme für den Gurt braucht",
+		"options": [
+			"Mündliche Bestätigung",
+			"Offizielles ärztliches Attest",
+			"Parkausweis",
+			"Polizei-Erlaubnis"
+		],
+		"answerIndex": 1,
+		"explanation": "Für Ausnahmen ist offizielle medizinische Bestätigung nötig.",
+		"legalSource": "seatbelt",
+		"tags": [
+			"rules"
+		],
+		"xp": 30,
+		"riskLevel": "low"
+	},
+	{
+		"id": 56,
+		"category": "Strafpunkte",
+		"difficulty": "easy",
+		"question": "Strafpunkte dienen vor allem dazu,",
+		"options": [
+			"Erfahrung zu messen",
+			"Risikoverhalten zu dokumentieren",
+			"Verbrauch zu messen",
+			"Fahrzeugalter zu messen"
+		],
+		"answerIndex": 1,
+		"explanation": "Punkte zeigen riskantes Fahrverhalten und Verstöße.",
+		"legalSource": "points",
+		"tags": [
+			"definition"
+		],
+		"xp": 10,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 57,
+		"category": "Strafpunkte",
+		"difficulty": "medium",
+		"question": "Warum beeinflussen Strafpunkte oft die Versicherung?",
+		"options": [
+			"Gesetzliche Pflicht",
+			"Höheres Risiko",
+			"Steuerregel",
+			"Straßentyp"
+		],
+		"answerIndex": 1,
+		"explanation": "Versicherer kalkulieren nach Risiko.",
+		"legalSource": "points",
+		"tags": [
+			"insurance"
+		],
+		"xp": 20,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 58,
+		"category": "Strafpunkte",
+		"difficulty": "easy",
+		"question": "Wenn du den Schwellenwert erreichst, was ist die häufigste Folge?",
+		"options": [
+			"Warnung",
+			"Fahrverbot",
+			"Rückerstattung",
+			"Upgrade"
+		],
+		"answerIndex": 1,
+		"explanation": "Punktesammlung kann zu einer Disqualifikation führen.",
+		"legalSource": "points",
+		"tags": [
+			"ban"
+		],
+		"xp": 10,
+		"riskLevel": "high"
+	},
+	{
+		"id": 59,
+		"category": "Strafpunkte",
+		"difficulty": "medium",
+		"question": "Warum bleiben manche Einträge länger im Führerscheinregister?",
+		"options": [
+			"Versicherungspolitik",
+			"Schwere des Verstoßes",
+			"Fahrzeugtyp",
+			"Alter"
+		],
+		"answerIndex": 1,
+		"explanation": "Schwere Verstöße werden länger geführt.",
+		"legalSource": "points",
+		"tags": [
+			"rules"
+		],
+		"xp": 20,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 60,
+		"category": "Strafpunkte",
+		"difficulty": "hard",
+		"question": "Ein Argument außergewöhnlicher Härte soll vor allem helfen,",
+		"options": [
+			"Geldstrafe zu senken",
+			"Fahrverbot zu vermeiden",
+			"Punkte zu löschen",
+			"Steuer zu senken"
+		],
+		"answerIndex": 1,
+		"explanation": "Gericht kann in seltenen Fällen ein Fahrverbot vermeiden.",
+		"legalSource": "points",
+		"tags": [
+			"court"
+		],
+		"xp": 30,
+		"riskLevel": "high"
+	},
+	{
+		"id": 61,
+		"category": "Alkohol und Drogen",
+		"difficulty": "easy",
+		"question": "Gesetze gegen Alkohol am Steuer sollen vor allem verhindern",
+		"options": [
+			"Kraftstoffverschwendung",
+			"Gefährliche Fahrten",
+			"Parkprobleme",
+			"Staus"
+		],
+		"answerIndex": 1,
+		"explanation": "Beeinträchtigung erhöht Unfallrisiko.",
+		"legalSource": "drink_driving",
+		"tags": [
+			"safety"
+		],
+		"xp": 10,
+		"riskLevel": "high"
+	},
+	{
+		"id": 62,
+		"category": "Alkohol und Drogen",
+		"difficulty": "medium",
+		"question": "Warum wird das Verweigern eines Tests streng geahndet?",
+		"options": [
+			"Es kostet Zeit",
+			"Es verhindert Beweise",
+			"Es macht Lärm",
+			"Es erhöht Steuer"
+		],
+		"answerIndex": 1,
+		"explanation": "Verweigerung blockiert die Beweiserhebung.",
+		"legalSource": "drink_driving",
+		"tags": [
+			"rules"
+		],
+		"xp": 20,
+		"riskLevel": "high"
+	},
+	{
+		"id": 63,
+		"category": "Alkohol und Drogen",
+		"difficulty": "easy",
+		"question": "Strafen bei Drogen am Steuer beinhalten häufig",
+		"options": [
+			"Parkticket",
+			"Fahrverbot",
+			"Steuersenkung",
+			"MOT-Verlängerung"
+		],
+		"answerIndex": 1,
+		"explanation": "Drogen am Steuer führen häufig zu Fahrverbot.",
+		"legalSource": "drug_driving",
+		"tags": [
+			"ban"
+		],
+		"xp": 10,
+		"riskLevel": "high"
+	},
+	{
+		"id": 64,
+		"category": "Alkohol und Drogen",
+		"difficulty": "medium",
+		"question": "Eine Verurteilung wegen Fahrens unter Einfluss ist typischerweise",
+		"options": [
+			"Nur zivil",
+			"Strafrechtlich",
+			"Ohne Folgen",
+			"Nur Versicherungssache"
+		],
+		"answerIndex": 1,
+		"explanation": "Es ist ein strafrechtlicher Verstoß.",
+		"legalSource": "drink_driving",
+		"tags": [
+			"law"
+		],
+		"xp": 20,
+		"riskLevel": "high"
+	},
+	{
+		"id": 65,
+		"category": "Alkohol und Drogen",
+		"difficulty": "hard",
+		"question": "Alkohol und Drogen verschlechtern das Fahren vor allem durch",
+		"options": [
+			"Mehr Verbrauch",
+			"Längere Reaktionszeit",
+			"Mehr Haftung",
+			"Mehr Motorleistung"
+		],
+		"answerIndex": 1,
+		"explanation": "Beeinträchtigung verlangsamt Reaktionen.",
+		"legalSource": "drink_driving",
+		"tags": [
+			"safety"
+		],
+		"xp": 30,
+		"riskLevel": "high"
+	},
+	{
+		"id": 66,
+		"category": "Parken",
+		"difficulty": "easy",
+		"question": "Park-PCNs von Gemeinden sind in der Regel",
+		"options": [
+			"Strafrechtlich",
+			"Zivilrechtlich",
+			"Versicherungsrechtlich",
+			"Steuerrechtlich"
+		],
+		"answerIndex": 1,
+		"explanation": "Viele Park-PCNs sind zivilrechtliche Sanktionen.",
+		"legalSource": "parking_pcn",
+		"tags": [
+			"law"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 67,
+		"category": "Parken",
+		"difficulty": "medium",
+		"question": "Wenn du ein Park-PCN ignorierst, was kann als Nächstes passieren?",
+		"options": [
+			"Punkte werden addiert",
+			"Die Forderung steigt",
+			"Führerschein wird entzogen",
+			"Auto wird verboten"
+		],
+		"answerIndex": 1,
+		"explanation": "Beträge können steigen und weitere Schritte folgen.",
+		"legalSource": "parking_pcn",
+		"tags": [
+			"enforcement"
+		],
+		"xp": 20,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 68,
+		"category": "Parken",
+		"difficulty": "easy",
+		"question": "Warum wird frühes Bezahlen oft belohnt?",
+		"options": [
+			"Weniger Punkte",
+			"Rabatt auf den Betrag",
+			"Schnelleres Gericht",
+			"Versicherungsbonus"
+		],
+		"answerIndex": 1,
+		"explanation": "Frühe Zahlung führt oft zu Ermäßigung.",
+		"legalSource": "parking_pcn",
+		"tags": [
+			"discount"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 69,
+		"category": "Parken",
+		"difficulty": "medium",
+		"question": "Wozu dient ein Einspruch gegen ein PCN?",
+		"options": [
+			"Punkte entfernen",
+			"Deinen Fall erklären",
+			"Steuer senken",
+			"Versicherung vermeiden"
+		],
+		"answerIndex": 1,
+		"explanation": "Du kannst die Entscheidung anfechten.",
+		"legalSource": "parking_pcn",
+		"tags": [
+			"appeal"
+		],
+		"xp": 20,
+		"riskLevel": "low"
+	},
+	{
+		"id": 70,
+		"category": "Parken",
+		"difficulty": "hard",
+		"question": "Warum sind Park-PCNs getrennt von Strafpunkten?",
+		"options": [
+			"Polizei stellt sie aus",
+			"Sie sind zivilrechtlich",
+			"Sie sind Steuern",
+			"Sie sind Versicherungen"
+		],
+		"answerIndex": 1,
+		"explanation": "Park-PCNs laufen meist zivilrechtlich ohne Punkte.",
+		"legalSource": "parking_pcn",
+		"tags": [
+			"law"
+		],
+		"xp": 30,
+		"riskLevel": "low"
+	},
+	{
+		"id": 71,
+		"category": "Busspur und Verkehrsverstöße",
+		"difficulty": "easy",
+		"question": "Busspuren sollen den Verkehr vor allem für",
+		"options": [
+			"Autos",
+			"Busse",
+			"Nur Fahrräder",
+			"Nur Taxis"
+		],
+		"answerIndex": 1,
+		"explanation": "Busspuren priorisieren den ÖPNV.",
+		"legalSource": "bus_lane",
+		"tags": [
+			"purpose"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 72,
+		"category": "Busspur und Verkehrsverstöße",
+		"difficulty": "medium",
+		"question": "Warum sind viele Busspur-Strafen zivilrechtlich?",
+		"options": [
+			"Risiko gering",
+			"Lokale Durchsetzung",
+			"Versicherungsregeln",
+			"Temporegeln"
+		],
+		"answerIndex": 1,
+		"explanation": "Gemeinden setzen Busspur-PCNs zivilrechtlich durch.",
+		"legalSource": "bus_lane",
+		"tags": [
+			"law"
+		],
+		"xp": 20,
+		"riskLevel": "low"
+	},
+	{
+		"id": 73,
+		"category": "Busspur und Verkehrsverstöße",
+		"difficulty": "easy",
+		"question": "Welche Situation passt am besten zu einem Gemeinde-Verkehrsverstoß?",
+		"options": [
+			"Kein Gurt",
+			"Fahren in Einbahnstraße falsch herum",
+			"Ohne Versicherung",
+			"Ohne MOT"
+		],
+		"answerIndex": 1,
+		"explanation": "Moving traffic contraventions umfassen z. B. falsche Fahrtrichtung.",
+		"legalSource": "bus_lane",
+		"tags": [
+			"rules"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 74,
+		"category": "Busspur und Verkehrsverstöße",
+		"difficulty": "medium",
+		"question": "Halterhaftung bedeutet, die Zahlung/der Bescheid geht an den",
+		"options": [
+			"Fahrer",
+			"Eingetragenen Halter",
+			"Beifahrer",
+			"Versicherer"
+		],
+		"answerIndex": 1,
+		"explanation": "Bescheide gehen oft an den eingetragenen Halter.",
+		"legalSource": "bus_lane",
+		"tags": [
+			"liability"
+		],
+		"xp": 20,
+		"riskLevel": "low"
+	},
+	{
+		"id": 75,
+		"category": "Busspur und Verkehrsverstöße",
+		"difficulty": "hard",
+		"question": "Warum gibt es unabhängige Tribunale für PCN-Einsprüche?",
+		"options": [
+			"Mehr Einnahmen",
+			"Fairness und Kontrolle",
+			"Alles automatisch",
+			"Sofortige Strafen"
+		],
+		"answerIndex": 1,
+		"explanation": "Unabhängige Prüfung sorgt für faire Entscheidungen.",
+		"legalSource": "bus_lane",
+		"tags": [
+			"appeal"
+		],
+		"xp": 30,
+		"riskLevel": "low"
+	},
+	{
+		"id": 76,
+		"category": "Geschwindigkeitsüberschreitung",
+		"difficulty": "easy",
+		"question": "Was passiert mit deiner Versicherung oft, wenn du Punkte wegen Geschwindigkeit bekommst?",
+		"options": [
+			"Sie sinkt",
+			"Sie bleibt gleich",
+			"Sie kann steigen",
+			"Sie endet sofort"
+		],
+		"answerIndex": 2,
+		"explanation": "Punkte können die Prämie erhöhen.",
+		"legalSource": "points",
+		"tags": [
+			"insurance"
+		],
+		"xp": 10,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 77,
+		"category": "Versicherung",
+		"difficulty": "easy",
+		"question": "Warum ist Versicherung vor Fahrt auf öffentlichen Straßen Pflicht?",
+		"options": [
+			"Gesetzliche Vorgabe",
+			"Kraftstoff sparen",
+			"Steuer senken",
+			"Führerschein erneuern"
+		],
+		"answerIndex": 0,
+		"explanation": "Versicherung ist gesetzlich vorgeschrieben.",
+		"legalSource": "insurance",
+		"tags": [
+			"law"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 78,
+		"category": "Strafpunkte",
+		"difficulty": "medium",
+		"question": "Welche Folge ist am wahrscheinlichsten, wenn du mehrfach Punkte sammelst?",
+		"options": [
+			"Niedrigere Geldstrafe",
+			"Fahrverbot",
+			"Besserer Führerschein",
+			"Höhere Steuer"
+		],
+		"answerIndex": 1,
+		"explanation": "Mehr Punkte erhöhen Risiko einer Disqualifikation.",
+		"legalSource": "points",
+		"tags": [
+			"ban"
+		],
+		"xp": 20,
+		"riskLevel": "high"
+	},
+	{
+		"id": 79,
+		"category": "Alkohol und Drogen",
+		"difficulty": "easy",
+		"question": "Warum ist Fahren unter Einfluss gefährlich?",
+		"options": [
+			"Langsamere Reaktionen",
+			"Mehr Grip",
+			"Besserer Überblick",
+			"Weniger Verkehr"
+		],
+		"answerIndex": 0,
+		"explanation": "Reaktionszeit und Urteilskraft verschlechtern sich.",
+		"legalSource": "drink_driving",
+		"tags": [
+			"safety"
+		],
+		"xp": 10,
+		"riskLevel": "high"
+	},
+	{
+		"id": 80,
+		"category": "Fahrzeug-Compliance",
+		"difficulty": "easy",
+		"question": "Ohne Fahrzeugsteuer verstößt du vor allem gegen",
+		"options": [
+			"Versicherungsgesetz",
+			"Regeln zur Straßennutzung",
+			"Gurtpflicht",
+			"Parkregeln"
+		],
+		"answerIndex": 1,
+		"explanation": "Steuer ist für Nutzung öffentlicher Straßen erforderlich.",
+		"legalSource": "vehicle_tax",
+		"tags": [
+			"law"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 81,
+		"category": "Handy am Steuer",
+		"difficulty": "medium",
+		"question": "Handy-Ablenkung erhöht Unfallrisiko, weil sie deine",
+		"options": [
+			"Motorleistung",
+			"Konzentration",
+			"Reifenhaftung",
+			"Tankfüllung"
+		],
+		"answerIndex": 1,
+		"explanation": "Weniger Aufmerksamkeit führt zu Fehlern.",
+		"legalSource": "mobile_phone",
+		"tags": [
+			"safety"
+		],
+		"xp": 20,
+		"riskLevel": "high"
+	},
+	{
+		"id": 82,
+		"category": "Sicherheitsgurte",
+		"difficulty": "easy",
+		"question": "Gurttragen schützt dich vor allem durch",
+		"options": [
+			"Weniger Bewegung",
+			"Bessere Lenkung",
+			"Weniger Verbrauch",
+			"Weniger Steuer"
+		],
+		"answerIndex": 0,
+		"explanation": "Der Gurt hält dich bei einem Aufprall zurück.",
+		"legalSource": "seatbelt",
+		"tags": [
+			"safety"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 83,
+		"category": "Parken",
+		"difficulty": "medium",
+		"question": "Warum können unbezahlte PCNs teurer werden?",
+		"options": [
+			"Regeln zur Erhöhung",
+			"Versicherungsschäden",
+			"Punkte",
+			"Tempolimits"
+		],
+		"answerIndex": 0,
+		"explanation": "Beträge können steigen, wenn Fristen verpasst werden.",
+		"legalSource": "parking_pcn",
+		"tags": [
+			"enforcement"
+		],
+		"xp": 20,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 84,
+		"category": "Busspur und Verkehrsverstöße",
+		"difficulty": "easy",
+		"question": "Busspur-Kameras dienen hauptsächlich dazu,",
+		"options": [
+			"Tempo zu messen",
+			"Verstöße zu erfassen",
+			"Steuer zu prüfen",
+			"Wetter zu messen"
+		],
+		"answerIndex": 1,
+		"explanation": "Kameras liefern Beweise für unzulässige Nutzung.",
+		"legalSource": "bus_lane",
+		"tags": [
+			"enforcement"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 85,
+		"category": "Alkohol und Drogen",
+		"difficulty": "medium",
+		"question": "Eine Verurteilung wegen Alkohol am Steuer wirkt langfristig oft am stärksten auf",
+		"options": [
+			"Verbrauch",
+			"Versicherungskosten",
+			"Parkausweis",
+			"Steuer"
+		],
+		"answerIndex": 1,
+		"explanation": "Versicherungsprämien steigen häufig deutlich.",
+		"legalSource": "drink_driving",
+		"tags": [
+			"insurance"
+		],
+		"xp": 20,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 86,
+		"category": "Strafpunkte",
+		"difficulty": "easy",
+		"question": "Strafpunkte werden in welchem Dokument erfasst?",
+		"options": [
+			"Versicherungsakte",
+			"Führerscheinakte",
+			"Fahrzeugheft",
+			"MOT-Historie"
+		],
+		"answerIndex": 1,
+		"explanation": "Punkte werden im Führerscheinregister geführt.",
+		"legalSource": "points",
+		"tags": [
+			"record"
+		],
+		"xp": 10,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 87,
+		"category": "Versicherung",
+		"difficulty": "medium",
+		"question": "Warum gefährdet Fahren ohne Versicherung andere?",
+		"options": [
+			"Mehr Stau",
+			"Finanzielles Risiko",
+			"Mehr Lärm",
+			"Kraftstoffmangel"
+		],
+		"answerIndex": 1,
+		"explanation": "Geschädigte können ohne Deckung bleiben.",
+		"legalSource": "insurance",
+		"tags": [
+			"risk"
+		],
+		"xp": 20,
+		"riskLevel": "high"
+	},
+	{
+		"id": 88,
+		"category": "Fahrzeug-Compliance",
+		"difficulty": "easy",
+		"question": "Sicherheitsprüfungen reduzieren vor allem das Risiko von",
+		"options": [
+			"Steuerproblemen",
+			"Pannen",
+			"Unfällen",
+			"Versicherungskosten"
+		],
+		"answerIndex": 2,
+		"explanation": "Ein sicheres Fahrzeug senkt Unfallrisiko.",
+		"legalSource": "mot",
+		"tags": [
+			"safety"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 89,
+		"category": "Geschwindigkeitsüberschreitung",
+		"difficulty": "medium",
+		"question": "Warum ist ein Crash bei höherer Geschwindigkeit gefährlicher?",
+		"options": [
+			"Mehr Lärm",
+			"Mehr Aufprallenergie",
+			"Mehr Verbrauch",
+			"Mehr Grip"
+		],
+		"answerIndex": 1,
+		"explanation": "Aufprallenergie steigt mit der Geschwindigkeit.",
+		"legalSource": "speeding",
+		"tags": [
+			"safety"
+		],
+		"xp": 20,
+		"riskLevel": "high"
+	},
+	{
+		"id": 90,
+		"category": "Sicherheitsgurte",
+		"difficulty": "medium",
+		"question": "Ein Passagier ohne Gurt riskiert vor allem",
+		"options": [
+			"Nur eine Geldstrafe",
+			"Schwere Verletzungen",
+			"Punkte",
+			"Versicherungsverlust"
+		],
+		"answerIndex": 1,
+		"explanation": "Ohne Gurt steigt Verletzungsrisiko stark.",
+		"legalSource": "seatbelt",
+		"tags": [
+			"safety"
+		],
+		"xp": 20,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 91,
+		"category": "Parken",
+		"difficulty": "easy",
+		"question": "Parkregeln sollen vor allem steuern",
+		"options": [
+			"Versicherung",
+			"Straßenraum",
+			"Kraftstoffpreis",
+			"Tempolimits"
+		],
+		"answerIndex": 1,
+		"explanation": "Sie regeln Nutzung und Freihalten von Flächen.",
+		"legalSource": "parking_pcn",
+		"tags": [
+			"purpose"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 92,
+		"category": "Alkohol und Drogen",
+		"difficulty": "medium",
+		"question": "Gesetze gegen Fahren unter Einfluss schützen vor allem",
+		"options": [
+			"Fahrzeuge",
+			"Öffentliche Sicherheit",
+			"Kraftstoff",
+			"Versicherer"
+		],
+		"answerIndex": 1,
+		"explanation": "Sie reduzieren Unfälle durch Beeinträchtigung.",
+		"legalSource": "drink_driving",
+		"tags": [
+			"purpose"
+		],
+		"xp": 20,
+		"riskLevel": "high"
+	},
+	{
+		"id": 93,
+		"category": "Strafpunkte",
+		"difficulty": "medium",
+		"question": "Warum bleiben Punkte im Führerscheinregister sichtbar?",
+		"options": [
+			"Sie zeigen Fahrhistorie",
+			"Sie ändern Steuer",
+			"Sie ändern Versicherung",
+			"Sie ändern Fahrzeugwert"
+		],
+		"answerIndex": 0,
+		"explanation": "Sie dokumentieren frühere Verstöße.",
+		"legalSource": "points",
+		"tags": [
+			"record"
+		],
+		"xp": 20,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 94,
+		"category": "Handy am Steuer",
+		"difficulty": "easy",
+		"question": "Wenn du auf das Handy schaust statt auf die Straße, steigt",
+		"options": [
+			"Deine Geschwindigkeit",
+			"Deine Reaktionszeit-Verzögerung",
+			"Dein Verbrauch",
+			"Dein Grip"
+		],
+		"answerIndex": 1,
+		"explanation": "Ablenkung verlängert Reaktionszeit.",
+		"legalSource": "mobile_phone",
+		"tags": [
+			"safety"
+		],
+		"xp": 10,
+		"riskLevel": "high"
+	},
+	{
+		"id": 95,
+		"category": "Busspur und Verkehrsverstöße",
+		"difficulty": "medium",
+		"question": "Busspur-Beschränkungen sollen vor allem verbessern",
+		"options": [
+			"Sicherheit",
+			"Verlässlichkeit und Fluss",
+			"Park-Einnahmen",
+			"Verbrauch"
+		],
+		"answerIndex": 1,
+		"explanation": "Sie helfen Bussen, planbarer zu fahren.",
+		"legalSource": "bus_lane",
+		"tags": [
+			"purpose"
+		],
+		"xp": 20,
+		"riskLevel": "low"
+	},
+	{
+		"id": 96,
+		"category": "Versicherung",
+		"difficulty": "easy",
+		"question": "Versicherung schützt dich vor allem gegen",
+		"options": [
+			"Mechanische Defekte",
+			"Finanzielle Haftung",
+			"Kraftstoffkosten",
+			"Bußgelder"
+		],
+		"answerIndex": 1,
+		"explanation": "Sie deckt Haftung und Schäden finanziell ab.",
+		"legalSource": "insurance",
+		"tags": [
+			"risk"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 97,
+		"category": "Fahrzeug-Compliance",
+		"difficulty": "medium",
+		"question": "Fahren mit schlecht gewartetem Fahrzeug kann bestraft werden, weil es",
+		"options": [
+			"Laut ist",
+			"Gefährlich ist",
+			"Langsam ist",
+			"Teuer ist"
+		],
+		"answerIndex": 1,
+		"explanation": "Gefährliche Mängel erhöhen Unfallrisiko.",
+		"legalSource": "mot",
+		"tags": [
+			"safety"
+		],
+		"xp": 20,
+		"riskLevel": "medium"
+	},
+	{
+		"id": 98,
+		"category": "Geschwindigkeitsüberschreitung",
+		"difficulty": "easy",
+		"question": "Tempolimits werden hauptsächlich eingeführt, um",
+		"options": [
+			"Kraftstoff zu sparen",
+			"Unfälle zu reduzieren",
+			"Einnahmen zu steigern",
+			"Ampeln zu steuern"
+		],
+		"answerIndex": 1,
+		"explanation": "Tempolimits erhöhen Sicherheit.",
+		"legalSource": "speeding",
+		"tags": [
+			"purpose"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 99,
+		"category": "Sicherheitsgurte",
+		"difficulty": "easy",
+		"question": "Gurtgesetze existieren vor allem, um",
+		"options": [
+			"Verletzungen zu reduzieren",
+			"Steuer zu senken",
+			"Fahrverhalten zu verbessern",
+			"Kraftstoff zu sparen"
+		],
+		"answerIndex": 0,
+		"explanation": "Sie schützen Insassen.",
+		"legalSource": "seatbelt",
+		"tags": [
+			"purpose"
+		],
+		"xp": 10,
+		"riskLevel": "low"
+	},
+	{
+		"id": 100,
+		"category": "Alkohol und Drogen",
+		"difficulty": "medium",
+		"question": "Alkohol beeinträchtigt das Fahren vor allem durch",
+		"options": [
+			"Schlechtere Sicht und Reaktion",
+			"Weniger Verbrauch",
+			"Niedrigeren Reifendruck",
+			"Bessere Navigation"
+		],
+		"answerIndex": 0,
+		"explanation": "Beeinträchtigung verlangsamt Reaktionen und verschlechtert Wahrnehmung.",
+		"legalSource": "drink_driving",
+		"tags": [
+			"safety"
+		],
+		"xp": 20,
+		"riskLevel": "high"
+	}
+]
+[
+{"id":101,"category":"Strafpunkte","difficulty":"easy","question":"Wozu sind Strafpunkte auf deinem Führerschein gedacht?","options":["Verstöße zu erfassen","Einnahmen zu steigern","Steuer zu erhöhen","Tempolimits zu senken"],"answerIndex":0,"explanation":"Sie dokumentieren Verkehrsverstöße.","legalSource":"points","tags":["purpose"],"xp":10,"riskLevel":"medium"},
+{"id":102,"category":"Parken","difficulty":"medium","question":"Wenn du mehrere Parkstrafen ignorierst, kann das am Ende zu was führen?","options":["Strafpunkten","Vollstreckungsmaßnahmen","Versicherungsverlust","Kraftstoffzuschlag"],"answerIndex":1,"explanation":"Es können Schuldeneintreibung und Vollstreckung folgen.","legalSource":"parking_pcn","tags":["enforcement"],"xp":20,"riskLevel":"medium"},
+{"id":103,"category":"Busspur und Verkehrsverstöße","difficulty":"easy","question":"Busspur-Regeln unterstützen hauptsächlich","options":["Privatautos","Öffentlichen Verkehr","Parkdurchsetzung","Versicherungsfirmen"],"answerIndex":1,"explanation":"Sie priorisieren Busse.","legalSource":"bus_lane","tags":["purpose"],"xp":10,"riskLevel":"low"},
+{"id":104,"category":"Handy am Steuer","difficulty":"medium","question":"Warum ist selbst kurze Handynutzung beim Fahren riskant?","options":["Signalprobleme","Verlust der Konzentration","Mehr Verbrauch","Straßenverschleiß"],"answerIndex":1,"explanation":"Kurze Ablenkungen erhöhen das Unfallrisiko.","legalSource":"mobile_phone","tags":["safety"],"xp":20,"riskLevel":"high"},
+{"id":105,"category":"Versicherung","difficulty":"hard","question":"Das Versicherungsrecht stellt sicher, dass Unfallopfer finanziell","options":["Belastet werden","Geschützt werden","Bestraft werden","Ignoriert werden"],"answerIndex":1,"explanation":"Es stellt Entschädigung sicher.","legalSource":"insurance","tags":["law"],"xp":30,"riskLevel":"high"},
+
+{"id":106,"category":"Fahrzeug-Compliance","difficulty":"easy","question":"Regelmäßige Fahrzeugchecks helfen, was zu verhindern?","options":["Versicherungsfälle","Pannen","Mehrverbrauch","Parkstrafen"],"answerIndex":1,"explanation":"Wartung senkt das Pannenrisiko.","legalSource":"mot","tags":["purpose"],"xp":10,"riskLevel":"low"},
+{"id":107,"category":"Geschwindigkeitsüberschreitung","difficulty":"medium","question":"Zu schnelles Fahren reduziert die Zeit, die du zum","options":["Bremsen","Tanken","Blinken","Parken"],"answerIndex":0,"explanation":"Höhere Geschwindigkeit reduziert deine Reaktionszeit.","legalSource":"speeding","tags":["safety"],"xp":20,"riskLevel":"high"},
+{"id":108,"category":"Alkohol und Drogen","difficulty":"easy","question":"Fahren unter Einfluss beeinträchtigt vor allem dein","options":["Urteilsvermögen","Versicherung","Steuerklasse","Kraftstoffverbrauch"],"answerIndex":0,"explanation":"Beeinträchtigung verschlechtert das Urteilsvermögen.","legalSource":"drink_driving","tags":["safety"],"xp":10,"riskLevel":"high"},
+{"id":109,"category":"Sicherheitsgurte","difficulty":"medium","question":"Sicherheitsgurte senken die Wahrscheinlichkeit von","options":["Mechanischen Defekten","Schweren Verletzungen","Staus","Versicherungsfällen"],"answerIndex":1,"explanation":"Sie reduzieren die Schwere von Verletzungen.","legalSource":"seatbelt","tags":["safety"],"xp":20,"riskLevel":"low"},
+{"id":110,"category":"Strafpunkte","difficulty":"medium","question":"Das Punktesystem existiert, um was zu verhindern?","options":["Parken","Gefährliches Fahren","Kraftstoffverbrauch","Versicherungsfälle"],"answerIndex":1,"explanation":"Es soll riskantes Verhalten abschrecken.","legalSource":"points","tags":["purpose"],"xp":20,"riskLevel":"medium"},
+
+{"id":111,"category":"Parken","difficulty":"easy","question":"Parkbeschränkungen sollen Straßen hauptsächlich","options":["Sauber","Verfügbar","Besteuert","Ruhig"],"answerIndex":1,"explanation":"Sie steuern die Nutzung des Straßenraums.","legalSource":"parking_pcn","tags":["purpose"],"xp":10,"riskLevel":"low"},
+{"id":112,"category":"Busspur und Verkehrsverstöße","difficulty":"medium","question":"Regeln zu Verkehrsverstößen im Fließverkehr helfen, was zu reduzieren?","options":["Kraftstoffkosten","Stau","Versicherung","Lärm"],"answerIndex":1,"explanation":"Sie verbessern den Verkehrsfluss.","legalSource":"bus_lane","tags":["purpose"],"xp":20,"riskLevel":"low"},
+{"id":113,"category":"Versicherung","difficulty":"easy","question":"Um legal zu fahren, brauchst du Versicherung hauptsächlich, um","options":["Steuer zu senken","Eine gesetzliche Pflicht zu erfüllen","Schneller zu fahren","Punkte zu senken"],"answerIndex":1,"explanation":"Es ist gesetzlich vorgeschrieben.","legalSource":"insurance","tags":["law"],"xp":10,"riskLevel":"low"},
+{"id":114,"category":"Geschwindigkeitsüberschreitung","difficulty":"hard","question":"Höhere Geschwindigkeit erhöht den Bremsweg wegen","options":["Motorleistung","Kinetischer Energie","Reifenverschleiß","Kraftstoffgewicht"],"answerIndex":1,"explanation":"Energie steigt mit der Geschwindigkeit.","legalSource":"speeding","tags":["safety"],"xp":30,"riskLevel":"high"},
+{"id":115,"category":"Alkohol und Drogen","difficulty":"medium","question":"Gesetze gegen Fahren unter Einfluss schützen","options":["Straßeneinnahmen","Öffentliche Sicherheit","Kraftstoffpreise","Versicherungsgewinne"],"answerIndex":1,"explanation":"Sie senken das Unfallrisiko.","legalSource":"drink_driving","tags":["purpose"],"xp":20,"riskLevel":"high"},
+
+{"id":116,"category":"Fahrzeug-Compliance","difficulty":"easy","question":"Dein Auto verkehrssicher zu halten hilft dir, was zu vermeiden?","options":["Steuer","Strafen","Kraftstoffkosten","Versicherung"],"answerIndex":1,"explanation":"Unsichere Fahrzeuge können zu Geldstrafen führen.","legalSource":"mot","tags":["risk"],"xp":10,"riskLevel":"low"},
+{"id":117,"category":"Strafpunkte","difficulty":"medium","question":"Dass Punkte in deiner Akte bleiben, hilft Behörden, was zu","options":["Risiko zu verfolgen","Steuer zu erhöhen","Versicherung zu senken","Tempolimits zu ändern"],"answerIndex":0,"explanation":"Sie überwachen Wiederholungstäter.","legalSource":"points","tags":["record"],"xp":20,"riskLevel":"medium"},
+{"id":118,"category":"Handy am Steuer","difficulty":"easy","question":"Deine Augen auf der Straße zu halten hilft, was zu verhindern?","options":["Kraftstoffverschwendung","Kollisionen","Versicherungsfälle","Parkstrafen"],"answerIndex":1,"explanation":"Aufmerksamkeit senkt das Unfallrisiko.","legalSource":"mobile_phone","tags":["safety"],"xp":10,"riskLevel":"high"},
+{"id":119,"category":"Sicherheitsgurte","difficulty":"easy","question":"Sicherheitsgurte sind am wirksamsten bei","options":["Schnellen Kurven","Plötzlichen Stopps","Parken","Kraftstoffsparen"],"answerIndex":1,"explanation":"Sie halten Insassen bei einem Aufprall zurück.","legalSource":"seatbelt","tags":["safety"],"xp":10,"riskLevel":"low"},
+{"id":120,"category":"Versicherung","difficulty":"medium","question":"Versicherung stellt sicher, dass Unfallkosten","options":["Ignoriert werden","Geteilt werden","Gedeckt werden","Reduziert werden"],"answerIndex":2,"explanation":"Sie bietet finanziellen Schutz.","legalSource":"insurance","tags":["risk"],"xp":20,"riskLevel":"medium"},
+
+{"id":121,"category":"Parken","difficulty":"medium","question":"Parkdurchsetzung hilft, Zufahrten freizuhalten für","options":["Geschäfte","Rettungsfahrzeuge","Tankstellen","Versicherungsbüros"],"answerIndex":1,"explanation":"Freie Zufahrten erhöhen Sicherheit und Zugang.","legalSource":"parking_pcn","tags":["purpose"],"xp":20,"riskLevel":"low"},
+{"id":122,"category":"Busspur und Verkehrsverstöße","difficulty":"easy","question":"Busspur-Regeln helfen dem ÖPNV hauptsächlich,","options":["Schnell zu bleiben","Günstig zu bleiben","Leise zu bleiben","Steuerfrei zu sein"],"answerIndex":0,"explanation":"Sie priorisieren Busse und halten sie zügig.","legalSource":"bus_lane","tags":["purpose"],"xp":10,"riskLevel":"low"},
+{"id":123,"category":"Geschwindigkeitsüberschreitung","difficulty":"medium","question":"Tempolimits unterscheiden sich hauptsächlich je nach","options":["Alter des Fahrers","Straßentyp","Versicherung","Kraftstoffpreis"],"answerIndex":1,"explanation":"Verschiedene Straßen haben unterschiedliche Limits.","legalSource":"speeding","tags":["rules"],"xp":20,"riskLevel":"medium"},
+{"id":124,"category":"Alkohol und Drogen","difficulty":"easy","question":"Alkohol reduziert die Fahrfähigkeit hauptsächlich durch Beeinträchtigung der","options":["Kraftstoffnutzung","Koordination","Reifenhaftung","Motorleistung"],"answerIndex":1,"explanation":"Koordination und Urteilskraft werden beeinträchtigt.","legalSource":"drink_driving","tags":["safety"],"xp":10,"riskLevel":"high"},
+{"id":125,"category":"Strafpunkte","difficulty":"medium","question":"Das Punktesystem hilft, was zu erkennen?","options":["Neue Fahrer","Wiederholungstäter","Versicherungsfälle","Parkverstöße"],"answerIndex":1,"explanation":"Es erfasst wiederholte Verstöße.","legalSource":"points","tags":["purpose"],"xp":20,"riskLevel":"medium"},
+
+{"id":126,"category":"Fahrzeug-Compliance","difficulty":"easy","question":"Regelmäßiger Service hilft, was zu vermeiden?","options":["Strafen","Tempolimits","Versicherungsfälle","Parkstrafen"],"answerIndex":0,"explanation":"Wartung verhindert Compliance-Probleme.","legalSource":"mot","tags":["purpose"],"xp":10,"riskLevel":"low"},
+{"id":127,"category":"Versicherung","difficulty":"medium","question":"Fahren ohne Versicherungsschutz setzt andere welchem Risiko aus?","options":["Verzögerung","Finanziellem Risiko","Lärm","Kraftstoffmangel"],"answerIndex":1,"explanation":"Geschädigte können ohne Deckung bleiben.","legalSource":"insurance","tags":["risk"],"xp":20,"riskLevel":"high"},
+{"id":128,"category":"Handy am Steuer","difficulty":"medium","question":"Handy-Ablenkung erhöht den Bremsweg, weil du","options":["Schneller reagierst","Langsamer reagierst","Früher reagierst","Automatisch reagierst"],"answerIndex":1,"explanation":"Verzögerte Reaktionen erhöhen die Strecke.","legalSource":"mobile_phone","tags":["safety"],"xp":20,"riskLevel":"high"},
+{"id":129,"category":"Sicherheitsgurte","difficulty":"easy","question":"Sicherheitsgurte reduzieren hauptsächlich","options":["Unfallwahrscheinlichkeit","Schwere von Verletzungen","Kraftstoffverbrauch","Straßenlärm"],"answerIndex":1,"explanation":"Sie schützen Insassen bei Unfällen.","legalSource":"seatbelt","tags":["safety"],"xp":10,"riskLevel":"low"},
+{"id":130,"category":"Parken","difficulty":"medium","question":"Klare Parkregeln helfen, was zu verbessern?","options":["Verkehrssicherheit","Kraftstoffeffizienz","Versicherung","Fahrzeuggeschwindigkeit"],"answerIndex":0,"explanation":"Richtiges Parken reduziert Gefahren.","legalSource":"parking_pcn","tags":["purpose"],"xp":20,"riskLevel":"low"},
+
+{"id":131,"category":"Geschwindigkeitsüberschreitung","difficulty":"easy","question":"Wenn du eine feste Strafe wegen zu schnellen Fahrens bekommst, was wird normalerweise deinem Führerschein hinzugefügt?","options":["Ein Warnhinweis","3 Strafpunkte","6 Strafpunkte","Kein Eintrag"],"answerIndex":1,"explanation":"Feste Strafen wegen Geschwindigkeit bringen meist 3 Punkte.","legalSource":"speeding","tags":["points"],"xp":10,"riskLevel":"medium"},
+{"id":132,"category":"Geschwindigkeitsüberschreitung","difficulty":"medium","question":"Wenn du 12 Punkte innerhalb von 3 Jahren erreichst, wie lang ist das übliche Fahrverbot wegen Punktesammlung?","options":["1 Monat","3 Monate","6 Monate","12 Monate"],"answerIndex":2,"explanation":"Totting-Fahrverbote beginnen oft bei 6 Monaten.","legalSource":"points","tags":["ban","totting"],"xp":20,"riskLevel":"high"},
+{"id":133,"category":"Geschwindigkeitsüberschreitung","difficulty":"medium","question":"Wenn zu schnelles Fahren als schwerer eingestuft wird, was ändert sich zuerst?","options":["Du bekommst immer einen Kurs","Es kann vor Gericht gehen","Deine Steuer steigt","Dein MOT läuft ab"],"answerIndex":1,"explanation":"Schwerere Fälle können vor Gericht verfolgt werden.","legalSource":"speeding","tags":["court"],"xp":20,"riskLevel":"high"},
+{"id":134,"category":"Geschwindigkeitsüberschreitung","difficulty":"hard","question":"Warum behandelt das Gericht sehr hohe Geschwindigkeiten strenger?","options":["Es erhöht den Straßenverschleiß","Es erhöht die Unfallschwere","Es erhöht den Verbrauch","Es reduziert Sichtbarkeit von Schildern"],"answerIndex":1,"explanation":"Höhere Geschwindigkeit erhöht Aufprall und Risiko.","legalSource":"speeding","tags":["safety"],"xp":30,"riskLevel":"high"},
+{"id":135,"category":"Geschwindigkeitsüberschreitung","difficulty":"easy","question":"Wenn du beim Rasen erwischt wirst, wie hoch ist die übliche Mindestgeldstrafe bei einer festen Strafe?","options":["£50","£100","£200","£500"],"answerIndex":1,"explanation":"Die übliche Mindestgeldstrafe beträgt £100.","legalSource":"speeding","tags":["fine"],"xp":10,"riskLevel":"medium"},
+
+{"id":136,"category":"Handy am Steuer","difficulty":"easy","question":"Wenn du ein Handy in der Hand hältst und während der Fahrt benutzt, welche Geldstrafe wird üblicherweise verhängt?","options":["£50","£100","£200","£500"],"answerIndex":2,"explanation":"Handheld-Handynutzung führt meist zu £200 Geldstrafe.","legalSource":"mobile_phone","tags":["fine"],"xp":10,"riskLevel":"medium"},
+{"id":137,"category":"Handy am Steuer","difficulty":"easy","question":"Wenn du ein Handy in der Hand hältst und während der Fahrt benutzt, wie viele Punkte bekommst du üblicherweise?","options":["3","4","6","9"],"answerIndex":2,"explanation":"Handheld-Handynutzung bringt meist 6 Punkte.","legalSource":"mobile_phone","tags":["points"],"xp":10,"riskLevel":"high"},
+{"id":138,"category":"Handy am Steuer","difficulty":"medium","question":"Wenn die Polizei meint, du warst abgelenkt, aber du hattest kein Handy in der Hand, welcher Verstoß kann greifen?","options":["Keine Versicherung","Nicht unter Kontrolle","Kein MOT","Busspur-Nutzung"],"answerIndex":1,"explanation":"„Not in proper control“ kann trotzdem verfolgt werden.","legalSource":"mobile_phone","tags":["control"],"xp":20,"riskLevel":"medium"},
+{"id":139,"category":"Handy am Steuer","difficulty":"medium","question":"Wenn du die Prüfung vor weniger als 2 Jahren bestanden hast, warum ist ein Handyverstoß extra schädlich?","options":["Du zahlst doppelt","Du bekommst 9 Punkte","Dein Führerschein kann entzogen werden","Du wirst 2 Jahre gesperrt"],"answerIndex":2,"explanation":"6 Punkte können einen neuen Führerschein entziehen.","legalSource":"points","tags":["new_driver"],"xp":20,"riskLevel":"high"},
+{"id":140,"category":"Handy am Steuer","difficulty":"hard","question":"Handheld-Handynutzung kann auch vor Gericht landen. Welche mögliche Gerichtsstrafe (Geldstrafe) gibt es für Autofahrer?","options":["Bis £200","Bis £500","Bis £1.000","Unbegrenzt"],"answerIndex":2,"explanation":"Gerichte können bis zu £1.000 Geldstrafe verhängen.","legalSource":"mobile_phone","tags":["court","fine"],"xp":30,"riskLevel":"high"},
+
+{"id":141,"category":"Versicherung","difficulty":"easy","question":"Wenn du ohne Versicherung erwischt wirst, welche feste Geldstrafe ist typisch?","options":["£100","£200","£300","£500"],"answerIndex":2,"explanation":"Die feste Geldstrafe liegt meist bei £300.","legalSource":"insurance","tags":["fine"],"xp":10,"riskLevel":"high"},
+{"id":142,"category":"Versicherung","difficulty":"easy","question":"Wenn du ohne Versicherung erwischt wirst, wie viele Punkte sind typisch?","options":["3","4","6","9"],"answerIndex":2,"explanation":"Fahren ohne Versicherung bringt meist 6 Punkte.","legalSource":"insurance","tags":["points"],"xp":10,"riskLevel":"high"},
+{"id":143,"category":"Versicherung","difficulty":"medium","question":"Wenn Fahren ohne Versicherung vor Gericht geht, welche Geldstrafe ist möglich?","options":["Bis £500","Bis £1.000","Unbegrenzt","Bis £2.500"],"answerIndex":2,"explanation":"Vor Gericht ist eine unbegrenzte Geldstrafe möglich.","legalSource":"insurance","tags":["court"],"xp":20,"riskLevel":"high"},
+{"id":144,"category":"Versicherung","difficulty":"medium","question":"Welche zusätzliche Befugnis hat die Polizei bei unversicherten Fahrzeugen?","options":["Sie kann das Fahrzeug beschlagnahmen","Sie kann deine Steuer entfernen","Sie kann deinen MOT annullieren","Sie kann Punkte reduzieren"],"answerIndex":0,"explanation":"Die Polizei kann unversicherte Fahrzeuge beschlagnahmen.","legalSource":"insurance","tags":["enforcement"],"xp":20,"riskLevel":"high"},
+{"id":145,"category":"Versicherung","difficulty":"hard","question":"Wenn du dein Auto einem Freund leihst, was ist die sicherste Annahme zur Versicherung?","options":["Jeder Fahrer ist versichert","Nur benannte oder ausdrücklich erlaubte Fahrer sind versichert","Versicherung ist optional","Deckung hängt vom Kraftstofftyp ab"],"answerIndex":1,"explanation":"Nur erlaubte Fahrer sind nach den Policenbedingungen gedeckt.","legalSource":"insurance","tags":["risk"],"xp":30,"riskLevel":"high"},
+
+{"id":146,"category":"Fahrzeug-Compliance","difficulty":"easy","question":"Fahren ohne gültigen MOT kann zu welcher maximalen Geldstrafe führen?","options":["£500","£1.000","£2.500","Unbegrenzt"],"answerIndex":1,"explanation":"Die maximale Geldstrafe kann £1.000 erreichen.","legalSource":"mot","tags":["fine"],"xp":10,"riskLevel":"medium"},
+{"id":147,"category":"Fahrzeug-Compliance","difficulty":"easy","question":"Fahrzeugsteuer ist auch bekannt als","options":["Road Duty","Vehicle Excise Duty","Motor Charge","Traffic Levy"],"answerIndex":1,"explanation":"Fahrzeugsteuer heißt Vehicle Excise Duty (VED).","legalSource":"vehicle_tax","tags":["definition"],"xp":10,"riskLevel":"low"},
+{"id":148,"category":"Fahrzeug-Compliance","difficulty":"medium","question":"Wenn dein Fahrzeug nicht auf der Straße genutzt wird, was solltest du normalerweise tun?","options":["Steuerbriefe ignorieren","SORN erklären","Deinen Führerschein kündigen","Kennzeichen entfernen"],"answerIndex":1,"explanation":"SORN meldet das Fahrzeug als „off the road“.","legalSource":"vehicle_tax","tags":["rules"],"xp":20,"riskLevel":"low"},
+{"id":149,"category":"Fahrzeug-Compliance","difficulty":"medium","question":"Warum wird das Fahren mit einem defekten Fahrzeug verfolgt?","options":["Es verlangsamt den Verkehr","Es gefährdet die Sicherheit","Es erhöht die Steuer","Es betrifft das Parken"],"answerIndex":1,"explanation":"Defekte können ein erhebliches Sicherheitsrisiko sein.","legalSource":"mot","tags":["safety"],"xp":20,"riskLevel":"high"},
+{"id":150,"category":"Fahrzeug-Compliance","difficulty":"hard","question":"Wenn deine Reifen gefährlich abgefahren sind, was ist der wahrscheinlichste Grund, warum du bestraft werden kannst?","options":["Lärmregeln","Sicherheitsrisiko","Versicherungspreis","Kraftstoffeffizienz"],"answerIndex":1,"explanation":"Unsichere Reifen erhöhen Kollisionsrisiko.","legalSource":"mot","tags":["safety"],"xp":30,"riskLevel":"high"},
+
+{"id":151,"category":"Sicherheitsgurte","difficulty":"easy","question":"Wenn du keinen Sicherheitsgurt trägst, wie hoch ist die maximale Geldstrafe?","options":["£100","£200","£500","£1.000"],"answerIndex":2,"explanation":"Die maximale Geldstrafe beträgt £500.","legalSource":"seatbelt","tags":["fine"],"xp":10,"riskLevel":"medium"},
+{"id":152,"category":"Sicherheitsgurte","difficulty":"medium","question":"Wer ist normalerweise verantwortlich, dass ein Kind die richtige Rückhalteeinrichtung nutzt?","options":["Das Kind","Der Fahrer","Der Versicherer","Der MOT-Prüfer"],"answerIndex":1,"explanation":"Der Fahrer ist verantwortlich für Kindersitze und Gurte.","legalSource":"seatbelt","tags":["responsibility"],"xp":20,"riskLevel":"medium"},
+{"id":153,"category":"Sicherheitsgurte","difficulty":"easy","question":"Sicherheitsgurte schützen dich hauptsächlich, indem sie","options":["Unfallrisiko senken","Schwere von Verletzungen reduzieren","Kraftstoffverbrauch senken","Steuerklasse senken"],"answerIndex":1,"explanation":"Gurte reduzieren schwere Verletzungen.","legalSource":"seatbelt","tags":["safety"],"xp":10,"riskLevel":"low"},
+{"id":154,"category":"Sicherheitsgurte","difficulty":"medium","question":"Wenn Sicherheitsgurte vorhanden sind, sollten Passagiere sie tragen","options":["Nur auf Autobahnen","Nur nachts","Immer beim Sitzen","Nur bei schlechtem Wetter"],"answerIndex":2,"explanation":"Passagiere sollen vorhandene Gurte immer nutzen.","legalSource":"seatbelt","tags":["rules"],"xp":20,"riskLevel":"low"},
+{"id":155,"category":"Sicherheitsgurte","difficulty":"hard","question":"Eine medizinische Ausnahme vom Sicherheitsgurt ist nur gültig mit","options":["Einer mündlichen Aussage","Einem formellen ärztlichen Attest","Einem Parkausweis","Einer Versicherungs-E-Mail"],"answerIndex":1,"explanation":"Ausnahmen benötigen ein formelles Attest.","legalSource":"seatbelt","tags":["rules"],"xp":30,"riskLevel":"low"},
+
+{"id":156,"category":"Strafpunkte","difficulty":"easy","question":"Punktesammlung basiert auf Punkten, die innerhalb welcher Zeit gesammelt werden?","options":["1 Jahr","2 Jahre","3 Jahre","5 Jahre"],"answerIndex":2,"explanation":"Totting betrachtet meist 3 Jahre.","legalSource":"points","tags":["totting"],"xp":10,"riskLevel":"medium"},
+{"id":157,"category":"Strafpunkte","difficulty":"medium","question":"Wenn du wegen Punktesammlung gesperrt wirst, wer entscheidet über die Dauer?","options":["DVLA","Dein Versicherer","Das Gericht","Die Gemeinde"],"answerIndex":2,"explanation":"Gerichte entscheiden die Dauer der Disqualifikation.","legalSource":"points","tags":["court"],"xp":20,"riskLevel":"high"},
+{"id":158,"category":"Strafpunkte","difficulty":"medium","question":"Wie lang ist das übliche erste Fahrverbot beim Erreichen der Totting-Schwelle?","options":["1 Monat","3 Monate","6 Monate","2 Jahre"],"answerIndex":2,"explanation":"Ein erstes Totting-Fahrverbot beginnt oft bei 6 Monaten.","legalSource":"points","tags":["ban"],"xp":20,"riskLevel":"high"},
+{"id":159,"category":"Strafpunkte","difficulty":"hard","question":"Wenn du innerhalb von 3 Jahren zum zweiten Mal wegen Punktesammlung gesperrt wirst, wie lang ist eine häufige Sperre?","options":["3 Monate","6 Monate","12 Monate","2 Jahre"],"answerIndex":2,"explanation":"Ein zweites Totting-Fahrverbot ist oft 12 Monate.","legalSource":"points","tags":["ban"],"xp":30,"riskLevel":"high"},
+{"id":160,"category":"Strafpunkte","difficulty":"hard","question":"Wenn du innerhalb von 3 Jahren zum dritten Mal wegen Punktesammlung gesperrt wirst, wie lang ist eine häufige Sperre?","options":["6 Monate","12 Monate","2 Jahre","5 Jahre"],"answerIndex":2,"explanation":"Ein drittes Totting-Fahrverbot ist oft 2 Jahre.","legalSource":"points","tags":["ban"],"xp":30,"riskLevel":"high"},
+
+{"id":161,"category":"Alkohol und Drogen","difficulty":"easy","question":"Wenn du wegen Trunkenheit am Steuer verurteilt wirst, wie lang ist das Mindestfahrverbot?","options":["6 Monate","12 Monate","18 Monate","24 Monate"],"answerIndex":1,"explanation":"Das Mindestfahrverbot beträgt 12 Monate.","legalSource":"drink_driving","tags":["ban"],"xp":10,"riskLevel":"high"},
+{"id":162,"category":"Alkohol und Drogen","difficulty":"medium","question":"Welche Kombination kann bei Trunkenheit am Steuer als Strafe vorkommen?","options":["Nur Geldstrafe","Fahrverbot, Geldstrafe, Gefängnis","Nur Punkte","Nur Verwarnung"],"answerIndex":1,"explanation":"Gerichte können Fahrverbote, Geldstrafen und Freiheitsstrafen verhängen.","legalSource":"drink_driving","tags":["court"],"xp":20,"riskLevel":"high"},
+{"id":163,"category":"Alkohol und Drogen","difficulty":"medium","question":"Wenn du 12 Monate oder länger gesperrt wirst, welchen Kurs kann das Gericht anbieten, um die Sperre zu verkürzen?","options":["Speed Awareness","Drink-Drive Rehabilitation","Parking Awareness","Insurance Workshop"],"answerIndex":1,"explanation":"Ein Reha-Kurs kann die Sperre verkürzen.","legalSource":"drink_driving","tags":["course"],"xp":20,"riskLevel":"medium"},
+{"id":164,"category":"Alkohol und Drogen","difficulty":"medium","question":"Das Verweigern einer Atem-, Blut- oder Urinprobe wird behandelt als","options":["Kleines Problem","Schweres Delikt","Zivilbescheid","Keine Straftat"],"answerIndex":1,"explanation":"Verweigerung wird von Gerichten streng behandelt.","legalSource":"drink_driving","tags":["rules"],"xp":20,"riskLevel":"high"},
+{"id":165,"category":"Alkohol und Drogen","difficulty":"easy","question":"Drogen am Steuer führt normalerweise zu","options":["Keinem Fahrverbot","Einem Fahrverbot","Einem Parkticket","Nur einer Verwarnung"],"answerIndex":1,"explanation":"Drogen am Steuer führt zur Disqualifikation.","legalSource":"drug_driving","tags":["ban"],"xp":10,"riskLevel":"high"},
+
+{"id":166,"category":"Parken","difficulty":"easy","question":"Ein Parkticket der Gemeinde wird normalerweise genannt","options":["FPN","PCN","NIP","SORN"],"answerIndex":1,"explanation":"Parktickets heißen meist PCN.","legalSource":"parking_pcn","tags":["definition"],"xp":10,"riskLevel":"low"},
+{"id":167,"category":"Parken","difficulty":"easy","question":"Wie lange hast du normalerweise Zeit, ein PCN zu bezahlen, bevor es eskaliert?","options":["7 Tage","14 Tage","21 Tage","28 Tage"],"answerIndex":3,"explanation":"Die meisten PCNs geben 28 Tage Zeit.","legalSource":"parking_pcn","tags":["deadline"],"xp":10,"riskLevel":"low"},
+{"id":168,"category":"Parken","difficulty":"medium","question":"Wenn du ein PCN innerhalb der Rabattfrist bezahlst, was passiert normalerweise?","options":["Die Strafe steigt","Die Strafe sinkt","Es werden Punkte hinzugefügt","Ein Gerichtstermin wird gesetzt"],"answerIndex":1,"explanation":"Frühe Zahlung führt oft zu einem Rabatt.","legalSource":"parking_pcn","tags":["discount"],"xp":20,"riskLevel":"low"},
+{"id":169,"category":"Parken","difficulty":"medium","question":"Wenn du ein PCN anfechten willst, was ist der erste Schritt?","options":["Direkt vor Gericht gehen","Die Gemeinde kontaktieren","DVLA anrufen","Deinen Versicherer anrufen"],"answerIndex":1,"explanation":"Normalerweise wendest du dich zuerst an die Gemeinde.","legalSource":"parking_pcn","tags":["appeal"],"xp":20,"riskLevel":"low"},
+{"id":170,"category":"Parken","difficulty":"hard","question":"Wenn ein PCN unbezahlt bleibt, kann der Prozess am Ende beinhalten","options":["Strafpunkte","Fahrzeugrückruf","Vollstreckungsbeamte","MOT-Annullierung"],"answerIndex":2,"explanation":"Unbezahlte Strafen können zu Vollstreckung führen.","legalSource":"parking_pcn","tags":["enforcement"],"xp":30,"riskLevel":"medium"},
+
+{"id":171,"category":"Busspur und Verkehrsverstöße","difficulty":"easy","question":"Busspur-Bescheide werden normalerweise durchgesetzt von","options":["DVLA","Polizei","Gemeinde","DVSA"],"answerIndex":2,"explanation":"Busspur-Durchsetzung erfolgt meist durch Gemeinden.","legalSource":"bus_lane","tags":["authority"],"xp":10,"riskLevel":"low"},
+{"id":172,"category":"Busspur und Verkehrsverstöße","difficulty":"easy","question":"Bei den meisten Busspur-Bescheiden, wer ist normalerweise haftbar?","options":["Der Passagier","Der Fahrer","Der eingetragene Halter","Der Mechaniker"],"answerIndex":2,"explanation":"Haftung liegt normalerweise beim Halter.","legalSource":"bus_lane","tags":["liability"],"xp":10,"riskLevel":"low"},
+{"id":173,"category":"Busspur und Verkehrsverstöße","difficulty":"medium","question":"Warum gelten viele Busspur-Strafen als zivilrechtliche Durchsetzung?","options":["Es gibt kein Risiko","Lokale Behörden verwalten sie","Es sind Steuern","Es sind Versicherungsstrafen"],"answerIndex":1,"explanation":"Gemeinden setzen sie nach zivilen Regeln durch.","legalSource":"bus_lane","tags":["law"],"xp":20,"riskLevel":"low"},
+{"id":174,"category":"Busspur und Verkehrsverstöße","difficulty":"medium","question":"Außerhalb Londons gehen viele Busspur-Einsprüche an","options":["Traffic Penalty Tribunal","Magistrates Court","DVLA","Polizei"],"answerIndex":0,"explanation":"Einsprüche werden von einem unabhängigen Tribunal bearbeitet.","legalSource":"bus_lane","tags":["appeal"],"xp":20,"riskLevel":"low"},
+{"id":175,"category":"Busspur und Verkehrsverstöße","difficulty":"hard","question":"Halterhaftung existiert hauptsächlich, um Durchsetzung","options":["Schnell und einfach","Teurer","Geheim","Optional"],"answerIndex":0,"explanation":"Sie ermöglicht effiziente Zustellung von Bescheiden.","legalSource":"bus_lane","tags":["liability"],"xp":30,"riskLevel":"low"},
+
+{"id":176,"category":"Geschwindigkeitsüberschreitung","difficulty":"medium","question":"Wenn du 12 Punkte ansammelst, wie kann ein Gericht manchmal ein Fahrverbot vermeiden?","options":["Früh zahlen","Außergewöhnliche Härte anerkannt","Irgendeinen Kurs machen","Adresse ändern"],"answerIndex":1,"explanation":"Gerichte können bei außergewöhnlicher Härte auf ein Fahrverbot verzichten.","legalSource":"points","tags":["court"],"xp":20,"riskLevel":"high"},
+{"id":177,"category":"Handy am Steuer","difficulty":"medium","question":"Was ist das größte Sicherheitsproblem bei Handheld-Handynutzung beim Fahren?","options":["Lärm","Ablenkung","Niedriger Akku","Schlechtes Signal"],"answerIndex":1,"explanation":"Ablenkung erhöht das Kollisionsrisiko.","legalSource":"mobile_phone","tags":["safety"],"xp":20,"riskLevel":"high"},
+{"id":178,"category":"Versicherung","difficulty":"medium","question":"Wenn dein Fall ohne Versicherung vor Gericht geht, welches zusätzliche Ergebnis ist außer einer Geldstrafe möglich?","options":["Führerschein-Upgrade","Disqualifikation","Steuerrückzahlung","MOT-Befreiung"],"answerIndex":1,"explanation":"Gerichte können unversicherte Fahrer disqualifizieren.","legalSource":"insurance","tags":["court"],"xp":20,"riskLevel":"high"},
+{"id":179,"category":"Fahrzeug-Compliance","difficulty":"medium","question":"Warum ist SORN wichtig, wenn du ein Fahrzeug nicht nutzt?","options":["Es senkt den Verbrauch","Es stoppt Steuer- und Versicherungs-Compliance-Probleme","Es wechselt die Reifen","Es reduziert Parken"],"answerIndex":1,"explanation":"Es teilt der DVLA mit, dass das Fahrzeug off-road ist.","legalSource":"vehicle_tax","tags":["rules"],"xp":20,"riskLevel":"low"},
+{"id":180,"category":"Sicherheitsgurte","difficulty":"medium","question":"Warum ist ein Gurtverstoß wichtig, auch wenn er meist keine Punkte hat?","options":["Er erhöht die Steuer","Er erhöht das Verletzungsrisiko","Er macht den Führerschein ungültig","Er ändert den MOT"],"answerIndex":1,"explanation":"Gurte reduzieren schwere Verletzungen.","legalSource":"seatbelt","tags":["safety"],"xp":20,"riskLevel":"medium"},
+
+{"id":181,"category":"Strafpunkte","difficulty":"easy","question":"Wenn du prüfen willst, wie viele Punkte du hast, solltest du prüfen","options":["MOT-Historie","Führerscheinakte","Versicherungs-E-Mail","Park-App"],"answerIndex":1,"explanation":"Punkte sind im Führerscheinregister erfasst.","legalSource":"points","tags":["record"],"xp":10,"riskLevel":"low"},
+{"id":182,"category":"Alkohol und Drogen","difficulty":"hard","question":"Warum führt Trunkenheit am Steuer oft zu einem langen Fahrverbot, auch beim ersten Verstoß?","options":["Es ist immer zivilrechtlich","Es beinhaltet ein hohes Beeinträchtigungsrisiko","Es ist ein Parkproblem","Es ist steuerbezogen"],"answerIndex":1,"explanation":"Beeinträchtigung erzeugt hohes Unfallrisiko.","legalSource":"drink_driving","tags":["safety"],"xp":30,"riskLevel":"high"},
+{"id":183,"category":"Parken","difficulty":"medium","question":"Was ist der Hauptunterschied zwischen einem Park-PCN und einer Geschwindigkeitsstrafe?","options":["PCN ist zivilrechtlich, Geschwindigkeit ist strafrechtlich","Beides ist gleich","PCN gibt Punkte","Geschwindigkeit wird von Gemeinden durchgesetzt"],"answerIndex":0,"explanation":"Park-PCNs sind meist zivilrechtliche Durchsetzung.","legalSource":"parking_pcn","tags":["law"],"xp":20,"riskLevel":"low"},
+{"id":184,"category":"Busspur und Verkehrsverstöße","difficulty":"medium","question":"Was ist am ehesten ein Verkehrsverstoß im Fließverkehr?","options":["Kein Gurt","In eine Einfahrt-verboten-Straße fahren","Keine Versicherung","Kein MOT"],"answerIndex":1,"explanation":"„No entry“ ist ein Moving-Traffic-Verstoß.","legalSource":"bus_lane","tags":["rules"],"xp":20,"riskLevel":"low"},
+{"id":185,"category":"Geschwindigkeitsüberschreitung","difficulty":"hard","question":"Wenn du weit über dem Limit fährst, was ist das größte rechtliche Risiko im Vergleich zu geringem Rasen?","options":["Du bekommst immer Rabatt","Du kannst ein Fahrverbot bekommen","Du bekommst keinen Eintrag","Du zahlst nur £50"],"answerIndex":1,"explanation":"Sehr hohe Geschwindigkeit kann zur Disqualifikation führen.","legalSource":"speeding","tags":["court"],"xp":30,"riskLevel":"high"},
+
+{"id":186,"category":"Handy am Steuer","difficulty":"hard","question":"Warum gilt Filmen oder Scrollen auf einem Handheld-Handy als Handynutzung?","options":["Es ist Unterhaltung","Es nutzt das Gerät während der Fahrt","Es ändert die Versicherung","Es senkt den Verbrauch"],"answerIndex":1,"explanation":"Jede Handheld-Interaktion gilt als Nutzung.","legalSource":"mobile_phone","tags":["rules"],"xp":30,"riskLevel":"high"},
+{"id":187,"category":"Versicherung","difficulty":"hard","question":"Warum nutzt die Polizei die Beschlagnahmebefugnis bei unversicherten Autos?","options":["Um Lärm zu bestrafen","Um unsicheres Risiko von der Straße zu nehmen","Um Steuerhinterziehung zu senken","Um beim Parken zu helfen"],"answerIndex":1,"explanation":"Sie entfernt ein hohes Risiko aus dem Verkehr.","legalSource":"insurance","tags":["enforcement"],"xp":30,"riskLevel":"high"},
+{"id":188,"category":"Fahrzeug-Compliance","difficulty":"hard","question":"Warum ist MOT-Durchsetzung mit öffentlicher Sicherheit verbunden?","options":["Es erhöht die Geschwindigkeit","Es prüft Verkehrssicherheit","Es senkt die Steuer","Es reduziert Parkstrafen"],"answerIndex":1,"explanation":"MOT soll Fahrzeuge sicher im Verkehr halten.","legalSource":"mot","tags":["safety"],"xp":30,"riskLevel":"medium"},
+{"id":189,"category":"Sicherheitsgurte","difficulty":"hard","question":"Warum behandeln Regeln Kinder bei Rückhaltesystemen anders?","options":["Sie sind leichter","Sie brauchen passenden Schutz","Sie zahlen keine Steuer","Sie haben keinen Führerschein"],"answerIndex":1,"explanation":"Kinder brauchen korrekte Rückhaltesysteme für Sicherheit.","legalSource":"seatbelt","tags":["safety"],"xp":30,"riskLevel":"medium"},
+{"id":190,"category":"Parken","difficulty":"hard","question":"Warum wird das Ignorieren eines PCN mit der Zeit teuer?","options":["Kraftstoffkosten steigen","Gebühren können steigen","Punkte verdoppeln sich","Versicherung endet"],"answerIndex":1,"explanation":"PCNs können bei Nichtzahlung eskalieren.","legalSource":"parking_pcn","tags":["enforcement"],"xp":30,"riskLevel":"medium"},
+
+{"id":191,"category":"Geschwindigkeitsüberschreitung","difficulty":"easy","question":"Wenn dir ein Speed-Awareness-Kurs angeboten wird, was ist ein häufiger Vorteil?","options":["Punkte werden immer entfernt","Du kannst Punkte vermeiden","Deine Steuer sinkt","Dein MOT wird verlängert"],"answerIndex":1,"explanation":"Kurse können in geeigneten Fällen Punkte vermeiden.","legalSource":"speeding","tags":["course"],"xp":10,"riskLevel":"low"},
+{"id":192,"category":"Handy am Steuer","difficulty":"medium","question":"Wenn du Freisprechen nutzt, aber die Kontrolle verlierst, was kann die Polizei trotzdem verfolgen?","options":["Park-PCN","Nicht unter Kontrolle","Keine Steuer","Kein MOT"],"answerIndex":1,"explanation":"Du musst das Fahrzeug jederzeit unter Kontrolle haben.","legalSource":"mobile_phone","tags":["control"],"xp":20,"riskLevel":"medium"},
+{"id":193,"category":"Versicherung","difficulty":"easy","question":"Welche minimale Punktzahl kann einem neuen Fahrer innerhalb von 2 Jahren den Führerschein entziehen?","options":["3","4","6","12"],"answerIndex":2,"explanation":"6 Punkte können den neuen Führerschein entziehen.","legalSource":"points","tags":["new_driver"],"xp":10,"riskLevel":"high"},
+{"id":194,"category":"Alkohol und Drogen","difficulty":"medium","question":"Wenn du wegen Alkohol am Steuer gesperrt bist, was musst du tun, wenn die Sperre endet?","options":["Nichts","Einen neuen Führerschein beantragen","Dein Kennzeichen ändern","Immer Theorie neu machen"],"answerIndex":1,"explanation":"Nach einem Fahrverbot beantragst du typischerweise einen neuen Führerschein.","legalSource":"drink_driving","tags":["ban"],"xp":20,"riskLevel":"medium"},
+{"id":195,"category":"Strafpunkte","difficulty":"medium","question":"Warum werden Totting-Fahrverbote bei Wiederholung länger?","options":["Kraftstoffregeln","Eskaliert bei Wiederholung","Parkprobleme","Steuerklassen"],"answerIndex":1,"explanation":"Wiederholung führt zu längeren Sperren als Abschreckung.","legalSource":"points","tags":["ban"],"xp":20,"riskLevel":"high"},
+
+{"id":196,"category":"Fahrzeug-Compliance","difficulty":"easy","question":"Wenn du dein Auto nicht auf öffentlichen Straßen nutzt, was hilft dir, compliant zu bleiben?","options":["Briefe ignorieren","SORN-Erklärung","Nur nachts fahren","Reifen entfernen"],"answerIndex":1,"explanation":"SORN hält DVLA-Daten korrekt.","legalSource":"vehicle_tax","tags":["rules"],"xp":10,"riskLevel":"low"},
+{"id":197,"category":"Parken","difficulty":"easy","question":"Wer schickt normalerweise ein Park-PCN für Parken auf der Straße?","options":["DVLA","Gemeinde","DVSA","Versicherungsfirma"],"answerIndex":1,"explanation":"Gemeinden verwalten die meisten On-Street-PCNs.","legalSource":"parking_pcn","tags":["authority"],"xp":10,"riskLevel":"low"},
+{"id":198,"category":"Busspur und Verkehrsverstöße","difficulty":"easy","question":"Busspur-Bescheide basieren normalerweise auf Beweisen aus","options":["Zeugenaussagen","Kamerabildern","Kraftstofflogs","MOT-Unterlagen"],"answerIndex":1,"explanation":"Kamerabeweise werden häufig genutzt.","legalSource":"bus_lane","tags":["enforcement"],"xp":10,"riskLevel":"low"},
+{"id":199,"category":"Geschwindigkeitsüberschreitung","difficulty":"medium","question":"Warum wird zu schnelles Fahren in der Nähe stark frequentierter Fußgängerbereiche ernst behandelt?","options":["Straßen sind breiter","Risiko für vulnerable Verkehrsteilnehmer","Kraftstoffpreise steigen","Parken ist begrenzt"],"answerIndex":1,"explanation":"Das Risiko für Fußgänger ist höher.","legalSource":"speeding","tags":["safety"],"xp":20,"riskLevel":"high"},
+{"id":200,"category":"Handy am Steuer","difficulty":"medium","question":"Wenn du dein Handy montierst und Sprachbefehle nutzt, was musst du trotzdem einhalten?","options":["Höhere Geschwindigkeit","Volle Kontrolle","Niedrigere Steuer","Extra Versicherung"],"answerIndex":1,"explanation":"Du musst jederzeit die volle Kontrolle behalten.","legalSource":"mobile_phone","tags":["control"],"xp":20,"riskLevel":"medium"}
+]
+[
+{"id":201,"category":"Versicherung","difficulty":"medium","question":"Wenn die Polizei dich anhält und du nicht nachweisen kannst, dass du versichert bist, was ist ein realistisches Ergebnis?","options":["Es passiert nichts","Du kannst gemeldet und bestraft werden","Du bekommst ein Park-PCN","Dein MOT wird verlängert"],"answerIndex":1,"explanation":"Fahren ohne Versicherung kann schnell geahndet werden.","legalSource":"insurance","tags":["enforcement"],"xp":20,"riskLevel":"high"},
+{"id":202,"category":"Alkohol und Drogen","difficulty":"medium","question":"Drink-Drive-Rehabilitationkurse werden angeboten durch","options":["DVLA","Das Gericht","Die Gemeinde","Deinen Versicherer"],"answerIndex":1,"explanation":"Ob der Kurs angeboten wird, entscheidet das Gericht.","legalSource":"drink_driving","tags":["course"],"xp":20,"riskLevel":"medium"},
+{"id":203,"category":"Strafpunkte","difficulty":"easy","question":"Wenn du 12 Punkte bekommst und das Gericht dich sperrt, wie heißt diese Sperre?","options":["SORN-Sperre","Totting-Sperre","MOT-Sperre","PCN-Sperre"],"answerIndex":1,"explanation":"Eine punktebasierte Sperre wird oft als Totting bezeichnet.","legalSource":"points","tags":["totting"],"xp":10,"riskLevel":"high"},
+{"id":204,"category":"Parken","difficulty":"medium","question":"Wenn du denkst, dein PCN wurde unfair ausgestellt, was ist der beste erste Schritt?","options":["Ignorieren","Zeitnah anfechten","Bezahlen und vergessen","DVLA anrufen"],"answerIndex":1,"explanation":"Früh über das PCN-Verfahren anfechten.","legalSource":"parking_pcn","tags":["appeal"],"xp":20,"riskLevel":"low"},
+{"id":205,"category":"Fahrzeug-Compliance","difficulty":"medium","question":"Warum ist Fahren ohne MOT riskant, auch wenn sich das Auto in Ordnung anfühlt?","options":["Versicherung kündigt immer","Versteckte Mängel existieren","Kraftstoffverbrauch steigt","Parkkosten steigen"],"answerIndex":1,"explanation":"Manche Mängel sind für Fahrer nicht sofort erkennbar.","legalSource":"mot","tags":["risk"],"xp":20,"riskLevel":"medium"},
+{"id":206,"category":"Busspur und Verkehrsverstöße","difficulty":"medium","question":"Welche Aussage passt am besten zur Busspur-Durchsetzung?","options":["Es gibt immer Punkte","Es ist meist eine zivilrechtliche Strafe","Es wird von der DVLA bearbeitet","Es geht immer nur vor Gericht"],"answerIndex":1,"explanation":"Busspur-Strafen werden meistens zivilrechtlich durchgesetzt.","legalSource":"bus_lane","tags":["law"],"xp":20,"riskLevel":"low"},
+{"id":207,"category":"Sicherheitsgurte","difficulty":"medium","question":"Warum wird der Fahrer bestraft, wenn ein Kind nicht gesichert ist?","options":["Steuerregel","Schutzpflicht des Fahrers","Versicherungsrabatt","MOT-Mangel"],"answerIndex":1,"explanation":"Fahrer müssen sicherstellen, dass Kinder korrekt gesichert sind.","legalSource":"seatbelt","tags":["responsibility"],"xp":20,"riskLevel":"medium"},
+{"id":208,"category":"Geschwindigkeitsüberschreitung","difficulty":"medium","question":"Wenn du bereits Punkte hast, warum zählt ein weiterer Tempoverstoß stärker?","options":["Punkte werden zurückgesetzt","Totting-Risiko steigt","Steuer steigt","Parken wird gesperrt"],"answerIndex":1,"explanation":"Mehr Punkte erhöhen das Risiko einer Sperre.","legalSource":"points","tags":["totting"],"xp":20,"riskLevel":"high"},
+{"id":209,"category":"Handy am Steuer","difficulty":"easy","question":"Welches Verhalten ist beim Fahren am sichersten?","options":["Kurz texten","Handy tief halten","Kein Handy in der Hand benutzen","An roten Ampeln scrollen"],"answerIndex":2,"explanation":"Keine Handheld-Nutzung ist am sichersten und rechtmäßig.","legalSource":"mobile_phone","tags":["safety"],"xp":10,"riskLevel":"high"},
+{"id":210,"category":"Versicherung","difficulty":"easy","question":"Was brauchst du, bevor du ein Auto auf UK-Straßen fährst?","options":["Versicherung","SORN","Busspur-Permit","Parkausweis"],"answerIndex":0,"explanation":"Versicherung ist für das legale Fahren erforderlich.","legalSource":"insurance","tags":["law"],"xp":10,"riskLevel":"low"},
+
+{"id":211,"category":"Fahrzeug-Compliance","difficulty":"easy","question":"Wofür steht SORN am ehesten?","options":["Fahrzeug verkauft","Fahrzeug steht off-road","Fahrzeug exportiert","Fahrzeug ist MOT-frei"],"answerIndex":1,"explanation":"SORN bedeutet, das Fahrzeug wird nicht auf öffentlichen Straßen genutzt.","legalSource":"vehicle_tax","tags":["definition"],"xp":10,"riskLevel":"low"},
+{"id":212,"category":"Parken","difficulty":"easy","question":"Warum gibt es bei vielen PCNs einen Rabatt für frühe Zahlung?","options":["Um Punkte zu vermeiden","Um schnelle Erledigung zu fördern","Um Steuer zu senken","Um MOT zu verlängern"],"answerIndex":1,"explanation":"Frühe Zahlung beendet den Fall schneller.","legalSource":"parking_pcn","tags":["discount"],"xp":10,"riskLevel":"low"},
+{"id":213,"category":"Busspur und Verkehrsverstöße","difficulty":"easy","question":"Bei vielen zivilen Verkehrsbescheiden ist zuerst haftbar","options":["Der Fahrer","Der eingetragene Halter","Der Beifahrer","Der Versicherer"],"answerIndex":1,"explanation":"Bescheide gehen oft an den eingetragenen Halter.","legalSource":"bus_lane","tags":["liability"],"xp":10,"riskLevel":"low"},
+{"id":214,"category":"Handy am Steuer","difficulty":"medium","question":"Ist Handynutzung in der Hand illegal, wenn du im Stau stehst oder an einer Ampel hältst?","options":["Nein","Nur auf Autobahnen","Ja","Nur nachts"],"answerIndex":2,"explanation":"Du giltst weiterhin als Fahrender, auch im Stau oder an Ampeln.","legalSource":"mobile_phone","tags":["rules"],"xp":20,"riskLevel":"medium"},
+{"id":215,"category":"Geschwindigkeitsüberschreitung","difficulty":"easy","question":"Wovon hängt die Schwere der Strafe bei Tempoverstößen am stärksten ab?","options":["Uhrzeit","Dein Alter","Wie weit du über dem Limit warst","Farbe des Autos"],"answerIndex":2,"explanation":"Je höher die Überschreitung, desto strenger die Strafe.","legalSource":"speeding","tags":["rules"],"xp":10,"riskLevel":"medium"},
+
+{"id":216,"category":"Geschwindigkeitsüberschreitung","difficulty":"easy","question":"Was ist die häufigste Mindeststrafe bei Tempoverstößen im UK?","options":["£50 und 2 Punkte","£100 und 3 Punkte","£200 und 6 Punkte","Nur Verwarnung"],"answerIndex":1,"explanation":"Viele Tempoverstöße beginnen bei £100 und 3 Punkten.","legalSource":"speeding","tags":["fine","points"],"xp":10,"riskLevel":"medium"},
+{"id":217,"category":"Geschwindigkeitsüberschreitung","difficulty":"medium","question":"Welche zusätzliche Sanktion kann ein Gericht bei schweren Tempoverstößen verhängen?","options":["MOT wird ungültig","Fahrverbot","Kfz-Steuer wird erlassen","Versicherung wird automatisch beendet"],"answerIndex":1,"explanation":"Bei schweren Fällen kann das Gericht ein Fahrverbot verhängen.","legalSource":"speeding","tags":["court","ban"],"xp":20,"riskLevel":"high"},
+{"id":218,"category":"Geschwindigkeitsüberschreitung","difficulty":"medium","question":"Warum kann wiederholtes Rasen langfristig teuer werden, auch ohne Fahrverbot?","options":["Steuer steigt","Versicherungskosten steigen","Kraftstoff wird teurer","MOT kostet doppelt"],"answerIndex":1,"explanation":"Punkte und Verurteilungen führen häufig zu höheren Prämien.","legalSource":"points","tags":["insurance"],"xp":20,"riskLevel":"medium"},
+{"id":219,"category":"Geschwindigkeitsüberschreitung","difficulty":"easy","question":"Was ist das Hauptziel von Tempolimits?","options":["Einnahmen","Sicherheit","Versicherung prüfen","Parken kontrollieren"],"answerIndex":1,"explanation":"Tempolimits sollen Unfälle reduzieren und Sicherheit erhöhen.","legalSource":"speeding","tags":["purpose"],"xp":10,"riskLevel":"low"},
+{"id":220,"category":"Geschwindigkeitsüberschreitung","difficulty":"hard","question":"Warum wird ein Crash bei höherer Geschwindigkeit deutlich gefährlicher?","options":["Mehr Lärm","Mehr Aufprallenergie","Mehr Grip","Weniger Sicht"],"answerIndex":1,"explanation":"Die Aufprallenergie steigt mit der Geschwindigkeit.","legalSource":"speeding","tags":["safety"],"xp":30,"riskLevel":"high"},
+
+{"id":221,"category":"Handy am Steuer","difficulty":"easy","question":"Wie viele Punkte bekommst du typischerweise für Handheld-Handybenutzung am Steuer?","options":["3","4","6","9"],"answerIndex":2,"explanation":"Handheld-Handybenutzung führt häufig zu 6 Punkten.","legalSource":"mobile_phone","tags":["points"],"xp":10,"riskLevel":"high"},
+{"id":222,"category":"Handy am Steuer","difficulty":"easy","question":"Welche feste Geldstrafe ist für Handheld-Handybenutzung am Steuer typisch?","options":["£50","£100","£200","£500"],"answerIndex":2,"explanation":"Die feste Geldstrafe liegt häufig bei £200.","legalSource":"mobile_phone","tags":["fine"],"xp":10,"riskLevel":"medium"},
+{"id":223,"category":"Handy am Steuer","difficulty":"medium","question":"Warum ist Handheld-Handynutzung beim Fahren so riskant?","options":["Signal stört","Ablenkung","Motor wird schwächer","Reifen verlieren Profil"],"answerIndex":1,"explanation":"Ablenkung senkt Aufmerksamkeit und Reaktionsfähigkeit.","legalSource":"mobile_phone","tags":["safety"],"xp":20,"riskLevel":"high"},
+{"id":224,"category":"Handy am Steuer","difficulty":"medium","question":"Warum können neue Fahrer durch einen Handyverstoß ihren Führerschein verlieren?","options":["Punkte zählen doppelt","6 Punkte reichen in den ersten 2 Jahren","Versicherung endet sofort","Gericht muss immer sperren"],"answerIndex":1,"explanation":"In den ersten 2 Jahren können 6 Punkte zum Entzug führen.","legalSource":"points","tags":["new_driver"],"xp":20,"riskLevel":"high"},
+{"id":225,"category":"Handy am Steuer","difficulty":"hard","question":"Welche maximale Geldstrafe kann das Gericht bei Handyverstoß für Autofahrer verhängen?","options":["Bis £200","Bis £500","Bis £1.000","Unbegrenzt"],"answerIndex":2,"explanation":"Vor Gericht sind bis zu £1.000 möglich.","legalSource":"mobile_phone","tags":["court","fine"],"xp":30,"riskLevel":"high"},
+
+{"id":226,"category":"Versicherung","difficulty":"easy","question":"Welche feste Strafe ist typisch für Fahren ohne Versicherung?","options":["£100 und 3 Punkte","£300 und 6 Punkte","£200 und 3 Punkte","£500 und 6 Punkte"],"answerIndex":1,"explanation":"Typisch sind £300 und 6 Punkte.","legalSource":"insurance","tags":["fine","points"],"xp":10,"riskLevel":"high"},
+{"id":227,"category":"Versicherung","difficulty":"medium","question":"Wenn Fahren ohne Versicherung vor Gericht landet, wie hoch kann die Geldstrafe sein?","options":["Bis £500","Bis £1.000","Unbegrenzt","£2.500"],"answerIndex":2,"explanation":"Vor Gericht ist eine unbegrenzte Geldstrafe möglich.","legalSource":"insurance","tags":["court"],"xp":20,"riskLevel":"high"},
+{"id":228,"category":"Versicherung","difficulty":"medium","question":"Welche Maßnahme kann die Polizei bei einem unversicherten Fahrzeug ergreifen?","options":["Nur Verwarnung","Fahrzeug beschlagnahmen","MOT verlängern","Punkte löschen"],"answerIndex":1,"explanation":"Die Polizei kann ein unversichertes Fahrzeug beschlagnahmen.","legalSource":"insurance","tags":["enforcement"],"xp":20,"riskLevel":"high"},
+{"id":229,"category":"Versicherung","difficulty":"hard","question":"Warum gilt Fahren ohne Versicherung als besonders schwerwiegend?","options":["Es macht Stau","Es entfernt finanziellen Schutz","Es erhöht den Verbrauch","Es lässt den MOT scheitern"],"answerIndex":1,"explanation":"Ohne Versicherung fehlt der finanzielle Schutz bei Schäden.","legalSource":"insurance","tags":["risk"],"xp":30,"riskLevel":"high"},
+{"id":230,"category":"Versicherung","difficulty":"medium","question":"Wenn du angehalten wirst und keine Versicherungsdeckung besteht, was ist ein realistisches Risiko?","options":["Keine Folge","Du wirst gemeldet und bestraft","Du bekommst ein Park-PCN","Dein MOT wird verlängert"],"answerIndex":1,"explanation":"Unversichertes Fahren wird oft schnell geahndet.","legalSource":"insurance","tags":["enforcement"],"xp":20,"riskLevel":"high"},
+
+{"id":231,"category":"Fahrzeug-Compliance","difficulty":"easy","question":"Wie hoch kann die maximale Geldstrafe für Fahren ohne gültigen MOT sein?","options":["£100","£500","£1.000","Unbegrenzt"],"answerIndex":2,"explanation":"Für Fahren ohne gültigen MOT sind bis zu £1.000 möglich.","legalSource":"mot","tags":["fine"],"xp":10,"riskLevel":"medium"},
+{"id":232,"category":"Fahrzeug-Compliance","difficulty":"easy","question":"Welche Behörde verwaltet hauptsächlich Fahrzeugsteuer und SORN im UK?","options":["Polizei","DVLA","Gemeinde","Gericht"],"answerIndex":1,"explanation":"DVLA verwaltet Vehicle Tax und SORN.","legalSource":"vehicle_tax","tags":["authority"],"xp":10,"riskLevel":"low"},
+{"id":233,"category":"Fahrzeug-Compliance","difficulty":"medium","question":"Wann solltest du SORN melden?","options":["Wenn du umziehst","Wenn du das Fahrzeug nicht auf öffentlichen Straßen nutzt","Wenn du die Versicherung wechselst","Wenn du neue Reifen kaufst"],"answerIndex":1,"explanation":"SORN gilt, wenn das Fahrzeug off-road ist.","legalSource":"vehicle_tax","tags":["rules"],"xp":20,"riskLevel":"low"},
+{"id":234,"category":"Fahrzeug-Compliance","difficulty":"medium","question":"Warum bestraft das Gesetz das Fahren mit einem gefährlichen Fahrzeug?","options":["Wegen Verbrauch","Wegen öffentlicher Sicherheit","Wegen Parkregeln","Wegen Steuer"],"answerIndex":1,"explanation":"Gefährliche Fahrzeuge gefährden andere Verkehrsteilnehmer.","legalSource":"mot","tags":["safety"],"xp":20,"riskLevel":"high"},
+{"id":235,"category":"Fahrzeug-Compliance","difficulty":"hard","question":"Warum ist MOT als Sicherheitsprüfung wichtig?","options":["Um Steuer zu senken","Um Verkehrssicherheit zu bestätigen","Um Versicherung zu kündigen","Um Parken zu erlauben"],"answerIndex":1,"explanation":"MOT prüft, ob das Fahrzeug sicher im Verkehr ist.","legalSource":"mot","tags":["safety"],"xp":30,"riskLevel":"medium"},
+
+{"id":236,"category":"Sicherheitsgurte","difficulty":"easy","question":"Wie hoch ist die maximale Geldstrafe, wenn du keinen Sicherheitsgurt trägst?","options":["£100","£200","£500","£1.000"],"answerIndex":2,"explanation":"Die maximale Geldstrafe kann bis zu £500 betragen.","legalSource":"seatbelt","tags":["fine"],"xp":10,"riskLevel":"medium"},
+{"id":237,"category":"Sicherheitsgurte","difficulty":"medium","question":"Bis zu welchem Alter sind Fahrer in der Regel verantwortlich, dass Passagiere angegurtet sind?","options":["12","14","16","18"],"answerIndex":1,"explanation":"Der Fahrer ist meist für Passagiere unter 14 verantwortlich.","legalSource":"seatbelt","tags":["responsibility"],"xp":20,"riskLevel":"medium"},
+{"id":238,"category":"Sicherheitsgurte","difficulty":"easy","question":"Sicherheitsgurte reduzieren bei Unfällen vor allem","options":["Verbrauch","Schwere von Verletzungen","Straßenlärm","Parkkosten"],"answerIndex":1,"explanation":"Gurte senken das Risiko schwerer Verletzungen.","legalSource":"seatbelt","tags":["safety"],"xp":10,"riskLevel":"low"},
+{"id":239,"category":"Sicherheitsgurte","difficulty":"medium","question":"Wenn Gurte vorhanden sind, gilt die Gurtpflicht","options":["Ja","Nein","Nur auf Autobahnen","Nur für Fahrer"],"answerIndex":0,"explanation":"Vorhandene Gurte müssen genutzt werden.","legalSource":"seatbelt","tags":["rules"],"xp":20,"riskLevel":"low"},
+{"id":240,"category":"Sicherheitsgurte","difficulty":"hard","question":"Eine medizinische Ausnahme von der Gurtpflicht braucht","options":["Mündliche Bestätigung","Offizielles ärztliches Attest","Parkausweis","Polizei-Erlaubnis"],"answerIndex":1,"explanation":"Ausnahmen benötigen ein offizielles ärztliches Attest.","legalSource":"seatbelt","tags":["rules"],"xp":30,"riskLevel":"low"},
+
+{"id":241,"category":"Strafpunkte","difficulty":"easy","question":"Was passiert mit Strafpunkten bei mehreren Verstößen?","options":["Sie verschwinden sofort","Sie werden addiert","Sie werden verdoppelt automatisch","Sie zählen nur für Parken"],"answerIndex":1,"explanation":"Strafpunkte werden über Verstöße hinweg addiert.","legalSource":"points","tags":["definition"],"xp":10,"riskLevel":"medium"},
+{"id":242,"category":"Strafpunkte","difficulty":"medium","question":"Ab welcher Punktzahl droht typischerweise ein Fahrverbot durch Punktesammlung?","options":["9","10","12","15"],"answerIndex":2,"explanation":"Bei 12 oder mehr Punkten innerhalb von 3 Jahren droht oft eine Sperre.","legalSource":"points","tags":["ban","totting"],"xp":20,"riskLevel":"high"},
+{"id":243,"category":"Strafpunkte","difficulty":"medium","question":"Wie lange ist ein typisches erstes Totting-Fahrverbot?","options":["1 Monat","3 Monate","6 Monate","12 Monate"],"answerIndex":2,"explanation":"Ein erstes Totting-Fahrverbot beginnt oft bei 6 Monaten.","legalSource":"points","tags":["ban"],"xp":20,"riskLevel":"high"},
+{"id":244,"category":"Strafpunkte","difficulty":"hard","question":"Warum steigen Totting-Sperren bei Wiederholung oft?","options":["Wegen Kraftstoffregeln","Wegen Eskalation bei Wiederholung","Wegen Parkproblemen","Wegen Steuerklassen"],"answerIndex":1,"explanation":"Wiederholte Totting-Sperren werden typischerweise länger.","legalSource":"points","tags":["ban"],"xp":30,"riskLevel":"high"},
+{"id":245,"category":"Strafpunkte","difficulty":"hard","question":"Was ist ein häufiges Argument, um bei Totting ein Fahrverbot zu vermeiden?","options":["Steuer zu hoch","Außergewöhnliche Härte","Auto ist neu","MOT ist gültig"],"answerIndex":1,"explanation":"Gerichte können in seltenen Fällen wegen außergewöhnlicher Härte absehen.","legalSource":"points","tags":["court"],"xp":30,"riskLevel":"high"},
+
+{"id":246,"category":"Parken","difficulty":"easy","question":"Wie heißt ein typischer kommunaler Parkbescheid im UK?","options":["NIP","PCN","SORN","MOT"],"answerIndex":1,"explanation":"Parkbescheide heißen meist Penalty Charge Notice (PCN).","legalSource":"parking_pcn","tags":["definition"],"xp":10,"riskLevel":"low"},
+{"id":247,"category":"Parken","difficulty":"easy","question":"Wie lange hast du normalerweise Zeit, ein PCN zu bezahlen?","options":["7 Tage","14 Tage","21 Tage","28 Tage"],"answerIndex":3,"explanation":"Üblich sind 28 Tage Zahlungsfrist.","legalSource":"parking_pcn","tags":["deadline"],"xp":10,"riskLevel":"low"},
+{"id":248,"category":"Parken","difficulty":"medium","question":"Was passiert häufig, wenn du ein PCN innerhalb der Rabattfrist bezahlst?","options":["Betrag steigt","Betrag sinkt","Du bekommst Punkte","Du musst vor Gericht"],"answerIndex":1,"explanation":"Oft gibt es eine Ermäßigung bei früher Zahlung.","legalSource":"parking_pcn","tags":["discount"],"xp":20,"riskLevel":"low"},
+{"id":249,"category":"Parken","difficulty":"medium","question":"Wenn du ein PCN anfechten willst, wen kontaktierst du zuerst?","options":["Polizei","DVLA","Die ausstellende Behörde","Gericht"],"answerIndex":2,"explanation":"Zuerst wendest du dich an die ausstellende Behörde.","legalSource":"parking_pcn","tags":["appeal"],"xp":20,"riskLevel":"low"},
+{"id":250,"category":"Parken","difficulty":"hard","question":"Warum können unbezahlte PCNs teurer werden?","options":["Beträge steigen bei Fristversäumnis","Punkte verdoppeln sich","Steuer steigt","MOT wird ungültig"],"answerIndex":0,"explanation":"Wenn Fristen verpasst werden, kann der Betrag steigen.","legalSource":"parking_pcn","tags":["enforcement"],"xp":30,"riskLevel":"medium"},
+
+{"id":251,"category":"Busspur und Verkehrsverstöße","difficulty":"easy","question":"Wer stellt Busspur-Strafen am häufigsten aus?","options":["DVLA","Polizei","Gemeinde","DVSA"],"answerIndex":2,"explanation":"Busspur-PCNs werden oft von Gemeinden durchgesetzt.","legalSource":"bus_lane","tags":["authority"],"xp":10,"riskLevel":"low"},
+{"id":252,"category":"Busspur und Verkehrsverstöße","difficulty":"easy","question":"Busspur-Bescheide beruhen häufig auf","options":["Zeugen","Kamerabildern","MOT-Daten","Tankbelegen"],"answerIndex":1,"explanation":"Kameras liefern Beweise für Verstöße.","legalSource":"bus_lane","tags":["enforcement"],"xp":10,"riskLevel":"low"},
+{"id":253,"category":"Busspur und Verkehrsverstöße","difficulty":"medium","question":"Warum sind viele Busspur-Strafen zivilrechtlich?","options":["Risiko ist null","Gemeinden setzen sie lokal durch","Es sind Steuern","Es sind Versicherungsstrafen"],"answerIndex":1,"explanation":"Lokale Behörden setzen Busspur-PCNs zivilrechtlich durch.","legalSource":"bus_lane","tags":["law"],"xp":20,"riskLevel":"low"},
+{"id":254,"category":"Busspur und Verkehrsverstöße","difficulty":"medium","question":"Außerhalb Londons gehen viele Busspur-Einsprüche an","options":["Traffic Penalty Tribunal","Magistrates Court","DVLA","Polizei"],"answerIndex":0,"explanation":"Außerhalb Londons entscheidet oft das Traffic Penalty Tribunal.","legalSource":"bus_lane","tags":["appeal"],"xp":20,"riskLevel":"low"},
+{"id":255,"category":"Busspur und Verkehrsverstöße","difficulty":"hard","question":"Was bedeutet Halterhaftung bei vielen PCNs?","options":["Der Fahrer haftet immer","Der eingetragene Halter ist zuerst verantwortlich","Der Beifahrer zahlt","Die Versicherung zahlt automatisch"],"answerIndex":1,"explanation":"Bescheide werden häufig an den eingetragenen Halter adressiert.","legalSource":"bus_lane","tags":["liability"],"xp":30,"riskLevel":"low"},
+
+{"id":256,"category":"Alkohol und Drogen","difficulty":"easy","question":"Wie lange ist das Mindestfahrverbot bei Verurteilung wegen Trunkenheit am Steuer typischerweise?","options":["6 Monate","12 Monate","18 Monate","24 Monate"],"answerIndex":1,"explanation":"Bei Trunkenheit am Steuer gilt meist mindestens 12 Monate Fahrverbot.","legalSource":"drink_driving","tags":["ban"],"xp":10,"riskLevel":"high"},
+{"id":257,"category":"Alkohol und Drogen","difficulty":"medium","question":"Wie wird das Verweigern einer Atem-, Blut- oder Urinprobe behandelt?","options":["Als leichte Ordnungswidrigkeit","Ähnlich wie Trunkenheit am Steuer","Wie Parken","Als keine Straftat"],"answerIndex":1,"explanation":"Verweigerung führt oft zu ähnlich schweren Sanktionen.","legalSource":"drink_driving","tags":["rules"],"xp":20,"riskLevel":"high"},
+{"id":258,"category":"Alkohol und Drogen","difficulty":"easy","question":"Bei Verurteilung wegen Drogeneinfluss am Steuer, was ist das typische Mindestfahrverbot?","options":["6 Monate","12 Monate","2 Jahre","Keins"],"answerIndex":1,"explanation":"Drogen am Steuer führen häufig zu mindestens 12 Monaten Fahrverbot.","legalSource":"drug_driving","tags":["ban"],"xp":10,"riskLevel":"high"},
+{"id":259,"category":"Alkohol und Drogen","difficulty":"medium","question":"Warum wird das Verweigern eines Tests streng geahndet?","options":["Es kostet Zeit","Es verhindert Beweise","Es macht Lärm","Es erhöht Steuer"],"answerIndex":1,"explanation":"Verweigerung blockiert die Beweiserhebung.","legalSource":"drink_driving","tags":["rules"],"xp":20,"riskLevel":"high"},
+{"id":260,"category":"Alkohol und Drogen","difficulty":"hard","question":"Welche Kombination ist bei Trunkenheit am Steuer vor Gericht möglich?","options":["Nur Geldstrafe","Fahrverbot, Geldstrafe, Gefängnis","Nur Punkte","Nur Verwarnung"],"answerIndex":1,"explanation":"Gerichte können Fahrverbote, Geldstrafen und Freiheitsstrafen verhängen.","legalSource":"drink_driving","tags":["court"],"xp":30,"riskLevel":"high"},
+
+{"id":261,"category":"Geschwindigkeitsüberschreitung","difficulty":"easy","question":"Bei kleiner Überschreitung, welche Sanktion ist am häufigsten?","options":["Mündliche Verwarnung","Feste Strafzahlung","Sofortiges Fahrverbot","Beschlagnahme"],"answerIndex":1,"explanation":"Viele Fälle werden als feste Strafzahlung behandelt.","legalSource":"speeding","tags":["fine"],"xp":10,"riskLevel":"medium"},
+{"id":262,"category":"Handy am Steuer","difficulty":"medium","question":"Warum ist Freisprechen eher erlaubt, aber Handy in der Hand nicht?","options":["Wegen Kosten","Wegen höherer Ablenkung","Wegen Netz","Wegen Akku"],"answerIndex":1,"explanation":"Handheld-Nutzung bindet Hand und Blick stärker.","legalSource":"mobile_phone","tags":["rules"],"xp":20,"riskLevel":"medium"},
+{"id":263,"category":"Versicherung","difficulty":"easy","question":"Wozu dient eine Kfz-Versicherung hauptsächlich?","options":["Verbrauch senken","Finanzielles Risiko abdecken","Leistung steigern","Steuer senken"],"answerIndex":1,"explanation":"Sie deckt Schäden und Haftung finanziell ab.","legalSource":"insurance","tags":["risk"],"xp":10,"riskLevel":"low"},
+{"id":264,"category":"Fahrzeug-Compliance","difficulty":"easy","question":"Warum ist der MOT regelmäßig nötig?","options":["Halter prüfen","Verkehrssicherheit bestätigen","Versicherung erneuern","Führerschein verlängern"],"answerIndex":1,"explanation":"MOT prüft die Verkehrssicherheit des Fahrzeugs.","legalSource":"mot","tags":["safety"],"xp":10,"riskLevel":"low"},
+{"id":265,"category":"Parken","difficulty":"medium","question":"Wenn du ein PCN ignorierst, was passiert als Nächstes am wahrscheinlichsten?","options":["Punkte werden addiert","Die Forderung steigt","Führerschein wird entzogen","Auto wird verboten"],"answerIndex":1,"explanation":"Beträge können steigen und weitere Schritte folgen.","legalSource":"parking_pcn","tags":["enforcement"],"xp":20,"riskLevel":"medium"},
+
+{"id":266,"category":"Busspur und Verkehrsverstöße","difficulty":"easy","question":"Busspuren sollen den Verkehr vor allem für wen priorisieren?","options":["Autos","Busse","Nur Fahrräder","Nur Taxis"],"answerIndex":1,"explanation":"Busspuren priorisieren den ÖPNV.","legalSource":"bus_lane","tags":["purpose"],"xp":10,"riskLevel":"low"},
+{"id":267,"category":"Strafpunkte","difficulty":"medium","question":"Warum beeinflussen Strafpunkte oft die Versicherung?","options":["Gesetzliche Pflicht","Höheres Risiko","Steuerregel","Straßentyp"],"answerIndex":1,"explanation":"Versicherer kalkulieren nach Risiko.","legalSource":"points","tags":["insurance"],"xp":20,"riskLevel":"medium"},
+{"id":268,"category":"Sicherheitsgurte","difficulty":"easy","question":"Kein Gurt führt am häufigsten zu","options":["Punkten","Geldstrafe","Fahrverbot","Führerscheinentzug"],"answerIndex":1,"explanation":"Meist ist es eine Geldstrafe.","legalSource":"seatbelt","tags":["fine"],"xp":10,"riskLevel":"low"},
+{"id":269,"category":"Geschwindigkeitsüberschreitung","difficulty":"medium","question":"Wenn ein Tempoverstoß vor Gericht landet, was ist zusätzlich möglich?","options":["Fahrzeug wird beschlagnahmt","Fahrverbot möglich","Versicherung wird sofort beendet","MOT wird ungültig"],"answerIndex":1,"explanation":"Gericht kann bei schweren Fällen ein Fahrverbot verhängen.","legalSource":"speeding","tags":["court"],"xp":20,"riskLevel":"high"},
+{"id":270,"category":"Handy am Steuer","difficulty":"hard","question":"Ein kurzer Blick auf eine Nachricht am Handy in der Hand gilt als","options":["Kleiner Fehler","Keine Tat","Voller Verstoß","Parkverstoß"],"answerIndex":2,"explanation":"Jede Handheld-Nutzung gilt als Verstoß.","legalSource":"mobile_phone","tags":["rules"],"xp":30,"riskLevel":"high"},
+
+{"id":271,"category":"Versicherung","difficulty":"hard","question":"Warum kann Continuous Insurance Enforcement relevant sein?","options":["Es senkt Parkkosten","Es überwacht fortlaufend Versicherungsstatus","Es ersetzt MOT","Es ersetzt SORN"],"answerIndex":1,"explanation":"CIE prüft, ob Fahrzeuge durchgehend versichert sind oder korrekt als off-road gemeldet wurden.","legalSource":"insurance","tags":["enforcement"],"xp":30,"riskLevel":"medium"},
+{"id":272,"category":"Fahrzeug-Compliance","difficulty":"medium","question":"Warum ist Fahren ohne Fahrzeugsteuer ein Problem?","options":["Es betrifft nur Parken","Es verstößt gegen Regeln zur Straßennutzung","Es ist nur Versicherungssache","Es ist nur ein MOT-Thema"],"answerIndex":1,"explanation":"Fahrzeugsteuer ist für Nutzung öffentlicher Straßen erforderlich.","legalSource":"vehicle_tax","tags":["law"],"xp":20,"riskLevel":"low"},
+{"id":273,"category":"Parken","difficulty":"hard","question":"Warum sind Park-PCNs getrennt von Strafpunkten?","options":["Polizei stellt sie aus","Sie sind zivilrechtlich","Sie sind Steuern","Sie sind Versicherungen"],"answerIndex":1,"explanation":"Park-PCNs laufen meist zivilrechtlich ohne Punkte.","legalSource":"parking_pcn","tags":["law"],"xp":30,"riskLevel":"low"},
+{"id":274,"category":"Busspur und Verkehrsverstöße","difficulty":"medium","question":"Warum gibt es unabhängige Tribunale für PCN-Einsprüche?","options":["Mehr Einnahmen","Fairness und Kontrolle","Alles automatisch","Sofortige Strafen"],"answerIndex":1,"explanation":"Unabhängige Prüfung sorgt für faire Entscheidungen.","legalSource":"bus_lane","tags":["appeal"],"xp":20,"riskLevel":"low"},
+{"id":275,"category":"Alkohol und Drogen","difficulty":"medium","question":"Wenn du 12 Monate oder länger gesperrt wirst, was kann die Sperre eventuell verkürzen?","options":["Speed-Awareness-Kurs","Drink-Drive-Reha-Kurs","Parkkurs","Versicherungskurs"],"answerIndex":1,"explanation":"Ein Reha-Kurs kann die Sperre verkürzen, wenn er angeboten wird.","legalSource":"drink_driving","tags":["course"],"xp":20,"riskLevel":"medium"},
+
+{"id":276,"category":"Geschwindigkeitsüberschreitung","difficulty":"hard","question":"Welche Langzeitfolge ist bei wiederholtem Rasen am wahrscheinlichsten?","options":["Niedrigere Steuer","Höhere Versicherungskosten","Kostenloser Kurs","Besserer Führerschein"],"answerIndex":1,"explanation":"Punkte führen häufig zu höheren Versicherungsprämien.","legalSource":"points","tags":["insurance"],"xp":30,"riskLevel":"medium"},
+{"id":277,"category":"Handy am Steuer","difficulty":"medium","question":"Wenn du das Handy montiert nutzt und nur Sprachsteuerung verwendest, was musst du trotzdem einhalten?","options":["Höhere Geschwindigkeit","Volle Kontrolle","Niedrigere Steuer","Extra Versicherung"],"answerIndex":1,"explanation":"Du musst jederzeit die volle Kontrolle behalten.","legalSource":"mobile_phone","tags":["control"],"xp":20,"riskLevel":"medium"},
+{"id":278,"category":"Versicherung","difficulty":"medium","question":"Warum gefährdet Fahren ohne Versicherung andere?","options":["Mehr Stau","Finanzielles Risiko","Mehr Lärm","Kraftstoffmangel"],"answerIndex":1,"explanation":"Geschädigte können ohne Deckung bleiben.","legalSource":"insurance","tags":["risk"],"xp":20,"riskLevel":"high"},
+{"id":279,"category":"Fahrzeug-Compliance","difficulty":"medium","question":"Fahren ohne gültigen MOT erzeugt vor allem welches Risiko?","options":["Mehr Verbrauch","Unsicheres Fahrzeug","Parkticket","Automatisches Fahrverbot"],"answerIndex":1,"explanation":"Ohne Prüfung können gefährliche Mängel bestehen.","legalSource":"mot","tags":["risk"],"xp":20,"riskLevel":"medium"},
+{"id":280,"category":"Sicherheitsgurte","difficulty":"medium","question":"Ein Passagier ohne Gurt riskiert vor allem","options":["Nur eine Geldstrafe","Schwere Verletzungen","Punkte","Versicherungsverlust"],"answerIndex":1,"explanation":"Ohne Gurt steigt das Verletzungsrisiko stark.","legalSource":"seatbelt","tags":["safety"],"xp":20,"riskLevel":"medium"},
+
+{"id":281,"category":"Parken","difficulty":"medium","question":"Warum wird frühes Bezahlen eines PCN oft belohnt?","options":["Weniger Punkte","Rabatt auf den Betrag","Schnelleres Gericht","Versicherungsbonus"],"answerIndex":1,"explanation":"Frühe Zahlung führt oft zu Ermäßigung.","legalSource":"parking_pcn","tags":["discount"],"xp":20,"riskLevel":"low"},
+{"id":282,"category":"Busspur und Verkehrsverstöße","difficulty":"medium","question":"Was ist am ehesten ein „Moving Traffic“-Verstoß?","options":["Kein Gurt","Falsche Fahrtrichtung in Einbahnstraße","Ohne Versicherung","Ohne MOT"],"answerIndex":1,"explanation":"Moving-Traffic-Verstöße umfassen z. B. falsche Fahrtrichtung.","legalSource":"bus_lane","tags":["rules"],"xp":20,"riskLevel":"low"},
+{"id":283,"category":"Geschwindigkeitsüberschreitung","difficulty":"easy","question":"Warum werden Tempokontrollen eingesetzt?","options":["Geld einnehmen","Sicherheit erhöhen","Versicherung prüfen","Parken kontrollieren"],"answerIndex":1,"explanation":"Sie sollen Unfälle reduzieren und Sicherheit erhöhen.","legalSource":"speeding","tags":["safety"],"xp":10,"riskLevel":"low"},
+{"id":284,"category":"Handy am Steuer","difficulty":"medium","question":"Warum bleibt Handynutzung in der Hand auch im Stand (z. B. an Rot) riskant?","options":["Wegen Akku","Wegen Ablenkung","Wegen Steuer","Wegen Reifen"],"answerIndex":1,"explanation":"Ablenkung bleibt ein Risiko, du bist weiterhin im Verkehr.","legalSource":"mobile_phone","tags":["safety"],"xp":20,"riskLevel":"medium"},
+{"id":285,"category":"Versicherung","difficulty":"easy","question":"Warum ist Versicherung vor Fahrt auf öffentlichen Straßen Pflicht?","options":["Gesetzliche Vorgabe","Kraftstoff sparen","Steuer senken","Führerschein erneuern"],"answerIndex":0,"explanation":"Versicherung ist gesetzlich vorgeschrieben.","legalSource":"insurance","tags":["law"],"xp":10,"riskLevel":"low"},
+
+{"id":286,"category":"Fahrzeug-Compliance","difficulty":"easy","question":"Warum wird die Fahrzeugsteuer verlangt?","options":["Für Nutzung öffentlicher Straßen","Für kostenloses Parken","Für Versicherung","Für MOT"],"answerIndex":0,"explanation":"Sie ist für Nutzung öffentlicher Straßen erforderlich.","legalSource":"vehicle_tax","tags":["rules"],"xp":10,"riskLevel":"low"},
+{"id":287,"category":"Sicherheitsgurte","difficulty":"easy","question":"Warum existieren Gurtgesetze?","options":["Verletzungen zu reduzieren","Steuer zu senken","Fahrverhalten zu verbessern","Kraftstoff zu sparen"],"answerIndex":0,"explanation":"Sie schützen Insassen und reduzieren Verletzungen.","legalSource":"seatbelt","tags":["purpose"],"xp":10,"riskLevel":"low"},
+{"id":288,"category":"Strafpunkte","difficulty":"easy","question":"Strafpunkte werden in welchem Register erfasst?","options":["Versicherungsakte","Führerscheinakte","Fahrzeugheft","MOT-Historie"],"answerIndex":1,"explanation":"Punkte werden im Führerscheinregister geführt.","legalSource":"points","tags":["record"],"xp":10,"riskLevel":"medium"},
+{"id":289,"category":"Parken","difficulty":"easy","question":"Parkregeln sollen vor allem steuern","options":["Versicherung","Straßenraum","Kraftstoffpreis","Tempolimits"],"answerIndex":1,"explanation":"Sie regeln Nutzung und Freihalten von Flächen.","legalSource":"parking_pcn","tags":["purpose"],"xp":10,"riskLevel":"low"},
+{"id":290,"category":"Busspur und Verkehrsverstöße","difficulty":"easy","question":"Busspur-Beschränkungen sollen vor allem verbessern","options":["Sicherheit","Verlässlichkeit und Fluss","Park-Einnahmen","Verbrauch"],"answerIndex":1,"explanation":"Sie helfen Bussen, planbarer zu fahren.","legalSource":"bus_lane","tags":["purpose"],"xp":10,"riskLevel":"low"},
+
+{"id":291,"category":"Geschwindigkeitsüberschreitung","difficulty":"medium","question":"Warum kann ein weiteres Tempo-Delikt bei vorhandenen Punkten schneller zur Sperre führen?","options":["Punkte werden gelöscht","Punkte summieren sich Richtung Totting","MOT wird ungültig","Versicherung endet automatisch"],"answerIndex":1,"explanation":"Mehr Punkte erhöhen das Totting-Risiko.","legalSource":"points","tags":["totting"],"xp":20,"riskLevel":"high"},
+{"id":292,"category":"Handy am Steuer","difficulty":"easy","question":"Was ist die klarste Regel für Handynutzung beim Fahren?","options":["Nur kurze Nutzung","Nur bei Rot nutzen","Keine Handheld-Nutzung","Nur auf Landstraßen nutzen"],"answerIndex":2,"explanation":"Handheld-Handynutzung ist verboten.","legalSource":"mobile_phone","tags":["rules"],"xp":10,"riskLevel":"high"},
+{"id":293,"category":"Versicherung","difficulty":"medium","question":"Wenn du die Versicherung nicht nachweisen kannst, was ist das realistischste Ergebnis?","options":["Nichts","Meldung und Strafe","Park-PCN","MOT-Verlängerung"],"answerIndex":1,"explanation":"Unversichertes Fahren wird häufig bestraft.","legalSource":"insurance","tags":["enforcement"],"xp":20,"riskLevel":"high"},
+{"id":294,"category":"Fahrzeug-Compliance","difficulty":"medium","question":"Warum ist das Gefühl „Auto fährt gut“ kein Ersatz für MOT?","options":["MOT ist optional","Mängel können unbemerkt bleiben","Steuer ersetzt MOT","Versicherung ersetzt MOT"],"answerIndex":1,"explanation":"Sicherheitsmängel können ohne Prüfung verborgen bleiben.","legalSource":"mot","tags":["risk"],"xp":20,"riskLevel":"medium"},
+{"id":295,"category":"Sicherheitsgurte","difficulty":"medium","question":"Warum ist der Fahrer bei Kindern besonders in der Verantwortung?","options":["Steuerregel","Gesetzliche Schutzpflicht","Parkregel","Kraftstoffregel"],"answerIndex":1,"explanation":"Der Fahrer hat eine gesetzliche Pflicht zum Schutz von Kindern.","legalSource":"seatbelt","tags":["law"],"xp":20,"riskLevel":"medium"},
+
+{"id":296,"category":"Strafpunkte","difficulty":"medium","question":"Wenn du 12 Punkte erreichst und gesperrt wirst, wie heißt das System dahinter?","options":["SORN","Totting","MOT","PCN"],"answerIndex":1,"explanation":"Punktesammlung führt zur Totting-Sperre.","legalSource":"points","tags":["totting"],"xp":20,"riskLevel":"high"},
+{"id":297,"category":"Parken","difficulty":"medium","question":"Was ist die beste Strategie, wenn du ein PCN für falsch hältst?","options":["Ignorieren","Schnell anfechten","Warten bis es teurer wird","DVLA anrufen"],"answerIndex":1,"explanation":"Früh anfechten, solange Fristen laufen.","legalSource":"parking_pcn","tags":["appeal"],"xp":20,"riskLevel":"low"},
+{"id":298,"category":"Busspur und Verkehrsverstöße","difficulty":"medium","question":"Welche Aussage trifft auf Busspur-PCNs am ehesten zu?","options":["Immer strafrechtlich","Meist zivilrechtlich","Immer DVLA-Sache","Nie anfechtbar"],"answerIndex":1,"explanation":"Busspur-PCNs sind in der Regel zivilrechtliche Durchsetzung.","legalSource":"bus_lane","tags":["law"],"xp":20,"riskLevel":"low"},
+{"id":299,"category":"Alkohol und Drogen","difficulty":"easy","question":"Wer bietet einen Drink-Drive-Reha-Kurs an, der eine Sperre verkürzen kann?","options":["DVLA","Das Gericht","Die Gemeinde","Deinen Versicherer"],"answerIndex":1,"explanation":"Ob der Kurs angeboten wird, entscheidet das Gericht.","legalSource":"drink_driving","tags":["course"],"xp":10,"riskLevel":"medium"},
+{"id":300,"category":"Alkohol und Drogen","difficulty":"easy","question":"Wenn du wegen Trunkenheit am Steuer für 12 Monate oder länger gesperrt wirst, was kann die Sperre eventuell verkürzen?","options":["Speed-Kurs","Drink-Drive-Reha-Kurs","Parkkurs","Versicherungskurs"],"answerIndex":1,"explanation":"Ein Reha-Kurs kann die Sperre verkürzen, wenn er angeboten wird.","legalSource":"drink_driving","tags":["course"],"xp":10,"riskLevel":"medium"}
+]
+

@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(./gradlew assembleDebug)",
+      "Bash(adb devices)",
+      "Bash(./gradlew installDebug)",
+      "Bash(adb wait-for-device)",
+      "Bash(adb shell getprop sys.boot_completed)",
+      "Bash(adb shell am start -n com.drivest.navigation.debug/com.drivest.navigation.SplashActivity)",
+      "Bash(adb shell pm list packages)",
+      "Bash(adb shell am start -n com.drivest.navigation/com.drivest.navigation.SplashActivity)",
+      "Bash(adb shell am start -n com.drivest.navigation/com.drivest.navigation.highwaycode.HighwayCodeActivity)",
+      "Bash(adb shell input tap 540 870)",
+      "Bash(adb shell wm size)",
+      "Bash(adb shell wm density)",
+      "Bash(adb pull /sdcard/window_dump.xml C:/Users/ferro/AppData/Local/Temp/ui_dump.xml)",
+      "Bash(adb.exe pull /sdcard/window_dump.xml \"%TEMP%/ui_dump.xml\")",
+      "Bash(\"/c/Users/ferro/AppData/Local/Android/Sdk/platform-tools/adb.exe\" pull /sdcard/window_dump.xml \"C:\\\\Users\\\\ferro\\\\AppData\\\\Local\\\\Temp\\\\ui_dump.xml\")"
+    ],
+    "additionalDirectories": [
+      "C:\\Users\\ferro\\AppData\\Local\\Temp"
+    ]
+  }
+}
