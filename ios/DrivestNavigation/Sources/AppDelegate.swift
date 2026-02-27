@@ -7,6 +7,15 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        appearance.titleTextAttributes = [.foregroundColor: DrivestPalette.textPrimary]
+        appearance.largeTitleTextAttributes = [.foregroundColor: DrivestPalette.textPrimary]
+        UINavigationBar.appearance().standardAppearance = appearance
+        UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        UINavigationBar.appearance().compactAppearance = appearance
+        UINavigationBar.appearance().tintColor = DrivestPalette.accentPrimary
+
         if let rawToken = Bundle.main.object(forInfoDictionaryKey: "MBXAccessToken") as? String {
             let trimmedToken = rawToken.trimmingCharacters(in: .whitespacesAndNewlines)
             if trimmedToken.hasPrefix("pk.") {

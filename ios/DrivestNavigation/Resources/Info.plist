@@ -22,6 +22,8 @@
     <true/>
     <key>MBXAccessToken</key>
     <string>$(MBX_ACCESS_TOKEN)</string>
+    <key>APIBaseURL</key>
+    <string>$(API_BASE_URL)</string>
     <key>UIApplicationSceneManifest</key>
     <dict>
         <key>UIApplicationSupportsMultipleScenes</key>

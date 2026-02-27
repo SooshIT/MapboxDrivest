@@ -22,7 +22,7 @@ final class PracticeRouteListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Practice Routes"
-        view.backgroundColor = DrivestPalette.pageBackground
+        view.backgroundColor = .clear
         routes = routeStore.loadRoutesForCentre(centre.id)
 
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -41,6 +41,11 @@ final class PracticeRouteListViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        DrivestBrand.ensurePageGradient(in: view)
     }
 
     private func makeHeaderView() -> UIView {
@@ -66,8 +71,8 @@ final class PracticeRouteListViewController: UIViewController {
         offlineBadge.translatesAutoresizingMaskIntoConstraints = false
         offlineBadge.text = settingsStore.dataSourceMode == .assetsOnly ? "Offline data" : ""
         offlineBadge.font = .systemFont(ofSize: 11, weight: .bold)
-        offlineBadge.textColor = UIColor(red: 0.12, green: 0.23, blue: 0.54, alpha: 1)
-        offlineBadge.backgroundColor = UIColor(red: 0.86, green: 0.91, blue: 0.98, alpha: 1)
+        offlineBadge.textColor = DrivestPalette.accentChipText
+        offlineBadge.backgroundColor = DrivestPalette.accentPrimarySoft
         offlineBadge.layer.cornerRadius = 8
         offlineBadge.layer.masksToBounds = true
         offlineBadge.textAlignment = .center
@@ -154,7 +159,7 @@ private final class PracticeRouteCardCell: UITableViewCell {
         contentView.backgroundColor = .clear
 
         cardView.translatesAutoresizingMaskIntoConstraints = false
-        cardView.applyCardStyle(cornerRadius: 12, borderColor: UIColor.systemGray5)
+        cardView.applyCardStyle(cornerRadius: 12)
 
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.font = .systemFont(ofSize: 17, weight: .bold)
@@ -165,7 +170,7 @@ private final class PracticeRouteCardCell: UITableViewCell {
         metaLabel.textColor = DrivestPalette.textSecondary
 
         chevron.translatesAutoresizingMaskIntoConstraints = false
-        chevron.tintColor = .tertiaryLabel
+        chevron.tintColor = DrivestPalette.accentPrimary
 
         contentView.addSubview(cardView)
         cardView.addSubview(nameLabel)

@@ -3,6 +3,7 @@ import MapKit
 @preconcurrency import MapboxDirections
 @preconcurrency import MapboxNavigationCore
 @preconcurrency import MapboxNavigationUIKit
+@preconcurrency import MapboxMaps
 import UIKit
 
 final class NavigationSessionViewController: UIViewController {
@@ -31,19 +32,44 @@ final class NavigationSessionViewController: UIViewController {
     private let startButton = UIButton(type: .system)
     private let voiceButton = UIButton(type: .system)
     private let promptBannerContainer = UIView()
+    private let promptBannerStack = UIStackView()
+    private let promptTypeIconView = UIImageView()
+    private var promptTypeIconWidthConstraint: NSLayoutConstraint?
+    private let promptSignImageView = UIImageView()
+    private var promptSignImageWidthConstraint: NSLayoutConstraint?
     private let promptBannerLabel = UILabel()
     private let routeProgressContainer = UIView()
+    private let routeProgressIconView = UIImageView()
     private let routeProgressSummaryLabel = UILabel()
     private let routeProgressBar = UIProgressView(progressViewStyle: .default)
     private let speedometerCard = UIView()
+    private let speedometerIconView = UIImageView()
+    private let speedLimitBubble = UIView()
     private let speedLimitBadgeLabel = UILabel()
     private let speedValueLabel = UILabel()
     private let speedUnitLabel = UILabel()
+    private lazy var mapboxUIKitIconsBundle: Bundle? = resolveMapboxUIKitIconsBundle()
+    private lazy var resumeFloatingButton: FloatingButton = {
+        let resumeImage = mapboxIcon(named: "recenter") ?? UIImage(systemName: "location.fill")
+        let button: FloatingButton = .rounded(
+            image: resumeImage,
+            size: CGSize(width: 50, height: 50)
+        )
+        button.tintColor = UIColor(red: 0.22, green: 0.50, blue: 0.84, alpha: 1.0)
+        button.addTarget(self, action: #selector(recenterFromFloatingButton), for: .touchUpInside)
+        button.accessibilityLabel = "Resume guidance"
+        return button
+    }()
 
     private weak var activeNavigationViewController: NavigationViewController?
+    private let practiceOriginLocationManager = CLLocationManager()
     private var promptAutoHideTask: Task<Void, Never>?
     private var hazardLoadTask: Task<Void, Never>?
     private var isHazardFetchInProgress = false
+    private var didHandleSessionStop = false
+    private var didAutoCompletePractice = false
+    private var practiceOriginCoordinate: CLLocationCoordinate2D?
+    private var isResolvingPracticeOrigin = false
     private var hazardFeatures: [HazardFeature] = []
     private var lastHazardFetchAtMs: Int64 = 0
     private var lastHazardFetchAnchor: CLLocationCoordinate2D?
@@ -58,17 +84,48 @@ final class NavigationSessionViewController: UIViewController {
     private var lastSpeedGateLogAtMs: Int64 = 0
     private var lastPromptTickLogAtMs: Int64 = 0
     private var lastPromptSuppressionLogAtMs: Int64 = 0
+    private var hazardPointAnnotationManager: PointAnnotationManager?
+    private var lastAppliedCameraPhase: GuidanceCameraPhase?
+    private var lastAppliedCameraMode: DriverMode?
 
     private let minimumPromptEvaluationSpeedMps = 0.556
     private let minimumReliableSpeedMps = 0.278
     private let offRouteSmoothingAlpha = 0.35
-    private let hazardVoiceMinConfidenceHint = 0.80
-    private let hazardVoiceProximityMeters = 55
-    private let noEntryVoiceProximityMeters = 45
-    private let maxPracticePreviewWaypoints = 20
+    private let hazardVoiceMinConfidenceHint = 0.65
+    private let hazardVoiceProximityMeters = 120
+    private let noEntryVoiceProximityMeters = 100
+    private let maxPracticeRouteFallbackWaypoints = 20
     private let hazardFetchIntervalMs: Int64 = 10 * 60 * 1000
     private let hazardFetchMovementMeters = 300.0
-    private let promptNearbyQueryRadiusMeters = 300.0
+    private let promptNearbyQueryRadiusMeters = 420.0
+    private let practiceRouteMinValidDistanceMeters = 900.0
+    private let practiceRouteDistanceValidityRatio = 0.45
+    private let practiceRouteAutoCompleteMinFraction = 0.999
+    private let practiceRouteAutoCompleteRemainingMeters = 12.0
+
+    private enum GuidanceCameraPhase {
+        case cruising
+        case maneuver
+    }
+
+    private struct DriverGuidanceProfile {
+        let cruiseZoom: Double
+        let cruisePitch: Double
+        let maneuverZoom: Double
+        let maneuverPitch: Double
+        let zoomRange: ClosedRange<Double>
+        let defaultPitch: Double
+        let pitchNearManeuverTriggerMeters: CLLocationDistance
+        let intersectionDensityMultiplier: Double
+        let frameAfterManeuverMeters: CLLocationDistance
+        let compoundManeuverCoalesceMeters: CLLocationDistance
+        let overviewMaxZoom: Double
+        let hazardLeadDistanceMultiplier: Double
+        let hazardConfidenceDelta: Double
+        let nearbyHazardQueryRadiusMeters: Double
+        let maneuverCameraTimeThresholdS: TimeInterval
+        let maneuverCameraDistanceThresholdM: CLLocationDistance
+    }
 
     private lazy var etaFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -101,9 +158,10 @@ final class NavigationSessionViewController: UIViewController {
         visualPromptsEnabled = settingsStore.hazardsEnabled
         setupLayout()
         renderVoiceChip()
-        renderPreviewMap(with: buildCoordinateList())
-        loadHazardFeatures(routeCoordinates: buildCoordinateList(), force: true)
-        requestPreviewRoute()
+        let initialCoordinates = buildCoordinateList()
+        renderPreviewMap(with: initialCoordinates)
+        loadHazardFeatures(routeCoordinates: initialCoordinates, force: true)
+        resolvePracticeOriginAndRequestPreview()
         observeSettings()
     }
 
@@ -172,8 +230,17 @@ final class NavigationSessionViewController: UIViewController {
             summaryLabel.text = "Missing origin/destination for route preview."
             return
         }
+        let fallbackCoordinates = mode == .practice
+            ? simplifiedPracticePreviewCoordinates(
+                from: coordinates,
+                maxWaypoints: maxPracticeRouteFallbackWaypoints
+            )
+            : coordinates
         print(
-            "[Drivest iOS] preview_route_request mode=\(mode.rawValue) waypoint_count=\(coordinates.count)"
+            "[Drivest iOS] preview_route_request " +
+                "mode=\(mode.rawValue) " +
+                "trace_points=\(coordinates.count) " +
+                "fallback_waypoints=\(fallbackCoordinates.count)"
         )
 
         Task { [weak self] in
@@ -182,10 +249,9 @@ final class NavigationSessionViewController: UIViewController {
                 let navigationRoutes = try await self.calculatePreviewRoutes(primaryCoordinates: coordinates)
                 await MainActor.run {
                     self.previewRoutes = navigationRoutes
-                    let fullPracticeFallback = self.practiceRoute?.geometry.map(\.coordinate) ?? coordinates
                     self.activeRouteCoordinates = self.resolveRouteCoordinates(
                         route: navigationRoutes.mainRoute,
-                        fallback: self.mode == .practice ? fullPracticeFallback : coordinates
+                        fallback: coordinates
                     )
                     self.renderPreviewMap(with: self.activeRouteCoordinates)
                     self.loadHazardFeatures(routeCoordinates: self.activeRouteCoordinates, force: true)
@@ -222,36 +288,36 @@ final class NavigationSessionViewController: UIViewController {
     }
 
     private func calculatePreviewRoutes(primaryCoordinates: [CLLocationCoordinate2D]) async throws -> NavigationRoutes {
+        let routeRequestCoordinates: [CLLocationCoordinate2D]
         if mode == .practice {
-            let matchOptions = navigationMatchOptions(for: primaryCoordinates)
-            let matchRequest = mapboxNavigation.routingProvider().calculateRoutes(options: matchOptions)
-            switch await matchRequest.result {
-            case .success(let routes):
-                let legCount = routes.mainRoute.route.legs.count
-                print("[Drivest iOS] preview_match_received legs=\(legCount)")
-                if legCount <= 1 {
-                    return routes
-                }
-                print("[Drivest iOS] preview_match_multi_leg_fallback_to_route legs=\(legCount)")
-
-            case .failure(let matchError):
-                print("[Drivest iOS] preview_match_failed_retrying_route error=\(matchError.localizedDescription)")
-            }
+            routeRequestCoordinates = simplifiedPracticePreviewCoordinates(
+                from: primaryCoordinates,
+                maxWaypoints: maxPracticeRouteFallbackWaypoints
+            )
+        } else {
+            routeRequestCoordinates = primaryCoordinates
         }
 
-        let primaryOptions = navigationRouteOptions(for: primaryCoordinates)
+        if mode == .practice {
+            print(
+                "[Drivest iOS] preview_practice_route_request " +
+                    "trace_points=\(primaryCoordinates.count) route_waypoints=\(routeRequestCoordinates.count)"
+            )
+        }
+
+        let primaryOptions = navigationRouteOptions(for: routeRequestCoordinates)
         let primaryRequest = mapboxNavigation.routingProvider().calculateRoutes(options: primaryOptions)
         switch await primaryRequest.result {
         case .success(let routes):
             let legCount = routes.mainRoute.route.legs.count
             print("[Drivest iOS] preview_route_received legs=\(legCount)")
-            if mode != .practice || legCount <= 1 {
+            if mode != .practice || isPracticePreviewDistanceValid(routes) {
                 return routes
             }
-            print("[Drivest iOS] preview_route_multi_leg_retrying_od legs=\(legCount)")
+            print("[Drivest iOS] preview_route_retrying_od_invalid_distance legs=\(legCount)")
             guard
-                let origin = primaryCoordinates.first,
-                let destination = primaryCoordinates.last
+                let origin = routeRequestCoordinates.first,
+                let destination = routeRequestCoordinates.last
             else {
                 return routes
             }
@@ -260,11 +326,18 @@ final class NavigationSessionViewController: UIViewController {
             let fallbackRequest = mapboxNavigation.routingProvider().calculateRoutes(options: fallbackOptions)
             switch await fallbackRequest.result {
             case .success(let fallbackRoutes):
+                if isPracticePreviewDistanceValid(fallbackRoutes) {
+                    print(
+                        "[Drivest iOS] preview_fallback_od_used " +
+                            "legs=\(fallbackRoutes.mainRoute.route.legs.count)"
+                    )
+                    return fallbackRoutes
+                }
                 print(
-                    "[Drivest iOS] preview_fallback_od_used " +
+                    "[Drivest iOS] preview_fallback_od_rejected_invalid_distance " +
                         "legs=\(fallbackRoutes.mainRoute.route.legs.count)"
                 )
-                return fallbackRoutes
+                return routes
             case .failure(let fallbackError):
                 print("[Drivest iOS] preview_fallback_od_failed error=\(fallbackError.localizedDescription)")
                 return routes
@@ -275,9 +348,9 @@ final class NavigationSessionViewController: UIViewController {
             // retry with origin/destination only so guidance can still start.
             guard
                 mode == .practice,
-                primaryCoordinates.count > 2,
-                let origin = primaryCoordinates.first,
-                let destination = primaryCoordinates.last
+                routeRequestCoordinates.count > 2,
+                let origin = routeRequestCoordinates.first,
+                let destination = routeRequestCoordinates.last
             else {
                 throw primaryError
             }
@@ -302,6 +375,7 @@ final class NavigationSessionViewController: UIViewController {
         for coordinates: [CLLocationCoordinate2D]
     ) -> NavigationRouteOptions {
         let options = NavigationRouteOptions(coordinates: coordinates)
+        options.distanceMeasurementSystem = settingsStore.unitsMode == .metricKmh ? .metric : .imperial
         guard mode == .practice, options.waypoints.count > 2 else { return options }
 
         let firstIndex = options.waypoints.startIndex
@@ -339,11 +413,18 @@ final class NavigationSessionViewController: UIViewController {
     private func buildCoordinateList() -> [CLLocationCoordinate2D] {
         if mode == .practice, let practiceRoute {
             let fullGeometry = practiceRoute.geometry.map(\.coordinate)
-            let simplified = simplifiedPracticePreviewCoordinates(
-                from: fullGeometry,
-                maxWaypoints: maxPracticePreviewWaypoints
-            )
-            return simplified
+            let deduped = dedupeSequentialCoordinates(fullGeometry)
+            guard
+                let routeStart = deduped.first,
+                let origin = practiceOriginCoordinate
+            else {
+                return deduped
+            }
+            // If user is already at route start, avoid injecting a duplicate approach leg.
+            if coordinatesDistanceMeters(origin, routeStart) <= 35 {
+                return deduped
+            }
+            return dedupeSequentialCoordinates([origin] + deduped)
         }
 
         let fallbackOrigin = CLLocationCoordinate2D(latitude: 51.872116, longitude: 0.928174)
@@ -418,6 +499,8 @@ final class NavigationSessionViewController: UIViewController {
     private func startNavigation() {
         guard previewLoaded, let previewRoutes else { return }
         guard activeNavigationViewController == nil else { return }
+        didHandleSessionStop = false
+        didAutoCompletePractice = false
         configureSimulatorRouteReplayIfNeeded(initialCoordinate: activeRouteCoordinates.first)
         print(
             "[Drivest iOS] session_start " +
@@ -440,11 +523,48 @@ final class NavigationSessionViewController: UIViewController {
         )
         navigationVC.delegate = self
         navigationVC.routeLineTracksTraversal = true
-        navigationVC.showsSpeedLimits = true
-        attachPromptBanner(on: navigationVC.view)
+        navigationVC.showsSpeedLimits = false
+        configureRightSideControls(for: navigationVC)
+        attachPromptBanner(on: navigationVC.view, navigationView: navigationVC.navigationView)
         activeNavigationViewController = navigationVC
+        syncNavigationVoiceMode()
         applyVoiceModeStatusText()
+        applyGuidanceProfile(to: navigationVC, progress: nil, force: true)
+        refreshHazardMapAnnotations()
         present(navigationVC, animated: true)
+    }
+
+    @objc
+    private func recenterFromFloatingButton() {
+        guard let navigationVC = activeNavigationViewController else { return }
+        if triggerBuiltInResumeAction(in: navigationVC.navigationView) {
+            applyGuidanceProfile(to: navigationVC, progress: nil, force: true)
+            return
+        }
+        navigationVC.navigationMapView?.navigationCamera.update(cameraState: .following)
+        applyGuidanceProfile(to: navigationVC, progress: nil, force: true)
+    }
+
+    private func configureRightSideControls(for navigationVC: NavigationViewController) {
+        var controls = navigationVC.floatingButtons ?? []
+        if !controls.contains(where: { $0 === resumeFloatingButton }) {
+            controls.insert(resumeFloatingButton, at: 0)
+            navigationVC.floatingButtons = controls
+        }
+    }
+
+    private func triggerBuiltInResumeAction(in view: UIView) -> Bool {
+        let className = NSStringFromClass(type(of: view))
+        if className.contains("ResumeButton"), let control = view as? UIControl {
+            control.sendActions(for: .touchUpInside)
+            return true
+        }
+        for subview in view.subviews {
+            if triggerBuiltInResumeAction(in: subview) {
+                return true
+            }
+        }
+        return false
     }
 
     @objc
@@ -454,6 +574,7 @@ final class NavigationSessionViewController: UIViewController {
         if nextMode == .mute {
             hazardVoiceController.stopSpeaking()
         }
+        syncNavigationVoiceMode()
         renderVoiceChip()
         applyVoiceModeStatusText()
     }
@@ -477,12 +598,167 @@ final class NavigationSessionViewController: UIViewController {
         navigationController?.navigationBar.topItem?.prompt = nil
     }
 
+    private func syncNavigationVoiceMode() {
+        // Keep Mapbox maneuver guidance voice in sync with Drivest voice mode.
+        // Maneuver prompts should be audible unless explicit mute is selected.
+        mapboxNavigationProvider.routeVoiceController.speechSynthesizer.muted = (settingsStore.voiceMode == .mute)
+    }
+
+    private func guidanceProfile(for mode: DriverMode) -> DriverGuidanceProfile {
+        switch mode {
+        case .learner:
+            return DriverGuidanceProfile(
+                cruiseZoom: 15.8,
+                cruisePitch: 33.0,
+                maneuverZoom: 17.2,
+                maneuverPitch: 24.0,
+                zoomRange: 13.8...18.2,
+                defaultPitch: 34.0,
+                pitchNearManeuverTriggerMeters: 280.0,
+                intersectionDensityMultiplier: 5.2,
+                frameAfterManeuverMeters: 70.0,
+                compoundManeuverCoalesceMeters: 120.0,
+                overviewMaxZoom: 17.4,
+                hazardLeadDistanceMultiplier: 1.25,
+                hazardConfidenceDelta: -0.08,
+                nearbyHazardQueryRadiusMeters: 520.0,
+                maneuverCameraTimeThresholdS: 22.0,
+                maneuverCameraDistanceThresholdM: 230.0
+            )
+        case .newDriver:
+            return DriverGuidanceProfile(
+                cruiseZoom: 15.2,
+                cruisePitch: 38.0,
+                maneuverZoom: 16.4,
+                maneuverPitch: 30.0,
+                zoomRange: 12.8...17.4,
+                defaultPitch: 39.0,
+                pitchNearManeuverTriggerMeters: 230.0,
+                intersectionDensityMultiplier: 6.0,
+                frameAfterManeuverMeters: 85.0,
+                compoundManeuverCoalesceMeters: 140.0,
+                overviewMaxZoom: 16.9,
+                hazardLeadDistanceMultiplier: 1.12,
+                hazardConfidenceDelta: -0.04,
+                nearbyHazardQueryRadiusMeters: 460.0,
+                maneuverCameraTimeThresholdS: 18.0,
+                maneuverCameraDistanceThresholdM: 190.0
+            )
+        case .standard:
+            return DriverGuidanceProfile(
+                cruiseZoom: 14.5,
+                cruisePitch: 44.0,
+                maneuverZoom: 15.3,
+                maneuverPitch: 36.0,
+                zoomRange: 10.5...16.35,
+                defaultPitch: 45.0,
+                pitchNearManeuverTriggerMeters: 170.0,
+                intersectionDensityMultiplier: 7.0,
+                frameAfterManeuverMeters: 100.0,
+                compoundManeuverCoalesceMeters: 150.0,
+                overviewMaxZoom: 16.35,
+                hazardLeadDistanceMultiplier: 1.0,
+                hazardConfidenceDelta: 0.0,
+                nearbyHazardQueryRadiusMeters: promptNearbyQueryRadiusMeters,
+                maneuverCameraTimeThresholdS: 14.0,
+                maneuverCameraDistanceThresholdM: 150.0
+            )
+        }
+    }
+
+    private func currentGuidanceProfile() -> DriverGuidanceProfile {
+        guidanceProfile(for: settingsStore.driverMode)
+    }
+
+    private func effectivePromptSensitivity() -> PromptSensitivity {
+        switch settingsStore.driverMode {
+        case .learner:
+            return .extraHelp
+        case .newDriver:
+            return settingsStore.promptSensitivity == .minimal ? .standard : settingsStore.promptSensitivity
+        case .standard:
+            return settingsStore.promptSensitivity
+        }
+    }
+
+    private func resolveGuidanceCameraPhase(
+        progress: RouteProgress?,
+        profile: DriverGuidanceProfile
+    ) -> GuidanceCameraPhase {
+        guard let progress else { return .cruising }
+        let stepDistance = progress.currentLegProgress.currentStepProgress.distanceRemaining
+        let stepTime = progress.currentLegProgress.currentStepProgress.durationRemaining
+        let isApproachingManeuver =
+            stepDistance <= profile.maneuverCameraDistanceThresholdM ||
+            stepTime <= profile.maneuverCameraTimeThresholdS
+        return isApproachingManeuver ? .maneuver : .cruising
+    }
+
+    private func applyGuidanceProfile(
+        to navigationVC: NavigationViewController,
+        progress: RouteProgress?,
+        force: Bool = false
+    ) {
+        guard
+            let viewportDataSource = navigationVC.navigationMapView?.navigationCamera.viewportDataSource
+                as? MobileViewportDataSource
+        else { return }
+
+        let mode = settingsStore.driverMode
+        let profile = guidanceProfile(for: mode)
+        let phase = resolveGuidanceCameraPhase(progress: progress, profile: profile)
+
+        if !force, lastAppliedCameraMode == mode, lastAppliedCameraPhase == phase {
+            return
+        }
+
+        var viewportOptions = viewportDataSource.options
+        viewportOptions.followingCameraOptions.defaultPitch = profile.defaultPitch
+        viewportOptions.followingCameraOptions.zoomRange = profile.zoomRange
+        viewportOptions.followingCameraOptions.pitchNearManeuver.enabled = true
+        viewportOptions.followingCameraOptions.pitchNearManeuver.triggerDistanceToManeuver =
+            profile.pitchNearManeuverTriggerMeters
+        viewportOptions.followingCameraOptions.intersectionDensity.enabled = true
+        viewportOptions.followingCameraOptions.intersectionDensity.averageDistanceMultiplier =
+            profile.intersectionDensityMultiplier
+        viewportOptions.followingCameraOptions.geometryFramingAfterManeuver.enabled = true
+        viewportOptions.followingCameraOptions.geometryFramingAfterManeuver.distanceToFrameAfterManeuver =
+            profile.frameAfterManeuverMeters
+        viewportOptions.followingCameraOptions.geometryFramingAfterManeuver
+            .distanceToCoalesceCompoundManeuvers = profile.compoundManeuverCoalesceMeters
+        viewportOptions.overviewCameraOptions.maximumZoomLevel = profile.overviewMaxZoom
+        viewportDataSource.options = viewportOptions
+
+        var cameraOptions = viewportDataSource.currentNavigationCameraOptions
+        switch phase {
+        case .cruising:
+            cameraOptions.followingCamera.zoom = profile.cruiseZoom
+            cameraOptions.followingCamera.pitch = profile.cruisePitch
+        case .maneuver:
+            cameraOptions.followingCamera.zoom = profile.maneuverZoom
+            cameraOptions.followingCamera.pitch = profile.maneuverPitch
+        }
+        viewportDataSource.currentNavigationCameraOptions = cameraOptions
+        navigationVC.navigationMapView?.navigationCamera.update(cameraState: .following)
+
+        lastAppliedCameraMode = mode
+        lastAppliedCameraPhase = phase
+        let zoomText = String(format: "%.2f", cameraOptions.followingCamera.zoom ?? 0)
+        let pitchText = String(format: "%.1f", cameraOptions.followingCamera.pitch ?? 0)
+        print(
+            "[Drivest iOS] camera_profile_applied mode=\(mode.rawValue) phase=\(phase) " +
+                "zoom=\(zoomText) " +
+                "pitch=\(pitchText)"
+        )
+    }
+
     private func loadHazardFeatures(
         routeCoordinates: [CLLocationCoordinate2D],
         force: Bool = false
     ) {
         guard !isHazardFetchInProgress || force else { return }
-        let centreId = centre?.id ?? settingsStore.lastCentreId
+        let centreId: String? =
+            mode == .navigation ? nil : (centre?.id ?? settingsStore.lastCentreId)
         let route = routeCoordinates
         if force {
             hazardLoadTask?.cancel()
@@ -511,13 +787,14 @@ final class NavigationSessionViewController: UIViewController {
                 .sorted()
                 .joined(separator: ",")
             print(
-                "[Drivest iOS] loaded_hazards centre_id=\(centreId) mode=\(self.settingsStore.dataSourceMode.rawValue) " +
+                "[Drivest iOS] loaded_hazards centre_id=\(centreId ?? "none") mode=\(self.settingsStore.dataSourceMode.rawValue) " +
                     "count=\(mergedHazards.count) by_type={\(byType)}"
             )
+            self.refreshHazardMapAnnotations()
         }
     }
 
-    private func attachPromptBanner(on containerView: UIView) {
+    private func attachPromptBanner(on containerView: UIView, navigationView: NavigationView? = nil) {
         promptBannerContainer.removeFromSuperview()
         routeProgressContainer.removeFromSuperview()
         speedometerCard.removeFromSuperview()
@@ -527,13 +804,39 @@ final class NavigationSessionViewController: UIViewController {
         promptBannerContainer.layer.cornerRadius = 10
         promptBannerContainer.layer.zPosition = 999
         promptBannerContainer.isHidden = true
+        promptBannerContainer.isUserInteractionEnabled = false
 
         promptBannerLabel.translatesAutoresizingMaskIntoConstraints = false
         promptBannerLabel.textColor = .white
         promptBannerLabel.font = .systemFont(ofSize: 14, weight: .semibold)
-        promptBannerLabel.numberOfLines = 2
+        promptBannerLabel.numberOfLines = 3
 
-        promptBannerContainer.addSubview(promptBannerLabel)
+        promptTypeIconView.translatesAutoresizingMaskIntoConstraints = false
+        promptTypeIconView.contentMode = .scaleAspectFit
+        promptTypeIconView.tintColor = .white
+        promptTypeIconView.isHidden = true
+
+        promptSignImageView.translatesAutoresizingMaskIntoConstraints = false
+        promptSignImageView.contentMode = .scaleAspectFit
+        promptSignImageView.layer.cornerRadius = 6
+        promptSignImageView.layer.masksToBounds = true
+        promptSignImageView.backgroundColor = UIColor.white.withAlphaComponent(0.96)
+        promptSignImageView.isHidden = true
+
+        promptBannerStack.translatesAutoresizingMaskIntoConstraints = false
+        promptBannerStack.axis = .horizontal
+        promptBannerStack.alignment = .center
+        promptBannerStack.spacing = 10
+        promptBannerStack.distribution = .fill
+        for arranged in promptBannerStack.arrangedSubviews {
+            promptBannerStack.removeArrangedSubview(arranged)
+            arranged.removeFromSuperview()
+        }
+        promptBannerStack.addArrangedSubview(promptTypeIconView)
+        promptBannerStack.addArrangedSubview(promptSignImageView)
+        promptBannerStack.addArrangedSubview(promptBannerLabel)
+
+        promptBannerContainer.addSubview(promptBannerStack)
         containerView.addSubview(promptBannerContainer)
 
         NSLayoutConstraint.activate([
@@ -541,44 +844,79 @@ final class NavigationSessionViewController: UIViewController {
             promptBannerContainer.trailingAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.trailingAnchor, constant: -12),
             promptBannerContainer.topAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.topAnchor, constant: 92),
 
-            promptBannerLabel.leadingAnchor.constraint(equalTo: promptBannerContainer.leadingAnchor, constant: 12),
-            promptBannerLabel.trailingAnchor.constraint(equalTo: promptBannerContainer.trailingAnchor, constant: -12),
-            promptBannerLabel.topAnchor.constraint(equalTo: promptBannerContainer.topAnchor, constant: 10),
-            promptBannerLabel.bottomAnchor.constraint(equalTo: promptBannerContainer.bottomAnchor, constant: -10)
+            promptBannerStack.leadingAnchor.constraint(equalTo: promptBannerContainer.leadingAnchor, constant: 12),
+            promptBannerStack.trailingAnchor.constraint(equalTo: promptBannerContainer.trailingAnchor, constant: -12),
+            promptBannerStack.topAnchor.constraint(equalTo: promptBannerContainer.topAnchor, constant: 8),
+            promptBannerStack.bottomAnchor.constraint(equalTo: promptBannerContainer.bottomAnchor, constant: -8),
+            promptTypeIconView.heightAnchor.constraint(equalToConstant: 20),
+            promptSignImageView.heightAnchor.constraint(equalToConstant: 30)
         ])
+        promptTypeIconWidthConstraint?.isActive = false
+        promptTypeIconWidthConstraint = promptTypeIconView.widthAnchor.constraint(equalToConstant: 0)
+        promptTypeIconWidthConstraint?.isActive = true
+        promptSignImageWidthConstraint?.isActive = false
+        promptSignImageWidthConstraint = promptSignImageView.widthAnchor.constraint(equalToConstant: 0)
+        promptSignImageWidthConstraint?.isActive = true
 
-        setupRouteProgressOverlay(on: containerView)
+        setupRouteProgressOverlay(on: containerView, navigationView: navigationView)
         setupSpeedometerOverlay(on: containerView)
     }
 
-    private func setupRouteProgressOverlay(on containerView: UIView) {
+    private func setupRouteProgressOverlay(on containerView: UIView, navigationView: NavigationView? = nil) {
         routeProgressContainer.translatesAutoresizingMaskIntoConstraints = false
         routeProgressContainer.backgroundColor = UIColor(red: 0.06, green: 0.10, blue: 0.19, alpha: 0.90)
         routeProgressContainer.layer.cornerRadius = 12
         routeProgressContainer.layer.masksToBounds = true
         routeProgressContainer.layer.zPosition = 999
         routeProgressContainer.isHidden = true
+        routeProgressContainer.isUserInteractionEnabled = false
 
         routeProgressSummaryLabel.translatesAutoresizingMaskIntoConstraints = false
         routeProgressSummaryLabel.textColor = .white
         routeProgressSummaryLabel.font = .systemFont(ofSize: 13, weight: .semibold)
         routeProgressSummaryLabel.numberOfLines = 1
 
+        routeProgressIconView.translatesAutoresizingMaskIntoConstraints = false
+        routeProgressIconView.contentMode = .scaleAspectFit
+        routeProgressIconView.tintColor = UIColor.white.withAlphaComponent(0.92)
+        routeProgressIconView.image = mapboxIcon(named: "time")?.withRenderingMode(.alwaysTemplate)
+
         routeProgressBar.translatesAutoresizingMaskIntoConstraints = false
         routeProgressBar.trackTintColor = UIColor.white.withAlphaComponent(0.25)
         routeProgressBar.progressTintColor = DrivestPalette.accentPrimary
         routeProgressBar.progress = 0
 
+        routeProgressContainer.addSubview(routeProgressIconView)
         routeProgressContainer.addSubview(routeProgressSummaryLabel)
         routeProgressContainer.addSubview(routeProgressBar)
         containerView.addSubview(routeProgressContainer)
 
+        let verticalAnchorConstraint: NSLayoutConstraint
+        if let navigationView {
+            // Keep progress panel flush with the top edge of Mapbox bottom banner.
+            verticalAnchorConstraint = routeProgressContainer.bottomAnchor.constraint(
+                equalTo: navigationView.bottomBannerContainerView.topAnchor,
+                constant: 0
+            )
+        } else {
+            // Fallback for edge cases where navigation view is not available.
+            verticalAnchorConstraint = routeProgressContainer.bottomAnchor.constraint(
+                equalTo: containerView.safeAreaLayoutGuide.bottomAnchor,
+                constant: -96
+            )
+        }
+
         NSLayoutConstraint.activate([
             routeProgressContainer.leadingAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.leadingAnchor, constant: 12),
             routeProgressContainer.trailingAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.trailingAnchor, constant: -12),
-            routeProgressContainer.bottomAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.bottomAnchor, constant: -96),
+            verticalAnchorConstraint,
 
-            routeProgressSummaryLabel.leadingAnchor.constraint(equalTo: routeProgressContainer.leadingAnchor, constant: 12),
+            routeProgressIconView.leadingAnchor.constraint(equalTo: routeProgressContainer.leadingAnchor, constant: 12),
+            routeProgressIconView.centerYAnchor.constraint(equalTo: routeProgressSummaryLabel.centerYAnchor),
+            routeProgressIconView.widthAnchor.constraint(equalToConstant: 14),
+            routeProgressIconView.heightAnchor.constraint(equalToConstant: 14),
+
+            routeProgressSummaryLabel.leadingAnchor.constraint(equalTo: routeProgressIconView.trailingAnchor, constant: 8),
             routeProgressSummaryLabel.trailingAnchor.constraint(equalTo: routeProgressContainer.trailingAnchor, constant: -12),
             routeProgressSummaryLabel.topAnchor.constraint(equalTo: routeProgressContainer.topAnchor, constant: 10),
 
@@ -593,50 +931,73 @@ final class NavigationSessionViewController: UIViewController {
     private func setupSpeedometerOverlay(on containerView: UIView) {
         speedometerCard.translatesAutoresizingMaskIntoConstraints = false
         speedometerCard.backgroundColor = UIColor(red: 0.06, green: 0.10, blue: 0.19, alpha: 0.92)
-        speedometerCard.layer.cornerRadius = 14
+        speedometerCard.layer.cornerRadius = 44
         speedometerCard.layer.masksToBounds = true
         speedometerCard.layer.zPosition = 999
         speedometerCard.isHidden = true
+        speedometerCard.isUserInteractionEnabled = false
+        speedometerCard.layer.borderWidth = 1
+        speedometerCard.layer.borderColor = UIColor.white.withAlphaComponent(0.12).cgColor
+
+        speedLimitBubble.translatesAutoresizingMaskIntoConstraints = false
+        speedLimitBubble.backgroundColor = UIColor.white.withAlphaComponent(0.2)
+        speedLimitBubble.layer.cornerRadius = 17
+        speedLimitBubble.layer.masksToBounds = true
+        speedLimitBubble.layer.zPosition = 1000
+        speedLimitBubble.isHidden = true
+        speedLimitBubble.isUserInteractionEnabled = false
 
         speedLimitBadgeLabel.translatesAutoresizingMaskIntoConstraints = false
         speedLimitBadgeLabel.textAlignment = .center
-        speedLimitBadgeLabel.font = .systemFont(ofSize: 17, weight: .bold)
+        speedLimitBadgeLabel.font = .systemFont(ofSize: 15, weight: .bold)
         speedLimitBadgeLabel.textColor = .white
-        speedLimitBadgeLabel.backgroundColor = UIColor.white.withAlphaComponent(0.2)
-        speedLimitBadgeLabel.layer.cornerRadius = 18
-        speedLimitBadgeLabel.layer.masksToBounds = true
-        speedLimitBadgeLabel.isHidden = true
+        speedLimitBadgeLabel.isHidden = false
 
         speedValueLabel.translatesAutoresizingMaskIntoConstraints = false
         speedValueLabel.textAlignment = .center
-        speedValueLabel.font = .systemFont(ofSize: 30, weight: .bold)
+        speedValueLabel.font = .systemFont(ofSize: 34, weight: .bold)
         speedValueLabel.textColor = .white
         speedValueLabel.text = "0"
 
+        speedometerIconView.translatesAutoresizingMaskIntoConstraints = false
+        speedometerIconView.contentMode = .scaleAspectFit
+        speedometerIconView.tintColor = UIColor.white.withAlphaComponent(0.78)
+        speedometerIconView.image = mapboxIcon(named: "feedback_speed_limit")?.withRenderingMode(.alwaysTemplate)
+
         speedUnitLabel.translatesAutoresizingMaskIntoConstraints = false
         speedUnitLabel.textAlignment = .center
-        speedUnitLabel.font = .systemFont(ofSize: 12, weight: .semibold)
+        speedUnitLabel.font = .systemFont(ofSize: 13, weight: .semibold)
         speedUnitLabel.textColor = UIColor.white.withAlphaComponent(0.88)
         speedUnitLabel.text = settingsStore.unitsMode == .metricKmh ? "km/h" : "mph"
 
-        speedometerCard.addSubview(speedLimitBadgeLabel)
+        speedLimitBubble.addSubview(speedLimitBadgeLabel)
+        speedometerCard.addSubview(speedometerIconView)
         speedometerCard.addSubview(speedValueLabel)
         speedometerCard.addSubview(speedUnitLabel)
         containerView.addSubview(speedometerCard)
+        containerView.addSubview(speedLimitBubble)
 
         NSLayoutConstraint.activate([
             speedometerCard.leadingAnchor.constraint(equalTo: containerView.safeAreaLayoutGuide.leadingAnchor, constant: 12),
             speedometerCard.bottomAnchor.constraint(equalTo: routeProgressContainer.topAnchor, constant: -12),
-            speedometerCard.widthAnchor.constraint(equalToConstant: 86),
-            speedometerCard.heightAnchor.constraint(equalToConstant: 118),
+            speedometerCard.widthAnchor.constraint(equalToConstant: 88),
+            speedometerCard.heightAnchor.constraint(equalToConstant: 88),
 
-            speedLimitBadgeLabel.topAnchor.constraint(equalTo: speedometerCard.topAnchor, constant: 8),
-            speedLimitBadgeLabel.centerXAnchor.constraint(equalTo: speedometerCard.centerXAnchor),
-            speedLimitBadgeLabel.widthAnchor.constraint(equalToConstant: 36),
-            speedLimitBadgeLabel.heightAnchor.constraint(equalToConstant: 36),
+            speedLimitBubble.widthAnchor.constraint(equalToConstant: 34),
+            speedLimitBubble.heightAnchor.constraint(equalToConstant: 34),
+            speedLimitBubble.centerXAnchor.constraint(equalTo: speedometerCard.trailingAnchor, constant: 4),
+            speedLimitBubble.centerYAnchor.constraint(equalTo: speedometerCard.topAnchor, constant: 8),
+
+            speedLimitBadgeLabel.centerXAnchor.constraint(equalTo: speedLimitBubble.centerXAnchor),
+            speedLimitBadgeLabel.centerYAnchor.constraint(equalTo: speedLimitBubble.centerYAnchor),
+
+            speedometerIconView.centerXAnchor.constraint(equalTo: speedometerCard.centerXAnchor),
+            speedometerIconView.topAnchor.constraint(equalTo: speedometerCard.topAnchor, constant: 11),
+            speedometerIconView.widthAnchor.constraint(equalToConstant: 14),
+            speedometerIconView.heightAnchor.constraint(equalToConstant: 14),
 
             speedValueLabel.centerXAnchor.constraint(equalTo: speedometerCard.centerXAnchor),
-            speedValueLabel.topAnchor.constraint(equalTo: speedLimitBadgeLabel.bottomAnchor, constant: 8),
+            speedValueLabel.centerYAnchor.constraint(equalTo: speedometerCard.centerYAnchor, constant: -3),
 
             speedUnitLabel.centerXAnchor.constraint(equalTo: speedometerCard.centerXAnchor),
             speedUnitLabel.topAnchor.constraint(equalTo: speedValueLabel.bottomAnchor, constant: 2),
@@ -644,8 +1005,134 @@ final class NavigationSessionViewController: UIViewController {
         ])
     }
 
-    private func showPromptBanner(_ message: String) {
-        promptBannerLabel.text = message
+    private func promptBannerBackgroundColor(for type: PromptType?) -> UIColor {
+        if type == .busLane {
+            return UIColor(red: 0.66, green: 0.09, blue: 0.12, alpha: 0.96)
+        }
+        return UIColor(red: 0.06, green: 0.10, blue: 0.19, alpha: 0.95)
+    }
+
+    private func advisorySignImage(for prompt: PromptEvent) -> UIImage? {
+        if let image = advisorySignImage(
+            type: prompt.type,
+            signImagePath: prompt.signImagePath,
+            signCode: prompt.signCode
+        ) {
+            return image.withRenderingMode(.alwaysOriginal)
+        }
+        return nil
+    }
+
+    private func advisoryFallbackSignImagePath(for type: PromptType) -> String? {
+        switch type {
+        case .trafficSignal:
+            return "warning-signs-jpg/543.jpg"
+        case .zebraCrossing:
+            return "warning-signs-jpg/544.jpg"
+        case .roundabout:
+            return "regulatory-signs-jpg/611.jpg"
+        case .miniRoundabout:
+            return "regulatory-signs-jpg/611.1.jpg"
+        case .busLane:
+            return "bus-and-cycle-signs-jpg/958.jpg"
+        case .busStop:
+            return "bus-and-cycle-signs-jpg/975.jpg"
+        case .giveWay:
+            return "regulatory-signs-jpg/602.jpg"
+        case .schoolZone:
+            return "warning-signs-jpg/545.jpg"
+        case .noEntry:
+            return "regulatory-signs-jpg/616.jpg"
+        case .speedCamera:
+            return "speed-limit-signs-jpg/880.jpg"
+        case .unknown:
+            return "warning-signs-jpg/501.jpg"
+        }
+    }
+
+    private func markerSizedImage(_ image: UIImage, maxDimension: CGFloat = 56) -> UIImage {
+        let size = image.size
+        let maxSide = max(size.width, size.height)
+        guard maxSide > maxDimension, maxSide > 0 else {
+            return image.withRenderingMode(.alwaysOriginal)
+        }
+        let scale = maxDimension / maxSide
+        let target = CGSize(width: size.width * scale, height: size.height * scale)
+        let renderer = UIGraphicsImageRenderer(size: target)
+        let rendered = renderer.image { _ in
+            image.draw(in: CGRect(origin: .zero, size: target))
+        }
+        return rendered.withRenderingMode(.alwaysOriginal)
+    }
+
+    private func advisorySignImage(
+        type: PromptType,
+        signImagePath: String?,
+        signCode: String?
+    ) -> UIImage? {
+        if let direct = KnowYourSignsImageResolver.image(for: signImagePath) {
+            return direct
+        }
+        if let byCode = KnowYourSignsImageResolver.image(forSignCode: signCode) {
+            return byCode
+        }
+        if let fallbackPath = advisoryFallbackSignImagePath(for: type) {
+            return KnowYourSignsImageResolver.image(for: fallbackPath)
+        }
+        return nil
+    }
+
+    private func resolveMapboxUIKitIconsBundle() -> Bundle? {
+        if let directPath = Bundle.main.path(
+            forResource: "MapboxNavigation_MapboxNavigationUIKit",
+            ofType: "bundle"
+        ),
+            let directBundle = Bundle(path: directPath)
+        {
+            return directBundle
+        }
+
+        let bundles = Bundle.allBundles + Bundle.allFrameworks
+        return bundles.first { $0.bundlePath.contains("MapboxNavigation_MapboxNavigationUIKit.bundle") }
+    }
+
+    private func mapboxIcon(named name: String) -> UIImage? {
+        UIImage(named: name, in: mapboxUIKitIconsBundle, compatibleWith: nil)
+    }
+
+    private func showPromptBanner(_ prompt: PromptEvent) {
+        promptBannerContainer.backgroundColor = promptBannerBackgroundColor(for: prompt.type)
+        if let signTitle = prompt.signTitle?.trimmingCharacters(in: .whitespacesAndNewlines),
+            !signTitle.isEmpty
+        {
+            promptBannerLabel.text = "\(prompt.message)\n\(signTitle)"
+        } else {
+            promptBannerLabel.text = prompt.message
+        }
+        let signImage = advisorySignImage(for: prompt)
+        if let image = signImage {
+            promptSignImageView.image = image
+            promptSignImageView.isHidden = false
+            promptSignImageWidthConstraint?.constant = 30
+        } else {
+            promptSignImageView.image = nil
+            promptSignImageView.isHidden = true
+            promptSignImageWidthConstraint?.constant = 0
+        }
+        if signImage != nil {
+            promptTypeIconView.image = nil
+            promptTypeIconView.isHidden = true
+            promptTypeIconWidthConstraint?.constant = 0
+        } else if let promptIcon = mapboxIcon(named: advisoryMapIconName(for: prompt.type)) {
+            promptTypeIconView.image = promptIcon.withRenderingMode(.alwaysTemplate)
+            promptTypeIconView.tintColor = .white
+            promptTypeIconView.isHidden = false
+            promptTypeIconWidthConstraint?.constant = 20
+        } else {
+            promptTypeIconView.image = nil
+            promptTypeIconView.isHidden = true
+            promptTypeIconWidthConstraint?.constant = 0
+        }
         promptBannerContainer.isHidden = false
         promptAutoHideTask?.cancel()
         promptAutoHideTask = Task { [weak self] in
@@ -654,6 +1141,233 @@ final class NavigationSessionViewController: UIViewController {
                 self?.promptBannerContainer.isHidden = true
             }
         }
+    }
+
+    private func advisoryMapIconName(for type: PromptType) -> String {
+        switch type {
+        case .trafficSignal:
+            return "TrafficSignalDay"
+        case .zebraCrossing:
+            return "RailroadCrossingDay"
+        case .roundabout, .miniRoundabout:
+            return "feedback_lane_quidance"
+        case .busLane:
+            return "feedback_lane_quidance"
+        case .busStop:
+            return "pin"
+        case .giveWay:
+            return "YieldSignDay"
+        case .schoolZone:
+            return "feedback_traffic"
+        case .noEntry:
+            return "StopSignDay"
+        case .speedCamera:
+            return "feedback_camera"
+        case .unknown:
+            return "feedback_icon"
+        }
+    }
+
+    private func advisoryMarkerImage(for feature: HazardFeature) -> UIImage? {
+        if let signImage = advisorySignImage(
+            type: feature.type,
+            signImagePath: feature.signImagePath,
+            signCode: feature.signCode
+        ) {
+            return markerSizedImage(signImage)
+        }
+        if let unknownFallback = KnowYourSignsImageResolver.image(
+            for: advisoryFallbackSignImagePath(for: .unknown)
+        ) {
+            return markerSizedImage(unknownFallback)
+        }
+        return UIImage(systemName: "mappin.circle.fill")?.withRenderingMode(.alwaysOriginal)
+    }
+
+    private func advisoriesVisibleForCurrentSettings() -> [HazardFeature] {
+        guard settingsStore.hazardsEnabled else {
+            return hazardFeatures.filter { $0.type == .noEntry }
+        }
+        return hazardFeatures
+    }
+
+    private func ensureHazardPointAnnotationManager(
+        for navigationVC: NavigationViewController
+    ) -> PointAnnotationManager? {
+        if let existing = hazardPointAnnotationManager {
+            return existing
+        }
+        guard let mapView = navigationVC.navigationMapView?.mapView else { return nil }
+        let manager = mapView.annotations.makePointAnnotationManager(
+            id: "drivest-hazard-markers-\(mode.rawValue)"
+        )
+        manager.iconAllowOverlap = true
+        manager.iconIgnorePlacement = true
+        manager.iconSize = 0.62
+        manager.iconAnchor = .bottom
+        manager.symbolSortKey = 50
+        manager.slot = "middle"
+        hazardPointAnnotationManager = manager
+        return manager
+    }
+
+    private func clearHazardMapAnnotations() {
+        guard let manager = hazardPointAnnotationManager else { return }
+        manager.annotations = []
+        if let mapView = activeNavigationViewController?.navigationMapView?.mapView {
+            mapView.annotations.removeAnnotationManager(withId: manager.id)
+        }
+        hazardPointAnnotationManager = nil
+    }
+
+    private func refreshHazardMapAnnotations() {
+        guard let navigationVC = activeNavigationViewController,
+            let manager = ensureHazardPointAnnotationManager(for: navigationVC)
+        else { return }
+
+        let features = advisoriesVisibleForCurrentSettings()
+        let annotations: [PointAnnotation] = features.compactMap { feature in
+            let coordinate = CLLocationCoordinate2D(latitude: feature.lat, longitude: feature.lon)
+            guard CLLocationCoordinate2DIsValid(coordinate) else { return nil }
+
+            var annotation = PointAnnotation(
+                id: "hazard-marker-\(feature.id)",
+                coordinate: coordinate
+            )
+            if let markerImage = advisoryMarkerImage(for: feature) {
+                let safeFeatureId = feature.id.replacingOccurrences(
+                    of: "[^a-zA-Z0-9_-]",
+                    with: "-",
+                    options: .regularExpression
+                )
+                let imageName = "drivest-hazard-icon-\(safeFeatureId)"
+                annotation.image = .init(image: markerImage, name: imageName)
+            }
+            annotation.iconOffset = [0, -1.5]
+            annotation.iconSize = 0.9
+            annotation.symbolSortKey = Double(promptEnginePriority(for: feature.type))
+            return annotation
+        }
+
+        manager.annotations = annotations
+        let byType = Dictionary(grouping: features, by: \.type)
+            .map { "\($0.key.rawValue)=\($0.value.count)" }
+            .sorted()
+            .joined(separator: ",")
+        print("[Drivest iOS] hazard_markers_rendered count=\(annotations.count) by_type={\(byType)}")
+    }
+
+    private func promptEnginePriority(for type: PromptType) -> Int {
+        switch type {
+        case .noEntry:
+            return 7
+        case .roundabout:
+            return 6
+        case .miniRoundabout, .speedCamera:
+            return 5
+        case .schoolZone:
+            return 4
+        case .zebraCrossing, .giveWay:
+            return 3
+        case .trafficSignal:
+            return 2
+        case .busStop, .busLane, .unknown:
+            return 1
+        }
+    }
+
+    private func resolvePracticeOriginAndRequestPreview() {
+        guard mode == .practice else {
+            requestPreviewRoute()
+            return
+        }
+        #if targetEnvironment(simulator)
+            requestPreviewRoute()
+            return
+        #else
+            if practiceOriginCoordinate != nil {
+                requestPreviewRoute()
+                return
+            }
+            guard CLLocationManager.locationServicesEnabled() else {
+                requestPreviewRoute()
+                return
+            }
+            practiceOriginLocationManager.delegate = self
+            practiceOriginLocationManager.desiredAccuracy = kCLLocationAccuracyBestForNavigation
+
+            if let cached = practiceOriginLocationManager.location?.coordinate {
+                practiceOriginCoordinate = cached
+                if let routeStart = practiceRoute?.geometry.first?.coordinate {
+                    let distance = coordinatesDistanceMeters(cached, routeStart)
+                    print(
+                        "[Drivest iOS] practice_origin_resolved source=cached " +
+                            "distance_to_start_m=\(Int(distance.rounded()))"
+                    )
+                }
+                requestPreviewRoute()
+                return
+            }
+
+            let status = practiceOriginLocationManager.authorizationStatus
+            switch status {
+            case .authorizedAlways, .authorizedWhenInUse:
+                isResolvingPracticeOrigin = true
+                summaryLabel.text = "Locating you to guide to route start..."
+                practiceOriginLocationManager.requestLocation()
+                requestPreviewRoute()
+            case .notDetermined:
+                isResolvingPracticeOrigin = true
+                summaryLabel.text = "Locating you to guide to route start..."
+                practiceOriginLocationManager.requestWhenInUseAuthorization()
+                requestPreviewRoute()
+            case .denied, .restricted:
+                requestPreviewRoute()
+            @unknown default:
+                requestPreviewRoute()
+            }
+        #endif
+    }
+
+    private func maybeAutoCompletePractice(
+        progress: RouteProgress,
+        navigationViewController: NavigationViewController
+    ) {
+        guard mode == .practice else { return }
+        guard !didAutoCompletePractice else { return }
+        let isComplete =
+            progress.fractionTraveled >= practiceRouteAutoCompleteMinFraction ||
+            progress.distanceRemaining <= practiceRouteAutoCompleteRemainingMeters
+        guard isComplete else { return }
+
+        didAutoCompletePractice = true
+        print(
+            "[Drivest iOS] practice_route_completed " +
+                "fraction=\(String(format: "%.3f", progress.fractionTraveled)) " +
+                "remaining_m=\(Int(progress.distanceRemaining.rounded()))"
+        )
+        handleSessionStop(canceled: false, summaryText: "Practice route completed.")
+        navigationViewController.dismiss(animated: true) { [weak self] in
+            self?.navigationController?.popViewController(animated: true)
+        }
+    }
+
+    private func handleSessionStop(canceled: Bool, summaryText: String) {
+        guard !didHandleSessionStop else { return }
+        didHandleSessionStop = true
+        promptAutoHideTask?.cancel()
+        promptBannerContainer.isHidden = true
+        routeProgressContainer.isHidden = true
+        speedometerCard.isHidden = true
+        speedLimitBubble.isHidden = true
+        clearHazardMapAnnotations()
+        activeNavigationViewController = nil
+        lastAppliedCameraPhase = nil
+        lastAppliedCameraMode = nil
+        hazardVoiceController.stopSpeaking()
+        parityStateStore.markObserverDetached()
+        print("[Drivest iOS] session_stop canceled=\(canceled)")
+        summaryLabel.text = summaryText
     }
 
     private func observeSettings() {
@@ -668,6 +1382,15 @@ final class NavigationSessionViewController: UIViewController {
     @objc
     private func handleSettingsChanged() {
         visualPromptsEnabled = settingsStore.hazardsEnabled
+        syncNavigationVoiceMode()
+        refreshHazardMapAnnotations()
+        if let navigationVC = activeNavigationViewController {
+            applyGuidanceProfile(to: navigationVC, progress: nil, force: true)
+            updateSpeedometerOverlay(
+                speedMps: max(lastEffectiveSpeedMps, 0),
+                navigationViewController: navigationVC
+            )
+        }
     }
 
 }
@@ -695,7 +1418,11 @@ extension NavigationSessionViewController: NavigationViewControllerDelegate {
                 speedMps: effectiveSpeedMps,
                 navigationViewController: navigationViewController
             )
-
+            self.applyGuidanceProfile(to: navigationViewController, progress: progress)
+            self.maybeAutoCompletePractice(
+                progress: progress,
+                navigationViewController: navigationViewController
+            )
             if nowMs - self.lastPromptEvaluationMs < 1000 {
                 return
             }
@@ -704,10 +1431,11 @@ extension NavigationSessionViewController: NavigationViewControllerDelegate {
 
             let upcomingDistance = progress.currentLegProgress.currentStepProgress.distanceRemaining
             let upcomingTime = progress.currentLegProgress.currentStepProgress.durationRemaining
+            let profile = self.currentGuidanceProfile()
             let nearbyFeatures = self.filterHazardsNearLocation(
                 self.hazardFeatures,
                 coordinate: location.coordinate,
-                radiusMeters: self.promptNearbyQueryRadiusMeters
+                radiusMeters: profile.nearbyHazardQueryRadiusMeters
             )
             let snappedAccuracyM = max(location.horizontalAccuracy, 0)
             let rawAccuracyM = max(rawLocation.horizontalAccuracy, 0)
@@ -735,7 +1463,7 @@ extension NavigationSessionViewController: NavigationViewControllerDelegate {
                         "off_route_state=\(self.parityStateStore.lastOffRouteState)"
                 )
             }
-            self.isManeuverSpeechPlaying = upcomingTime < 2
+            self.isManeuverSpeechPlaying = upcomingTime < 1.2
 
             if upcomingTime < 6 {
                 self.hazardVoiceController.onManeuverInstructionArrived()
@@ -801,7 +1529,7 @@ extension NavigationSessionViewController: NavigationViewControllerDelegate {
                 upcomingManeuverTimeS: upcomingTime,
                 features: featuresForEvaluation,
                 visualEnabled: visualEnabled,
-                sensitivity: self.settingsStore.promptSensitivity,
+                sensitivity: self.effectivePromptSensitivity(),
                 routePolyline: self.activeRouteCoordinates
             )
             if let suppression = evaluationResult.suppressionReason {
@@ -817,7 +1545,7 @@ extension NavigationSessionViewController: NavigationViewControllerDelegate {
 
             guard let prompt = evaluationResult.promptEvent else { return }
 
-            self.showPromptBanner(prompt.message)
+            self.showPromptBanner(prompt)
             self.parityStateStore.lastPromptFired = "\(prompt.type.rawValue) \(prompt.distanceM)m"
             print(
                 "[Drivest iOS] prompt_fired " +
@@ -843,33 +1571,20 @@ extension NavigationSessionViewController: NavigationViewControllerDelegate {
     ) {
         Task { @MainActor [weak self] in
             guard let self else { return }
-
-            navigationViewController.dismiss(animated: true)
-            self.promptAutoHideTask?.cancel()
-            self.promptBannerContainer.isHidden = true
-            self.routeProgressContainer.isHidden = true
-            self.speedometerCard.isHidden = true
-            self.activeNavigationViewController = nil
-            self.hazardVoiceController.stopSpeaking()
-            self.parityStateStore.markObserverDetached()
-            print("[Drivest iOS] session_stop canceled=\(canceled)")
             if canceled {
-                self.summaryLabel.text = "Navigation stopped."
+                self.handleSessionStop(canceled: true, summaryText: "Navigation stopped.")
             } else {
-                self.summaryLabel.text = "Navigation completed."
+                self.handleSessionStop(canceled: false, summaryText: "Navigation completed.")
+            }
+            if navigationViewController.presentingViewController != nil {
+                navigationViewController.dismiss(animated: true)
             }
         }
     }
 
     private func shouldSpeakHazardPrompt(_ prompt: PromptEvent) -> Bool {
-        if prompt.type == .busLane || prompt.type == .giveWay {
-            return false
-        }
-        if prompt.type == .noEntry {
-            if prompt.distanceM > noEntryVoiceProximityMeters {
-                return false
-            }
-        } else if prompt.distanceM > hazardVoiceProximityMeters {
+        let maxDistanceMeters = hazardVoiceMaxDistanceMeters(for: prompt.type)
+        if prompt.distanceM > maxDistanceMeters {
             return false
         }
         if !voiceModePolicy.canSpeak(prompt.type, voiceMode: settingsStore.voiceMode) {
@@ -879,25 +1594,64 @@ extension NavigationSessionViewController: NavigationViewControllerDelegate {
     }
 
     private func hazardVoiceMinConfidence(for type: PromptType) -> Double {
+        let base: Double
         switch type {
         case .noEntry:
-            return 0.50
-        case .busStop:
-            return 0.65
+            base = 0.45
+        case .roundabout, .miniRoundabout:
+            base = 0.60
         case .schoolZone:
-            return 0.70
+            base = 0.60
+        case .speedCamera:
+            base = 0.65
+        case .trafficSignal, .zebraCrossing, .giveWay:
+            base = 0.55
+        case .busLane:
+            base = 0.55
+        case .busStop:
+            base = 0.55
+        case .unknown:
+            base = 0.50
         default:
-            return hazardVoiceMinConfidenceHint
+            base = hazardVoiceMinConfidenceHint
         }
+        let adjusted = base + currentGuidanceProfile().hazardConfidenceDelta
+        return min(0.95, max(0.35, adjusted))
+    }
+
+    private func hazardVoiceMaxDistanceMeters(for type: PromptType) -> Int {
+        let base: Int
+        switch type {
+        case .noEntry:
+            base = noEntryVoiceProximityMeters
+        case .roundabout:
+            base = 180
+        case .miniRoundabout:
+            base = 110
+        case .schoolZone:
+            base = 150
+        case .zebraCrossing:
+            base = 130
+        case .giveWay:
+            base = 120
+        case .trafficSignal:
+            base = 150
+        case .speedCamera:
+            base = 250
+        case .busLane:
+            base = 160
+        case .busStop:
+            base = 130
+        case .unknown:
+            base = hazardVoiceProximityMeters
+        }
+        let adjusted = Int((Double(base) * currentGuidanceProfile().hazardLeadDistanceMultiplier).rounded())
+        return max(60, adjusted)
     }
 
     private func updateRouteProgressOverlay(progress: RouteProgress) {
         let completionPercent = max(0, min(100, Int((progress.fractionTraveled * 100).rounded())))
-        routeProgressSummaryLabel.text =
-            "\(formatDistance(progress.distanceRemaining)) · " +
-            "\(formatDuration(progress.durationRemaining)) · " +
-            "\(etaFormatter.string(from: Date().addingTimeInterval(progress.durationRemaining))) · " +
-            "\(completionPercent)%"
+        routeProgressSummaryLabel.text = "\(completionPercent)%"
         routeProgressBar.progress = Float(completionPercent) / 100
         routeProgressContainer.isHidden = false
     }
@@ -925,9 +1679,9 @@ extension NavigationSessionViewController: NavigationViewControllerDelegate {
 
         if let postedLimitValue {
             speedLimitBadgeLabel.text = "\(postedLimitValue)"
-            speedLimitBadgeLabel.isHidden = false
+            speedLimitBubble.isHidden = false
         } else {
-            speedLimitBadgeLabel.isHidden = true
+            speedLimitBubble.isHidden = true
             speedLimitBadgeLabel.text = nil
         }
 
@@ -938,10 +1692,10 @@ extension NavigationSessionViewController: NavigationViewControllerDelegate {
         }
         if isOverLimit {
             speedometerCard.backgroundColor = UIColor(red: 0.42, green: 0.08, blue: 0.09, alpha: 0.94)
-            speedLimitBadgeLabel.backgroundColor = UIColor(red: 0.89, green: 0.27, blue: 0.23, alpha: 0.95)
+            speedLimitBubble.backgroundColor = UIColor(red: 0.89, green: 0.27, blue: 0.23, alpha: 0.95)
         } else {
             speedometerCard.backgroundColor = UIColor(red: 0.06, green: 0.10, blue: 0.19, alpha: 0.92)
-            speedLimitBadgeLabel.backgroundColor = UIColor.white.withAlphaComponent(0.2)
+            speedLimitBubble.backgroundColor = UIColor.white.withAlphaComponent(0.2)
         }
         speedometerCard.isHidden = false
     }
@@ -1299,6 +2053,20 @@ extension NavigationSessionViewController: NavigationViewControllerDelegate {
         guard deduped.count > maxWaypoints, maxWaypoints >= 2 else { return deduped }
 
         if maxWaypoints == 2, let first = deduped.first, let last = deduped.last {
+            // Practice routes are often loops that return near the same test centre.
+            // If we collapse to just [start, end] and those points are too close relative
+            // to the full route length, Directions can announce arrival almost immediately.
+            // In that case, inject a farthest shaping waypoint to preserve loop guidance.
+            let startToEndMeters = coordinatesDistanceMeters(first, last)
+            let routeLengthMeters = polylineLengthMeters(deduped)
+            let isLoopLike =
+                startToEndMeters <= 250 ||
+                (routeLengthMeters > 0 && (startToEndMeters / routeLengthMeters) <= 0.12)
+            if isLoopLike,
+                let shapingPoint = farthestCoordinate(from: first, in: deduped)
+            {
+                return dedupeSequentialCoordinates([first, shapingPoint, last])
+            }
             return [first, last]
         }
 
@@ -1334,6 +2102,65 @@ extension NavigationSessionViewController: NavigationViewControllerDelegate {
         }
         return result
     }
+
+    private func farthestCoordinate(
+        from origin: CLLocationCoordinate2D,
+        in coordinates: [CLLocationCoordinate2D]
+    ) -> CLLocationCoordinate2D? {
+        guard coordinates.count >= 3 else { return nil }
+        var best: CLLocationCoordinate2D?
+        var maxDistance = 0.0
+        let originLocation = CLLocation(latitude: origin.latitude, longitude: origin.longitude)
+        for coordinate in coordinates.dropFirst().dropLast() {
+            let candidate = CLLocation(latitude: coordinate.latitude, longitude: coordinate.longitude)
+            let distance = originLocation.distance(from: candidate)
+            if distance > maxDistance {
+                maxDistance = distance
+                best = coordinate
+            }
+        }
+        return best
+    }
+
+    private func coordinatesDistanceMeters(
+        _ a: CLLocationCoordinate2D,
+        _ b: CLLocationCoordinate2D
+    ) -> Double {
+        CLLocation(latitude: a.latitude, longitude: a.longitude)
+            .distance(from: CLLocation(latitude: b.latitude, longitude: b.longitude))
+    }
+
+    private func polylineLengthMeters(_ coordinates: [CLLocationCoordinate2D]) -> Double {
+        guard coordinates.count >= 2 else { return 0 }
+        var total = 0.0
+        for index in 1..<coordinates.count {
+            total += coordinatesDistanceMeters(coordinates[index - 1], coordinates[index])
+        }
+        return total
+    }
+
+    private func isPracticePreviewDistanceValid(_ routes: NavigationRoutes) -> Bool {
+        let routeDistance = routes.mainRoute.route.distance
+        let expectedDistance = practiceRoute?.distanceM ?? routeDistance
+        let minimumAcceptableDistance = max(
+            practiceRouteMinValidDistanceMeters,
+            expectedDistance * practiceRouteDistanceValidityRatio
+        )
+        let stepCount = routes.mainRoute.route.legs.reduce(0) { partialResult, leg in
+            partialResult + leg.steps.count
+        }
+        let isValid = routeDistance >= minimumAcceptableDistance && stepCount >= 2
+        if !isValid {
+            print(
+                "[Drivest iOS] practice_preview_rejected_short_route " +
+                    "actual=\(Int(routeDistance.rounded())) " +
+                    "expected=\(Int(expectedDistance.rounded())) " +
+                    "min=\(Int(minimumAcceptableDistance.rounded())) " +
+                    "steps=\(stepCount)"
+            )
+        }
+        return isValid
+    }
 }
 
 extension NavigationSessionViewController: MKMapViewDelegate {
@@ -1360,11 +2187,73 @@ extension NavigationSessionViewController {
                     CLLocationCoordinate2D(latitude: $0.latitude, longitude: $0.longitude)
                 }
             }
+            self.refreshHazardMapAnnotations()
             self.lastHazardFetchAnchor = nil
             self.loadHazardFeatures(routeCoordinates: self.activeRouteCoordinates, force: true)
             print(
                 "[Drivest iOS] hazards_refresh reason=reroute route_points=\(self.activeRouteCoordinates.count)"
             )
+        }
+    }
+}
+
+extension NavigationSessionViewController: CLLocationManagerDelegate {
+    nonisolated func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        let authorizationStatus = manager.authorizationStatus
+        Task { @MainActor [weak self] in
+            guard let self else { return }
+            guard self.mode == .practice else { return }
+            guard self.practiceOriginCoordinate == nil else { return }
+            guard self.isResolvingPracticeOrigin else { return }
+
+            switch authorizationStatus {
+            case .authorizedAlways, .authorizedWhenInUse:
+                self.practiceOriginLocationManager.requestLocation()
+            case .denied, .restricted:
+                self.isResolvingPracticeOrigin = false
+                print("[Drivest iOS] practice_origin_resolution_failed reason=location_denied")
+            case .notDetermined:
+                break
+            @unknown default:
+                self.isResolvingPracticeOrigin = false
+            }
+        }
+    }
+
+    nonisolated func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let latestCoordinate = locations.last?.coordinate
+        Task { @MainActor [weak self] in
+            guard let self else { return }
+            guard self.mode == .practice else { return }
+            guard self.practiceOriginCoordinate == nil else { return }
+            guard let latestCoordinate else { return }
+
+            self.practiceOriginCoordinate = latestCoordinate
+            self.isResolvingPracticeOrigin = false
+            if let routeStart = self.practiceRoute?.geometry.first?.coordinate {
+                let distance = self.coordinatesDistanceMeters(latestCoordinate, routeStart)
+                print(
+                    "[Drivest iOS] practice_origin_resolved source=gps " +
+                        "distance_to_start_m=\(Int(distance.rounded()))"
+                )
+            }
+
+            if self.activeNavigationViewController == nil {
+                self.previewLoaded = false
+                self.startButton.isEnabled = false
+                self.renderPreviewMap(with: self.buildCoordinateList())
+                self.requestPreviewRoute()
+            }
+        }
+    }
+
+    nonisolated func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        let failureReason = error.localizedDescription
+        Task { @MainActor [weak self] in
+            guard let self else { return }
+            guard self.mode == .practice else { return }
+            self.isResolvingPracticeOrigin = false
+            print("[Drivest iOS] practice_origin_resolution_failed reason=\(failureReason)")
         }
     }
 }

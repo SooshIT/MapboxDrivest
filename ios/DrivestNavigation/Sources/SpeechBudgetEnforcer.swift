@@ -130,6 +130,8 @@ final class SpeechBudgetEnforcer {
         case .speedCamera: return "Speed camera"
         case .busLane: return "Bus lane"
         case .busStop: return "Bus stop"
+        case .noEntry: return "No entry"
+        case .unknown: return "Hazard"
         }
     }
 
@@ -144,6 +146,8 @@ final class SpeechBudgetEnforcer {
         case .speedCamera: return "Check speed."
         case .busLane: return "Follow lane signs."
         case .busStop: return "Watch for buses."
+        case .noEntry: return "Rerouting now."
+        case .unknown: return "Proceed with caution."
         }
     }
 

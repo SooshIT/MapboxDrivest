@@ -46,7 +46,9 @@ final class SettingsStore: @unchecked Sendable {
         static let dataSourceMode = "data_source_mode"
         static let promptSensitivity = "prompt_sensitivity"
         static let hazardsEnabled = "hazards_enabled"
+        static let lowStressRoutingEnabled = "low_stress_routing_enabled"
         static let analyticsConsent = "analytics_consent"
+        static let notificationsPreference = "notifications_preference"
         static let safetyAcknowledged = "safety_acknowledged"
         static let driverMode = "driver_mode"
     }
@@ -87,7 +89,7 @@ final class SettingsStore: @unchecked Sendable {
         get {
             DataSourceMode(
                 rawValue: defaults.string(forKey: Keys.dataSourceMode) ?? ""
-            ) ?? .backendThenCacheThenAssets
+            ) ?? .backendOnly
         }
         set {
             defaults.set(newValue.rawValue, forKey: Keys.dataSourceMode)
@@ -120,10 +122,31 @@ final class SettingsStore: @unchecked Sendable {
         }
     }
 
+    var lowStressRoutingEnabled: Bool {
+        get {
+            if defaults.object(forKey: Keys.lowStressRoutingEnabled) == nil {
+                return true
+            }
+            return defaults.bool(forKey: Keys.lowStressRoutingEnabled)
+        }
+        set {
+            defaults.set(newValue, forKey: Keys.lowStressRoutingEnabled)
+            notifyChanged()
+        }
+    }
+
     var analyticsConsent: Bool {
         get { defaults.bool(forKey: Keys.analyticsConsent) }
         set {
             defaults.set(newValue, forKey: Keys.analyticsConsent)
+            notifyChanged()
+        }
+    }
+
+    var notificationsPreference: Bool {
+        get { defaults.bool(forKey: Keys.notificationsPreference) }
+        set {
+            defaults.set(newValue, forKey: Keys.notificationsPreference)
             notifyChanged()
         }
     }
@@ -159,6 +182,25 @@ final class SettingsStore: @unchecked Sendable {
         }
         voiceMode = next
         return next
+    }
+
+    func applyDriverProfilePreset(_ mode: DriverMode) {
+        let preset: (voiceMode: VoiceMode, promptSensitivity: PromptSensitivity, lowStressRouting: Bool)
+        switch mode {
+        case .learner:
+            preset = (.all, .extraHelp, true)
+        case .newDriver:
+            preset = (.all, .standard, true)
+        case .standard:
+            preset = (.alerts, .minimal, false)
+        }
+
+        defaults.set(mode.rawValue, forKey: Keys.driverMode)
+        defaults.set(preset.voiceMode.rawValue, forKey: Keys.voiceMode)
+        defaults.set(preset.promptSensitivity.rawValue, forKey: Keys.promptSensitivity)
+        defaults.set(preset.lowStressRouting, forKey: Keys.lowStressRoutingEnabled)
+        defaults.set(true, forKey: Keys.hazardsEnabled)
+        notifyChanged()
     }
 
     private func notifyChanged() {

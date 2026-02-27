@@ -17,15 +17,23 @@ final class SettingsViewController: UIViewController {
     private let driverModeDescriptionLabel = UILabel()
 
     private let hazardsSwitch = UISwitch()
+    private let lowStressRoutingSwitch = UISwitch()
     private let analyticsSwitch = UISwitch()
+    private let notificationsSwitch = UISwitch()
+    private let notificationsStatusLabel = UILabel()
     private let debugUnlockLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Settings"
-        view.backgroundColor = DrivestPalette.pageBackground
+        view.backgroundColor = .clear
         setupLayout()
         render()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        DrivestBrand.ensurePageGradient(in: view)
     }
 
     private func setupLayout() {
@@ -73,16 +81,43 @@ final class SettingsViewController: UIViewController {
         unitsControl.addTarget(self, action: #selector(unitsChanged), for: .valueChanged)
         dataSourceControl.addTarget(self, action: #selector(dataSourceChanged), for: .valueChanged)
         hazardsSwitch.addTarget(self, action: #selector(hazardsChanged), for: .valueChanged)
+        lowStressRoutingSwitch.addTarget(self, action: #selector(lowStressRoutingChanged), for: .valueChanged)
         analyticsSwitch.addTarget(self, action: #selector(analyticsChanged), for: .valueChanged)
+        notificationsSwitch.addTarget(self, action: #selector(notificationsChanged), for: .valueChanged)
+
+        [
+            driverModeControl,
+            voiceControl,
+            promptSensitivityControl,
+            unitsControl,
+            dataSourceControl
+        ].forEach { DrivestBrand.styleSegmentedControl($0) }
+
+        hazardsSwitch.onTintColor = DrivestPalette.accentPrimary
+        lowStressRoutingSwitch.onTintColor = DrivestPalette.accentPrimary
+        analyticsSwitch.onTintColor = DrivestPalette.accentPrimary
+        notificationsSwitch.onTintColor = DrivestPalette.accentPrimary
     }
 
     private func buildHeroCard() -> UIView {
         let card = UIView()
         card.translatesAutoresizingMaskIntoConstraints = false
-        card.backgroundColor = UIColor(red: 0.07, green: 0.19, blue: 0.40, alpha: 1)
-        card.layer.cornerRadius = 20
+        card.backgroundColor = DrivestPalette.heroStart
+        card.layer.cornerRadius = 24
+        card.layer.borderColor = DrivestPalette.cardStroke.cgColor
+        card.layer.borderWidth = 1
+
+        let iconContainer = UIView()
+        iconContainer.translatesAutoresizingMaskIntoConstraints = false
+        iconContainer.backgroundColor = .white
+        iconContainer.layer.cornerRadius = 12
+        iconContainer.layer.masksToBounds = true
+        iconContainer.layer.borderWidth = 1
+        iconContainer.layer.borderColor = UIColor.white.withAlphaComponent(0.35).cgColor
 
         let icon = DrivestBrand.logoImageView(contentMode: .scaleAspectFit)
+        icon.translatesAutoresizingMaskIntoConstraints = false
+        icon.backgroundColor = .clear
 
         let titleLabel = UILabel()
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -93,26 +128,32 @@ final class SettingsViewController: UIViewController {
         let subtitleLabel = UILabel()
         subtitleLabel.translatesAutoresizingMaskIntoConstraints = false
         subtitleLabel.text = "Fine-tune your drive for confidence, calm, and control."
-        subtitleLabel.textColor = UIColor(white: 1, alpha: 0.88)
+        subtitleLabel.textColor = UIColor(red: 1.00, green: 0.90, blue: 0.83, alpha: 1)
         subtitleLabel.font = .systemFont(ofSize: 13, weight: .regular)
         subtitleLabel.numberOfLines = 0
 
-        card.addSubview(icon)
+        card.addSubview(iconContainer)
+        iconContainer.addSubview(icon)
         card.addSubview(titleLabel)
         card.addSubview(subtitleLabel)
 
         NSLayoutConstraint.activate([
-            icon.leadingAnchor.constraint(equalTo: card.leadingAnchor, constant: 16),
-            icon.topAnchor.constraint(equalTo: card.topAnchor, constant: 14),
-            icon.bottomAnchor.constraint(lessThanOrEqualTo: card.bottomAnchor, constant: -14),
-            icon.widthAnchor.constraint(equalToConstant: 96),
-            icon.heightAnchor.constraint(equalToConstant: 64),
+            iconContainer.leadingAnchor.constraint(equalTo: card.leadingAnchor, constant: 16),
+            iconContainer.topAnchor.constraint(equalTo: card.topAnchor, constant: 14),
+            iconContainer.bottomAnchor.constraint(lessThanOrEqualTo: card.bottomAnchor, constant: -14),
+            iconContainer.widthAnchor.constraint(equalToConstant: 120),
+            iconContainer.heightAnchor.constraint(equalToConstant: 64),
 
-            titleLabel.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: 12),
+            icon.leadingAnchor.constraint(equalTo: iconContainer.leadingAnchor, constant: 8),
+            icon.trailingAnchor.constraint(equalTo: iconContainer.trailingAnchor, constant: -8),
+            icon.topAnchor.constraint(equalTo: iconContainer.topAnchor, constant: 8),
+            icon.bottomAnchor.constraint(equalTo: iconContainer.bottomAnchor, constant: -8),
+
+            titleLabel.leadingAnchor.constraint(equalTo: iconContainer.trailingAnchor, constant: 12),
             titleLabel.topAnchor.constraint(equalTo: card.topAnchor, constant: 16),
             titleLabel.trailingAnchor.constraint(equalTo: card.trailingAnchor, constant: -16),
 
-            subtitleLabel.leadingAnchor.constraint(equalTo: icon.trailingAnchor, constant: 12),
+            subtitleLabel.leadingAnchor.constraint(equalTo: iconContainer.trailingAnchor, constant: 12),
             subtitleLabel.trailingAnchor.constraint(equalTo: card.trailingAnchor, constant: -16),
             subtitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
             subtitleLabel.bottomAnchor.constraint(equalTo: card.bottomAnchor, constant: -16)
@@ -132,23 +173,13 @@ final class SettingsViewController: UIViewController {
         driverModeDescriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         driverModeDescriptionLabel.numberOfLines = 0
         driverModeDescriptionLabel.font = .systemFont(ofSize: 13, weight: .regular)
-        driverModeDescriptionLabel.textColor = .secondaryLabel
-        driverModeDescriptionLabel.backgroundColor = UIColor(red: 0.93, green: 0.97, blue: 1.0, alpha: 1)
+        driverModeDescriptionLabel.textColor = DrivestPalette.textPrimary
+        driverModeDescriptionLabel.backgroundColor = DrivestPalette.accentPrimarySoft
         driverModeDescriptionLabel.layer.cornerRadius = 8
         driverModeDescriptionLabel.layer.masksToBounds = true
         driverModeDescriptionLabel.textAlignment = .left
-        driverModeDescriptionLabel.layoutMargins = UIEdgeInsets(top: 10, left: 12, bottom: 10, right: 12)
 
-        let modeDescriptionContainer = UIView()
-        modeDescriptionContainer.translatesAutoresizingMaskIntoConstraints = false
-        modeDescriptionContainer.addSubview(driverModeDescriptionLabel)
-        NSLayoutConstraint.activate([
-            driverModeDescriptionLabel.topAnchor.constraint(equalTo: modeDescriptionContainer.topAnchor),
-            driverModeDescriptionLabel.leadingAnchor.constraint(equalTo: modeDescriptionContainer.leadingAnchor),
-            driverModeDescriptionLabel.trailingAnchor.constraint(equalTo: modeDescriptionContainer.trailingAnchor),
-            driverModeDescriptionLabel.bottomAnchor.constraint(equalTo: modeDescriptionContainer.bottomAnchor)
-        ])
-        stack.addArrangedSubview(modeDescriptionContainer)
+        stack.addArrangedSubview(driverModeDescriptionLabel)
 
         confidenceLabel.translatesAutoresizingMaskIntoConstraints = false
         confidenceLabel.font = .systemFont(ofSize: 15, weight: .semibold)
@@ -183,6 +214,7 @@ final class SettingsViewController: UIViewController {
         stack.addArrangedSubview(dataSourceControl)
 
         stack.addArrangedSubview(makeSwitchRow(title: "Hazard prompts", toggle: hazardsSwitch))
+        stack.addArrangedSubview(makeSwitchRow(title: "Low-stress routing", toggle: lowStressRoutingSwitch))
 
         let hint = UILabel()
         hint.translatesAutoresizingMaskIntoConstraints = false
@@ -201,6 +233,13 @@ final class SettingsViewController: UIViewController {
 
         stack.addArrangedSubview(makeSectionLabel("Privacy"))
         stack.addArrangedSubview(makeSwitchRow(title: "Analytics (optional)", toggle: analyticsSwitch))
+        stack.addArrangedSubview(makeSwitchRow(title: "Notifications", toggle: notificationsSwitch))
+
+        notificationsStatusLabel.translatesAutoresizingMaskIntoConstraints = false
+        notificationsStatusLabel.font = .systemFont(ofSize: 13, weight: .regular)
+        notificationsStatusLabel.textColor = DrivestPalette.textSecondary
+        notificationsStatusLabel.text = "Notifications status: Disabled"
+        stack.addArrangedSubview(notificationsStatusLabel)
 
         return card
     }
@@ -214,6 +253,34 @@ final class SettingsViewController: UIViewController {
         stack.addArrangedSubview(makeLinkButton(title: "Privacy Policy", url: "https://drivest.uk/privacy"))
         stack.addArrangedSubview(makeLinkButton(title: "FAQ", url: "https://drivest.uk/faq"))
 
+        stack.addArrangedSubview(makePushButton(title: "Data rights") {
+            InfoTextViewController(
+                title: "Data rights",
+                body: "You can request data export or deletion by contacting support."
+            )
+        })
+        stack.addArrangedSubview(makePushButton(title: "Service availability") {
+            InfoTextViewController(
+                title: "Service availability",
+                body: "Drivest services may vary by area, connectivity, and data-source mode."
+            )
+        })
+        stack.addArrangedSubview(makePushButton(title: "Safety notice") {
+            InfoTextViewController(
+                title: "Safety notice",
+                body: "Drivest provides advisory prompts only. Follow road signs and the Highway Code."
+            )
+        })
+        stack.addArrangedSubview(makePushButton(title: "Content accuracy") {
+            InfoTextViewController(
+                title: "Content accuracy",
+                body: "Map and prompt data may vary. Verify with real-world signage and road conditions."
+            )
+        })
+        stack.addArrangedSubview(makePushButton(title: "Theory settings") {
+            TheorySettingsViewController()
+        })
+
         return card
     }
 
@@ -222,7 +289,21 @@ final class SettingsViewController: UIViewController {
         let stack = makeCardStack(in: card)
 
         stack.addArrangedSubview(makeSectionLabel("Support"))
-        stack.addArrangedSubview(makeLinkButton(title: "Contact Support", url: "mailto:admin@drivest.uk"))
+        stack.addArrangedSubview(makeLinkButton(title: "Contact support", url: "mailto:admin@drivest.uk"))
+        stack.addArrangedSubview(makePushButton(title: "About Drivest") {
+            AboutDrivestViewController()
+        })
+
+        let exportButton = UIButton(type: .system)
+        var exportConfig = UIButton.Configuration.plain()
+        exportConfig.title = "Export drive log"
+        exportConfig.baseForegroundColor = DrivestPalette.accentPrimary
+        exportConfig.contentInsets = NSDirectionalEdgeInsets(top: 6, leading: 0, bottom: 6, trailing: 0)
+        exportConfig.titleAlignment = .leading
+        exportButton.configuration = exportConfig
+        exportButton.contentHorizontalAlignment = .leading
+        exportButton.addTarget(self, action: #selector(exportDriveLog), for: .touchUpInside)
+        stack.addArrangedSubview(exportButton)
 
         return card
     }
@@ -230,7 +311,7 @@ final class SettingsViewController: UIViewController {
     private func makeCard() -> UIView {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.applyCardStyle(cornerRadius: 16, borderColor: UIColor.systemGray5)
+        view.applyCardStyle(cornerRadius: 20)
         return view
     }
 
@@ -253,7 +334,7 @@ final class SettingsViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = text.uppercased()
-        label.textColor = .secondaryLabel
+        label.textColor = DrivestPalette.textSecondary
         label.font = .systemFont(ofSize: 12, weight: .bold)
         return label
     }
@@ -298,7 +379,7 @@ final class SettingsViewController: UIViewController {
         button.translatesAutoresizingMaskIntoConstraints = false
         var configuration = UIButton.Configuration.plain()
         configuration.title = title
-        configuration.baseForegroundColor = DrivestPalette.accentBlue
+        configuration.baseForegroundColor = DrivestPalette.accentPrimary
         configuration.contentInsets = NSDirectionalEdgeInsets(top: 6, leading: 0, bottom: 6, trailing: 0)
         configuration.titleAlignment = .leading
         button.configuration = configuration
@@ -306,6 +387,22 @@ final class SettingsViewController: UIViewController {
         button.addAction(UIAction { _ in
             guard let targetURL = URL(string: url) else { return }
             UIApplication.shared.open(targetURL)
+        }, for: .touchUpInside)
+        return button
+    }
+
+    private func makePushButton(title: String, build: @escaping () -> UIViewController) -> UIButton {
+        let button = UIButton(type: .system)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        var configuration = UIButton.Configuration.plain()
+        configuration.title = title
+        configuration.baseForegroundColor = DrivestPalette.accentPrimary
+        configuration.contentInsets = NSDirectionalEdgeInsets(top: 6, leading: 0, bottom: 6, trailing: 0)
+        configuration.titleAlignment = .leading
+        button.configuration = configuration
+        button.contentHorizontalAlignment = .leading
+        button.addAction(UIAction { [weak self] _ in
+            self?.navigationController?.pushViewController(build(), animated: true)
         }, for: .touchUpInside)
         return button
     }
@@ -341,19 +438,23 @@ final class SettingsViewController: UIViewController {
         }
 
         hazardsSwitch.isOn = settingsStore.hazardsEnabled
+        lowStressRoutingSwitch.isOn = settingsStore.lowStressRoutingEnabled
         analyticsSwitch.isOn = settingsStore.analyticsConsent
+        notificationsSwitch.isOn = settingsStore.notificationsPreference
 
         confidenceLabel.text = "Driver confidence: \(confidenceForMode(settingsStore.driverMode))/100"
         driverModeDescriptionLabel.text = modeDescription(settingsStore.driverMode)
+        notificationsStatusLabel.text = "Notifications status: \(settingsStore.notificationsPreference ? "Enabled" : "Disabled")"
     }
 
     @objc
     private func driverModeChanged() {
-        settingsStore.driverMode = switch driverModeControl.selectedSegmentIndex {
+        let selectedMode: DriverMode = switch driverModeControl.selectedSegmentIndex {
         case 1: .newDriver
         case 2: .standard
         default: .learner
         }
+        settingsStore.applyDriverProfilePreset(selectedMode)
         render()
     }
 
@@ -395,8 +496,68 @@ final class SettingsViewController: UIViewController {
     }
 
     @objc
+    private func lowStressRoutingChanged() {
+        settingsStore.lowStressRoutingEnabled = lowStressRoutingSwitch.isOn
+    }
+
+    @objc
     private func analyticsChanged() {
         settingsStore.analyticsConsent = analyticsSwitch.isOn
+    }
+
+    @objc
+    private func notificationsChanged() {
+        settingsStore.notificationsPreference = notificationsSwitch.isOn
+        notificationsStatusLabel.text = "Notifications status: \(notificationsSwitch.isOn ? "Enabled" : "Disabled")"
+    }
+
+    @objc
+    private func exportDriveLog() {
+        let payload: [String: Any] = [
+            "app": [
+                "platform": "iOS",
+                "timestamp": ISO8601DateFormatter().string(from: Date())
+            ],
+            "settings": [
+                "voiceMode": settingsStore.voiceMode.rawValue,
+                "promptSensitivity": settingsStore.promptSensitivity.rawValue,
+                "units": settingsStore.unitsMode.rawValue,
+                "hazardsEnabled": settingsStore.hazardsEnabled,
+                "lowStressRoutingEnabled": settingsStore.lowStressRoutingEnabled,
+                "analyticsConsent": settingsStore.analyticsConsent,
+                "notificationsPreference": settingsStore.notificationsPreference,
+                "dataSourceMode": settingsStore.dataSourceMode.rawValue,
+                "lastCentreId": settingsStore.lastCentreId,
+                "lastMode": settingsStore.lastMode.rawValue,
+                "driverMode": settingsStore.driverMode.rawValue
+            ],
+            "parity": [
+                "routesPackVersionId": DebugParityStateStore.shared.routesPackVersionId,
+                "hazardsPackVersionId": DebugParityStateStore.shared.hazardsPackVersionId,
+                "lastPromptFired": DebugParityStateStore.shared.lastPromptFired,
+                "lastPromptSuppressed": DebugParityStateStore.shared.lastPromptSuppressed,
+                "lastOffRouteState": DebugParityStateStore.shared.lastOffRouteState,
+                "offRouteRawDistanceMeters": DebugParityStateStore.shared.offRouteRawDistanceMeters,
+                "offRouteSmoothedDistanceMeters": DebugParityStateStore.shared.offRouteSmoothedDistanceMeters
+            ]
+        ]
+
+        guard
+            let data = try? JSONSerialization.data(withJSONObject: payload, options: [.prettyPrinted]),
+            let jsonText = String(data: data, encoding: .utf8)
+        else {
+            return
+        }
+
+        let tempURL = FileManager.default.temporaryDirectory.appendingPathComponent("drivest-ios-drive-log.json")
+        try? jsonText.data(using: .utf8)?.write(to: tempURL)
+
+        let sheet = UIActivityViewController(activityItems: [tempURL], applicationActivities: nil)
+        if let popover = sheet.popoverPresentationController {
+            popover.sourceView = view
+            popover.sourceRect = CGRect(x: view.bounds.midX, y: view.bounds.midY, width: 1, height: 1)
+        }
+        present(sheet, animated: true)
     }
 
     @objc

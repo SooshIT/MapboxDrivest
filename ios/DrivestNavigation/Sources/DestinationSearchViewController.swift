@@ -12,11 +12,13 @@ final class DestinationSearchViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Choose Destination"
-        view.backgroundColor = DrivestPalette.pageBackground
+        view.backgroundColor = .clear
 
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search destination"
+        searchController.searchBar.tintColor = DrivestPalette.accentPrimary
+        searchController.searchBar.searchTextField.backgroundColor = UIColor.white.withAlphaComponent(0.92)
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
@@ -46,6 +48,11 @@ final class DestinationSearchViewController: UIViewController {
             emptyLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             emptyLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        DrivestBrand.ensurePageGradient(in: view)
     }
 
     private func queryDestinations(_ text: String) {
@@ -133,7 +140,7 @@ private final class DestinationCardCell: UITableViewCell {
         contentView.backgroundColor = .clear
 
         cardView.translatesAutoresizingMaskIntoConstraints = false
-        cardView.applyCardStyle(cornerRadius: 12, borderColor: UIColor.systemGray5)
+        cardView.applyCardStyle(cornerRadius: 12)
 
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.font = .systemFont(ofSize: 16, weight: .semibold)
@@ -144,7 +151,7 @@ private final class DestinationCardCell: UITableViewCell {
         placeNameLabel.textColor = DrivestPalette.textSecondary
 
         chevron.translatesAutoresizingMaskIntoConstraints = false
-        chevron.tintColor = .tertiaryLabel
+        chevron.tintColor = DrivestPalette.accentPrimary
 
         contentView.addSubview(cardView)
         cardView.addSubview(nameLabel)

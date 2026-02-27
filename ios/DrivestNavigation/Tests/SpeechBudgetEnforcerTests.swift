@@ -62,6 +62,7 @@ final class SpeechBudgetEnforcerTests: XCTestCase {
             .speedCamera,
             .busLane,
             .busStop,
+            .noEntry,
         ]
     }
 
@@ -81,6 +82,8 @@ final class SpeechBudgetEnforcerTests: XCTestCase {
         case .speedCamera: return "speed camera"
         case .busLane: return "bus lane"
         case .busStop: return "bus stop"
+        case .noEntry: return "no entry"
+        case .unknown: return "hazard"
         }
     }
 

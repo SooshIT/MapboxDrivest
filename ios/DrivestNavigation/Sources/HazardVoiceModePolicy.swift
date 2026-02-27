@@ -4,17 +4,21 @@ struct HazardVoiceModePolicy {
     func canSpeak(_ type: PromptType, voiceMode: VoiceMode) -> Bool {
         switch voiceMode {
         case .all:
-            return type == .roundabout ||
+            return type == .noEntry ||
+                type == .roundabout ||
                 type == .miniRoundabout ||
                 type == .schoolZone ||
                 type == .zebraCrossing ||
                 type == .giveWay ||
                 type == .trafficSignal ||
                 type == .speedCamera ||
-                type == .busStop
+                type == .busLane ||
+                type == .busStop ||
+                type == .unknown
 
         case .alerts:
-            return type == .roundabout ||
+            return type == .noEntry ||
+                type == .roundabout ||
                 type == .miniRoundabout ||
                 type == .schoolZone ||
                 type == .speedCamera

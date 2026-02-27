@@ -13,7 +13,7 @@ final class CentrePickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Choose Test Centre"
-        view.backgroundColor = DrivestPalette.pageBackground
+        view.backgroundColor = .clear
 
         allCentres = centreRepository.loadCentres()
         filteredCentres = allCentres
@@ -21,6 +21,8 @@ final class CentrePickerViewController: UIViewController {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search by centre or town"
+        searchController.searchBar.tintColor = DrivestPalette.accentPrimary
+        searchController.searchBar.searchTextField.backgroundColor = UIColor.white.withAlphaComponent(0.92)
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
@@ -40,6 +42,11 @@ final class CentrePickerViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -14),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        DrivestBrand.ensurePageGradient(in: view)
     }
 
     private func applySearch(_ text: String) {
@@ -104,7 +111,7 @@ private final class CentreCardCell: UITableViewCell {
         contentView.backgroundColor = .clear
 
         cardView.translatesAutoresizingMaskIntoConstraints = false
-        cardView.applyCardStyle(cornerRadius: 14, borderColor: UIColor.systemGray5)
+        cardView.applyCardStyle(cornerRadius: 14)
 
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.font = .systemFont(ofSize: 16, weight: .semibold)
@@ -117,7 +124,7 @@ private final class CentreCardCell: UITableViewCell {
         addressLabel.numberOfLines = 1
 
         chevron.translatesAutoresizingMaskIntoConstraints = false
-        chevron.tintColor = .tertiaryLabel
+        chevron.tintColor = DrivestPalette.accentPrimary
 
         contentView.addSubview(cardView)
         cardView.addSubview(nameLabel)

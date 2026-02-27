@@ -34,10 +34,9 @@ targets:
     deploymentTarget: "15.0"
     sources:
       - path: Sources
-      - path: Resources
+      - path: Resources/Data
         type: folder
-        excludes:
-          - Info.plist
+      - path: Resources/drivest_logo_tight.png
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.drivest.navigation

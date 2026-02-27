@@ -1,0 +1,310 @@
+{
+  "meta": {
+    "dataset": "Drivest Life in the UK – Expanded Theory Pack (Original Structured Content)",
+    "version": "1.0",
+    "created_utc": "2026-02-23T05:59:00Z",
+    "note": "This is an original structured learning pack based on core Life in the UK themes. It is not a verbatim copy of the official handbook."
+  },
+  "chapters": [
+    {
+      "chapter_id": "british_values",
+      "title": "The Values and Principles of the UK",
+      "overview": "This chapter explains the core principles that underpin British society including democracy, rule of law, individual liberty, and mutual respect and tolerance.",
+      "sections": [
+        {
+          "section_id": "values_democracy",
+          "title": "Democracy and Participation",
+          "summary": "The UK is a parliamentary democracy where citizens elect representatives to make decisions on their behalf.",
+          "key_points": [
+            "Voting in elections is a fundamental right of eligible citizens.",
+            "The UK uses secret ballots to protect voter privacy.",
+            "General elections typically occur every five years."
+          ],
+          "common_exam_focus": [
+            "Difference between Parliament and Government.",
+            "Role of Members of Parliament (MPs)."
+          ],
+          "quick_checks": [
+            "Why is secret voting important?",
+            "How often are general elections held?"
+          ]
+        },
+        {
+          "section_id": "values_rule_of_law",
+          "title": "Rule of Law",
+          "summary": "Everyone in the UK is subject to the law, including government officials and the monarchy.",
+          "key_points": [
+            "Laws are created by Parliament.",
+            "Independent courts ensure fair trials.",
+            "Police enforce laws but must follow legal procedures."
+          ],
+          "common_exam_focus": [
+            "Understanding equality before the law.",
+            "Role of the judiciary."
+          ],
+          "quick_checks": [
+            "Who makes laws in the UK?",
+            "Why is judicial independence important?"
+          ]
+        },
+        {
+          "section_id": "values_tolerance",
+          "title": "Mutual Respect and Tolerance",
+          "summary": "British society values freedom of belief and expression within the limits of the law.",
+          "key_points": [
+            "People are free to follow any religion or none.",
+            "Discrimination based on race, religion, gender, or sexuality is unlawful.",
+            "Respect for diversity is a key societal principle."
+          ],
+          "common_exam_focus": [
+            "Equality Act principles.",
+            "Religious freedom in the UK."
+          ],
+          "quick_checks": [
+            "What law protects people from discrimination?",
+            "Can people choose not to follow a religion in the UK?"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "uk_history",
+      "title": "A Brief History of Britain",
+      "overview": "This chapter summarises major historical periods that shaped modern Britain, from early settlements to the modern constitutional monarchy.",
+      "sections": [
+        {
+          "section_id": "history_early",
+          "title": "Early Britain and Roman Rule",
+          "summary": "Early settlers, Roman invasion, and the development of towns and infrastructure laid foundations for Britain.",
+          "key_points": [
+            "Romans invaded Britain in AD 43.",
+            "Hadrian’s Wall marked the northern boundary of Roman Britain.",
+            "Roman roads and towns influenced later development."
+          ],
+          "common_exam_focus": [
+            "Roman contributions to Britain.",
+            "Significance of Hadrian’s Wall."
+          ],
+          "quick_checks": [
+            "When did the Romans invade Britain?",
+            "What was Hadrian’s Wall built for?"
+          ]
+        },
+        {
+          "section_id": "history_middleages",
+          "title": "The Middle Ages and Magna Carta",
+          "summary": "The Norman Conquest and later developments shaped governance and law.",
+          "key_points": [
+            "1066: Norman Conquest led by William the Conqueror.",
+            "Magna Carta (1215) limited the powers of the King.",
+            "Parliament gradually developed as a governing institution."
+          ],
+          "common_exam_focus": [
+            "Importance of Magna Carta.",
+            "Role of medieval monarchs."
+          ],
+          "quick_checks": [
+            "What did Magna Carta achieve?",
+            "Who led the Norman Conquest?"
+          ]
+        },
+        {
+          "section_id": "history_modern",
+          "title": "Industrial Revolution to Modern Britain",
+          "summary": "Industrialisation transformed Britain into a global power.",
+          "key_points": [
+            "Industrial Revolution began in the 18th century.",
+            "Britain played a major role in both World Wars.",
+            "Post-war Britain developed the welfare state and NHS."
+          ],
+          "common_exam_focus": [
+            "Creation of the NHS in 1948.",
+            "Impact of industrialisation."
+          ],
+          "quick_checks": [
+            "When was the NHS founded?",
+            "Why was the Industrial Revolution significant?"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "government_system",
+      "title": "The UK Government and Political System",
+      "overview": "Explains how the UK is governed, including Parliament, the Prime Minister, local government, and devolved administrations.",
+      "sections": [
+        {
+          "section_id": "gov_parliament",
+          "title": "Parliament Structure",
+          "summary": "Parliament consists of the House of Commons and House of Lords.",
+          "key_points": [
+            "House of Commons members are elected.",
+            "House of Lords members are appointed or hereditary.",
+            "The Monarch formally approves legislation."
+          ],
+          "common_exam_focus": [
+            "Difference between Commons and Lords.",
+            "Role of the Monarch in law-making."
+          ],
+          "quick_checks": [
+            "Which house is elected?",
+            "What does Royal Assent mean?"
+          ]
+        },
+        {
+          "section_id": "gov_pm",
+          "title": "Prime Minister and Cabinet",
+          "summary": "The Prime Minister is the head of government and selects Cabinet ministers.",
+          "key_points": [
+            "PM is leader of the majority party in Commons.",
+            "Cabinet makes key policy decisions.",
+            "Collective responsibility applies to Cabinet decisions."
+          ],
+          "common_exam_focus": [
+            "Role of Cabinet.",
+            "How PM is chosen."
+          ],
+          "quick_checks": [
+            "How is the Prime Minister chosen?",
+            "What is collective responsibility?"
+          ]
+        },
+        {
+          "section_id": "gov_local",
+          "title": "Local Government and Devolution",
+          "summary": "Scotland, Wales, and Northern Ireland have devolved administrations.",
+          "key_points": [
+            "Scottish Parliament, Senedd (Wales), and Northern Ireland Assembly exist.",
+            "Local councils manage services like education and waste collection.",
+            "Some powers remain reserved to UK Parliament."
+          ],
+          "common_exam_focus": [
+            "Devolved vs reserved powers.",
+            "Functions of local councils."
+          ],
+          "quick_checks": [
+            "Name one devolved body.",
+            "What services do local councils provide?"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "uk_society",
+      "title": "Modern UK Society",
+      "overview": "Covers everyday life including education, healthcare, employment, and civic responsibilities.",
+      "sections": [
+        {
+          "section_id": "soc_healthcare",
+          "title": "Healthcare and NHS",
+          "summary": "The NHS provides healthcare funded by taxation.",
+          "key_points": [
+            "NHS founded in 1948.",
+            "Most services are free at point of use.",
+            "Emergency services are accessible nationwide."
+          ],
+          "common_exam_focus": [
+            "How NHS is funded.",
+            "Emergency number (999)."
+          ],
+          "quick_checks": [
+            "When was NHS founded?",
+            "Is NHS funded by taxes?"
+          ]
+        },
+        {
+          "section_id": "soc_education",
+          "title": "Education System",
+          "summary": "Education is compulsory for children between certain ages.",
+          "key_points": [
+            "Children must attend school between 5 and 18 (with training options after 16).",
+            "State schools are funded by government.",
+            "Ofsted inspects schools in England."
+          ],
+          "common_exam_focus": [
+            "Compulsory education age.",
+            "Role of Ofsted."
+          ],
+          "quick_checks": [
+            "Until what age is education compulsory?"
+          ]
+        },
+        {
+          "section_id": "soc_responsibilities",
+          "title": "Rights and Responsibilities",
+          "summary": "Residents have legal rights but also civic duties.",
+          "key_points": [
+            "Pay taxes and National Insurance.",
+            "Serve on jury if summoned.",
+            "Respect laws and community standards."
+          ],
+          "common_exam_focus": [
+            "Jury service obligations.",
+            "Tax responsibilities."
+          ],
+          "quick_checks": [
+            "What is jury service?",
+            "Why is paying tax important?"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "culture_traditions",
+      "title": "Culture and Traditions",
+      "overview": "Describes national symbols, holidays, sports, and cultural contributions.",
+      "sections": [
+        {
+          "section_id": "culture_symbols",
+          "title": "National Symbols",
+          "summary": "The UK has symbols representing its nations.",
+          "key_points": [
+            "Union Flag combines England, Scotland, and Ireland crosses.",
+            "National flowers: Rose (England), Thistle (Scotland), Daffodil (Wales), Shamrock (Northern Ireland)."
+          ],
+          "common_exam_focus": [
+            "Union Flag composition.",
+            "National flowers."
+          ],
+          "quick_checks": [
+            "What flower represents Scotland?"
+          ]
+        },
+        {
+          "section_id": "culture_holidays",
+          "title": "Public Holidays and Celebrations",
+          "summary": "The UK observes bank holidays and national commemorations.",
+          "key_points": [
+            "Christmas Day and Easter are major Christian festivals.",
+            "Remembrance Day is observed on 11 November.",
+            "Guy Fawkes Night is celebrated on 5 November."
+          ],
+          "common_exam_focus": [
+            "Remembrance Day date.",
+            "Significance of 5 November."
+          ],
+          "quick_checks": [
+            "When is Remembrance Day observed?"
+          ]
+        },
+        {
+          "section_id": "culture_sport",
+          "title": "Sports and Arts",
+          "summary": "Sport and arts are integral to UK identity.",
+          "key_points": [
+            "Football, rugby, and cricket are popular sports.",
+            "Wimbledon is a major tennis tournament.",
+            "The UK has strong literary and theatrical traditions."
+          ],
+          "common_exam_focus": [
+            "Wimbledon location.",
+            "Major UK sports."
+          ],
+          "quick_checks": [
+            "Name one major UK sporting event."
+          ]
+        }
+      ]
+    }
+  ]
+}

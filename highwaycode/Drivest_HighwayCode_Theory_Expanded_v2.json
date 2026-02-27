@@ -1,0 +1,505 @@
+{
+  "meta": {
+    "dataset": "Drivest Highway Code – Expanded Theory Pack (Original summaries, chapter-structured)",
+    "version": "2.0",
+    "created_utc": "2026-02-23T05:25:24Z",
+    "scope_note": "This is an expanded learning pack written in original wording. It is not a verbatim copy of the official Highway Code. For authoritative text and updates, refer to GOV.UK via source_url links.",
+    "source_root": "https://www.gov.uk/guidance/the-highway-code"
+  },
+  "chapters": [
+    {
+      "chapter_id": "intro",
+      "title": "Introduction",
+      "source_url": "https://www.gov.uk/guidance/the-highway-code",
+      "overview": "The Highway Code is the main set of rules and guidance for road users in Great Britain. Some parts reflect legal requirements (typically expressed with MUST/MUST NOT). Other parts are best-practice safety guidance (often expressed with should/should not). The Code supports safe, predictable, and courteous behaviour and explains how responsibility increases with the potential harm your vehicle can cause.",
+      "sections": [
+        {
+          "section_id": "intro-legal-status",
+          "title": "Legal status and how to read rules",
+          "summary": "Understand the difference between legal duties and safety guidance, and why both matter in real-world driving and insurance outcomes.",
+          "key_rules": [
+            "MUST/MUST NOT: usually backed by legislation; breaking these can lead to enforcement action.",
+            "should/should not: guidance for safer driving; ignoring can still be used as evidence in collisions or claims.",
+            "Always follow traffic signs, signals, and road markings even if you think you ‘know’ the road."
+          ],
+          "common_mistakes": [
+            "Thinking ‘should’ rules don’t matter in an incident investigation.",
+            "Assuming a green light removes all responsibility to check it’s safe to proceed."
+          ],
+          "quick_quiz_prompts": [
+            "Explain MUST vs should with an example you’ve seen on the road.",
+            "Why can ‘should’ rules still matter after a crash?"
+          ]
+        },
+        {
+          "section_id": "intro-responsibility",
+          "title": "Shared responsibility and road user hierarchy",
+          "summary": "Safer road use depends on cooperation: anticipate mistakes, protect vulnerable users, and communicate clearly through position, speed, and signals.",
+          "key_rules": [
+            "Expect others to make errors; plan space/time to avoid collisions.",
+            "Give extra protection to pedestrians, cyclists, horse riders, and mobility users.",
+            "Be predictable: steady speed, clear positioning, and timely signals reduce risk."
+          ],
+          "common_mistakes": [
+            "Rushing decisions at junctions because you feel pressured.",
+            "Driving aggressively near cyclists or pedestrians to ‘assert priority’."
+          ],
+          "quick_quiz_prompts": [
+            "Who is most vulnerable on the road and why?",
+            "Name two ways to be more predictable when driving."
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "rules-for-pedestrians",
+      "title": "Rules for pedestrians",
+      "source_url": "https://www.gov.uk/guidance/the-highway-code/rules-for-pedestrians",
+      "overview": "Pedestrian guidance focuses on safe crossing choices, awareness, and visibility. For drivers, understanding pedestrian behaviour helps anticipate sudden crossing movements, especially near crossings, buses, schools, and parked vehicles.",
+      "sections": [
+        {
+          "section_id": "ped-where-to-walk",
+          "title": "Walking near roads and shared spaces",
+          "summary": "Pedestrians should use pavements where provided and take extra care in shared spaces or where visibility is poor.",
+          "key_rules": [
+            "Use pavements/footways when available; if none, walk facing traffic where practical.",
+            "Stay alert around driveways, side roads, and car parks where vehicles may turn suddenly.",
+            "In shared spaces, expect unpredictable movement from all users and reduce speed/assume limited awareness."
+          ],
+          "common_mistakes": [
+            "Stepping into the carriageway without checking for approaching traffic.",
+            "Assuming drivers will always stop for you even where you do not have priority."
+          ],
+          "quick_quiz_prompts": [
+            "Why is walking facing traffic safer on roads without a pavement?",
+            "What makes car parks higher risk for pedestrians?"
+          ]
+        },
+        {
+          "section_id": "ped-crossing",
+          "title": "Crossing roads safely",
+          "summary": "Crossing safely is about choosing the right place, checking properly, and not being distracted.",
+          "key_rules": [
+            "Choose crossings where available; otherwise select a place with good visibility both ways.",
+            "Look and listen carefully; keep looking while crossing in case conditions change.",
+            "Avoid distractions (phones/headphones) that reduce awareness when stepping off the kerb."
+          ],
+          "common_mistakes": [
+            "Crossing between parked cars where you can’t be seen early.",
+            "Running across without reassessing after the first lane."
+          ],
+          "quick_quiz_prompts": [
+            "What is a safer alternative to crossing between parked cars?",
+            "What should you do if traffic starts moving while you are crossing?"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "rules-for-cyclists",
+      "title": "Rules for cyclists",
+      "source_url": "https://www.gov.uk/guidance/the-highway-code/rules-for-cyclists",
+      "overview": "Cyclist safety depends on visibility, positioning, and clear communication. Drivers should understand why cyclists sometimes ride centrally (e.g., to avoid door zones, potholes, or unsafe overtakes) and should overtake with ample space only when safe.",
+      "sections": [
+        {
+          "section_id": "cyc-positioning",
+          "title": "Positioning and visibility",
+          "summary": "Cyclists aim to be seen early and avoid hazards at the edge of the road.",
+          "key_rules": [
+            "Ride where you are visible and can avoid potholes, drains, and debris.",
+            "Keep a safe distance from parked cars to avoid doors opening (door zone).",
+            "Use clear lane positioning approaching junctions and roundabouts to prevent dangerous squeezes."
+          ],
+          "common_mistakes": [
+            "Drivers assuming a cyclist is ‘wrong’ for not hugging the kerb.",
+            "Cyclists weaving unpredictably without checking behind."
+          ],
+          "quick_quiz_prompts": [
+            "Why might a cyclist take the centre of the lane?",
+            "What is the ‘door zone’ and why does it matter?"
+          ]
+        },
+        {
+          "section_id": "cyc-turning-junctions",
+          "title": "Junctions, turning, and roundabouts",
+          "summary": "Most cyclist collisions occur at junctions; observation and clear signalling are critical.",
+          "key_rules": [
+            "Signal clearly and early; check behind before changing position.",
+            "At junctions, take extra care of left-hook / right-hook risks with turning vehicles.",
+            "On roundabouts, position to be seen and avoid being overtaken where it’s unsafe."
+          ],
+          "common_mistakes": [
+            "Cyclists signalling but not checking behind.",
+            "Drivers turning across a cyclist’s path assuming they are slower and ‘won’t reach’."
+          ],
+          "quick_quiz_prompts": [
+            "What is a left-hook collision scenario?",
+            "What should a driver check before turning left at a junction?"
+          ]
+        },
+        {
+          "section_id": "cyc-equipment",
+          "title": "Equipment and night riding",
+          "summary": "Being seen is often more important than being fast; good lights and reflectives reduce risk.",
+          "key_rules": [
+            "Use lights in darkness/poor visibility; ensure they are working and visible.",
+            "Consider reflective clothing/accessories; keep the bike maintained (brakes, tyres).",
+            "Use a bell/horn appropriately—communication should not startle others."
+          ],
+          "common_mistakes": [
+            "Using weak or poorly aimed lights that don’t make you visible from distance.",
+            "Assuming street lighting is enough without bike lights."
+          ],
+          "quick_quiz_prompts": [
+            "What is the safest mindset for night cycling in busy areas?"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "drivers-and-motorcyclists",
+      "title": "Rules for drivers and motorcyclists",
+      "source_url": "https://www.gov.uk/guidance/the-highway-code/rules-for-drivers-and-motorcyclists",
+      "overview": "Core driving rules cover safe speed, observation, signalling, lane discipline, junction/roundabout behaviour, overtaking, and protecting vulnerable road users. The emphasis is on anticipation, space management, and predictable movement.",
+      "sections": [
+        {
+          "section_id": "drv-speed-gaps",
+          "title": "Speed choice and following distance",
+          "summary": "Safe speed is not only about limits; it’s about conditions, visibility, traffic, and your stopping distance.",
+          "key_rules": [
+            "Adapt speed for rain, fog, ice, pedestrians, cyclists, and traffic density.",
+            "Use time gaps (e.g., at least 2 seconds in good conditions; increase in wet/ice).",
+            "Leave bigger gaps behind motorcycles and large vehicles that may obscure hazards."
+          ],
+          "common_mistakes": [
+            "Tailgating because the road ‘looks clear’.",
+            "Driving at the limit in fog or heavy rain."
+          ],
+          "quick_quiz_prompts": [
+            "When should you increase a 2-second gap to 4 seconds (or more)?",
+            "Why does tailgating increase crash severity?"
+          ]
+        },
+        {
+          "section_id": "drv-observation",
+          "title": "Observation routines and blind spots",
+          "summary": "Safe manoeuvres require a routine: mirrors, signal, position, speed, look (and blind-spot checks where needed).",
+          "key_rules": [
+            "Check mirrors before changing speed or direction.",
+            "Check blind spots before moving laterally (lane change, pulling out, overtaking cyclists).",
+            "Signal in time and cancel afterwards; do not signal so early that it misleads."
+          ],
+          "common_mistakes": [
+            "Signalling without checking mirrors first.",
+            "Forgetting to cancel an indicator and confusing others."
+          ],
+          "quick_quiz_prompts": [
+            "What checks should you do before changing lanes?",
+            "Why is an indicator not a ‘right of way’ signal?"
+          ]
+        },
+        {
+          "section_id": "drv-junctions-roundabouts",
+          "title": "Junctions and roundabouts",
+          "summary": "Most driving risk happens at conflict points. The aim is to slow down early, choose correct lanes, and give way where required.",
+          "key_rules": [
+            "Approach at a controlled speed, giving yourself time to observe and decide.",
+            "Choose lanes early and follow road markings/signs.",
+            "Give way as required; don’t force other road users to brake or swerve."
+          ],
+          "common_mistakes": [
+            "Late lane changes on multi-lane roundabouts.",
+            "Entering a junction when your exit isn’t clear, causing blockage."
+          ],
+          "quick_quiz_prompts": [
+            "How do you reduce risk on a multi-lane roundabout?",
+            "What is the danger of blocking junctions?"
+          ]
+        },
+        {
+          "section_id": "drv-overtaking",
+          "title": "Overtaking safely",
+          "summary": "Overtaking is one of the riskiest manoeuvres. You need space, visibility, and a safe return position without cutting in.",
+          "key_rules": [
+            "Overtake only when you can see ahead and it’s safe to return.",
+            "Give vulnerable road users extra space; avoid ‘squeeze’ overtakes.",
+            "Do not overtake near junctions, bends, crests, crossings, or where signs/markings prohibit."
+          ],
+          "common_mistakes": [
+            "Overtaking near crossings or junctions to ‘save time’.",
+            "Cutting back in too early after passing a cyclist."
+          ],
+          "quick_quiz_prompts": [
+            "Name three places where overtaking is especially risky.",
+            "What does a safe ‘return position’ mean?"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "motorways",
+      "title": "Motorways",
+      "source_url": "https://www.gov.uk/guidance/the-highway-code/motorways",
+      "overview": "Motorway driving requires high observation, discipline, and large safety gaps due to speed. Smart motorway signals and breakdown guidance are essential knowledge for modern UK roads.",
+      "sections": [
+        {
+          "section_id": "mw-joining-leaving",
+          "title": "Joining and leaving",
+          "summary": "Use slip roads to match speed and merge smoothly; plan exits early and avoid late decisions.",
+          "key_rules": [
+            "Use the slip road to build speed and merge when a gap appears.",
+            "Do not stop on the slip road unless absolutely necessary.",
+            "Plan your exit early; move to the left in good time."
+          ],
+          "common_mistakes": [
+            "Trying to merge at low speed, forcing others to brake.",
+            "Cutting across multiple lanes near your exit."
+          ],
+          "quick_quiz_prompts": [
+            "What is the safest use of a slip road?",
+            "Why are late exits risky?"
+          ]
+        },
+        {
+          "section_id": "mw-lanes",
+          "title": "Lane discipline and safe gaps",
+          "summary": "Keep left unless overtaking and avoid constant lane hopping. Bigger gaps reduce pile-ups at speed.",
+          "key_rules": [
+            "Keep left unless overtaking; return left when safe.",
+            "Maintain large following distances and anticipate traffic waves.",
+            "Use mirrors and blind-spot checks before lane changes."
+          ],
+          "common_mistakes": [
+            "Middle-lane driving when the left lane is clear.",
+            "Tailgating because traffic is flowing fast."
+          ],
+          "quick_quiz_prompts": [
+            "What is ‘lane discipline’ and why does it matter?"
+          ]
+        },
+        {
+          "section_id": "mw-smart",
+          "title": "Smart motorways and signals",
+          "summary": "Understand lane control signals and variable speed limits; respond early and calmly.",
+          "key_rules": [
+            "Red X: lane closed—move to an open lane as soon as safe.",
+            "Obey variable limits; they manage congestion and reduce collisions.",
+            "Watch for signs to ‘get in lane’ early when closures are ahead."
+          ],
+          "common_mistakes": [
+            "Ignoring a red X because ‘everyone else is doing it’.",
+            "Braking hard at the last second for a speed change."
+          ],
+          "quick_quiz_prompts": [
+            "What does a red X mean?",
+            "Why do variable speed limits exist?"
+          ]
+        },
+        {
+          "section_id": "mw-breakdowns",
+          "title": "Breakdowns and incidents",
+          "summary": "A motorway breakdown can be dangerous. Prioritise getting occupants safe and alerting others without increasing risk.",
+          "key_rules": [
+            "If you must stop, aim for a place of relative safety and turn on hazards.",
+            "Move yourself/passengers away from traffic where possible.",
+            "Call for help and share accurate location details."
+          ],
+          "common_mistakes": [
+            "Staying in a dangerous position because you’re waiting for recovery.",
+            "Attempting repairs close to live traffic."
+          ],
+          "quick_quiz_prompts": [
+            "What is the first priority during a breakdown?"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "adverse-weather",
+      "title": "Driving in adverse weather conditions",
+      "source_url": "https://www.gov.uk/guidance/the-highway-code/driving-in-adverse-weather-conditions",
+      "overview": "Bad weather reduces grip and visibility. Good driving becomes smoother, slower, and more conservative: bigger gaps, gentle control, correct lights, and knowing when to delay travel.",
+      "sections": [
+        {
+          "section_id": "wx-rain",
+          "title": "Rain and standing water",
+          "summary": "Rain increases stopping distance and can cause aquaplaning. Reduce speed and avoid sudden inputs.",
+          "key_rules": [
+            "Increase following distance and reduce speed.",
+            "Use wipers and appropriate lights so you can see and be seen.",
+            "Avoid hard braking through standing water; steer smoothly."
+          ],
+          "common_mistakes": [
+            "Driving close to the vehicle ahead ‘so you can see their lights’.",
+            "Braking sharply on wet bends."
+          ],
+          "quick_quiz_prompts": [
+            "How does rain change stopping distances?",
+            "What is aquaplaning in simple terms?"
+          ]
+        },
+        {
+          "section_id": "wx-fog",
+          "title": "Fog and low visibility",
+          "summary": "When visibility is reduced, drive at a speed that allows you to stop within the distance you can see.",
+          "key_rules": [
+            "Slow down and increase gaps; avoid sudden manoeuvres.",
+            "Use correct lights; avoid dazzling others.",
+            "Use visual reference points but don’t follow too closely."
+          ],
+          "common_mistakes": [
+            "Using high beam constantly in fog.",
+            "Relying on the car ahead as your ‘guide’ at close distance."
+          ],
+          "quick_quiz_prompts": [
+            "What is the safe visibility rule for choosing speed in fog?"
+          ]
+        },
+        {
+          "section_id": "wx-ice-snow-wind",
+          "title": "Ice, snow, and strong winds",
+          "summary": "Grip can be extremely limited. Smooth control and extra space are essential; strong winds can move high-sided vehicles suddenly.",
+          "key_rules": [
+            "Drive gently: soft steering, progressive braking, smooth acceleration.",
+            "Leave very large gaps and consider delaying travel if conditions are severe.",
+            "Be prepared for gusts near bridges and when passing gaps in hedges/buildings."
+          ],
+          "common_mistakes": [
+            "Using cruise control in poor conditions.",
+            "Overconfidence because the road ‘looks fine’ but may be icy."
+          ],
+          "quick_quiz_prompts": [
+            "Why are bridges often riskier in icy weather?"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "waiting-and-parking",
+      "title": "Waiting and parking",
+      "source_url": "https://www.gov.uk/guidance/the-highway-code/waiting-and-parking",
+      "overview": "Parking rules exist to keep sightlines clear and prevent obstruction. Safe parking includes choosing a legal place, securing the vehicle, and protecting pedestrians/cyclists when opening doors or manoeuvring.",
+      "sections": [
+        {
+          "section_id": "park-restrictions",
+          "title": "Restrictions and markings",
+          "summary": "Lines and signs indicate where you can’t wait, park, or load. Restrictions protect flow, junction visibility, and crossings.",
+          "key_rules": [
+            "Observe signs and lines; if unsure, choose another location.",
+            "Do not stop where you block junctions, crossings, or create blind spots.",
+            "Respect disabled bays and time-limited zones."
+          ],
+          "common_mistakes": [
+            "Stopping on corners/near crossings because ‘it’s just a minute’.",
+            "Parking partially on pavements and blocking wheelchair/pushchair access."
+          ],
+          "quick_quiz_prompts": [
+            "Why are zig-zag lines near crossings important?"
+          ]
+        },
+        {
+          "section_id": "park-safe-technique",
+          "title": "Safe parking technique",
+          "summary": "Parking safely includes checking mirrors, blind spots, and opening doors carefully to avoid collisions with cyclists or other vehicles.",
+          "key_rules": [
+            "Check mirrors and blind spots before manoeuvring or opening doors.",
+            "Park so you don’t obstruct: leave adequate space and avoid narrowing the road dangerously.",
+            "When leaving, re-check traffic and signal before pulling away."
+          ],
+          "common_mistakes": [
+            "Opening the driver door into a cyclist’s path (door collision).",
+            "Reversing without a full observation check."
+          ],
+          "quick_quiz_prompts": [
+            "What checks should you do before opening your door next to a cycle lane?"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "traffic-signs",
+      "title": "Traffic signs",
+      "source_url": "https://www.gov.uk/guidance/the-highway-code/traffic-signs",
+      "overview": "Traffic signs and road markings provide warnings, restrictions, and guidance. Understanding sign shapes/colours helps you decide quickly, and road markings often carry legal meaning (e.g., stop lines, lane restrictions).",
+      "sections": [
+        {
+          "section_id": "signs-shapes-colours",
+          "title": "Shapes and colours",
+          "summary": "Signs follow patterns: circles typically indicate orders, triangles warn, rectangles inform. Colours reinforce meaning (e.g., red for prohibition).",
+          "key_rules": [
+            "Treat red-bordered signs as high importance; they often indicate prohibitions or limits.",
+            "Warning signs indicate hazards ahead—reduce speed and be ready to act.",
+            "Mandatory signs require compliance; do not improvise."
+          ],
+          "common_mistakes": [
+            "Assuming warning signs are optional and ignoring them.",
+            "Missing temporary signs and following old road layout."
+          ],
+          "quick_quiz_prompts": [
+            "What does a red circular sign generally communicate?"
+          ]
+        },
+        {
+          "section_id": "markings",
+          "title": "Road markings",
+          "summary": "Markings can instruct where to stop, which lanes to use, and where overtaking is unsafe. They also maintain safety around crossings and junctions.",
+          "key_rules": [
+            "Follow stop lines, give-way lines, and lane arrows.",
+            "Treat solid lines and hatchings seriously; they can signal restrictions or danger zones.",
+            "Respect zig-zags near crossings; they protect visibility."
+          ],
+          "common_mistakes": [
+            "Crossing solid white lines to overtake.",
+            "Stopping in box junctions and blocking traffic."
+          ],
+          "quick_quiz_prompts": [
+            "Why are box junctions used?",
+            "What risk do zig-zags reduce near crossings?"
+          ]
+        }
+      ]
+    },
+    {
+      "chapter_id": "signals",
+      "title": "Signals",
+      "source_url": "https://www.gov.uk/guidance/the-highway-code/signals",
+      "overview": "Signals let other road users predict your actions. Good signalling includes timing, consistency with your position/speed, and canceling after manoeuvres. Remember: signalling does not give you priority—observations still come first.",
+      "sections": [
+        {
+          "section_id": "signals-indicators",
+          "title": "Indicators and vehicle signals",
+          "summary": "Use indicators to communicate early and clearly, but avoid signalling so early that it confuses others.",
+          "key_rules": [
+            "Mirrors before signalling; ensure it’s safe before you move.",
+            "Signal in good time and position accordingly.",
+            "Cancel signals after turning/changing lanes to avoid misleading others."
+          ],
+          "common_mistakes": [
+            "Leaving indicators on after a manoeuvre.",
+            "Signalling without adjusting speed/position, confusing others."
+          ],
+          "quick_quiz_prompts": [
+            "Why can an unintended indicator be dangerous?"
+          ]
+        },
+        {
+          "section_id": "signals-hand",
+          "title": "Hand signals and communication",
+          "summary": "Hand signals may be used by cyclists and sometimes by drivers in unusual situations. Keep communication calm and non-aggressive.",
+          "key_rules": [
+            "Recognise standard hand signals from cyclists for turning or slowing.",
+            "Use courtesy waves sparingly; avoid encouraging someone into danger.",
+            "Be cautious interpreting gestures; rely on vehicle movement and right-of-way rules."
+          ],
+          "common_mistakes": [
+            "Relying on a wave as ‘permission’ rather than checking it’s safe.",
+            "Reacting emotionally to gestures and driving aggressively."
+          ],
+          "quick_quiz_prompts": [
+            "Why should you not rely solely on a courtesy wave to proceed?"
+          ]
+        }
+      ]
+    }
+  ]
+}
