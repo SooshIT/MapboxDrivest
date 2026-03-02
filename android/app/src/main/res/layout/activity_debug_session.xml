@@ -7,7 +7,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="20dp">
+        android:padding="@dimen/dim_20">
 
         <ImageView
             android:id="@+id/debugLogo"
@@ -21,12 +21,12 @@
 
         <TextView
             android:id="@+id/debugTitle"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dim_8"
             android:text="Session Debug"
-            android:textColor="#231F20"
-            android:textSize="28sp"
+            android:textColor="@color/ui_hex_231F20"
+            android:textSize="@dimen/text_28"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -34,24 +34,24 @@
 
         <TextView
             android:id="@+id/debugSubtitle"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dim_8"
             android:text="Use these controls for lifecycle stress tests. Check logcat for ObserverRegistry attach/detach counts."
-            android:textColor="#5A5456"
-            android:textSize="14sp"
+            android:textColor="@color/ui_hex_5A5456"
+            android:textSize="@dimen/text_14"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/debugTitle" />
 
         <TextView
             android:id="@+id/debugDataSourceModeLabel"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/dim_16"
             android:text="Data Source Mode"
-            android:textColor="#5A5456"
-            android:textSize="13sp"
+            android:textColor="@color/ui_hex_5A5456"
+            android:textSize="@dimen/text_13"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -59,12 +59,12 @@
 
         <TextView
             android:id="@+id/debugDataSourceModeValue"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="@dimen/dim_4"
             android:text="-"
-            android:textColor="#231F20"
-            android:textSize="15sp"
+            android:textColor="@color/ui_hex_231F20"
+            android:textSize="@dimen/text_15"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -72,12 +72,12 @@
 
         <TextView
             android:id="@+id/debugLastFallbackLabel"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/dim_10"
             android:text="Last Fallback Used"
-            android:textColor="#5A5456"
-            android:textSize="13sp"
+            android:textColor="@color/ui_hex_5A5456"
+            android:textSize="@dimen/text_13"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -85,24 +85,24 @@
 
         <TextView
             android:id="@+id/debugLastFallbackValue"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="@dimen/dim_4"
             android:text="-"
-            android:textColor="#231F20"
-            android:textSize="15sp"
+            android:textColor="@color/ui_hex_231F20"
+            android:textSize="@dimen/text_15"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/debugLastFallbackLabel" />
 
         <TextView
             android:id="@+id/debugBackendErrorLabel"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/dim_10"
             android:text="Last Backend Error"
-            android:textColor="#5A5456"
-            android:textSize="13sp"
+            android:textColor="@color/ui_hex_5A5456"
+            android:textSize="@dimen/text_13"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -110,24 +110,24 @@
 
         <TextView
             android:id="@+id/debugBackendErrorValue"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="@dimen/dim_4"
             android:text="-"
-            android:textColor="#231F20"
-            android:textSize="14sp"
+            android:textColor="@color/ui_hex_231F20"
+            android:textSize="@dimen/text_14"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/debugBackendErrorLabel" />
 
         <TextView
             android:id="@+id/debugRawDistanceLabel"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/dim_12"
             android:text="Raw Distance to Route"
-            android:textColor="#5A5456"
-            android:textSize="13sp"
+            android:textColor="@color/ui_hex_5A5456"
+            android:textSize="@dimen/text_13"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -135,24 +135,24 @@
 
         <TextView
             android:id="@+id/debugRawDistanceValue"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="@dimen/dim_4"
             android:text="-"
-            android:textColor="#231F20"
-            android:textSize="14sp"
+            android:textColor="@color/ui_hex_231F20"
+            android:textSize="@dimen/text_14"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/debugRawDistanceLabel" />
 
         <TextView
             android:id="@+id/debugSmoothedDistanceLabel"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/dim_10"
             android:text="Smoothed Distance"
-            android:textColor="#5A5456"
-            android:textSize="13sp"
+            android:textColor="@color/ui_hex_5A5456"
+            android:textSize="@dimen/text_13"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -160,24 +160,24 @@
 
         <TextView
             android:id="@+id/debugSmoothedDistanceValue"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="@dimen/dim_4"
             android:text="-"
-            android:textColor="#231F20"
-            android:textSize="14sp"
+            android:textColor="@color/ui_hex_231F20"
+            android:textSize="@dimen/text_14"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/debugSmoothedDistanceLabel" />
 
         <TextView
             android:id="@+id/debugOffRouteStateLabel"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/dim_10"
             android:text="Off Route State"
-            android:textColor="#5A5456"
-            android:textSize="13sp"
+            android:textColor="@color/ui_hex_5A5456"
+            android:textSize="@dimen/text_13"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -185,12 +185,12 @@
 
         <TextView
             android:id="@+id/debugOffRouteStateValue"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="@dimen/dim_4"
             android:text="-"
-            android:textColor="#231F20"
-            android:textSize="14sp"
+            android:textColor="@color/ui_hex_231F20"
+            android:textSize="@dimen/text_14"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -198,9 +198,9 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/debugStartNavButton"
-            android:layout_width="0dp"
-            android:layout_height="52dp"
-            android:layout_marginTop="24dp"
+            android:layout_width="@dimen/dim_0"
+            android:layout_height="@dimen/dim_52"
+            android:layout_marginTop="@dimen/dim_24"
             android:text="Start Nav"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
@@ -210,9 +210,9 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/debugStopNavButton"
             style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="0dp"
-            android:layout_height="52dp"
-            android:layout_marginTop="10dp"
+            android:layout_width="@dimen/dim_0"
+            android:layout_height="@dimen/dim_52"
+            android:layout_marginTop="@dimen/dim_10"
             android:text="Stop Nav"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
@@ -221,9 +221,9 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/debugStartPracticeButton"
-            android:layout_width="0dp"
-            android:layout_height="52dp"
-            android:layout_marginTop="18dp"
+            android:layout_width="@dimen/dim_0"
+            android:layout_height="@dimen/dim_52"
+            android:layout_marginTop="@dimen/dim_18"
             android:text="Start Practice"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
@@ -233,9 +233,9 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/debugStopPracticeButton"
             style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="0dp"
-            android:layout_height="52dp"
-            android:layout_marginTop="10dp"
+            android:layout_width="@dimen/dim_0"
+            android:layout_height="@dimen/dim_52"
+            android:layout_marginTop="@dimen/dim_10"
             android:text="Stop Practice"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
@@ -244,9 +244,9 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/debugRunCyclesButton"
-            android:layout_width="0dp"
-            android:layout_height="52dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="@dimen/dim_0"
+            android:layout_height="@dimen/dim_52"
+            android:layout_marginTop="@dimen/dim_20"
             android:text="Run 20 Cycles"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"

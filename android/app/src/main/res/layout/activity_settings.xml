@@ -11,18 +11,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingStart="16dp"
-        android:paddingTop="20dp"
-        android:paddingEnd="16dp"
-        android:paddingBottom="28dp">
+        android:paddingStart="@dimen/dim_16"
+        android:paddingTop="@dimen/dim_20"
+        android:paddingEnd="@dimen/dim_16"
+        android:paddingBottom="@dimen/dim_28">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:cardBackgroundColor="@android:color/transparent"
-            app:cardCornerRadius="28dp"
-            app:cardElevation="4dp"
-            app:strokeWidth="0dp">
+            app:cardCornerRadius="@dimen/radius_2xl"
+            app:cardElevation="@dimen/dim_4"
+            app:strokeWidth="@dimen/dim_0">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -30,29 +30,29 @@
                 android:background="@drawable/bg_settings_hero"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:paddingStart="16dp"
-                android:paddingTop="16dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="16dp">
+                android:paddingStart="@dimen/dim_16"
+                android:paddingTop="@dimen/dim_16"
+                android:paddingEnd="@dimen/dim_16"
+                android:paddingBottom="@dimen/dim_16">
 
                 <ImageView
                     android:id="@+id/settingsLogo"
-                    android:layout_width="144dp"
-                    android:layout_height="44dp"
+                    android:layout_width="@dimen/dim_144"
+                    android:layout_height="@dimen/dim_44"
                     android:adjustViewBounds="true"
                     android:background="@drawable/bg_settings_logo_chip"
                     android:scaleType="fitCenter"
-                    android:paddingStart="10dp"
-                    android:paddingTop="6dp"
-                    android:paddingEnd="10dp"
-                    android:paddingBottom="6dp"
+                    android:paddingStart="@dimen/dim_10"
+                    android:paddingTop="@dimen/dim_6"
+                    android:paddingEnd="@dimen/dim_10"
+                    android:paddingBottom="@dimen/dim_6"
                     android:contentDescription="@string/drivest_logo_content_description"
                     android:src="@drawable/drivest_logo_tight" />
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dim_0"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="14dp"
+                    android:layout_marginStart="@dimen/dim_14"
                     android:layout_weight="1"
                     android:orientation="vertical">
 
@@ -62,16 +62,16 @@
                         android:layout_height="wrap_content"
                         android:text="@string/settings_title"
                         android:textColor="@android:color/white"
-                        android:textSize="25sp"
+                        android:textSize="@dimen/text_25"
                         android:textStyle="bold" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
+                        android:layout_marginTop="@dimen/dim_4"
                         android:text="@string/settings_subtitle"
-                        android:textColor="#FFE5D3"
-                        android:textSize="13sp" />
+                        android:textColor="@color/ui_hex_FFE5D3"
+                        android:textSize="@dimen/text_13" />
                 </LinearLayout>
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
@@ -80,34 +80,34 @@
             android:id="@+id/settingsSectionProfile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="@dimen/dim_18"
             android:drawableStart="@drawable/ic_section_profile"
-            android:drawablePadding="8dp"
+            android:drawablePadding="@dimen/dim_8"
             android:drawableTint="@color/settings_accent"
             android:text="@string/settings_section_profile"
             android:textAllCaps="true"
             android:textColor="@color/settings_text_secondary"
-            android:textSize="13sp"
+            android:textSize="@dimen/text_13"
             android:textStyle="bold" />
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dim_8"
             app:cardBackgroundColor="@color/settings_card_bg"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="2dp"
+            app:cardCornerRadius="@dimen/radius_xl"
+            app:cardElevation="@dimen/dim_2"
             app:strokeColor="@color/settings_card_stroke"
-            app:strokeWidth="1dp">
+            app:strokeWidth="@dimen/dim_1">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingStart="16dp"
-                android:paddingTop="16dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="16dp">
+                android:paddingStart="@dimen/dim_16"
+                android:paddingTop="@dimen/dim_16"
+                android:paddingEnd="@dimen/dim_16"
+                android:paddingBottom="@dimen/dim_16">
 
                 <TextView
                     android:id="@+id/settingsDriverModeValue"
@@ -115,33 +115,33 @@
                     android:layout_height="wrap_content"
                     android:text="@string/settings_driver_mode_default"
                     android:textColor="@color/settings_accent"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_16"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/settingsDriverModeHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dim_8"
                     android:text="@string/settings_driver_mode_heading"
                     android:textColor="@color/settings_text_primary"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_16"
                     android:textStyle="bold" />
 
                 <com.google.android.material.button.MaterialButtonToggleGroup
                     android:id="@+id/driverModeRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="@dimen/dim_6"
                     android:background="@drawable/bg_settings_segment_track"
-                    android:padding="4dp"
+                    android:padding="@dimen/dim_4"
                     app:selectionRequired="true"
                     app:singleSelection="true">
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/driverModeLearnerRadio"
                         style="@style/Widget.Drivest.Button.Segmented"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/driver_mode_learner"
@@ -150,7 +150,7 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/driverModeNewDriverRadio"
                         style="@style/Widget.Drivest.Button.Segmented"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/driver_mode_new_driver"
@@ -159,7 +159,7 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/driverModeStandardRadio"
                         style="@style/Widget.Drivest.Button.Segmented"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/driver_mode_standard"
@@ -170,40 +170,40 @@
                     android:id="@+id/settingsDriverModeDescription"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="@dimen/dim_6"
                     android:background="@drawable/bg_settings_info_chip"
-                    android:paddingStart="12dp"
-                    android:paddingTop="10dp"
-                    android:paddingEnd="12dp"
-                    android:paddingBottom="10dp"
+                    android:paddingStart="@dimen/dim_12"
+                    android:paddingTop="@dimen/dim_10"
+                    android:paddingEnd="@dimen/dim_12"
+                    android:paddingBottom="@dimen/dim_10"
                     android:text="@string/settings_driver_mode_desc_learner"
                     android:textColor="@color/settings_text_secondary"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/text_13" />
 
                 <TextView
                     android:id="@+id/settingsConfidenceValue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/dim_10"
                     android:text="@string/settings_confidence_score_default"
                     android:textColor="@color/settings_text_primary"
-                    android:textSize="15sp" />
+                    android:textSize="@dimen/text_15" />
 
                 <TextView
                     android:id="@+id/settingsSubscriptionValue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="@dimen/dim_4"
                     android:text="@string/settings_subscription_value_default"
                     android:textColor="@color/settings_text_secondary"
-                    android:textSize="14sp" />
+                    android:textSize="@dimen/text_14" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/paymentsSubscriptionsButton"
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/dim_10"
                     android:text="@string/settings_payments_subscriptions"
                     android:textAllCaps="false"
                     app:strokeColor="@color/settings_card_stroke" />
@@ -214,34 +214,34 @@
             android:id="@+id/settingsSectionNavigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="@dimen/dim_18"
             android:drawableStart="@drawable/ic_section_navigation"
-            android:drawablePadding="8dp"
+            android:drawablePadding="@dimen/dim_8"
             android:drawableTint="@color/settings_accent"
             android:text="@string/settings_section_navigation"
             android:textAllCaps="true"
             android:textColor="@color/settings_text_secondary"
-            android:textSize="13sp"
+            android:textSize="@dimen/text_13"
             android:textStyle="bold" />
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dim_8"
             app:cardBackgroundColor="@color/settings_card_bg"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="2dp"
+            app:cardCornerRadius="@dimen/radius_xl"
+            app:cardElevation="@dimen/dim_2"
             app:strokeColor="@color/settings_card_stroke"
-            app:strokeWidth="1dp">
+            app:strokeWidth="@dimen/dim_1">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingStart="16dp"
-                android:paddingTop="16dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="16dp">
+                android:paddingStart="@dimen/dim_16"
+                android:paddingTop="@dimen/dim_16"
+                android:paddingEnd="@dimen/dim_16"
+                android:paddingBottom="@dimen/dim_16">
 
                 <TextView
                     android:id="@+id/settingsLanguageHeading"
@@ -249,7 +249,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/settings_language"
                     android:textColor="@color/settings_text_primary"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_16"
                     android:textStyle="bold" />
 
                 <com.google.android.material.button.MaterialButton
@@ -257,7 +257,7 @@
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="@dimen/dim_6"
                     android:ellipsize="end"
                     android:maxLines="1"
                     android:text="@string/settings_language_english_uk"
@@ -268,26 +268,26 @@
                     android:id="@+id/settingsVoiceHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="@dimen/dim_12"
                     android:text="@string/settings_voice_mode"
                     android:textColor="@color/settings_text_primary"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_16"
                     android:textStyle="bold" />
 
                 <com.google.android.material.button.MaterialButtonToggleGroup
                     android:id="@+id/voiceModeRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="@dimen/dim_6"
                     android:background="@drawable/bg_settings_segment_track"
-                    android:padding="4dp"
+                    android:padding="@dimen/dim_4"
                     app:selectionRequired="true"
                     app:singleSelection="true">
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/voiceModeAllRadio"
                         style="@style/Widget.Drivest.Button.Segmented"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/settings_voice_all_short"
@@ -296,7 +296,7 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/voiceModeAlertsRadio"
                         style="@style/Widget.Drivest.Button.Segmented"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/settings_voice_alerts_short"
@@ -305,7 +305,7 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/voiceModeMuteRadio"
                         style="@style/Widget.Drivest.Button.Segmented"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/settings_voice_mute"
@@ -316,26 +316,26 @@
                     android:id="@+id/settingsPromptSensitivityHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="@dimen/dim_12"
                     android:text="@string/settings_prompt_sensitivity"
                     android:textColor="@color/settings_text_primary"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_16"
                     android:textStyle="bold" />
 
                 <com.google.android.material.button.MaterialButtonToggleGroup
                     android:id="@+id/promptSensitivityRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="@dimen/dim_6"
                     android:background="@drawable/bg_settings_segment_track"
-                    android:padding="4dp"
+                    android:padding="@dimen/dim_4"
                     app:selectionRequired="true"
                     app:singleSelection="true">
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/promptSensitivityMinimalRadio"
                         style="@style/Widget.Drivest.Button.Segmented"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/settings_prompt_sensitivity_minimal"
@@ -344,7 +344,7 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/promptSensitivityStandardRadio"
                         style="@style/Widget.Drivest.Button.Segmented"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/settings_prompt_sensitivity_standard"
@@ -353,7 +353,7 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/promptSensitivityExtraHelpRadio"
                         style="@style/Widget.Drivest.Button.Segmented"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/settings_prompt_sensitivity_extra_help"
@@ -364,26 +364,26 @@
                     android:id="@+id/settingsUnitsHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="@dimen/dim_12"
                     android:text="@string/settings_units"
                     android:textColor="@color/settings_text_primary"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_16"
                     android:textStyle="bold" />
 
                 <com.google.android.material.button.MaterialButtonToggleGroup
                     android:id="@+id/unitsRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="@dimen/dim_6"
                     android:background="@drawable/bg_settings_segment_track"
-                    android:padding="4dp"
+                    android:padding="@dimen/dim_4"
                     app:selectionRequired="true"
                     app:singleSelection="true">
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/unitsMphRadio"
                         style="@style/Widget.Drivest.Button.Segmented"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/settings_units_mph_short"
@@ -392,7 +392,7 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/unitsKmhRadio"
                         style="@style/Widget.Drivest.Button.Segmented"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/settings_units_kmh_short"
@@ -403,26 +403,26 @@
                     android:id="@+id/settingsAppearanceModeHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="@dimen/dim_12"
                     android:text="@string/settings_appearance_mode"
                     android:textColor="@color/settings_text_primary"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_16"
                     android:textStyle="bold" />
 
                 <com.google.android.material.button.MaterialButtonToggleGroup
                     android:id="@+id/appearanceModeRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="@dimen/dim_6"
                     android:background="@drawable/bg_settings_segment_track"
-                    android:padding="4dp"
+                    android:padding="@dimen/dim_4"
                     app:selectionRequired="true"
                     app:singleSelection="true">
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/appearanceModeAutoRadio"
                         style="@style/Widget.Drivest.Button.Segmented"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/settings_appearance_auto"
@@ -431,7 +431,7 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/appearanceModeDayRadio"
                         style="@style/Widget.Drivest.Button.Segmented"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/settings_appearance_day"
@@ -440,7 +440,7 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/appearanceModeNightRadio"
                         style="@style/Widget.Drivest.Button.Segmented"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/settings_appearance_night"
@@ -451,17 +451,17 @@
                     android:id="@+id/settingsSpeedometerHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="@dimen/dim_12"
                     android:text="@string/settings_speedometer_heading"
                     android:textColor="@color/settings_text_primary"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_16"
                     android:textStyle="bold" />
 
                 <com.google.android.material.switchmaterial.SwitchMaterial
                     android:id="@+id/speedometerEnabledSwitch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="@dimen/dim_4"
                     android:text="@string/settings_speedometer_enabled"
                     android:textColor="@color/settings_text_primary" />
 
@@ -469,26 +469,26 @@
                     android:id="@+id/settingsSpeedLimitDisplayHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dim_8"
                     android:text="@string/settings_speed_limit_display"
                     android:textColor="@color/settings_text_primary"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_16"
                     android:textStyle="bold" />
 
                 <com.google.android.material.button.MaterialButtonToggleGroup
                     android:id="@+id/speedLimitDisplayRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="@dimen/dim_6"
                     android:background="@drawable/bg_settings_segment_track"
-                    android:padding="4dp"
+                    android:padding="@dimen/dim_4"
                     app:selectionRequired="true"
                     app:singleSelection="true">
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/speedLimitDisplayAlwaysRadio"
                         style="@style/Widget.Drivest.Button.Segmented"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/settings_speed_limit_display_always"
@@ -497,7 +497,7 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/speedLimitDisplayOnlyWhenSpeedingRadio"
                         style="@style/Widget.Drivest.Button.Segmented"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/settings_speed_limit_display_only_when_speeding"
@@ -506,7 +506,7 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/speedLimitDisplayNeverRadio"
                         style="@style/Widget.Drivest.Button.Segmented"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/settings_speed_limit_display_never"
@@ -517,26 +517,26 @@
                     android:id="@+id/settingsSpeedingThresholdHeading"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dim_8"
                     android:text="@string/settings_speeding_threshold"
                     android:textColor="@color/settings_text_primary"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_16"
                     android:textStyle="bold" />
 
                 <com.google.android.material.button.MaterialButtonToggleGroup
                     android:id="@+id/speedingThresholdRadioGroup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="@dimen/dim_6"
                     android:background="@drawable/bg_settings_segment_track"
-                    android:padding="4dp"
+                    android:padding="@dimen/dim_4"
                     app:selectionRequired="true"
                     app:singleSelection="true">
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/speedingThresholdAtLimitRadio"
                         style="@style/Widget.Drivest.Button.Segmented"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/settings_speeding_threshold_at_limit"
@@ -545,7 +545,7 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/speedingThresholdPlusSmallRadio"
                         style="@style/Widget.Drivest.Button.Segmented"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="+5"
@@ -554,7 +554,7 @@
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/speedingThresholdPlusLargeRadio"
                         style="@style/Widget.Drivest.Button.Segmented"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="+10"
@@ -565,7 +565,7 @@
                     android:id="@+id/speedAlertAtThresholdSwitch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dim_8"
                     android:text="@string/settings_alert_at_threshold"
                     android:textColor="@color/settings_text_primary" />
 
@@ -573,16 +573,16 @@
                     android:id="@+id/settingsAlertAtThresholdSummary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
+                    android:layout_marginTop="@dimen/dim_2"
                     android:text="@string/settings_alert_at_threshold_summary"
                     android:textColor="@color/settings_text_muted"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/text_12" />
 
                 <LinearLayout
                     android:id="@+id/dataSourceModeContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="@dimen/dim_12"
                     android:orientation="vertical"
                     android:visibility="gone">
 
@@ -592,23 +592,23 @@
                         android:layout_height="wrap_content"
                         android:text="@string/settings_data_source_mode"
                         android:textColor="@color/settings_text_primary"
-                        android:textSize="16sp"
+                        android:textSize="@dimen/text_16"
                         android:textStyle="bold" />
 
                     <com.google.android.material.button.MaterialButtonToggleGroup
                         android:id="@+id/dataSourceModeRadioGroup"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="6dp"
+                        android:layout_marginTop="@dimen/dim_6"
                         android:background="@drawable/bg_settings_segment_track"
-                        android:padding="4dp"
+                        android:padding="@dimen/dim_4"
                         app:selectionRequired="true"
                         app:singleSelection="true">
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/dataSourceBackendCacheAssetsRadio"
                             style="@style/Widget.Drivest.Button.Segmented"
-                            android:layout_width="0dp"
+                            android:layout_width="@dimen/dim_0"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/settings_data_source_backend_cache_assets_short"
@@ -617,7 +617,7 @@
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/dataSourceBackendOnlyRadio"
                             style="@style/Widget.Drivest.Button.Segmented"
-                            android:layout_width="0dp"
+                            android:layout_width="@dimen/dim_0"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/settings_data_source_backend_only_short"
@@ -626,7 +626,7 @@
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/dataSourceAssetsOnlyRadio"
                             style="@style/Widget.Drivest.Button.Segmented"
-                            android:layout_width="0dp"
+                            android:layout_width="@dimen/dim_0"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:text="@string/settings_data_source_assets_only_short"
@@ -638,7 +638,7 @@
                     android:id="@+id/lowStressRoutingSwitch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dim_8"
                     android:text="@string/settings_low_stress_routing"
                     android:textColor="@color/settings_text_primary" />
 
@@ -646,7 +646,7 @@
                     android:id="@+id/hazardsEnabledSwitch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="@dimen/dim_4"
                     android:text="@string/settings_hazards_enabled"
                     android:textColor="@color/settings_text_primary" />
 
@@ -654,15 +654,15 @@
                     android:id="@+id/settingsFreshnessWarning"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/dim_10"
                     android:background="@drawable/bg_settings_warning_chip"
-                    android:paddingStart="12dp"
-                    android:paddingTop="10dp"
-                    android:paddingEnd="12dp"
-                    android:paddingBottom="10dp"
+                    android:paddingStart="@dimen/dim_12"
+                    android:paddingTop="@dimen/dim_10"
+                    android:paddingEnd="@dimen/dim_12"
+                    android:paddingBottom="@dimen/dim_10"
                     android:text="@string/settings_data_freshness_warning"
                     android:textColor="@color/settings_warning_text"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/text_12"
                     android:textStyle="bold"
                     android:visibility="gone" />
             </LinearLayout>
@@ -672,34 +672,34 @@
             android:id="@+id/settingsSectionPrivacy"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="@dimen/dim_18"
             android:drawableStart="@drawable/ic_section_privacy"
-            android:drawablePadding="8dp"
+            android:drawablePadding="@dimen/dim_8"
             android:drawableTint="@color/settings_accent"
             android:text="@string/settings_section_privacy"
             android:textAllCaps="true"
             android:textColor="@color/settings_text_secondary"
-            android:textSize="13sp"
+            android:textSize="@dimen/text_13"
             android:textStyle="bold" />
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dim_8"
             app:cardBackgroundColor="@color/settings_card_bg"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="2dp"
+            app:cardCornerRadius="@dimen/radius_xl"
+            app:cardElevation="@dimen/dim_2"
             app:strokeColor="@color/settings_card_stroke"
-            app:strokeWidth="1dp">
+            app:strokeWidth="@dimen/dim_1">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingStart="16dp"
-                android:paddingTop="16dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="16dp">
+                android:paddingStart="@dimen/dim_16"
+                android:paddingTop="@dimen/dim_16"
+                android:paddingEnd="@dimen/dim_16"
+                android:paddingBottom="@dimen/dim_16">
 
                 <com.google.android.material.switchmaterial.SwitchMaterial
                     android:id="@+id/analyticsSwitch"
@@ -712,7 +712,7 @@
                     android:id="@+id/notificationsSwitch"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="@dimen/dim_4"
                     android:text="@string/settings_notifications_enabled"
                     android:textColor="@color/settings_text_primary" />
 
@@ -720,17 +720,17 @@
                     android:id="@+id/notificationsStatusValue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="@dimen/dim_4"
                     android:text="@string/settings_notifications_status_enabled"
                     android:textColor="@color/settings_text_muted"
-                    android:textSize="13sp" />
+                    android:textSize="@dimen/text_13" />
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/dataRightsButton"
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/dim_10"
                     android:text="@string/settings_data_rights"
                     android:textAllCaps="false"
                     app:strokeColor="@color/settings_card_stroke" />
@@ -741,34 +741,34 @@
             android:id="@+id/settingsSectionLegal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="@dimen/dim_18"
             android:drawableStart="@drawable/ic_section_legal"
-            android:drawablePadding="8dp"
+            android:drawablePadding="@dimen/dim_8"
             android:drawableTint="@color/settings_accent"
             android:text="@string/settings_section_legal"
             android:textAllCaps="true"
             android:textColor="@color/settings_text_secondary"
-            android:textSize="13sp"
+            android:textSize="@dimen/text_13"
             android:textStyle="bold" />
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dim_8"
             app:cardBackgroundColor="@color/settings_card_bg"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="2dp"
+            app:cardCornerRadius="@dimen/radius_xl"
+            app:cardElevation="@dimen/dim_2"
             app:strokeColor="@color/settings_card_stroke"
-            app:strokeWidth="1dp">
+            app:strokeWidth="@dimen/dim_1">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingStart="16dp"
-                android:paddingTop="16dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="16dp">
+                android:paddingStart="@dimen/dim_16"
+                android:paddingTop="@dimen/dim_16"
+                android:paddingEnd="@dimen/dim_16"
+                android:paddingBottom="@dimen/dim_16">
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/termsButton"
@@ -784,7 +784,7 @@
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dim_8"
                     android:text="@string/settings_legal_privacy"
                     android:textAllCaps="false"
                     app:strokeColor="@color/settings_card_stroke" />
@@ -794,7 +794,7 @@
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dim_8"
                     android:text="@string/settings_legal_faq"
                     android:textAllCaps="false"
                     app:strokeColor="@color/settings_card_stroke" />
@@ -804,7 +804,7 @@
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dim_8"
                     android:text="@string/settings_legal_content_accuracy"
                     android:textAllCaps="false"
                     app:strokeColor="@color/settings_card_stroke" />
@@ -814,7 +814,7 @@
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dim_8"
                     android:text="@string/settings_legal_service_availability"
                     android:textAllCaps="false"
                     app:strokeColor="@color/settings_card_stroke" />
@@ -824,7 +824,7 @@
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dim_8"
                     android:text="@string/settings_legal_safety_notice"
                     android:textAllCaps="false"
                     app:strokeColor="@color/settings_card_stroke" />
@@ -834,7 +834,7 @@
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dim_8"
                     android:text="@string/theory_settings"
                     android:textAllCaps="false"
                     android:visibility="gone"
@@ -846,34 +846,34 @@
             android:id="@+id/settingsSectionSupport"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="@dimen/dim_18"
             android:drawableStart="@drawable/ic_section_support"
-            android:drawablePadding="8dp"
+            android:drawablePadding="@dimen/dim_8"
             android:drawableTint="@color/settings_accent"
             android:text="@string/settings_section_support"
             android:textAllCaps="true"
             android:textColor="@color/settings_text_secondary"
-            android:textSize="13sp"
+            android:textSize="@dimen/text_13"
             android:textStyle="bold" />
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dim_8"
             app:cardBackgroundColor="@color/settings_card_bg"
-            app:cardCornerRadius="20dp"
-            app:cardElevation="2dp"
+            app:cardCornerRadius="@dimen/radius_xl"
+            app:cardElevation="@dimen/dim_2"
             app:strokeColor="@color/settings_card_stroke"
-            app:strokeWidth="1dp">
+            app:strokeWidth="@dimen/dim_1">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:paddingStart="16dp"
-                android:paddingTop="16dp"
-                android:paddingEnd="16dp"
-                android:paddingBottom="16dp">
+                android:paddingStart="@dimen/dim_16"
+                android:paddingTop="@dimen/dim_16"
+                android:paddingEnd="@dimen/dim_16"
+                android:paddingBottom="@dimen/dim_16">
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/contactSupportButton"
@@ -889,7 +889,7 @@
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dim_8"
                     android:text="@string/settings_support_about"
                     android:textAllCaps="false"
                     app:strokeColor="@color/settings_card_stroke" />
@@ -899,7 +899,7 @@
                     style="?attr/materialButtonOutlinedStyle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dim_8"
                     android:text="@string/settings_support_export_drive_log"
                     android:textAllCaps="false"
                     app:strokeColor="@color/settings_card_stroke" />
@@ -910,11 +910,11 @@
             android:id="@+id/settingsSavedHint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="@dimen/dim_18"
             android:gravity="center"
             android:text="@string/settings_saved_hint"
             android:textColor="@color/settings_text_muted"
-            android:textSize="13sp" />
+            android:textSize="@dimen/text_13" />
     </LinearLayout>
 </ScrollView>
 

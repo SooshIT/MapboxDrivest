@@ -4,15 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_app_surface"
-    android:padding="20dp">
+    android:padding="@dimen/dim_20">
 
     <TextView
         android:id="@+id/quizScoreboardTitle"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
         android:text="@string/quiz_score_title_solo"
         android:textColor="@color/theory_text_primary"
-        android:textSize="24sp"
+        android:textSize="@dimen/text_24"
         android:textStyle="bold"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,9 +20,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="@dimen/dim_0"
+        android:layout_height="@dimen/dim_0"
+        android:layout_marginTop="@dimen/dim_20"
         app:layout_constraintBottom_toTopOf="@id/quizScoreboardButtonsContainer"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,10 +39,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_theory_panel"
-                android:elevation="3dp"
+                android:elevation="@dimen/dim_3"
                 android:outlineProvider="background"
                 android:orientation="vertical"
-                android:padding="16dp">
+                android:padding="@dimen/dim_16">
 
                 <TextView
                     android:id="@+id/quizScoreboardScoreLabel"
@@ -50,17 +50,17 @@
                     android:layout_height="wrap_content"
                     android:text="@string/quiz_score_label"
                     android:textColor="@color/settings_accent"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/text_12"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/quizScoreboardScore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="@dimen/dim_4"
                     android:text="0"
                     android:textColor="@color/theory_text_primary"
-                    android:textSize="32sp"
+                    android:textSize="@dimen/text_32"
                     android:textStyle="bold"
                     android:gravity="center" />
 
@@ -68,20 +68,20 @@
                     android:id="@+id/quizScoreboardAccuracyLabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/dim_16"
                     android:text="@string/quiz_score_accuracy"
                     android:textColor="@color/settings_accent"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/text_12"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/quizScoreboardAccuracy"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="@dimen/dim_4"
                     android:text="0%"
                     android:textColor="@color/theory_text_primary"
-                    android:textSize="24sp"
+                    android:textSize="@dimen/text_24"
                     android:textStyle="bold"
                     android:gravity="center" />
 
@@ -89,36 +89,36 @@
                     android:id="@+id/quizScoreboardCorrectLabel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="@dimen/dim_16"
                     android:text="@string/quiz_score_correct_of"
                     android:textColor="@color/settings_accent"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/text_12"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/quizScoreboardCorrect"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="@dimen/dim_4"
                     android:text="0 / 0"
                     android:textColor="@color/theory_text_primary"
-                    android:textSize="18sp"
+                    android:textSize="@dimen/text_18"
                     android:gravity="center" />
 
                 <TextView
                     android:id="@+id/quizScoreboardNewBestBadge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="@dimen/dim_12"
                     android:layout_gravity="center"
                     android:background="@drawable/bg_app_chip"
-                    android:paddingStart="8dp"
-                    android:paddingTop="4dp"
-                    android:paddingEnd="8dp"
-                    android:paddingBottom="4dp"
+                    android:paddingStart="@dimen/dim_8"
+                    android:paddingTop="@dimen/dim_4"
+                    android:paddingEnd="@dimen/dim_8"
+                    android:paddingBottom="@dimen/dim_4"
                     android:text="@string/quiz_score_new_best"
                     android:textColor="@color/app_chip_text"
-                    android:textSize="11sp"
+                    android:textSize="@dimen/text_11"
                     android:textStyle="bold"
                     android:visibility="gone" />
             </LinearLayout>
@@ -128,7 +128,7 @@
                 android:id="@+id/quizScoreboardPartyList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/dim_16"
                 android:visibility="gone" />
 
             <!-- Party Winner -->
@@ -136,12 +136,12 @@
                 android:id="@+id/quizScoreboardWinnerCard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/dim_16"
                 android:background="@drawable/bg_theory_panel"
-                android:elevation="3dp"
+                android:elevation="@dimen/dim_3"
                 android:outlineProvider="background"
                 android:orientation="vertical"
-                android:padding="16dp"
+                android:padding="@dimen/dim_16"
                 android:gravity="center"
                 android:visibility="gone">
 
@@ -150,7 +150,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/quiz_score_winner"
                     android:textColor="@color/settings_accent"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/text_12"
                     android:textStyle="bold"
                     android:gravity="center" />
 
@@ -158,10 +158,10 @@
                     android:id="@+id/quizScoreboardWinnerName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dim_8"
                     android:text="Player"
                     android:textColor="@color/theory_text_primary"
-                    android:textSize="20sp"
+                    android:textSize="@dimen/text_20"
                     android:textStyle="bold"
                     android:gravity="center" />
 
@@ -169,10 +169,10 @@
                     android:id="@+id/quizScoreboardWinnerScore"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="@dimen/dim_4"
                     android:text="0 points"
                     android:textColor="@color/theory_text_secondary"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/text_14"
                     android:gravity="center" />
             </LinearLayout>
         </LinearLayout>
@@ -181,9 +181,9 @@
     <!-- Bottom Buttons -->
     <LinearLayout
         android:id="@+id/quizScoreboardButtonsContainer"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/dim_20"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -192,19 +192,19 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/quizScoreboardPlayAgainButton"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
+            android:layout_height="@dimen/dim_52"
             android:text="@string/quiz_score_play_again"
             android:textAllCaps="false"
-            android:textSize="16sp" />
+            android:textSize="@dimen/text_16" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/quizScoreboardHomeButton"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="8dp"
+            android:layout_height="@dimen/dim_52"
+            android:layout_marginTop="@dimen/dim_8"
             android:text="@string/quiz_score_home"
             android:textAllCaps="false"
-            android:textSize="16sp" />
+            android:textSize="@dimen/text_16" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

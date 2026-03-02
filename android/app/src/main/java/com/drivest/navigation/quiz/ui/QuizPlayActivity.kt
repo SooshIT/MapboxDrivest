@@ -1,12 +1,12 @@
 package com.drivest.navigation.quiz.ui
 
 import android.content.Intent
+import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.drivest.navigation.R
@@ -18,6 +18,7 @@ import com.drivest.navigation.quiz.engine.SoloSession
 import com.drivest.navigation.quiz.model.QuizPack
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.chip.Chip
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.launch
 
 class QuizPlayActivity : AppCompatActivity() {
@@ -154,6 +155,7 @@ class QuizPlayActivity : AppCompatActivity() {
                 button.text = question.options[index]
                 button.isEnabled = true
                 button.setTextColor(Color.parseColor("#1F2937"))
+                button.backgroundTintList = ColorStateList.valueOf(Color.WHITE)
             }
 
             explanationCard.visibility = LinearLayout.GONE
@@ -186,12 +188,12 @@ class QuizPlayActivity : AppCompatActivity() {
         }
 
         // Highlight correct answer in green
-        answerButtons[correctIndex].setBackgroundColor(Color.parseColor("#4CAF50"))
+        answerButtons[correctIndex].backgroundTintList = ColorStateList.valueOf(Color.parseColor("#4CAF50"))
         answerButtons[correctIndex].setTextColor(Color.WHITE)
 
         // Highlight selected answer in red if wrong
-        if (answerIndex != correctIndex) {
-            answerButtons[answerIndex].setBackgroundColor(Color.parseColor("#F44336"))
+        if (answerIndex in answerButtons.indices && answerIndex != correctIndex) {
+            answerButtons[answerIndex].backgroundTintList = ColorStateList.valueOf(Color.parseColor("#F44336"))
             answerButtons[answerIndex].setTextColor(Color.WHITE)
         }
 
@@ -273,7 +275,7 @@ class QuizPlayActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        AlertDialog.Builder(this)
+        MaterialAlertDialogBuilder(this)
             .setTitle(R.string.quiz_play_quit_title)
             .setMessage(R.string.quiz_play_quit_message)
             .setPositiveButton(R.string.quiz_play_quit_confirm) { _, _ ->

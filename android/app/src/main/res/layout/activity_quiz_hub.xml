@@ -4,15 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_app_surface"
-    android:padding="20dp">
+    android:padding="@dimen/dim_20">
 
     <TextView
         android:id="@+id/quizHubTitle"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
         android:text="@string/quiz_hub_title"
         android:textColor="@color/theory_text_primary"
-        android:textSize="24sp"
+        android:textSize="@dimen/text_24"
         android:textStyle="bold"
         android:gravity="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,9 +20,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="@dimen/dim_0"
+        android:layout_height="@dimen/dim_0"
+        android:layout_marginTop="@dimen/dim_20"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,19 +39,19 @@
                 android:layout_height="wrap_content"
                 android:text="@string/quiz_mode_label"
                 android:textColor="@color/theory_text_primary"
-                android:textSize="16sp"
+                android:textSize="@dimen/text_16"
                 android:textStyle="bold" />
 
             <RadioGroup
                 android:id="@+id/quizModeRadioGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="@dimen/dim_12"
                 android:orientation="horizontal">
 
                 <RadioButton
                     android:id="@+id/quizModeSoloRadio"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dim_0"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/quiz_mode_solo"
@@ -60,7 +60,7 @@
 
                 <RadioButton
                     android:id="@+id/quizModePartyRadio"
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dim_0"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/quiz_mode_party"
@@ -72,7 +72,7 @@
                 android:id="@+id/quizPlayerNamesSection"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="@dimen/dim_24"
                 android:orientation="vertical"
                 android:visibility="gone">
 
@@ -81,20 +81,20 @@
                     android:layout_height="wrap_content"
                     android:text="@string/quiz_player_names_label"
                     android:textColor="@color/theory_text_primary"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_16"
                     android:textStyle="bold" />
 
                 <LinearLayout
                     android:id="@+id/quizPlayerNamesContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="@dimen/dim_12"
                     android:orientation="vertical" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="12dp"
+                    android:layout_marginTop="@dimen/dim_12"
                     android:orientation="horizontal"
                     android:gravity="center">
 
@@ -104,17 +104,17 @@
                         android:layout_height="wrap_content"
                         android:text="@string/quiz_add_player"
                         android:textAllCaps="false"
-                        android:textSize="12sp"
+                        android:textSize="@dimen/text_12"
                         style="?attr/materialButtonOutlinedStyle" />
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/quizRemovePlayerButton"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
+                        android:layout_marginStart="@dimen/dim_8"
                         android:text="@string/quiz_remove_player"
                         android:textAllCaps="false"
-                        android:textSize="12sp"
+                        android:textSize="@dimen/text_12"
                         style="?attr/materialButtonOutlinedStyle" />
                 </LinearLayout>
             </LinearLayout>
@@ -123,33 +123,33 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="@dimen/dim_24"
                 android:text="@string/quiz_language_label"
                 android:textColor="@color/theory_text_primary"
-                android:textSize="16sp"
+                android:textSize="@dimen/text_16"
                 android:textStyle="bold" />
 
             <Spinner
                 android:id="@+id/quizLanguageSpinner"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="12dp" />
+                android:layout_height="@dimen/dim_48"
+                android:layout_marginTop="@dimen/dim_12" />
 
             <!-- Timer Toggle -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="@dimen/dim_24"
                 android:orientation="horizontal"
                 android:gravity="center_vertical">
 
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dim_0"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/quiz_timer_label"
                     android:textColor="@color/theory_text_primary"
-                    android:textSize="16sp"
+                    android:textSize="@dimen/text_16"
                     android:textStyle="bold" />
 
                 <com.google.android.material.switchmaterial.SwitchMaterial
@@ -163,12 +163,12 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/quizStartButton"
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_marginTop="32dp"
-                android:layout_marginBottom="20dp"
+                android:layout_height="@dimen/dim_52"
+                android:layout_marginTop="@dimen/dim_32"
+                android:layout_marginBottom="@dimen/dim_20"
                 android:text="@string/quiz_start"
                 android:textAllCaps="false"
-                android:textSize="16sp"
+                android:textSize="@dimen/text_16"
                 android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>

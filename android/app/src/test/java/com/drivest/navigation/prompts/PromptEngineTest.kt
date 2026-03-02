@@ -37,12 +37,12 @@ class PromptEngineTest {
     @Test
     fun suppressionByUpcomingManeuverTime() {
         val engine = PromptEngine()
-        val signal = feature("tl_1", OsmFeatureType.TRAFFIC_SIGNAL, latOffset = 0.0010)
+        val crossing = feature("z_1", OsmFeatureType.ZEBRA_CROSSING, latOffset = 0.0010)
 
         val prompt = evaluate(
             engine,
             nowMs = 5_000L,
-            features = listOf(signal),
+            features = listOf(crossing),
             upcomingManeuverTimeS = 5.0
         )
         assertNull(prompt)
@@ -51,12 +51,12 @@ class PromptEngineTest {
     @Test
     fun suppressionByUpcomingManeuverDistance() {
         val engine = PromptEngine()
-        val signal = feature("tl_1", OsmFeatureType.TRAFFIC_SIGNAL, latOffset = 0.0010)
+        val crossing = feature("z_1", OsmFeatureType.ZEBRA_CROSSING, latOffset = 0.0010)
 
         val prompt = evaluate(
             engine,
             nowMs = 5_000L,
-            features = listOf(signal),
+            features = listOf(crossing),
             upcomingManeuverDistanceM = 60.0
         )
         assertNull(prompt)

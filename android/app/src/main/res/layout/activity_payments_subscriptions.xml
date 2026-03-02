@@ -8,14 +8,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/dim_16"
         android:background="@drawable/bg_app_card"
-        android:elevation="2dp"
+        android:elevation="@dimen/dim_2"
         android:orientation="vertical"
-        android:paddingStart="20dp"
-        android:paddingTop="20dp"
-        android:paddingEnd="20dp"
-        android:paddingBottom="24dp">
+        android:paddingStart="@dimen/dim_20"
+        android:paddingTop="@dimen/dim_20"
+        android:paddingEnd="@dimen/dim_20"
+        android:paddingBottom="@dimen/dim_24">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/paymentsBackButton"
@@ -28,64 +28,64 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/dim_10"
             android:text="@string/payments_screen_title"
             android:textColor="@color/settings_text_primary"
-            android:textSize="24sp"
+            android:textSize="@dimen/text_24"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
+            android:layout_marginTop="@dimen/dim_18"
             android:text="@string/payments_section_current_plan"
             android:textColor="@color/settings_text_primary"
-            android:textSize="18sp"
+            android:textSize="@dimen/text_18"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/currentPlanTierValue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dim_8"
             android:textColor="@color/settings_text_primary"
-            android:textSize="15sp"
+            android:textSize="@dimen/text_15"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/currentPlanExpiryValue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="@dimen/dim_4"
             android:textColor="@color/settings_text_secondary"
-            android:textSize="14sp" />
+            android:textSize="@dimen/text_14" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/dim_20"
             android:text="@string/payments_section_plans"
             android:textColor="@color/settings_text_primary"
-            android:textSize="18sp"
+            android:textSize="@dimen/text_18"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/plansLoadingValue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="@dimen/dim_6"
             android:text="@string/payments_loading_plans"
             android:textColor="@color/settings_text_secondary"
-            android:textSize="13sp"
+            android:textSize="@dimen/text_13"
             android:visibility="gone" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/dim_10"
             android:text="@string/payments_plan_free"
             android:textColor="@color/settings_text_primary"
-            android:textSize="15sp"
+            android:textSize="@dimen/text_15"
             android:textStyle="bold" />
 
         <TextView
@@ -93,15 +93,15 @@
             android:layout_height="wrap_content"
             android:text="@string/payments_plan_free_features"
             android:textColor="@color/settings_text_secondary"
-            android:textSize="14sp" />
+            android:textSize="@dimen/text_14" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/dim_12"
             android:text="@string/payments_plan_practice_monthly"
             android:textColor="@color/settings_text_primary"
-            android:textSize="15sp"
+            android:textSize="@dimen/text_15"
             android:textStyle="bold" />
 
         <TextView
@@ -110,7 +110,7 @@
             android:layout_height="wrap_content"
             android:text="@string/payments_price_practice_monthly"
             android:textColor="@color/settings_warning_text"
-            android:textSize="14sp"
+            android:textSize="@dimen/text_14"
             android:textStyle="bold" />
 
         <TextView
@@ -118,15 +118,15 @@
             android:layout_height="wrap_content"
             android:text="@string/payments_plan_practice_monthly_features"
             android:textColor="@color/settings_text_secondary"
-            android:textSize="14sp" />
+            android:textSize="@dimen/text_14" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/dim_12"
             android:text="@string/payments_plan_global_annual"
             android:textColor="@color/settings_text_primary"
-            android:textSize="15sp"
+            android:textSize="@dimen/text_15"
             android:textStyle="bold" />
 
         <TextView
@@ -135,7 +135,7 @@
             android:layout_height="wrap_content"
             android:text="@string/payments_price_global_annual"
             android:textColor="@color/settings_warning_text"
-            android:textSize="14sp"
+            android:textSize="@dimen/text_14"
             android:textStyle="bold" />
 
         <TextView
@@ -143,48 +143,48 @@
             android:layout_height="wrap_content"
             android:text="@string/payments_plan_global_annual_features"
             android:textColor="@color/settings_text_secondary"
-            android:textSize="14sp" />
+            android:textSize="@dimen/text_14" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/dim_20"
             android:text="@string/payments_section_disclosure"
             android:textColor="@color/settings_text_primary"
-            android:textSize="18sp"
+            android:textSize="@dimen/text_18"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/dim_10"
             android:text="@string/payments_disclosure_auto_renew"
             android:textColor="@color/settings_text_secondary"
-            android:textSize="14sp" />
+            android:textSize="@dimen/text_14" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="@dimen/dim_6"
             android:text="@string/payments_disclosure_cancel"
             android:textColor="@color/settings_text_secondary"
-            android:textSize="14sp" />
+            android:textSize="@dimen/text_14" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="@dimen/dim_6"
             android:text="@string/payments_disclosure_refund"
             android:textColor="@color/settings_text_secondary"
-            android:textSize="14sp" />
+            android:textSize="@dimen/text_14" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/dim_20"
             android:text="@string/payments_section_actions"
             android:textColor="@color/settings_text_primary"
-            android:textSize="18sp"
+            android:textSize="@dimen/text_18"
             android:textStyle="bold" />
 
         <com.google.android.material.button.MaterialButton
@@ -192,7 +192,7 @@
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="@dimen/dim_10"
             android:text="@string/payments_action_view_options"
             android:textAllCaps="false" />
 
@@ -201,7 +201,7 @@
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dim_8"
             android:text="@string/payments_action_subscribe_practice"
             android:textAllCaps="false" />
 
@@ -210,7 +210,7 @@
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dim_8"
             android:text="@string/payments_action_subscribe_global"
             android:textAllCaps="false" />
 
@@ -219,7 +219,7 @@
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dim_8"
             android:text="@string/payments_action_restore"
             android:textAllCaps="false" />
 
@@ -228,7 +228,7 @@
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dim_8"
             android:text="@string/payments_action_manage"
             android:textAllCaps="false" />
     </LinearLayout>

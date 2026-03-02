@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp">
+    android:padding="@dimen/dim_24">
 
     <ImageView
         android:id="@+id/paywallLogo"
@@ -17,12 +17,12 @@
 
     <TextView
         android:id="@+id/paywallTitle"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/dim_16"
         android:gravity="center"
-        android:textColor="#231F20"
-        android:textSize="26sp"
+        android:textColor="@color/ui_hex_231F20"
+        android:textSize="@dimen/text_26"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,21 +30,21 @@
 
     <TextView
         android:id="@+id/paywallMessage"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="@dimen/dim_12"
         android:gravity="center"
-        android:textColor="#5A5456"
-        android:textSize="16sp"
+        android:textColor="@color/ui_hex_5A5456"
+        android:textSize="@dimen/text_16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/paywallTitle" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/paywallCloseButton"
-        android:layout_width="0dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="22dp"
+        android:layout_width="@dimen/dim_0"
+        android:layout_height="@dimen/dim_54"
+        android:layout_marginTop="@dimen/dim_22"
         android:text="@string/paywall_close"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,9 +54,9 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/paywallPaymentsButton"
         style="?attr/materialButtonOutlinedStyle"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/dim_10"
         android:text="@string/paywall_open_payments_subscriptions"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"
@@ -66,9 +66,9 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/paywallRestoreButton"
         style="?attr/materialButtonOutlinedStyle"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/dim_10"
         android:text="@string/payments_action_restore"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="parent"

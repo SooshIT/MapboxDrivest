@@ -7,53 +7,53 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/dim_16"
         android:background="@drawable/bg_app_card"
-        android:elevation="2dp"
+        android:elevation="@dimen/dim_2"
         android:outlineProvider="background"
         android:orientation="vertical"
-        android:padding="18dp">
+        android:padding="@dimen/dim_18">
 
         <TextView
             android:id="@+id/theoryLessonTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/theory_text_primary"
-            android:textSize="26sp"
+            android:textSize="@dimen/text_26"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/theoryLessonContent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dim_8"
             android:textColor="@color/theory_text_secondary"
-            android:textSize="15sp" />
+            android:textSize="@dimen/text_15" />
 
         <TextView
             android:id="@+id/theoryLessonKeyPointsHeading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/dim_16"
             android:text="@string/theory_key_points_heading"
             android:textColor="@color/theory_text_primary"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_16"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/theoryLessonKeyPoints"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="@dimen/dim_6"
             android:textColor="@color/theory_text_secondary"
-            android:textSize="14sp" />
+            android:textSize="@dimen/text_14" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/theoryLessonCompleteButton"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="18dp"
+            android:layout_height="@dimen/dim_52"
+            android:layout_marginTop="@dimen/dim_18"
             android:text="@string/theory_mark_lesson_complete"
             android:textAllCaps="false" />
     </LinearLayout>

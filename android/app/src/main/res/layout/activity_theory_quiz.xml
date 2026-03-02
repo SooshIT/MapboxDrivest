@@ -8,16 +8,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="@dimen/dim_16">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_theory_panel"
-            android:elevation="3dp"
+            android:elevation="@dimen/dim_3"
             android:outlineProvider="background"
             android:orientation="vertical"
-            android:padding="18dp">
+            android:padding="@dimen/dim_18">
 
             <TextView
                 android:id="@+id/theoryQuizTitle"
@@ -25,80 +25,80 @@
                 android:layout_height="wrap_content"
                 android:text="@string/theory_quiz_title"
                 android:textColor="@color/theory_text_primary"
-                android:textSize="23sp"
+                android:textSize="@dimen/text_23"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/theoryQuizProgress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/dim_8"
                 android:background="@drawable/bg_app_chip"
-                android:paddingStart="10dp"
-                android:paddingTop="6dp"
-                android:paddingEnd="10dp"
-                android:paddingBottom="6dp"
+                android:paddingStart="@dimen/dim_10"
+                android:paddingTop="@dimen/dim_6"
+                android:paddingEnd="@dimen/dim_10"
+                android:paddingBottom="@dimen/dim_6"
                 android:text="@string/theory_quiz_progress_default"
                 android:textColor="@color/app_chip_text"
-                android:textSize="13sp"
+                android:textSize="@dimen/text_13"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/theoryQuizQuestionPrompt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
+                android:layout_marginTop="@dimen/dim_14"
                 android:textColor="@color/theory_text_primary"
-                android:textSize="19sp"
+                android:textSize="@dimen/text_19"
                 android:textStyle="bold" />
 
             <RadioGroup
                 android:id="@+id/theoryQuizOptionsGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="@dimen/dim_12"
                 android:orientation="vertical">
 
                 <RadioButton
                     android:id="@+id/theoryQuizOptionA"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="@dimen/dim_8"
                     android:background="@drawable/bg_theory_option"
                     android:buttonTint="@color/theory_accent"
-                    android:minHeight="54dp"
-                    android:paddingStart="14dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="14dp"
-                    android:paddingBottom="12dp"
+                    android:minHeight="@dimen/dim_54"
+                    android:paddingStart="@dimen/dim_14"
+                    android:paddingTop="@dimen/dim_12"
+                    android:paddingEnd="@dimen/dim_14"
+                    android:paddingBottom="@dimen/dim_12"
                     android:textColor="@color/theory_text_primary" />
 
                 <RadioButton
                     android:id="@+id/theoryQuizOptionB"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="@dimen/dim_8"
                     android:background="@drawable/bg_theory_option"
                     android:buttonTint="@color/theory_accent"
-                    android:minHeight="54dp"
-                    android:paddingStart="14dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="14dp"
-                    android:paddingBottom="12dp"
+                    android:minHeight="@dimen/dim_54"
+                    android:paddingStart="@dimen/dim_14"
+                    android:paddingTop="@dimen/dim_12"
+                    android:paddingEnd="@dimen/dim_14"
+                    android:paddingBottom="@dimen/dim_12"
                     android:textColor="@color/theory_text_primary" />
 
                 <RadioButton
                     android:id="@+id/theoryQuizOptionC"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginBottom="@dimen/dim_8"
                     android:background="@drawable/bg_theory_option"
                     android:buttonTint="@color/theory_accent"
-                    android:minHeight="54dp"
-                    android:paddingStart="14dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="14dp"
-                    android:paddingBottom="12dp"
+                    android:minHeight="@dimen/dim_54"
+                    android:paddingStart="@dimen/dim_14"
+                    android:paddingTop="@dimen/dim_12"
+                    android:paddingEnd="@dimen/dim_14"
+                    android:paddingBottom="@dimen/dim_12"
                     android:textColor="@color/theory_text_primary" />
 
                 <RadioButton
@@ -107,11 +107,11 @@
                     android:layout_height="wrap_content"
                     android:background="@drawable/bg_theory_option"
                     android:buttonTint="@color/theory_accent"
-                    android:minHeight="54dp"
-                    android:paddingStart="14dp"
-                    android:paddingTop="12dp"
-                    android:paddingEnd="14dp"
-                    android:paddingBottom="12dp"
+                    android:minHeight="@dimen/dim_54"
+                    android:paddingStart="@dimen/dim_14"
+                    android:paddingTop="@dimen/dim_12"
+                    android:paddingEnd="@dimen/dim_14"
+                    android:paddingBottom="@dimen/dim_12"
                     android:textColor="@color/theory_text_primary" />
             </RadioGroup>
 
@@ -119,16 +119,16 @@
                 android:id="@+id/theoryQuizFeedback"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:textColor="@color/theory_text_secondary"
-                android:textSize="14sp" />
+                android:textSize="@dimen/text_14" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/theoryQuizBookmarkButton"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="12dp"
+                android:layout_height="@dimen/dim_48"
+                android:layout_marginTop="@dimen/dim_12"
                 android:text="@string/theory_bookmark_question"
                 android:textAllCaps="false" />
 
@@ -136,8 +136,8 @@
                 android:id="@+id/theoryQuizSubmitButton"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="8dp"
+                android:layout_height="@dimen/dim_48"
+                android:layout_marginTop="@dimen/dim_8"
                 android:text="@string/theory_submit_answer"
                 android:textAllCaps="false" />
 
@@ -145,8 +145,8 @@
                 android:id="@+id/theoryQuizNextButton"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="8dp"
+                android:layout_height="@dimen/dim_48"
+                android:layout_marginTop="@dimen/dim_8"
                 android:text="@string/theory_next_question"
                 android:textAllCaps="false"
                 android:visibility="gone" />
@@ -155,9 +155,9 @@
                 android:id="@+id/theoryQuizSummary"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="@dimen/dim_16"
                 android:textColor="@color/theory_text_primary"
-                android:textSize="15sp"
+                android:textSize="@dimen/text_15"
                 android:textStyle="bold"
                 android:visibility="gone" />
         </LinearLayout>

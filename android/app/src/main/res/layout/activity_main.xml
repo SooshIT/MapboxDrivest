@@ -6,8 +6,8 @@
 
     <com.mapbox.maps.MapView
         android:id="@+id/mapView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/dim_0"
+        android:layout_height="@dimen/dim_0"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -15,11 +15,11 @@
 
     <com.mapbox.navigation.ui.components.maneuver.view.MapboxManeuverView
         android:id="@+id/maneuverView"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginStart="@dimen/dim_12"
+        android:layout_marginTop="@dimen/dim_12"
+        android:layout_marginEnd="@dimen/dim_12"
         android:visibility="gone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,15 +27,15 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/promptBanner"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginStart="@dimen/dim_16"
+        android:layout_marginTop="@dimen/dim_12"
+        android:layout_marginEnd="@dimen/dim_16"
         android:visibility="gone"
-        app:cardBackgroundColor="#231F20"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="5dp"
+        app:cardBackgroundColor="@color/ui_hex_231F20"
+        app:cardCornerRadius="@dimen/map_card_corner_radius"
+        app:cardElevation="@dimen/map_card_elevation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/maneuverView">
@@ -45,26 +45,26 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:orientation="horizontal"
-            android:paddingStart="12dp"
-            android:paddingTop="8dp"
-            android:paddingEnd="12dp"
-            android:paddingBottom="8dp">
+            android:paddingStart="@dimen/dim_14"
+            android:paddingTop="@dimen/dim_10"
+            android:paddingEnd="@dimen/dim_14"
+            android:paddingBottom="@dimen/dim_10">
 
             <ImageView
                 android:id="@+id/promptBannerIcon"
-                android:layout_width="26dp"
-                android:layout_height="26dp"
-                android:layout_marginEnd="10dp"
+                android:layout_width="@dimen/dim_26"
+                android:layout_height="@dimen/dim_26"
+                android:layout_marginEnd="@dimen/dim_10"
                 android:contentDescription="@string/prompt_banner_placeholder" />
 
             <TextView
                 android:id="@+id/promptBannerText"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/dim_0"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/prompt_banner_placeholder"
                 android:textColor="@android:color/white"
-                android:textSize="14sp"
+                android:textSize="@dimen/text_14"
                 android:textStyle="bold" />
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
@@ -73,8 +73,8 @@
         android:id="@+id/drivestMapWatermark"
         android:layout_width="@dimen/logo_width_map_watermark"
         android:layout_height="@dimen/logo_height_map_watermark"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginTop="@dimen/dim_8"
+        android:layout_marginEnd="@dimen/dim_10"
         android:alpha="0.93"
         android:contentDescription="@string/drivest_logo_content_description"
         android:src="@drawable/drivest_logo_tight"
@@ -83,24 +83,24 @@
 
     <FrameLayout
         android:id="@+id/speedometerCard"
-        android:layout_width="84dp"
-        android:layout_height="84dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="2dp"
+        android:layout_width="@dimen/dim_84"
+        android:layout_height="@dimen/dim_84"
+        android:layout_marginStart="@dimen/dim_12"
+        android:layout_marginBottom="@dimen/dim_8"
         android:visibility="gone"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/mapControlsBottomBarrier">
 
         <View
             android:id="@+id/speedometerDialBackground"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="@dimen/dim_70"
+            android:layout_height="@dimen/dim_70"
             android:layout_gravity="center"
             android:background="@drawable/bg_speedometer_waze" />
 
         <LinearLayout
-            android:layout_width="70dp"
-            android:layout_height="70dp"
+            android:layout_width="@dimen/dim_70"
+            android:layout_height="@dimen/dim_70"
             android:layout_gravity="center"
             android:gravity="center"
             android:orientation="vertical">
@@ -111,7 +111,7 @@
                 android:layout_height="wrap_content"
                 android:text="0"
                 android:textColor="@color/speedometer_text"
-                android:textSize="18sp"
+                android:textSize="@dimen/text_18"
                 android:textStyle="bold" />
 
             <TextView
@@ -120,114 +120,114 @@
                 android:layout_height="wrap_content"
                 android:text="MPH"
                 android:textColor="@color/speedometer_unit"
-                android:textSize="8sp"
+                android:textSize="@dimen/text_8"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <TextView
             android:id="@+id/speedLimitValue"
-            android:layout_width="36.5dp"
-            android:layout_height="36.5dp"
+            android:layout_width="@dimen/dim_36_5"
+            android:layout_height="@dimen/dim_36_5"
             android:layout_gravity="top|end"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="0dp"
+            android:layout_marginTop="@dimen/dim_0"
+            android:layout_marginEnd="@dimen/dim_0"
             android:background="@drawable/bg_speed_limit_sign"
             android:gravity="center"
             android:text="--"
-            android:textColor="#231F20"
-            android:textSize="14.3sp"
+            android:textColor="@color/ui_hex_231F20"
+            android:textSize="@dimen/text_14_3"
             android:textStyle="bold" />
     </FrameLayout>
 
     <ImageButton
         android:id="@+id/overviewButton"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="@dimen/dim_52"
+        android:layout_height="@dimen/dim_52"
+        android:layout_marginStart="@dimen/dim_10"
+        android:layout_marginBottom="@dimen/dim_8"
         android:background="@drawable/bg_map_control_chip"
         android:contentDescription="@string/overview_route"
-        android:padding="12dp"
+        android:padding="@dimen/dim_12"
         android:scaleType="fitCenter"
         android:tint="@color/map_control_overview_icon"
-        android:elevation="7dp"
+        android:elevation="@dimen/dim_7"
         app:srcCompat="@drawable/ic_overview_route"
         app:layout_constraintBottom_toTopOf="@id/speedometerCard"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/voiceModeButton"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="@dimen/dim_52"
+        android:layout_height="@dimen/dim_52"
+        android:layout_marginStart="@dimen/dim_10"
+        android:layout_marginBottom="@dimen/dim_8"
         android:background="@drawable/bg_map_control_chip"
         android:contentDescription="@string/voice_mode_all"
-        android:padding="12dp"
+        android:padding="@dimen/dim_12"
         android:scaleType="fitCenter"
-        android:elevation="7dp"
+        android:elevation="@dimen/dim_7"
         app:srcCompat="@drawable/ic_voice_all_waze"
         app:layout_constraintBottom_toTopOf="@id/overviewButton"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/compassButton"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="@dimen/dim_52"
+        android:layout_height="@dimen/dim_52"
+        android:layout_marginStart="@dimen/dim_10"
+        android:layout_marginBottom="@dimen/dim_8"
         android:background="@drawable/bg_map_control_chip"
         android:contentDescription="@string/reset_compass"
-        android:padding="12dp"
+        android:padding="@dimen/dim_12"
         android:scaleType="fitCenter"
-        android:elevation="7dp"
+        android:elevation="@dimen/dim_7"
         app:srcCompat="@drawable/ic_compass_classic"
         app:layout_constraintBottom_toTopOf="@id/voiceModeButton"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
         android:id="@+id/appearanceModeButton"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="@dimen/dim_52"
+        android:layout_height="@dimen/dim_52"
+        android:layout_marginEnd="@dimen/dim_10"
+        android:layout_marginBottom="@dimen/dim_8"
         android:background="@drawable/bg_map_control_chip"
         android:contentDescription="@string/appearance_mode_auto"
-        android:padding="12dp"
+        android:padding="@dimen/dim_12"
         android:scaleType="fitCenter"
-        android:elevation="7dp"
+        android:elevation="@dimen/dim_7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/settingsButton"
         app:srcCompat="@drawable/ic_appearance_auto" />
 
     <ImageButton
         android:id="@+id/settingsButton"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="8dp"
+        android:layout_width="@dimen/dim_52"
+        android:layout_height="@dimen/dim_52"
+        android:layout_marginEnd="@dimen/dim_10"
+        android:layout_marginBottom="@dimen/dim_8"
         android:background="@drawable/bg_map_control_chip"
         android:contentDescription="@string/settings_title"
-        android:padding="12dp"
+        android:padding="@dimen/dim_12"
         android:scaleType="fitCenter"
         android:tint="@color/map_control_settings_icon"
-        android:elevation="7dp"
+        android:elevation="@dimen/dim_7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/mapControlsBottomBarrier"
-        app:layout_goneMarginBottom="16dp"
+        app:layout_goneMarginBottom="@dimen/dim_16"
         app:srcCompat="@drawable/ic_settings_gear" />
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/navPreviewSummaryBanner"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="@dimen/dim_16"
+        android:layout_marginEnd="@dimen/dim_16"
+        android:layout_marginBottom="@dimen/dim_8"
         android:visibility="gone"
-        app:cardBackgroundColor="#231F20"
-        app:cardCornerRadius="14dp"
-        app:cardElevation="6dp"
+        app:cardBackgroundColor="@color/ui_hex_231F20"
+        app:cardCornerRadius="@dimen/map_card_corner_radius"
+        app:cardElevation="@dimen/map_card_elevation"
         app:layout_constraintBottom_toTopOf="@id/routeProgressBanner"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -236,13 +236,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:paddingStart="14dp"
-            android:paddingTop="12dp"
-            android:paddingEnd="14dp"
-            android:paddingBottom="12dp">
+            android:paddingStart="@dimen/dim_14"
+            android:paddingTop="@dimen/dim_12"
+            android:paddingEnd="@dimen/dim_14"
+            android:paddingBottom="@dimen/dim_12">
 
             <LinearLayout
-                android:layout_width="0dp"
+                android:layout_width="@dimen/dim_0"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
@@ -253,30 +253,30 @@
                     android:layout_height="wrap_content"
                     android:text="-"
                     android:textColor="@android:color/white"
-                    android:textSize="15sp"
+                    android:textSize="@dimen/text_15"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/navPreviewDestinationValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="@dimen/dim_4"
                     android:text="-"
-                    android:textColor="#D8D1CE"
-                    android:textSize="12sp" />
+                    android:textColor="@color/ui_hex_D8D1CE"
+                    android:textSize="@dimen/text_12" />
 
                 <com.google.android.material.switchmaterial.SwitchMaterial
                     android:id="@+id/navLowStressSwitch"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:minHeight="0dp"
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:minHeight="@dimen/dim_0"
                     android:showText="true"
                     android:text="@string/nav_low_stress_mode"
-                    android:textColor="#D8D1CE"
-                    android:textSize="11sp"
-                    android:thumbTint="#F37121"
-                    android:trackTint="#5A5456" />
+                    android:textColor="@color/ui_hex_D8D1CE"
+                    android:textSize="@dimen/text_11"
+                    android:thumbTint="@color/ui_hex_F37121"
+                    android:trackTint="@color/ui_hex_5A5456" />
             </LinearLayout>
 
             <LinearLayout
@@ -292,18 +292,18 @@
                     android:gravity="center_vertical|end"
                     android:text="-"
                     android:textColor="@android:color/white"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/text_14"
                     android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/navPreviewDifficultyValue"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
+                    android:layout_marginTop="@dimen/dim_4"
                     android:gravity="center_vertical|end"
                     android:text="-"
-                    android:textColor="#D8D1CE"
-                    android:textSize="11sp"
+                    android:textColor="@color/ui_hex_D8D1CE"
+                    android:textSize="@dimen/text_11"
                     android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
@@ -311,15 +311,15 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/routeProgressBanner"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginStart="@dimen/dim_16"
+        android:layout_marginEnd="@dimen/dim_16"
+        android:layout_marginBottom="@dimen/dim_8"
         android:visibility="gone"
-        app:cardBackgroundColor="#322B2D"
-        app:cardCornerRadius="14dp"
-        app:cardElevation="6dp"
+        app:cardBackgroundColor="@color/ui_hex_322B2D"
+        app:cardCornerRadius="@dimen/map_card_corner_radius"
+        app:cardElevation="@dimen/map_card_elevation"
         app:layout_constraintBottom_toTopOf="@id/startNavigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -328,24 +328,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:padding="12dp">
+            android:padding="@dimen/dim_12">
 
             <ProgressBar
                 android:id="@+id/routeProgressBar"
                 style="?android:attr/progressBarStyleHorizontal"
                 android:layout_width="match_parent"
-                android:layout_height="6dp"
+                android:layout_height="@dimen/dim_6"
                 android:max="100"
                 android:progress="0" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:orientation="horizontal">
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dim_0"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
@@ -354,8 +354,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Completed"
-                        android:textColor="#AFA8A4"
-                        android:textSize="11sp" />
+                        android:textColor="@color/ui_hex_AFA8A4"
+                        android:textSize="@dimen/text_11" />
 
                     <TextView
                         android:id="@+id/routeCompletedValue"
@@ -363,12 +363,12 @@
                         android:layout_height="wrap_content"
                         android:text="0%"
                         android:textColor="@android:color/white"
-                        android:textSize="15sp"
+                        android:textSize="@dimen/text_15"
                         android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dim_0"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
@@ -377,8 +377,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Left"
-                        android:textColor="#AFA8A4"
-                        android:textSize="11sp" />
+                        android:textColor="@color/ui_hex_AFA8A4"
+                        android:textSize="@dimen/text_11" />
 
                     <TextView
                         android:id="@+id/routeDistanceLeftValue"
@@ -386,12 +386,12 @@
                         android:layout_height="wrap_content"
                         android:text="-"
                         android:textColor="@android:color/white"
-                        android:textSize="15sp"
+                        android:textSize="@dimen/text_15"
                         android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dim_0"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
@@ -400,8 +400,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Time Left"
-                        android:textColor="#AFA8A4"
-                        android:textSize="11sp" />
+                        android:textColor="@color/ui_hex_AFA8A4"
+                        android:textSize="@dimen/text_11" />
 
                     <TextView
                         android:id="@+id/routeTimeLeftValue"
@@ -409,12 +409,12 @@
                         android:layout_height="wrap_content"
                         android:text="-"
                         android:textColor="@android:color/white"
-                        android:textSize="15sp"
+                        android:textSize="@dimen/text_15"
                         android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="0dp"
+                    android:layout_width="@dimen/dim_0"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:orientation="vertical">
@@ -423,8 +423,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="ETA"
-                        android:textColor="#AFA8A4"
-                        android:textSize="11sp" />
+                        android:textColor="@color/ui_hex_AFA8A4"
+                        android:textSize="@dimen/text_11" />
 
                     <TextView
                         android:id="@+id/routeEtaValue"
@@ -432,7 +432,7 @@
                         android:layout_height="wrap_content"
                         android:text="-"
                         android:textColor="@android:color/white"
-                        android:textSize="15sp"
+                        android:textSize="@dimen/text_15"
                         android:textStyle="bold" />
                 </LinearLayout>
             </LinearLayout>
@@ -441,10 +441,10 @@
                 android:id="@+id/routeStressValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/dim_8"
                 android:text="@string/route_progress_stress_placeholder"
-                android:textColor="#FFD0B0"
-                android:textSize="12sp"
+                android:textColor="@color/ui_hex_FFD0B0"
+                android:textSize="@dimen/text_12"
                 android:textStyle="bold"
                 android:visibility="gone" />
         </LinearLayout>
@@ -454,16 +454,16 @@
         android:id="@+id/practiceOfflineBadge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="18dp"
-        android:layout_marginBottom="8dp"
-        android:background="#FDE6D8"
-        android:paddingStart="10dp"
-        android:paddingTop="4dp"
-        android:paddingEnd="10dp"
-        android:paddingBottom="4dp"
+        android:layout_marginStart="@dimen/dim_18"
+        android:layout_marginBottom="@dimen/dim_8"
+        android:background="@color/ui_hex_FDE6D8"
+        android:paddingStart="@dimen/dim_10"
+        android:paddingTop="@dimen/dim_4"
+        android:paddingEnd="@dimen/dim_10"
+        android:paddingBottom="@dimen/dim_4"
         android:text="@string/practice_offline_badge"
-        android:textColor="#A94A17"
-        android:textSize="11sp"
+        android:textColor="@color/ui_hex_A94A17"
+        android:textSize="@dimen/text_11"
         android:textStyle="bold"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/startNavigation"
@@ -474,8 +474,8 @@
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="@dimen/dim_16"
+        android:layout_marginBottom="@dimen/dim_8"
         android:text="@string/stop_navigation"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@id/startNavigation"
@@ -483,9 +483,9 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/startNavigation"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/dim_16"
         android:text="@string/start_navigation"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

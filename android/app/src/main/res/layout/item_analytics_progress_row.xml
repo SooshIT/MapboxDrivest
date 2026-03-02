@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
+    android:layout_marginTop="@dimen/dim_8"
     android:orientation="vertical">
 
     <LinearLayout
@@ -13,13 +13,13 @@
 
         <TextView
             android:id="@+id/analyticsRowLabel"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:maxLines="1"
             android:ellipsize="end"
             android:textColor="@color/settings_text_primary"
-            android:textSize="13sp"
+            android:textSize="@dimen/text_13"
             android:textStyle="bold" />
 
         <TextView
@@ -27,17 +27,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/settings_text_secondary"
-            android:textSize="12sp" />
+            android:textSize="@dimen/text_12" />
     </LinearLayout>
 
     <ProgressBar
         android:id="@+id/analyticsRowProgress"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:layout_height="5dp"
-        android:layout_marginTop="5dp"
+        android:layout_height="@dimen/dim_5"
+        android:layout_marginTop="@dimen/dim_5"
         android:max="100"
-        android:minHeight="5dp"
+        android:minHeight="@dimen/dim_5"
         android:progress="0"
         android:progressTint="@color/settings_accent"
         android:progressBackgroundTint="@color/settings_segment_track" />
@@ -46,8 +46,8 @@
         android:id="@+id/analyticsRowSubtext"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="@dimen/dim_4"
         android:textColor="@color/settings_text_secondary"
-        android:textSize="12sp" />
+        android:textSize="@dimen/text_12" />
 
 </LinearLayout>

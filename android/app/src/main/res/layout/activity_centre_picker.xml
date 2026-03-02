@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp">
+    android:padding="@dimen/dim_20">
 
     <ImageView
         android:id="@+id/centreLogo"
@@ -17,12 +17,12 @@
 
     <TextView
         android:id="@+id/centrePickerTitle"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="@dimen/dim_8"
         android:text="@string/centre_picker_title"
-        android:textColor="#231F20"
-        android:textSize="26sp"
+        android:textColor="@color/ui_hex_231F20"
+        android:textSize="@dimen/text_26"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,12 +30,12 @@
 
     <TextView
         android:id="@+id/centrePickerSubtitle"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="@dimen/dim_6"
         android:text="@string/centre_picker_subtitle"
-        android:textColor="#5A5456"
-        android:textSize="14sp"
+        android:textColor="@color/ui_hex_5A5456"
+        android:textSize="@dimen/text_14"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/centrePickerTitle" />
@@ -43,9 +43,9 @@
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/centreSearchLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="@dimen/dim_16"
         android:hint="@string/centre_picker_search_hint"
         app:endIconMode="clear_text"
         app:layout_constraintEnd_toEndOf="parent"
@@ -60,18 +60,18 @@
             android:imeOptions="actionSearch"
             android:inputType="text"
             android:maxLines="1"
-            android:textColor="#231F20"
-            android:textColorHint="#7A7376"
-            android:textSize="16sp" />
+            android:textColor="@color/ui_hex_231F20"
+            android:textColorHint="@color/ui_hex_7A7376"
+            android:textSize="@dimen/text_16" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/centreRecyclerView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="@dimen/dim_0"
+        android:layout_height="@dimen/dim_0"
+        android:layout_marginTop="@dimen/dim_12"
         android:clipToPadding="false"
-        android:paddingBottom="16dp"
+        android:paddingBottom="@dimen/dim_16"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,12 +79,12 @@
 
     <TextView
         android:id="@+id/emptyCentresView"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/centre_picker_empty"
-        android:textColor="#7A7376"
-        android:textSize="15sp"
+        android:textColor="@color/ui_hex_7A7376"
+        android:textSize="@dimen/text_15"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="@id/centreRecyclerView"
         app:layout_constraintEnd_toEndOf="@id/centreRecyclerView"

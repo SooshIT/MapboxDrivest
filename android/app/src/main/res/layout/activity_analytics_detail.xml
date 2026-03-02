@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="@dimen/dim_16">
 
         <!-- Top bar -->
         <LinearLayout
@@ -20,31 +20,31 @@
 
             <ImageButton
                 android:id="@+id/analyticsDetailBackButton"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
+                android:layout_width="@dimen/dim_42"
+                android:layout_height="@dimen/dim_42"
                 android:background="@drawable/bg_map_control_chip"
                 android:contentDescription="@string/analytics_back"
-                android:padding="10dp"
+                android:padding="@dimen/dim_10"
                 android:src="@android:drawable/ic_media_previous"
                 android:tint="@color/settings_text_primary" />
 
             <TextView
                 android:id="@+id/analyticsDetailTitle"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/dim_0"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="@dimen/dim_12"
                 android:layout_weight="1"
                 android:textColor="@color/settings_text_primary"
-                android:textSize="22sp"
+                android:textSize="@dimen/text_22"
                 android:textStyle="bold" />
         </LinearLayout>
 
         <ProgressBar
             android:id="@+id/analyticsDetailSpinner"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="@dimen/dim_36"
+            android:layout_height="@dimen/dim_36"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="@dimen/dim_24"
             android:indeterminate="true" />
 
         <!-- Content inflated programmatically -->
@@ -52,8 +52,8 @@
             android:id="@+id/analyticsDetailContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="@dimen/dim_14"
+            android:layout_marginBottom="@dimen/dim_24"
             android:orientation="vertical"
             android:visibility="gone" />
     </LinearLayout>

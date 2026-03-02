@@ -1,0 +1,183 @@
+================================================================================
+LOCALIZATION TRANSLATIONS FOR DRIVEST
+7 Locales: French, German, Spanish, Italian, Dutch, Polish, Portuguese
+Generated: 2026-02-27
+================================================================================
+
+All XML blocks below are ready to paste into each locale's strings.xml file
+before the closing </resources> tag.
+
+================================================================================
+PORTUGUESE (pt-rPT) — values-pt-rPT/strings.xml [CONTINUED]
+================================================================================
+
+<string name="analytics_window_10">10</string>
+<string name="analytics_window_all">Todos</string>
+<string name="analytics_row_combined_readiness">Preparação combinada</string>
+<string name="analytics_row_combined_readiness_subtext">Impulso: %1$s</string>
+<string name="analytics_row_theory_readiness">Preparação teórica</string>
+<string name="analytics_row_theory_readiness_subtext">%1$d/%2$d tópicos dominados - sequência de %3$d dias</string>
+<string name="analytics_row_theory_accuracy">Precisão da teoria</string>
+<string name="analytics_row_theory_accuracy_subtext">%1$d respostas registadas em quizzes e testes de prática</string>
+<string name="analytics_row_driving_confidence">Confiança de condução (recente)</string>
+<string name="analytics_row_driving_confidence_subtext">Pontuação de confiança do perfil: %1$d/100</string>
+<string name="analytics_row_completion_rate">Taxa de conclusão de trajetos</string>
+<string name="analytics_row_completion_rate_subtext">Complexidade média %1$d/100 de %2$d trajetos recentes</string>
+<string name="analytics_percent_compact">%1$d%%</string>
+<string name="analytics_count_value">%1$d x</string>
+<string name="analytics_hazard_subtext">Exposição relativa nas suas sessões recentes: %1$d%%</string>
+<string name="analytics_session_status_completed">Concluído</string>
+<string name="analytics_session_status_partial">Interrompido</string>
+<string name="analytics_session_stats_line">%1$s  |  %2$d min  |  Complexidade %3$d  |  Fora da rota %4$d</string>
+<string name="analytics_session_bars_legend">Confiança %1$d/100  |  Stress %2$d/100</string>
+<string name="analytics_distance_mi_zero">0 mi</string>
+<string name="analytics_distance_km_zero">0 km</string>
+<string name="analytics_distance_mi_value">%1$s mi</string>
+<string name="analytics_distance_km_value">%1$s km</string>
+<string name="analytics_see_all">Ver tudo →</string>
+<string name="analytics_detail_hazards_title">Áreas de Foco de Condução</string>
+<string name="analytics_detail_theory_title">Discriminação de Teoria</string>
+<string name="analytics_gauge_combined">Preparação</string>
+<string name="analytics_gauge_confidence">Confiança</string>
+<string name="analytics_gauge_completion">Conclusão</string>
+<string name="analytics_gauge_theory_readiness">Teoria</string>
+<string name="analytics_gauge_theory_accuracy">Precisão</string>
+
+<!-- Highway Code -->
+<string name="highway_code_title">Código da Estrada</string>
+<string name="highway_code_back">Voltar</string>
+<string name="highway_code_source_button">GOV.UK</string>
+<string name="highway_code_hero_title">Prática do Código da Estrada</string>
+<string name="highway_code_hero_subtitle">Regras UK • offline • todas as categorias</string>
+<string name="highway_code_chip_questions_default">0 perguntas</string>
+<string name="highway_code_chip_questions_value">%1$d perguntas</string>
+<string name="highway_code_chip_categories_default">0 categorias</string>
+<string name="highway_code_chip_categories_value">%1$d categorias</string>
+<string name="highway_code_chip_session_default">Pontuação 0/0</string>
+<string name="highway_code_chip_session_value">Pontuação %1$d/%2$d</string>
+<string name="highway_code_chip_mode_default">Desafio</string>
+<string name="highway_code_scope_title">Âmbito da Prática</string>
+<string name="highway_code_scope_summary_default">Todas as categorias selecionadas.</string>
+<string name="highway_code_scope_summary_value">%1$s · %2$d perguntas</string>
+<string name="highway_code_mode_title">Modo</string>
+<string name="highway_code_mode_challenge">Desafio</string>
+<string name="highway_code_mode_sprint">Sprint</string>
+<string name="highway_code_mode_review">Revisão</string>
+<string name="highway_code_mode_description_challenge">Selecione a resposta correta. A sua pontuação é acompanhada para esta sessão.</string>
+<string name="highway_code_mode_description_sprint">Rápido — sem explicações, apenas continue.</string>
+<string name="highway_code_mode_description_review">Revele respostas e estude explicações ao seu próprio ritmo.</string>
+<string name="highway_code_question_index_default">P 1</string>
+<string name="highway_code_question_index_value">P %1$d/%2$d</string>
+<string name="highway_code_category_default">—</string>
+<string name="highway_code_category_all">Todas as categorias</string>
+<string name="highway_code_difficulty_easy">Fácil</string>
+<string name="highway_code_difficulty_medium">Médio</string>
+<string name="highway_code_feedback_correct">Correto!</string>
+<string name="highway_code_feedback_incorrect">Quase.</string>
+<string name="highway_code_feedback_revealed">Resposta revelada.</string>
+<string name="highway_code_source_hint_value">Referência: %1$s</string>
+<string name="highway_code_score_value">Pontuação: %1$d/%2$d</string>
+<string name="highway_code_action_reveal">Revelar resposta</string>
+<string name="highway_code_action_next">Próxima pergunta</string>
+<string name="highway_code_no_questions_for_filter">Nenhuma pergunta corresponde a este filtro. Tente selecionar uma categoria diferente.</string>
+<string name="highway_code_footer_note">Baseado em The Highway Code (GOV.UK). Apenas para fins informativos — siga sempre os sinais de trânsito em direto e os requisitos legais.</string>
+<string name="highway_code_load_failed">Não foi possível carregar o pacote do Código da Estrada.</string>
+<string name="highway_code_source_open_failed">Não foi possível abrir o link GOV.UK.</string>
+
+<!-- Quiz -->
+<string name="quiz_home_button_label">Quiz Multas e Penalizações</string>
+<string name="quiz_home_button_subtitle">Teste seu conhecimento de multas de trânsito UK</string>
+<string name="quiz_hub_title">Quiz Multas e Penalizações</string>
+<string name="quiz_mode_label">Modo de Jogo</string>
+<string name="quiz_mode_solo">Solo</string>
+<string name="quiz_mode_party">Grupo (2–8 jogadores)</string>
+<string name="quiz_player_names_label">Nomes dos Jogadores</string>
+<string name="quiz_player_name_hint">Insira nome</string>
+<string name="quiz_add_player">Adicionar Jogador</string>
+<string name="quiz_remove_player">Remover Jogador</string>
+<string name="quiz_language_label">Idioma</string>
+<string name="quiz_timer_label">Temporizador (30 segundos por pergunta)</string>
+<string name="quiz_start">Iniciar Quiz</string>
+<string name="quiz_play_question_of">Pergunta %1$d / %2$d</string>
+<string name="quiz_play_next">Próxima Pergunta</string>
+<string name="quiz_play_explanation_label">Explicação</string>
+<string name="quiz_play_timer_seconds">%1$d s</string>
+<string name="quiz_play_quit_title">Sair do Quiz</string>
+<string name="quiz_play_quit_message">Tem a certeza? O seu progresso será perdido.</string>
+<string name="quiz_play_quit_confirm">Sair</string>
+<string name="quiz_play_quit_cancel">Continuar a Jogar</string>
+<string name="quiz_score_title_solo">Quiz Concluído</string>
+<string name="quiz_score_title_party">Pontuações Finais</string>
+<string name="quiz_score_label">Pontuação</string>
+<string name="quiz_score_accuracy">Precisão</string>
+<string name="quiz_score_correct_of">Respostas Corretas</string>
+<string name="quiz_score_new_best">Novo recorde pessoal!</string>
+<string name="quiz_score_winner">Vencedor do Quiz</string>
+<string name="quiz_score_eliminated">Eliminado</string>
+<string name="quiz_score_play_again">Jogar Novamente</string>
+<string name="quiz_score_home">Voltar ao Início</string>
+<string name="quiz_error_message">Não foi possível carregar o pacote de quiz. Por favor, verifique a sua ligação e tente novamente.</string>
+<string name="quiz_error_retry">Tentar Novamente</string>
+<string name="quiz_error_icon_description">Ícone de erro</string>
+<string name="quiz_error_min_players">Por favor, insira pelo menos 2 nomes de jogadores</string>
+
+<!-- Theory Quiz -->
+<string name="theory_quiz_length_heading">Duração do Quiz Temático</string>
+<string name="theory_quiz_10">Iniciar 10 perguntas</string>
+<string name="theory_quiz_20">Iniciar 20 perguntas</string>
+<string name="theory_quiz_30">Iniciar 30 perguntas</string>
+<string name="theory_quiz_title">Quiz Temático</string>
+<string name="theory_quiz_progress_default">Pergunta 0/0</string>
+<string name="theory_quiz_progress_value">Pergunta %1$d/%2$d</string>
+<string name="theory_quiz_summary_value">Quiz concluído: %1$d/%2$d</string>
+<string name="theory_quiz_no_questions">Nenhuma pergunta disponível para este modo ainda.</string>
+
+<!-- Traffic Signs -->
+<string name="traffic_signs_title">Sinais de Trânsito</string>
+<string name="traffic_signs_subtitle">Aprenda sinais de trânsito UK com cartões, quizzes e navegação por categorias.</string>
+<string name="traffic_signs_back">Voltar</string>
+<string name="traffic_signs_source_short">GOV.UK</string>
+<string name="traffic_signs_source_note">Baseado nos recursos «Know your traffic signs» do DfT UK e índice de dados de imagens. Use como apoio de revisão e siga sempre os sinais de trânsito em direto e requisitos legais.</string>
+<string name="traffic_signs_count_default">0 sinais</string>
+<string name="traffic_signs_count_value">%1$d sinais</string>
+<string name="traffic_signs_categories_default">0 categorias</string>
+<string name="traffic_signs_categories_value">%1$d categorias</string>
+<string name="traffic_signs_quiz_score_default">Quiz 0/0 • Conhecidos 0</string>
+<string name="traffic_signs_quiz_score_value">Quiz %1$d/%2$d • Conhecidos %3$d</string>
+<string name="traffic_signs_filter_heading">Âmbito da Prática</string>
+<string name="traffic_signs_filter_summary_default">Todos os sinais selecionados.</string>
+<string name="traffic_signs_filter_summary_value">%1$s • %2$d sinais disponíveis</string>
+<string name="traffic_signs_mode_heading">Modo</string>
+<string name="traffic_signs_mode_flashcards">Cartões</string>
+<string name="traffic_signs_mode_quiz">Quiz</string>
+<string name="traffic_signs_mode_browse">Procurar</string>
+<string name="traffic_signs_flashcard_heading">Prática com Cartões</string>
+<string name="traffic_signs_sign_image">Imagem do sinal de trânsito</string>
+<string name="traffic_signs_reveal_meaning">Revelar significado</string>
+<string name="traffic_signs_hide_meaning">Ocultar significado</string>
+<string name="traffic_signs_mark_known">Conheço este</string>
+<string name="traffic_signs_next_sign">Próximo sinal</string>
+<string name="traffic_signs_quiz_heading">Quiz Rápido</string>
+<string name="traffic_signs_quiz_prompt_default">Escolha o significado correto para o sinal.</string>
+<string name="traffic_signs_quiz_prompt">O que significa este sinal?</string>
+<string name="traffic_signs_quiz_not_enough_signs">Não há sinais suficientes neste âmbito para um quiz de 4 opções. Selecione uma categoria mais ampla.</string>
+<string name="traffic_signs_next_question">Próxima pergunta</string>
+<string name="traffic_signs_quiz_feedback_correct">Correto.</string>
+<string name="traffic_signs_quiz_feedback_incorrect">Quase. Resposta correta: %1$s</string>
+<string name="traffic_signs_browse_heading">Procurar Biblioteca de Sinais</string>
+<string name="traffic_signs_search_hint">Procure por significado do sinal, código ou categoria</string>
+<string name="traffic_signs_browse_results_default">0 resultados</string>
+<string name="traffic_signs_browse_results_value">%1$d sinais correspondentes</string>
+<string name="traffic_signs_load_more">Carregar mais</string>
+<string name="traffic_signs_load_more_value">Carregar mais (%1$d restantes)</string>
+<string name="traffic_signs_unknown_caption">Sinal de trânsito</string>
+<string name="traffic_signs_sign_code_value">Código %1$s</string>
+<string name="traffic_signs_marked_known_toast">Adicionado aos sinais conhecidos para esta sessão.</string>
+<string name="traffic_signs_load_failed">Não foi possível carregar a biblioteca de sinais de trânsito.</string>
+<string name="traffic_signs_category_all">Todas as categorias</string>
+<string name="traffic_signs_source_open_failed">Não foi possível abrir o link de origem GOV.UK.</string>
+<string name="traffic_signs_detail_title">Detalhes do sinal</string>
+<string name="traffic_signs_close">Fechar</string>
+<string name="traffic_signs_use_in_quiz">Quiz nesta categoria</string>
+<string name="traffic_signs_no_description">Nenhuma descrição disponível.</string>
+<string name="traffic_signs_uk_flag_icon_content_description">Ícone de sinais de trânsito UK</string>

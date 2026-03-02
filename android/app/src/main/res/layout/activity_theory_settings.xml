@@ -7,12 +7,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/dim_16"
         android:background="@drawable/bg_app_card"
-        android:elevation="2dp"
+        android:elevation="@dimen/dim_2"
         android:outlineProvider="background"
         android:orientation="vertical"
-        android:padding="18dp">
+        android:padding="@dimen/dim_18">
 
         <TextView
             android:id="@+id/theorySettingsTitle"
@@ -20,45 +20,45 @@
             android:layout_height="wrap_content"
             android:text="@string/theory_settings"
             android:textColor="@color/theory_text_primary"
-            android:textSize="26sp"
+            android:textSize="@dimen/text_26"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/theorySettingsDisclaimerHeading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/dim_16"
             android:text="@string/theory_disclaimer_heading"
             android:textColor="@color/theory_text_primary"
-            android:textSize="17sp"
+            android:textSize="@dimen/text_17"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/theorySettingsDisclaimerText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="@dimen/dim_6"
             android:text="@string/theory_disclaimer_text"
             android:textColor="@color/theory_text_secondary"
-            android:textSize="14sp" />
+            android:textSize="@dimen/text_14" />
 
         <TextView
             android:id="@+id/theorySettingsAttributionHeading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/dim_16"
             android:text="@string/theory_attribution_heading"
             android:textColor="@color/theory_text_primary"
-            android:textSize="17sp"
+            android:textSize="@dimen/text_17"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/theorySettingsAttributionText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="@dimen/dim_6"
             android:text="@string/theory_attribution_text"
             android:textColor="@color/theory_text_secondary"
-            android:textSize="14sp" />
+            android:textSize="@dimen/text_14" />
     </LinearLayout>
 </ScrollView>

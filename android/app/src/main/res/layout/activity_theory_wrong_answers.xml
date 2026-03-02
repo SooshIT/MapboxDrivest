@@ -7,12 +7,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/dim_16"
         android:background="@drawable/bg_app_card"
-        android:elevation="2dp"
+        android:elevation="@dimen/dim_2"
         android:outlineProvider="background"
         android:orientation="vertical"
-        android:padding="18dp">
+        android:padding="@dimen/dim_18">
 
         <TextView
             android:id="@+id/theoryWrongAnswersTitle"
@@ -20,23 +20,23 @@
             android:layout_height="wrap_content"
             android:text="@string/theory_wrong_answers"
             android:textColor="@color/theory_text_primary"
-            android:textSize="26sp"
+            android:textSize="@dimen/text_26"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/theoryWrongAnswersSummary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dim_8"
             android:textColor="@color/theory_text_secondary"
-            android:textSize="14sp" />
+            android:textSize="@dimen/text_14" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/theoryWrongAnswersStartQuizButton"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="12dp"
+            android:layout_height="@dimen/dim_48"
+            android:layout_marginTop="@dimen/dim_12"
             android:text="@string/theory_review_wrong_answers"
             android:textAllCaps="false" />
 
@@ -44,7 +44,7 @@
             android:id="@+id/theoryWrongAnswersListContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/dim_12"
             android:orientation="vertical" />
     </LinearLayout>
 </ScrollView>

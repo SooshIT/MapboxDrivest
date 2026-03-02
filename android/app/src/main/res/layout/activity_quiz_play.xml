@@ -4,12 +4,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_app_surface"
-    android:padding="20dp">
+    android:padding="@dimen/dim_20">
 
     <!-- Progress Header -->
     <LinearLayout
         android:id="@+id/quizPlayProgressHeader"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
@@ -19,12 +19,12 @@
 
         <TextView
             android:id="@+id/quizPlayProgressText"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/quiz_play_question_of"
             android:textColor="@color/theory_text_primary"
-            android:textSize="14sp"
+            android:textSize="@dimen/text_14"
             android:textStyle="bold" />
 
         <TextView
@@ -32,7 +32,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/settings_accent"
-            android:textSize="14sp"
+            android:textSize="@dimen/text_14"
             android:textStyle="bold"
             android:visibility="gone" />
     </LinearLayout>
@@ -42,7 +42,7 @@
         android:id="@+id/quizPlayPlayerChip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="@dimen/dim_12"
         android:textColor="@color/theory_text_primary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,14 +52,14 @@
     <!-- Question Card -->
     <LinearLayout
         android:id="@+id/quizPlayQuestionCard"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/dim_20"
         android:background="@drawable/bg_theory_panel"
-        android:elevation="3dp"
+        android:elevation="@dimen/dim_3"
         android:outlineProvider="background"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="@dimen/dim_16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/quizPlayPlayerChip">
@@ -69,17 +69,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/theory_text_primary"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_16"
             android:textStyle="bold"
-            android:lineSpacingExtra="2dp" />
+            android:lineSpacingExtra="@dimen/dim_2" />
     </LinearLayout>
 
     <!-- Answer Buttons Container -->
     <LinearLayout
         android:id="@+id/quizPlayAnswersContainer"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/dim_20"
         android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -89,53 +89,53 @@
             android:id="@+id/quizPlayAnswer0"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginBottom="8dp"
+            android:layout_height="@dimen/dim_48"
+            android:layout_marginBottom="@dimen/dim_8"
             android:textAllCaps="false"
-            android:textSize="14sp"
+            android:textSize="@dimen/text_14"
             android:gravity="center" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/quizPlayAnswer1"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginBottom="8dp"
+            android:layout_height="@dimen/dim_48"
+            android:layout_marginBottom="@dimen/dim_8"
             android:textAllCaps="false"
-            android:textSize="14sp"
+            android:textSize="@dimen/text_14"
             android:gravity="center" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/quizPlayAnswer2"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginBottom="8dp"
+            android:layout_height="@dimen/dim_48"
+            android:layout_marginBottom="@dimen/dim_8"
             android:textAllCaps="false"
-            android:textSize="14sp"
+            android:textSize="@dimen/text_14"
             android:gravity="center" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/quizPlayAnswer3"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="@dimen/dim_48"
             android:textAllCaps="false"
-            android:textSize="14sp"
+            android:textSize="@dimen/text_14"
             android:gravity="center" />
     </LinearLayout>
 
     <!-- Explanation Card (hidden until answer submitted) -->
     <LinearLayout
         android:id="@+id/quizPlayExplanationCard"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/dim_20"
         android:background="@drawable/bg_theory_panel"
-        android:elevation="3dp"
+        android:elevation="@dimen/dim_3"
         android:outlineProvider="background"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="@dimen/dim_16"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/quizPlayAnswersContainer"
@@ -147,29 +147,29 @@
             android:layout_height="wrap_content"
             android:text="@string/quiz_play_explanation_label"
             android:textColor="@color/settings_accent"
-            android:textSize="12sp"
+            android:textSize="@dimen/text_12"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/quizPlayExplanation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dim_8"
             android:textColor="@color/theory_text_primary"
-            android:textSize="14sp"
-            android:lineSpacingExtra="2dp" />
+            android:textSize="@dimen/text_14"
+            android:lineSpacingExtra="@dimen/dim_2" />
     </LinearLayout>
 
     <!-- Next Button -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/quizPlayNextButton"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="@dimen/dim_0"
+        android:layout_height="@dimen/dim_52"
+        android:layout_marginTop="@dimen/dim_20"
+        android:layout_marginBottom="@dimen/dim_20"
         android:text="@string/quiz_play_next"
         android:textAllCaps="false"
-        android:textSize="16sp"
+        android:textSize="@dimen/text_16"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

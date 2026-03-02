@@ -7,7 +7,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="20dp">
+        android:padding="@dimen/dim_20">
 
         <ImageView
             android:id="@+id/sessionReportLogo"
@@ -21,11 +21,11 @@
 
         <TextView
             android:id="@+id/sessionReportTitle"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:textColor="#231F20"
-            android:textSize="24sp"
+            android:layout_marginTop="@dimen/dim_10"
+            android:textColor="@color/ui_hex_231F20"
+            android:textSize="@dimen/text_24"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -33,22 +33,22 @@
 
         <TextView
             android:id="@+id/sessionReportMeta"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
-            android:textColor="#5A5456"
-            android:textSize="14sp"
+            android:layout_marginTop="@dimen/dim_6"
+            android:textColor="@color/ui_hex_5A5456"
+            android:textSize="@dimen/text_14"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/sessionReportTitle" />
 
         <TextView
             android:id="@+id/sessionReportHazardCounts"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textColor="#F37121"
-            android:textSize="13sp"
+            android:layout_marginTop="@dimen/dim_8"
+            android:textColor="@color/ui_hex_F37121"
+            android:textSize="@dimen/text_13"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -56,12 +56,12 @@
 
         <TextView
             android:id="@+id/sessionReportTheoryHeading"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/dim_12"
             android:text="@string/session_report_theory_heading"
-            android:textColor="#231F20"
-            android:textSize="16sp"
+            android:textColor="@color/ui_hex_231F20"
+            android:textSize="@dimen/text_16"
             android:textStyle="bold"
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
@@ -70,9 +70,9 @@
 
         <LinearLayout
             android:id="@+id/sessionReportTheoryContainer"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="@dimen/dim_6"
             android:orientation="vertical"
             android:visibility="gone"
             app:layout_constraintEnd_toEndOf="parent"
@@ -81,12 +81,12 @@
 
         <TextView
             android:id="@+id/sessionReportSegmentsHeading"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/dim_16"
             android:text="@string/session_report_stress_segments"
-            android:textColor="#231F20"
-            android:textSize="17sp"
+            android:textColor="@color/ui_hex_231F20"
+            android:textSize="@dimen/text_17"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -94,23 +94,23 @@
 
         <TextView
             android:id="@+id/sessionReportSegments"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textColor="#231F20"
-            android:textSize="14sp"
+            android:layout_marginTop="@dimen/dim_8"
+            android:textColor="@color/ui_hex_231F20"
+            android:textSize="@dimen/text_14"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/sessionReportSegmentsHeading" />
 
         <TextView
             android:id="@+id/sessionReportSuggestionsHeading"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/dim_16"
             android:text="@string/session_report_suggestions"
-            android:textColor="#231F20"
-            android:textSize="17sp"
+            android:textColor="@color/ui_hex_231F20"
+            android:textSize="@dimen/text_17"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -118,20 +118,20 @@
 
         <TextView
             android:id="@+id/sessionReportSuggestions"
-            android:layout_width="0dp"
+            android:layout_width="@dimen/dim_0"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textColor="#231F20"
-            android:textSize="14sp"
+            android:layout_marginTop="@dimen/dim_8"
+            android:textColor="@color/ui_hex_231F20"
+            android:textSize="@dimen/text_14"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/sessionReportSuggestionsHeading" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/sessionReportExportButton"
-            android:layout_width="0dp"
-            android:layout_height="52dp"
-            android:layout_marginTop="20dp"
+            android:layout_width="@dimen/dim_0"
+            android:layout_height="@dimen/dim_52"
+            android:layout_marginTop="@dimen/dim_20"
             android:text="@string/session_report_export_button"
             android:textAllCaps="false"
             app:layout_constraintEnd_toEndOf="parent"
@@ -141,9 +141,9 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/sessionReportDoneButton"
             style="?attr/materialButtonOutlinedStyle"
-            android:layout_width="0dp"
-            android:layout_height="52dp"
-            android:layout_marginTop="10dp"
+            android:layout_width="@dimen/dim_0"
+            android:layout_height="@dimen/dim_52"
+            android:layout_marginTop="@dimen/dim_10"
             android:text="@string/session_report_done_button"
             android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"

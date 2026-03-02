@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="@dimen/dim_16">
 
         <!-- Top bar -->
         <LinearLayout
@@ -21,52 +21,52 @@
 
             <ImageButton
                 android:id="@+id/analyticsBackButton"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
+                android:layout_width="@dimen/dim_42"
+                android:layout_height="@dimen/dim_42"
                 android:background="@drawable/bg_map_control_chip"
                 android:contentDescription="@string/analytics_back"
-                android:padding="10dp"
+                android:padding="@dimen/dim_10"
                 android:src="@android:drawable/ic_media_previous"
                 android:tint="@color/settings_text_primary" />
 
             <TextView
                 android:id="@+id/analyticsTopTitle"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/dim_0"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="12dp"
+                android:layout_marginStart="@dimen/dim_12"
                 android:layout_weight="1"
                 android:text="@string/analytics_title"
                 android:textColor="@color/settings_text_primary"
-                android:textSize="26sp"
+                android:textSize="@dimen/text_26"
                 android:textStyle="bold" />
 
             <ImageButton
                 android:id="@+id/analyticsRefreshButton"
-                android:layout_width="42dp"
-                android:layout_height="42dp"
+                android:layout_width="@dimen/dim_42"
+                android:layout_height="@dimen/dim_42"
                 android:background="@drawable/bg_map_control_chip"
                 android:contentDescription="@string/analytics_refresh"
-                android:padding="10dp"
+                android:padding="@dimen/dim_10"
                 android:src="@android:drawable/ic_popup_sync"
                 android:tint="@color/settings_accent" />
         </LinearLayout>
 
         <ProgressBar
             android:id="@+id/analyticsLoadingSpinner"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="@dimen/dim_36"
+            android:layout_height="@dimen/dim_36"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="@dimen/dim_24"
             android:indeterminate="true" />
 
         <LinearLayout
             android:id="@+id/analyticsErrorCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/dim_16"
             android:background="@drawable/bg_app_card"
             android:orientation="vertical"
-            android:padding="14dp"
+            android:padding="@dimen/dim_14"
             android:visibility="gone">
 
             <TextView
@@ -75,14 +75,14 @@
                 android:layout_height="wrap_content"
                 android:text="@string/analytics_load_failed"
                 android:textColor="@color/settings_text_primary"
-                android:textSize="13sp" />
+                android:textSize="@dimen/text_13" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/analyticsRetryButton"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="@dimen/dim_44"
+                android:layout_marginTop="@dimen/dim_10"
                 android:text="@string/analytics_retry"
                 android:textAllCaps="false" />
         </LinearLayout>
@@ -91,7 +91,7 @@
             android:id="@+id/analyticsContentContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/dim_12"
             android:orientation="vertical"
             android:visibility="gone">
 
@@ -103,31 +103,31 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_analytics_hero"
                 android:orientation="vertical"
-                android:padding="14dp">
+                android:padding="@dimen/dim_14">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/analytics_hero_title"
-                    android:textColor="#FFFFFF"
-                    android:textSize="18sp"
+                    android:textColor="@color/ui_hex_FFFFFF"
+                    android:textSize="@dimen/text_18"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="2dp"
+                    android:layout_marginTop="@dimen/dim_2"
                     android:text="@string/analytics_hero_subtitle"
-                    android:textColor="#DCE7FF"
-                    android:textSize="12sp" />
+                    android:textColor="@color/ui_hex_DCE7FF"
+                    android:textSize="@dimen/text_12" />
 
                 <!-- Readiness gauge — 220 dp wide, centred -->
                 <com.drivest.navigation.analytics.GaugeView
                     android:id="@+id/analyticsHeroGauge"
-                    android:layout_width="220dp"
+                    android:layout_width="@dimen/dim_220"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="@dimen/dim_6"
                     app:gaugeDark="true"
                     app:gaugeLabel="@string/analytics_gauge_combined" />
 
@@ -137,75 +137,75 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="@dimen/dim_6"
                     android:background="@drawable/bg_analytics_hero_chip"
-                    android:paddingStart="12dp"
-                    android:paddingTop="5dp"
-                    android:paddingEnd="12dp"
-                    android:paddingBottom="5dp"
-                    android:textColor="#FFFFFF"
-                    android:textSize="12sp"
+                    android:paddingStart="@dimen/dim_12"
+                    android:paddingTop="@dimen/dim_5"
+                    android:paddingEnd="@dimen/dim_12"
+                    android:paddingBottom="@dimen/dim_5"
+                    android:textColor="@color/ui_hex_FFFFFF"
+                    android:textSize="@dimen/text_12"
                     android:textStyle="bold" />
 
                 <!-- Stat chips row -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/dim_10"
                     android:orientation="horizontal">
 
                     <TextView
                         android:id="@+id/analyticsHeroSessionsChip"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="4dp"
+                        android:layout_marginEnd="@dimen/dim_4"
                         android:layout_weight="1"
                         android:background="@drawable/bg_analytics_hero_chip"
                         android:gravity="center"
-                        android:padding="6dp"
-                        android:textColor="#FFFFFF"
-                        android:textSize="11sp"
+                        android:padding="@dimen/dim_6"
+                        android:textColor="@color/ui_hex_FFFFFF"
+                        android:textSize="@dimen/text_11"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/analyticsHeroCompletionChip"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
-                        android:layout_marginEnd="4dp"
+                        android:layout_marginStart="@dimen/dim_4"
+                        android:layout_marginEnd="@dimen/dim_4"
                         android:layout_weight="1"
                         android:background="@drawable/bg_analytics_hero_chip"
                         android:gravity="center"
-                        android:padding="6dp"
-                        android:textColor="#FFFFFF"
-                        android:textSize="11sp"
+                        android:padding="@dimen/dim_6"
+                        android:textColor="@color/ui_hex_FFFFFF"
+                        android:textSize="@dimen/text_11"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/analyticsHeroStreakChip"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
-                        android:layout_marginEnd="4dp"
+                        android:layout_marginStart="@dimen/dim_4"
+                        android:layout_marginEnd="@dimen/dim_4"
                         android:layout_weight="1"
                         android:background="@drawable/bg_analytics_hero_chip"
                         android:gravity="center"
-                        android:padding="6dp"
-                        android:textColor="#FFFFFF"
-                        android:textSize="11sp"
+                        android:padding="@dimen/dim_6"
+                        android:textColor="@color/ui_hex_FFFFFF"
+                        android:textSize="@dimen/text_11"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/analyticsHeroDistanceChip"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
+                        android:layout_marginStart="@dimen/dim_4"
                         android:layout_weight="1"
                         android:background="@drawable/bg_analytics_hero_chip"
                         android:gravity="center"
-                        android:padding="6dp"
-                        android:textColor="#FFFFFF"
-                        android:textSize="11sp"
+                        android:padding="@dimen/dim_6"
+                        android:textColor="@color/ui_hex_FFFFFF"
+                        android:textSize="@dimen/text_11"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -213,9 +213,9 @@
                     android:id="@+id/analyticsHeroSupportLine"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:textColor="#DCE7FF"
-                    android:textSize="11sp" />
+                    android:layout_marginTop="@dimen/dim_8"
+                    android:textColor="@color/ui_hex_DCE7FF"
+                    android:textSize="@dimen/text_11" />
             </LinearLayout>
 
             <!-- ══════════════════════════════════════════
@@ -224,38 +224,38 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:background="@drawable/bg_app_card"
                 android:orientation="vertical"
-                android:padding="12dp">
+                android:padding="@dimen/dim_12">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/analytics_snapshot_title"
                     android:textColor="@color/settings_text_primary"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/text_14"
                     android:textStyle="bold" />
 
                 <!-- Row 1 -->
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dim_8"
                     android:orientation="horizontal">
 
                     <com.drivest.navigation.analytics.GaugeView
                         android:id="@+id/analyticsGaugeConfidence"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         app:gaugeLabel="@string/analytics_gauge_confidence" />
 
                     <com.drivest.navigation.analytics.GaugeView
                         android:id="@+id/analyticsGaugeCompletion"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
+                        android:layout_marginStart="@dimen/dim_8"
                         android:layout_weight="1"
                         app:gaugeLabel="@string/analytics_gauge_completion" />
                 </LinearLayout>
@@ -264,21 +264,21 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dim_8"
                     android:orientation="horizontal">
 
                     <com.drivest.navigation.analytics.GaugeView
                         android:id="@+id/analyticsGaugeTheoryReadiness"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         app:gaugeLabel="@string/analytics_gauge_theory_readiness" />
 
                     <com.drivest.navigation.analytics.GaugeView
                         android:id="@+id/analyticsGaugeTheoryAccuracy"
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="8dp"
+                        android:layout_marginStart="@dimen/dim_8"
                         android:layout_weight="1"
                         app:gaugeLabel="@string/analytics_gauge_theory_accuracy" />
                 </LinearLayout>
@@ -290,10 +290,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:background="@drawable/bg_app_card"
                 android:orientation="vertical"
-                android:padding="12dp">
+                android:padding="@dimen/dim_12">
 
                 <!-- Section header with "See all" link -->
                 <LinearLayout
@@ -303,12 +303,12 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/analytics_focus_areas_title"
                         android:textColor="@color/settings_text_primary"
-                        android:textSize="14sp"
+                        android:textSize="@dimen/text_14"
                         android:textStyle="bold" />
 
                     <TextView
@@ -316,13 +316,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_app_chip"
-                        android:paddingStart="10dp"
-                        android:paddingTop="4dp"
-                        android:paddingEnd="10dp"
-                        android:paddingBottom="4dp"
+                        android:paddingStart="@dimen/dim_10"
+                        android:paddingTop="@dimen/dim_4"
+                        android:paddingEnd="@dimen/dim_10"
+                        android:paddingBottom="@dimen/dim_4"
                         android:text="@string/analytics_see_all"
                         android:textColor="@color/app_chip_text"
-                        android:textSize="11sp"
+                        android:textSize="@dimen/text_11"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -330,10 +330,10 @@
                     android:id="@+id/analyticsHazardEmpty"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dim_8"
                     android:text="@string/analytics_hazard_empty"
                     android:textColor="@color/settings_text_secondary"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/text_12"
                     android:visibility="gone" />
 
                 <!-- Gauge rows inflated here dynamically -->
@@ -341,7 +341,7 @@
                     android:id="@+id/analyticsHazardRowsContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="@dimen/dim_6"
                     android:orientation="vertical" />
             </LinearLayout>
 
@@ -351,10 +351,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:background="@drawable/bg_app_card"
                 android:orientation="vertical"
-                android:padding="12dp">
+                android:padding="@dimen/dim_12">
 
                 <!-- Section header with "See all" link -->
                 <LinearLayout
@@ -364,12 +364,12 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/analytics_theory_title"
                         android:textColor="@color/settings_text_primary"
-                        android:textSize="14sp"
+                        android:textSize="@dimen/text_14"
                         android:textStyle="bold" />
 
                     <TextView
@@ -377,13 +377,13 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:background="@drawable/bg_app_chip"
-                        android:paddingStart="10dp"
-                        android:paddingTop="4dp"
-                        android:paddingEnd="10dp"
-                        android:paddingBottom="4dp"
+                        android:paddingStart="@dimen/dim_10"
+                        android:paddingTop="@dimen/dim_4"
+                        android:paddingEnd="@dimen/dim_10"
+                        android:paddingBottom="@dimen/dim_4"
                         android:text="@string/analytics_see_all"
                         android:textColor="@color/app_chip_text"
-                        android:textSize="11sp"
+                        android:textSize="@dimen/text_11"
                         android:textStyle="bold" />
                 </LinearLayout>
 
@@ -391,27 +391,27 @@
                     android:id="@+id/analyticsTheorySummary"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="@dimen/dim_6"
                     android:textColor="@color/settings_text_secondary"
-                    android:textSize="12sp" />
+                    android:textSize="@dimen/text_12" />
 
                 <TextView
                     android:id="@+id/analyticsTheoryEmpty"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="@dimen/dim_6"
                     android:text="@string/analytics_theory_empty"
                     android:textColor="@color/settings_text_secondary"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/text_12"
                     android:visibility="gone" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="@dimen/dim_10"
                     android:text="@string/analytics_weak_topics"
                     android:textColor="@color/settings_text_primary"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/text_12"
                     android:textStyle="bold" />
 
                 <!-- Gauge rows inflated here dynamically -->
@@ -428,24 +428,24 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/dim_10"
                 android:background="@drawable/bg_app_card"
                 android:orientation="vertical"
-                android:padding="12dp">
+                android:padding="@dimen/dim_12">
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/analytics_action_plan_title"
                     android:textColor="@color/settings_text_primary"
-                    android:textSize="14sp"
+                    android:textSize="@dimen/text_14"
                     android:textStyle="bold" />
 
                 <LinearLayout
                     android:id="@+id/analyticsActionPlanContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dim_8"
                     android:orientation="vertical" />
             </LinearLayout>
 
@@ -455,11 +455,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginTop="@dimen/dim_10"
+                android:layout_marginBottom="@dimen/dim_20"
                 android:background="@drawable/bg_app_card"
                 android:orientation="vertical"
-                android:padding="12dp">
+                android:padding="@dimen/dim_12">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -468,12 +468,12 @@
                     android:orientation="horizontal">
 
                     <TextView
-                        android:layout_width="0dp"
+                        android:layout_width="@dimen/dim_0"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@string/analytics_recent_sessions_title"
                         android:textColor="@color/settings_text_primary"
-                        android:textSize="14sp"
+                        android:textSize="@dimen/text_14"
                         android:textStyle="bold" />
 
                     <LinearLayout
@@ -484,43 +484,43 @@
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/analyticsWindowFiveButton"
                             style="?attr/materialButtonOutlinedStyle"
-                            android:layout_width="46dp"
-                            android:layout_height="30dp"
-                            android:insetBottom="0dp"
-                            android:insetTop="0dp"
-                            android:minHeight="0dp"
-                            android:minWidth="0dp"
+                            android:layout_width="@dimen/dim_46"
+                            android:layout_height="@dimen/dim_30"
+                            android:insetBottom="@dimen/dim_0"
+                            android:insetTop="@dimen/dim_0"
+                            android:minHeight="@dimen/dim_0"
+                            android:minWidth="@dimen/dim_0"
                             android:text="@string/analytics_window_5"
                             android:textAllCaps="false"
-                            android:textSize="11sp" />
+                            android:textSize="@dimen/text_11" />
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/analyticsWindowTenButton"
                             style="?attr/materialButtonOutlinedStyle"
-                            android:layout_width="46dp"
-                            android:layout_height="30dp"
-                            android:layout_marginStart="4dp"
-                            android:insetBottom="0dp"
-                            android:insetTop="0dp"
-                            android:minHeight="0dp"
-                            android:minWidth="0dp"
+                            android:layout_width="@dimen/dim_46"
+                            android:layout_height="@dimen/dim_30"
+                            android:layout_marginStart="@dimen/dim_4"
+                            android:insetBottom="@dimen/dim_0"
+                            android:insetTop="@dimen/dim_0"
+                            android:minHeight="@dimen/dim_0"
+                            android:minWidth="@dimen/dim_0"
                             android:text="@string/analytics_window_10"
                             android:textAllCaps="false"
-                            android:textSize="11sp" />
+                            android:textSize="@dimen/text_11" />
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/analyticsWindowAllButton"
                             style="?attr/materialButtonOutlinedStyle"
-                            android:layout_width="50dp"
-                            android:layout_height="30dp"
-                            android:layout_marginStart="4dp"
-                            android:insetBottom="0dp"
-                            android:insetTop="0dp"
-                            android:minHeight="0dp"
-                            android:minWidth="0dp"
+                            android:layout_width="@dimen/dim_50"
+                            android:layout_height="@dimen/dim_30"
+                            android:layout_marginStart="@dimen/dim_4"
+                            android:insetBottom="@dimen/dim_0"
+                            android:insetTop="@dimen/dim_0"
+                            android:minHeight="@dimen/dim_0"
+                            android:minWidth="@dimen/dim_0"
                             android:text="@string/analytics_window_all"
                             android:textAllCaps="false"
-                            android:textSize="11sp" />
+                            android:textSize="@dimen/text_11" />
                     </LinearLayout>
                 </LinearLayout>
 
@@ -528,10 +528,10 @@
                     android:id="@+id/analyticsRecentSessionsEmpty"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
+                    android:layout_marginTop="@dimen/dim_8"
                     android:text="@string/analytics_recent_sessions_empty"
                     android:textColor="@color/settings_text_secondary"
-                    android:textSize="12sp"
+                    android:textSize="@dimen/text_12"
                     android:visibility="gone" />
 
                 <LinearLayout

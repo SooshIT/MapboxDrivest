@@ -16,7 +16,9 @@ class RouteTagMappingTest {
         assertEquals(
             listOf(
                 "pedestrian_crossings",
+                "vulnerable_road_users",
                 "signals_and_junction_control",
+                "traffic_signals",
                 "roundabouts"
             ),
             mapped

@@ -4,10 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_app_surface"
-    android:padding="20dp">
+    android:padding="@dimen/dim_20">
 
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
@@ -17,9 +17,9 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:layout_width="72dp"
-            android:layout_height="72dp"
-            android:layout_marginBottom="24dp"
+            android:layout_width="@dimen/dim_72"
+            android:layout_height="@dimen/dim_72"
+            android:layout_marginBottom="@dimen/dim_24"
             android:contentDescription="@string/quiz_error_icon_description"
             android:src="@drawable/ic_home_traffic_signs"
             android:tint="@color/settings_accent" />
@@ -30,18 +30,18 @@
             android:layout_height="wrap_content"
             android:text="@string/quiz_error_message"
             android:textColor="@color/theory_text_primary"
-            android:textSize="16sp"
+            android:textSize="@dimen/text_16"
             android:textStyle="bold"
             android:gravity="center"
-            android:lineSpacingExtra="2dp" />
+            android:lineSpacingExtra="@dimen/dim_2" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/quizErrorRetryButton"
             android:layout_width="match_parent"
-            android:layout_height="52dp"
-            android:layout_marginTop="32dp"
+            android:layout_height="@dimen/dim_52"
+            android:layout_marginTop="@dimen/dim_32"
             android:text="@string/quiz_error_retry"
             android:textAllCaps="false"
-            android:textSize="16sp" />
+            android:textSize="@dimen/text_16" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -152,7 +152,7 @@ class QuizHubActivity : AppCompatActivity() {
             if (names.size < 2) {
                 com.google.android.material.snackbar.Snackbar.make(
                     startButton,
-                    "Please enter at least 2 player names",
+                    getString(R.string.quiz_error_min_players),
                     com.google.android.material.snackbar.Snackbar.LENGTH_SHORT
                 ).show()
                 return

@@ -9,16 +9,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="@dimen/dim_16">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_theory_panel"
-            android:elevation="3dp"
+            android:elevation="@dimen/dim_3"
             android:outlineProvider="background"
             android:orientation="vertical"
-            android:padding="18dp">
+            android:padding="@dimen/dim_18">
 
             <TextView
                 android:id="@+id/theoryHomeTitle"
@@ -26,49 +26,49 @@
                 android:layout_height="wrap_content"
                 android:text="@string/theory_home_title"
                 android:textColor="@color/theory_text_primary"
-                android:textSize="28sp"
+                android:textSize="@dimen/text_28"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/theoryHomeSubtitle"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="@dimen/dim_6"
                 android:text="@string/theory_home_subtitle"
                 android:textColor="@color/theory_text_secondary"
-                android:textSize="14sp" />
+                android:textSize="@dimen/text_14" />
 
             <TextView
                 android:id="@+id/theoryProgressValue"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="@dimen/dim_12"
                 android:background="@drawable/bg_app_chip"
-                android:paddingStart="10dp"
-                android:paddingTop="6dp"
-                android:paddingEnd="10dp"
-                android:paddingBottom="6dp"
+                android:paddingStart="@dimen/dim_10"
+                android:paddingTop="@dimen/dim_6"
+                android:paddingEnd="@dimen/dim_10"
+                android:paddingBottom="@dimen/dim_6"
                 android:text="@string/theory_progress_default"
                 android:textColor="@color/app_chip_text"
-                android:textSize="13sp"
+                android:textSize="@dimen/text_13"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/theoryReadinessValue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/dim_8"
                 android:text="@string/theory_readiness_default"
                 android:textColor="@color/theory_accent"
-                android:textSize="14sp"
+                android:textSize="@dimen/text_14"
                 android:textStyle="bold" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/theoryContinueButton"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"
-                android:layout_height="52dp"
-                android:layout_marginTop="14dp"
+                android:layout_height="@dimen/dim_52"
+                android:layout_marginTop="@dimen/dim_14"
                 android:text="@string/theory_continue_learning"
                 android:textAllCaps="false" />
         </LinearLayout>
@@ -77,12 +77,12 @@
             android:id="@+id/theoryWeakestTopicsCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/dim_12"
             android:background="@drawable/bg_app_card"
-            android:elevation="2dp"
+            android:elevation="@dimen/dim_2"
             android:outlineProvider="background"
             android:orientation="vertical"
-            android:padding="18dp">
+            android:padding="@dimen/dim_18">
 
             <TextView
                 android:id="@+id/theoryWeakestHeading"
@@ -90,29 +90,29 @@
                 android:layout_height="wrap_content"
                 android:text="@string/theory_weakest_topics_heading"
                 android:textColor="@color/theory_text_primary"
-                android:textSize="17sp"
+                android:textSize="@dimen/text_17"
                 android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/theoryWeakestTopicsValue"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="6dp"
+                android:layout_marginTop="@dimen/dim_6"
                 android:text="@string/theory_weakest_topics_default"
                 android:textColor="@color/theory_text_secondary"
-                android:textSize="14sp" />
+                android:textSize="@dimen/text_14" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/theoryRouteRecommendationsCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/dim_12"
             android:background="@drawable/bg_app_card"
-            android:elevation="2dp"
+            android:elevation="@dimen/dim_2"
             android:outlineProvider="background"
             android:orientation="vertical"
-            android:padding="18dp"
+            android:padding="@dimen/dim_18"
             android:visibility="gone">
 
             <TextView
@@ -121,26 +121,26 @@
                 android:layout_height="wrap_content"
                 android:text="@string/theory_route_recommendations_heading"
                 android:textColor="@color/theory_text_primary"
-                android:textSize="17sp"
+                android:textSize="@dimen/text_17"
                 android:textStyle="bold" />
 
             <LinearLayout
                 android:id="@+id/theoryRouteRecommendationsContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="@dimen/dim_8"
                 android:orientation="vertical" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/dim_12"
             android:background="@drawable/bg_app_card"
-            android:elevation="2dp"
+            android:elevation="@dimen/dim_2"
             android:outlineProvider="background"
             android:orientation="vertical"
-            android:padding="18dp">
+            android:padding="@dimen/dim_18">
 
             <TextView
                 android:id="@+id/theoryQuickStartHeading"
@@ -148,15 +148,15 @@
                 android:layout_height="wrap_content"
                 android:text="@string/theory_quick_start_heading"
                 android:textColor="@color/theory_text_primary"
-                android:textSize="17sp"
+                android:textSize="@dimen/text_17"
                 android:textStyle="bold" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/theoryQuickQuizButton"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="10dp"
+                android:layout_height="@dimen/dim_48"
+                android:layout_marginTop="@dimen/dim_10"
                 android:text="@string/theory_quick_topic_quiz"
                 android:textAllCaps="false" />
 
@@ -164,8 +164,8 @@
                 android:id="@+id/theoryMockButton"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="8dp"
+                android:layout_height="@dimen/dim_48"
+                android:layout_marginTop="@dimen/dim_8"
                 android:text="@string/theory_quick_mock_test"
                 android:textAllCaps="false" />
         </LinearLayout>
@@ -173,18 +173,18 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="@dimen/dim_12"
             android:background="@drawable/bg_app_card"
-            android:elevation="2dp"
+            android:elevation="@dimen/dim_2"
             android:outlineProvider="background"
             android:orientation="vertical"
-            android:padding="18dp">
+            android:padding="@dimen/dim_18">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/theoryTopicsButton"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_height="@dimen/dim_48"
                 android:text="@string/theory_all_topics"
                 android:textAllCaps="false" />
 
@@ -192,8 +192,8 @@
                 android:id="@+id/theoryBookmarksButton"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="8dp"
+                android:layout_height="@dimen/dim_48"
+                android:layout_marginTop="@dimen/dim_8"
                 android:text="@string/theory_bookmarks"
                 android:textAllCaps="false" />
 
@@ -201,8 +201,8 @@
                 android:id="@+id/theoryWrongAnswersButton"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="8dp"
+                android:layout_height="@dimen/dim_48"
+                android:layout_marginTop="@dimen/dim_8"
                 android:text="@string/theory_wrong_answers"
                 android:textAllCaps="false" />
 
@@ -210,8 +210,8 @@
                 android:id="@+id/theorySettingsButton"
                 style="?attr/materialButtonOutlinedStyle"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="8dp"
+                android:layout_height="@dimen/dim_48"
+                android:layout_marginTop="@dimen/dim_8"
                 android:text="@string/theory_settings"
                 android:textAllCaps="false" />
         </LinearLayout>

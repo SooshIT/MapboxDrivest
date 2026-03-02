@@ -7,62 +7,62 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/dim_16"
         android:background="@drawable/bg_app_card"
-        android:elevation="2dp"
+        android:elevation="@dimen/dim_2"
         android:outlineProvider="background"
         android:orientation="vertical"
-        android:padding="18dp">
+        android:padding="@dimen/dim_18">
 
         <TextView
             android:id="@+id/theoryTopicTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/theory_text_primary"
-            android:textSize="26sp"
+            android:textSize="@dimen/text_26"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/theoryTopicDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dim_8"
             android:textColor="@color/theory_text_secondary"
-            android:textSize="14sp" />
+            android:textSize="@dimen/text_14" />
 
         <TextView
             android:id="@+id/theoryTopicLessonsHeading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/dim_16"
             android:text="@string/theory_lessons_heading"
             android:textColor="@color/theory_text_primary"
-            android:textSize="17sp"
+            android:textSize="@dimen/text_17"
             android:textStyle="bold" />
 
         <LinearLayout
             android:id="@+id/theoryTopicLessonsContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dim_8"
             android:orientation="vertical" />
 
         <TextView
             android:id="@+id/theoryTopicQuizHeading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/dim_16"
             android:text="@string/theory_quiz_length_heading"
             android:textColor="@color/theory_text_primary"
-            android:textSize="17sp"
+            android:textSize="@dimen/text_17"
             android:textStyle="bold" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/theoryTopicQuiz10Button"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="8dp"
+            android:layout_height="@dimen/dim_48"
+            android:layout_marginTop="@dimen/dim_8"
             android:text="@string/theory_quiz_10"
             android:textAllCaps="false" />
 
@@ -70,8 +70,8 @@
             android:id="@+id/theoryTopicQuiz20Button"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="8dp"
+            android:layout_height="@dimen/dim_48"
+            android:layout_marginTop="@dimen/dim_8"
             android:text="@string/theory_quiz_20"
             android:textAllCaps="false" />
 
@@ -79,8 +79,8 @@
             android:id="@+id/theoryTopicQuiz30Button"
             style="?attr/materialButtonOutlinedStyle"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="8dp"
+            android:layout_height="@dimen/dim_48"
+            android:layout_marginTop="@dimen/dim_8"
             android:text="@string/theory_quiz_30"
             android:textAllCaps="false" />
     </LinearLayout>

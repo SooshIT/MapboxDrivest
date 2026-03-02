@@ -6,7 +6,7 @@ final class DebugParityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Parity Debug"
-        view.backgroundColor = .systemBackground
+        view.backgroundColor = DrivestTheme.Colors.background
         setupLayout()
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             title: "Refresh",
@@ -27,17 +27,22 @@ final class DebugParityViewController: UIViewController {
         textView.isEditable = false
         textView.isSelectable = true
         textView.alwaysBounceVertical = true
-        textView.font = UIFont.monospacedSystemFont(ofSize: 13, weight: .regular)
-        textView.backgroundColor = .secondarySystemBackground
-        textView.layer.cornerRadius = 10
-        textView.textContainerInset = UIEdgeInsets(top: 12, left: 12, bottom: 12, right: 12)
+        textView.font = DrivestTheme.Fonts.monospace
+        textView.backgroundColor = DrivestTheme.Colors.surface
+        textView.layer.cornerRadius = DrivestTheme.CornerRadius.md
+        textView.textContainerInset = UIEdgeInsets(
+            top: DrivestTheme.Spacing.sm,
+            left: DrivestTheme.Spacing.sm,
+            bottom: DrivestTheme.Spacing.sm,
+            right: DrivestTheme.Spacing.sm
+        )
 
         view.addSubview(textView)
         NSLayoutConstraint.activate([
-            textView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 12),
-            textView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 12),
-            textView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -12),
-            textView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -12),
+            textView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: DrivestTheme.Spacing.sm),
+            textView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: DrivestTheme.Spacing.sm),
+            textView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -DrivestTheme.Spacing.sm),
+            textView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -DrivestTheme.Spacing.sm),
         ])
     }
 

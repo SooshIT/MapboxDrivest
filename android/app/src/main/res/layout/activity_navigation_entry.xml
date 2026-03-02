@@ -4,7 +4,7 @@
     android:id="@+id/navigationEntryRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp">
+    android:padding="@dimen/dim_24">
 
     <ImageView
         android:id="@+id/navigationLogo"
@@ -18,12 +18,12 @@
 
     <ImageButton
         android:id="@+id/navigationAppearanceModeButton"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="@dimen/dim_44"
+        android:layout_height="@dimen/dim_44"
+        android:layout_marginTop="@dimen/dim_8"
         android:background="@drawable/bg_map_control_chip"
         android:contentDescription="@string/appearance_mode_auto"
-        android:padding="10dp"
+        android:padding="@dimen/dim_10"
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/navigationLogo"
@@ -31,13 +31,13 @@
 
     <TextView
         android:id="@+id/navigationTitle"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/dim_10"
         android:gravity="center"
         android:text="@string/navigation_entry_title"
-        android:textColor="#231F20"
-        android:textSize="28sp"
+        android:textColor="@color/ui_hex_231F20"
+        android:textSize="@dimen/text_28"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,26 +45,26 @@
 
     <TextView
         android:id="@+id/navigationDescription"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dim_0"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="@dimen/dim_10"
         android:gravity="center"
         android:text="@string/navigation_entry_description"
-        android:textColor="#5A5456"
-        android:textSize="15sp"
+        android:textColor="@color/ui_hex_5A5456"
+        android:textSize="@dimen/text_15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/navigationTitle" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/openNavigationMapButton"
-        android:layout_width="0dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="@dimen/dim_0"
+        android:layout_height="@dimen/dim_52"
+        android:layout_marginTop="@dimen/dim_40"
         android:text="@string/navigation_entry_open_map"
         android:textAllCaps="false"
-        android:textSize="17sp"
-        app:cornerRadius="12dp"
+        android:textSize="@dimen/text_17"
+        app:cornerRadius="@dimen/radius_sm"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/navigationDescription" />

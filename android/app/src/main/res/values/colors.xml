@@ -57,4 +57,19 @@
     <color name="entry_screen_text_primary_night">#F8FAFC</color>
     <color name="entry_screen_text_secondary_day">#5A5456</color>
     <color name="entry_screen_text_secondary_night">#CBD5E1</color>
+
+    <color name="ui_hex_231F20">#231F20</color>
+    <color name="ui_hex_322B2D">#322B2D</color>
+    <color name="ui_hex_5A5456">#5A5456</color>
+    <color name="ui_hex_7A7376">#7A7376</color>
+    <color name="ui_hex_A94A17">#A94A17</color>
+    <color name="ui_hex_AFA8A4">#AFA8A4</color>
+    <color name="ui_hex_D8D1CE">#D8D1CE</color>
+    <color name="ui_hex_DCE7FF">#DCE7FF</color>
+    <color name="ui_hex_E5ECFF">#E5ECFF</color>
+    <color name="ui_hex_F37121">#F37121</color>
+    <color name="ui_hex_FDE6D8">#FDE6D8</color>
+    <color name="ui_hex_FFD0B0">#FFD0B0</color>
+    <color name="ui_hex_FFE5D3">#FFE5D3</color>
+    <color name="ui_hex_FFFFFF">#FFFFFF</color>
 </resources>

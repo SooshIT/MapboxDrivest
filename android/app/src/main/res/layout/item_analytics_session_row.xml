@@ -3,18 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
+    android:layout_marginTop="@dimen/dim_8"
     app:cardBackgroundColor="@color/app_card_bg"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="1dp"
+    app:cardCornerRadius="@dimen/radius_sm"
+    app:cardElevation="@dimen/dim_1"
     app:strokeColor="@color/app_card_stroke"
-    app:strokeWidth="1dp">
+    app:strokeWidth="@dimen/dim_1">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dp">
+        android:padding="@dimen/dim_10">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -24,11 +24,11 @@
 
             <TextView
                 android:id="@+id/analyticsSessionDate"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/dim_0"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textColor="@color/settings_text_primary"
-                android:textSize="14sp"
+                android:textSize="@dimen/text_14"
                 android:textStyle="bold" />
 
             <TextView
@@ -36,12 +36,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/bg_app_chip"
-                android:paddingStart="8dp"
-                android:paddingTop="4dp"
-                android:paddingEnd="8dp"
-                android:paddingBottom="4dp"
+                android:paddingStart="@dimen/dim_8"
+                android:paddingTop="@dimen/dim_4"
+                android:paddingEnd="@dimen/dim_8"
+                android:paddingBottom="@dimen/dim_4"
                 android:textColor="@color/app_chip_text"
-                android:textSize="11sp"
+                android:textSize="@dimen/text_11"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -49,35 +49,35 @@
             android:id="@+id/analyticsSessionStatsLine"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginTop="@dimen/dim_6"
             android:textColor="@color/settings_text_secondary"
-            android:textSize="12sp" />
+            android:textSize="@dimen/text_12" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dim_8"
             android:orientation="horizontal">
 
             <ProgressBar
                 android:id="@+id/analyticsSessionConfidenceBar"
                 style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="0dp"
-                android:layout_height="6dp"
+                android:layout_width="@dimen/dim_0"
+                android:layout_height="@dimen/dim_6"
                 android:layout_weight="1"
                 android:max="100"
                 android:progressTint="@color/settings_accent"
                 android:progressBackgroundTint="@color/settings_segment_track" />
 
             <Space
-                android:layout_width="8dp"
-                android:layout_height="1dp" />
+                android:layout_width="@dimen/dim_8"
+                android:layout_height="@dimen/dim_1" />
 
             <ProgressBar
                 android:id="@+id/analyticsSessionStressBar"
                 style="?android:attr/progressBarStyleHorizontal"
-                android:layout_width="0dp"
-                android:layout_height="6dp"
+                android:layout_width="@dimen/dim_0"
+                android:layout_height="@dimen/dim_6"
                 android:layout_weight="1"
                 android:max="100"
                 android:progressTint="@color/theory_feedback_incorrect"
@@ -88,9 +88,9 @@
             android:id="@+id/analyticsSessionBarsLegend"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="@dimen/dim_4"
             android:textColor="@color/settings_text_secondary"
-            android:textSize="11sp" />
+            android:textSize="@dimen/text_11" />
     </LinearLayout>
 
 </com.google.android.material.card.MaterialCardView>
