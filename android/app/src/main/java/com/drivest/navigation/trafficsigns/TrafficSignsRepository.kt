@@ -12,7 +12,10 @@ class TrafficSignsRepository(private val context: Context) {
         cachedPack?.let { return it }
         return withContext(Dispatchers.IO) {
             cachedPack?.let { return@withContext it }
-            val json = context.assets.open(PACK_ASSET_PATH).bufferedReader().use { it.readText() }
+            val json = TrafficSignsAssetPack
+                .openAsset(context, PACK_ASSET_PATH)
+                .bufferedReader()
+                .use { it.readText() }
             val pack = parsePack(JSONObject(json))
             cachedPack = pack
             pack

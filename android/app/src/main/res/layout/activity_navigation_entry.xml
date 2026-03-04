@@ -69,4 +69,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/navigationDescription" />
 
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/openParkingButton"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="@dimen/dim_0"
+        android:layout_height="@dimen/dim_52"
+        android:layout_marginTop="@dimen/dim_12"
+        android:text="@string/navigation_entry_open_parking"
+        android:textAllCaps="false"
+        android:textSize="@dimen/text_16"
+        app:cornerRadius="@dimen/radius_sm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/openNavigationMapButton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

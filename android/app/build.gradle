@@ -18,6 +18,7 @@ android {
         versionCode 1
         versionName "1.0.0"
         buildConfigField "String", "API_BASE_URL", "\"${apiBaseUrl}\""
+        resConfigs "en"
     }
 
     buildTypes {
@@ -25,7 +26,8 @@ android {
             buildConfigField "boolean", "THEORY_MODULE_ENABLED", "${theoryEnabledDebug}"
         }
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             buildConfigField "boolean", "THEORY_MODULE_ENABLED", "${theoryEnabledRelease}"
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
@@ -44,6 +46,8 @@ android {
         buildConfig true
         viewBinding true
     }
+
+    assetPacks = [":traffic_signs"]
 }
 
 dependencies {
@@ -60,6 +64,7 @@ dependencies {
     implementation "androidx.recyclerview:recyclerview:1.3.2"
     implementation "androidx.datastore:datastore-preferences:1.1.1"
     implementation "com.google.android.material:material:1.12.0"
+    implementation "com.google.android.play:asset-delivery:2.3.0"
     implementation "com.squareup.okhttp3:okhttp:4.12.0"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1"
     implementation "com.android.billingclient:billing-ktx:7.1.1"

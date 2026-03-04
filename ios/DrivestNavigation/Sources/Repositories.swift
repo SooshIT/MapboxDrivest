@@ -431,11 +431,15 @@ final class DestinationSearchRepository {
         struct Feature: Codable {
             let text: String?
             let placeName: String?
+            let placeType: [String]?
+            let address: String?
             let center: [Double]?
 
             enum CodingKeys: String, CodingKey {
                 case text
                 case placeName = "place_name"
+                case placeType = "place_type"
+                case address
                 case center
             }
         }
@@ -459,7 +463,11 @@ final class DestinationSearchRepository {
         }
 
         let encodedQuery = trimmed.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? trimmed
-        let endpoint = "https://api.mapbox.com/geocoding/v5/mapbox.places/\(encodedQuery).json?autocomplete=true&limit=8&country=gb&language=en&access_token=\(token)"
+        let endpoint =
+            "https://api.mapbox.com/geocoding/v5/mapbox.places/\(encodedQuery).json" +
+            "?autocomplete=true&fuzzyMatch=true&limit=10" +
+            "&types=address,poi,place,locality,neighborhood,postcode" +
+            "&country=gb&language=en&access_token=\(token)"
         guard let url = URL(string: endpoint) else { return [] }
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
@@ -477,10 +485,20 @@ final class DestinationSearchRepository {
             let decoded = try JSONDecoder().decode(GeocodingResponse.self, from: data)
             return decoded.features.compactMap { feature in
                 guard let center = feature.center, center.count >= 2 else { return nil }
-                let name = feature.text ?? feature.placeName ?? "Destination"
-                let place = feature.placeName ?? name
+                let isAddress = feature.placeType?.contains("address") ?? false
+                let text = feature.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+                let address = feature.address?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+                let combinedName: String
+                if isAddress, !address.isEmpty, !text.isEmpty {
+                    combinedName = "\(address) \(text)"
+                } else if !text.isEmpty {
+                    combinedName = text
+                } else {
+                    combinedName = feature.placeName ?? "Destination"
+                }
+                let place = feature.placeName ?? combinedName
                 return DestinationSuggestion(
-                    name: name,
+                    name: combinedName,
                     placeName: place,
                     lat: center[1],
                     lon: center[0]

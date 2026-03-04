@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parkingRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.mapbox.maps.MapView
+        android:id="@+id/parkingMapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/parkingRecenterButton"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="@dimen/dim_44"
+        android:layout_height="@dimen/dim_44"
+        android:layout_marginEnd="@dimen/dim_16"
+        android:layout_marginBottom="@dimen/dim_12"
+        android:contentDescription="@string/parking_recenter"
+        android:insetLeft="0dp"
+        android:insetRight="0dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="0dp"
+        android:text=""
+        app:icon="@android:drawable/ic_menu_mylocation"
+        app:iconPadding="0dp"
+        app:iconTint="@color/ui_hex_231F20"
+        app:layout_anchor="@id/parkingBottomSheet"
+        app:layout_anchorGravity="top|end" />
+
+    <TextView
+        android:id="@+id/parkingMapHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dim_8"
+        android:background="@drawable/parking_map_hint_bg"
+        android:paddingHorizontal="@dimen/dim_12"
+        android:paddingVertical="@dimen/dim_6"
+        android:text="@string/parking_map_hint"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_11"
+        android:visibility="gone"
+        app:layout_anchor="@id/parkingBottomSheet"
+        app:layout_anchorGravity="top|center_horizontal" />
+
+    <LinearLayout
+        android:id="@+id/parkingTopControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginStart="@dimen/dim_16"
+        android:layout_marginEnd="@dimen/dim_16"
+        android:layout_marginTop="@dimen/dim_12"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/parkingAdvisoryBanner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/ui_hex_231F20"
+            app:cardCornerRadius="@dimen/map_card_corner_radius"
+            app:cardElevation="@dimen/map_card_elevation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingHorizontal="@dimen/dim_12"
+                android:paddingVertical="@dimen/dim_8">
+
+                <ImageView
+                    android:layout_width="@dimen/dim_16"
+                    android:layout_height="@dimen/dim_16"
+                    android:contentDescription="@string/parking_advisory_primary"
+                    android:src="@android:drawable/ic_dialog_alert"
+                    android:tint="@color/ui_hex_D8D1CE" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/dim_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_8"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/parkingBannerPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/parking_advisory_primary"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_12"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/parkingBannerSecondary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dim_2"
+                        android:text="@string/parking_advisory_secondary"
+                        android:textColor="@color/ui_hex_D8D1CE"
+                        android:textSize="@dimen/text_11" />
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/parkingSearchCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_8"
+            app:cardBackgroundColor="@color/app_card_bg"
+            app:cardCornerRadius="@dimen/map_card_corner_radius"
+            app:cardElevation="@dimen/map_card_elevation"
+            app:strokeColor="@color/app_card_stroke"
+            app:strokeWidth="@dimen/dim_1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/dim_10">
+
+                <ImageView
+                    android:layout_width="@dimen/dim_20"
+                    android:layout_height="@dimen/dim_20"
+                    android:contentDescription="@string/parking_search_button"
+                    android:src="@android:drawable/ic_menu_search"
+                    android:tint="@color/ui_hex_5A5456" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/parkingSearchInput"
+                    android:layout_width="@dimen/dim_0"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_8"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:ellipsize="end"
+                    android:hint="@string/parking_destination_placeholder"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textColor="@color/ui_hex_231F20"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/parkingSearchButton"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/dim_36"
+                    android:text="@string/parking_search_button"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/parkingSearchResultsCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_6"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/app_card_bg"
+            app:cardCornerRadius="@dimen/map_card_corner_radius"
+            app:cardElevation="@dimen/map_card_elevation"
+            app:strokeColor="@color/app_card_stroke"
+            app:strokeWidth="@dimen/dim_1">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="260dp"
+                android:padding="@dimen/dim_8">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/parkingSearchResultsList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:paddingBottom="@dimen/dim_8" />
+
+                <TextView
+                    android:id="@+id/parkingSearchEmptyView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/destination_search_min_chars"
+                    android:textColor="@color/ui_hex_5A5456"
+                    android:textSize="@dimen/text_12"
+                    android:visibility="gone" />
+
+                <ProgressBar
+                    android:id="@+id/parkingSearchProgress"
+                    android:layout_width="@dimen/dim_28"
+                    android:layout_height="@dimen/dim_28"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+            </FrameLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/parkingFiltersCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dim_8"
+            app:cardBackgroundColor="@color/app_card_bg"
+            app:cardCornerRadius="@dimen/map_card_corner_radius"
+            app:cardElevation="@dimen/map_card_elevation"
+            app:strokeColor="@color/app_card_stroke"
+            app:strokeWidth="@dimen/dim_1">
+
+            <LinearLayout
+                android:id="@+id/parkingFiltersRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/dim_10">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/parkingFreeToggle"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/dim_32"
+                    android:text="@string/parking_filter_free_only"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text_12"
+                    android:textStyle="bold"
+                    app:checkedIconVisible="false" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/parkingDistanceButton"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_12"
+                    android:minHeight="@dimen/dim_32"
+                    android:text="@string/parking_filter_walk"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text_12"
+                    android:textStyle="bold"
+                    app:icon="@android:drawable/arrow_down_float"
+                    app:iconGravity="textEnd"
+                    app:iconPadding="@dimen/dim_4"
+                    app:iconTint="@color/ui_hex_231F20" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/parkingAccessibleToggle"
+                    style="?attr/materialButtonOutlinedStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dim_12"
+                    android:minHeight="@dimen/dim_32"
+                    android:text="@string/parking_filter_accessible"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/text_12"
+                    android:textStyle="bold"
+                    app:checkedIconVisible="false" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/parkingBottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="@dimen/dim_12"
+        android:layout_marginEnd="@dimen/dim_12"
+        android:layout_marginBottom="@dimen/dim_8"
+        app:cardBackgroundColor="@color/app_card_bg"
+        app:cardCornerRadius="@dimen/radius_xl"
+        app:cardElevation="@dimen/map_card_elevation"
+        app:strokeColor="@color/app_card_stroke"
+        app:strokeWidth="@dimen/dim_1"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"
+        app:behavior_hideable="false"
+        app:behavior_fitToContents="false"
+        app:behavior_peekHeight="160dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dim_12">
+
+            <View
+                android:layout_width="@dimen/dim_48"
+                android:layout_height="@dimen/dim_4"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/ui_hex_D8D1CE" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_8"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/parkingSheetTitle"
+                    android:layout_width="@dimen/dim_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/parking_sheet_title"
+                    android:textColor="@color/ui_hex_231F20"
+                    android:textSize="@dimen/text_14"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/parkingViewToggle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:selectionRequired="true"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/parkingViewMapButton"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/dim_32"
+                        android:text="@string/parking_view_map"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_11" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/parkingViewListButton"
+                        style="?attr/materialButtonOutlinedStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="@dimen/dim_32"
+                        android:text="@string/parking_view_list"
+                        android:textAllCaps="false"
+                        android:textSize="@dimen/text_11" />
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_6"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/parkingLegendLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dim_10"
+                    android:text="@string/parking_legend_title"
+                    android:textColor="@color/ui_hex_7A7376"
+                    android:textSize="@dimen/text_11" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dim_10"
+                    android:text="@string/parking_legend_free"
+                    android:textColor="@color/ui_hex_231F20"
+                    android:textSize="@dimen/text_11" />
+
+                <View
+                    android:layout_width="@dimen/dim_8"
+                    android:layout_height="@dimen/dim_8"
+                    android:layout_marginEnd="@dimen/dim_16"
+                    android:background="@drawable/parking_legend_free_dot" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dim_10"
+                    android:text="@string/parking_legend_paid"
+                    android:textColor="@color/ui_hex_231F20"
+                    android:textSize="@dimen/text_11" />
+
+                <View
+                    android:layout_width="@dimen/dim_8"
+                    android:layout_height="@dimen/dim_8"
+                    android:layout_marginEnd="@dimen/dim_16"
+                    android:background="@drawable/parking_legend_paid_dot" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dim_10"
+                    android:text="@string/parking_legend_unknown"
+                    android:textColor="@color/ui_hex_231F20"
+                    android:textSize="@dimen/text_11" />
+
+                <View
+                    android:layout_width="@dimen/dim_8"
+                    android:layout_height="@dimen/dim_8"
+                    android:background="@drawable/parking_legend_unknown_dot" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/parkingListContainer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/dim_8"
+                android:layout_weight="1">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/parkingList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToPadding="false"
+                    android:paddingBottom="@dimen/dim_8" />
+
+                <TextView
+                    android:id="@+id/parkingEmptyView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/parking_empty_state"
+                    android:textColor="@color/ui_hex_5A5456"
+                    android:textSize="@dimen/text_13" />
+
+                <ProgressBar
+                    android:id="@+id/parkingLoading"
+                    android:layout_width="@dimen/dim_36"
+                    android:layout_height="@dimen/dim_36"
+                    android:layout_gravity="center"
+                    android:visibility="gone" />
+            </FrameLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/parkingUseButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dim_8"
+                android:text="@string/parking_use_cta"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

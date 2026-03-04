@@ -23,6 +23,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.drivest.navigation.trafficsigns.TrafficSign
+import com.drivest.navigation.trafficsigns.TrafficSignsAssetPack
 import com.drivest.navigation.trafficsigns.TrafficSignsBitmapLoader
 import com.drivest.navigation.trafficsigns.TrafficSignsGridAdapter
 import com.drivest.navigation.trafficsigns.TrafficSignsPack
@@ -32,6 +33,10 @@ import com.google.android.material.button.MaterialButton
 import com.google.android.material.chip.Chip
 import com.google.android.material.chip.ChipGroup
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.play.core.assetpacks.AssetPackManager
+import com.google.android.play.core.assetpacks.AssetPackManagerFactory
+import com.google.android.play.core.assetpacks.AssetPackStateUpdateListener
+import com.google.android.play.core.assetpacks.model.AssetPackStatus
 import kotlinx.coroutines.launch
 import kotlin.math.roundToInt
 import kotlin.random.Random
@@ -41,6 +46,11 @@ class TrafficSignsActivity : AppCompatActivity() {
     private val repository by lazy { TrafficSignsRepository(applicationContext) }
     private val bitmapLoader by lazy { TrafficSignsBitmapLoader(applicationContext) }
     private val random = Random(System.currentTimeMillis())
+    private val assetPackManager: AssetPackManager by lazy {
+        AssetPackManagerFactory.getInstance(applicationContext)
+    }
+    private var assetPackListener: AssetPackStateUpdateListener? = null
+    private var pendingPackReady: (() -> Unit)? = null
 
     private lateinit var sourceButton: MaterialButton
     private lateinit var countChip: TextView
@@ -103,6 +113,13 @@ class TrafficSignsActivity : AppCompatActivity() {
         setupClicks()
         updateMode(UiMode.FLASHCARDS)
         loadPack()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        assetPackListener?.let { assetPackManager.unregisterListener(it) }
+        assetPackListener = null
+        pendingPackReady = null
     }
 
     private fun bindViews() {
@@ -200,28 +217,86 @@ class TrafficSignsActivity : AppCompatActivity() {
     }
 
     private fun loadPack() {
-        lifecycleScope.launch {
-            runCatching { repository.loadPack() }
-                .onSuccess { loadedPack ->
-                    pack = loadedPack
-                    allSigns = loadedPack.signs.sortedBy { it.caption.lowercase() }
-                    categoryNameMap = loadedPack.categories.associate { it.id to it.name }
-                    setupCategoryChips(loadedPack)
-                    updateHeaderStats(loadedPack)
-                    showNextFlashcard(forceRandom = true)
-                    generateQuizQuestion()
-                    applyBrowseFilter()
-                }
-                .onFailure { error ->
-                    Toast.makeText(
-                        this@TrafficSignsActivity,
-                        getString(R.string.traffic_signs_load_failed),
-                        Toast.LENGTH_LONG
-                    ).show()
-                    filterSummary.text = error.message ?: getString(R.string.traffic_signs_load_failed)
-                }
+        ensureTrafficSignsPackReady {
+            lifecycleScope.launch {
+                runCatching { repository.loadPack() }
+                    .onSuccess { loadedPack ->
+                        pack = loadedPack
+                        allSigns = loadedPack.signs.sortedBy { it.caption.lowercase() }
+                        categoryNameMap = loadedPack.categories.associate { it.id to it.name }
+                        setupCategoryChips(loadedPack)
+                        updateHeaderStats(loadedPack)
+                        showNextFlashcard(forceRandom = true)
+                        generateQuizQuestion()
+                        applyBrowseFilter()
+                    }
+                    .onFailure { error ->
+                        Toast.makeText(
+                            this@TrafficSignsActivity,
+                            getString(R.string.traffic_signs_load_failed),
+                            Toast.LENGTH_LONG
+                        ).show()
+                        filterSummary.text = error.message ?: getString(R.string.traffic_signs_load_failed)
+                    }
+            }
         }
     }
+
+    private fun ensureTrafficSignsPackReady(onReady: () -> Unit) {
+        if (TrafficSignsAssetPack.isPackAvailable(this)) {
+            onReady()
+            return
+        }
+        pendingPackReady = onReady
+        startTrafficSignsPackDownload()
+    }
+
+    private fun startTrafficSignsPackDownload() {
+        if (assetPackListener != null) return
+        filterSummary.text = getString(R.string.traffic_signs_pack_downloading, 0)
+        val listener = AssetPackStateUpdateListener { state ->
+            if (state.name() != TrafficSignsAssetPack.PACK_NAME) return@AssetPackStateUpdateListener
+            when (state.status()) {
+                AssetPackStatus.PENDING,
+                AssetPackStatus.DOWNLOADING,
+                AssetPackStatus.TRANSFERRING -> {
+                    val total = state.totalBytesToDownload()
+                    val downloaded = state.bytesDownloaded()
+                    val percent = if (total > 0L) ((downloaded * 100) / total).toInt() else 0
+                    filterSummary.text = getString(R.string.traffic_signs_pack_downloading, percent)
+                }
+                AssetPackStatus.COMPLETED -> {
+                    assetPackListener?.let { assetPackManager.unregisterListener(it) }
+                    val readyAction = pendingPackReady
+                    pendingPackReady = null
+                    assetPackListener = null
+                    readyAction?.invoke()
+                }
+                AssetPackStatus.WAITING_FOR_WIFI -> {
+                    Toast.makeText(this, getString(R.string.traffic_signs_pack_waiting_wifi), Toast.LENGTH_LONG).show()
+                }
+                AssetPackStatus.FAILED,
+                AssetPackStatus.CANCELED,
+                AssetPackStatus.UNKNOWN -> {
+                    handlePackFailure()
+                }
+                else -> Unit
+            }
+        }
+        assetPackListener = listener
+        assetPackManager.registerListener(listener)
+        assetPackManager.fetch(listOf(TrafficSignsAssetPack.PACK_NAME))
+            .addOnFailureListener { handlePackFailure() }
+    }
+
+    private fun handlePackFailure() {
+        assetPackListener?.let { assetPackManager.unregisterListener(it) }
+        assetPackListener = null
+        pendingPackReady = null
+        Toast.makeText(this, getString(R.string.traffic_signs_pack_failed), Toast.LENGTH_LONG).show()
+        filterSummary.text = getString(R.string.traffic_signs_pack_failed)
+    }
+
 
     private fun setupCategoryChips(loadedPack: TrafficSignsPack) {
         categoryFilterGroup.removeAllViews()

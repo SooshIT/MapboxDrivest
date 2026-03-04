@@ -22,7 +22,6 @@ import com.drivest.navigation.subscription.SubscriptionRepository
 import com.drivest.navigation.highwaycode.HighwayCodeActivity
 import com.drivest.navigation.theory.TheoryFeatureFlags
 import com.drivest.navigation.theory.content.TheoryReadinessCalculator
-import com.drivest.navigation.theory.content.TheoryReadinessLabel
 import com.drivest.navigation.theory.storage.TheoryProgressStore
 import com.drivest.navigation.theory.screens.TheoryHomeActivity
 import com.drivest.navigation.training.TrainingPlanEngine
@@ -72,7 +71,6 @@ class HomeActivity : AppCompatActivity() {
         val highwayCodeModeButton = findViewById<MaterialButton>(R.id.highwayCodeModeButton)
         val theoryTileContainer = findViewById<View>(R.id.homeTheoryTileContainer)
         val theoryProgressBadgeView = findViewById<TextView>(R.id.homeTheoryProgressBadge)
-        val theoryReadinessView = findViewById<TextView>(R.id.homeTheoryReadinessValue)
         val modeRow = findViewById<LinearLayout>(R.id.homeModeRow)
 
         practiceModeButton.setOnClickListener {
@@ -107,21 +105,11 @@ class HomeActivity : AppCompatActivity() {
                             R.string.home_theory_progress_value,
                             readiness.masteredTopicsPercent
                         )
-                        val readinessLabel = when (readiness.label) {
-                            TheoryReadinessLabel.BUILDING -> getString(R.string.theory_readiness_building)
-                            TheoryReadinessLabel.ALMOST_READY -> getString(R.string.theory_readiness_almost_ready)
-                            TheoryReadinessLabel.READY -> getString(R.string.theory_readiness_ready)
-                        }
-                        theoryReadinessView.text = getString(
-                            R.string.home_theory_readiness_value,
-                            readinessLabel
-                        )
                     }
                 }
             }
         } else {
             theoryTileContainer.visibility = View.GONE
-            theoryReadinessView.visibility = View.GONE
             modeRow.weightSum = 2f
         }
 

@@ -18,6 +18,24 @@ This repo contains a dual-platform starter for Drivest based on the two Mapbox v
   - iOS: `.netrc` token with `DOWNLOADS:READ`
 - Keep test traffic low and monitor token usage in your Mapbox dashboard.
 
+## Parking Module (Free Tier OSM)
+
+- Uses OpenStreetMap data via the public Overpass API (no paid parking providers).
+- Advisory only: no pricing and no enforcement certainty. Users must check local signage.
+- Caches results locally for 30 minutes using rounded lat/lng buckets to keep lookups fast.
+- UK focus first, tuned for common UK parking tags in OSM.
+
+### Limitations
+
+- OSM coverage varies by area; fee and restriction tags may be missing or outdated.
+- Overpass has rate limits and shared capacity; keep radii small.
+- Accessibility tags depend on community data completeness.
+
+### Future paid upgrade path
+
+- Optional premium data sources for higher accuracy, occupancy, and validated restrictions.
+- Keep the same advisory framing; only show pricing if vendor terms explicitly allow it.
+
 ## Quick start
 
 ### Android

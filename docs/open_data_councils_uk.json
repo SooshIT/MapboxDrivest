@@ -1,0 +1,2564 @@
+[
+  {
+    "title": "Aberdeen City Council",
+    "name": "aberdeen-city-council",
+    "package_count": 3,
+    "verified_local_council": true
+  },
+  {
+    "title": "Aberdeenshire Council",
+    "name": "aberdeenshire-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Adur District Council",
+    "name": "adur-district-council",
+    "package_count": 8,
+    "verified_local_council": true
+  },
+  {
+    "title": "Allerdale Borough Council",
+    "name": "allerdale-borough-council",
+    "package_count": 103,
+    "verified_local_council": true
+  },
+  {
+    "title": "Amber Valley Borough Council",
+    "name": "amber-valley-borough-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Angus Council",
+    "name": "angus-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Arun District Council",
+    "name": "arun-district-council",
+    "package_count": 6,
+    "verified_local_council": true
+  },
+  {
+    "title": "Ashfield District Council",
+    "name": "ashfield-district-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Ashford Borough Council",
+    "name": "ashford-borough-council",
+    "package_count": 30,
+    "verified_local_council": true
+  },
+  {
+    "title": "Aylesbury Vale District Council",
+    "name": "aylesbury-vale-district-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Babergh District Council",
+    "name": "babergh-district-council",
+    "package_count": 25,
+    "verified_local_council": true
+  },
+  {
+    "title": "Barnsley Metropolitan Borough Council",
+    "name": "barnsley-metropolitan-borough-council",
+    "package_count": 5,
+    "verified_local_council": true
+  },
+  {
+    "title": "Barrow Borough Council",
+    "name": "barrow-borough-council",
+    "package_count": 215,
+    "verified_local_council": true
+  },
+  {
+    "title": "Basildon Borough Council",
+    "name": "basildon-borough-council",
+    "package_count": 108,
+    "verified_local_council": true
+  },
+  {
+    "title": "Basingstoke and Deane Borough Council",
+    "name": "basingstoke-and-deane-borough-council",
+    "package_count": 9,
+    "verified_local_council": true
+  },
+  {
+    "title": "Bassetlaw District Council",
+    "name": "bassetlaw-district-council",
+    "package_count": 45,
+    "verified_local_council": true
+  },
+  {
+    "title": "Bath and North East Somerset Council",
+    "name": "bath-and-north-east-somerset-council",
+    "package_count": 42,
+    "verified_local_council": true
+  },
+  {
+    "title": "Bedford Borough Council",
+    "name": "bedford-borough-council",
+    "package_count": 10,
+    "verified_local_council": true
+  },
+  {
+    "title": "Belfast City Council",
+    "name": "belfast-city-council",
+    "package_count": 6,
+    "verified_local_council": true
+  },
+  {
+    "title": "Birmingham City Council",
+    "name": "birmingham-city-council",
+    "package_count": 16,
+    "verified_local_council": true
+  },
+  {
+    "title": "Blaby District Council",
+    "name": "blaby-district-council",
+    "package_count": 38,
+    "verified_local_council": true
+  },
+  {
+    "title": "Blackburn with Darwen Council",
+    "name": "blackburn-with-darwen-council",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "Blackpool Borough Council",
+    "name": "blackpool-borough-council",
+    "package_count": 21,
+    "verified_local_council": true
+  },
+  {
+    "title": "Bodmin Town Council",
+    "name": "bodmin-town-council",
+    "package_count": 3,
+    "verified_local_council": true
+  },
+  {
+    "title": "Bolsover District Council",
+    "name": "bolsover-district-council",
+    "package_count": 6,
+    "verified_local_council": true
+  },
+  {
+    "title": "Bolton Metropolitan Borough Council",
+    "name": "bolton-metropolitan-borough-council",
+    "package_count": 37,
+    "verified_local_council": true
+  },
+  {
+    "title": "Borough Council of King's Lynn and West Norfolk",
+    "name": "borough-council-of-king-s-lynn-and-west-norfolk",
+    "package_count": 13,
+    "verified_local_council": true
+  },
+  {
+    "title": "Borough of Poole",
+    "name": "borough-of-poole",
+    "package_count": 5,
+    "verified_local_council": true
+  },
+  {
+    "title": "Boston Borough Council",
+    "name": "boston-borough-council",
+    "package_count": 6,
+    "verified_local_council": true
+  },
+  {
+    "title": "Bournemouth Borough Council",
+    "name": "bournemouth-borough-council",
+    "package_count": 7,
+    "verified_local_council": true
+  },
+  {
+    "title": "Bournemouth, Christchurch and Poole Council",
+    "name": "bournemouth-christchurch-and-poole-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Bracknell Forest Council",
+    "name": "bracknell-forest-council",
+    "package_count": 18,
+    "verified_local_council": true
+  },
+  {
+    "title": "Bradford District Care Trust",
+    "name": "bradford-district-care-trust",
+    "package_count": 1,
+    "verified_local_council": false
+  },
+  {
+    "title": "Braintree District Council",
+    "name": "braintree-district-council",
+    "package_count": 40,
+    "verified_local_council": true
+  },
+  {
+    "title": "Breckland District Council",
+    "name": "breckland-district-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Brentwood Borough Council",
+    "name": "brentwood-borough-council",
+    "package_count": 26,
+    "verified_local_council": true
+  },
+  {
+    "title": "Bridgend County Borough Council",
+    "name": "bridgend-county-borough-council",
+    "package_count": 7,
+    "verified_local_council": true
+  },
+  {
+    "title": "Brighton and Hove City Council",
+    "name": "brighton-and-hove-city-council",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "Bristol City Council",
+    "name": "bristol-city-council",
+    "package_count": 125,
+    "verified_local_council": true
+  },
+  {
+    "title": "British Hallmarking Council",
+    "name": "british-hallmarking-council",
+    "package_count": 0,
+    "verified_local_council": false
+  },
+  {
+    "title": "Broadland District Council",
+    "name": "broadland-district-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Bromsgrove District Council",
+    "name": "bromsgrove-district-council",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "Broxbourne Borough Council",
+    "name": "broxbourne-borough-council",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "Broxtowe Borough Council",
+    "name": "broxtowe-borough-council",
+    "package_count": 22,
+    "verified_local_council": true
+  },
+  {
+    "title": "Buckinghamshire Council",
+    "name": "buckinghamshire-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Buckinghamshire County Council",
+    "name": "buckinghamshire-county-council",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "Burnley Borough Council",
+    "name": "burnley-borough-council",
+    "package_count": 7,
+    "verified_local_council": true
+  },
+  {
+    "title": "Bury Metropolitan Borough Council",
+    "name": "bury-metropolitan-borough-council",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "Caerphilly County Borough Council",
+    "name": "caerphilly-county-borough-council",
+    "package_count": 8,
+    "verified_local_council": true
+  },
+  {
+    "title": "Calderdale Metropolitan Borough Council",
+    "name": "calderdale-metropolitan-borough-council",
+    "package_count": 272,
+    "verified_local_council": true
+  },
+  {
+    "title": "Cambridge City Council",
+    "name": "cambridge-city-council",
+    "package_count": 4,
+    "verified_local_council": true
+  },
+  {
+    "title": "Cambridgeshire County Council",
+    "name": "cambridgeshire-county-council",
+    "package_count": 40,
+    "verified_local_council": true
+  },
+  {
+    "title": "Cannock Chase District Council",
+    "name": "cannock-chase-district-council",
+    "package_count": 9,
+    "verified_local_council": true
+  },
+  {
+    "title": "Canterbury City Council",
+    "name": "canterbury-city-council",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "Carlisle City Council",
+    "name": "carlisle-city-council",
+    "package_count": 28,
+    "verified_local_council": true
+  },
+  {
+    "title": "Castle Point Borough Council",
+    "name": "castle-point-borough-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Central Bedfordshire Council",
+    "name": "central-bedfordshire-council",
+    "package_count": 5,
+    "verified_local_council": true
+  },
+  {
+    "title": "Charnwood Borough Council",
+    "name": "charnwood-borough-council",
+    "package_count": 12,
+    "verified_local_council": true
+  },
+  {
+    "title": "Chelmsford City Council",
+    "name": "chelmsford-city-council",
+    "package_count": 22,
+    "verified_local_council": true
+  },
+  {
+    "title": "Cheltenham Borough Council",
+    "name": "cheltenham-borough-council",
+    "package_count": 28,
+    "verified_local_council": true
+  },
+  {
+    "title": "Cherwell District Council",
+    "name": "cherwell-district-council",
+    "package_count": 13,
+    "verified_local_council": true
+  },
+  {
+    "title": "Cheshire East Council",
+    "name": "cheshire-east-council",
+    "package_count": 145,
+    "verified_local_council": true
+  },
+  {
+    "title": "Cheshire West and Chester Council",
+    "name": "cheshire-west-and-chester-council",
+    "package_count": 89,
+    "verified_local_council": true
+  },
+  {
+    "title": "Chesterfield Borough Council",
+    "name": "chesterfield-borough-council",
+    "package_count": 10,
+    "verified_local_council": true
+  },
+  {
+    "title": "Chichester District Council",
+    "name": "chichester-district-council",
+    "package_count": 19,
+    "verified_local_council": true
+  },
+  {
+    "title": "Children's Workforce Development Council",
+    "name": "childrens-workforce-development-council",
+    "package_count": 2,
+    "verified_local_council": false
+  },
+  {
+    "title": "Chiltern District Council",
+    "name": "chiltern-district-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Chorley Council",
+    "name": "chorley-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Christchurch Borough Council",
+    "name": "christchurch-borough-council",
+    "package_count": 13,
+    "verified_local_council": true
+  },
+  {
+    "title": "City and County of Swansea",
+    "name": "swansea-city-council",
+    "package_count": 10,
+    "verified_local_council": true
+  },
+  {
+    "title": "City of Bradford Metropolitan District Council",
+    "name": "city-of-bradford-metropolitan-district-council",
+    "package_count": 109,
+    "verified_local_council": true
+  },
+  {
+    "title": "City of Cardiff Council",
+    "name": "city-of-cardiff-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "City of Edinburgh Council",
+    "name": "city-of-edinburgh-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "City of Lincoln Council",
+    "name": "city-of-lincoln-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "City of London",
+    "name": "city-of-london",
+    "package_count": 145,
+    "verified_local_council": true
+  },
+  {
+    "title": "City of York Council",
+    "name": "city-of-york-council",
+    "package_count": 1426,
+    "verified_local_council": true
+  },
+  {
+    "title": "Colchester Borough Council",
+    "name": "colchester-borough-council",
+    "package_count": 172,
+    "verified_local_council": true
+  },
+  {
+    "title": "Conwy County Borough Council",
+    "name": "conwy-county-borough-council",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "Copeland Borough Council",
+    "name": "copeland-borough-council",
+    "package_count": 18,
+    "verified_local_council": true
+  },
+  {
+    "title": "Corby Borough Council",
+    "name": "corby-borough-council",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "Cornwall Council",
+    "name": "cornwall-council",
+    "package_count": 24,
+    "verified_local_council": true
+  },
+  {
+    "title": "Cotswold District Council",
+    "name": "cotswold-district-council",
+    "package_count": 17,
+    "verified_local_council": true
+  },
+  {
+    "title": "Coventry City Council",
+    "name": "coventry-city-council",
+    "package_count": 7,
+    "verified_local_council": true
+  },
+  {
+    "title": "Craven District Council",
+    "name": "craven-district-council",
+    "package_count": 42,
+    "verified_local_council": true
+  },
+  {
+    "title": "Crawley Borough Council",
+    "name": "crawley-borough-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Cumbria County Council",
+    "name": "cumbria-county-council",
+    "package_count": 4,
+    "verified_local_council": true
+  },
+  {
+    "title": "Cyngor Gwynedd Council",
+    "name": "gwynedd-council",
+    "package_count": 4,
+    "verified_local_council": true
+  },
+  {
+    "title": "Cyngor Sir Ceredigion County Council",
+    "name": "ceredigion-county-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Dacorum Borough Council",
+    "name": "dacorum-borough-council",
+    "package_count": 24,
+    "verified_local_council": true
+  },
+  {
+    "title": "Darlington Borough Council",
+    "name": "darlington-borough-council",
+    "package_count": 5,
+    "verified_local_council": true
+  },
+  {
+    "title": "Dartford Borough Council",
+    "name": "dartford-borough-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Daventry District Council",
+    "name": "daventry-district-council",
+    "package_count": 15,
+    "verified_local_council": true
+  },
+  {
+    "title": "Denbighshire County Council",
+    "name": "denbighshire-county-council",
+    "package_count": 3,
+    "verified_local_council": true
+  },
+  {
+    "title": "Derby City Council",
+    "name": "derby-city-council",
+    "package_count": 18,
+    "verified_local_council": true
+  },
+  {
+    "title": "Derbyshire County Council",
+    "name": "derbyshire-county-council",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "Derbyshire Dales District Council",
+    "name": "derbyshire-dales-district-council",
+    "package_count": 19,
+    "verified_local_council": true
+  },
+  {
+    "title": "Devon County Council",
+    "name": "devon-county-council",
+    "package_count": 27,
+    "verified_local_council": true
+  },
+  {
+    "title": "Doncaster Metropolitan Borough Council",
+    "name": "doncaster-metropolitan-borough-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Dorset Council",
+    "name": "dorset-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Dorset County Council",
+    "name": "dorset-county-council",
+    "package_count": 11,
+    "verified_local_council": true
+  },
+  {
+    "title": "Dover District Council",
+    "name": "dover-district-council",
+    "package_count": 4,
+    "verified_local_council": true
+  },
+  {
+    "title": "Dudley Metropolitan Borough Council",
+    "name": "dudley-metropolitan-borough-council",
+    "package_count": 14,
+    "verified_local_council": true
+  },
+  {
+    "title": "Durham County Council",
+    "name": "durham-county-council",
+    "package_count": 39,
+    "verified_local_council": true
+  },
+  {
+    "title": "East Cambridgeshire District Council",
+    "name": "east-cambridgeshire-district-council",
+    "package_count": 44,
+    "verified_local_council": true
+  },
+  {
+    "title": "East Devon District Council",
+    "name": "east-devon-district-council",
+    "package_count": 12,
+    "verified_local_council": true
+  },
+  {
+    "title": "East Dorset District Council",
+    "name": "east-dorset-district-council",
+    "package_count": 15,
+    "verified_local_council": true
+  },
+  {
+    "title": "East Hampshire District Council",
+    "name": "east-hampshire-district-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "East Hertfordshire District Council",
+    "name": "east-hertfordshire-district-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "East Lindsey District Council",
+    "name": "east-lindsey-district-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "East Northamptonshire Council",
+    "name": "east-northamptonshire-council",
+    "package_count": 9,
+    "verified_local_council": true
+  },
+  {
+    "title": "East Renfrewshire Council",
+    "name": "east-renfrewshire-council",
+    "package_count": 5,
+    "verified_local_council": true
+  },
+  {
+    "title": "East Riding of Yorkshire Council",
+    "name": "east-riding-of-yorkshire-council",
+    "package_count": 10,
+    "verified_local_council": true
+  },
+  {
+    "title": "East Staffordshire Borough Council",
+    "name": "east-staffordshire-borough-council",
+    "package_count": 33,
+    "verified_local_council": true
+  },
+  {
+    "title": "East Suffolk Council",
+    "name": "east-suffolk-council",
+    "package_count": 3,
+    "verified_local_council": true
+  },
+  {
+    "title": "East Sussex County Council",
+    "name": "east-sussex-county-council",
+    "package_count": 9,
+    "verified_local_council": true
+  },
+  {
+    "title": "Eastbourne Borough Council",
+    "name": "eastbourne-borough-council",
+    "package_count": 7,
+    "verified_local_council": true
+  },
+  {
+    "title": "Eastleigh Borough Council",
+    "name": "eastleigh-borough-council",
+    "package_count": 9,
+    "verified_local_council": true
+  },
+  {
+    "title": "Eden District Council",
+    "name": "eden-district-council",
+    "package_count": 4,
+    "verified_local_council": true
+  },
+  {
+    "title": "Elmbridge Borough Council",
+    "name": "elmbridge-borough-council",
+    "package_count": 10,
+    "verified_local_council": true
+  },
+  {
+    "title": "Epping Forest District Council",
+    "name": "epping-forest-district-council",
+    "package_count": 3,
+    "verified_local_council": true
+  },
+  {
+    "title": "Epsom and Ewell Borough Council",
+    "name": "epsom-and-ewell-borough-council",
+    "package_count": 17,
+    "verified_local_council": true
+  },
+  {
+    "title": "Erewash Borough Council",
+    "name": "erewash-borough-council",
+    "package_count": 7,
+    "verified_local_council": true
+  },
+  {
+    "title": "Essex County Council",
+    "name": "essex-county-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Exeter City Council",
+    "name": "exeter-city-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Fareham Borough Council",
+    "name": "fareham-borough-council",
+    "package_count": 12,
+    "verified_local_council": true
+  },
+  {
+    "title": "Fenland District Council",
+    "name": "fenland-district-council",
+    "package_count": 4,
+    "verified_local_council": true
+  },
+  {
+    "title": "Financial Reporting Council",
+    "name": "financial-reporting-council",
+    "package_count": 0,
+    "verified_local_council": false
+  },
+  {
+    "title": "Forest Heath District Council",
+    "name": "forest-heath-district-council",
+    "package_count": 29,
+    "verified_local_council": true
+  },
+  {
+    "title": "Forest of Dean District Council",
+    "name": "forest-of-dean-district-council",
+    "package_count": 18,
+    "verified_local_council": true
+  },
+  {
+    "title": "Fylde Borough Council",
+    "name": "fylde-borough-council",
+    "package_count": 17,
+    "verified_local_council": true
+  },
+  {
+    "title": "Gateshead Council",
+    "name": "gateshead-council",
+    "package_count": 51,
+    "verified_local_council": true
+  },
+  {
+    "title": "Gedling Borough Council",
+    "name": "gedling-borough-council",
+    "package_count": 56,
+    "verified_local_council": true
+  },
+  {
+    "title": "General Social Care Council",
+    "name": "general-social-care-council",
+    "package_count": 5,
+    "verified_local_council": false
+  },
+  {
+    "title": "Gloucester City Council",
+    "name": "gloucester-city-council",
+    "package_count": 3,
+    "verified_local_council": true
+  },
+  {
+    "title": "Gloucestershire County Council",
+    "name": "gloucestershire-county-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Gosport Borough Council",
+    "name": "gosport-borough-council",
+    "package_count": 10,
+    "verified_local_council": true
+  },
+  {
+    "title": "Gravesham Borough Council",
+    "name": "gravesham-borough-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Great Yarmouth Borough Council",
+    "name": "great-yarmouth-borough-council",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "Guildford Borough Council",
+    "name": "guildford-borough-council",
+    "package_count": 32,
+    "verified_local_council": true
+  },
+  {
+    "title": "Halton Borough Council",
+    "name": "halton-borough-council",
+    "package_count": 29,
+    "verified_local_council": true
+  },
+  {
+    "title": "Hambleton District Council",
+    "name": "hambleton-district-council",
+    "package_count": 16,
+    "verified_local_council": true
+  },
+  {
+    "title": "Hampshire County Council",
+    "name": "hampshire-county-council",
+    "package_count": 19,
+    "verified_local_council": true
+  },
+  {
+    "title": "Harborough District Council",
+    "name": "harborough-district-council",
+    "package_count": 4,
+    "verified_local_council": true
+  },
+  {
+    "title": "Harlow Council",
+    "name": "harlow-council",
+    "package_count": 23,
+    "verified_local_council": true
+  },
+  {
+    "title": "Harrogate Borough Council",
+    "name": "harrogate-borough-council",
+    "package_count": 42,
+    "verified_local_council": true
+  },
+  {
+    "title": "Hart District Council",
+    "name": "hart-district-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Hartlepool Borough Council",
+    "name": "hartlepool-borough-council",
+    "package_count": 6,
+    "verified_local_council": true
+  },
+  {
+    "title": "Hastings Borough Council",
+    "name": "hastings-borough-council",
+    "package_count": 18,
+    "verified_local_council": true
+  },
+  {
+    "title": "Havant Borough Council",
+    "name": "havant-borough-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Herefordshire Council",
+    "name": "herefordshire-council",
+    "package_count": 3,
+    "verified_local_council": true
+  },
+  {
+    "title": "Hertfordshire County Council",
+    "name": "hertfordshire-county-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Hertsmere Borough Council",
+    "name": "hertsmere-borough-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "High Peak Borough Council",
+    "name": "high-peak-borough-council",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "Highland Council",
+    "name": "highland-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Hillsborough Independent Panel",
+    "name": "hillsborough-independent-panel",
+    "package_count": 1,
+    "verified_local_council": false
+  },
+  {
+    "title": "Hinckley and Bosworth Borough Council",
+    "name": "hinckley-and-bosworth-borough-council",
+    "package_count": 3,
+    "verified_local_council": true
+  },
+  {
+    "title": "Horsham District Council",
+    "name": "horsham-district-council",
+    "package_count": 29,
+    "verified_local_council": true
+  },
+  {
+    "title": "Hull City Council",
+    "name": "hull-city-council",
+    "package_count": 3,
+    "verified_local_council": true
+  },
+  {
+    "title": "Huntingdonshire District Council",
+    "name": "huntingdonshire-district-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Hurst Green Parish Council",
+    "name": "hurst-green-parish-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Hyndburn Borough Council",
+    "name": "hyndburn-borough-council",
+    "package_count": 5,
+    "verified_local_council": true
+  },
+  {
+    "title": "Ipswich Borough Council",
+    "name": "ipswich-borough-council",
+    "package_count": 50,
+    "verified_local_council": true
+  },
+  {
+    "title": "Isle of Anglesey County Council",
+    "name": "isle-of-anglesey-county-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Isle of Wight Council",
+    "name": "isle-of-wight-council",
+    "package_count": 12,
+    "verified_local_council": true
+  },
+  {
+    "title": "Isle of Wight NHS Primary Care Trust",
+    "name": "isle-of-wight-nhs-primary-care-trust",
+    "package_count": 1,
+    "verified_local_council": false
+  },
+  {
+    "title": "Isle of Wight NHS Trust",
+    "name": "isle-of-wight-nhs-trust",
+    "package_count": 1,
+    "verified_local_council": false
+  },
+  {
+    "title": "Kent County Council",
+    "name": "kent-county-council",
+    "package_count": 8,
+    "verified_local_council": true
+  },
+  {
+    "title": "Kettering Borough Council",
+    "name": "kettering-borough-council",
+    "package_count": 5,
+    "verified_local_council": true
+  },
+  {
+    "title": "Keynsham Town Council",
+    "name": "keynsham-town-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Kirklees Council",
+    "name": "kirklees-council",
+    "package_count": 10,
+    "verified_local_council": true
+  },
+  {
+    "title": "Knowsley Borough Council",
+    "name": "knowsley-borough-council",
+    "package_count": 9,
+    "verified_local_council": true
+  },
+  {
+    "title": "Lake District National Park Authority",
+    "name": "lake-district-national-park",
+    "package_count": 8,
+    "verified_local_council": false
+  },
+  {
+    "title": "Lancashire County Council",
+    "name": "lancashire-county-council",
+    "package_count": 4,
+    "verified_local_council": true
+  },
+  {
+    "title": "Lancaster City Council",
+    "name": "lancaster-city-council",
+    "package_count": 7,
+    "verified_local_council": true
+  },
+  {
+    "title": "Learning and Skills Council",
+    "name": "learning-and-skills-council-skills-funding-agency",
+    "package_count": 2,
+    "verified_local_council": false
+  },
+  {
+    "title": "Leeds City Council",
+    "name": "leeds-city-council",
+    "package_count": 299,
+    "verified_local_council": true
+  },
+  {
+    "title": "Leicester City Council",
+    "name": "leicester-city-council",
+    "package_count": 267,
+    "verified_local_council": true
+  },
+  {
+    "title": "Leicestershire County Council",
+    "name": "leicestershire-county-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Lewes District Council",
+    "name": "lewes-district-council",
+    "package_count": 9,
+    "verified_local_council": true
+  },
+  {
+    "title": "Lichfield District Council",
+    "name": "lichfield-district-council",
+    "package_count": 36,
+    "verified_local_council": true
+  },
+  {
+    "title": "Lincolnshire County Council",
+    "name": "lincolnshire-county-council",
+    "package_count": 71,
+    "verified_local_council": true
+  },
+  {
+    "title": "Liverpool City Council",
+    "name": "liverpool-city-council",
+    "package_count": 21,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Barking and Dagenham",
+    "name": "london-borough-of-barking-and-dagenham",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Barnet",
+    "name": "london-borough-of-barnet",
+    "package_count": 369,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Bexley",
+    "name": "london-borough-of-bexley",
+    "package_count": 3,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Brent",
+    "name": "london-borough-of-brent",
+    "package_count": 24,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Bromley",
+    "name": "london-borough-of-bromley",
+    "package_count": 6,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Camden",
+    "name": "london-borough-of-camden",
+    "package_count": 706,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Croydon",
+    "name": "london-borough-of-croydon",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Ealing",
+    "name": "london-borough-of-ealing",
+    "package_count": 12,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Enfield",
+    "name": "london-borough-of-enfield",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Hackney",
+    "name": "london-borough-of-hackney",
+    "package_count": 94,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Hammersmith and Fulham",
+    "name": "london-borough-of-hammersmith-and-fulham",
+    "package_count": 12,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Haringey",
+    "name": "london-borough-of-haringey",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Harrow",
+    "name": "london-borough-of-harrow",
+    "package_count": 8,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Havering",
+    "name": "london-borough-of-havering",
+    "package_count": 35,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Hillingdon",
+    "name": "london-borough-of-hillingdon",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Hounslow",
+    "name": "london-borough-of-hounslow",
+    "package_count": 42,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Islington",
+    "name": "london-borough-of-islington",
+    "package_count": 6,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Lambeth",
+    "name": "london-borough-of-lambeth",
+    "package_count": 202,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Lewisham",
+    "name": "london-borough-of-lewisham",
+    "package_count": 33,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Merton",
+    "name": "london-borough-of-merton",
+    "package_count": 15,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Newham",
+    "name": "london-borough-of-newham",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Redbridge",
+    "name": "london-borough-of-redbridge",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Richmond Upon Thames",
+    "name": "london-borough-of-richmond-upon-thames",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Sutton",
+    "name": "london-borough-of-sutton",
+    "package_count": 33,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Tower Hamlets",
+    "name": "london-borough-of-tower-hamlets",
+    "package_count": 10,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Waltham Forest",
+    "name": "london-borough-of-waltham-forest",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "London Borough of Wandsworth",
+    "name": "london-borough-of-wandsworth",
+    "package_count": 5,
+    "verified_local_council": true
+  },
+  {
+    "title": "Luton Borough Council",
+    "name": "luton-borough-council",
+    "package_count": 18,
+    "verified_local_council": true
+  },
+  {
+    "title": "Maidstone Borough Council",
+    "name": "maidstone-borough-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Maldon District Council",
+    "name": "maldon-district-council",
+    "package_count": 53,
+    "verified_local_council": true
+  },
+  {
+    "title": "Malvern Hills District Council",
+    "name": "malvern-hills-district-council",
+    "package_count": 4,
+    "verified_local_council": true
+  },
+  {
+    "title": "Manchester City Council",
+    "name": "manchester-city-council",
+    "package_count": 39,
+    "verified_local_council": true
+  },
+  {
+    "title": "Mansfield District Council",
+    "name": "mansfield-district-council",
+    "package_count": 14,
+    "verified_local_council": true
+  },
+  {
+    "title": "Medway Council",
+    "name": "medway-council",
+    "package_count": 27,
+    "verified_local_council": true
+  },
+  {
+    "title": "Melton Borough Council",
+    "name": "melton-borough-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Mendip District Council",
+    "name": "mendip-district-council",
+    "package_count": 14,
+    "verified_local_council": true
+  },
+  {
+    "title": "Merthyr Tydfil County Borough Council",
+    "name": "merthyr-tydfil-county-borough-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Metropolitan Police Service",
+    "name": "metropolitan-police-service",
+    "package_count": 0,
+    "verified_local_council": false
+  },
+  {
+    "title": "Mid Devon District Council",
+    "name": "mid-devon-district-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Mid Suffolk District Council",
+    "name": "mid-suffolk-district-council",
+    "package_count": 26,
+    "verified_local_council": true
+  },
+  {
+    "title": "Mid Sussex District Council",
+    "name": "mid-sussex-district-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Middlesbrough Borough Council",
+    "name": "middlesbrough-borough-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Midlothian Council",
+    "name": "midlothian-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Milton Keynes Council",
+    "name": "milton-keynes-council",
+    "package_count": 51,
+    "verified_local_council": true
+  },
+  {
+    "title": "Mole Valley District Council",
+    "name": "mole-valley-district-council",
+    "package_count": 60,
+    "verified_local_council": true
+  },
+  {
+    "title": "Monmouthshire County Council",
+    "name": "monmouthshire-county-council",
+    "package_count": 10,
+    "verified_local_council": true
+  },
+  {
+    "title": "Museums Libraries and Archives Council",
+    "name": "museums-libraries-and-archives-council",
+    "package_count": 1,
+    "verified_local_council": false
+  },
+  {
+    "title": "National Association of Local Councils",
+    "name": "national-association-of-local-councils",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Neath Port Talbot County Borough Council",
+    "name": "neath-port-talbot-county-borough-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "New Forest District Council",
+    "name": "new-forest-district-council",
+    "package_count": 8,
+    "verified_local_council": true
+  },
+  {
+    "title": "Newark and Sherwood District Council",
+    "name": "newark-and-sherwood-district-council",
+    "package_count": 84,
+    "verified_local_council": true
+  },
+  {
+    "title": "Newcastle City Council",
+    "name": "newcastle-city-council",
+    "package_count": 45,
+    "verified_local_council": true
+  },
+  {
+    "title": "Newcastle Under Lyme Borough Council",
+    "name": "newcastle-under-lyme-borough-council",
+    "package_count": 21,
+    "verified_local_council": true
+  },
+  {
+    "title": "Newport City Council",
+    "name": "newport-city-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Newquay Town Council",
+    "name": "newquay-town-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "NHS Bradford Districts CCG",
+    "name": "nhs-bradford-districts-ccg",
+    "package_count": 1,
+    "verified_local_council": false
+  },
+  {
+    "title": "NHS Cambridgeshire and Peterborough CCG",
+    "name": "nhs-cambridgeshire-and-peterborough-ccg",
+    "package_count": 0,
+    "verified_local_council": false
+  },
+  {
+    "title": "NHS County Durham (PCT)",
+    "name": "nhs-county-durham",
+    "package_count": 1,
+    "verified_local_council": false
+  },
+  {
+    "title": "NHS Derbyshire County",
+    "name": "nhs-derbyshire-county",
+    "package_count": 1,
+    "verified_local_council": false
+  },
+  {
+    "title": "NHS Harrogate and Rural District CCG",
+    "name": "nhs-harrogate-and-rural-district-ccg",
+    "package_count": 1,
+    "verified_local_council": false
+  },
+  {
+    "title": "NHS Isle of Wight CCG",
+    "name": "nhs-isle-of-wight-ccg",
+    "package_count": 1,
+    "verified_local_council": false
+  },
+  {
+    "title": "NHS Newbury and District CCG",
+    "name": "nhs-newbury-and-district-ccg",
+    "package_count": 1,
+    "verified_local_council": false
+  },
+  {
+    "title": "NHS Scarborough and Ryedale CCG",
+    "name": "nhs-scarborough-and-ryedale-ccg",
+    "package_count": 1,
+    "verified_local_council": false
+  },
+  {
+    "title": "NHS Wigan Borough CCG",
+    "name": "nhs-wigan-borough-ccg",
+    "package_count": 1,
+    "verified_local_council": false
+  },
+  {
+    "title": "Norfolk County Council",
+    "name": "norfolk-county-council",
+    "package_count": 22,
+    "verified_local_council": true
+  },
+  {
+    "title": "North Devon Council",
+    "name": "north-devon-council",
+    "package_count": 11,
+    "verified_local_council": true
+  },
+  {
+    "title": "North Dorset District Council",
+    "name": "north-dorset-district-council",
+    "package_count": 11,
+    "verified_local_council": true
+  },
+  {
+    "title": "North East Derbyshire District Council",
+    "name": "north-east-derbyshire-district-council",
+    "package_count": 7,
+    "verified_local_council": true
+  },
+  {
+    "title": "North East Lincolnshire Council",
+    "name": "north-east-lincolnshire-council",
+    "package_count": 9,
+    "verified_local_council": true
+  },
+  {
+    "title": "North Hertfordshire District Council",
+    "name": "north-hertfordshire-district-council",
+    "package_count": 25,
+    "verified_local_council": true
+  },
+  {
+    "title": "North Kesteven District Council",
+    "name": "north-kesteven-district-council",
+    "package_count": 17,
+    "verified_local_council": true
+  },
+  {
+    "title": "North Lincolnshire Council",
+    "name": "north-lincolnshire-council",
+    "package_count": 167,
+    "verified_local_council": true
+  },
+  {
+    "title": "North Norfolk District Council",
+    "name": "north-norfolk-district-council",
+    "package_count": 31,
+    "verified_local_council": true
+  },
+  {
+    "title": "North Somerset Council",
+    "name": "north-somerset-council",
+    "package_count": 70,
+    "verified_local_council": true
+  },
+  {
+    "title": "North Tyneside Metropolitan Borough Council",
+    "name": "north-tyneside-metropolitan-borough-council",
+    "package_count": 3,
+    "verified_local_council": true
+  },
+  {
+    "title": "North Warwickshire Borough Council",
+    "name": "north-warwickshire-borough-council",
+    "package_count": 4,
+    "verified_local_council": true
+  },
+  {
+    "title": "North West Leicestershire District Council",
+    "name": "north-west-leicestershire-district-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "North Yorkshire Council",
+    "name": "north-yorkshire-council",
+    "package_count": 6,
+    "verified_local_council": true
+  },
+  {
+    "title": "North Yorkshire County Council",
+    "name": "north-yorkshire-county-council",
+    "package_count": 178,
+    "verified_local_council": true
+  },
+  {
+    "title": "Northampton Borough Council",
+    "name": "northampton-borough-council",
+    "package_count": 20,
+    "verified_local_council": true
+  },
+  {
+    "title": "Northamptonshire County Council",
+    "name": "northamptonshire-county-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Northumberland County Council",
+    "name": "northumberland-county-council",
+    "package_count": 40,
+    "verified_local_council": true
+  },
+  {
+    "title": "Norwich City Council",
+    "name": "norwich-city-council",
+    "package_count": 18,
+    "verified_local_council": true
+  },
+  {
+    "title": "Nottingham City Council",
+    "name": "nottingham-city-council",
+    "package_count": 77,
+    "verified_local_council": true
+  },
+  {
+    "title": "Nottinghamshire County Council",
+    "name": "nottinghamshire-county-council",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "Nottinghamshire County Teaching Primary Care Trust",
+    "name": "nottinghamshire-county-teaching-primary-care-trust",
+    "package_count": 1,
+    "verified_local_council": false
+  },
+  {
+    "title": "Nuneaton and Bedworth Council",
+    "name": "nuneaton-and-bedworth-council",
+    "package_count": 3,
+    "verified_local_council": true
+  },
+  {
+    "title": "Oadby and Wigston District Council",
+    "name": "oadby-and-wigston-district-council",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "Oldham Council",
+    "name": "oldham-council",
+    "package_count": 31,
+    "verified_local_council": true
+  },
+  {
+    "title": "Oxford City Council",
+    "name": "oxford-city-council",
+    "package_count": 74,
+    "verified_local_council": true
+  },
+  {
+    "title": "Oxfordshire County Council",
+    "name": "oxfordshire-county-council",
+    "package_count": 16,
+    "verified_local_council": true
+  },
+  {
+    "title": "Peak District National Park Authority",
+    "name": "peak-district-national-park-authority",
+    "package_count": 8,
+    "verified_local_council": false
+  },
+  {
+    "title": "Pembrokeshire County Council",
+    "name": "pembrokeshire-county-council",
+    "package_count": 9,
+    "verified_local_council": true
+  },
+  {
+    "title": "Pendle Borough Council",
+    "name": "pendle-borough-council",
+    "package_count": 13,
+    "verified_local_council": true
+  },
+  {
+    "title": "Peterborough City Council",
+    "name": "peterborough-city-council",
+    "package_count": 36,
+    "verified_local_council": true
+  },
+  {
+    "title": "Pitstone Parish Council",
+    "name": "pitstone-parish-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Plymouth City Council",
+    "name": "plymouth-city-council",
+    "package_count": 166,
+    "verified_local_council": true
+  },
+  {
+    "title": "Portsmouth City Council",
+    "name": "portsmouth-city-council",
+    "package_count": 10,
+    "verified_local_council": true
+  },
+  {
+    "title": "Powys County Council",
+    "name": "powys-county-council",
+    "package_count": 19,
+    "verified_local_council": true
+  },
+  {
+    "title": "Preston City Council",
+    "name": "preston-city-council",
+    "package_count": 4,
+    "verified_local_council": true
+  },
+  {
+    "title": "Purbeck District Council",
+    "name": "purbeck-district-council",
+    "package_count": 28,
+    "verified_local_council": true
+  },
+  {
+    "title": "Reading Borough Council",
+    "name": "reading-borough-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Redcar and Cleveland Borough Council",
+    "name": "redcar-and-cleveland-borough-council",
+    "package_count": 13,
+    "verified_local_council": true
+  },
+  {
+    "title": "Redditch Borough Council",
+    "name": "redditch-borough-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Reigate and Banstead Borough Council",
+    "name": "reigate-and-banstead-borough-council",
+    "package_count": 17,
+    "verified_local_council": true
+  },
+  {
+    "title": "Renfrewshire Council",
+    "name": "renfrewshire-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Rhondda Cynon Taff County Borough Council",
+    "name": "rhondda-cynon-taff-county-borough-council",
+    "package_count": 5,
+    "verified_local_council": true
+  },
+  {
+    "title": "Ribble Valley Borough Council",
+    "name": "ribble-valley-borough-council",
+    "package_count": 12,
+    "verified_local_council": true
+  },
+  {
+    "title": "Richmondshire District Council",
+    "name": "richmondshire-district-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Rochdale Borough Council",
+    "name": "rochdale-borough-council",
+    "package_count": 31,
+    "verified_local_council": true
+  },
+  {
+    "title": "Rochford District Council",
+    "name": "rochford-district-council",
+    "package_count": 36,
+    "verified_local_council": true
+  },
+  {
+    "title": "Rossendale Borough Council",
+    "name": "rossendale-borough-council",
+    "package_count": 5,
+    "verified_local_council": true
+  },
+  {
+    "title": "Rother District Council",
+    "name": "rother-district-council",
+    "package_count": 30,
+    "verified_local_council": true
+  },
+  {
+    "title": "Rotherham Metropolitan District Council",
+    "name": "rotherham-metropolitan-district-council",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "Royal Borough of Greenwich",
+    "name": "royal-borough-of-greenwich",
+    "package_count": 7,
+    "verified_local_council": true
+  },
+  {
+    "title": "Royal Borough of Kensington and Chelsea",
+    "name": "royal-borough-of-kensington-and-chelsea",
+    "package_count": 24,
+    "verified_local_council": true
+  },
+  {
+    "title": "Royal Borough of Kingston upon Thames",
+    "name": "royal-borough-of-kingston-upon-thames",
+    "package_count": 24,
+    "verified_local_council": true
+  },
+  {
+    "title": "Royal Borough of Windsor and Maidenhead",
+    "name": "royal-borough-of-windsor-and-maidenhead",
+    "package_count": 26,
+    "verified_local_council": true
+  },
+  {
+    "title": "Rugby Borough Council",
+    "name": "rugby-borough-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Runnymede Borough Council",
+    "name": "runnymede-borough-council",
+    "package_count": 41,
+    "verified_local_council": true
+  },
+  {
+    "title": "Rushcliffe Borough Council",
+    "name": "rushcliffe-borough-council",
+    "package_count": 5,
+    "verified_local_council": true
+  },
+  {
+    "title": "Rushmoor Borough Council",
+    "name": "rushmoor-borough-council",
+    "package_count": 29,
+    "verified_local_council": true
+  },
+  {
+    "title": "Rutland County Council",
+    "name": "rutland-county-council",
+    "package_count": 12,
+    "verified_local_council": true
+  },
+  {
+    "title": "Ryedale District Council",
+    "name": "ryedale-district-council",
+    "package_count": 17,
+    "verified_local_council": true
+  },
+  {
+    "title": "Salford City Council",
+    "name": "salford-city-council",
+    "package_count": 63,
+    "verified_local_council": true
+  },
+  {
+    "title": "Sandwell Metropolitan Borough Council",
+    "name": "sandwell-metropolitan-borough-council",
+    "package_count": 11,
+    "verified_local_council": true
+  },
+  {
+    "title": "Scarborough and North East Yorkshire Healthcare NHS Trust",
+    "name": "scarborough-and-north-east-yorkshire-healthcare-nhs-trust",
+    "package_count": 1,
+    "verified_local_council": false
+  },
+  {
+    "title": "Scarborough Borough Council",
+    "name": "scarborough-borough-council",
+    "package_count": 63,
+    "verified_local_council": true
+  },
+  {
+    "title": "Science and Technology Facilities Council",
+    "name": "science-and-technology-facilities-council",
+    "package_count": 5,
+    "verified_local_council": false
+  },
+  {
+    "title": "Sedgemoor District Council",
+    "name": "sedgemoor-district-council",
+    "package_count": 10,
+    "verified_local_council": true
+  },
+  {
+    "title": "Sefton Metropolitan Borough Council",
+    "name": "sefton-metropolitan-borough-council",
+    "package_count": 15,
+    "verified_local_council": true
+  },
+  {
+    "title": "Selby District Council",
+    "name": "selby-district-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Sevenoaks District Council",
+    "name": "sevenoaks-district-council",
+    "package_count": 37,
+    "verified_local_council": true
+  },
+  {
+    "title": "Shaftesbury Town Council",
+    "name": "shaftesbury-town-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Sheffield City Council",
+    "name": "sheffield-city-council",
+    "package_count": 58,
+    "verified_local_council": true
+  },
+  {
+    "title": "Shepway District Council",
+    "name": "shepway-district-council",
+    "package_count": 10,
+    "verified_local_council": true
+  },
+  {
+    "title": "Shropshire Council",
+    "name": "shropshire-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Shropshire County Primary Care Trust",
+    "name": "shropshire-county-primary-care-trust",
+    "package_count": 1,
+    "verified_local_council": false
+  },
+  {
+    "title": "Slough Borough Council",
+    "name": "slough-borough-council",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "Solihull Metropolitan Borough Council",
+    "name": "solihull-metropolitan-borough-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Somerset Council",
+    "name": "somerset-council",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "Somerset County Council",
+    "name": "somerset-county-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Somerset West and Taunton Council",
+    "name": "somerset-west-and-taunton-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "South Buckinghamshire District Council",
+    "name": "south-buckinghamshire-district-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "South Cambridgeshire District Council",
+    "name": "south-cambridgeshire-district-council",
+    "package_count": 6,
+    "verified_local_council": true
+  },
+  {
+    "title": "South Derbyshire District Council",
+    "name": "south-derbyshire-district-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "South Gloucestershire Council",
+    "name": "south-gloucestershire-council",
+    "package_count": 18,
+    "verified_local_council": true
+  },
+  {
+    "title": "South Hams District Council",
+    "name": "south-hams-district-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "South Holland District Council",
+    "name": "south-holland-district-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "South Kesteven District Council",
+    "name": "south-kesteven-district-council",
+    "package_count": 25,
+    "verified_local_council": true
+  },
+  {
+    "title": "South Lakeland District Council",
+    "name": "south-lakeland-district-council",
+    "package_count": 26,
+    "verified_local_council": true
+  },
+  {
+    "title": "South Lanarkshire Council",
+    "name": "south-lanarkshire-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "South Norfolk District Council",
+    "name": "south-norfolk-district-council",
+    "package_count": 9,
+    "verified_local_council": true
+  },
+  {
+    "title": "South Northamptonshire Council",
+    "name": "south-northamptonshire-council",
+    "package_count": 13,
+    "verified_local_council": true
+  },
+  {
+    "title": "South Oxfordshire District Council",
+    "name": "south-oxfordshire-district-council",
+    "package_count": 4,
+    "verified_local_council": true
+  },
+  {
+    "title": "South Ribble Borough Council",
+    "name": "south-ribble-borough-council",
+    "package_count": 13,
+    "verified_local_council": true
+  },
+  {
+    "title": "South Somerset District Council",
+    "name": "south-somerset-district-council",
+    "package_count": 7,
+    "verified_local_council": true
+  },
+  {
+    "title": "South Staffordshire Council",
+    "name": "south-staffordshire-council",
+    "package_count": 5,
+    "verified_local_council": true
+  },
+  {
+    "title": "South Tyneside Council",
+    "name": "south-tyneside-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Southampton City Council",
+    "name": "southampton-city-council",
+    "package_count": 21,
+    "verified_local_council": true
+  },
+  {
+    "title": "Southend-on-Sea Borough Council",
+    "name": "southend-on-sea-borough-council",
+    "package_count": 35,
+    "verified_local_council": true
+  },
+  {
+    "title": "Southwark London Borough Council",
+    "name": "southwark-london-borough-council",
+    "package_count": 16,
+    "verified_local_council": true
+  },
+  {
+    "title": "Spelthorne Borough Council",
+    "name": "spelthorne-borough-council",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "St Albans City and District Council",
+    "name": "st-albans-city-and-district-council",
+    "package_count": 24,
+    "verified_local_council": true
+  },
+  {
+    "title": "St Austell Town Council",
+    "name": "st-austell-town-council",
+    "package_count": 6,
+    "verified_local_council": true
+  },
+  {
+    "title": "St Edmundsbury Borough Council",
+    "name": "st-edmundsbury-borough-council",
+    "package_count": 29,
+    "verified_local_council": true
+  },
+  {
+    "title": "St Helens Council",
+    "name": "st-helens-council",
+    "package_count": 18,
+    "verified_local_council": true
+  },
+  {
+    "title": "Stafford Borough Council",
+    "name": "stafford-borough-council",
+    "package_count": 6,
+    "verified_local_council": true
+  },
+  {
+    "title": "Staffordshire County Council",
+    "name": "staffordshire-county-council",
+    "package_count": 6,
+    "verified_local_council": true
+  },
+  {
+    "title": "Staffordshire Moorlands District Council",
+    "name": "staffordshire-moorlands-district-council",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "Stevenage Borough Council",
+    "name": "stevenage-borough-council",
+    "package_count": 6,
+    "verified_local_council": true
+  },
+  {
+    "title": "Stirling Council",
+    "name": "stirling-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Stockport Metropolitan Borough Council",
+    "name": "stockport-metropolitan-borough-council",
+    "package_count": 52,
+    "verified_local_council": true
+  },
+  {
+    "title": "Stockton-on-Tees Borough Council",
+    "name": "stockton-on-tees-borough-council",
+    "package_count": 11,
+    "verified_local_council": true
+  },
+  {
+    "title": "Stoke-on-Trent City Council",
+    "name": "stoke-on-trent-city-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Stratford-on-Avon District Council",
+    "name": "stratford-on-avon-district-council",
+    "package_count": 2,
+    "verified_local_council": true
+  },
+  {
+    "title": "Stroud District Council",
+    "name": "stroud-district-council",
+    "package_count": 16,
+    "verified_local_council": true
+  },
+  {
+    "title": "Suffolk Coastal District Council",
+    "name": "suffolk-coastal-district-council",
+    "package_count": 25,
+    "verified_local_council": true
+  },
+  {
+    "title": "Suffolk County Council",
+    "name": "suffolk-county-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Sunderland City Council",
+    "name": "sunderland-city-council",
+    "package_count": 82,
+    "verified_local_council": true
+  },
+  {
+    "title": "Surrey County Council",
+    "name": "surrey-county-council",
+    "package_count": 5,
+    "verified_local_council": true
+  },
+  {
+    "title": "Surrey Heath Borough Council",
+    "name": "surrey-heath-borough-council",
+    "package_count": 41,
+    "verified_local_council": true
+  },
+  {
+    "title": "Swale Borough Council",
+    "name": "swale-borough-council",
+    "package_count": 8,
+    "verified_local_council": true
+  },
+  {
+    "title": "Swindon Borough Council",
+    "name": "swindon-borough-council",
+    "package_count": 25,
+    "verified_local_council": true
+  },
+  {
+    "title": "Tameside Metropolitan Borough Council",
+    "name": "tameside-metropolitan-borough-council",
+    "package_count": 3,
+    "verified_local_council": true
+  },
+  {
+    "title": "Tamworth Borough Council",
+    "name": "tamworth-borough-council",
+    "package_count": 17,
+    "verified_local_council": true
+  },
+  {
+    "title": "Tandridge District Council",
+    "name": "tandridge-district-council",
+    "package_count": 5,
+    "verified_local_council": true
+  },
+  {
+    "title": "Taunton Deane Borough Council",
+    "name": "taunton-deane-borough-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Teignbridge District Council",
+    "name": "teignbridge-district-council",
+    "package_count": 35,
+    "verified_local_council": true
+  },
+  {
+    "title": "Telford & Wrekin Council",
+    "name": "telford-wrekin-council",
+    "package_count": 3,
+    "verified_local_council": true
+  },
+  {
+    "title": "Tendring District Council",
+    "name": "tendring-district-council",
+    "package_count": 57,
+    "verified_local_council": true
+  },
+  {
+    "title": "Test Valley Borough Council",
+    "name": "test-valley-borough-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Tewkesbury Borough Council",
+    "name": "tewkesbury-borough-council",
+    "package_count": 9,
+    "verified_local_council": true
+  },
+  {
+    "title": "Thanet District Council",
+    "name": "thanet-district-council",
+    "package_count": 7,
+    "verified_local_council": true
+  },
+  {
+    "title": "Three Rivers District Council",
+    "name": "three-rivers-district-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Thurrock Council",
+    "name": "thurrock-council",
+    "package_count": 80,
+    "verified_local_council": true
+  },
+  {
+    "title": "Tonbridge and Malling Borough Council",
+    "name": "tonbridge-and-malling-borough-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Torbay Council",
+    "name": "torbay-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Torfaen County Borough Council",
+    "name": "torfaen-county-borough-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Torridge District Council",
+    "name": "torridge-district-council",
+    "package_count": 7,
+    "verified_local_council": true
+  },
+  {
+    "title": "Trafford Council",
+    "name": "trafford-council",
+    "package_count": 22,
+    "verified_local_council": true
+  },
+  {
+    "title": "Tunbridge Wells Borough Council",
+    "name": "tunbridge-wells-borough-council",
+    "package_count": 222,
+    "verified_local_council": true
+  },
+  {
+    "title": "UK Film Council",
+    "name": "uk-film-council",
+    "package_count": 1,
+    "verified_local_council": false
+  },
+  {
+    "title": "Uttlesford District Council",
+    "name": "uttlesford-district-council",
+    "package_count": 8,
+    "verified_local_council": true
+  },
+  {
+    "title": "Vale of Glamorgan Council",
+    "name": "vale-of-glamorgan-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Vale of White Horse District Council",
+    "name": "vale-of-white-horse-district-council",
+    "package_count": 3,
+    "verified_local_council": true
+  },
+  {
+    "title": "Wakefield District Primary Care Trust",
+    "name": "wakefield-district-primary-care-trust",
+    "package_count": 1,
+    "verified_local_council": false
+  },
+  {
+    "title": "Wakefield Metropolitan District Council",
+    "name": "wakefield-metropolitan-district-council",
+    "package_count": 16,
+    "verified_local_council": true
+  },
+  {
+    "title": "Walsall Council",
+    "name": "walsall-council",
+    "package_count": 6,
+    "verified_local_council": true
+  },
+  {
+    "title": "Warrington Borough Council",
+    "name": "warrington-borough-council",
+    "package_count": 10,
+    "verified_local_council": true
+  },
+  {
+    "title": "Warwick District Council",
+    "name": "warwick-district-council",
+    "package_count": 10,
+    "verified_local_council": true
+  },
+  {
+    "title": "Warwickshire County Council",
+    "name": "warwickshire-county-council",
+    "package_count": 59,
+    "verified_local_council": true
+  },
+  {
+    "title": "Watford Borough Council",
+    "name": "watford-borough-council",
+    "package_count": 10,
+    "verified_local_council": true
+  },
+  {
+    "title": "Waveney District Council",
+    "name": "waveney-district-council",
+    "package_count": 26,
+    "verified_local_council": true
+  },
+  {
+    "title": "Waverley Borough Council",
+    "name": "waverley-borough-council",
+    "package_count": 14,
+    "verified_local_council": true
+  },
+  {
+    "title": "Wealden District Council",
+    "name": "wealden-district-council",
+    "package_count": 10,
+    "verified_local_council": true
+  },
+  {
+    "title": "Wellingborough Borough Council",
+    "name": "wellingborough-borough-council",
+    "package_count": 11,
+    "verified_local_council": true
+  },
+  {
+    "title": "Welwyn Hatfield Borough Council",
+    "name": "welwyn-hatfield-borough-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "West Berkshire Council",
+    "name": "west-berkshire-council",
+    "package_count": 6,
+    "verified_local_council": true
+  },
+  {
+    "title": "West Devon Borough Council",
+    "name": "west-devon-borough-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "West Dorset District Council",
+    "name": "west-dorset-district-council",
+    "package_count": 26,
+    "verified_local_council": true
+  },
+  {
+    "title": "West Lancashire Borough Council",
+    "name": "west-lancashire-borough-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "West Lindsey District Council",
+    "name": "west-lindsey-district-council",
+    "package_count": 36,
+    "verified_local_council": true
+  },
+  {
+    "title": "West Oxfordshire District Council",
+    "name": "west-oxfordshire-district-council",
+    "package_count": 9,
+    "verified_local_council": true
+  },
+  {
+    "title": "West Somerset District Council",
+    "name": "west-somerset-district-council",
+    "package_count": 8,
+    "verified_local_council": true
+  },
+  {
+    "title": "West Suffolk Council",
+    "name": "west-suffolk-council",
+    "package_count": 4,
+    "verified_local_council": true
+  },
+  {
+    "title": "West Sussex County Council",
+    "name": "west-sussex-county-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Westminster City Council",
+    "name": "westminster-city-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Weymouth and Portland Borough Council",
+    "name": "weymouth-and-portland-borough-council",
+    "package_count": 5,
+    "verified_local_council": true
+  },
+  {
+    "title": "Wigan Metropolitan Borough Council",
+    "name": "wigan-metropolitan-borough-council",
+    "package_count": 109,
+    "verified_local_council": true
+  },
+  {
+    "title": "Wiltshire Council",
+    "name": "wiltshire-council",
+    "package_count": 27,
+    "verified_local_council": true
+  },
+  {
+    "title": "Winchester City Council",
+    "name": "winchester-city-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Wirral Metropolitan Borough Council",
+    "name": "wirral-metropolitan-borough-council",
+    "package_count": 28,
+    "verified_local_council": true
+  },
+  {
+    "title": "Woking Borough Council",
+    "name": "woking-borough-council",
+    "package_count": 23,
+    "verified_local_council": true
+  },
+  {
+    "title": "Wokingham Borough Council",
+    "name": "wokingham-borough-council",
+    "package_count": 1,
+    "verified_local_council": true
+  },
+  {
+    "title": "Wolverhampton City Council",
+    "name": "wolverhampton-city-council",
+    "package_count": 40,
+    "verified_local_council": true
+  },
+  {
+    "title": "Wolverton and Greenleys Town Council",
+    "name": "wolverton-and-greenleys-town-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Worcester City Council",
+    "name": "worcester-city-council",
+    "package_count": 5,
+    "verified_local_council": true
+  },
+  {
+    "title": "Worcestershire County Council",
+    "name": "worcestershire-county-council",
+    "package_count": 6,
+    "verified_local_council": true
+  },
+  {
+    "title": "Worthing Borough Council",
+    "name": "worthing-borough-council",
+    "package_count": 0,
+    "verified_local_council": true
+  },
+  {
+    "title": "Wrexham County Borough Council",
+    "name": "wrexham-county-borough-council",
+    "package_count": 4,
+    "verified_local_council": true
+  },
+  {
+    "title": "Wychavon District Council",
+    "name": "wychavon-district-council",
+    "package_count": 15,
+    "verified_local_council": true
+  },
+  {
+    "title": "Wycombe District Council",
+    "name": "wycombe-district-council",
+    "package_count": 97,
+    "verified_local_council": true
+  },
+  {
+    "title": "Wyre Borough Council",
+    "name": "wyre-borough-council",
+    "package_count": 7,
+    "verified_local_council": true
+  },
+  {
+    "title": "Wyre Forest District Council",
+    "name": "wyre-forest-district-council",
+    "package_count": 6,
+    "verified_local_council": true
+  }
+]

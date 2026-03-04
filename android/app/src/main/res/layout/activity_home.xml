@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg_app_surface"
-    android:padding="@dimen/dim_16">
+    android:padding="20dp">
 
     <ImageButton
         android:id="@+id/homeSettingsButton"
@@ -12,8 +12,8 @@
         android:layout_height="@dimen/home_settings_button_size"
         android:background="@drawable/bg_map_control_chip"
         android:contentDescription="@string/settings_title"
-        android:elevation="@dimen/dim_6"
-        android:padding="@dimen/dim_12"
+        android:elevation="6dp"
+        android:padding="12dp"
         android:scaleType="fitCenter"
         android:tint="@color/map_control_settings_icon"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,612 +24,317 @@
         android:id="@+id/homeLogo"
         android:layout_width="@dimen/logo_width_home"
         android:layout_height="@dimen/logo_height_home"
-        android:layout_marginTop="@dimen/dim_16"
+        android:layout_marginTop="30dp"
         android:contentDescription="@string/drivest_logo_content_description"
         android:src="@drawable/drivest_logo_tight"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <com.google.android.material.card.MaterialCardView
+    <LinearLayout
         android:id="@+id/homeStatusCard"
-        android:layout_width="@dimen/dim_0"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dim_12"
-        app:cardBackgroundColor="@color/app_card_bg"
-        app:cardCornerRadius="@dimen/radius_md"
-        app:cardElevation="@dimen/dim_2"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/bg_home_status_card"
+        android:elevation="3dp"
+        android:outlineProvider="background"
+        android:orientation="vertical"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/homeLogo">
 
-        <LinearLayout
+        <TextView
+            android:id="@+id/homeSubtitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="@dimen/dim_12">
+            android:gravity="center"
+            android:text="@string/home_subtitle"
+            android:textColor="@color/settings_text_secondary"
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/homeSubtitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ellipsize="end"
-                android:maxLines="1"
-                android:text="@string/home_subtitle"
-                android:textColor="@color/settings_text_primary"
-                android:textSize="@dimen/text_16" />
+        <TextView
+            android:id="@+id/homeDriverModeValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/home_driver_mode_default"
+            android:textColor="@color/settings_text_primary"
+            android:textSize="17sp"
+            android:textStyle="bold" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dim_6"
-                android:gravity="center_vertical"
-                android:orientation="horizontal">
+        <TextView
+            android:id="@+id/homeConfidenceValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="@string/home_confidence_score_default"
+            android:textColor="@color/app_chip_text"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/homeDriverModeValue"
-                    android:layout_width="@dimen/dim_0"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:text="@string/home_driver_mode_default"
-                    android:textColor="@color/settings_text_secondary"
-                    android:textSize="@dimen/text_13" />
+        <TextView
+            android:id="@+id/homeRecommendedLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="@string/home_recommended_today_label"
+            android:textColor="@color/settings_accent"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/dim_6"
-                    android:text="|"
-                    android:textColor="@color/settings_text_muted"
-                    android:textSize="@dimen/text_12" />
-
-                <TextView
-                    android:id="@+id/homeConfidenceValue"
-                    android:layout_width="@dimen/dim_0"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:text="@string/home_confidence_score_default"
-                    android:textColor="@color/settings_text_secondary"
-                    android:textSize="@dimen/text_13" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/dim_6"
-                    android:text="|"
-                    android:textColor="@color/settings_text_muted"
-                    android:textSize="@dimen/text_12" />
-
-                <TextView
-                    android:id="@+id/homeTheoryReadinessValue"
-                    android:layout_width="@dimen/dim_0"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:text="@string/home_theory_readiness_default"
-                    android:textColor="@color/settings_text_secondary"
-                    android:textSize="@dimen/text_13" />
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/homeRecommendedLabel"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dim_10"
-                android:text="@string/home_recommended_today_label"
-                android:textColor="@color/settings_accent"
-                android:textSize="@dimen/text_12"
-                android:visibility="gone" />
-
-            <TextView
-                android:id="@+id/homeRecommendedValue"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dim_3"
-                android:textColor="@color/settings_text_primary"
-                android:textSize="@dimen/text_13"
-                android:visibility="gone" />
-        </LinearLayout>
-    </com.google.android.material.card.MaterialCardView>
-
-    <TextView
-        android:id="@+id/homeModulesHeader"
-        android:layout_width="@dimen/dim_0"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dim_12"
-        android:text="@string/home_modules_heading"
-        android:textColor="@color/settings_text_primary"
-        android:textSize="@dimen/text_14"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/homeStatusCard" />
+        <TextView
+            android:id="@+id/homeRecommendedValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:gravity="center"
+            android:textColor="@color/settings_text_primary"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/homeModeRow"
-        android:layout_width="@dimen/dim_0"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dim_12"
-        android:orientation="vertical"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal"
+        android:weightSum="3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/homeModulesHeader">
+        app:layout_constraintTop_toBottomOf="@id/homeStatusCard">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="116dp"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1">
 
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="@dimen/dim_0"
-                android:layout_height="@dimen/dim_116"
-                android:layout_marginEnd="@dimen/dim_6"
-                android:layout_weight="1"
-                app:cardBackgroundColor="@color/app_card_bg"
-                app:cardCornerRadius="@dimen/radius_md"
-                app:cardElevation="@dimen/dim_2">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/practiceModeButton"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:lineSpacingExtra="1dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/home_practice_button"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                app:icon="@drawable/ic_home_practice"
+                app:iconGravity="textTop"
+                app:iconPadding="6dp"
+                app:iconSize="20dp" />
+        </FrameLayout>
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="116dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:layout_weight="1">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:padding="@dimen/dim_12">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/navigationModeButton"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:lineSpacingExtra="1dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/home_navigation_button"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                app:icon="@drawable/ic_home_navigation"
+                app:iconGravity="textTop"
+                app:iconPadding="6dp"
+                app:iconSize="20dp" />
+        </FrameLayout>
 
-                        <ImageView
-                            android:layout_width="@dimen/dim_24"
-                            android:layout_height="@dimen/dim_24"
-                            android:contentDescription="@string/home_practice_button"
-                            android:src="@drawable/ic_home_practice" />
+        <FrameLayout
+            android:id="@+id/homeTheoryTileContainer"
+            android:layout_width="0dp"
+            android:layout_height="116dp"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dim_8"
-                            android:text="@string/home_practice_button"
-                            android:textColor="@color/settings_text_primary"
-                            android:textSize="@dimen/text_14" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/theoryModeButton"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:lineSpacingExtra="1dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/home_theory_button"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                app:icon="@drawable/ic_home_theory"
+                app:iconGravity="textTop"
+                app:iconPadding="6dp"
+                app:iconSize="20dp" />
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dim_4"
-                            android:text="@string/home_practice_helper"
-                            android:textColor="@color/settings_text_secondary"
-                            android:textSize="@dimen/text_12" />
-                    </LinearLayout>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/practiceModeButton"
-                        style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@android:color/transparent"
-                        android:insetLeft="@dimen/dim_0"
-                        android:insetTop="@dimen/dim_0"
-                        android:insetRight="@dimen/dim_0"
-                        android:insetBottom="@dimen/dim_0"
-                        android:minHeight="@dimen/dim_0"
-                        android:minWidth="@dimen/dim_0"
-                        android:text=""
-                        android:textAllCaps="false"
-                        android:textColor="@android:color/transparent" />
-                </FrameLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="@dimen/dim_0"
-                android:layout_height="@dimen/dim_116"
-                android:layout_marginStart="@dimen/dim_6"
-                android:layout_weight="1"
-                app:cardBackgroundColor="@color/app_card_bg"
-                app:cardCornerRadius="@dimen/radius_md"
-                app:cardElevation="@dimen/dim_2">
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:padding="@dimen/dim_12">
-
-                        <ImageView
-                            android:layout_width="@dimen/dim_24"
-                            android:layout_height="@dimen/dim_24"
-                            android:contentDescription="@string/home_navigation_button"
-                            android:src="@drawable/ic_home_navigation" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dim_8"
-                            android:text="@string/home_navigation_button"
-                            android:textColor="@color/settings_text_primary"
-                            android:textSize="@dimen/text_14" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dim_4"
-                            android:text="@string/home_navigation_helper"
-                            android:textColor="@color/settings_text_secondary"
-                            android:textSize="@dimen/text_12" />
-                    </LinearLayout>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/navigationModeButton"
-                        style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@android:color/transparent"
-                        android:insetLeft="@dimen/dim_0"
-                        android:insetTop="@dimen/dim_0"
-                        android:insetRight="@dimen/dim_0"
-                        android:insetBottom="@dimen/dim_0"
-                        android:minHeight="@dimen/dim_0"
-                        android:minWidth="@dimen/dim_0"
-                        android:text=""
-                        android:textAllCaps="false"
-                        android:textColor="@android:color/transparent" />
-                </FrameLayout>
-            </com.google.android.material.card.MaterialCardView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/homeExtraButtonsRow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dim_12"
-            android:orientation="horizontal">
-
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/homeTheoryTileContainer"
-                android:layout_width="@dimen/dim_0"
-                android:layout_height="@dimen/dim_116"
-                android:layout_marginEnd="@dimen/dim_6"
-                android:layout_weight="1"
-                app:cardBackgroundColor="@color/app_card_bg"
-                app:cardCornerRadius="@dimen/radius_md"
-                app:cardElevation="@dimen/dim_2">
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:padding="@dimen/dim_12">
-
-                        <ImageView
-                            android:layout_width="@dimen/dim_24"
-                            android:layout_height="@dimen/dim_24"
-                            android:contentDescription="@string/home_theory_button"
-                            android:src="@drawable/ic_home_theory" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dim_8"
-                            android:text="@string/home_theory_button"
-                            android:textColor="@color/settings_text_primary"
-                            android:textSize="@dimen/text_14" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dim_4"
-                            android:text="@string/home_theory_helper"
-                            android:textColor="@color/settings_text_secondary"
-                            android:textSize="@dimen/text_12" />
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/homeTheoryProgressBadge"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="top|end"
-                        android:layout_marginTop="@dimen/dim_8"
-                        android:layout_marginEnd="@dimen/dim_8"
-                        android:background="@drawable/bg_app_chip"
-                        android:paddingStart="@dimen/dim_6"
-                        android:paddingTop="@dimen/dim_3"
-                        android:paddingEnd="@dimen/dim_6"
-                        android:paddingBottom="@dimen/dim_3"
-                        android:text="@string/home_theory_progress_default"
-                        android:textColor="@color/app_chip_text"
-                        android:textSize="@dimen/text_10" />
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/theoryModeButton"
-                        style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@android:color/transparent"
-                        android:insetLeft="@dimen/dim_0"
-                        android:insetTop="@dimen/dim_0"
-                        android:insetRight="@dimen/dim_0"
-                        android:insetBottom="@dimen/dim_0"
-                        android:minHeight="@dimen/dim_0"
-                        android:minWidth="@dimen/dim_0"
-                        android:text=""
-                        android:textAllCaps="false"
-                        android:textColor="@android:color/transparent" />
-                </FrameLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="@dimen/dim_0"
-                android:layout_height="@dimen/dim_116"
-                android:layout_marginStart="@dimen/dim_6"
-                android:layout_weight="1"
-                app:cardBackgroundColor="@color/app_card_bg"
-                app:cardCornerRadius="@dimen/radius_md"
-                app:cardElevation="@dimen/dim_2">
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:padding="@dimen/dim_12">
-
-                        <ImageView
-                            android:layout_width="@dimen/dim_24"
-                            android:layout_height="@dimen/dim_24"
-                            android:contentDescription="@string/home_traffic_signs_button"
-                            android:src="@drawable/ic_home_traffic_signs" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dim_8"
-                            android:text="@string/home_traffic_signs_button"
-                            android:textColor="@color/settings_text_primary"
-                            android:textSize="@dimen/text_14" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dim_4"
-                            android:text="@string/home_traffic_signs_helper"
-                            android:textColor="@color/settings_text_secondary"
-                            android:textSize="@dimen/text_12" />
-                    </LinearLayout>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/trafficSignsModeButton"
-                        style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@android:color/transparent"
-                        android:insetLeft="@dimen/dim_0"
-                        android:insetTop="@dimen/dim_0"
-                        android:insetRight="@dimen/dim_0"
-                        android:insetBottom="@dimen/dim_0"
-                        android:minHeight="@dimen/dim_0"
-                        android:minWidth="@dimen/dim_0"
-                        android:text=""
-                        android:textAllCaps="false"
-                        android:textColor="@android:color/transparent" />
-                </FrameLayout>
-            </com.google.android.material.card.MaterialCardView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/homeBottomButtonsRow"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dim_12"
-            android:orientation="horizontal">
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="@dimen/dim_0"
-                android:layout_height="@dimen/dim_116"
-                android:layout_marginEnd="@dimen/dim_6"
-                android:layout_weight="1"
-                app:cardBackgroundColor="@color/app_card_bg"
-                app:cardCornerRadius="@dimen/radius_md"
-                app:cardElevation="@dimen/dim_2">
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:padding="@dimen/dim_12">
-
-                        <ImageView
-                            android:layout_width="@dimen/dim_24"
-                            android:layout_height="@dimen/dim_24"
-                            android:contentDescription="@string/home_highway_code_button"
-                            android:src="@drawable/ic_home_traffic_signs" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dim_8"
-                            android:text="@string/home_highway_code_button"
-                            android:textColor="@color/settings_text_primary"
-                            android:textSize="@dimen/text_14" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dim_4"
-                            android:text="@string/home_highway_code_helper"
-                            android:textColor="@color/settings_text_secondary"
-                            android:textSize="@dimen/text_12" />
-                    </LinearLayout>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/highwayCodeModeButton"
-                        style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@android:color/transparent"
-                        android:insetLeft="@dimen/dim_0"
-                        android:insetTop="@dimen/dim_0"
-                        android:insetRight="@dimen/dim_0"
-                        android:insetBottom="@dimen/dim_0"
-                        android:minHeight="@dimen/dim_0"
-                        android:minWidth="@dimen/dim_0"
-                        android:text=""
-                        android:textAllCaps="false"
-                        android:textColor="@android:color/transparent" />
-                </FrameLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="@dimen/dim_0"
-                android:layout_height="@dimen/dim_116"
-                android:layout_marginStart="@dimen/dim_6"
-                android:layout_weight="1"
-                app:cardBackgroundColor="@color/app_card_bg"
-                app:cardCornerRadius="@dimen/radius_md"
-                app:cardElevation="@dimen/dim_2">
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:padding="@dimen/dim_12">
-
-                        <ImageView
-                            android:layout_width="@dimen/dim_24"
-                            android:layout_height="@dimen/dim_24"
-                            android:contentDescription="@string/home_analytics_button"
-                            android:src="@drawable/ic_home_analytics" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dim_8"
-                            android:text="@string/home_analytics_button"
-                            android:textColor="@color/settings_text_primary"
-                            android:textSize="@dimen/text_14" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dim_4"
-                            android:text="@string/home_analytics_helper"
-                            android:textColor="@color/settings_text_secondary"
-                            android:textSize="@dimen/text_12" />
-                    </LinearLayout>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/analyticsModeButton"
-                        style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@android:color/transparent"
-                        android:insetLeft="@dimen/dim_0"
-                        android:insetTop="@dimen/dim_0"
-                        android:insetRight="@dimen/dim_0"
-                        android:insetBottom="@dimen/dim_0"
-                        android:minHeight="@dimen/dim_0"
-                        android:minWidth="@dimen/dim_0"
-                        android:text=""
-                        android:textAllCaps="false"
-                        android:textColor="@android:color/transparent" />
-                </FrameLayout>
-            </com.google.android.material.card.MaterialCardView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dim_12"
-            android:orientation="horizontal">
-
-            <com.google.android.material.card.MaterialCardView
-                android:layout_width="@dimen/dim_0"
-                android:layout_height="@dimen/dim_116"
-                android:layout_marginEnd="@dimen/dim_6"
-                android:layout_weight="1"
-                app:cardBackgroundColor="@color/app_card_bg"
-                app:cardCornerRadius="@dimen/radius_md"
-                app:cardElevation="@dimen/dim_2">
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:padding="@dimen/dim_12">
-
-                        <ImageView
-                            android:layout_width="@dimen/dim_24"
-                            android:layout_height="@dimen/dim_24"
-                            android:contentDescription="@string/quiz_home_button_label"
-                            android:src="@drawable/ic_home_traffic_signs" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dim_8"
-                            android:text="@string/quiz_home_button_label"
-                            android:textColor="@color/settings_text_primary"
-                            android:textSize="@dimen/text_14" />
-
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dim_4"
-                            android:text="@string/home_quiz_helper"
-                            android:textColor="@color/settings_text_secondary"
-                            android:textSize="@dimen/text_12" />
-                    </LinearLayout>
-
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/quizModeButton"
-                        style="@style/Widget.MaterialComponents.Button.TextButton"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:background="@android:color/transparent"
-                        android:insetLeft="@dimen/dim_0"
-                        android:insetTop="@dimen/dim_0"
-                        android:insetRight="@dimen/dim_0"
-                        android:insetBottom="@dimen/dim_0"
-                        android:minHeight="@dimen/dim_0"
-                        android:minWidth="@dimen/dim_0"
-                        android:text=""
-                        android:textAllCaps="false"
-                        android:textColor="@android:color/transparent" />
-                </FrameLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-            <Space
-                android:layout_width="@dimen/dim_0"
-                android:layout_height="@dimen/dim_116"
-                android:layout_marginStart="@dimen/dim_6"
-                android:layout_weight="1" />
-        </LinearLayout>
+            <TextView
+                android:id="@+id/homeTheoryProgressBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top|end"
+                android:layout_marginTop="6dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/bg_app_chip"
+                android:paddingStart="6dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="6dp"
+                android:paddingBottom="3dp"
+                android:text="@string/home_theory_progress_default"
+                android:textColor="@color/app_chip_text"
+                android:textSize="10sp"
+                android:textStyle="bold" />
+        </FrameLayout>
     </LinearLayout>
 
-+</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/homeExtraButtonsRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homeModeRow">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="116dp"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/trafficSignsModeButton"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/home_traffic_signs_button"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                app:icon="@drawable/ic_home_traffic_signs"
+                app:iconGravity="textTop"
+                app:iconPadding="6dp"
+                app:iconSize="20dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="116dp"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/analyticsModeButton"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/home_analytics_button"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                app:icon="@drawable/ic_home_analytics"
+                app:iconGravity="textTop"
+                app:iconPadding="6dp"
+                app:iconSize="20dp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/homeBottomButtonsRow"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/homeExtraButtonsRow">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="116dp"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/highwayCodeModeButton"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/home_highway_code_button"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                app:icon="@drawable/ic_home_traffic_signs"
+                app:iconGravity="textTop"
+                app:iconPadding="6dp"
+                app:iconSize="20dp" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="116dp"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/quizModeButton"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="Fines &amp; Penalties"
+                android:textAllCaps="false"
+                android:textSize="13sp"
+                app:icon="@drawable/ic_home_traffic_signs"
+                app:iconGravity="textTop"
+                app:iconPadding="6dp"
+                app:iconSize="20dp" />
+        </FrameLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

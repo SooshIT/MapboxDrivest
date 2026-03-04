@@ -108,7 +108,7 @@ class AnalyticsDetailActivity : AppCompatActivity() {
 
         // Summary chips row
         addSectionLabel(container, getString(R.string.analytics_theory_title))
-        container.addView(buildMutedText(
+        val summaryText = buildMutedText(
             getString(
                 R.string.analytics_theory_summary_value,
                 data.totalTheoryAttempts,
@@ -116,10 +116,14 @@ class AnalyticsDetailActivity : AppCompatActivity() {
                 data.masteredTopicsCount,
                 data.totalTheoryTopics
             )
+        )
+        summaryText.layoutParams = LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.MATCH_PARENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT
         ).also {
-            (it.layoutParams as LinearLayout.LayoutParams).topMargin =
-                (6f * resources.displayMetrics.density).roundToInt()
-        })
+            it.topMargin = (6f * resources.displayMetrics.density).roundToInt()
+        }
+        container.addView(summaryText)
 
         // All topics as gauges (weakest first)
         addSectionLabel(container, "All topics — weakest first", marginTop = 14)

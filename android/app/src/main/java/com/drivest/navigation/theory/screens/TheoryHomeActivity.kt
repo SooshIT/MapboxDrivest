@@ -19,9 +19,7 @@ import com.drivest.navigation.telemetry.TelemetryEvent
 import com.drivest.navigation.telemetry.TelemetryRepository
 import com.drivest.navigation.theory.TheoryFeatureFlags
 import com.drivest.navigation.theory.content.TheoryPackLoader
-import com.drivest.navigation.theory.content.TheoryReadiness
 import com.drivest.navigation.theory.content.TheoryReadinessCalculator
-import com.drivest.navigation.theory.content.TheoryReadinessLabel
 import com.drivest.navigation.theory.models.TheoryPack
 import com.drivest.navigation.theory.navigation.TheoryNavigation
 import com.drivest.navigation.theory.services.MapRouteTagsToTheoryTopics
@@ -47,7 +45,6 @@ class TheoryHomeActivity : AppCompatActivity() {
 
     private lateinit var pack: TheoryPack
     private lateinit var progressValueView: TextView
-    private lateinit var readinessValueView: TextView
     private lateinit var weakestTopicsValueView: TextView
     private lateinit var recommendationsCardView: View
     private lateinit var recommendationsHeadingView: TextView
@@ -70,7 +67,6 @@ class TheoryHomeActivity : AppCompatActivity() {
         }
 
         progressValueView = findViewById(R.id.theoryProgressValue)
-        readinessValueView = findViewById(R.id.theoryReadinessValue)
         weakestTopicsValueView = findViewById(R.id.theoryWeakestTopicsValue)
         recommendationsCardView = findViewById(R.id.theoryRouteRecommendationsCard)
         recommendationsHeadingView = findViewById(R.id.theoryRouteRecommendationsHeading)
@@ -145,11 +141,6 @@ class TheoryHomeActivity : AppCompatActivity() {
             R.string.theory_progress_value,
             readiness.masteredTopicsPercent
         )
-        readinessValueView.text = getString(
-            R.string.theory_readiness_value,
-            readinessLabel(readiness)
-        )
-
         val weakestTopics = progress.topicStats.entries
             .sortedBy { it.value.masteryPercent }
             .take(3)
@@ -238,17 +229,6 @@ class TheoryHomeActivity : AppCompatActivity() {
     private fun recommendedTopicId(progress: TheoryProgress): String? {
         val snapshot = progress.lastRouteTagSnapshot ?: return null
         return MapRouteTagsToTheoryTopics.mapTags(snapshot.tags).firstOrNull()
-    }
-
-    private fun readinessLabel(readiness: TheoryReadiness): String {
-        return when (readiness.label) {
-            TheoryReadinessLabel.BUILDING ->
-                getString(R.string.theory_readiness_building)
-            TheoryReadinessLabel.ALMOST_READY ->
-                getString(R.string.theory_readiness_almost_ready)
-            TheoryReadinessLabel.READY ->
-                getString(R.string.theory_readiness_ready)
-        }
     }
 
     private fun logTheoryOpen() {

@@ -10,7 +10,6 @@ import android.content.pm.PackageManager
 import android.content.res.Resources
 import android.graphics.Bitmap
 import android.graphics.Canvas
-import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.Path
 import android.graphics.RectF
@@ -29,6 +28,7 @@ import androidx.activity.viewModels
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.core.view.doOnLayout
@@ -96,6 +96,7 @@ import com.drivest.navigation.compliance.DisclaimerManager
 import com.drivest.navigation.debug.PracticeOffRouteDebugStore
 import com.drivest.navigation.databinding.ActivityMainBinding
 import com.drivest.navigation.backend.BackendCentreRepository
+import com.drivest.navigation.backend.BackendRoadSignRepository
 import com.drivest.navigation.geo.RouteProjection
 import com.drivest.navigation.hazards.PackAwareHazardRepository
 import com.drivest.navigation.intelligence.RouteDifficultyLabel
@@ -118,6 +119,9 @@ import com.drivest.navigation.prompts.PromptEngine
 import com.drivest.navigation.prompts.PromptSpeechTemplates
 import com.drivest.navigation.prompts.PromptType
 import com.drivest.navigation.prompts.VoiceOutput
+import com.drivest.navigation.parking.ParkingSelectionStore
+import com.drivest.navigation.trafficsigns.TrafficSignsBitmapLoader
+import com.drivest.navigation.signs.RoadSignFeature
 import com.drivest.navigation.restrictions.NoEntryRestrictionGuard
 import com.drivest.navigation.report.SessionSummaryExporter
 import com.drivest.navigation.report.SessionSummaryPayload
@@ -162,19 +166,25 @@ import com.mapbox.navigation.ui.maps.route.line.MapboxRouteLineApiExtensions.set
 import com.mapbox.navigation.ui.maps.route.line.MapboxRouteLineApiExtensions.updateWithRouteProgress
 import com.mapbox.navigation.ui.maps.route.line.api.MapboxRouteLineApi
 import com.mapbox.navigation.ui.maps.route.line.api.MapboxRouteLineView
+import android.graphics.Color
 import com.mapbox.navigation.ui.maps.route.line.model.MapboxRouteLineApiOptions
 import com.mapbox.navigation.ui.maps.route.line.model.MapboxRouteLineViewOptions
+import com.mapbox.navigation.ui.maps.route.line.model.RouteLineColorResources
 import com.mapbox.navigation.voice.api.MapboxSpeechApi
 import com.mapbox.navigation.voice.api.MapboxVoiceInstructionsPlayer
 import com.mapbox.navigation.voice.model.SpeechAnnouncement
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.isActive
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.first
 import kotlin.coroutines.resume
 import kotlinx.coroutines.suspendCancellableCoroutine
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
+import org.json.JSONObject
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -273,6 +283,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private var latestStatusBarInsetPx: Int = 0
+    private var latestNavBarInsetPx: Int = 0
     private var voiceGuidanceMode: VoiceGuidanceMode = VoiceGuidanceMode.FULL
     private var uiMode: UiMode = UiMode.PRACTICE
     private var navSessionState: NavSessionState = NavSessionState.BROWSE
@@ -282,6 +293,10 @@ class MainActivity : AppCompatActivity() {
     private var selectedCentre: TestCentre? = null
     private var selectedDestinationPoint: Point? = null
     private var selectedDestinationName: String? = null
+    private var selectedParkingSpotId: String? = null
+    private var selectedParkingPoint: Point? = null
+    private var selectedFinalDestinationPoint: Point? = null
+    private var selectedFinalDestinationName: String? = null
     private var selectedPracticeRoute: PracticeRoute? = null
     private var selectedPracticeNavigationRoute: NavigationRoute? = null
     private var practiceStartPoint: Point? = null
@@ -325,13 +340,62 @@ class MainActivity : AppCompatActivity() {
     private var destinationAnnotation: PointAnnotation? = null
     private var hazardAnnotationManager: PointAnnotationManager? = null
     private var roadMarkingAnnotationManager: PointAnnotationManager? = null
+    private var roadSignAnnotationManager: PointAnnotationManager? = null
     private var hazardFeatures: List<OsmFeature> = emptyList()
+    private var roadSignFeatures: List<RoadSignFeature> = emptyList()
     private var lastHazardMarkerRefreshAtMs: Long = 0L
     private var lastHazardMarkerRefreshBearing: Double = Double.NaN
+    private var lastRoadSignFetchMs: Long = 0L
+    private var lastRoadSignRouteKey: String? = null
+    private var roadSignFetchInProgress: Boolean = false
+    private var roadSignRenderJob: Job? = null
     private val hazardMarkerBitmapCache = mutableMapOf<PromptType, Bitmap>()
     private val roadMarkingBitmapCache = mutableMapOf<PromptType, Bitmap>()
     private val promptBannerBitmapCache = mutableMapOf<PromptType, Bitmap>()
+    private var roadSignMarkerBitmap: Bitmap? = null
     private var unavailablePromptBannerBitmap: Bitmap? = null
+    private var roadSignCodeIndex: Map<String, String> = emptyMap()
+    private var roadSignCodeIndexLoaded = false
+    private var roadSignCodeIndexLoading = false
+    private val roadSignUnknownTokenCache = mutableSetOf<String>()
+    private val roadSignTokenAssetPathFallback = mapOf(
+        "no_left_turn" to "images/regulatory-signs-jpg/613.jpg",
+        "no_right_turn" to "images/regulatory-signs-jpg/612.jpg",
+        "no_vehicles" to "images/regulatory-signs-jpg/618.1A.jpg",
+        "all_vehicles_prohibited" to "images/regulatory-signs-jpg/618.1A.jpg"
+    )
+    private val roadSignTokenCodeFallback = mapOf(
+        "no_entry" to "616.0",
+        "do_not_enter" to "616.0",
+        "stop" to "601.1",
+        "stop_line" to "601.1",
+        "give_way" to "602.0",
+        "giveway" to "602.0",
+        "yield" to "602.0",
+        "roundabout" to "510.0",
+        "mini_roundabout" to "510.0",
+        "no_u_turn" to "614.0",
+        "no_u_turns" to "614.0",
+        "no_uturn" to "614.0",
+        "oneway" to "607.0",
+        "one_way" to "607.0",
+        "no_overtaking" to "632.0",
+        "no_passing" to "632.0",
+        "no_motor_vehicles" to "619.0",
+        "motor_vehicles_prohibited" to "619.0",
+        "pedestrians_prohibited" to "625.1",
+        "no_pedestrians" to "625.1",
+        "no_through_road" to "816.0",
+        "keep_left" to "610.0",
+        "national_speed_limit" to "671.0"
+    )
+    private val speedLimitAssetPaths = mapOf(
+        20 to "images/speed-limit-signs-jpg/670V20.jpg",
+        30 to "images/speed-limit-signs-jpg/670V30.jpg",
+        40 to "images/speed-limit-signs-jpg/670.jpg",
+        50 to "images/speed-limit-signs-jpg/670V50.jpg",
+        60 to "images/speed-limit-signs-jpg/670V60.jpg"
+    )
     private var pendingDestinationPreview = false
     private var lastSpokenAnnouncement: String? = null
     private var lastSpokenAtMs: Long = 0L
@@ -427,6 +491,12 @@ class MainActivity : AppCompatActivity() {
             settingsRepository = settingsRepository
         )
     }
+    private val roadSignRepository by lazy {
+        BackendRoadSignRepository()
+    }
+    private val trafficSignsBitmapLoader by lazy {
+        TrafficSignsBitmapLoader(this)
+    }
     private val promptEngine by lazy { PromptEngine() }
     private val routeIntelligenceEngine by lazy { RouteIntelligenceEngine() }
     private val telemetryRepository by lazy {
@@ -474,8 +544,13 @@ class MainActivity : AppCompatActivity() {
     private val replayEnabled: Boolean by lazy { isLikelyEmulator() }
 
     private val routeLineViewOptions: MapboxRouteLineViewOptions by lazy {
+        val colorResources = RouteLineColorResources.Builder()
+            .routeLineTraveledColor(Color.TRANSPARENT)
+            .routeLineTraveledCasingColor(Color.TRANSPARENT)
+            .build()
         MapboxRouteLineViewOptions.Builder(this)
             .routeLineBelowLayerId("road-label-navigation")
+            .routeLineColorResources(colorResources)
             .build()
     }
 
@@ -650,6 +725,7 @@ class MainActivity : AppCompatActivity() {
             }
 
             handleActiveNavigationRouteStressUpdates(result.navigationRoutes)
+            maybeFetchRoadSigns(result.navigationRoutes, force = false)
 
             if (uiMode == UiMode.NAVIGATION && navSessionState == NavSessionState.PREVIEW) {
                 updatePreviewSummaryFromRoutes(result.navigationRoutes)
@@ -1116,12 +1192,14 @@ class MainActivity : AppCompatActivity() {
             }
 
             val bottomInset = insets.getInsets(WindowInsetsCompat.Type.navigationBars()).bottom
+            latestNavBarInsetPx = bottomInset
             binding.startNavigation.updateLayoutParams<ConstraintLayout.LayoutParams> {
                 bottomMargin = bottomInset + bottomGapPx
             }
             binding.stopNavigationButton.updateLayoutParams<ConstraintLayout.LayoutParams> {
                 bottomMargin = bottomInset + (8f * resources.displayMetrics.density).toInt()
             }
+            updateRouteProgressBottomConstraint()
 
             updateTopOrnamentsPosition()
             insets
@@ -1169,6 +1247,27 @@ class MainActivity : AppCompatActivity() {
                 navSessionState = NavSessionState.BROWSE
             }
         }
+
+        applyParkingSelectionOverride()
+    }
+
+    private fun applyParkingSelectionOverride() {
+        val selection = ParkingSelectionStore.consumeSelection() ?: return
+        val finalLat = selection.finalDestinationLat
+        val finalLng = selection.finalDestinationLng
+        if (finalLat != null && finalLng != null) {
+            selectedFinalDestinationPoint = Point.fromLngLat(finalLng, finalLat)
+            selectedFinalDestinationName = selection.finalDestinationName
+        } else {
+            selectedFinalDestinationPoint = selectedDestinationPoint
+            selectedFinalDestinationName = selectedDestinationName
+        }
+
+        selectedParkingSpotId = selection.spotId
+        selectedParkingPoint = Point.fromLngLat(selection.spotLng, selection.spotLat)
+        selectedDestinationPoint = selectedParkingPoint
+        selectedDestinationName = selection.spotTitle
+        // TODO: Use selectedFinalDestinationPoint for a post-parking walking step.
     }
 
     private fun applyUiModeState() {
@@ -1195,6 +1294,25 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+        val practiceStatus = if (uiMode == UiMode.PRACTICE) {
+            when (practiceRunStage) {
+                PracticeRunStage.TO_CENTRE -> getString(R.string.practice_approaching_start)
+                PracticeRunStage.AT_CENTRE_TRANSITION -> getString(R.string.practice_route_transitioning)
+                PracticeRunStage.PRACTICE_ACTIVE -> getString(R.string.practice_route_active)
+                PracticeRunStage.PRACTICE_COMPLETED -> getString(R.string.practice_route_completed_state)
+                PracticeRunStage.IDLE -> null
+            }
+        } else {
+            null
+        }
+        binding.practiceStatusLabel.text = practiceStatus
+        binding.practiceStatusLabel.isVisible = practiceStatus != null
+        binding.startNavigation.isVisible = when (uiMode) {
+            UiMode.NAVIGATION -> navSessionState != NavSessionState.ACTIVE
+            UiMode.PRACTICE ->
+                practiceRunStage == PracticeRunStage.IDLE || practiceRunStage == PracticeRunStage.PRACTICE_COMPLETED
+        }
+        updateRouteProgressBottomConstraint()
         if (uiMode == UiMode.PRACTICE) {
             binding.startNavigation.isEnabled = !isPracticeRouteLoading &&
                 (practiceRunStage == PracticeRunStage.IDLE || practiceRunStage == PracticeRunStage.PRACTICE_COMPLETED)
@@ -1207,6 +1325,22 @@ class MainActivity : AppCompatActivity() {
         adjustFloatingControlsAvoidingBottomPanels()
         updateKeepScreenOnState()
         syncNavigationForegroundServiceState()
+    }
+
+    private fun updateRouteProgressBottomConstraint() {
+        if (!::binding.isInitialized) return
+        val routeParams = binding.routeProgressBanner.layoutParams as? ConstraintLayout.LayoutParams ?: return
+        val bottomGapPx = (16f * resources.displayMetrics.density).toInt()
+        if (binding.startNavigation.isVisible) {
+            routeParams.bottomToBottom = ConstraintLayout.LayoutParams.UNSET
+            routeParams.bottomToTop = R.id.startNavigation
+            routeParams.bottomMargin = resources.getDimensionPixelSize(R.dimen.dim_8)
+        } else {
+            routeParams.bottomToTop = ConstraintLayout.LayoutParams.UNSET
+            routeParams.bottomToBottom = ConstraintLayout.LayoutParams.PARENT_ID
+            routeParams.bottomMargin = latestNavBarInsetPx + bottomGapPx
+        }
+        binding.routeProgressBanner.layoutParams = routeParams
     }
 
     private fun updateKeepScreenOnState(forceDisable: Boolean = false) {
@@ -1965,6 +2099,267 @@ class MainActivity : AppCompatActivity() {
                 )
             }
         }
+    }
+
+    private fun maybeFetchRoadSigns(
+        routes: List<NavigationRoute>,
+        force: Boolean
+    ) {
+        if (routes.isEmpty()) {
+            roadSignFeatures = emptyList()
+            lastRoadSignRouteKey = null
+            clearRoadSignMarkers()
+            return
+        }
+        if (roadSignFetchInProgress) return
+
+        val primary = routes.first()
+        val routeKey = primary.directionsRoute.geometry().orEmpty()
+        if (routeKey.isBlank()) return
+
+        val nowMs = System.currentTimeMillis()
+        val stale = nowMs - lastRoadSignFetchMs >= ROAD_SIGN_FETCH_INTERVAL_MS
+        if (!force && routeKey == lastRoadSignRouteKey && !stale) return
+
+        roadSignFetchInProgress = true
+        lifecycleScope.launch {
+            try {
+                val routePoints = decodeNavigationRoutePoints(primary)
+                if (routePoints.isEmpty()) {
+                    roadSignFeatures = emptyList()
+                    clearRoadSignMarkers()
+                    return@launch
+                }
+                val signs = roadSignRepository.loadSignsForRoute(
+                    routePoints = routePoints,
+                    radiusMeters = ROAD_SIGN_FETCH_RADIUS_METERS,
+                    centreId = selectedCentreId
+                )
+                roadSignFeatures = signs
+                ensureRoadSignIndexLoaded()
+                renderRoadSignMarkers(signs)
+                lastRoadSignFetchMs = System.currentTimeMillis()
+                lastRoadSignRouteKey = routeKey
+            } catch (ex: Exception) {
+                Log.w(TAG, "Road sign fetch failed: ${ex.message}")
+                if (roadSignFeatures.isEmpty()) {
+                    clearRoadSignMarkers()
+                }
+            } finally {
+                roadSignFetchInProgress = false
+            }
+        }
+    }
+
+    private fun renderRoadSignMarkers(features: List<RoadSignFeature>) {
+        if (!styleLoaded) return
+        val manager = roadSignAnnotationManager ?: return
+
+        roadSignRenderJob?.cancel()
+        manager.deleteAll()
+        if (features.isEmpty()) return
+
+        val visibleFeatures = selectVisibleRoadSigns(features, latestEnhancedLocationPoint)
+        if (visibleFeatures.isEmpty()) return
+
+        val routePoints = activeRoutePointsForMarkerPlacement()
+        val iconSize = dpToPx(26f)
+        val fallbackBitmap = roadSignIconBitmap(iconSize)
+        roadSignRenderJob = lifecycleScope.launch {
+            val markers = mutableListOf<Pair<Point, Bitmap>>()
+            for (feature in visibleFeatures) {
+                val basePoint = Point.fromLngLat(feature.lon, feature.lat)
+                val markerPoint = if (routePoints.size >= 2) {
+                    offsetPointRightOfRoute(
+                        featurePoint = basePoint,
+                        routePoints = routePoints
+                    )
+                } else {
+                    basePoint
+                }
+                val bitmap = resolveRoadSignBitmap(feature, iconSize, fallbackBitmap)
+                markers += markerPoint to bitmap
+            }
+            if (!isActive) return@launch
+            manager.deleteAll()
+            markers.forEach { (point, bitmap) ->
+                manager.create(
+                    PointAnnotationOptions()
+                        .withPoint(point)
+                        .withIconImage(bitmap)
+                        .withIconSize(1.0)
+                        .withIconRotate(0.0)
+                )
+            }
+        }
+    }
+
+    private fun selectVisibleRoadSigns(
+        features: List<RoadSignFeature>,
+        locationPoint: Point?
+    ): List<RoadSignFeature> {
+        val applyDistanceCap = when (uiMode) {
+            UiMode.NAVIGATION -> navSessionState == NavSessionState.ACTIVE
+            UiMode.PRACTICE -> practiceRunStage == PracticeRunStage.TO_CENTRE ||
+                practiceRunStage == PracticeRunStage.AT_CENTRE_TRANSITION ||
+                practiceRunStage == PracticeRunStage.PRACTICE_ACTIVE
+        }
+
+        val sorted = if (locationPoint == null) {
+            features
+        } else {
+            features.sortedBy { feature ->
+                distanceMeters(locationPoint, Point.fromLngLat(feature.lon, feature.lat))
+            }
+        }
+
+        val selected = mutableListOf<RoadSignFeature>()
+        val maxVisible = 38
+        val minSpacingMeters = 70.0
+        val maxDistanceMeters = if (applyDistanceCap) 1_800.0 else 3_000.0
+
+        for (feature in sorted) {
+            if (selected.size >= maxVisible) break
+            val point = Point.fromLngLat(feature.lon, feature.lat)
+            if (locationPoint != null && applyDistanceCap) {
+                val distanceToUser = distanceMeters(locationPoint, point)
+                if (distanceToUser > maxDistanceMeters) continue
+            }
+            val tooClose = selected.any { existing ->
+                distanceMeters(
+                    point,
+                    Point.fromLngLat(existing.lon, existing.lat)
+                ) < minSpacingMeters
+            }
+            if (tooClose) continue
+            selected += feature
+        }
+
+        return selected
+    }
+
+    private fun roadSignIconBitmap(sizePx: Int): Bitmap {
+        val cached = roadSignMarkerBitmap
+        if (cached != null && cached.width == sizePx && cached.height == sizePx) {
+            return cached
+        }
+        val drawable = AppCompatResources.getDrawable(this, R.drawable.ic_home_traffic_signs)
+        if (drawable == null) {
+            return Bitmap.createBitmap(sizePx, sizePx, Bitmap.Config.ARGB_8888)
+        }
+        val bitmap = Bitmap.createBitmap(sizePx, sizePx, Bitmap.Config.ARGB_8888)
+        val canvas = Canvas(bitmap)
+        drawable.setBounds(0, 0, sizePx, sizePx)
+        drawable.draw(canvas)
+        roadSignMarkerBitmap = bitmap
+        return bitmap
+    }
+
+    private fun clearRoadSignMarkers() {
+        roadSignRenderJob?.cancel()
+        roadSignAnnotationManager?.deleteAll()
+    }
+
+    private fun ensureRoadSignIndexLoaded() {
+        if (roadSignCodeIndexLoaded || roadSignCodeIndexLoading) return
+        roadSignCodeIndexLoading = true
+        lifecycleScope.launch {
+            roadSignCodeIndex = loadRoadSignIndex()
+            roadSignCodeIndexLoaded = true
+            roadSignCodeIndexLoading = false
+            renderRoadSignMarkers(roadSignFeatures)
+        }
+    }
+
+    private suspend fun loadRoadSignIndex(): Map<String, String> = withContext(Dispatchers.IO) {
+        runCatching {
+            val json = com.drivest.navigation.trafficsigns.TrafficSignsAssetPack
+                .openAsset(this@MainActivity, "traffic_signs/traffic_signs_pack_v1.json")
+                .bufferedReader()
+                .use { it.readText() }
+            val root = JSONObject(json)
+            val signsArray = root.optJSONArray("signs") ?: return@runCatching emptyMap()
+            val index = mutableMapOf<String, String>()
+            for (i in 0 until signsArray.length()) {
+                val sign = signsArray.optJSONObject(i) ?: continue
+                val code = sign.optString("code", "").trim()
+                val path = sign.optString("imageAssetPath", "").trim()
+                if (code.isNotBlank() && path.isNotBlank()) {
+                    index[code] = path
+                }
+            }
+            index
+        }.getOrDefault(emptyMap())
+    }
+
+    private suspend fun resolveRoadSignBitmap(
+        feature: RoadSignFeature,
+        sizePx: Int,
+        fallbackBitmap: Bitmap
+    ): Bitmap {
+        val assetPath = resolveRoadSignAssetPath(feature.signValues)
+        if (assetPath.isNullOrBlank()) return fallbackBitmap
+        return trafficSignsBitmapLoader.load(assetPath, sizePx, sizePx) ?: fallbackBitmap
+    }
+
+    private fun resolveRoadSignAssetPath(signValues: List<String>): String? {
+        for (raw in signValues) {
+            val token = normalizeSignToken(raw)
+            if (token.isNotBlank()) {
+                roadSignTokenAssetPathFallback[token]?.let { return it }
+                resolveSpeedLimitAssetPath(token)?.let { return it }
+                roadSignTokenCodeFallback[token]?.let { code ->
+                    val path = roadSignCodeIndex[code]
+                    if (!path.isNullOrBlank()) return path
+                }
+            }
+            if (isSpeedLimitToken(token)) continue
+            val code = normalizeSignCode(raw) ?: continue
+            val path = roadSignCodeIndex[code]
+            if (!path.isNullOrBlank()) return path
+            if (token.isNotBlank()) {
+                logUnknownRoadSignToken(token)
+            }
+        }
+        return null
+    }
+
+    private fun logUnknownRoadSignToken(token: String) {
+        if (roadSignUnknownTokenCache.size >= 120) return
+        if (!roadSignUnknownTokenCache.add(token)) return
+        Log.d(TAG, "Unknown traffic_sign token: $token")
+    }
+
+    private fun normalizeSignToken(raw: String?): String {
+        val value = raw?.trim().orEmpty()
+        if (value.isBlank()) return ""
+        val token = value.substringAfterLast(":").trim()
+        if (token.isBlank()) return ""
+        return token
+            .lowercase(Locale.US)
+            .replace(Regex("[^a-z0-9]+"), "_")
+            .trim('_')
+    }
+
+    private fun isSpeedLimitToken(token: String): Boolean {
+        return token.contains("maxspeed") ||
+            token.contains("speed_limit") ||
+            token.contains("speedlimit")
+    }
+
+    private fun resolveSpeedLimitAssetPath(token: String): String? {
+        if (!isSpeedLimitToken(token)) return null
+        val match = Regex("(\\d{2,3})").find(token) ?: return null
+        val speed = match.value.toIntOrNull() ?: return null
+        return speedLimitAssetPaths[speed]
+    }
+
+    private fun normalizeSignCode(raw: String?): String? {
+        val value = raw?.trim().orEmpty()
+        if (value.isBlank()) return null
+        val token = value.substringAfterLast(":").trim()
+        val match = Regex("(\\d+(?:\\.\\d+)*)").find(token) ?: return null
+        return match.value
     }
 
     private fun shouldOffsetFromRouteStroke(type: OsmFeatureType): Boolean {
@@ -3668,6 +4063,7 @@ class MainActivity : AppCompatActivity() {
             destinationAnnotationManager = binding.mapView.annotations.createPointAnnotationManager()
             hazardAnnotationManager = binding.mapView.annotations.createPointAnnotationManager()
             roadMarkingAnnotationManager = binding.mapView.annotations.createPointAnnotationManager()
+            roadSignAnnotationManager = binding.mapView.annotations.createPointAnnotationManager()
             if (resetCamera) {
                 binding.mapView.mapboxMap.setCamera(
                     CameraOptions.Builder()
@@ -3679,6 +4075,7 @@ class MainActivity : AppCompatActivity() {
             updateTopOrnamentsPosition()
             renderDestinationMarker()
             renderHazardMarkers(hazardFeatures)
+            renderRoadSignMarkers(roadSignFeatures)
             rerenderCurrentRoutesOnLoadedStyle()
             if (
                 uiMode == UiMode.NAVIGATION &&
@@ -3967,7 +4364,10 @@ class MainActivity : AppCompatActivity() {
         hazardVoiceController.stopSpeaking()
         hazardVoiceController.clear()
         if (coreMapboxObserversRegistered) {
-            unregisterCoreMapboxObserversIfNeeded(mapboxNavigation)
+            val safeNavigation = runCatching { mapboxNavigation }.getOrNull()
+            if (safeNavigation != null) {
+                unregisterCoreMapboxObserversIfNeeded(safeNavigation)
+            }
         }
         if (::sessionManager.isInitialized) {
             sessionManager.onDestroy()
@@ -3975,13 +4375,16 @@ class MainActivity : AppCompatActivity() {
         destinationAnnotationManager?.deleteAll()
         hazardAnnotationManager?.deleteAll()
         roadMarkingAnnotationManager?.deleteAll()
+        roadSignAnnotationManager?.deleteAll()
         destinationAnnotationManager = null
         hazardAnnotationManager = null
         roadMarkingAnnotationManager = null
+        roadSignAnnotationManager = null
         lastHazardMarkerRefreshAtMs = 0L
         hazardMarkerBitmapCache.clear()
         roadMarkingBitmapCache.clear()
         promptBannerBitmapCache.clear()
+        roadSignMarkerBitmap = null
         unavailablePromptBannerBitmap = null
         super.onDestroy()
         cancelSpeechGeneration()
@@ -5278,5 +5681,7 @@ class MainActivity : AppCompatActivity() {
 
     private companion object {
         private const val TAG = "MainActivity"
+        private const val ROAD_SIGN_FETCH_INTERVAL_MS = 10L * 60L * 1000L
+        private const val ROAD_SIGN_FETCH_RADIUS_METERS = 160
     }
 }

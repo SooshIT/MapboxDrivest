@@ -436,4 +436,3 @@ class AnalyticsDashboardActivity : AppCompatActivity() {
         ALL
     }
 }
-

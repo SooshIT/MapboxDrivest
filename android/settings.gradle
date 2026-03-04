@@ -33,3 +33,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "DrivestNavigationAndroid"
 include ':app'
+include ':traffic_signs'

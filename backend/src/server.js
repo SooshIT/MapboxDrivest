@@ -9,6 +9,10 @@ const {
   parseBbox,
   queryRouteHazardsByBbox
 } = require("./hazards/routeHazards");
+const {
+  parseBbox: parseSignsBbox,
+  queryRouteSignsByBbox
+} = require("./signs/routeSigns");
 
 const DATA_DIR = path.join(__dirname, "..", "data");
 const ROUTES_DIR = path.join(DATA_DIR, "routes");
@@ -1041,6 +1045,40 @@ app.get(
     } catch (error) {
       return res.status(502).json({
         error: "Route hazards query failed",
+        detail: String(error?.message || "Unknown error")
+      });
+    }
+  })
+);
+
+app.get(
+  "/signs/route",
+  packsRateLimiter,
+  asyncHandler(async (req, res) => {
+    const parsedBbox = parseSignsBbox(req.query || {});
+    if (!parsedBbox.ok) {
+      return res.status(400).json({ error: parsedBbox.message });
+    }
+
+    const centreId = String(req.query?.centreId || "").trim() || "route-runtime";
+
+    try {
+      const signs = await queryRouteSignsByBbox({
+        bbox: parsedBbox.bbox
+      });
+      const payload = {
+        metadata: buildMetadata(parsedBbox.bbox, "signs-route-v1"),
+        centreId,
+        signs
+      };
+      return respondWithPack(req, res, payload, {
+        centreId,
+        packType: "signs_route",
+        version: payload.metadata.version
+      });
+    } catch (error) {
+      return res.status(502).json({
+        error: "Route signs query failed",
         detail: String(error?.message || "Unknown error")
       });
     }

@@ -7,6 +7,8 @@ import android.util.LruCache
 import android.util.Log
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import java.io.File
+import java.io.FileInputStream
 import kotlin.math.max
 
 class TrafficSignsBitmapLoader(private val context: Context) {
@@ -22,14 +24,16 @@ class TrafficSignsBitmapLoader(private val context: Context) {
         return withContext(Dispatchers.IO) {
             val key = cacheKey(assetPath, targetWidthPx, targetHeightPx)
             cache.get(key)?.let { return@withContext it }
-            val resolvedAssetPath = if (assetPath.startsWith("traffic_signs/")) {
-                assetPath
-            } else {
-                "traffic_signs/$assetPath"
-            }
+            val resolvedAssetPath = TrafficSignsAssetPack.resolvePath(assetPath)
             try {
+                val packPath = TrafficSignsAssetPack.packAssetsPath(context)
+                val openStream = if (packPath != null) {
+                    { FileInputStream(File(packPath, resolvedAssetPath)) }
+                } else {
+                    { context.assets.open(resolvedAssetPath) }
+                }
                 val bounds = BitmapFactory.Options().apply { inJustDecodeBounds = true }
-                context.assets.open(resolvedAssetPath).use { stream ->
+                openStream().use { stream ->
                     BitmapFactory.decodeStream(stream, null, bounds)
                 }
                 val sampleSize = calculateInSampleSize(bounds, targetWidthPx, targetHeightPx)
@@ -37,7 +41,7 @@ class TrafficSignsBitmapLoader(private val context: Context) {
                     inPreferredConfig = Bitmap.Config.ARGB_8888
                     inSampleSize = sampleSize
                 }
-                val bitmap = context.assets.open(resolvedAssetPath).use { stream ->
+                val bitmap = openStream().use { stream ->
                     BitmapFactory.decodeStream(stream, null, decodeOptions)
                 }
                 if (bitmap != null) {

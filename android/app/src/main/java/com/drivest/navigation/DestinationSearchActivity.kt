@@ -23,6 +23,9 @@ class DestinationSearchActivity : AppCompatActivity() {
     private lateinit var searchRepository: MapboxSearchRepository
     private lateinit var settingsRepository: SettingsRepository
     private var searchJob: Job? = null
+    private val searchMode: String by lazy {
+        intent.getStringExtra(EXTRA_SEARCH_MODE) ?: MODE_NAV
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -71,6 +74,17 @@ class DestinationSearchActivity : AppCompatActivity() {
     }
 
     private fun onSuggestionSelected(suggestion: DestinationSuggestion) {
+        if (searchMode == MODE_PARKING) {
+            setResult(
+                RESULT_OK,
+                Intent()
+                    .putExtra(AppFlow.EXTRA_DESTINATION_LAT, suggestion.lat)
+                    .putExtra(AppFlow.EXTRA_DESTINATION_LON, suggestion.lon)
+                    .putExtra(AppFlow.EXTRA_DESTINATION_NAME, suggestion.placeName)
+            )
+            finish()
+            return
+        }
         val token = getString(R.string.mapbox_access_token).trim()
         if (token == "YOUR_PUBLIC_MAPBOX_ACCESS_TOKEN") {
             Toast.makeText(this, getString(R.string.destination_search_missing_token), Toast.LENGTH_LONG).show()
@@ -87,5 +101,11 @@ class DestinationSearchActivity : AppCompatActivity() {
                 .putExtra(AppFlow.EXTRA_DESTINATION_LON, suggestion.lon)
                 .putExtra(AppFlow.EXTRA_DESTINATION_NAME, suggestion.placeName)
         )
+    }
+
+    companion object {
+        const val EXTRA_SEARCH_MODE = "extra_search_mode"
+        const val MODE_NAV = "nav"
+        const val MODE_PARKING = "parking"
     }
 }

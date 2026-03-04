@@ -32,6 +32,7 @@ class NavigationEntryActivity : AppCompatActivity() {
     private lateinit var titleView: TextView
     private lateinit var descriptionView: TextView
     private lateinit var openNavigationMapButton: MaterialButton
+    private lateinit var openParkingButton: MaterialButton
 
     private val locationPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestMultiplePermissions()
@@ -58,6 +59,7 @@ class NavigationEntryActivity : AppCompatActivity() {
         titleView = findViewById(R.id.navigationTitle)
         descriptionView = findViewById(R.id.navigationDescription)
         openNavigationMapButton = findViewById(R.id.openNavigationMapButton)
+        openParkingButton = findViewById(R.id.openParkingButton)
 
         appearanceModeButton.setOnClickListener {
             cycleAppearanceMode()
@@ -80,6 +82,10 @@ class NavigationEntryActivity : AppCompatActivity() {
                 activity = this,
                 onAllow = { requestLocationPermission() }
             )
+        }
+
+        openParkingButton.setOnClickListener {
+            startActivity(Intent(this, com.drivest.navigation.parking.ParkingActivity::class.java))
         }
     }
 

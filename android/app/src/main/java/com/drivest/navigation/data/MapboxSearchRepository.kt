@@ -33,7 +33,11 @@ class MapboxSearchRepository(
         val endpoint = buildString {
             append("https://api.mapbox.com/geocoding/v5/mapbox.places/")
             append(Uri.encode(query))
-            append(".json?autocomplete=true&limit=8&country=gb&language=en&access_token=")
+            append(
+                ".json?autocomplete=true&fuzzyMatch=true&limit=10" +
+                    "&types=address,poi,place,locality,neighborhood,postcode" +
+                    "&country=gb&language=en&access_token="
+            )
             append(Uri.encode(token))
         }
 
@@ -65,10 +69,24 @@ class MapboxSearchRepository(
                 if (center.length() < 2) continue
                 val lon = center.optDouble(0)
                 val lat = center.optDouble(1)
+                val placeTypes = feature.optJSONArray("place_type")
+                val isAddress = placeTypes?.let { types ->
+                    (0 until types.length()).any { index ->
+                        types.optString(index) == "address"
+                    }
+                } ?: false
+                val addressNumber = feature.optString("address", "")
+                val text = feature.optString("text", "")
+                val combinedName = when {
+                    isAddress && addressNumber.isNotBlank() && text.isNotBlank() ->
+                        "$addressNumber $text"
+                    text.isNotBlank() -> text
+                    else -> feature.optString("place_name", "Destination")
+                }
                 add(
                     DestinationSuggestion(
-                        name = feature.optString("text", feature.optString("place_name", "Destination")),
-                        placeName = feature.optString("place_name", "Destination"),
+                        name = combinedName,
+                        placeName = feature.optString("place_name", combinedName.ifBlank { "Destination" }),
                         lat = lat,
                         lon = lon
                     )
