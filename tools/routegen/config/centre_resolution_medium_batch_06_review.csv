@@ -1,0 +1,7 @@
+centre_id,centre_name,lat,lng,resolution_status,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,review_status
+chingford_london,Chingford London,51.6188236,0.0039968,resolved_secondary,Chingford London driving test centre UK,Hatch Lane/New Rd Chingford London UK,Chingford London test centre UK,medium,"address_incomplete,no_postcode_found",approved
+chippenham,Chippenham,51.4462746,-2.1484355,resolved_secondary,Chippenham driving test centre UK,West Cepen Way Chippenham UK,Chippenham test centre UK,medium,"address_incomplete,no_postcode_found",approved
+chorley,Chorley,53.6575267,-2.6185602,resolved_primary,Chorley driving test centre UK,Eaves Lane / Lyons Lane Chorley UK,Chorley test centre UK,medium,"address_incomplete,no_postcode_found",approved
+coventry,Coventry,52.4636278,-1.4758167,resolved_primary,Coventry driving test centre UK,Bowling Green Lane Coventry UK,Coventry test centre UK,medium,"address_incomplete,no_postcode_found",approved
+crawley,Crawley,51.0809358,-0.2017537,resolved_primary,Crawley driving test centre UK,Haslett Avenue East Crawley UK,Crawley test centre UK,medium,"address_incomplete,no_postcode_found",approved
+crewe,Crewe,53.0977225,-2.4652041,resolved_secondary,Crewe driving test centre UK,Queens Park Drive Crewe UK,Crewe test centre UK,medium,"address_incomplete,no_postcode_found",approved

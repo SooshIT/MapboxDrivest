@@ -1,0 +1,6 @@
+centre_id,centre_name,lat,lng,resolution_status,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,review_status
+glasgow_shieldhall,Glasgow Shieldhall,55.8641479,-4.3491100,resolved_primary,Glasgow Shieldhall driving test centre UK,Join Clydeside Expressway Glasgow Shieldhall UK,Glasgow Shieldhall test centre UK,medium,"address_incomplete,no_postcode_found",approved
+gloucester,Gloucester,51.8306224,-2.2633028,resolved_secondary,Gloucester driving test centre UK,Holmleigh Drive / Windsor Drive Gloucester UK,Gloucester test centre UK,medium,"address_incomplete,no_postcode_found",approved
+grimsby_coldwater,Grimsby Coldwater,53.5806208,-0.1135832,resolved_primary,Grimsby Coldwater driving test centre UK,Frederwick Ward Way Grimsby Coldwater UK,Grimsby Coldwater test centre UK,medium,"address_incomplete,no_postcode_found",approved
+haddington,Haddington,55.9608288,-2.7820611,resolved_tertiary,Haddington driving test centre UK,Park Lane / Clerkington Rd Haddington UK,Haddington test centre UK,medium,"address_incomplete,no_postcode_found",approved
+halifax,Halifax,53.7241949,-1.8907001,resolved_secondary,Halifax driving test centre UK,Spring Hall Lane Halifax UK,Halifax test centre UK,medium,"address_incomplete,no_postcode_found",approved

@@ -1,0 +1,11 @@
+{
+  "loop_integrity": 0.23,
+  "duration_fit": 0.18,
+  "uniqueness": 0.18,
+  "hint_coverage": 0.15,
+  "pdf_coverage": 0.15,
+  "diversity": 0.09,
+  "junction_realism": 0.09,
+  "corridor_divergence": 0.04,
+  "shape_variety": 0.04
+}

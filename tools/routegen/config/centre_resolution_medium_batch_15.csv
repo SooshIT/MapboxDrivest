@@ -1,0 +1,11 @@
+centre_id,centre_name,cleaned_postcode_candidate,cleaned_address_candidate,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,lat,lng,resolution_status
+northallerton,Northallerton,,Mill Hill Lane,Northallerton driving test centre UK,Mill Hill Lane Northallerton UK,Northallerton test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+northampton,Northampton,,St Peters Way,Northampton driving test centre UK,St Peters Way Northampton UK,Northampton test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+norwich_jupiter_road,Norwich Jupiter Road,,Woodside Rd / Blue Boar Lane,Norwich Jupiter Road driving test centre UK,Woodside Rd / Blue Boar Lane Norwich Jupiter Road UK,Norwich Jupiter Road test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+norwich_peachman_way,Norwich Peachman Way,,Woodside Rd / Blue Boar Lane,Norwich Peachman Way driving test centre UK,Woodside Rd / Blue Boar Lane Norwich Peachman Way UK,Norwich Peachman Way test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+nottingham_colwick,Nottingham Colwick,,St Lukes Way,Nottingham Colwick driving test centre UK,St Lukes Way Nottingham Colwick UK,Nottingham Colwick test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+nuneaton,Nuneaton,,St Davids Way,Nuneaton driving test centre UK,St Davids Way Nuneaton UK,Nuneaton test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+oswestry,Oswestry,,Chestnut Ave / Cherry Tree Drive,Oswestry driving test centre UK,Chestnut Ave / Cherry Tree Drive Oswestry UK,Oswestry test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+oxford_cowley,Oxford Cowley,,Cricket Rd / Rymers Lane,Oxford Cowley driving test centre UK,Cricket Rd / Rymers Lane Oxford Cowley UK,Oxford Cowley test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+pembroke_dock,Pembroke Dock,,Buttermilk Lane / Myletts Hill,Pembroke Dock driving test centre UK,Buttermilk Lane / Myletts Hill Pembroke Dock UK,Pembroke Dock test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+peterborough,Peterborough,,Paston Park Way,Peterborough driving test centre UK,Paston Park Way Peterborough UK,Peterborough test centre UK,medium,"address_incomplete,no_postcode_found",,,pending

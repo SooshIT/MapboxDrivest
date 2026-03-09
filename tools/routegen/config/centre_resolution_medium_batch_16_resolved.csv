@@ -1,0 +1,11 @@
+centre_id,centre_name,cleaned_postcode_candidate,cleaned_address_candidate,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,lat,lng,resolution_status
+pinner_london,Pinner London,,Elm Ave / Park way,Pinner London driving test centre UK,Elm Ave / Park way Pinner London UK,Pinner London test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+plymouth,Plymouth,,Little Dock Lane,Plymouth driving test centre UK,Little Dock Lane Plymouth UK,Plymouth test centre UK,medium,"address_incomplete,no_postcode_found",50.4095962,-4.1623038,resolved_secondary
+pontefract,Pontefract,,Jubilee Way / Mill Hill,Pontefract driving test centre UK,Jubilee Way / Mill Hill Pontefract UK,Pontefract test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+poole,Poole,,Queen Anne Drive / Magna Rd,Poole driving test centre UK,Queen Anne Drive / Magna Rd Poole UK,Poole test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+portsmouth,Portsmouth,,James Callaghan Drive,Portsmouth driving test centre UK,James Callaghan Drive Portsmouth UK,Portsmouth test centre UK,medium,"address_incomplete,no_postcode_found",50.8570850,-1.1097044,resolved_primary
+preston,Preston,,Chain Caul Way,Preston driving test centre UK,Chain Caul Way Preston UK,Preston test centre UK,medium,"address_incomplete,no_postcode_found",53.7597518,-2.7591557,resolved_secondary
+pwllheli,Pwllheli,,Alaroad / Y Maes,Pwllheli driving test centre UK,Alaroad / Y Maes Pwllheli UK,Pwllheli test centre UK,medium,"address_incomplete,no_postcode_found",52.8808724,-4.4233345,resolved_tertiary
+reading,Reading,,Home Farm Close,Reading driving test centre UK,Home Farm Close Reading UK,Reading test centre UK,medium,"address_incomplete,no_postcode_found",51.4382718,-0.9652685,resolved_secondary
+redditch,Redditch,,Rough Hill Drive,Redditch driving test centre UK,Rough Hill Drive Redditch UK,Redditch test centre UK,medium,"address_incomplete,no_postcode_found",52.2785895,-1.9361227,resolved_secondary
+rochdale_manchester,Rochdale Manchester,,New Broad Lane,Rochdale Manchester driving test centre UK,New Broad Lane Rochdale Manchester UK,Rochdale Manchester test centre UK,medium,"address_incomplete,no_postcode_found",53.5960849,-2.1360447,resolved_secondary

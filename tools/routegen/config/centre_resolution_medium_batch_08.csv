@@ -1,0 +1,11 @@
+centre_id,centre_name,cleaned_postcode_candidate,cleaned_address_candidate,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,lat,lng,resolution_status
+durham,Durham,,Mill Lane / Shincliffe Lane,Durham driving test centre UK,Mill Lane / Shincliffe Lane Durham UK,Durham test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+eastbourne,Eastbourne,,The Avenue / Upper Ave,Eastbourne driving test centre UK,The Avenue / Upper Ave Eastbourne UK,Eastbourne test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+edinburgh_currie,Edinburgh Currie,,Baberton Mains Drive,Edinburgh Currie driving test centre UK,Baberton Mains Drive Edinburgh Currie UK,Edinburgh Currie test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+elgin,Elgin,,Wards Rd / Wittet Drive,Elgin driving test centre UK,Wards Rd / Wittet Drive Elgin UK,Elgin test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+elswick,Elswick,,William Armstrong Drive,Elswick driving test centre UK,William Armstrong Drive Elswick UK,Elswick test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+exeter,Exeter,,Lane / Station Rd,Exeter driving test centre UK,Lane / Station Rd Exeter UK,Exeter test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+folkestone,Folkestone,,Castle Hill Avenue,Folkestone driving test centre UK,Castle Hill Avenue Folkestone UK,Folkestone test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+fraserburgh,Fraserburgh,,St Andrews Drive,Fraserburgh driving test centre UK,St Andrews Drive Fraserburgh UK,Fraserburgh test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+gateshead,Gateshead,,Harlow Green Lane,Gateshead driving test centre UK,Harlow Green Lane Gateshead UK,Gateshead test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+gillingham,Gillingham,,Hempstead Valley Drive,Gillingham driving test centre UK,Hempstead Valley Drive Gillingham UK,Gillingham test centre UK,medium,"address_incomplete,no_postcode_found",,,pending

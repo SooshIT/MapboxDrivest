@@ -1,0 +1,11 @@
+centre_id,centre_name,cleaned_postcode_candidate,cleaned_address_candidate,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,lat,lng,resolution_status
+aberdeen_north,Aberdeen North,,St Machar Drive,Aberdeen North driving test centre UK,St Machar Drive Aberdeen North UK,Aberdeen North test centre UK,medium,"address_incomplete,no_postcode_found",57.1855304,-2.0962169,resolved_primary
+abergavenny,Abergavenny,,Old Barn Way,Abergavenny driving test centre UK,Old Barn Way Abergavenny UK,Abergavenny test centre UK,medium,"address_incomplete,no_postcode_found",51.8159651,-3.0106159,resolved_primary
+alness,Alness,,Cromlet Drive / Academy Rd,Alness driving test centre UK,Cromlet Drive / Academy Rd Alness UK,Alness test centre UK,medium,"address_incomplete,no_postcode_found",57.6906806,-4.2679679,resolved_primary
+alnwick,Alnwick,,Tower Lane/Green Batt,Alnwick driving test centre UK,Tower Lane/Green Batt Alnwick UK,Alnwick test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+ashfield,Ashfield,,New Lane / Beristowe Lane,Ashfield driving test centre UK,New Lane / Beristowe Lane Ashfield UK,Ashfield test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+ashford_kent,Ashford Kent,,Tithe Barn Lane,Ashford Kent driving test centre UK,Tithe Barn Lane Ashford Kent UK,Ashford Kent test centre UK,medium,"address_incomplete,no_postcode_found",51.1401671,0.8436134,resolved_secondary
+aylesbury,Aylesbury,,Broughton Lane / Burcott lane,Aylesbury driving test centre UK,Broughton Lane / Burcott lane Aylesbury UK,Aylesbury test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+ballater,Ballater,,Sir Patrick Geddies Way,Ballater driving test centre UK,Sir Patrick Geddies Way Ballater UK,Ballater test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+banbury,Banbury,,Mewburn Rd / Queensway,Banbury driving test centre UK,Mewburn Rd / Queensway Banbury UK,Banbury test centre UK,medium,"address_incomplete,no_postcode_found",52.0552294,-1.3499525,resolved_secondary
+barking_tanner_street,Barking Tanner Street,,South Park Drive,Barking Tanner Street driving test centre UK,South Park Drive Barking Tanner Street UK,Barking Tanner Street test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved

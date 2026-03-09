@@ -1,0 +1,6 @@
+centre_id,centre_name,lat,lng,resolution_status,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,review_status
+lincoln,Lincoln,53.2466879,-0.5146945,resolved_secondary,Lincoln driving test centre UK,Outer Circle Drive Lincoln UK,Lincoln test centre UK,medium,"address_incomplete,no_postcode_found",approved
+llanelli,Llanelli,51.6860809,-4.1550921,resolved_tertiary,Llanelli driving test centre UK,Coleshill Terrace / Greenway St Llanelli UK,Llanelli test centre UK,medium,"address_incomplete,no_postcode_found",approved
+loughborough,Loughborough,52.7808821,-1.2010251,resolved_primary,Loughborough driving test centre UK,Craddock Drive / Spinney Drive Loughborough UK,Loughborough test centre UK,medium,"address_incomplete,no_postcode_found",approved
+ludlow,Ludlow,52.3663184,-2.7105605,resolved_secondary,Ludlow driving test centre UK,Weeping Cross Lane Ludlow UK,Ludlow test centre UK,medium,"address_incomplete,no_postcode_found",approved
+luton,Luton,51.8832748,-0.3798178,resolved_secondary,Luton driving test centre UK,Frank Lester Way Luton UK,Luton test centre UK,medium,"address_incomplete,no_postcode_found",approved

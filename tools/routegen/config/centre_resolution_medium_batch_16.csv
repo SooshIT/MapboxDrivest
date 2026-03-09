@@ -1,0 +1,11 @@
+centre_id,centre_name,cleaned_postcode_candidate,cleaned_address_candidate,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,lat,lng,resolution_status
+pinner_london,Pinner London,,Elm Ave / Park way,Pinner London driving test centre UK,Elm Ave / Park way Pinner London UK,Pinner London test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+plymouth,Plymouth,,Little Dock Lane,Plymouth driving test centre UK,Little Dock Lane Plymouth UK,Plymouth test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+pontefract,Pontefract,,Jubilee Way / Mill Hill,Pontefract driving test centre UK,Jubilee Way / Mill Hill Pontefract UK,Pontefract test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+poole,Poole,,Queen Anne Drive / Magna Rd,Poole driving test centre UK,Queen Anne Drive / Magna Rd Poole UK,Poole test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+portsmouth,Portsmouth,,James Callaghan Drive,Portsmouth driving test centre UK,James Callaghan Drive Portsmouth UK,Portsmouth test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+preston,Preston,,Chain Caul Way,Preston driving test centre UK,Chain Caul Way Preston UK,Preston test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+pwllheli,Pwllheli,,Alaroad / Y Maes,Pwllheli driving test centre UK,Alaroad / Y Maes Pwllheli UK,Pwllheli test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+reading,Reading,,Home Farm Close,Reading driving test centre UK,Home Farm Close Reading UK,Reading test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+redditch,Redditch,,Rough Hill Drive,Redditch driving test centre UK,Rough Hill Drive Redditch UK,Redditch test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+rochdale_manchester,Rochdale Manchester,,New Broad Lane,Rochdale Manchester driving test centre UK,New Broad Lane Rochdale Manchester UK,Rochdale Manchester test centre UK,medium,"address_incomplete,no_postcode_found",,,pending

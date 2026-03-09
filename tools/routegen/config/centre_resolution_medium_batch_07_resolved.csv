@@ -1,0 +1,11 @@
+centre_id,centre_name,cleaned_postcode_candidate,cleaned_address_candidate,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,lat,lng,resolution_status
+croydon_london,Croydon London,,Duppas Hill Lane,Croydon London driving test centre UK,Duppas Hill Lane Croydon London UK,Croydon London test centre UK,medium,"address_incomplete,no_postcode_found",51.3684757,-0.1055694,resolved_secondary
+darlington,Darlington,,St Cuthberts Way,Darlington driving test centre UK,St Cuthberts Way Darlington UK,Darlington test centre UK,medium,"address_incomplete,no_postcode_found",54.5163618,-1.5094095,resolved_primary
+derby_alvaston,Derby Alvaston,,Burton Rd / Coles Lane,Derby Alvaston driving test centre UK,Burton Rd / Coles Lane Derby Alvaston UK,Derby Alvaston test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+doncaster,Doncaster,,Sandal Park Drive,Doncaster driving test centre UK,Sandal Park Drive Doncaster UK,Doncaster test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+dorchester,Dorchester,,Roman Rd / Apollo Close,Dorchester driving test centre UK,Roman Rd / Apollo Close Dorchester UK,Dorchester test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+dumbarton,Dumbarton,,Dumbuck Rd / Underwood Drive,Dumbarton driving test centre UK,Dumbuck Rd / Underwood Drive Dumbarton UK,Dumbarton test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+dumfries,Dumfries,,Oakfield Drive / Oakfield Brae,Dumfries driving test centre UK,Oakfield Drive / Oakfield Brae Dumfries UK,Dumfries test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+dundee,Dundee,,Kinghorne Rd / Lawside Avenue,Dundee driving test centre UK,Kinghorne Rd / Lawside Avenue Dundee UK,Dundee test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+dunfermline_vine,Dunfermline Vine,,Woodside Avenue / Middlebank St,Dunfermline Vine driving test centre UK,Woodside Avenue / Middlebank St Dunfermline Vine UK,Dunfermline Vine test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+duns,Duns,,Berrywell Drive / Winterfield,Duns driving test centre UK,Berrywell Drive / Winterfield Duns UK,Duns test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved

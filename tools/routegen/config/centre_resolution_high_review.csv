@@ -1,0 +1,5 @@
+centre_id,centre_name,lat,lng,resolution_status,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,review_status
+cumnock,Cumnock,55.4667518,-4.2958473,resolved_secondary,Cumnock driving test centre UK,Industrial Estate Rd Cumnock UK,Cumnock test centre UK,high,no_postcode_found,approved
+lochgilphead,Lochgilphead,56.0260886,-5.4268275,resolved_secondary,Lochgilphead driving test centre UK,Kilmory Industrial Estate Lochgilphead UK,Lochgilphead test centre UK,high,no_postcode_found,approved
+monmouth,Monmouth,51.8064491,-2.7275874,resolved_secondary,Monmouth driving test centre UK,Wonastow Industrial Estate Monmouth UK,Monmouth test centre UK,high,no_postcode_found,approved
+peterhead,Peterhead,57.4910589,-1.8070680,resolved_secondary,Peterhead driving test centre UK,Dales Industrial Estate Peterhead UK,Peterhead test centre UK,high,no_postcode_found,approved

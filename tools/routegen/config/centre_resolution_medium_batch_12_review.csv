@@ -1,0 +1,5 @@
+centre_id,centre_name,lat,lng,resolution_status,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,review_status
+kirkcaldy,Kirkcaldy,56.1383644,-3.1252672,resolved_primary,Kirkcaldy driving test centre UK,Wester Bogie Road Kirkcaldy UK,Kirkcaldy test centre UK,medium,"address_incomplete,no_postcode_found",approved
+launceston,Launceston,50.6144510,-4.3363510,resolved_tertiary,Launceston driving test centre UK,Exeter St / Madford Lane Launceston UK,Launceston test centre UK,medium,"address_incomplete,no_postcode_found",approved
+letchworth,Letchworth,51.9787147,-0.2152280,resolved_primary,Letchworth driving test centre UK,Norton Way North Letchworth UK,Letchworth test centre UK,medium,"address_incomplete,no_postcode_found",approved
+lichfield,Lichfield,52.7048115,-1.7784168,resolved_secondary,Lichfield driving test centre UK,Wood End Lane Lichfield UK,Lichfield test centre UK,medium,"address_incomplete,no_postcode_found",approved

@@ -1,0 +1,11 @@
+centre_id,centre_name,cleaned_postcode_candidate,cleaned_address_candidate,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,lat,lng,resolution_status
+lincoln,Lincoln,,Outer Circle Drive,Lincoln driving test centre UK,Outer Circle Drive Lincoln UK,Lincoln test centre UK,medium,"address_incomplete,no_postcode_found",53.2466879,-0.5146945,resolved_secondary
+llanelli,Llanelli,,Coleshill Terrace / Greenway St,Llanelli driving test centre UK,Coleshill Terrace / Greenway St Llanelli UK,Llanelli test centre UK,medium,"address_incomplete,no_postcode_found",51.6860809,-4.1550921,resolved_tertiary
+loughborough,Loughborough,,Craddock Drive / Spinney Drive,Loughborough driving test centre UK,Craddock Drive / Spinney Drive Loughborough UK,Loughborough test centre UK,medium,"address_incomplete,no_postcode_found",52.7808821,-1.2010251,resolved_primary
+lowestoft_mobbs_way,Lowestoft Mobbs Way,,The Street / Corton Rd,Lowestoft Mobbs Way driving test centre UK,The Street / Corton Rd Lowestoft Mobbs Way UK,Lowestoft Mobbs Way test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+ludlow,Ludlow,,Weeping Cross Lane,Ludlow driving test centre UK,Weeping Cross Lane Ludlow UK,Ludlow test centre UK,medium,"address_incomplete,no_postcode_found",52.3663184,-2.7105605,resolved_secondary
+luton,Luton,,Frank Lester Way,Luton driving test centre UK,Frank Lester Way Luton UK,Luton test centre UK,medium,"address_incomplete,no_postcode_found",51.8832748,-0.3798178,resolved_secondary
+macclesfield,Macclesfield,,Stamford Rd / Moss Lane,Macclesfield driving test centre UK,Stamford Rd / Moss Lane Macclesfield UK,Macclesfield test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+mallaig,Mallaig,,Main Street / East Bay,Mallaig driving test centre UK,Main Street / East Bay Mallaig UK,Mallaig test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+malton,Malton,,Hambleton Rd / Langley Drive,Malton driving test centre UK,Hambleton Rd / Langley Drive Malton UK,Malton test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+melton_mowbray,Melton Mowbray,,Balmoral Drive / Dieppe Way,Melton Mowbray driving test centre UK,Balmoral Drive / Dieppe Way Melton Mowbray UK,Melton Mowbray test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved

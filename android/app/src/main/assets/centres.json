@@ -9,9 +9,9 @@
   {
     "id": "chelmsford",
     "name": "Chelmsford Driving Test Centre",
-    "address": "Hanbury Road, Chelmsford CM1 3AE",
-    "lat": 51.7534,
-    "lon": 0.4608
+    "address": "Hanbury Road, Widford Industrial Estate, Chelmsford CM1 3DR",
+    "lat": 51.7227234,
+    "lon": 0.4484230196012416
   },
   {
     "id": "ipswich",
@@ -33,5 +33,12 @@
     "address": "Paycocke Road, Basildon SS14 3EA",
     "lat": 51.575,
     "lon": 0.506
+  },
+  {
+    "id": "clacton_on_sea",
+    "name": "Clacton-on-Sea Driving Test Centre",
+    "address": "103-105 Carnarvon Road, Clacton-on-Sea CO15 6PR",
+    "lat": 51.7895,
+    "lon": 1.1512
   }
 ]

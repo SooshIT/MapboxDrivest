@@ -1,0 +1,5 @@
+centre_id,centre_name,lat,lng,resolution_status,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,review_status
+hartlepool,Hartlepool,54.6683573,-1.2128198,resolved_secondary,Hartlepool driving test centre UK,Belle Vue Way Hartlepool UK,Hartlepool test centre UK,medium,"address_incomplete,no_postcode_found",approved
+hereford,Hereford,52.0727799,-2.7131125,resolved_secondary,Hereford driving test centre UK,Old School Lane Hereford UK,Hereford test centre UK,medium,"address_incomplete,no_postcode_found",approved
+herne_bay,Herne Bay,51.3673845,1.1437393,resolved_secondary,Herne Bay driving test centre UK,King Edward Avenue Herne Bay UK,Herne Bay test centre UK,medium,"address_incomplete,no_postcode_found",approved
+horsforth,Horsforth,53.8397978,-1.6514670,resolved_secondary,Horsforth driving test centre UK,West End Lane Horsforth UK,Horsforth test centre UK,medium,"address_incomplete,no_postcode_found",approved

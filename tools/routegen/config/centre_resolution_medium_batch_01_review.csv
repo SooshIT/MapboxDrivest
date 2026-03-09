@@ -1,0 +1,6 @@
+centre_id,centre_name,lat,lng,resolution_status,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,review_status
+aberdeen_north,Aberdeen North,57.1855304,-2.0962169,resolved_primary,Aberdeen North driving test centre UK,St Machar Drive Aberdeen North UK,Aberdeen North test centre UK,medium,"address_incomplete,no_postcode_found",approved
+abergavenny,Abergavenny,51.8159651,-3.0106159,resolved_primary,Abergavenny driving test centre UK,Old Barn Way Abergavenny UK,Abergavenny test centre UK,medium,"address_incomplete,no_postcode_found",approved
+alness,Alness,57.6906806,-4.2679679,resolved_primary,Alness driving test centre UK,Cromlet Drive / Academy Rd Alness UK,Alness test centre UK,medium,"address_incomplete,no_postcode_found",approved
+ashford_kent,Ashford Kent,51.1401671,0.8436134,resolved_secondary,Ashford Kent driving test centre UK,Tithe Barn Lane Ashford Kent UK,Ashford Kent test centre UK,medium,"address_incomplete,no_postcode_found",approved
+banbury,Banbury,52.0552294,-1.3499525,resolved_secondary,Banbury driving test centre UK,Mewburn Rd / Queensway Banbury UK,Banbury test centre UK,medium,"address_incomplete,no_postcode_found",approved

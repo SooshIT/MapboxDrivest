@@ -1,0 +1,21 @@
+centre_id,centre_name,source_pdf_present,centre_json_present,seeds_dir_present,preflight_passed,preflight_notes
+chelmsford,Chelmsford,yes,yes,yes,yes,"[2026-03-07 01:19:29] [STAGE] == preflight checks ==
+[2026-03-07 01:19:29] [INFO] Preflight checks passed."
+carlisle,Carlisle,yes,yes,yes,yes,"[2026-03-07 01:19:29] [STAGE] == preflight checks ==
+[2026-03-07 01:19:29] [INFO] Preflight checks passed."
+coventry,Coventry,yes,yes,yes,yes,"[2026-03-07 01:19:29] [STAGE] == preflight checks ==
+[2026-03-07 01:19:29] [INFO] Preflight checks passed."
+crawley,Crawley,yes,yes,yes,yes,"[2026-03-07 01:19:29] [STAGE] == preflight checks ==
+[2026-03-07 01:19:29] [INFO] Preflight checks passed."
+crewe,Crewe,yes,yes,yes,yes,"[2026-03-07 01:19:29] [STAGE] == preflight checks ==
+[2026-03-07 01:19:29] [INFO] Preflight checks passed."
+gloucester,Gloucester,yes,yes,yes,yes,"[2026-03-07 01:19:29] [STAGE] == preflight checks ==
+[2026-03-07 01:19:29] [INFO] Preflight checks passed."
+lincoln,Lincoln,yes,yes,yes,yes,"[2026-03-07 01:19:30] [STAGE] == preflight checks ==
+[2026-03-07 01:19:30] [INFO] Preflight checks passed."
+luton,Luton,yes,yes,yes,yes,"[2026-03-07 01:19:30] [STAGE] == preflight checks ==
+[2026-03-07 01:19:30] [INFO] Preflight checks passed."
+preston,Preston,yes,yes,yes,yes,"[2026-03-07 01:19:30] [STAGE] == preflight checks ==
+[2026-03-07 01:19:30] [INFO] Preflight checks passed."
+reading,Reading,yes,yes,yes,yes,"[2026-03-07 01:19:30] [STAGE] == preflight checks ==
+[2026-03-07 01:19:30] [INFO] Preflight checks passed."

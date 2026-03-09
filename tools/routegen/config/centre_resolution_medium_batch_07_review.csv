@@ -1,0 +1,3 @@
+centre_id,centre_name,lat,lng,resolution_status,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,review_status
+croydon_london,Croydon London,51.3684757,-0.1055694,resolved_secondary,Croydon London driving test centre UK,Duppas Hill Lane Croydon London UK,Croydon London test centre UK,medium,"address_incomplete,no_postcode_found",approved
+darlington,Darlington,54.5163618,-1.5094095,resolved_primary,Darlington driving test centre UK,St Cuthberts Way Darlington UK,Darlington test centre UK,medium,"address_incomplete,no_postcode_found",approved

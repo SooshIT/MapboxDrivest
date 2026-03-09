@@ -1,0 +1,15 @@
+[project]
+name = "drivest-routegen"
+version = "0.0.0"
+requires-python = ">=3.10"
+dependencies = [
+  "osmnx>=1.9.1",
+  "networkx>=3.2.1",
+  "pandas>=2.2.0",
+  "openpyxl>=3.1.2",
+  "pypdf>=4.1.0",
+  "pyrosm>=0.6.2",
+  "pyyaml>=6.0.1",
+  "rapidfuzz>=3.6.2",
+  "shapely>=2.0.3"
+]

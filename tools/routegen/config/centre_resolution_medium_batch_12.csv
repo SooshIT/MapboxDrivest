@@ -1,0 +1,11 @@
+centre_id,centre_name,cleaned_postcode_candidate,cleaned_address_candidate,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,lat,lng,resolution_status
+kirkcaldy,Kirkcaldy,,Wester Bogie Road,Kirkcaldy driving test centre UK,Wester Bogie Road Kirkcaldy UK,Kirkcaldy test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+lairg,Lairg,,Railway Car Park,Lairg driving test centre UK,Railway Car Park Lairg UK,Lairg test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+lanark,Lanark,,Waterloo Drive / Wheatlandside,Lanark driving test centre UK,Waterloo Drive / Wheatlandside Lanark UK,Lanark test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+launceston,Launceston,,Exeter St / Madford Lane,Launceston driving test centre UK,Exeter St / Madford Lane Launceston UK,Launceston test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+leeds,Leeds,,Primrose Lane / Valley Drive,Leeds driving test centre UK,Primrose Lane / Valley Drive Leeds UK,Leeds test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+leicester_cannock_street,Leicester Cannock Street,,Red Hill Way,Leicester Cannock Street driving test centre UK,Red Hill Way Leicester Cannock Street UK,Leicester Cannock Street test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+leicester_wigston,Leicester Wigston,,Horsewell Lane / Launceston Rd,Leicester Wigston driving test centre UK,Horsewell Lane / Launceston Rd Leicester Wigston UK,Leicester Wigston test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+leighton_buzzard_stanbridge_road,Leighton Buzzard Stanbridge Road,,St Leonards Close,Leighton Buzzard Stanbridge Road driving test centre UK,St Leonards Close Leighton Buzzard Stanbridge Road UK,Leighton Buzzard Stanbridge Road test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+letchworth,Letchworth,,Norton Way North,Letchworth driving test centre UK,Norton Way North Letchworth UK,Letchworth test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+lichfield,Lichfield,,Wood End Lane,Lichfield driving test centre UK,Wood End Lane Lichfield UK,Lichfield test centre UK,medium,"address_incomplete,no_postcode_found",,,pending

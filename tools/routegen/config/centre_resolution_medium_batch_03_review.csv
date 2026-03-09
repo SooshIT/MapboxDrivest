@@ -1,0 +1,5 @@
+centre_id,centre_name,lat,lng,resolution_status,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,review_status
+blackburn_with_darwen,Blackburn with Darwen,53.7512656,-2.4798825,resolved_secondary,Blackburn with Darwen driving test centre UK,Barbara Castle Way Blackburn with Darwen UK,Blackburn with Darwen test centre UK,medium,"address_incomplete,no_postcode_found",approved
+bodmin,Bodmin,50.4644500,-4.7145800,resolved_secondary,Bodmin driving test centre UK,Plas Newydd Avenue Bodmin UK,Bodmin test centre UK,medium,"address_incomplete,no_postcode_found",approved
+bolton_manchester,Bolton Manchester,53.5643729,-2.4575925,resolved_secondary,Bolton Manchester driving test centre UK,Deane Church Lane Bolton Manchester UK,Bolton Manchester test centre UK,medium,"address_incomplete,no_postcode_found",approved
+boston,Boston,52.9748791,-0.0230679,resolved_secondary,Boston driving test centre UK,John Adams Way Boston UK,Boston test centre UK,medium,"address_incomplete,no_postcode_found",approved

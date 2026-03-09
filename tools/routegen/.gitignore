@@ -1,0 +1,10 @@
+/work/
+/output/
+/inputs/osm/*.pbf
+/inputs/osm/*.osm
+/inputs/osm/*.disabled
+/inputs/osm/sources/
+/inputs/dvsa_pdfs/
+/inputs/centres/*.zip
+**/__pycache__/
+*.pyc

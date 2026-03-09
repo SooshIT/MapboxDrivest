@@ -17,6 +17,7 @@ const {
 const DATA_DIR = path.join(__dirname, "..", "data");
 const ROUTES_DIR = path.join(DATA_DIR, "routes");
 const HAZARDS_DIR = path.join(DATA_DIR, "hazards");
+const ROUTEGEN_OUTPUT_DIR = path.join(__dirname, "..", "..", "tools", "routegen", "output");
 const SQL_DIR = path.join(__dirname, "..", "sql");
 const telemetryEvents = [];
 const instructorSessions = [];
@@ -903,7 +904,9 @@ function loadOrganisationStatsFromMemory(organisation) {
 function loadRoutesPackFromFile(centreId, centres) {
   const centre = findCentreById(centreId, centres);
   if (!centre) return null;
-  const routesPath = path.join(ROUTES_DIR, `${centreId}.json`);
+  const routegenPath = path.join(ROUTEGEN_OUTPUT_DIR, centreId, "routes.json");
+  const fallbackPath = path.join(ROUTES_DIR, `${centreId}.json`);
+  const routesPath = fs.existsSync(routegenPath) ? routegenPath : fallbackPath;
   if (!fs.existsSync(routesPath)) return null;
   const routesData = readJsonFile(routesPath);
   return {

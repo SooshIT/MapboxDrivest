@@ -1,0 +1,4 @@
+centre_id,centre_name,lat,lng,resolution_status,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,review_status
+carlisle,Carlisle,54.8744672,-2.8982541,resolved_secondary,Carlisle driving test centre UK,Hopes Hill Drive Carlisle UK,Carlisle test centre UK,medium,"address_incomplete,no_postcode_found",approved
+chelmsford,Chelmsford,51.7388201,0.5108617,resolved_secondary,Chelmsford driving test centre UK,Chelmer Village Way Chelmsford UK,Chelmsford test centre UK,medium,"address_incomplete,no_postcode_found",approved
+cheltenham,Cheltenham,51.9241557,-2.0932664,resolved_secondary,Cheltenham driving test centre UK,Quat Goose Lane Cheltenham UK,Cheltenham test centre UK,medium,"address_incomplete,no_postcode_found",approved

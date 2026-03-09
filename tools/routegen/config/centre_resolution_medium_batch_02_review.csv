@@ -1,0 +1,5 @@
+centre_id,centre_name,lat,lng,resolution_status,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,review_status
+barrow_in_furness,Barrow In Furness,54.1194266,-3.2426945,resolved_secondary,Barrow In Furness driving test centre UK,James Freel Close Barrow In Furness UK,Barrow In Furness test centre UK,medium,"address_incomplete,no_postcode_found",approved
+basingstoke,Basingstoke,51.2452589,-1.1124597,resolved_primary,Basingstoke driving test centre UK,Hatch Warren Way Basingstoke UK,Basingstoke test centre UK,medium,"address_incomplete,no_postcode_found",approved
+birmingham_garretts_green,Birmingham Garretts Green,52.4734898,-1.7799814,resolved_secondary,Birmingham Garretts Green driving test centre UK,Garretts Green Lane Birmingham Garretts Green UK,Birmingham Garretts Green test centre UK,medium,"address_incomplete,no_postcode_found",approved
+birmingham_kingstanding,Birmingham Kingstanding,52.5441569,-1.8905068,resolved_primary,Birmingham Kingstanding driving test centre UK,Doe Bank Lane Birmingham Kingstanding UK,Birmingham Kingstanding test centre UK,medium,"address_incomplete,no_postcode_found",approved

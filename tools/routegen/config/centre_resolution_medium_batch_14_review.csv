@@ -1,0 +1,4 @@
+centre_id,centre_name,lat,lng,resolution_status,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,review_status
+middlesbrough,Middlesbrough,54.5547923,-1.1850719,resolved_secondary,Middlesbrough driving test centre UK,Cargo Fleet Lane Middlesbrough UK,Middlesbrough test centre UK,medium,"address_incomplete,no_postcode_found",approved
+newton_stewart,Newton Stewart,54.9591514,-4.4706829,resolved_secondary,Newton Stewart driving test centre UK,New Galloway Rd Newton Stewart UK,Newton Stewart test centre UK,medium,"address_incomplete,no_postcode_found",approved
+norris_green_liverpool,Norris Green Liverpool,53.4492317,-2.9132191,resolved_secondary,Norris Green Liverpool driving test centre UK,Utting Avenue East Norris Green Liverpool UK,Norris Green Liverpool test centre UK,medium,"address_incomplete,no_postcode_found",approved

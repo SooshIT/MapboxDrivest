@@ -1,0 +1,11 @@
+centre_id,centre_name,cleaned_postcode_candidate,cleaned_address_candidate,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,lat,lng,resolution_status
+glasgow_shieldhall,Glasgow Shieldhall,,Join Clydeside Expressway,Glasgow Shieldhall driving test centre UK,Join Clydeside Expressway Glasgow Shieldhall UK,Glasgow Shieldhall test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+gloucester,Gloucester,,Holmleigh Drive / Windsor Drive,Gloucester driving test centre UK,Holmleigh Drive / Windsor Drive Gloucester UK,Gloucester test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+goodmayes_london,Goodmayes London,,South Park Drive,Goodmayes London driving test centre UK,South Park Drive Goodmayes London UK,Goodmayes London test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+grantham_somerby,Grantham Somerby,,Brook St / Broad St,Grantham Somerby driving test centre UK,Brook St / Broad St Grantham Somerby UK,Grantham Somerby test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+greenford_horsenden_lane,Greenford Horsenden Lane,,Elms Lane / Perrine Rd,Greenford Horsenden Lane driving test centre UK,Elms Lane / Perrine Rd Greenford Horsenden Lane UK,Greenford Horsenden Lane test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+greenock,Greenock,,Clarence St/Container Way,Greenock driving test centre UK,Clarence St/Container Way Greenock UK,Greenock test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+grimsby_coldwater,Grimsby Coldwater,,Frederwick Ward Way,Grimsby Coldwater driving test centre UK,Frederwick Ward Way Grimsby Coldwater UK,Grimsby Coldwater test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+guildford,Guildford,,Hook Hill Lane,Guildford driving test centre UK,Hook Hill Lane Guildford UK,Guildford test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+haddington,Haddington,,Park Lane / Clerkington Rd,Haddington driving test centre UK,Park Lane / Clerkington Rd Haddington UK,Haddington test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+halifax,Halifax,,Spring Hall Lane,Halifax driving test centre UK,Spring Hall Lane Halifax UK,Halifax test centre UK,medium,"address_incomplete,no_postcode_found",,,pending

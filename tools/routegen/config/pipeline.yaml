@@ -1,0 +1,93 @@
+# Route generation pipeline configuration
+active_centres:
+  - colchester
+  - clacton_on_sea
+seed_mode_centres:
+  - colchester
+  - clacton_on_sea
+registry_mode: true
+centre_verification_workbook: C:\Users\ferro\Desktop\Test Center UK Master Routes.xlsx
+centre_verification_sheet: Sheet1
+centre_verification_online_enabled: true
+centre_verification_online_limit: 3
+centre_verification_online_pause_seconds: 1.0
+centre_verification_online_min_score: 1.5
+centre_default_radius_meters: 5000
+start_end_tolerance_meters: 40
+min_duration_seconds: 900
+max_duration_seconds: 2100
+learner_speed_factor: 0.55
+learner_junction_delay_seconds: 0.40
+learner_major_junction_degree: 4
+min_distance_miles: 6.0
+max_distance_miles: 9.5
+min_hint_roads_per_route_early: 2
+min_hint_roads_per_route: 4
+max_hint_roads_per_route: 7
+min_pdf_roads_per_route: 4
+max_pdf_roads_per_route: 7
+max_overlap_ratio: 0.60
+self_overlap_max_ratio: 0.25
+braid_route_families:
+  - cross_town
+  - adjacent_arc
+  - two_lobe
+braid_local_revisit_radius_meters: 60
+braid_local_revisit_index_gap: 10
+braid_local_revisit_sample_spacing_meters: 30
+braid_local_revisit_threshold: 5
+braid_corridor_gap_threshold_deg: 120
+braid_active_zone_threshold: 4
+corridor_reentry_proximity_meters: 45
+corridor_reentry_centre_exemption_radius_meters: 300
+corridor_reentry_min_index_gap: 10
+corridor_reentry_sample_spacing_meters: 30
+corridor_reentry_hit_threshold: 4
+corridor_reentry_density_threshold: 2
+u_turn_window_meters: 50
+u_turn_window_min_leg_ratio: 0.8
+u_turn_window_angle_deg: 155
+u_turn_window_backtrack_ratio: 0.45
+u_turn_window_direct_meters: 18
+u_turn_window_dedupe_node_gap: 3
+selection_coverage_gain_weight: 0.5
+selection_overlap_penalty_weight: 0.25
+selection_family_diversity_weight: 0.12
+selection_zone_diversity_weight: 0.08
+selection_family_repeat_penalty_weight: 0.04
+selection_family_soft_cap: 5
+selection_family_soft_cap_penalty_weight: 0.12
+selection_family_hard_cap: 6
+seed_avg_speed_kph: 30
+seed_self_overlap_max: 0.45
+seed_quality_gap: 0.05
+seed_min_points: 100
+seed_start_end_tolerance_meters: 100
+seed_duration_reject_multiplier: 1.35
+seed_downsample_spacing_m: 10
+seed_reversal_min_segment_m: 12
+seed_reversal_angle_deg: 170
+seed_reversal_backtrack_ratio: 0.2
+seed_reversal_backtrack_distance_m: 8
+seed_reversal_min_hits: 2
+candidate_target_min: 80
+candidate_target_max: 240
+candidate_family_ratio: 0.38
+candidate_targeted_ratio: 0.47
+candidate_target_hint_group_size: 3
+candidate_target_min_distance_m: 350
+candidate_target_min_bearing_gap_deg: 30
+candidate_family_single_lobe_ratio: 0.28
+candidate_family_adjacent_arc_ratio: 0.30
+candidate_family_two_lobe_ratio: 0.17
+candidate_family_cross_town_ratio: 0.10
+candidate_family_compact_ratio: 0.15
+candidate_zone_sector_count: 8
+candidate_zone_local_distance_m: 900
+candidate_zone_inner_distance_m: 1600
+candidate_zone_outer_distance_m: 2800
+candidate_corridor_probe_distance_m: 180
+candidate_recent_node_window: 8
+candidate_max_node_visits: 2
+candidate_closing_overlap_max_ratio: 0.35
+routes_per_centre: 15

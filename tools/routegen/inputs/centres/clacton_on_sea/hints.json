@@ -1,0 +1,367 @@
+{
+  "centre_id": "clacton_on_sea",
+  "centre_name": "Clacton-on-Sea",
+  "source": {
+    "type": "excel",
+    "workbook": "Test Center UK Master Routes.xlsx",
+    "sheet": "Sheet1"
+  },
+  "roads": [
+    {
+      "name": "Alexandra Road",
+      "priority": 1
+    },
+    {
+      "name": "Hayes Road",
+      "priority": 2
+    },
+    {
+      "name": "Carnarvon Road",
+      "priority": 3
+    },
+    {
+      "name": "Wellesley Road",
+      "priority": 4
+    },
+    {
+      "name": "Harrow Road",
+      "priority": 5
+    },
+    {
+      "name": "Oxford Road",
+      "priority": 6
+    },
+    {
+      "name": "Valley Road",
+      "priority": 7
+    },
+    {
+      "name": "Burrs Road",
+      "priority": 8
+    },
+    {
+      "name": "Inglenook",
+      "priority": 9
+    },
+    {
+      "name": "Woodlands Close",
+      "priority": 10
+    },
+    {
+      "name": "Gorse Lane",
+      "priority": 11
+    },
+    {
+      "name": "Thorpe Road",
+      "priority": 12
+    },
+    {
+      "name": "Gt Holland Road",
+      "priority": 13
+    },
+    {
+      "name": "London Road",
+      "priority": 14
+    },
+    {
+      "name": "Progress Way",
+      "priority": 15
+    },
+    {
+      "name": "Bypass",
+      "priority": 16
+    },
+    {
+      "name": "North Road",
+      "priority": 17
+    },
+    {
+      "name": "Highview Avenue",
+      "priority": 18
+    },
+    {
+      "name": "Olivers Road",
+      "priority": 19
+    },
+    {
+      "name": "Old Road",
+      "priority": 20
+    },
+    {
+      "name": "Pier Avenue",
+      "priority": 21
+    },
+    {
+      "name": "Rosemary Road",
+      "priority": 22
+    },
+    {
+      "name": "High Street Holland Road",
+      "priority": 23
+    },
+    {
+      "name": "Street Pauls Road",
+      "priority": 24
+    },
+    {
+      "name": "Church Road",
+      "priority": 25
+    },
+    {
+      "name": "Street Albans Road",
+      "priority": 26
+    },
+    {
+      "name": "Marine Parade",
+      "priority": 27
+    },
+    {
+      "name": "Third Avenue",
+      "priority": 28
+    },
+    {
+      "name": "Holland Road Frinton Road",
+      "priority": 29
+    },
+    {
+      "name": "Windermere Road",
+      "priority": 30
+    },
+    {
+      "name": "Slade Road",
+      "priority": 31
+    },
+    {
+      "name": "Ipswich Road",
+      "priority": 32
+    },
+    {
+      "name": "Frinton Road",
+      "priority": 33
+    },
+    {
+      "name": "Sladburys Lane",
+      "priority": 34
+    },
+    {
+      "name": "Hawthorne Avenue",
+      "priority": 35
+    },
+    {
+      "name": "Jackson Road",
+      "priority": 36
+    },
+    {
+      "name": "West Road",
+      "priority": 37
+    },
+    {
+      "name": "Anchor Road",
+      "priority": 38
+    },
+    {
+      "name": "Alton Park Road Leas Road",
+      "priority": 39
+    },
+    {
+      "name": "Arnold Road",
+      "priority": 40
+    },
+    {
+      "name": "Alton Park Road",
+      "priority": 41
+    },
+    {
+      "name": "Street Osyth Road",
+      "priority": 42
+    },
+    {
+      "name": "Coopers Lane",
+      "priority": 43
+    },
+    {
+      "name": "Stanley Road",
+      "priority": 44
+    },
+    {
+      "name": "Rush Green Road",
+      "priority": 45
+    },
+    {
+      "name": "Cloes Lane",
+      "priority": 46
+    },
+    {
+      "name": "Hadleigh Road",
+      "priority": 47
+    },
+    {
+      "name": "Dedham Avenue",
+      "priority": 48
+    },
+    {
+      "name": "Flatford Drive",
+      "priority": 49
+    },
+    {
+      "name": "Street Johns Road",
+      "priority": 50
+    },
+    {
+      "name": "Cottage Grove",
+      "priority": 51
+    },
+    {
+      "name": "Ellis Road",
+      "priority": 52
+    },
+    {
+      "name": "West Avenue",
+      "priority": 53
+    },
+    {
+      "name": "Wash Lane",
+      "priority": 54
+    },
+    {
+      "name": "Collingwood Road",
+      "priority": 55
+    },
+    {
+      "name": "Marine Parade West",
+      "priority": 56
+    },
+    {
+      "name": "Queens Road",
+      "priority": 57
+    },
+    {
+      "name": "Kings Road",
+      "priority": 58
+    },
+    {
+      "name": "Park Road",
+      "priority": 59
+    },
+    {
+      "name": "Station Road",
+      "priority": 60
+    },
+    {
+      "name": "Roundabout Right",
+      "priority": 61
+    },
+    {
+      "name": "Progress Road",
+      "priority": 62
+    },
+    {
+      "name": "Ravensdale",
+      "priority": 63
+    },
+    {
+      "name": "Kestrel Way",
+      "priority": 64
+    },
+    {
+      "name": "Holland Road",
+      "priority": 65
+    },
+    {
+      "name": "Deanhill Avenue",
+      "priority": 66
+    },
+    {
+      "name": "Little Clacton Road",
+      "priority": 67
+    },
+    {
+      "name": "Jaywich Lane",
+      "priority": 68
+    },
+    {
+      "name": "Bluehouse Avenue",
+      "priority": 69
+    },
+    {
+      "name": "Tyler Avenue",
+      "priority": 70
+    },
+    {
+      "name": "Rushgreen Road",
+      "priority": 71
+    },
+    {
+      "name": "Jaywick Lane",
+      "priority": 72
+    },
+    {
+      "name": "Cherry Tree Avenue",
+      "priority": 73
+    },
+    {
+      "name": "Uplands Road",
+      "priority": 74
+    },
+    {
+      "name": "Mini Roundabout Left",
+      "priority": 75
+    },
+    {
+      "name": "Centerary Way",
+      "priority": 76
+    },
+    {
+      "name": "Turpins Avenue",
+      "priority": 77
+    },
+    {
+      "name": "Seafield Avenue",
+      "priority": 78
+    },
+    {
+      "name": "High Street",
+      "priority": 79
+    },
+    {
+      "name": "Marine Parade East",
+      "priority": 80
+    },
+    {
+      "name": "Agate Road",
+      "priority": 81
+    },
+    {
+      "name": "Constable Avenue",
+      "priority": 82
+    },
+    {
+      "name": "Skelmersdale Road",
+      "priority": 83
+    },
+    {
+      "name": "Thoroughgood Road",
+      "priority": 84
+    },
+    {
+      "name": "Victoria Road",
+      "priority": 85
+    },
+    {
+      "name": "Chilburn Road",
+      "priority": 86
+    },
+    {
+      "name": "Carisbrooke Avenue",
+      "priority": 87
+    },
+    {
+      "name": "Lymington Avenue",
+      "priority": 88
+    },
+    {
+      "name": "Centenary Way",
+      "priority": 89
+    }
+  ]
+}

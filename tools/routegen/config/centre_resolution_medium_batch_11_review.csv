@@ -1,0 +1,5 @@
+centre_id,centre_name,lat,lng,resolution_status,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,review_status
+huddersfield,Huddersfield,53.6468568,-1.7961112,resolved_secondary,Huddersfield driving test centre UK,Park Drive South Huddersfield UK,Huddersfield test centre UK,medium,"address_incomplete,no_postcode_found",approved
+hyde_manchester,Hyde Manchester,53.4476066,-2.1072663,resolved_secondary,Hyde Manchester driving test centre UK,Two Trees Lane Hyde Manchester UK,Hyde Manchester test centre UK,medium,"address_incomplete,no_postcode_found",approved
+isles_of_scilly,Isles of Scilly,49.9202695,-6.2902244,resolved_secondary,Isles of Scilly driving test centre UK,Carn Friars Lane Isles of Scilly UK,Isles of Scilly test centre UK,medium,"address_incomplete,no_postcode_found",approved
+kettering,Kettering,52.3779276,-0.7252180,resolved_primary,Kettering driving test centre UK,Linnet Drive / Barton Rd Kettering UK,Kettering test centre UK,medium,"address_incomplete,no_postcode_found",approved

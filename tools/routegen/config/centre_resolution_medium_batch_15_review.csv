@@ -1,0 +1,5 @@
+centre_id,centre_name,lat,lng,resolution_status,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,review_status
+northallerton,Northallerton,54.3316610,-1.4257695,resolved_secondary,Northallerton driving test centre UK,Mill Hill Lane Northallerton UK,Northallerton test centre UK,medium,"address_incomplete,no_postcode_found",approved
+northampton,Northampton,52.2353801,-0.9021168,resolved_secondary,Northampton driving test centre UK,St Peters Way Northampton UK,Northampton test centre UK,medium,"address_incomplete,no_postcode_found",approved
+nuneaton,Nuneaton,52.4976369,-1.4768705,resolved_secondary,Nuneaton driving test centre UK,St Davids Way Nuneaton UK,Nuneaton test centre UK,medium,"address_incomplete,no_postcode_found",approved
+oxford_cowley,Oxford Cowley,51.7409356,-1.2023936,resolved_primary,Oxford Cowley driving test centre UK,Cricket Rd / Rymers Lane Oxford Cowley UK,Oxford Cowley test centre UK,medium,"address_incomplete,no_postcode_found",approved

@@ -1,0 +1,10 @@
+centre_id,centre_name,lat,lng,resolution_status,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,review_status
+durham,Durham,54.7662651,-1.5461603,resolved_secondary,Durham driving test centre UK,Mill Lane / Shincliffe Lane Durham UK,Durham test centre UK,medium,"address_incomplete,no_postcode_found",approved
+eastbourne,Eastbourne,50.7824931,0.3096792,resolved_primary,Eastbourne driving test centre UK,The Avenue / Upper Ave Eastbourne UK,Eastbourne test centre UK,medium,"address_incomplete,no_postcode_found",approved
+edinburgh_currie,Edinburgh Currie,55.8999009,-3.3078134,resolved_primary,Edinburgh Currie driving test centre UK,Baberton Mains Drive Edinburgh Currie UK,Edinburgh Currie test centre UK,medium,"address_incomplete,no_postcode_found",approved
+elswick,Elswick,54.9646227,-1.6565155,resolved_secondary,Elswick driving test centre UK,William Armstrong Drive Elswick UK,Elswick test centre UK,medium,"address_incomplete,no_postcode_found",approved
+exeter,Exeter,50.7560635,-3.4357260,resolved_secondary,Exeter driving test centre UK,Lane / Station Rd Exeter UK,Exeter test centre UK,medium,"address_incomplete,no_postcode_found",approved
+folkestone,Folkestone,51.0796276,1.1706318,resolved_secondary,Folkestone driving test centre UK,Castle Hill Avenue Folkestone UK,Folkestone test centre UK,medium,"address_incomplete,no_postcode_found",approved
+fraserburgh,Fraserburgh,57.6893570,-2.0243879,resolved_secondary,Fraserburgh driving test centre UK,St Andrews Drive Fraserburgh UK,Fraserburgh test centre UK,medium,"address_incomplete,no_postcode_found",approved
+gateshead,Gateshead,54.9221701,-1.5906150,resolved_secondary,Gateshead driving test centre UK,Harlow Green Lane Gateshead UK,Gateshead test centre UK,medium,"address_incomplete,no_postcode_found",approved
+gillingham,Gillingham,51.3408551,0.5706932,resolved_secondary,Gillingham driving test centre UK,Hempstead Valley Drive Gillingham UK,Gillingham test centre UK,medium,"address_incomplete,no_postcode_found",approved

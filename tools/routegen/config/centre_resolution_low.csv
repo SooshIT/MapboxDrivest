@@ -1,0 +1,65 @@
+centre_id,centre_name,cleaned_postcode_candidate,cleaned_address_candidate,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,lat,lng,resolution_status
+aberfeldy,Aberfeldy,,,Aberfeldy driving test centre UK,,Aberfeldy test centre UK,low,"no_address_found,no_postcode_found",,,pending
+aberystwyth_park_avenue,Aberystwyth Park Avenue,,,Aberystwyth Park Avenue driving test centre UK,,Aberystwyth Park Avenue test centre UK,low,"no_address_found,no_postcode_found",,,pending
+airdrie,Airdrie,,,Airdrie driving test centre UK,,Airdrie test centre UK,low,"no_address_found,no_postcode_found",,,pending
+arbroath,Arbroath,,,Arbroath driving test centre UK,,Arbroath test centre UK,low,"junction_style_text,no_postcode_found",,,pending
+ashford_london_middlesex,Ashford London Middlesex,,,Ashford London Middlesex driving test centre UK,,Ashford London Middlesex test centre UK,low,"no_postcode_found,route_reference_only",,,pending
+ayr,Ayr,,,Ayr driving test centre UK,,Ayr test centre UK,low,"no_postcode_found,route_reference_only",,,pending
+bala,Bala,,,Bala driving test centre UK,,Bala test centre UK,low,"no_address_found,no_postcode_found",,,pending
+banff,Banff,,,Banff driving test centre UK,,Banff test centre UK,low,"no_address_found,no_postcode_found",,,pending
+bangor,Bangor,,,Bangor driving test centre UK,,Bangor test centre UK,low,"no_address_found,postcode_invalid",,,pending
+barnsley,Barnsley,,,Barnsley driving test centre UK,,Barnsley test centre UK,low,"no_postcode_found,route_reference_only",,,pending
+barra,Barra,,,Barra driving test centre UK,,Barra test centre UK,low,"no_address_found,no_postcode_found",,,pending
+barry,Barry,,,Barry driving test centre UK,,Barry test centre UK,low,"no_address_found,no_postcode_found",,,pending
+berwick_on_tweed,Berwick-On-Tweed,,,Berwick-On-Tweed driving test centre UK,,Berwick-On-Tweed test centre UK,low,"no_address_found,no_postcode_found",,,pending
+borehamwood_london,Borehamwood London,,,Borehamwood London driving test centre UK,,Borehamwood London test centre UK,low,"no_postcode_found,road_number_only",,,pending
+brodick_isle_of_arran,Brodick Isle of Arran,,,Brodick Isle of Arran driving test centre UK,,Brodick Isle of Arran test centre UK,low,"no_address_found,no_postcode_found",,,pending
+buckie,Buckie,,,Buckie driving test centre UK,,Buckie test centre UK,low,"no_address_found,no_postcode_found",,,pending
+bury_manchester,Bury Manchester,,,Bury Manchester driving test centre UK,,Bury Manchester test centre UK,low,"no_postcode_found,route_reference_only",,,pending
+campbeltown,Campbeltown,,,Campbeltown driving test centre UK,,Campbeltown test centre UK,low,"no_address_found,no_postcode_found",,,pending
+cardiff_llanishen,Cardiff Llanishen,,,Cardiff Llanishen driving test centre UK,,Cardiff Llanishen test centre UK,low,"no_postcode_found,route_reference_only",,,pending
+cardigan,Cardigan,,,Cardigan driving test centre UK,,Cardigan test centre UK,low,"no_address_found,no_postcode_found",,,pending
+chester,Chester,,,Chester driving test centre UK,,Chester test centre UK,low,"no_postcode_found,road_number_only",,,pending
+chichester,Chichester,,,Chichester driving test centre UK,,Chichester test centre UK,low,"no_postcode_found,route_reference_only",,,pending
+crieff,Crieff,,,Crieff driving test centre UK,,Crieff test centre UK,low,"no_address_found,no_postcode_found",,,pending
+dunoon,Dunoon,,,Dunoon driving test centre UK,,Dunoon test centre UK,low,"no_address_found,no_postcode_found",,,pending
+enfield_innova_business_park,Enfield Innova Business Park,,,Enfield Innova Business Park driving test centre UK,,Enfield Innova Business Park test centre UK,low,"no_postcode_found,route_reference_only",,,pending
+farnborough,Farnborough,,,Farnborough driving test centre UK,,Farnborough test centre UK,low,"no_postcode_found,route_reference_only",,,pending
+forfar,Forfar,,,Forfar driving test centre UK,,Forfar test centre UK,low,"no_address_found,no_postcode_found",,,pending
+fort_william,Fort William,,,Fort William driving test centre UK,,Fort William test centre UK,low,"no_address_found,no_postcode_found",,,pending
+gairloch,Gairloch,,,Gairloch driving test centre UK,,Gairloch test centre UK,low,"no_address_found,no_postcode_found",,,pending
+galashiels,Galashiels,,,Galashiels driving test centre UK,,Galashiels test centre UK,low,"no_address_found,no_postcode_found",,,pending
+grantown_on_spey,Grantown-On-Spey,,,Grantown-On-Spey driving test centre UK,,Grantown-On-Spey test centre UK,low,"no_address_found,no_postcode_found",,,pending
+hamilton,Hamilton,,,Hamilton driving test centre UK,,Hamilton test centre UK,low,"no_address_found,no_postcode_found",,,pending
+heckmondwike,Heckmondwike,,,Heckmondwike driving test centre UK,,Heckmondwike test centre UK,low,"no_postcode_found,route_reference_only",,,pending
+hendon_london,Hendon London,,,Hendon London driving test centre UK,,Hendon London test centre UK,low,"no_postcode_found,road_number_only",,,pending
+high_wycombe,High Wycombe,,,High Wycombe driving test centre UK,,High Wycombe test centre UK,low,"no_postcode_found,route_reference_only",,,pending
+hither_green_london,Hither Green London,,,Hither Green London driving test centre UK,,Hither Green London test centre UK,low,"no_postcode_found,road_number_only",,,pending
+inveraray,Inveraray,,,Inveraray driving test centre UK,,Inveraray test centre UK,low,"no_address_found,no_postcode_found",,,pending
+ipswich,Ipswich,,,Ipswich driving test centre UK,,Ipswich test centre UK,low,"no_postcode_found,route_reference_only",,,pending
+isle_of_mull,Isle of Mull,,,Isle of Mull driving test centre UK,,Isle of Mull test centre UK,low,"no_address_found,no_postcode_found",,,pending
+isle_of_skye_broadford,Isle of Skye Broadford,,,Isle of Skye Broadford driving test centre UK,,Isle of Skye Broadford test centre UK,low,"no_address_found,no_postcode_found",,,pending
+isle_of_tiree,Isle of Tiree,,,Isle of Tiree driving test centre UK,,Isle of Tiree test centre UK,low,"no_address_found,no_postcode_found",,,pending
+kingussie,Kingussie,,,Kingussie driving test centre UK,,Kingussie test centre UK,low,"no_address_found,no_postcode_found",,,pending
+kyle_of_lochalsh,Kyle of Lochalsh,,,Kyle of Lochalsh driving test centre UK,,Kyle of Lochalsh test centre UK,low,"no_address_found,no_postcode_found",,,pending
+loughton_london,Loughton London,,,Loughton London driving test centre UK,,Loughton London test centre UK,low,"no_postcode_found,route_reference_only",,,pending
+louth,Louth,,,Louth driving test centre UK,,Louth test centre UK,low,"no_postcode_found,route_reference_only",,,pending
+maidstone,Maidstone,,,Maidstone driving test centre UK,,Maidstone test centre UK,low,"no_postcode_found,route_reference_only",,,pending
+montrose,Montrose,,,Montrose driving test centre UK,,Montrose test centre UK,low,"no_address_found,no_postcode_found",,,pending
+newbury_hambridge_lane,Newbury Hambridge Lane,,,Newbury Hambridge Lane driving test centre UK,,Newbury Hambridge Lane test centre UK,low,"no_postcode_found,route_reference_only",,,pending
+newtown,Newtown,,,Newtown driving test centre UK,,Newtown test centre UK,low,"no_postcode_found,route_reference_only",,,pending
+northwich,Northwich,,,Northwich driving test centre UK,,Northwich test centre UK,low,"postcode_invalid,route_reference_only",,,pending
+oban,Oban,,,Oban driving test centre UK,,Oban test centre UK,low,"no_address_found,no_postcode_found",,,pending
+paisley,Paisley,,,Paisley driving test centre UK,,Paisley test centre UK,low,"no_address_found,no_postcode_found",,,pending
+peebles,Peebles,,,Peebles driving test centre UK,,Peebles test centre UK,low,"no_address_found,no_postcode_found",,,pending
+pitlochry,Pitlochry,,,Pitlochry driving test centre UK,,Pitlochry test centre UK,low,"no_address_found,no_postcode_found",,,pending
+rhyl,Rhyl,,,Rhyl driving test centre UK,,Rhyl test centre UK,low,"no_address_found,no_postcode_found",,,pending
+rothesay,Rothesay,,,Rothesay driving test centre UK,,Rothesay test centre UK,low,"no_address_found,no_postcode_found",,,pending
+salisbury,Salisbury,,,Salisbury driving test centre UK,,Salisbury test centre UK,low,"no_postcode_found,route_reference_only",,,pending
+stranraer,Stranraer,,,Stranraer driving test centre UK,,Stranraer test centre UK,low,"no_address_found,no_postcode_found",,,pending
+trowbridge,Trowbridge,,,Trowbridge driving test centre UK,,Trowbridge test centre UK,low,"no_postcode_found,route_reference_only",,,pending
+ullapool,Ullapool,,,Ullapool driving test centre UK,,Ullapool test centre UK,low,"no_address_found,no_postcode_found",,,pending
+wallasey,Wallasey,,,Wallasey driving test centre UK,,Wallasey test centre UK,low,"no_address_found,no_postcode_found",,,pending
+weston_super_mare,Weston-super-Mare,,,Weston-super-Mare driving test centre UK,,Weston-super-Mare test centre UK,low,"no_address_found,no_postcode_found",,,pending
+whitby,Whitby,,,Whitby driving test centre UK,,Whitby test centre UK,low,"no_postcode_found,route_reference_only",,,pending
+wick,Wick,,,Wick driving test centre UK,,Wick test centre UK,low,"no_postcode_found,route_reference_only",,,pending

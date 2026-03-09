@@ -1,0 +1,11 @@
+centre_id,centre_name,cleaned_postcode_candidate,cleaned_address_candidate,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,lat,lng,resolution_status
+merthyr_tydfil,Merthyr Tydfil,,St Annes Close,Merthyr Tydfil driving test centre UK,St Annes Close Merthyr Tydfil UK,Merthyr Tydfil test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+middlesbrough,Middlesbrough,,Cargo Fleet Lane,Middlesbrough driving test centre UK,Cargo Fleet Lane Middlesbrough UK,Middlesbrough test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+mill_hill_london,Mill Hill London,,Great North Way,Mill Hill London driving test centre UK,Great North Way Mill Hill London UK,Mill Hill London test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+mitcham_london,Mitcham London,,Mill green road,Mitcham London driving test centre UK,Mill green road Mitcham London UK,Mitcham London test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+morden_london,Morden London,,Gander Green Lane,Morden London driving test centre UK,Gander Green Lane Morden London UK,Morden London test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+nelson,Nelson,,Barden Lane / Greenhead Lane,Nelson driving test centre UK,Barden Lane / Greenhead Lane Nelson UK,Nelson test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+newport_gwent,Newport Gwent,,Rupert Brooke Drive,Newport Gwent driving test centre UK,Rupert Brooke Drive Newport Gwent UK,Newport Gwent test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+newton_abbot,Newton Abbot,,Ley Lane / Longford Lane,Newton Abbot driving test centre UK,Ley Lane / Longford Lane Newton Abbot UK,Newton Abbot test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+newton_stewart,Newton Stewart,,New Galloway Rd,Newton Stewart driving test centre UK,New Galloway Rd Newton Stewart UK,Newton Stewart test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+norris_green_liverpool,Norris Green Liverpool,,Utting Avenue East,Norris Green Liverpool driving test centre UK,Utting Avenue East Norris Green Liverpool UK,Norris Green Liverpool test centre UK,medium,"address_incomplete,no_postcode_found",,,pending

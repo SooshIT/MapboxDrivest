@@ -1,0 +1,11 @@
+centre_id,centre_name,cleaned_postcode_candidate,cleaned_address_candidate,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,lat,lng,resolution_status
+chertsey_london,Chertsey London,,Renfree Way / High St,Chertsey London driving test centre UK,Renfree Way / High St Chertsey London UK,Chertsey London test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+chesterfield,Chesterfield,,Water Meadon Lane,Chesterfield driving test centre UK,Water Meadon Lane Chesterfield UK,Chesterfield test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+chingford_london,Chingford London,,Hatch Lane/New Rd,Chingford London driving test centre UK,Hatch Lane/New Rd Chingford London UK,Chingford London test centre UK,medium,"address_incomplete,no_postcode_found",51.6188236,0.0039968,resolved_secondary
+chippenham,Chippenham,,West Cepen Way,Chippenham driving test centre UK,West Cepen Way Chippenham UK,Chippenham test centre UK,medium,"address_incomplete,no_postcode_found",51.4462746,-2.1484355,resolved_secondary
+chorley,Chorley,,Eaves Lane / Lyons Lane,Chorley driving test centre UK,Eaves Lane / Lyons Lane Chorley UK,Chorley test centre UK,medium,"address_incomplete,no_postcode_found",53.6575267,-2.6185602,resolved_primary
+clacton_on_sea,Clacton-on-Sea,,Leas Rd / Cherry Tree Avenue,Clacton-on-Sea driving test centre UK,Leas Rd / Cherry Tree Avenue Clacton-on-Sea UK,Clacton-on-Sea test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+colchester,Colchester,,Walnut Tree Way / Iceni Way,Colchester driving test centre UK,Walnut Tree Way / Iceni Way Colchester UK,Colchester test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+coventry,Coventry,,Bowling Green Lane,Coventry driving test centre UK,Bowling Green Lane Coventry UK,Coventry test centre UK,medium,"address_incomplete,no_postcode_found",52.4636278,-1.4758167,resolved_primary
+crawley,Crawley,,Haslett Avenue East,Crawley driving test centre UK,Haslett Avenue East Crawley UK,Crawley test centre UK,medium,"address_incomplete,no_postcode_found",51.0809358,-0.2017537,resolved_primary
+crewe,Crewe,,Queens Park Drive,Crewe driving test centre UK,Queens Park Drive Crewe UK,Crewe test centre UK,medium,"address_incomplete,no_postcode_found",53.0977225,-2.4652041,resolved_secondary

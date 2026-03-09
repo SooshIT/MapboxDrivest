@@ -1,0 +1,8 @@
+centre_id,centre_name,lat,lng,resolution_status,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,review_status
+plymouth,Plymouth,50.4095962,-4.1623038,resolved_secondary,Plymouth driving test centre UK,Little Dock Lane Plymouth UK,Plymouth test centre UK,medium,"address_incomplete,no_postcode_found",approved
+portsmouth,Portsmouth,50.8570850,-1.1097044,resolved_primary,Portsmouth driving test centre UK,James Callaghan Drive Portsmouth UK,Portsmouth test centre UK,medium,"address_incomplete,no_postcode_found",approved
+preston,Preston,53.7597518,-2.7591557,resolved_secondary,Preston driving test centre UK,Chain Caul Way Preston UK,Preston test centre UK,medium,"address_incomplete,no_postcode_found",approved
+pwllheli,Pwllheli,52.8808724,-4.4233345,resolved_tertiary,Pwllheli driving test centre UK,Alaroad / Y Maes Pwllheli UK,Pwllheli test centre UK,medium,"address_incomplete,no_postcode_found",approved
+reading,Reading,51.4382718,-0.9652685,resolved_secondary,Reading driving test centre UK,Home Farm Close Reading UK,Reading test centre UK,medium,"address_incomplete,no_postcode_found",approved
+redditch,Redditch,52.2785895,-1.9361227,resolved_secondary,Redditch driving test centre UK,Rough Hill Drive Redditch UK,Redditch test centre UK,medium,"address_incomplete,no_postcode_found",approved
+rochdale_manchester,Rochdale Manchester,53.5960849,-2.1360447,resolved_secondary,Rochdale Manchester driving test centre UK,New Broad Lane Rochdale Manchester UK,Rochdale Manchester test centre UK,medium,"address_incomplete,no_postcode_found",approved

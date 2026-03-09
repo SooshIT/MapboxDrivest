@@ -1,0 +1,11 @@
+centre_id,centre_name,cleaned_postcode_candidate,cleaned_address_candidate,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,lat,lng,resolution_status
+aberdeen_north,Aberdeen North,,St Machar Drive,Aberdeen North driving test centre UK,St Machar Drive Aberdeen North UK,Aberdeen North test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+abergavenny,Abergavenny,,Old Barn Way,Abergavenny driving test centre UK,Old Barn Way Abergavenny UK,Abergavenny test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+alness,Alness,,Cromlet Drive / Academy Rd,Alness driving test centre UK,Cromlet Drive / Academy Rd Alness UK,Alness test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+alnwick,Alnwick,,Tower Lane/Green Batt,Alnwick driving test centre UK,Tower Lane/Green Batt Alnwick UK,Alnwick test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+ashfield,Ashfield,,New Lane / Beristowe Lane,Ashfield driving test centre UK,New Lane / Beristowe Lane Ashfield UK,Ashfield test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+ashford_kent,Ashford Kent,,Tithe Barn Lane,Ashford Kent driving test centre UK,Tithe Barn Lane Ashford Kent UK,Ashford Kent test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+aylesbury,Aylesbury,,Broughton Lane / Burcott lane,Aylesbury driving test centre UK,Broughton Lane / Burcott lane Aylesbury UK,Aylesbury test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+ballater,Ballater,,Sir Patrick Geddies Way,Ballater driving test centre UK,Sir Patrick Geddies Way Ballater UK,Ballater test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+banbury,Banbury,,Mewburn Rd / Queensway,Banbury driving test centre UK,Mewburn Rd / Queensway Banbury UK,Banbury test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+barking_tanner_street,Barking Tanner Street,,South Park Drive,Barking Tanner Street driving test centre UK,South Park Drive Barking Tanner Street UK,Barking Tanner Street test centre UK,medium,"address_incomplete,no_postcode_found",,,pending

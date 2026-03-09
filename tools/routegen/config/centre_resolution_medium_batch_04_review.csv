@@ -1,0 +1,5 @@
+centre_id,centre_name,lat,lng,resolution_status,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,review_status
+brecon,Brecon,51.9464734,-3.3841740,resolved_primary,Brecon driving test centre UK,Coryton Close / Bryn De Winton Brecon UK,Brecon test centre UK,medium,"address_incomplete,no_postcode_found",approved
+brentwood_london,Brentwood London,51.5962650,0.2570322,resolved_secondary,Brentwood London driving test centre UK,Nags Head Lane Brentwood London UK,Brentwood London test centre UK,medium,"address_incomplete,no_postcode_found",approved
+bridlington,Bridlington,54.0765756,-0.2000212,resolved_secondary,Bridlington driving test centre UK,South Marine Drive Bridlington UK,Bridlington test centre UK,medium,"address_incomplete,no_postcode_found",approved
+burgess_hill,Burgess Hill,50.9525936,-0.1531622,resolved_primary,Burgess Hill driving test centre UK,Queen Elizabeth Avenue Burgess Hill UK,Burgess Hill test centre UK,medium,"address_incomplete,no_postcode_found",approved

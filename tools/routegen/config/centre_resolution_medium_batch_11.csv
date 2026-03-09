@@ -1,0 +1,11 @@
+centre_id,centre_name,cleaned_postcode_candidate,cleaned_address_candidate,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,lat,lng,resolution_status
+huddersfield,Huddersfield,,Park Drive South,Huddersfield driving test centre UK,Park Drive South Huddersfield UK,Huddersfield test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+hull,Hull,,Air St / Sculcoates Lane,Hull driving test centre UK,Air St / Sculcoates Lane Hull UK,Hull test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+huntly,Huntly,,Nelson St / Scott Drive,Huntly driving test centre UK,Nelson St / Scott Drive Huntly UK,Huntly test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+hyde_manchester,Hyde Manchester,,Two Trees Lane,Hyde Manchester driving test centre UK,Two Trees Lane Hyde Manchester UK,Hyde Manchester test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+islay_island,Islay Island,,Mary Mackays Lane,Islay Island driving test centre UK,Mary Mackays Lane Islay Island UK,Islay Island test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+isles_of_scilly,Isles of Scilly,,Carn Friars Lane,Isles of Scilly driving test centre UK,Carn Friars Lane Isles of Scilly UK,Isles of Scilly test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+isleworth_fleming_way,Isleworth Fleming Way,,Powder Mill Lane,Isleworth Fleming Way driving test centre UK,Powder Mill Lane Isleworth Fleming Way UK,Isleworth Fleming Way test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+kendal_oxenholme_road,Kendal Oxenholme Road,,Sedburgh Rd / Castle Green Lane,Kendal Oxenholme Road driving test centre UK,Sedburgh Rd / Castle Green Lane Kendal Oxenholme Road UK,Kendal Oxenholme Road test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+kettering,Kettering,,Linnet Drive / Barton Rd,Kettering driving test centre UK,Linnet Drive / Barton Rd Kettering UK,Kettering test centre UK,medium,"address_incomplete,no_postcode_found",,,pending
+kings_lynn,Kings Lynn,,Edward Benefer Way / Low Rd,Kings Lynn driving test centre UK,Edward Benefer Way / Low Rd Kings Lynn UK,Kings Lynn test centre UK,medium,"address_incomplete,no_postcode_found",,,pending

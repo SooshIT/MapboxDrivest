@@ -1,0 +1,11 @@
+centre_id,centre_name,cleaned_postcode_candidate,cleaned_address_candidate,query_primary,query_secondary,query_tertiary,lookup_confidence,lookup_notes,lat,lng,resolution_status
+hartlepool,Hartlepool,,Belle Vue Way,Hartlepool driving test centre UK,Belle Vue Way Hartlepool UK,Hartlepool test centre UK,medium,"address_incomplete,no_postcode_found",54.6683573,-1.2128198,resolved_secondary
+hastings_ore,Hastings Ore,,Crowhurst Rd / Queensway,Hastings Ore driving test centre UK,Crowhurst Rd / Queensway Hastings Ore UK,Hastings Ore test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+hawick,Hawick,,Hazelwood Rd / Roxburgh Drive,Hawick driving test centre UK,Hazelwood Rd / Roxburgh Drive Hawick UK,Hawick test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+hereford,Hereford,,Old School Lane,Hereford driving test centre UK,Old School Lane Hereford UK,Hereford test centre UK,medium,"address_incomplete,no_postcode_found",52.0727799,-2.7131125,resolved_secondary
+herne_bay,Herne Bay,,King Edward Avenue,Herne Bay driving test centre UK,King Edward Avenue Herne Bay UK,Herne Bay test centre UK,medium,"address_incomplete,no_postcode_found",51.3673845,1.1437393,resolved_secondary
+hexham,Hexham,,Queensway / Shaws Park,Hexham driving test centre UK,Queensway / Shaws Park Hexham UK,Hexham test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+heysham,Heysham,,Hall Drive / Bare Lane,Heysham driving test centre UK,Hall Drive / Bare Lane Heysham UK,Heysham test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+hinckley,Hinckley,,Tilton Rd/Azalea Drive,Hinckley driving test centre UK,Tilton Rd/Azalea Drive Hinckley UK,Hinckley test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+hornchurch_london,Hornchurch London,,Squirrels Heath Lane,Hornchurch London driving test centre UK,Squirrels Heath Lane Hornchurch London UK,Hornchurch London test centre UK,medium,"address_incomplete,no_postcode_found",,,unresolved
+horsforth,Horsforth,,West End Lane,Horsforth driving test centre UK,West End Lane Horsforth UK,Horsforth test centre UK,medium,"address_incomplete,no_postcode_found",53.8397978,-1.6514670,resolved_secondary
