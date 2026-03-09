@@ -34,6 +34,19 @@ def _load_registry() -> List[Dict]:
     return centres
 
 
+def _centre_input_coordinates(centre_dir: Path) -> Optional[Dict[str, float]]:
+    centre_json = centre_dir / "centre.json"
+    if not centre_json.exists():
+        return None
+    try:
+        payload = json.loads(centre_json.read_text(encoding="utf-8"))
+        lat = float(payload.get("centre_lat"))
+        lng = float(payload.get("centre_lng"))
+    except (OSError, ValueError, TypeError, json.JSONDecodeError):
+        return None
+    return {"lat": lat, "lng": lng}
+
+
 def _load_index(cache_path: Path) -> Dict:
     if not cache_path.exists():
         cache_path.parent.mkdir(parents=True, exist_ok=True)
@@ -335,8 +348,14 @@ def main() -> int:
 
         for idx, centre in enumerate(centres, start=1):
             centre_id = str(centre.get("centre_id"))
-            lat = centre.get("lat")
-            lng = centre.get("lng")
+            centre_dir = ROUTEGEN_DIR / "inputs" / "centres" / centre_id
+            centre_input_coords = _centre_input_coordinates(centre_dir)
+            if centre_input_coords is not None:
+                lat = centre_input_coords["lat"]
+                lng = centre_input_coords["lng"]
+            else:
+                lat = centre.get("lat")
+                lng = centre.get("lng")
             if lat is None or lng is None:
                 lat = centre.get("centre_lat")
                 lng = centre.get("centre_lng")
@@ -368,7 +387,6 @@ def main() -> int:
                 continue
 
             output_dir = ROUTEGEN_DIR / "output" / centre_id
-            centre_dir = ROUTEGEN_DIR / "inputs" / "centres" / centre_id
             if args.resume and (output_dir / "routes.json").exists() and (output_dir / "validation_report.json").exists():
                 report = _load_report(output_dir)
                 results_by_id[centre_id] = {

@@ -854,6 +854,12 @@ def run_centre(centre_slug: str, use_overpass: bool, input_mode: str) -> int:
     logger.stage("centre verification")
     verification_report = verify_centre(routegen_dir, centre_slug, centre, cfg, logger)
     _write_centre_verification(output_dir, logger, verification_report)
+    resolved = verification_report.get("resolved", {})
+    resolved_lat = resolved.get("lat")
+    resolved_lng = resolved.get("lng")
+    if resolved_lat is not None and resolved_lng is not None:
+        centre["centre_lat"] = float(resolved_lat)
+        centre["centre_lng"] = float(resolved_lng)
     logger.info(
         "Centre anchor resolved via "
         f"{verification_report['resolved']['source']} "
